@@ -1,0 +1,23 @@
+{
+  "base": "development/experiments/champion-holdout3",
+  "challenger": "development/experiments/search-holdout3",
+  "paired_games": 480,
+  "seed_clusters": 40,
+  "delta_win_rate": 0.0062499999999999995,
+  "cluster_bootstrap95": [
+    0.0,
+    0.014583333333333332
+  ],
+  "group_deltas": {
+    "control-mage": 0.0,
+    "tempo-warlock": 0.0125,
+    "aggressive-paladin": 0.0,
+    "value-priest": 0.0125,
+    "search-shaman": 0.0,
+    "adversarial-priest-v1": 0.0125
+  },
+  "execution_stable": true,
+  "gate_pass": false,
+  "gate": "positive lower 95% paired seed-cluster CI; no group decline > 10 percentage points; zero execution defects",
+  "note": "Exploratory comparisons require independent holdout before promotion. Multiple candidate selection can inflate training gains."
+}

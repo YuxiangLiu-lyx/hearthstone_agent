@@ -1,0 +1,23 @@
+{
+  "base": "development/experiments/v0-newdeck-train",
+  "challenger": "development/experiments/v2-train",
+  "paired_games": 240,
+  "seed_clusters": 20,
+  "delta_win_rate": 0.0,
+  "cluster_bootstrap95": [
+    0.0,
+    0.0
+  ],
+  "group_deltas": {
+    "official-mage": 0.0,
+    "aggressive-hunter": 0.0,
+    "control-priest": 0.0,
+    "tempo-paladin": 0.0,
+    "value-warlock": 0.0,
+    "adversarial-zoo": 0.0
+  },
+  "execution_stable": true,
+  "gate_pass": false,
+  "gate": "positive lower 95% paired seed-cluster CI; no group decline > 10 percentage points; zero execution defects",
+  "note": "Exploratory comparisons require independent holdout before promotion. Multiple candidate selection can inflate training gains."
+}

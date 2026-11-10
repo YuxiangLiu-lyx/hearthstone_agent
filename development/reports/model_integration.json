@@ -1,0 +1,738 @@
+{
+  "recommended_local_model": "luna",
+  "haiku_status": "claude executable absent from PATH; not tested",
+  "course_submission": "not submitted",
+  "integration": {
+    "integration-client": {
+      "games": [
+        {
+          "game_id": "g_20261110_000001",
+          "seed": 950,
+          "winner": 1,
+          "reason": "hero_death",
+          "first_player": 1,
+          "turns": 17,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 6.348,
+          "decisions": {
+            "1": 36,
+            "2": 28
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "champion",
+              "kind": "client"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ]
+        },
+        {
+          "game_id": "g_20261110_000002",
+          "seed": 951,
+          "winner": 1,
+          "reason": "hero_death",
+          "first_player": 1,
+          "turns": 15,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 5.324,
+          "decisions": {
+            "1": 30,
+            "2": 22
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "champion",
+              "kind": "client"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ]
+        },
+        {
+          "game_id": "g_20261110_000003",
+          "seed": 952,
+          "winner": 1,
+          "reason": "hero_death",
+          "first_player": 1,
+          "turns": 13,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 5.345,
+          "decisions": {
+            "1": 30,
+            "2": 20
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "champion",
+              "kind": "client"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ]
+        }
+      ],
+      "completed": 3,
+      "forfeits": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "decision_latency_mean_s": 0.13832291960716248,
+      "decision_latency_p95_s": 0.17199993133544922,
+      "decision_latency_max_s": 0.17600011825561523,
+      "token_usage": {
+        "input_tokens": 0,
+        "cached_input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    "integration-deck-champion": {
+      "games": [
+        {
+          "game_id": "g_20261110_000001",
+          "seed": 910,
+          "winner": 2,
+          "reason": "hero_death",
+          "first_player": 2,
+          "turns": 17,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 144.798,
+          "decisions": {
+            "1": 22,
+            "2": 33
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ]
+        },
+        {
+          "game_id": "g_20261110_000002",
+          "seed": 911,
+          "winner": 2,
+          "reason": "forfeit_exit",
+          "first_player": 2,
+          "turns": 18,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 138.83,
+          "decisions": {
+            "1": 24,
+            "2": 34
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ],
+          "notes": {
+            "1": [
+              "session 1 stopped before GAME OVER (skill: the model ended its session before GAME OVER); game lost (forfeit_exit). Staff may review verified course-side failures separately."
+            ]
+          }
+        },
+        {
+          "game_id": "g_20261110_000003",
+          "seed": 912,
+          "winner": 1,
+          "reason": "hero_death",
+          "first_player": 2,
+          "turns": 20,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 174.646,
+          "decisions": {
+            "1": 37,
+            "2": 33
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ]
+        }
+      ],
+      "completed": 3,
+      "forfeits": 1,
+      "illegal": 0,
+      "timeouts": 0,
+      "decision_latency_mean_s": 5.258506016558911,
+      "decision_latency_p95_s": 7.1579999923706055,
+      "decision_latency_max_s": 18.74899983406067,
+      "token_usage": {
+        "input_tokens": 4300324,
+        "cached_input_tokens": 4128384,
+        "output_tokens": 10321
+      }
+    },
+    "integration-final-serial": {
+      "games": [
+        {
+          "game_id": "g_20261110_000001",
+          "seed": 960,
+          "winner": 1,
+          "reason": "hero_death",
+          "first_player": 2,
+          "turns": 16,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 147.613,
+          "decisions": {
+            "1": 35,
+            "2": 24
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ]
+        }
+      ],
+      "completed": 1,
+      "forfeits": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "decision_latency_mean_s": 4.100628593989781,
+      "decision_latency_p95_s": 8.967000007629395,
+      "decision_latency_max_s": 16.7810001373291,
+      "token_usage": {
+        "input_tokens": 1481086,
+        "cached_input_tokens": 1402880,
+        "output_tokens": 4090
+      }
+    },
+    "integration-paladin": {
+      "games": [
+        {
+          "game_id": "g_20261110_000001",
+          "seed": 930,
+          "winner": 2,
+          "reason": "forfeit_timeout",
+          "first_player": 1,
+          "turns": 23,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 1,
+            "2": 0
+          },
+          "duration_s": 476.287,
+          "decisions": {
+            "1": 48,
+            "2": 45
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ]
+        },
+        {
+          "game_id": "g_20261110_000002",
+          "seed": 931,
+          "winner": 1,
+          "reason": "hero_death",
+          "first_player": 2,
+          "turns": 20,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 429.39,
+          "decisions": {
+            "1": 44,
+            "2": 36
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ]
+        },
+        {
+          "game_id": "g_20261110_000003",
+          "seed": 932,
+          "winner": 2,
+          "reason": "hero_death",
+          "first_player": 1,
+          "turns": 28,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 318.665,
+          "decisions": {
+            "1": 54,
+            "2": 56
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ]
+        }
+      ],
+      "completed": 3,
+      "forfeits": 1,
+      "illegal": 0,
+      "timeouts": 1,
+      "decision_latency_mean_s": 6.7872191765537,
+      "decision_latency_p95_s": 15.929999828338623,
+      "decision_latency_max_s": 60.35899996757507,
+      "token_usage": {
+        "input_tokens": 5965034,
+        "cached_input_tokens": 5712768,
+        "output_tokens": 11205
+      }
+    },
+    "integration-relay-v2": {
+      "games": [
+        {
+          "game_id": "g_20261110_000001",
+          "seed": 970,
+          "winner": 1,
+          "reason": "hero_death",
+          "first_player": 2,
+          "turns": 24,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 180.053,
+          "decisions": {
+            "1": 48,
+            "2": 40
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ]
+        },
+        {
+          "game_id": "g_20261110_000002",
+          "seed": 971,
+          "winner": 1,
+          "reason": "hero_death",
+          "first_player": 2,
+          "turns": 12,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 119.535,
+          "decisions": {
+            "1": 25,
+            "2": 14
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ]
+        },
+        {
+          "game_id": "g_20261110_000003",
+          "seed": 972,
+          "winner": 1,
+          "reason": "hero_death",
+          "first_player": 1,
+          "turns": 13,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 160.518,
+          "decisions": {
+            "1": 33,
+            "2": 16
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ]
+        }
+      ],
+      "completed": 3,
+      "forfeits": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "decision_latency_mean_s": 4.216943410207641,
+      "decision_latency_p95_s": 5.71399998664856,
+      "decision_latency_max_s": 16.36299991607666,
+      "token_usage": {
+        "input_tokens": 6139506,
+        "cached_input_tokens": 5917440,
+        "output_tokens": 11365
+      }
+    },
+    "integration-selfplay": {
+      "games": [
+        {
+          "game_id": "g_20261110_000001",
+          "seed": 940,
+          "winner": 1,
+          "reason": "hero_death",
+          "first_player": 2,
+          "turns": 32,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 401.353,
+          "decisions": {
+            "1": 69,
+            "2": 64
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            },
+            {
+              "index": 2,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            }
+          ]
+        }
+      ],
+      "completed": 1,
+      "forfeits": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "decision_latency_mean_s": 3.0247293217737874,
+      "decision_latency_p95_s": 8.998999834060669,
+      "decision_latency_max_s": 31.91100001335144,
+      "token_usage": {
+        "input_tokens": 3535017,
+        "cached_input_tokens": 3392896,
+        "output_tokens": 5672
+      }
+    },
+    "integration-v0": {
+      "games": [
+        {
+          "game_id": "g_20261110_000001",
+          "seed": 901,
+          "winner": 2,
+          "reason": "forfeit_exit",
+          "first_player": null,
+          "turns": 0,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 0.342,
+          "decisions": {
+            "1": 0,
+            "2": 0
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ],
+          "notes": {
+            "1": [
+              "session 1 stopped before GAME OVER (course: the codex session failed (exit code 1): erver\", \"/var/folders/f4/3c2p11sd22b76640b44tvyv80000gn/T/hs-seat-2a4c727ef8/mailbox\"]', '-c', 'mcp_servers.arena.tool_timeout_sec=120', '-c', 'mcp_servers.arena.startup_timeout_sec=60', '-c', 'mcp_servers.arena.required=true', '-c', 'mcp_servers.arena.default_tools_approval_mode=\"approve\"', '-' ] }); game lost (forfeit_exit). Staff may review verified course-side failures separately."
+            ]
+          }
+        }
+      ],
+      "completed": 1,
+      "forfeits": 1,
+      "illegal": 0,
+      "timeouts": 0,
+      "decision_latency_mean_s": null,
+      "decision_latency_p95_s": null,
+      "decision_latency_max_s": null,
+      "token_usage": {
+        "input_tokens": 0,
+        "cached_input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    "integration-v0-cli": {
+      "games": [
+        {
+          "game_id": "g_20261110_000001",
+          "seed": 902,
+          "winner": 1,
+          "reason": "hero_death",
+          "first_player": 2,
+          "turns": 30,
+          "illegal_counts": {
+            "1": 0,
+            "2": 0
+          },
+          "restarts": {
+            "1": 0,
+            "2": 0
+          },
+          "timeouts": {
+            "1": 0,
+            "2": 0
+          },
+          "duration_s": 348.119,
+          "decisions": {
+            "1": 55,
+            "2": 50
+          },
+          "players": [
+            {
+              "index": 1,
+              "name": "hearthstone-agent",
+              "kind": "skill"
+            },
+            {
+              "index": 2,
+              "name": "greedy",
+              "kind": "greedy"
+            }
+          ]
+        }
+      ],
+      "completed": 1,
+      "forfeits": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "decision_latency_mean_s": 6.221454555338079,
+      "decision_latency_p95_s": 18.344000101089478,
+      "decision_latency_max_s": 50.39400005340576,
+      "token_usage": {
+        "input_tokens": 3851874,
+        "cached_input_tokens": 3721088,
+        "output_tokens": 6646
+      }
+    }
+  },
+  "note": "Python timings exclude process/model overhead. MCP latencies use action-call timestamps minus published decision start."
+}

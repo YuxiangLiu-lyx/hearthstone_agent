@@ -1,0 +1,25 @@
+{
+  "base": "development/experiments/mage-expanded",
+  "challenger": "development/experiments/paladin-expanded",
+  "paired_games": 400,
+  "seed_clusters": 25,
+  "delta_win_rate": 0.1475,
+  "cluster_bootstrap95": [
+    0.0775,
+    0.22
+  ],
+  "group_deltas": {
+    "official-mage": 0.08,
+    "aggressive-hunter": 0.08,
+    "control-priest": 0.14,
+    "tempo-paladin": 0.22,
+    "value-warlock": -0.06,
+    "adversarial-zoo": 0.38,
+    "search-paladin": 0.18,
+    "historical-mage": 0.16
+  },
+  "execution_stable": true,
+  "gate_pass": true,
+  "gate": "positive lower 95% paired seed-cluster CI; no group decline > 10 percentage points; zero execution defects",
+  "note": "Exploratory comparisons require independent holdout before promotion. Multiple candidate selection can inflate training gains."
+}

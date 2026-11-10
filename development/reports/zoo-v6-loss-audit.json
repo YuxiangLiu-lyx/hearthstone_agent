@@ -1,0 +1,2025 @@
+{
+  "inputs": [
+    "development/experiments/zoo-guide-train",
+    "development/experiments/zoo-guide-holdout"
+  ],
+  "metrics": {
+    "win": {
+      "games": 344,
+      "mean_turns": 13.886627906976743,
+      "board_deficit": 57,
+      "hand_at_most_one": 126,
+      "enemy_hp_above_10": 0,
+      "enemy_aoe_games": 38,
+      "taunt_stall_games": 65,
+      "taunt_stalls": 79,
+      "mean_unspent_late_mana": 1.186046511627907,
+      "final_hand_cards": {
+        "Soulfire": 104,
+        "Scarlet Crusader": 42,
+        "Mortal Coil": 115,
+        "Knife Juggler": 33,
+        "Harvest Golem": 18,
+        "Argent Commander": 90,
+        "Acidic Swamp Ooze": 42,
+        "Dire Wolf Alpha": 20,
+        "Voidwalker": 44,
+        "Dark Iron Dwarf": 23,
+        "Defender of Argus": 27,
+        "Abusive Sergeant": 27,
+        "Flame Imp": 51,
+        "Shattered Sun Cleric": 37,
+        "Argent Squire": 17,
+        "The Coin": 1
+      },
+      "by_opponent": {
+        "official-mage": 22,
+        "aggressive-hunter": 24,
+        "control-priest": 21,
+        "tempo-paladin": 16,
+        "value-warlock": 23,
+        "adversarial-zoo": 18,
+        "search-paladin": 15,
+        "historical-mage": 17,
+        "control-mage": 29,
+        "tempo-warlock": 35,
+        "aggressive-paladin": 36,
+        "value-priest": 34,
+        "search-shaman": 38,
+        "adversarial-priest-v1": 16
+      }
+    },
+    "loss": {
+      "games": 88,
+      "mean_turns": 20.306818181818183,
+      "board_deficit": 59,
+      "hand_at_most_one": 78,
+      "enemy_hp_above_10": 52,
+      "enemy_aoe_games": 45,
+      "taunt_stall_games": 35,
+      "taunt_stalls": 49,
+      "mean_unspent_late_mana": 13.102272727272727,
+      "final_hand_cards": {
+        "The Coin": 5,
+        "Mortal Coil": 12,
+        "Flame Imp": 13,
+        "Harvest Golem": 2,
+        "Argent Commander": 7,
+        "Soulfire": 2,
+        "Scarlet Crusader": 1,
+        "Voidwalker": 2,
+        "Abusive Sergeant": 4,
+        "Dire Wolf Alpha": 1
+      },
+      "by_opponent": {
+        "official-mage": 2,
+        "control-priest": 3,
+        "tempo-paladin": 8,
+        "value-warlock": 1,
+        "adversarial-zoo": 6,
+        "search-paladin": 9,
+        "historical-mage": 7,
+        "control-mage": 11,
+        "tempo-warlock": 5,
+        "aggressive-paladin": 4,
+        "value-priest": 6,
+        "search-shaman": 2,
+        "adversarial-priest-v1": 24
+      }
+    }
+  },
+  "loss_cases": [
+    {
+      "seed": 6001,
+      "seat": 1,
+      "opponent": "official-mage",
+      "score": 0.0,
+      "turns": 25,
+      "own_hp": 12,
+      "enemy_hp": 4,
+      "own_board_attack": 8,
+      "enemy_board_attack": 8,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        14
+      ],
+      "enemy_aoe": {},
+      "tap_count": 4,
+      "unspent_late_mana": 18,
+      "replay": "development/experiments/zoo-guide-train/official-mage-s6001-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/official-mage-s6001-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6005,
+      "seat": 2,
+      "opponent": "official-mage",
+      "score": 0.0,
+      "turns": 21,
+      "own_hp": 7,
+      "enemy_hp": 9,
+      "own_board_attack": 2,
+      "enemy_board_attack": 12,
+      "hand_size": 1,
+      "hand": [
+        "The Coin"
+      ],
+      "taunt_stall_seqs": [
+        33
+      ],
+      "enemy_aoe": {},
+      "tap_count": 2,
+      "unspent_late_mana": 14,
+      "replay": "development/experiments/zoo-guide-train/official-mage-s6005-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/official-mage-s6005-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6002,
+      "seat": 1,
+      "opponent": "control-priest",
+      "score": 0.0,
+      "turns": 26,
+      "own_hp": 9,
+      "enemy_hp": 8,
+      "own_board_attack": 3,
+      "enemy_board_attack": 14,
+      "hand_size": 1,
+      "hand": [
+        "Mortal Coil"
+      ],
+      "taunt_stall_seqs": [
+        15,
+        48
+      ],
+      "enemy_aoe": {
+        "Holy Nova": 2
+      },
+      "tap_count": 3,
+      "unspent_late_mana": 27,
+      "replay": "development/experiments/zoo-guide-train/control-priest-s6002-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/control-priest-s6002-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6004,
+      "seat": 1,
+      "opponent": "control-priest",
+      "score": 0.0,
+      "turns": 21,
+      "own_hp": 7,
+      "enemy_hp": 22,
+      "own_board_attack": 7,
+      "enemy_board_attack": 17,
+      "hand_size": 1,
+      "hand": [
+        "Flame Imp"
+      ],
+      "taunt_stall_seqs": [
+        12,
+        16
+      ],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 8,
+      "replay": "development/experiments/zoo-guide-train/control-priest-s6004-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/control-priest-s6004-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6005,
+      "seat": 2,
+      "opponent": "control-priest",
+      "score": 0.0,
+      "turns": 23,
+      "own_hp": 4,
+      "enemy_hp": 17,
+      "own_board_attack": 2,
+      "enemy_board_attack": 14,
+      "hand_size": 1,
+      "hand": [
+        "Mortal Coil"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 2,
+      "unspent_late_mana": 22,
+      "replay": "development/experiments/zoo-guide-train/control-priest-s6005-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/control-priest-s6005-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6001,
+      "seat": 1,
+      "opponent": "tempo-paladin",
+      "score": 0.0,
+      "turns": 19,
+      "own_hp": 7,
+      "enemy_hp": 25,
+      "own_board_attack": 10,
+      "enemy_board_attack": 5,
+      "hand_size": 1,
+      "hand": [
+        "Harvest Golem"
+      ],
+      "taunt_stall_seqs": [
+        14
+      ],
+      "enemy_aoe": {
+        "Consecration": 1
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 2,
+      "replay": "development/experiments/zoo-guide-train/tempo-paladin-s6001-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/tempo-paladin-s6001-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6003,
+      "seat": 1,
+      "opponent": "tempo-paladin",
+      "score": 0.0,
+      "turns": 21,
+      "own_hp": 4,
+      "enemy_hp": 8,
+      "own_board_attack": 1,
+      "enemy_board_attack": 14,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        30
+      ],
+      "enemy_aoe": {
+        "Consecration": 1
+      },
+      "tap_count": 1,
+      "unspent_late_mana": 19,
+      "replay": "development/experiments/zoo-guide-train/tempo-paladin-s6003-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/tempo-paladin-s6003-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6004,
+      "seat": 1,
+      "opponent": "tempo-paladin",
+      "score": 0.0,
+      "turns": 23,
+      "own_hp": 6,
+      "enemy_hp": 16,
+      "own_board_attack": 2,
+      "enemy_board_attack": 6,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        41
+      ],
+      "enemy_aoe": {
+        "Consecration": 1
+      },
+      "tap_count": 1,
+      "unspent_late_mana": 19,
+      "replay": "development/experiments/zoo-guide-train/tempo-paladin-s6004-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/tempo-paladin-s6004-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6005,
+      "seat": 2,
+      "opponent": "tempo-paladin",
+      "score": 0.0,
+      "turns": 23,
+      "own_hp": 6,
+      "enemy_hp": 23,
+      "own_board_attack": 3,
+      "enemy_board_attack": 14,
+      "hand_size": 1,
+      "hand": [
+        "The Coin"
+      ],
+      "taunt_stall_seqs": [
+        41
+      ],
+      "enemy_aoe": {},
+      "tap_count": 2,
+      "unspent_late_mana": 21,
+      "replay": "development/experiments/zoo-guide-train/tempo-paladin-s6005-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/tempo-paladin-s6005-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6007,
+      "seat": 1,
+      "opponent": "tempo-paladin",
+      "score": 0.0,
+      "turns": 19,
+      "own_hp": 7,
+      "enemy_hp": 18,
+      "own_board_attack": 5,
+      "enemy_board_attack": 8,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Consecration": 1
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 9,
+      "replay": "development/experiments/zoo-guide-train/tempo-paladin-s6007-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/tempo-paladin-s6007-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6008,
+      "seat": 1,
+      "opponent": "tempo-paladin",
+      "score": 0.0,
+      "turns": 18,
+      "own_hp": 5,
+      "enemy_hp": 18,
+      "own_board_attack": 10,
+      "enemy_board_attack": 8,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Consecration": 1
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 9,
+      "replay": "development/experiments/zoo-guide-train/tempo-paladin-s6008-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/tempo-paladin-s6008-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6008,
+      "seat": 2,
+      "opponent": "tempo-paladin",
+      "score": 0.0,
+      "turns": 15,
+      "own_hp": 3,
+      "enemy_hp": 8,
+      "own_board_attack": 11,
+      "enemy_board_attack": 11,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 0,
+      "unspent_late_mana": 5,
+      "replay": "development/experiments/zoo-guide-train/tempo-paladin-s6008-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/tempo-paladin-s6008-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6009,
+      "seat": 2,
+      "opponent": "tempo-paladin",
+      "score": 0.0,
+      "turns": 17,
+      "own_hp": 8,
+      "enemy_hp": 25,
+      "own_board_attack": 5,
+      "enemy_board_attack": 8,
+      "hand_size": 1,
+      "hand": [
+        "Mortal Coil"
+      ],
+      "taunt_stall_seqs": [
+        17
+      ],
+      "enemy_aoe": {},
+      "tap_count": 1,
+      "unspent_late_mana": 5,
+      "replay": "development/experiments/zoo-guide-train/tempo-paladin-s6009-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/tempo-paladin-s6009-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6007,
+      "seat": 1,
+      "opponent": "value-warlock",
+      "score": 0.0,
+      "turns": 21,
+      "own_hp": 10,
+      "enemy_hp": 14,
+      "own_board_attack": 3,
+      "enemy_board_attack": 13,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        23
+      ],
+      "enemy_aoe": {},
+      "tap_count": 4,
+      "unspent_late_mana": 10,
+      "replay": "development/experiments/zoo-guide-train/value-warlock-s6007-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/value-warlock-s6007-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6000,
+      "seat": 1,
+      "opponent": "adversarial-zoo",
+      "score": 0.0,
+      "turns": 18,
+      "own_hp": 3,
+      "enemy_hp": 15,
+      "own_board_attack": 2,
+      "enemy_board_attack": 7,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 1,
+      "unspent_late_mana": 11,
+      "replay": "development/experiments/zoo-guide-train/adversarial-zoo-s6000-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/adversarial-zoo-s6000-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6004,
+      "seat": 1,
+      "opponent": "adversarial-zoo",
+      "score": 0.0,
+      "turns": 13,
+      "own_hp": 2,
+      "enemy_hp": 4,
+      "own_board_attack": 16,
+      "enemy_board_attack": 3,
+      "hand_size": 2,
+      "hand": [
+        "Argent Commander",
+        "Argent Commander"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 0,
+      "unspent_late_mana": 3,
+      "replay": "development/experiments/zoo-guide-train/adversarial-zoo-s6004-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/adversarial-zoo-s6004-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6004,
+      "seat": 2,
+      "opponent": "adversarial-zoo",
+      "score": 0.0,
+      "turns": 14,
+      "own_hp": 9,
+      "enemy_hp": 3,
+      "own_board_attack": 12,
+      "enemy_board_attack": 5,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 1,
+      "unspent_late_mana": 1,
+      "replay": "development/experiments/zoo-guide-train/adversarial-zoo-s6004-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/adversarial-zoo-s6004-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6005,
+      "seat": 2,
+      "opponent": "adversarial-zoo",
+      "score": 0.0,
+      "turns": 15,
+      "own_hp": 6,
+      "enemy_hp": 10,
+      "own_board_attack": 9,
+      "enemy_board_attack": 6,
+      "hand_size": 1,
+      "hand": [
+        "The Coin"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 0,
+      "unspent_late_mana": 1,
+      "replay": "development/experiments/zoo-guide-train/adversarial-zoo-s6005-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/adversarial-zoo-s6005-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6008,
+      "seat": 2,
+      "opponent": "adversarial-zoo",
+      "score": 0.0,
+      "turns": 13,
+      "own_hp": 6,
+      "enemy_hp": 24,
+      "own_board_attack": 3,
+      "enemy_board_attack": 5,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 0,
+      "unspent_late_mana": 2,
+      "replay": "development/experiments/zoo-guide-train/adversarial-zoo-s6008-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/adversarial-zoo-s6008-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6011,
+      "seat": 1,
+      "opponent": "adversarial-zoo",
+      "score": 0.0,
+      "turns": 13,
+      "own_hp": 9,
+      "enemy_hp": 6,
+      "own_board_attack": 6,
+      "enemy_board_attack": 5,
+      "hand_size": 1,
+      "hand": [
+        "Argent Commander"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 1,
+      "unspent_late_mana": 4,
+      "replay": "development/experiments/zoo-guide-train/adversarial-zoo-s6011-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/adversarial-zoo-s6011-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6000,
+      "seat": 2,
+      "opponent": "search-paladin",
+      "score": 0.0,
+      "turns": 17,
+      "own_hp": 9,
+      "enemy_hp": 13,
+      "own_board_attack": 15,
+      "enemy_board_attack": 16,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 1,
+      "unspent_late_mana": 7,
+      "replay": "development/experiments/zoo-guide-train/search-paladin-s6000-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/search-paladin-s6000-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6004,
+      "seat": 1,
+      "opponent": "search-paladin",
+      "score": 0.0,
+      "turns": 13,
+      "own_hp": 6,
+      "enemy_hp": 6,
+      "own_board_attack": 15,
+      "enemy_board_attack": 11,
+      "hand_size": 2,
+      "hand": [
+        "Mortal Coil",
+        "Argent Commander"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 0,
+      "unspent_late_mana": 0,
+      "replay": "development/experiments/zoo-guide-train/search-paladin-s6004-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/search-paladin-s6004-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6005,
+      "seat": 2,
+      "opponent": "search-paladin",
+      "score": 0.0,
+      "turns": 19,
+      "own_hp": 1,
+      "enemy_hp": 10,
+      "own_board_attack": 18,
+      "enemy_board_attack": 10,
+      "hand_size": 1,
+      "hand": [
+        "The Coin"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 2,
+      "unspent_late_mana": 6,
+      "replay": "development/experiments/zoo-guide-train/search-paladin-s6005-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/search-paladin-s6005-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6008,
+      "seat": 2,
+      "opponent": "search-paladin",
+      "score": 0.0,
+      "turns": 15,
+      "own_hp": 4,
+      "enemy_hp": 11,
+      "own_board_attack": 16,
+      "enemy_board_attack": 6,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Consecration": 1
+      },
+      "tap_count": 1,
+      "unspent_late_mana": 0,
+      "replay": "development/experiments/zoo-guide-train/search-paladin-s6008-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/search-paladin-s6008-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6008,
+      "seat": 1,
+      "opponent": "search-paladin",
+      "score": 0.0,
+      "turns": 20,
+      "own_hp": 7,
+      "enemy_hp": 23,
+      "own_board_attack": 5,
+      "enemy_board_attack": 14,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Consecration": 1
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 19,
+      "replay": "development/experiments/zoo-guide-train/search-paladin-s6008-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/search-paladin-s6008-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6010,
+      "seat": 1,
+      "opponent": "search-paladin",
+      "score": 0.0,
+      "turns": 19,
+      "own_hp": 8,
+      "enemy_hp": 21,
+      "own_board_attack": 6,
+      "enemy_board_attack": 13,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Consecration": 1
+      },
+      "tap_count": 3,
+      "unspent_late_mana": 4,
+      "replay": "development/experiments/zoo-guide-train/search-paladin-s6010-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/search-paladin-s6010-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6010,
+      "seat": 2,
+      "opponent": "search-paladin",
+      "score": 0.0,
+      "turns": 16,
+      "own_hp": 7,
+      "enemy_hp": 18,
+      "own_board_attack": 8,
+      "enemy_board_attack": 6,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Consecration": 2
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 5,
+      "replay": "development/experiments/zoo-guide-train/search-paladin-s6010-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/search-paladin-s6010-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6009,
+      "seat": 2,
+      "opponent": "search-paladin",
+      "score": 0.0,
+      "turns": 17,
+      "own_hp": 8,
+      "enemy_hp": 12,
+      "own_board_attack": 13,
+      "enemy_board_attack": 8,
+      "hand_size": 2,
+      "hand": [
+        "Argent Commander",
+        "Soulfire"
+      ],
+      "taunt_stall_seqs": [
+        17,
+        21
+      ],
+      "enemy_aoe": {},
+      "tap_count": 2,
+      "unspent_late_mana": 5,
+      "replay": "development/experiments/zoo-guide-train/search-paladin-s6009-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/search-paladin-s6009-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6007,
+      "seat": 1,
+      "opponent": "search-paladin",
+      "score": 0.0,
+      "turns": 19,
+      "own_hp": 13,
+      "enemy_hp": 12,
+      "own_board_attack": 8,
+      "enemy_board_attack": 14,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Consecration": 1
+      },
+      "tap_count": 1,
+      "unspent_late_mana": 13,
+      "replay": "development/experiments/zoo-guide-train/search-paladin-s6007-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/search-paladin-s6007-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6001,
+      "seat": 1,
+      "opponent": "historical-mage",
+      "score": 0.0,
+      "turns": 21,
+      "own_hp": 15,
+      "enemy_hp": 9,
+      "own_board_attack": 14,
+      "enemy_board_attack": 10,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 3,
+      "unspent_late_mana": 3,
+      "replay": "development/experiments/zoo-guide-train/historical-mage-s6001-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/historical-mage-s6001-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6002,
+      "seat": 1,
+      "opponent": "historical-mage",
+      "score": 0.0,
+      "turns": 18,
+      "own_hp": 17,
+      "enemy_hp": 1,
+      "own_board_attack": 12,
+      "enemy_board_attack": 13,
+      "hand_size": 1,
+      "hand": [
+        "Mortal Coil"
+      ],
+      "taunt_stall_seqs": [
+        15
+      ],
+      "enemy_aoe": {
+        "Flamestrike": 1
+      },
+      "tap_count": 3,
+      "unspent_late_mana": 4,
+      "replay": "development/experiments/zoo-guide-train/historical-mage-s6002-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/historical-mage-s6002-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6004,
+      "seat": 1,
+      "opponent": "historical-mage",
+      "score": 0.0,
+      "turns": 23,
+      "own_hp": 1,
+      "enemy_hp": 10,
+      "own_board_attack": 5,
+      "enemy_board_attack": 2,
+      "hand_size": 1,
+      "hand": [
+        "Flame Imp"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 1,
+      "unspent_late_mana": 20,
+      "replay": "development/experiments/zoo-guide-train/historical-mage-s6004-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/historical-mage-s6004-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6005,
+      "seat": 2,
+      "opponent": "historical-mage",
+      "score": 0.0,
+      "turns": 15,
+      "own_hp": 8,
+      "enemy_hp": 10,
+      "own_board_attack": 6,
+      "enemy_board_attack": 7,
+      "hand_size": 2,
+      "hand": [
+        "Argent Commander",
+        "The Coin"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Flamestrike": 1
+      },
+      "tap_count": 1,
+      "unspent_late_mana": 2,
+      "replay": "development/experiments/zoo-guide-train/historical-mage-s6005-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/historical-mage-s6005-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 6007,
+      "seat": 1,
+      "opponent": "historical-mage",
+      "score": 0.0,
+      "turns": 19,
+      "own_hp": 14,
+      "enemy_hp": 19,
+      "own_board_attack": 5,
+      "enemy_board_attack": 9,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Flamestrike": 1
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 11,
+      "replay": "development/experiments/zoo-guide-train/historical-mage-s6007-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/historical-mage-s6007-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6008,
+      "seat": 1,
+      "opponent": "historical-mage",
+      "score": 0.0,
+      "turns": 16,
+      "own_hp": 15,
+      "enemy_hp": 23,
+      "own_board_attack": 9,
+      "enemy_board_attack": 10,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 2,
+      "unspent_late_mana": 2,
+      "replay": "development/experiments/zoo-guide-train/historical-mage-s6008-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/historical-mage-s6008-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 6010,
+      "seat": 1,
+      "opponent": "historical-mage",
+      "score": 0.0,
+      "turns": 25,
+      "own_hp": 4,
+      "enemy_hp": 18,
+      "own_board_attack": 8,
+      "enemy_board_attack": 7,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        15
+      ],
+      "enemy_aoe": {
+        "Flamestrike": 1
+      },
+      "tap_count": 4,
+      "unspent_late_mana": 18,
+      "replay": "development/experiments/zoo-guide-train/historical-mage-s6010-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-train/historical-mage-s6010-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100302,
+      "seat": 1,
+      "opponent": "control-mage",
+      "score": 0.0,
+      "turns": 27,
+      "own_hp": 2,
+      "enemy_hp": 5,
+      "own_board_attack": 6,
+      "enemy_board_attack": 4,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        16
+      ],
+      "enemy_aoe": {
+        "Flamestrike": 1
+      },
+      "tap_count": 5,
+      "unspent_late_mana": 26,
+      "replay": "development/experiments/zoo-guide-holdout/control-mage-s100302-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/control-mage-s100302-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100301,
+      "seat": 2,
+      "opponent": "control-mage",
+      "score": 0.0,
+      "turns": 31,
+      "own_hp": 7,
+      "enemy_hp": 16,
+      "own_board_attack": 5,
+      "enemy_board_attack": 4,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Flamestrike": 2
+      },
+      "tap_count": 6,
+      "unspent_late_mana": 36,
+      "replay": "development/experiments/zoo-guide-holdout/control-mage-s100301-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/control-mage-s100301-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100303,
+      "seat": 1,
+      "opponent": "control-mage",
+      "score": 0.0,
+      "turns": 19,
+      "own_hp": 8,
+      "enemy_hp": 20,
+      "own_board_attack": 10,
+      "enemy_board_attack": 4,
+      "hand_size": 1,
+      "hand": [
+        "Flame Imp"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 3,
+      "unspent_late_mana": 5,
+      "replay": "development/experiments/zoo-guide-holdout/control-mage-s100303-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/control-mage-s100303-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100304,
+      "seat": 2,
+      "opponent": "control-mage",
+      "score": 0.0,
+      "turns": 20,
+      "own_hp": 10,
+      "enemy_hp": 7,
+      "own_board_attack": 4,
+      "enemy_board_attack": 7,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 3,
+      "unspent_late_mana": 15,
+      "replay": "development/experiments/zoo-guide-holdout/control-mage-s100304-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/control-mage-s100304-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100312,
+      "seat": 1,
+      "opponent": "control-mage",
+      "score": 0.0,
+      "turns": 25,
+      "own_hp": 4,
+      "enemy_hp": 8,
+      "own_board_attack": 12,
+      "enemy_board_attack": 3,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Flamestrike": 1
+      },
+      "tap_count": 5,
+      "unspent_late_mana": 15,
+      "replay": "development/experiments/zoo-guide-holdout/control-mage-s100312-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/control-mage-s100312-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100313,
+      "seat": 1,
+      "opponent": "control-mage",
+      "score": 0.0,
+      "turns": 22,
+      "own_hp": 13,
+      "enemy_hp": 16,
+      "own_board_attack": 6,
+      "enemy_board_attack": 7,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        15,
+        18
+      ],
+      "enemy_aoe": {
+        "Flamestrike": 1
+      },
+      "tap_count": 3,
+      "unspent_late_mana": 12,
+      "replay": "development/experiments/zoo-guide-holdout/control-mage-s100313-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/control-mage-s100313-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100314,
+      "seat": 2,
+      "opponent": "control-mage",
+      "score": 0.0,
+      "turns": 25,
+      "own_hp": 5,
+      "enemy_hp": 24,
+      "own_board_attack": 3,
+      "enemy_board_attack": 14,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 1,
+      "unspent_late_mana": 24,
+      "replay": "development/experiments/zoo-guide-holdout/control-mage-s100314-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/control-mage-s100314-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100317,
+      "seat": 1,
+      "opponent": "control-mage",
+      "score": 0.0,
+      "turns": 24,
+      "own_hp": 5,
+      "enemy_hp": 26,
+      "own_board_attack": 8,
+      "enemy_board_attack": 10,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        15
+      ],
+      "enemy_aoe": {},
+      "tap_count": 4,
+      "unspent_late_mana": 22,
+      "replay": "development/experiments/zoo-guide-holdout/control-mage-s100317-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/control-mage-s100317-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100316,
+      "seat": 2,
+      "opponent": "control-mage",
+      "score": 0.0,
+      "turns": 29,
+      "own_hp": 7,
+      "enemy_hp": 4,
+      "own_board_attack": 5,
+      "enemy_board_attack": 8,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Flamestrike": 1
+      },
+      "tap_count": 4,
+      "unspent_late_mana": 34,
+      "replay": "development/experiments/zoo-guide-holdout/control-mage-s100316-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/control-mage-s100316-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100318,
+      "seat": 2,
+      "opponent": "control-mage",
+      "score": 0.0,
+      "turns": 27,
+      "own_hp": 8,
+      "enemy_hp": 5,
+      "own_board_attack": 6,
+      "enemy_board_attack": 6,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 6,
+      "unspent_late_mana": 23,
+      "replay": "development/experiments/zoo-guide-holdout/control-mage-s100318-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/control-mage-s100318-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100319,
+      "seat": 2,
+      "opponent": "control-mage",
+      "score": 0.0,
+      "turns": 20,
+      "own_hp": 17,
+      "enemy_hp": 8,
+      "own_board_attack": 10,
+      "enemy_board_attack": 8,
+      "hand_size": 1,
+      "hand": [
+        "Mortal Coil"
+      ],
+      "taunt_stall_seqs": [
+        18
+      ],
+      "enemy_aoe": {},
+      "tap_count": 4,
+      "unspent_late_mana": 8,
+      "replay": "development/experiments/zoo-guide-holdout/control-mage-s100319-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/control-mage-s100319-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100304,
+      "seat": 1,
+      "opponent": "tempo-warlock",
+      "score": 0.0,
+      "turns": 17,
+      "own_hp": 13,
+      "enemy_hp": 11,
+      "own_board_attack": 3,
+      "enemy_board_attack": 16,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 2,
+      "unspent_late_mana": 10,
+      "replay": "development/experiments/zoo-guide-holdout/tempo-warlock-s100304-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/tempo-warlock-s100304-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100312,
+      "seat": 1,
+      "opponent": "tempo-warlock",
+      "score": 0.0,
+      "turns": 21,
+      "own_hp": 6,
+      "enemy_hp": 10,
+      "own_board_attack": 3,
+      "enemy_board_attack": 8,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Hellfire": 1
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 10,
+      "replay": "development/experiments/zoo-guide-holdout/tempo-warlock-s100312-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/tempo-warlock-s100312-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100315,
+      "seat": 2,
+      "opponent": "tempo-warlock",
+      "score": 0.0,
+      "turns": 21,
+      "own_hp": 9,
+      "enemy_hp": 7,
+      "own_board_attack": 13,
+      "enemy_board_attack": 14,
+      "hand_size": 1,
+      "hand": [
+        "Flame Imp"
+      ],
+      "taunt_stall_seqs": [
+        28,
+        40,
+        42
+      ],
+      "enemy_aoe": {},
+      "tap_count": 2,
+      "unspent_late_mana": 18,
+      "replay": "development/experiments/zoo-guide-holdout/tempo-warlock-s100315-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/tempo-warlock-s100315-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100318,
+      "seat": 2,
+      "opponent": "tempo-warlock",
+      "score": 0.0,
+      "turns": 21,
+      "own_hp": 8,
+      "enemy_hp": 11,
+      "own_board_attack": 9,
+      "enemy_board_attack": 4,
+      "hand_size": 1,
+      "hand": [
+        "Flame Imp"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Hellfire": 1
+      },
+      "tap_count": 5,
+      "unspent_late_mana": 9,
+      "replay": "development/experiments/zoo-guide-holdout/tempo-warlock-s100318-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/tempo-warlock-s100318-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100319,
+      "seat": 1,
+      "opponent": "tempo-warlock",
+      "score": 0.0,
+      "turns": 21,
+      "own_hp": 9,
+      "enemy_hp": 14,
+      "own_board_attack": 8,
+      "enemy_board_attack": 10,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        31,
+        35
+      ],
+      "enemy_aoe": {
+        "Hellfire": 1
+      },
+      "tap_count": 4,
+      "unspent_late_mana": 5,
+      "replay": "development/experiments/zoo-guide-holdout/tempo-warlock-s100319-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/tempo-warlock-s100319-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100301,
+      "seat": 2,
+      "opponent": "aggressive-paladin",
+      "score": 0.0,
+      "turns": 13,
+      "own_hp": 3,
+      "enemy_hp": 17,
+      "own_board_attack": 15,
+      "enemy_board_attack": 5,
+      "hand_size": 2,
+      "hand": [
+        "Soulfire",
+        "Argent Commander"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Consecration": 1
+      },
+      "tap_count": 1,
+      "unspent_late_mana": 0,
+      "replay": "development/experiments/zoo-guide-holdout/aggressive-paladin-s100301-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/aggressive-paladin-s100301-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100302,
+      "seat": 2,
+      "opponent": "aggressive-paladin",
+      "score": 0.0,
+      "turns": 14,
+      "own_hp": 11,
+      "enemy_hp": 6,
+      "own_board_attack": 17,
+      "enemy_board_attack": 7,
+      "hand_size": 4,
+      "hand": [
+        "Scarlet Crusader",
+        "Voidwalker",
+        "Abusive Sergeant",
+        "Harvest Golem"
+      ],
+      "taunt_stall_seqs": [
+        36
+      ],
+      "enemy_aoe": {},
+      "tap_count": 2,
+      "unspent_late_mana": 5,
+      "replay": "development/experiments/zoo-guide-holdout/aggressive-paladin-s100302-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/aggressive-paladin-s100302-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100303,
+      "seat": 1,
+      "opponent": "aggressive-paladin",
+      "score": 0.0,
+      "turns": 17,
+      "own_hp": 6,
+      "enemy_hp": 20,
+      "own_board_attack": 18,
+      "enemy_board_attack": 8,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        28,
+        33
+      ],
+      "enemy_aoe": {},
+      "tap_count": 1,
+      "unspent_late_mana": 3,
+      "replay": "development/experiments/zoo-guide-holdout/aggressive-paladin-s100303-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/aggressive-paladin-s100303-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100319,
+      "seat": 2,
+      "opponent": "aggressive-paladin",
+      "score": 0.0,
+      "turns": 16,
+      "own_hp": 7,
+      "enemy_hp": 4,
+      "own_board_attack": 17,
+      "enemy_board_attack": 9,
+      "hand_size": 1,
+      "hand": [
+        "Dire Wolf Alpha"
+      ],
+      "taunt_stall_seqs": [
+        36
+      ],
+      "enemy_aoe": {},
+      "tap_count": 1,
+      "unspent_late_mana": 8,
+      "replay": "development/experiments/zoo-guide-holdout/aggressive-paladin-s100319-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/aggressive-paladin-s100319-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100301,
+      "seat": 2,
+      "opponent": "value-priest",
+      "score": 0.0,
+      "turns": 25,
+      "own_hp": 5,
+      "enemy_hp": 13,
+      "own_board_attack": 0,
+      "enemy_board_attack": 16,
+      "hand_size": 2,
+      "hand": [
+        "Mortal Coil",
+        "Flame Imp"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 3,
+      "unspent_late_mana": 30,
+      "replay": "development/experiments/zoo-guide-holdout/value-priest-s100301-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/value-priest-s100301-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100302,
+      "seat": 2,
+      "opponent": "value-priest",
+      "score": 0.0,
+      "turns": 26,
+      "own_hp": 1,
+      "enemy_hp": 14,
+      "own_board_attack": 2,
+      "enemy_board_attack": 12,
+      "hand_size": 1,
+      "hand": [
+        "Flame Imp"
+      ],
+      "taunt_stall_seqs": [
+        33,
+        46
+      ],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 5,
+      "unspent_late_mana": 34,
+      "replay": "development/experiments/zoo-guide-holdout/value-priest-s100302-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/value-priest-s100302-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100304,
+      "seat": 2,
+      "opponent": "value-priest",
+      "score": 0.0,
+      "turns": 18,
+      "own_hp": 11,
+      "enemy_hp": 10,
+      "own_board_attack": 4,
+      "enemy_board_attack": 17,
+      "hand_size": 3,
+      "hand": [
+        "Mortal Coil",
+        "Mortal Coil",
+        "Flame Imp"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 1,
+      "unspent_late_mana": 18,
+      "replay": "development/experiments/zoo-guide-holdout/value-priest-s100304-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/value-priest-s100304-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100310,
+      "seat": 1,
+      "opponent": "value-priest",
+      "score": 0.0,
+      "turns": 18,
+      "own_hp": 12,
+      "enemy_hp": 6,
+      "own_board_attack": 4,
+      "enemy_board_attack": 18,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 3,
+      "unspent_late_mana": 7,
+      "replay": "development/experiments/zoo-guide-holdout/value-priest-s100310-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/value-priest-s100310-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100314,
+      "seat": 2,
+      "opponent": "value-priest",
+      "score": 0.0,
+      "turns": 19,
+      "own_hp": 7,
+      "enemy_hp": 7,
+      "own_board_attack": 21,
+      "enemy_board_attack": 8,
+      "hand_size": 1,
+      "hand": [
+        "Voidwalker"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 1,
+      "unspent_late_mana": 6,
+      "replay": "development/experiments/zoo-guide-holdout/value-priest-s100314-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/value-priest-s100314-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100318,
+      "seat": 2,
+      "opponent": "value-priest",
+      "score": 0.0,
+      "turns": 17,
+      "own_hp": 10,
+      "enemy_hp": 9,
+      "own_board_attack": 13,
+      "enemy_board_attack": 15,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 2,
+      "unspent_late_mana": 5,
+      "replay": "development/experiments/zoo-guide-holdout/value-priest-s100318-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/value-priest-s100318-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100301,
+      "seat": 2,
+      "opponent": "search-shaman",
+      "score": 0.0,
+      "turns": 25,
+      "own_hp": 5,
+      "enemy_hp": 15,
+      "own_board_attack": 2,
+      "enemy_board_attack": 8,
+      "hand_size": 1,
+      "hand": [
+        "Flame Imp"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 4,
+      "unspent_late_mana": 22,
+      "replay": "development/experiments/zoo-guide-holdout/search-shaman-s100301-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/search-shaman-s100301-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100316,
+      "seat": 2,
+      "opponent": "search-shaman",
+      "score": 0.0,
+      "turns": 23,
+      "own_hp": 4,
+      "enemy_hp": 10,
+      "own_board_attack": 4,
+      "enemy_board_attack": 6,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 2,
+      "unspent_late_mana": 21,
+      "replay": "development/experiments/zoo-guide-holdout/search-shaman-s100316-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/search-shaman-s100316-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100301,
+      "seat": 2,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 23,
+      "own_hp": 1,
+      "enemy_hp": 16,
+      "own_board_attack": 3,
+      "enemy_board_attack": 13,
+      "hand_size": 1,
+      "hand": [
+        "Flame Imp"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {},
+      "tap_count": 3,
+      "unspent_late_mana": 19,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100301-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100301-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100302,
+      "seat": 1,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 27,
+      "own_hp": 3,
+      "enemy_hp": 6,
+      "own_board_attack": 0,
+      "enemy_board_attack": 18,
+      "hand_size": 1,
+      "hand": [
+        "Abusive Sergeant"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 5,
+      "unspent_late_mana": 27,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100302-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100302-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100304,
+      "seat": 1,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 17,
+      "own_hp": 15,
+      "enemy_hp": 22,
+      "own_board_attack": 4,
+      "enemy_board_attack": 16,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 3,
+      "unspent_late_mana": 7,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100304-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100304-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100303,
+      "seat": 1,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 25,
+      "own_hp": 11,
+      "enemy_hp": 14,
+      "own_board_attack": 0,
+      "enemy_board_attack": 18,
+      "hand_size": 2,
+      "hand": [
+        "Flame Imp",
+        "Abusive Sergeant"
+      ],
+      "taunt_stall_seqs": [
+        22,
+        33
+      ],
+      "enemy_aoe": {},
+      "tap_count": 4,
+      "unspent_late_mana": 27,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100303-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100303-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100304,
+      "seat": 2,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 16,
+      "own_hp": 8,
+      "enemy_hp": 25,
+      "own_board_attack": 3,
+      "enemy_board_attack": 13,
+      "hand_size": 2,
+      "hand": [
+        "Mortal Coil",
+        "Flame Imp"
+      ],
+      "taunt_stall_seqs": [
+        26
+      ],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 6,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100304-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100304-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100305,
+      "seat": 1,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 23,
+      "own_hp": 4,
+      "enemy_hp": 21,
+      "own_board_attack": 1,
+      "enemy_board_attack": 16,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        27
+      ],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 19,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100305-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100305-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100306,
+      "seat": 1,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 24,
+      "own_hp": 16,
+      "enemy_hp": 13,
+      "own_board_attack": 1,
+      "enemy_board_attack": 17,
+      "hand_size": 1,
+      "hand": [
+        "Flame Imp"
+      ],
+      "taunt_stall_seqs": [
+        24,
+        49
+      ],
+      "enemy_aoe": {},
+      "tap_count": 4,
+      "unspent_late_mana": 23,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100306-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100306-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100307,
+      "seat": 1,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 21,
+      "own_hp": 6,
+      "enemy_hp": 18,
+      "own_board_attack": 5,
+      "enemy_board_attack": 10,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        27,
+        39
+      ],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 1,
+      "unspent_late_mana": 15,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100307-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100307-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100308,
+      "seat": 1,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 24,
+      "own_hp": 6,
+      "enemy_hp": 11,
+      "own_board_attack": 1,
+      "enemy_board_attack": 16,
+      "hand_size": 1,
+      "hand": [
+        "Mortal Coil"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Holy Nova": 2
+      },
+      "tap_count": 4,
+      "unspent_late_mana": 29,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100308-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100308-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100309,
+      "seat": 1,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 23,
+      "own_hp": 1,
+      "enemy_hp": 9,
+      "own_board_attack": 3,
+      "enemy_board_attack": 20,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        41
+      ],
+      "enemy_aoe": {
+        "Holy Nova": 2
+      },
+      "tap_count": 1,
+      "unspent_late_mana": 19,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100309-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100309-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100309,
+      "seat": 2,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 20,
+      "own_hp": 10,
+      "enemy_hp": 6,
+      "own_board_attack": 0,
+      "enemy_board_attack": 22,
+      "hand_size": 1,
+      "hand": [
+        "Abusive Sergeant"
+      ],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 20,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100309-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100309-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100310,
+      "seat": 1,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 22,
+      "own_hp": 11,
+      "enemy_hp": 10,
+      "own_board_attack": 7,
+      "enemy_board_attack": 10,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        34
+      ],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 4,
+      "unspent_late_mana": 9,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100310-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100310-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100310,
+      "seat": 2,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 23,
+      "own_hp": 12,
+      "enemy_hp": 18,
+      "own_board_attack": 2,
+      "enemy_board_attack": 11,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        29,
+        39
+      ],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 3,
+      "unspent_late_mana": 16,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100310-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100310-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100311,
+      "seat": 2,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 17,
+      "own_hp": 7,
+      "enemy_hp": 12,
+      "own_board_attack": 3,
+      "enemy_board_attack": 19,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 1,
+      "unspent_late_mana": 8,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100311-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100311-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100312,
+      "seat": 1,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 19,
+      "own_hp": 4,
+      "enemy_hp": 20,
+      "own_board_attack": 12,
+      "enemy_board_attack": 6,
+      "hand_size": 1,
+      "hand": [
+        "Mortal Coil"
+      ],
+      "taunt_stall_seqs": [
+        22
+      ],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 6,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100312-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100312-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100312,
+      "seat": 2,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 18,
+      "own_hp": 10,
+      "enemy_hp": 9,
+      "own_board_attack": 1,
+      "enemy_board_attack": 12,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        32,
+        36
+      ],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 3,
+      "unspent_late_mana": 11,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100312-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100312-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100313,
+      "seat": 2,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 19,
+      "own_hp": 4,
+      "enemy_hp": 18,
+      "own_board_attack": 8,
+      "enemy_board_attack": 19,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        32
+      ],
+      "enemy_aoe": {},
+      "tap_count": 0,
+      "unspent_late_mana": 9,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100313-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100313-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100314,
+      "seat": 2,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 25,
+      "own_hp": 6,
+      "enemy_hp": 28,
+      "own_board_attack": 3,
+      "enemy_board_attack": 13,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 1,
+      "unspent_late_mana": 24,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100314-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100314-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100315,
+      "seat": 2,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 21,
+      "own_hp": 11,
+      "enemy_hp": 21,
+      "own_board_attack": 2,
+      "enemy_board_attack": 21,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Holy Nova": 2
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 10,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100315-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100315-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100316,
+      "seat": 2,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 27,
+      "own_hp": 1,
+      "enemy_hp": 20,
+      "own_board_attack": 2,
+      "enemy_board_attack": 9,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Holy Nova": 2
+      },
+      "tap_count": 3,
+      "unspent_late_mana": 32,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100316-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100316-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100317,
+      "seat": 2,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 19,
+      "own_hp": 15,
+      "enemy_hp": 19,
+      "own_board_attack": 1,
+      "enemy_board_attack": 15,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 2,
+      "unspent_late_mana": 12,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100317-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100317-p2/p2/observations.jsonl"
+    },
+    {
+      "seed": 100317,
+      "seat": 1,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 24,
+      "own_hp": 1,
+      "enemy_hp": 7,
+      "own_board_attack": 8,
+      "enemy_board_attack": 16,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 4,
+      "unspent_late_mana": 22,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100317-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100317-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100318,
+      "seat": 1,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 20,
+      "own_hp": 8,
+      "enemy_hp": 16,
+      "own_board_attack": 7,
+      "enemy_board_attack": 11,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [],
+      "enemy_aoe": {
+        "Holy Nova": 1
+      },
+      "tap_count": 4,
+      "unspent_late_mana": 8,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100318-p1/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100318-p1/p1/observations.jsonl"
+    },
+    {
+      "seed": 100318,
+      "seat": 2,
+      "opponent": "adversarial-priest-v1",
+      "score": 0.0,
+      "turns": 19,
+      "own_hp": 2,
+      "enemy_hp": 19,
+      "own_board_attack": 6,
+      "enemy_board_attack": 15,
+      "hand_size": 0,
+      "hand": [],
+      "taunt_stall_seqs": [
+        19
+      ],
+      "enemy_aoe": {},
+      "tap_count": 1,
+      "unspent_late_mana": 15,
+      "replay": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100318-p2/replay.jsonl",
+      "observations": "development/experiments/zoo-guide-holdout/adversarial-priest-v1-s100318-p2/p2/observations.jsonl"
+    }
+  ],
+  "interpretation": "Descriptive signals only. Prior holdout is now development evidence; future claims require fresh seeds."
+}

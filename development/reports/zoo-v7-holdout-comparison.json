@@ -1,0 +1,31 @@
+{
+  "base": "development/experiments/zoo-v7-holdout-baseline",
+  "challenger": "development/experiments/zoo-v7-holdout-strength",
+  "paired_games": 1120,
+  "seed_clusters": 40,
+  "delta_win_rate": 0.040178571428571425,
+  "cluster_bootstrap95": [
+    0.008928571428571428,
+    0.07142857142857142
+  ],
+  "group_deltas": {
+    "official-mage": 0.0375,
+    "aggressive-hunter": -0.025,
+    "control-priest": 0.0,
+    "tempo-paladin": 0.1,
+    "value-warlock": 0.0875,
+    "adversarial-zoo": -0.0125,
+    "search-paladin": 0.0375,
+    "historical-mage": 0.025,
+    "control-mage": 0.0625,
+    "tempo-warlock": -0.025,
+    "aggressive-paladin": 0.0875,
+    "value-priest": 0.0875,
+    "search-shaman": 0.0875,
+    "adversarial-priest-v1": 0.0125
+  },
+  "execution_stable": true,
+  "gate_pass": true,
+  "gate": "positive lower 95% paired seed-cluster CI; no group decline > 10 percentage points; zero execution defects",
+  "note": "Exploratory comparisons require independent holdout before promotion. Multiple candidate selection can inflate training gains."
+}

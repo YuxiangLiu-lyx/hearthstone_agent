@@ -1,0 +1,23 @@
+{
+  "base": "development/experiments/v0-train",
+  "challenger": "development/experiments/v1-train",
+  "paired_games": 240,
+  "seed_clusters": 20,
+  "delta_win_rate": 0.0625,
+  "cluster_bootstrap95": [
+    -0.025,
+    0.15
+  ],
+  "group_deltas": {
+    "official-mage": 0.025,
+    "aggressive-hunter": 0.05,
+    "control-priest": 0.125,
+    "tempo-paladin": 0.025,
+    "value-warlock": 0.025,
+    "adversarial-zoo": 0.125
+  },
+  "execution_stable": true,
+  "gate_pass": false,
+  "gate": "positive lower 95% paired seed-cluster CI; no group decline > 10 percentage points; zero execution defects",
+  "note": "Exploratory comparisons require independent holdout before promotion. Multiple candidate selection can inflate training gains."
+}

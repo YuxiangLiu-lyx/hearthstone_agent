@@ -1,0 +1,25 @@
+{
+  "base": "development/experiments/local-search/baseline",
+  "challenger": "development/experiments/local-search/tirion-cairne",
+  "paired_games": 128,
+  "seed_clusters": 8,
+  "delta_win_rate": 0.0390625,
+  "cluster_bootstrap95": [
+    -0.0078125,
+    0.0859375
+  ],
+  "group_deltas": {
+    "official-mage": 0.125,
+    "aggressive-hunter": -0.0625,
+    "control-priest": 0.0,
+    "tempo-paladin": 0.0625,
+    "value-warlock": 0.1875,
+    "adversarial-zoo": -0.125,
+    "search-paladin": 0.125,
+    "historical-mage": 0.0
+  },
+  "execution_stable": true,
+  "gate_pass": false,
+  "gate": "positive lower 95% paired seed-cluster CI; no group decline > 10 percentage points; zero execution defects",
+  "note": "Exploratory comparisons require independent holdout before promotion. Multiple candidate selection can inflate training gains."
+}

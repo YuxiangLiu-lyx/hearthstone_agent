@@ -1,0 +1,1180 @@
+{
+  "games": 400,
+  "decisions": 16479,
+  "supported_lethal_checks": 3097,
+  "end_turn_possible_lethals": [
+    {
+      "observations": "development/experiments/paladin-expanded/control-priest-s3001-p1/p1/observations.jsonl",
+      "seq": 49,
+      "plan": [
+        {
+          "type": "play_card",
+          "card": 25
+        }
+      ]
+    },
+    {
+      "observations": "development/experiments/paladin-expanded/control-priest-s3019-p1/p1/observations.jsonl",
+      "seq": 34,
+      "plan": [
+        {
+          "type": "attack",
+          "attacker": 73,
+          "target": 63
+        },
+        {
+          "type": "attack",
+          "attacker": 10,
+          "target": 63
+        },
+        {
+          "type": "attack",
+          "attacker": 7,
+          "target": 63
+        },
+        {
+          "type": "attack",
+          "attacker": 18,
+          "target": 37
+        }
+      ]
+    },
+    {
+      "observations": "development/experiments/paladin-expanded/value-warlock-s3023-p2/p2/observations.jsonl",
+      "seq": 29,
+      "plan": [
+        {
+          "type": "attack",
+          "attacker": 61,
+          "target": 32
+        },
+        {
+          "type": "attack",
+          "attacker": 72,
+          "target": 32
+        },
+        {
+          "type": "attack",
+          "attacker": 42,
+          "target": 4
+        },
+        {
+          "type": "attack",
+          "attacker": 43,
+          "target": 4
+        }
+      ]
+    },
+    {
+      "observations": "development/experiments/paladin-expanded/historical-mage-s3019-p1/p1/observations.jsonl",
+      "seq": 33,
+      "plan": [
+        {
+          "type": "attack",
+          "attacker": 9,
+          "target": 57
+        },
+        {
+          "type": "attack",
+          "attacker": 14,
+          "target": 57
+        },
+        {
+          "type": "attack",
+          "attacker": 10,
+          "target": 37
+        },
+        {
+          "type": "attack",
+          "attacker": 18,
+          "target": 37
+        },
+        {
+          "type": "attack",
+          "attacker": 13,
+          "target": 37
+        },
+        {
+          "type": "attack",
+          "attacker": 7,
+          "target": 37
+        }
+      ]
+    }
+  ],
+  "unused_mana_turns": 3550,
+  "unused_mana_total": 2551,
+  "loss_cases": [
+    {
+      "seed": 3003,
+      "opponent": "official-mage",
+      "replay": "development/experiments/paladin-expanded/official-mage-s3003-p1/replay.jsonl",
+      "last_seq": 33,
+      "labels": [
+        "board_deficit"
+      ],
+      "own_health": 11,
+      "enemy_health": 13,
+      "own_attack": 4,
+      "enemy_attack": 7
+    },
+    {
+      "seed": 3002,
+      "opponent": "official-mage",
+      "replay": "development/experiments/paladin-expanded/official-mage-s3002-p2/replay.jsonl",
+      "last_seq": 62,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 8,
+      "enemy_health": 12,
+      "own_attack": 3,
+      "enemy_attack": 18
+    },
+    {
+      "seed": 3005,
+      "opponent": "official-mage",
+      "replay": "development/experiments/paladin-expanded/official-mage-s3005-p2/replay.jsonl",
+      "last_seq": 53,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 5,
+      "enemy_health": 10,
+      "own_attack": 8,
+      "enemy_attack": 11
+    },
+    {
+      "seed": 3014,
+      "opponent": "official-mage",
+      "replay": "development/experiments/paladin-expanded/official-mage-s3014-p1/replay.jsonl",
+      "last_seq": 48,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion"
+      ],
+      "own_health": 20,
+      "enemy_health": 19,
+      "own_attack": 4,
+      "enemy_attack": 14
+    },
+    {
+      "seed": 3015,
+      "opponent": "official-mage",
+      "replay": "development/experiments/paladin-expanded/official-mage-s3015-p1/replay.jsonl",
+      "last_seq": 52,
+      "labels": [
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 3,
+      "enemy_health": 13,
+      "own_attack": 7,
+      "enemy_attack": 5
+    },
+    {
+      "seed": 3017,
+      "opponent": "official-mage",
+      "replay": "development/experiments/paladin-expanded/official-mage-s3017-p2/replay.jsonl",
+      "last_seq": 45,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 6,
+      "enemy_health": 22,
+      "own_attack": 5,
+      "enemy_attack": 9
+    },
+    {
+      "seed": 3021,
+      "opponent": "official-mage",
+      "replay": "development/experiments/paladin-expanded/official-mage-s3021-p1/replay.jsonl",
+      "last_seq": 36,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 16,
+      "enemy_health": 20,
+      "own_attack": 11,
+      "enemy_attack": 7
+    },
+    {
+      "seed": 3004,
+      "opponent": "aggressive-hunter",
+      "replay": "development/experiments/paladin-expanded/aggressive-hunter-s3004-p1/replay.jsonl",
+      "last_seq": 23,
+      "labels": [
+        "other_or_hidden_response"
+      ],
+      "own_health": 3,
+      "enemy_health": 2,
+      "own_attack": 15,
+      "enemy_attack": 0
+    },
+    {
+      "seed": 3005,
+      "opponent": "aggressive-hunter",
+      "replay": "development/experiments/paladin-expanded/aggressive-hunter-s3005-p1/replay.jsonl",
+      "last_seq": 28,
+      "labels": [
+        "other_or_hidden_response"
+      ],
+      "own_health": 2,
+      "enemy_health": 9,
+      "own_attack": 21,
+      "enemy_attack": 1
+    },
+    {
+      "seed": 3008,
+      "opponent": "aggressive-hunter",
+      "replay": "development/experiments/paladin-expanded/aggressive-hunter-s3008-p1/replay.jsonl",
+      "last_seq": 31,
+      "labels": [
+        "other_or_hidden_response"
+      ],
+      "own_health": 6,
+      "enemy_health": 4,
+      "own_attack": 18,
+      "enemy_attack": 1
+    },
+    {
+      "seed": 3011,
+      "opponent": "aggressive-hunter",
+      "replay": "development/experiments/paladin-expanded/aggressive-hunter-s3011-p2/replay.jsonl",
+      "last_seq": 37,
+      "labels": [
+        "other_or_hidden_response"
+      ],
+      "own_health": 3,
+      "enemy_health": 1,
+      "own_attack": 23,
+      "enemy_attack": 2
+    },
+    {
+      "seed": 3012,
+      "opponent": "aggressive-hunter",
+      "replay": "development/experiments/paladin-expanded/aggressive-hunter-s3012-p1/replay.jsonl",
+      "last_seq": 24,
+      "labels": [
+        "other_or_hidden_response"
+      ],
+      "own_health": 4,
+      "enemy_health": 16,
+      "own_attack": 14,
+      "enemy_attack": 3
+    },
+    {
+      "seed": 3014,
+      "opponent": "aggressive-hunter",
+      "replay": "development/experiments/paladin-expanded/aggressive-hunter-s3014-p1/replay.jsonl",
+      "last_seq": 20,
+      "labels": [
+        "other_or_hidden_response"
+      ],
+      "own_health": 6,
+      "enemy_health": 18,
+      "own_attack": 16,
+      "enemy_attack": 5
+    },
+    {
+      "seed": 3019,
+      "opponent": "aggressive-hunter",
+      "replay": "development/experiments/paladin-expanded/aggressive-hunter-s3019-p2/replay.jsonl",
+      "last_seq": 37,
+      "labels": [
+        "other_or_hidden_response"
+      ],
+      "own_health": 3,
+      "enemy_health": 5,
+      "own_attack": 19,
+      "enemy_attack": 2
+    },
+    {
+      "seed": 3024,
+      "opponent": "aggressive-hunter",
+      "replay": "development/experiments/paladin-expanded/aggressive-hunter-s3024-p2/replay.jsonl",
+      "last_seq": 26,
+      "labels": [
+        "other_or_hidden_response"
+      ],
+      "own_health": 7,
+      "enemy_health": 7,
+      "own_attack": 15,
+      "enemy_attack": 3
+    },
+    {
+      "seed": 3006,
+      "opponent": "control-priest",
+      "replay": "development/experiments/paladin-expanded/control-priest-s3006-p2/replay.jsonl",
+      "last_seq": 68,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 17,
+      "enemy_health": 2,
+      "own_attack": 4,
+      "enemy_attack": 18
+    },
+    {
+      "seed": 3007,
+      "opponent": "control-priest",
+      "replay": "development/experiments/paladin-expanded/control-priest-s3007-p1/replay.jsonl",
+      "last_seq": 90,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 12,
+      "enemy_health": 6,
+      "own_attack": 5,
+      "enemy_attack": 14
+    },
+    {
+      "seed": 3013,
+      "opponent": "control-priest",
+      "replay": "development/experiments/paladin-expanded/control-priest-s3013-p2/replay.jsonl",
+      "last_seq": 100,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 5,
+      "enemy_health": 9,
+      "own_attack": 6,
+      "enemy_attack": 9
+    },
+    {
+      "seed": 3015,
+      "opponent": "control-priest",
+      "replay": "development/experiments/paladin-expanded/control-priest-s3015-p1/replay.jsonl",
+      "last_seq": 45,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 13,
+      "enemy_health": 14,
+      "own_attack": 12,
+      "enemy_attack": 22
+    },
+    {
+      "seed": 3014,
+      "opponent": "control-priest",
+      "replay": "development/experiments/paladin-expanded/control-priest-s3014-p1/replay.jsonl",
+      "last_seq": 112,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 2,
+      "enemy_health": 3,
+      "own_attack": 8,
+      "enemy_attack": 0
+    },
+    {
+      "seed": 3015,
+      "opponent": "control-priest",
+      "replay": "development/experiments/paladin-expanded/control-priest-s3015-p2/replay.jsonl",
+      "last_seq": 81,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 7,
+      "enemy_health": 13,
+      "own_attack": 4,
+      "enemy_attack": 18
+    },
+    {
+      "seed": 3018,
+      "opponent": "control-priest",
+      "replay": "development/experiments/paladin-expanded/control-priest-s3018-p2/replay.jsonl",
+      "last_seq": 71,
+      "labels": [
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 6,
+      "enemy_health": 19,
+      "own_attack": 14,
+      "enemy_attack": 6
+    },
+    {
+      "seed": 3019,
+      "opponent": "control-priest",
+      "replay": "development/experiments/paladin-expanded/control-priest-s3019-p2/replay.jsonl",
+      "last_seq": 70,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 8,
+      "enemy_health": 7,
+      "own_attack": 2,
+      "enemy_attack": 13
+    },
+    {
+      "seed": 3021,
+      "opponent": "control-priest",
+      "replay": "development/experiments/paladin-expanded/control-priest-s3021-p1/replay.jsonl",
+      "last_seq": 58,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 14,
+      "enemy_health": 19,
+      "own_attack": 2,
+      "enemy_attack": 18
+    },
+    {
+      "seed": 3001,
+      "opponent": "tempo-paladin",
+      "replay": "development/experiments/paladin-expanded/tempo-paladin-s3001-p2/replay.jsonl",
+      "last_seq": 52,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 13,
+      "enemy_health": 15,
+      "own_attack": 6,
+      "enemy_attack": 14
+    },
+    {
+      "seed": 3011,
+      "opponent": "tempo-paladin",
+      "replay": "development/experiments/paladin-expanded/tempo-paladin-s3011-p1/replay.jsonl",
+      "last_seq": 45,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 5,
+      "enemy_health": 7,
+      "own_attack": 4,
+      "enemy_attack": 6
+    },
+    {
+      "seed": 3012,
+      "opponent": "tempo-paladin",
+      "replay": "development/experiments/paladin-expanded/tempo-paladin-s3012-p1/replay.jsonl",
+      "last_seq": 25,
+      "labels": [
+        "other_or_hidden_response"
+      ],
+      "own_health": 11,
+      "enemy_health": 11,
+      "own_attack": 13,
+      "enemy_attack": 8
+    },
+    {
+      "seed": 3014,
+      "opponent": "tempo-paladin",
+      "replay": "development/experiments/paladin-expanded/tempo-paladin-s3014-p1/replay.jsonl",
+      "last_seq": 18,
+      "labels": [
+        "board_deficit",
+        "visible_lethal_threat"
+      ],
+      "own_health": 7,
+      "enemy_health": 27,
+      "own_attack": 8,
+      "enemy_attack": 10
+    },
+    {
+      "seed": 3013,
+      "opponent": "tempo-paladin",
+      "replay": "development/experiments/paladin-expanded/tempo-paladin-s3013-p1/replay.jsonl",
+      "last_seq": 63,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 6,
+      "enemy_health": 21,
+      "own_attack": 10,
+      "enemy_attack": 4
+    },
+    {
+      "seed": 3015,
+      "opponent": "tempo-paladin",
+      "replay": "development/experiments/paladin-expanded/tempo-paladin-s3015-p1/replay.jsonl",
+      "last_seq": 23,
+      "labels": [
+        "board_deficit",
+        "visible_lethal_threat"
+      ],
+      "own_health": 9,
+      "enemy_health": 21,
+      "own_attack": 12,
+      "enemy_attack": 17
+    },
+    {
+      "seed": 3015,
+      "opponent": "tempo-paladin",
+      "replay": "development/experiments/paladin-expanded/tempo-paladin-s3015-p2/replay.jsonl",
+      "last_seq": 49,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion"
+      ],
+      "own_health": 10,
+      "enemy_health": 13,
+      "own_attack": 4,
+      "enemy_attack": 9
+    },
+    {
+      "seed": 3016,
+      "opponent": "tempo-paladin",
+      "replay": "development/experiments/paladin-expanded/tempo-paladin-s3016-p1/replay.jsonl",
+      "last_seq": 49,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 8,
+      "enemy_health": 26,
+      "own_attack": 4,
+      "enemy_attack": 4
+    },
+    {
+      "seed": 3017,
+      "opponent": "tempo-paladin",
+      "replay": "development/experiments/paladin-expanded/tempo-paladin-s3017-p1/replay.jsonl",
+      "last_seq": 82,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 11,
+      "enemy_health": 11,
+      "own_attack": 10,
+      "enemy_attack": 7
+    },
+    {
+      "seed": 3024,
+      "opponent": "tempo-paladin",
+      "replay": "development/experiments/paladin-expanded/tempo-paladin-s3024-p1/replay.jsonl",
+      "last_seq": 45,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion"
+      ],
+      "own_health": 15,
+      "enemy_health": 5,
+      "own_attack": 7,
+      "enemy_attack": 12
+    },
+    {
+      "seed": 3004,
+      "opponent": "value-warlock",
+      "replay": "development/experiments/paladin-expanded/value-warlock-s3004-p1/replay.jsonl",
+      "last_seq": 49,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 17,
+      "enemy_health": 8,
+      "own_attack": 3,
+      "enemy_attack": 18
+    },
+    {
+      "seed": 3005,
+      "opponent": "value-warlock",
+      "replay": "development/experiments/paladin-expanded/value-warlock-s3005-p2/replay.jsonl",
+      "last_seq": 55,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 10,
+      "enemy_health": 13,
+      "own_attack": 4,
+      "enemy_attack": 22
+    },
+    {
+      "seed": 3007,
+      "opponent": "value-warlock",
+      "replay": "development/experiments/paladin-expanded/value-warlock-s3007-p1/replay.jsonl",
+      "last_seq": 49,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 8,
+      "enemy_health": 4,
+      "own_attack": 10,
+      "enemy_attack": 13
+    },
+    {
+      "seed": 3012,
+      "opponent": "value-warlock",
+      "replay": "development/experiments/paladin-expanded/value-warlock-s3012-p1/replay.jsonl",
+      "last_seq": 60,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 8,
+      "enemy_health": 11,
+      "own_attack": 5,
+      "enemy_attack": 12
+    },
+    {
+      "seed": 3014,
+      "opponent": "value-warlock",
+      "replay": "development/experiments/paladin-expanded/value-warlock-s3014-p1/replay.jsonl",
+      "last_seq": 46,
+      "labels": [
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 9,
+      "enemy_health": 15,
+      "own_attack": 15,
+      "enemy_attack": 10
+    },
+    {
+      "seed": 3021,
+      "opponent": "value-warlock",
+      "replay": "development/experiments/paladin-expanded/value-warlock-s3021-p1/replay.jsonl",
+      "last_seq": 56,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 9,
+      "enemy_health": 8,
+      "own_attack": 2,
+      "enemy_attack": 10
+    },
+    {
+      "seed": 3022,
+      "opponent": "value-warlock",
+      "replay": "development/experiments/paladin-expanded/value-warlock-s3022-p2/replay.jsonl",
+      "last_seq": 55,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 16,
+      "enemy_health": 13,
+      "own_attack": 5,
+      "enemy_attack": 18
+    },
+    {
+      "seed": 3021,
+      "opponent": "value-warlock",
+      "replay": "development/experiments/paladin-expanded/value-warlock-s3021-p2/replay.jsonl",
+      "last_seq": 50,
+      "labels": [
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 4,
+      "enemy_health": 15,
+      "own_attack": 15,
+      "enemy_attack": 8
+    },
+    {
+      "seed": 3024,
+      "opponent": "value-warlock",
+      "replay": "development/experiments/paladin-expanded/value-warlock-s3024-p1/replay.jsonl",
+      "last_seq": 48,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 11,
+      "enemy_health": 15,
+      "own_attack": 3,
+      "enemy_attack": 26
+    },
+    {
+      "seed": 3003,
+      "opponent": "adversarial-zoo",
+      "replay": "development/experiments/paladin-expanded/adversarial-zoo-s3003-p1/replay.jsonl",
+      "last_seq": 23,
+      "labels": [
+        "other_or_hidden_response"
+      ],
+      "own_health": 7,
+      "enemy_health": 14,
+      "own_attack": 10,
+      "enemy_attack": 6
+    },
+    {
+      "seed": 3002,
+      "opponent": "adversarial-zoo",
+      "replay": "development/experiments/paladin-expanded/adversarial-zoo-s3002-p2/replay.jsonl",
+      "last_seq": 36,
+      "labels": [
+        "other_or_hidden_response"
+      ],
+      "own_health": 4,
+      "enemy_health": 2,
+      "own_attack": 19,
+      "enemy_attack": 0
+    },
+    {
+      "seed": 3014,
+      "opponent": "adversarial-zoo",
+      "replay": "development/experiments/paladin-expanded/adversarial-zoo-s3014-p1/replay.jsonl",
+      "last_seq": 16,
+      "labels": [
+        "board_deficit",
+        "visible_lethal_threat"
+      ],
+      "own_health": 10,
+      "enemy_health": 18,
+      "own_attack": 10,
+      "enemy_attack": 11
+    },
+    {
+      "seed": 3015,
+      "opponent": "adversarial-zoo",
+      "replay": "development/experiments/paladin-expanded/adversarial-zoo-s3015-p1/replay.jsonl",
+      "last_seq": 18,
+      "labels": [
+        "board_deficit",
+        "visible_lethal_threat"
+      ],
+      "own_health": 8,
+      "enemy_health": 25,
+      "own_attack": 7,
+      "enemy_attack": 11
+    },
+    {
+      "seed": 3015,
+      "opponent": "adversarial-zoo",
+      "replay": "development/experiments/paladin-expanded/adversarial-zoo-s3015-p2/replay.jsonl",
+      "last_seq": 33,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 8,
+      "enemy_health": 6,
+      "own_attack": 11,
+      "enemy_attack": 4
+    },
+    {
+      "seed": 3017,
+      "opponent": "adversarial-zoo",
+      "replay": "development/experiments/paladin-expanded/adversarial-zoo-s3017-p1/replay.jsonl",
+      "last_seq": 21,
+      "labels": [
+        "board_deficit",
+        "visible_lethal_threat"
+      ],
+      "own_health": 11,
+      "enemy_health": 27,
+      "own_attack": 8,
+      "enemy_attack": 15
+    },
+    {
+      "seed": 3005,
+      "opponent": "search-paladin",
+      "replay": "development/experiments/paladin-expanded/search-paladin-s3005-p1/replay.jsonl",
+      "last_seq": 61,
+      "labels": [
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 2,
+      "enemy_health": 6,
+      "own_attack": 15,
+      "enemy_attack": 10
+    },
+    {
+      "seed": 3009,
+      "opponent": "search-paladin",
+      "replay": "development/experiments/paladin-expanded/search-paladin-s3009-p1/replay.jsonl",
+      "last_seq": 35,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 4,
+      "enemy_health": 19,
+      "own_attack": 3,
+      "enemy_attack": 0
+    },
+    {
+      "seed": 3006,
+      "opponent": "search-paladin",
+      "replay": "development/experiments/paladin-expanded/search-paladin-s3006-p2/replay.jsonl",
+      "last_seq": 25,
+      "labels": [
+        "board_deficit"
+      ],
+      "own_health": 12,
+      "enemy_health": 25,
+      "own_attack": 5,
+      "enemy_attack": 8
+    },
+    {
+      "seed": 3009,
+      "opponent": "search-paladin",
+      "replay": "development/experiments/paladin-expanded/search-paladin-s3009-p2/replay.jsonl",
+      "last_seq": 50,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 10,
+      "enemy_health": 8,
+      "own_attack": 11,
+      "enemy_attack": 9
+    },
+    {
+      "seed": 3013,
+      "opponent": "search-paladin",
+      "replay": "development/experiments/paladin-expanded/search-paladin-s3013-p1/replay.jsonl",
+      "last_seq": 59,
+      "labels": [
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 4,
+      "enemy_health": 6,
+      "own_attack": 6,
+      "enemy_attack": 5
+    },
+    {
+      "seed": 3015,
+      "opponent": "search-paladin",
+      "replay": "development/experiments/paladin-expanded/search-paladin-s3015-p1/replay.jsonl",
+      "last_seq": 26,
+      "labels": [
+        "other_or_hidden_response"
+      ],
+      "own_health": 10,
+      "enemy_health": 21,
+      "own_attack": 10,
+      "enemy_attack": 8
+    },
+    {
+      "seed": 3014,
+      "opponent": "search-paladin",
+      "replay": "development/experiments/paladin-expanded/search-paladin-s3014-p1/replay.jsonl",
+      "last_seq": 30,
+      "labels": [
+        "board_deficit",
+        "visible_lethal_threat"
+      ],
+      "own_health": 3,
+      "enemy_health": 26,
+      "own_attack": 4,
+      "enemy_attack": 11
+    },
+    {
+      "seed": 3015,
+      "opponent": "search-paladin",
+      "replay": "development/experiments/paladin-expanded/search-paladin-s3015-p2/replay.jsonl",
+      "last_seq": 46,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 11,
+      "enemy_health": 10,
+      "own_attack": 7,
+      "enemy_attack": 13
+    },
+    {
+      "seed": 3016,
+      "opponent": "search-paladin",
+      "replay": "development/experiments/paladin-expanded/search-paladin-s3016-p1/replay.jsonl",
+      "last_seq": 43,
+      "labels": [
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 6,
+      "enemy_health": 19,
+      "own_attack": 12,
+      "enemy_attack": 6
+    },
+    {
+      "seed": 3021,
+      "opponent": "search-paladin",
+      "replay": "development/experiments/paladin-expanded/search-paladin-s3021-p1/replay.jsonl",
+      "last_seq": 66,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 3,
+      "enemy_health": 4,
+      "own_attack": 6,
+      "enemy_attack": 7
+    },
+    {
+      "seed": 3024,
+      "opponent": "search-paladin",
+      "replay": "development/experiments/paladin-expanded/search-paladin-s3024-p1/replay.jsonl",
+      "last_seq": 49,
+      "labels": [
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 7,
+      "enemy_health": 11,
+      "own_attack": 10,
+      "enemy_attack": 8
+    },
+    {
+      "seed": 3001,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3001-p2/replay.jsonl",
+      "last_seq": 97,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 5,
+      "enemy_health": 13,
+      "own_attack": 4,
+      "enemy_attack": 3
+    },
+    {
+      "seed": 3004,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3004-p1/replay.jsonl",
+      "last_seq": 36,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion"
+      ],
+      "own_health": 13,
+      "enemy_health": 17,
+      "own_attack": 9,
+      "enemy_attack": 11
+    },
+    {
+      "seed": 3007,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3007-p2/replay.jsonl",
+      "last_seq": 36,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 12,
+      "enemy_health": 15,
+      "own_attack": 14,
+      "enemy_attack": 6
+    },
+    {
+      "seed": 3009,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3009-p1/replay.jsonl",
+      "last_seq": 40,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 7,
+      "enemy_health": 5,
+      "own_attack": 13,
+      "enemy_attack": 6
+    },
+    {
+      "seed": 3010,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3010-p2/replay.jsonl",
+      "last_seq": 29,
+      "labels": [
+        "other_or_hidden_response"
+      ],
+      "own_health": 13,
+      "enemy_health": 6,
+      "own_attack": 13,
+      "enemy_attack": 6
+    },
+    {
+      "seed": 3014,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3014-p1/replay.jsonl",
+      "last_seq": 23,
+      "labels": [
+        "board_deficit",
+        "visible_lethal_threat"
+      ],
+      "own_health": 7,
+      "enemy_health": 27,
+      "own_attack": 5,
+      "enemy_attack": 7
+    },
+    {
+      "seed": 3012,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3012-p1/replay.jsonl",
+      "last_seq": 86,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 7,
+      "enemy_health": 15,
+      "own_attack": 7,
+      "enemy_attack": 1
+    },
+    {
+      "seed": 3013,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3013-p1/replay.jsonl",
+      "last_seq": 49,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 8,
+      "enemy_health": 11,
+      "own_attack": 10,
+      "enemy_attack": 13
+    },
+    {
+      "seed": 3015,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3015-p2/replay.jsonl",
+      "last_seq": 54,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 8,
+      "enemy_health": 16,
+      "own_attack": 4,
+      "enemy_attack": 8
+    },
+    {
+      "seed": 3015,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3015-p1/replay.jsonl",
+      "last_seq": 45,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 5,
+      "enemy_health": 23,
+      "own_attack": 16,
+      "enemy_attack": 4
+    },
+    {
+      "seed": 3016,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3016-p1/replay.jsonl",
+      "last_seq": 39,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 14,
+      "enemy_health": 25,
+      "own_attack": 17,
+      "enemy_attack": 9
+    },
+    {
+      "seed": 3017,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3017-p1/replay.jsonl",
+      "last_seq": 32,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 9,
+      "enemy_health": 23,
+      "own_attack": 10,
+      "enemy_attack": 4
+    },
+    {
+      "seed": 3017,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3017-p2/replay.jsonl",
+      "last_seq": 43,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion"
+      ],
+      "own_health": 11,
+      "enemy_health": 24,
+      "own_attack": 8,
+      "enemy_attack": 10
+    },
+    {
+      "seed": 3020,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3020-p1/replay.jsonl",
+      "last_seq": 45,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion",
+        "visible_lethal_threat"
+      ],
+      "own_health": 7,
+      "enemy_health": 14,
+      "own_attack": 5,
+      "enemy_attack": 8
+    },
+    {
+      "seed": 3021,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3021-p1/replay.jsonl",
+      "last_seq": 40,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 13,
+      "enemy_health": 22,
+      "own_attack": 13,
+      "enemy_attack": 7
+    },
+    {
+      "seed": 3022,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3022-p2/replay.jsonl",
+      "last_seq": 57,
+      "labels": [
+        "resource_exhaustion"
+      ],
+      "own_health": 7,
+      "enemy_health": 20,
+      "own_attack": 9,
+      "enemy_attack": 5
+    },
+    {
+      "seed": 3024,
+      "opponent": "historical-mage",
+      "replay": "development/experiments/paladin-expanded/historical-mage-s3024-p1/replay.jsonl",
+      "last_seq": 42,
+      "labels": [
+        "board_deficit",
+        "resource_exhaustion"
+      ],
+      "own_health": 14,
+      "enemy_health": 27,
+      "own_attack": 4,
+      "enemy_attack": 7
+    }
+  ],
+  "disclaimer": "Conservative search covers a subset of effects. No flag does not prove no missed lethal. Loss labels are hypotheses."
+}

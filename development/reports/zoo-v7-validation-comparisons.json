@@ -1,0 +1,188 @@
+{
+  "giants": {
+    "base": "development/experiments/zoo-v7-validate-baseline",
+    "challenger": "development/experiments/zoo-v7-validate-giants",
+    "paired_games": 672,
+    "seed_clusters": 24,
+    "delta_win_rate": 0.03422619047619047,
+    "cluster_bootstrap95": [
+      0.002976190476190476,
+      0.06547619047619048
+    ],
+    "group_deltas": {
+      "official-mage": -0.08333333333333333,
+      "aggressive-hunter": 0.0625,
+      "control-priest": 0.08333333333333333,
+      "tempo-paladin": 0.041666666666666664,
+      "value-warlock": -0.0625,
+      "adversarial-zoo": 0.0,
+      "search-paladin": 0.125,
+      "historical-mage": 0.0625,
+      "control-mage": 0.16666666666666666,
+      "tempo-warlock": 0.041666666666666664,
+      "aggressive-paladin": 0.020833333333333332,
+      "value-priest": 0.041666666666666664,
+      "search-shaman": 0.020833333333333332,
+      "adversarial-priest-v1": -0.041666666666666664
+    },
+    "execution_stable": true,
+    "gate_pass": true,
+    "gate": "positive lower 95% paired seed-cluster CI; no group decline > 10 percentage points; zero execution defects",
+    "note": "Exploratory comparisons require independent holdout before promotion. Multiple candidate selection can inflate training gains."
+  },
+  "guard": {
+    "base": "development/experiments/zoo-v7-validate-baseline",
+    "challenger": "development/experiments/zoo-v7-validate-guard",
+    "paired_games": 672,
+    "seed_clusters": 24,
+    "delta_win_rate": 0.022321428571428572,
+    "cluster_bootstrap95": [
+      -0.03422619047619048,
+      0.07589285714285715
+    ],
+    "group_deltas": {
+      "official-mage": 0.0,
+      "aggressive-hunter": 0.020833333333333332,
+      "control-priest": 0.0625,
+      "tempo-paladin": 0.020833333333333332,
+      "value-warlock": -0.020833333333333332,
+      "adversarial-zoo": 0.020833333333333332,
+      "search-paladin": 0.08333333333333333,
+      "historical-mage": 0.041666666666666664,
+      "control-mage": 0.0,
+      "tempo-warlock": 0.020833333333333332,
+      "aggressive-paladin": -0.0625,
+      "value-priest": 0.0625,
+      "search-shaman": 0.020833333333333332,
+      "adversarial-priest-v1": 0.041666666666666664
+    },
+    "execution_stable": true,
+    "gate_pass": false,
+    "gate": "positive lower 95% paired seed-cluster CI; no group decline > 10 percentage points; zero execution defects",
+    "note": "Exploratory comparisons require independent holdout before promotion. Multiple candidate selection can inflate training gains."
+  },
+  "order": {
+    "base": "development/experiments/zoo-v7-validate-baseline",
+    "challenger": "development/experiments/zoo-v7-validate-order",
+    "paired_games": 672,
+    "seed_clusters": 24,
+    "delta_win_rate": 0.026785714285714284,
+    "cluster_bootstrap95": [
+      -0.03125,
+      0.0818452380952381
+    ],
+    "group_deltas": {
+      "official-mage": -0.041666666666666664,
+      "aggressive-hunter": 0.020833333333333332,
+      "control-priest": 0.0625,
+      "tempo-paladin": 0.0625,
+      "value-warlock": -0.020833333333333332,
+      "adversarial-zoo": 0.020833333333333332,
+      "search-paladin": 0.0625,
+      "historical-mage": 0.0625,
+      "control-mage": 0.020833333333333332,
+      "tempo-warlock": 0.020833333333333332,
+      "aggressive-paladin": -0.0625,
+      "value-priest": 0.0625,
+      "search-shaman": 0.041666666666666664,
+      "adversarial-priest-v1": 0.0625
+    },
+    "execution_stable": true,
+    "gate_pass": false,
+    "gate": "positive lower 95% paired seed-cluster CI; no group decline > 10 percentage points; zero execution defects",
+    "note": "Exploratory comparisons require independent holdout before promotion. Multiple candidate selection can inflate training gains."
+  },
+  "combat": {
+    "base": "development/experiments/zoo-v7-validate-baseline",
+    "challenger": "development/experiments/zoo-v7-validate-combat",
+    "paired_games": 672,
+    "seed_clusters": 24,
+    "delta_win_rate": 0.02976190476190476,
+    "cluster_bootstrap95": [
+      0.005952380952380952,
+      0.05803571428571429
+    ],
+    "group_deltas": {
+      "official-mage": 0.0,
+      "aggressive-hunter": 0.020833333333333332,
+      "control-priest": 0.020833333333333332,
+      "tempo-paladin": 0.0625,
+      "value-warlock": 0.0,
+      "adversarial-zoo": 0.020833333333333332,
+      "search-paladin": 0.0625,
+      "historical-mage": 0.0625,
+      "control-mage": 0.041666666666666664,
+      "tempo-warlock": 0.020833333333333332,
+      "aggressive-paladin": 0.0,
+      "value-priest": 0.041666666666666664,
+      "search-shaman": 0.0,
+      "adversarial-priest-v1": 0.0625
+    },
+    "execution_stable": true,
+    "gate_pass": true,
+    "gate": "positive lower 95% paired seed-cluster CI; no group decline > 10 percentage points; zero execution defects",
+    "note": "Exploratory comparisons require independent holdout before promotion. Multiple candidate selection can inflate training gains."
+  },
+  "combined": {
+    "base": "development/experiments/zoo-v7-validate-baseline",
+    "challenger": "development/experiments/zoo-v7-validate-combined",
+    "paired_games": 672,
+    "seed_clusters": 24,
+    "delta_win_rate": 0.050595238095238096,
+    "cluster_bootstrap95": [
+      -0.0014880952380952432,
+      0.10119047619047619
+    ],
+    "group_deltas": {
+      "official-mage": -0.020833333333333332,
+      "aggressive-hunter": -0.020833333333333332,
+      "control-priest": 0.10416666666666667,
+      "tempo-paladin": 0.041666666666666664,
+      "value-warlock": -0.020833333333333332,
+      "adversarial-zoo": 0.0625,
+      "search-paladin": 0.16666666666666666,
+      "historical-mage": 0.08333333333333333,
+      "control-mage": 0.0625,
+      "tempo-warlock": 0.0,
+      "aggressive-paladin": 0.020833333333333332,
+      "value-priest": 0.08333333333333333,
+      "search-shaman": 0.020833333333333332,
+      "adversarial-priest-v1": 0.125
+    },
+    "execution_stable": true,
+    "gate_pass": false,
+    "gate": "positive lower 95% paired seed-cluster CI; no group decline > 10 percentage points; zero execution defects",
+    "note": "Exploratory comparisons require independent holdout before promotion. Multiple candidate selection can inflate training gains."
+  },
+  "light": {
+    "base": "development/experiments/zoo-v7-validate-baseline",
+    "challenger": "development/experiments/zoo-v7-validate-light",
+    "paired_games": 672,
+    "seed_clusters": 24,
+    "delta_win_rate": 0.05505952380952381,
+    "cluster_bootstrap95": [
+      0.023809523809523808,
+      0.09077380952380952
+    ],
+    "group_deltas": {
+      "official-mage": -0.041666666666666664,
+      "aggressive-hunter": 0.0625,
+      "control-priest": 0.08333333333333333,
+      "tempo-paladin": 0.041666666666666664,
+      "value-warlock": -0.020833333333333332,
+      "adversarial-zoo": 0.0,
+      "search-paladin": 0.14583333333333334,
+      "historical-mage": 0.10416666666666667,
+      "control-mage": 0.1875,
+      "tempo-warlock": 0.08333333333333333,
+      "aggressive-paladin": 0.0625,
+      "value-priest": 0.0625,
+      "search-shaman": 0.020833333333333332,
+      "adversarial-priest-v1": -0.020833333333333332
+    },
+    "execution_stable": true,
+    "gate_pass": true,
+    "gate": "positive lower 95% paired seed-cluster CI; no group decline > 10 percentage points; zero execution defects",
+    "note": "Exploratory comparisons require independent holdout before promotion. Multiple candidate selection can inflate training gains."
+  }
+}
