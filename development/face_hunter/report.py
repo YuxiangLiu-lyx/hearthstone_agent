@@ -26,14 +26,24 @@ def observations(folder, seat):
 def summarize(out, config):
     out = Path(out)
     games, failure_rows, timings = [], [], []
+    modes = Counter()
+    policy_errors = []
+    cli_fallbacks = 0
     for result_path in sorted((out / "games").glob("*/result.json")):
         folder = result_path.parent
         result = json.loads(result_path.read_text())
         setup = json.loads((folder / "game.json").read_text())
         seat = config.get("candidate_seat", int(folder.name[-1]) if folder.name.endswith(("p1", "p2")) else 1)
         rows = observations(folder, seat)
+        stderr = folder / f"p{seat}/stderr.log"
+        if stderr.exists():
+            cli_fallbacks += sum('policy fallback:' in line or 'bounded worker fallback:' in line for line in stderr.read_text(errors='replace').splitlines())
         seen = set()
         for row in rows:
+            if row.get("policy_error"):
+                policy_errors.append({"game":folder.name,"seq":row["state"].get("seq"),"error":row["policy_error"]})
+            if row.get("decision_info"):
+                modes[row["decision_info"].get("mode","unknown")] += 1
             own = row["state"].get("you")
             if own:
                 for c in own["hand"] + own["board"] + [own["hero"], own.get("hero_power"), own.get("weapon")]:
@@ -74,6 +84,8 @@ def summarize(out, config):
                "hero_damage_definition": "Damage events to the opposing hero with an observed friendly source, including armor damage and overkill.",
                "illegal": sum(g["illegal"] for g in games), "timeouts": sum(g["timeouts"] for g in games),
                "early_exits": sum(g["early_exit"] for g in games), "void_or_aborted": len(games)-len(valid),
+               "policy_errors":len(policy_errors), "decision_modes":dict(modes),
+               "cli_fallbacks":cli_fallbacks,
                "missed_lethals": None, "lethal_audit_status": "Not audited; no zero-miss claim.",
                "decision_s_mean": statistics.mean(timings) if timings else None, "decision_s_max": max(timings, default=None),
                "failure_signals": dict(Counter(tag for f in failure_rows for tag in f["signals"])),
@@ -84,12 +96,15 @@ def summarize(out, config):
     (out / "config.json").write_text(json.dumps(config, indent=2)+"\n")
     (out / "metrics.json").write_text(json.dumps(metrics, indent=2)+"\n")
     (out / "failure-states.json").write_text(json.dumps(failure_rows, indent=2)+"\n")
+    (out / "policy-errors.json").write_text(json.dumps(policy_errors, indent=2)+"\n")
     rate = f"{100*metrics['win_rate']:.1f}%" if valid else "N/A"
     lo, hi = metrics["wilson95"]
     text = f"# {config['version']} experiment\n\nTransport: {config['transport']}. Runtime: hs-arena 0.2.2.\n\n"
     text += f"Results: {wins}/{len(valid)} wins ({rate}); Wilson 95% interval [{lo:.3f}, {hi:.3f}].\n"
     text += f"Mean global turns: {metrics['mean_turns']}; mean outgoing hero damage: {metrics['mean_hero_damage']}.\n"
     text += f"Illegal actions: {metrics['illegal']}; timeouts: {metrics['timeouts']}; early exits: {metrics['early_exits']}.\n\n"
+    text += f"Policy exceptions: {metrics['policy_errors']}; CLI fallbacks: {metrics['cli_fallbacks']}.\n\n"
+    if config.get('acceptance'): text += f"Acceptance: {config['acceptance']}\n\n"
     text += "Small samples are smoke tests, not reliable estimates of long-run competitive strength.\n\n"
     text += f"Change: {config.get('change', 'Initial fixed-deck baseline.')}\n\n"
     text += f"Next hypothesis: {config.get('next_hypothesis', 'Add bounded tactical search without changing the deck.')}\n\n"

@@ -1,0 +1,336 @@
+[
+  {
+    "game_id": "g_20261110_000001",
+    "seed": 42003,
+    "candidate_seat": 1,
+    "candidate_first": true,
+    "opponent": "greedy",
+    "winner": 2,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 14,
+    "hero_damage": 21,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "deck_submission": 1,
+      "mulligan": 1,
+      "main": 26,
+      "game_over": 1
+    },
+    "replay": "experiments/face-hunter-v0-fixed-mcp/games/g_20261110_000001/replay.jsonl",
+    "signals": [
+      "low_hand_resources",
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "g_20261110_000001",
+      "seq": 28,
+      "player": 1,
+      "turn": 13,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794350013.42,
+      "you": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 9,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": null,
+        "mana": 2,
+        "max_mana": 7,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [],
+        "board": [
+          {
+            "entity_id": 35,
+            "card_id": "CS2_124",
+            "name": "Wolfrider",
+            "attack": 3,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 20,
+        "deck_remaining_counts": {
+          "CS2_171": 1,
+          "CS2_172": 1,
+          "DS1_175": 2,
+          "DS1_185": 1,
+          "EX1_017": 1,
+          "EX1_029": 2,
+          "EX1_531": 2,
+          "EX1_534": 2,
+          "EX1_536": 2,
+          "EX1_538": 1,
+          "EX1_539": 1,
+          "EX1_610": 2,
+          "NEW1_031": 2
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_017",
+            "name": "Jungle Panther"
+          },
+          {
+            "card_id": "CS2_120",
+            "name": "River Crocolisk"
+          },
+          {
+            "card_id": "CS2_124",
+            "name": "Wolfrider"
+          },
+          {
+            "card_id": "CS2_120",
+            "name": "River Crocolisk"
+          },
+          {
+            "card_id": "CS2_171",
+            "name": "Stonetusk Boar"
+          },
+          {
+            "card_id": "CS2_172",
+            "name": "Bloodfen Raptor"
+          },
+          {
+            "card_id": "DS1_185",
+            "name": "Arcane Shot"
+          },
+          {
+            "card_id": "EX1_539",
+            "name": "Kill Command"
+          },
+          {
+            "card_id": "EX1_538",
+            "name": "Unleash the Hounds"
+          },
+          {
+            "card_id": "EX1_538t",
+            "name": "Hound"
+          },
+          {
+            "card_id": "EX1_538t",
+            "name": "Hound"
+          },
+          {
+            "card_id": "EX1_538t",
+            "name": "Hound"
+          },
+          {
+            "card_id": "EX1_538t",
+            "name": "Hound"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_08",
+          "name": "Jaina Proudmoore",
+          "hero_class": "MAGE",
+          "health": 9,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_08bp",
+          "name": "Fireblast",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 1 damage."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 6,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 2,
+        "board": [
+          {
+            "entity_id": 41,
+            "card_id": "EX1_608",
+            "name": "Sorcerer's Apprentice",
+            "attack": 3,
+            "health": 1,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Your spells cost (1) less."
+          },
+          {
+            "entity_id": 52,
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti",
+            "attack": 4,
+            "health": 3,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          },
+          {
+            "entity_id": 50,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "attack": 2,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+          },
+          {
+            "entity_id": 49,
+            "card_id": "EX1_012",
+            "name": "Bloodmage Thalnos",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 1,
+            "silenced": false,
+            "text": "Spell Damage +1 Deathrattle: Draw a card."
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 20,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          },
+          {
+            "card_id": "CS2_024",
+            "name": "Frostbolt"
+          },
+          {
+            "card_id": "CS2_029",
+            "name": "Fireball"
+          },
+          {
+            "card_id": "EX1_277",
+            "name": "Arcane Missiles"
+          },
+          {
+            "card_id": "CS2_032",
+            "name": "Flamestrike"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "hero_power",
+          "player": 1,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "target": null
+        },
+        {
+          "event": "damage",
+          "player": 2,
+          "entity_id": 37,
+          "card_id": "HERO_08",
+          "name": "Jaina Proudmoore",
+          "amount": 2,
+          "health_after": 9,
+          "source": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot"
+          },
+          "armor_absorbed": 0,
+          "armor_after": 0
+        }
+      ],
+      "last_action_result": null,
+      "result": null
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  }
+]

@@ -26,3 +26,16 @@ def direct_damage(card, state):
 
 def minion_value(m):
     return m.get("attack", 0) + .5 * m.get("health", 0) + int(m.get("divine_shield", False))
+
+
+def with_public_history(state, history):
+    """Infer unused hero attacks only when this turn's public history is complete."""
+    if state.get("phase") != "main":
+        return state
+    starts = [i for i, e in enumerate(history) if e.get("event") == "turn_start" and e.get("turn") == state["turn"]]
+    if not starts:
+        return state
+    hero = state["you"]["hero"]
+    attacked = any(e.get("event") == "attack" and (e.get("attacker") or {}).get("entity_id") == hero["entity_id"]
+                   for e in history[starts[-1]:])
+    return {**state, "hero_attack_available": not attacked and not hero.get("frozen", False)}

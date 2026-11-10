@@ -1,0 +1,4488 @@
+[
+  {
+    "game_id": "greedy-s42100-p1",
+    "seed": 42100,
+    "candidate_seat": 1,
+    "candidate_first": false,
+    "opponent": "greedy",
+    "winner": 2,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 15,
+    "hero_damage": 21,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 28
+    },
+    "replay": "experiments/face-hunter-v2-fixed-screen/games/greedy-s42100-p1/replay.jsonl",
+    "signals": [
+      "low_hand_resources",
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "greedy-s42100-p1",
+      "seq": 29,
+      "player": 1,
+      "turn": 14,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794350018.681,
+      "you": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 4,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": null,
+        "mana": 2,
+        "max_mana": 7,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [],
+        "board": [
+          {
+            "entity_id": 8,
+            "card_id": "CS2_171",
+            "name": "Stonetusk Boar",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          }
+        ],
+        "secrets": [
+          {
+            "entity_id": 23,
+            "card_id": "EX1_610",
+            "name": "Explosive Trap"
+          }
+        ],
+        "deck_remaining": 19,
+        "deck_remaining_counts": {
+          "CS2_124": 1,
+          "CS2_171": 1,
+          "CS2_172": 2,
+          "DS1_175": 2,
+          "DS1_185": 1,
+          "EX1_017": 1,
+          "EX1_029": 1,
+          "EX1_531": 1,
+          "EX1_534": 2,
+          "EX1_536": 1,
+          "EX1_538": 2,
+          "EX1_539": 2,
+          "NEW1_031": 2
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_531",
+            "name": "Scavenging Hyena"
+          },
+          {
+            "card_id": "EX1_017",
+            "name": "Jungle Panther"
+          },
+          {
+            "card_id": "CS2_120",
+            "name": "River Crocolisk"
+          },
+          {
+            "card_id": "CS2_124",
+            "name": "Wolfrider"
+          },
+          {
+            "card_id": "EX1_029",
+            "name": "Leper Gnome"
+          },
+          {
+            "card_id": "CS2_120",
+            "name": "River Crocolisk"
+          },
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          },
+          {
+            "card_id": "EX1_536",
+            "name": "Eaglehorn Bow"
+          },
+          {
+            "card_id": "DS1_185",
+            "name": "Arcane Shot"
+          },
+          {
+            "card_id": "EX1_610",
+            "name": "Explosive Trap"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_08",
+          "name": "Jaina Proudmoore",
+          "hero_class": "MAGE",
+          "health": 11,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_08bp",
+          "name": "Fireblast",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 1 damage."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 7,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 3,
+        "board": [
+          {
+            "entity_id": 64,
+            "card_id": "CS2_200",
+            "name": "Boulderfist Ogre",
+            "attack": 6,
+            "health": 5,
+            "max_health": 7,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 19,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_277",
+            "name": "Arcane Missiles"
+          },
+          {
+            "card_id": "CS2_024",
+            "name": "Frostbolt"
+          },
+          {
+            "card_id": "EX1_012",
+            "name": "Bloodmage Thalnos"
+          },
+          {
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta"
+          },
+          {
+            "card_id": "CS2_029",
+            "name": "Fireball"
+          },
+          {
+            "card_id": "EX1_608",
+            "name": "Sorcerer's Apprentice"
+          },
+          {
+            "card_id": "CS2_033",
+            "name": "Water Elemental"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "play_card",
+          "player": 1,
+          "card_id": "EX1_610",
+          "name": "Explosive Trap",
+          "entity_id": 23,
+          "cost": 2,
+          "target": null,
+          "position": null,
+          "choose": null
+        },
+        {
+          "event": "secret_played",
+          "player": 1,
+          "card_id": "EX1_610",
+          "name": "Explosive Trap"
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "hero_attack_available": true
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  },
+  {
+    "game_id": "greedy-s42103-p1",
+    "seed": 42103,
+    "candidate_seat": 1,
+    "candidate_first": true,
+    "opponent": "greedy",
+    "winner": 2,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 14,
+    "hero_damage": 29,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 28
+    },
+    "replay": "experiments/face-hunter-v2-fixed-screen/games/greedy-s42103-p1/replay.jsonl",
+    "signals": [
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "greedy-s42103-p1",
+      "seq": 29,
+      "player": 1,
+      "turn": 13,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794350018.745,
+      "you": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 14,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": null,
+        "mana": 1,
+        "max_mana": 7,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 28,
+            "card_id": "EX1_538",
+            "name": "Unleash the Hounds",
+            "type": "SPELL",
+            "cost": 3,
+            "text": "For each enemy minion, summon a 1/1 Hound with Charge.",
+            "playable": false
+          },
+          {
+            "entity_id": 11,
+            "card_id": "EX1_531",
+            "name": "Scavenging Hyena",
+            "type": "MINION",
+            "cost": 2,
+            "attack": 2,
+            "health": 2,
+            "text": "Whenever a friendly Beast dies, gain +2/+1.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 18,
+            "card_id": "EX1_534",
+            "name": "Savannah Highmane",
+            "attack": 6,
+            "health": 5,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon two 2/2 Hyenas."
+          },
+          {
+            "entity_id": 19,
+            "card_id": "EX1_534",
+            "name": "Savannah Highmane",
+            "attack": 6,
+            "health": 5,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon two 2/2 Hyenas."
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 20,
+        "deck_remaining_counts": {
+          "CS2_120": 2,
+          "CS2_124": 2,
+          "CS2_171": 1,
+          "DS1_175": 1,
+          "DS1_185": 2,
+          "EX1_017": 2,
+          "EX1_531": 1,
+          "EX1_536": 2,
+          "EX1_538": 1,
+          "EX1_539": 2,
+          "EX1_610": 2,
+          "NEW1_031": 2
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_029",
+            "name": "Leper Gnome"
+          },
+          {
+            "card_id": "CS2_172",
+            "name": "Bloodfen Raptor"
+          },
+          {
+            "card_id": "CS2_172",
+            "name": "Bloodfen Raptor"
+          },
+          {
+            "card_id": "EX1_029",
+            "name": "Leper Gnome"
+          },
+          {
+            "card_id": "CS2_171",
+            "name": "Stonetusk Boar"
+          },
+          {
+            "card_id": "DS1_175",
+            "name": "Timber Wolf"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_08",
+          "name": "Jaina Proudmoore",
+          "hero_class": "MAGE",
+          "health": 1,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_08bp",
+          "name": "Fireblast",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 1 damage."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 6,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 3,
+        "board": [
+          {
+            "entity_id": 42,
+            "card_id": "EX1_608",
+            "name": "Sorcerer's Apprentice",
+            "attack": 3,
+            "health": 1,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Your spells cost (1) less."
+          },
+          {
+            "entity_id": 49,
+            "card_id": "EX1_012",
+            "name": "Bloodmage Thalnos",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 1,
+            "silenced": false,
+            "text": "Spell Damage +1 Deathrattle: Draw a card."
+          },
+          {
+            "entity_id": 54,
+            "card_id": "CS2_033",
+            "name": "Water Elemental",
+            "attack": 3,
+            "health": 2,
+            "max_health": 6,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Freeze any character damaged by this minion."
+          },
+          {
+            "entity_id": 53,
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti",
+            "attack": 4,
+            "health": 2,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          },
+          {
+            "entity_id": 65,
+            "card_id": "CS2_200",
+            "name": "Boulderfist Ogre",
+            "attack": 6,
+            "health": 7,
+            "max_health": 7,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 20,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          },
+          {
+            "card_id": "CS2_024",
+            "name": "Frostbolt"
+          },
+          {
+            "card_id": "CS2_024",
+            "name": "Frostbolt"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "play_card",
+          "player": 1,
+          "card_id": "EX1_534",
+          "name": "Savannah Highmane",
+          "entity_id": 18,
+          "cost": 6,
+          "target": null,
+          "position": 0,
+          "choose": null
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "hero_attack_available": true
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  },
+  {
+    "game_id": "greedy-s42104-p2",
+    "seed": 42104,
+    "candidate_seat": 2,
+    "candidate_first": false,
+    "opponent": "greedy",
+    "winner": 1,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 15,
+    "hero_damage": 21,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 24
+    },
+    "replay": "experiments/face-hunter-v2-fixed-screen/games/greedy-s42104-p2/replay.jsonl",
+    "signals": [
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "greedy-s42104-p2",
+      "seq": 25,
+      "player": 2,
+      "turn": 14,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794350018.796,
+      "you": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 8,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": true,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 7,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 57,
+            "card_id": "NEW1_031",
+            "name": "Animal Companion",
+            "type": "SPELL",
+            "cost": 3,
+            "text": "Summon a random Beast Companion.",
+            "playable": false
+          },
+          {
+            "entity_id": 55,
+            "card_id": "EX1_610",
+            "name": "Explosive Trap",
+            "type": "SPELL",
+            "cost": 2,
+            "text": "Secret: When your hero is attacked, deal 2 damage to all enemies.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 39,
+            "card_id": "DS1_175",
+            "name": "Timber Wolf",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Your other Beasts have +1 Attack."
+          },
+          {
+            "entity_id": 52,
+            "card_id": "EX1_534",
+            "name": "Savannah Highmane",
+            "attack": 7,
+            "health": 5,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon two 2/2 Hyenas."
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 19,
+        "deck_remaining_counts": {
+          "CS2_120": 1,
+          "CS2_124": 2,
+          "CS2_171": 1,
+          "CS2_172": 1,
+          "DS1_175": 1,
+          "DS1_185": 2,
+          "EX1_017": 2,
+          "EX1_029": 1,
+          "EX1_531": 2,
+          "EX1_536": 1,
+          "EX1_538": 2,
+          "EX1_539": 1,
+          "EX1_610": 1,
+          "NEW1_031": 1
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_534t",
+            "name": "Hyena"
+          },
+          {
+            "card_id": "EX1_534t",
+            "name": "Hyena"
+          },
+          {
+            "card_id": "EX1_534",
+            "name": "Savannah Highmane"
+          },
+          {
+            "card_id": "CS2_172",
+            "name": "Bloodfen Raptor"
+          },
+          {
+            "card_id": "CS2_120",
+            "name": "River Crocolisk"
+          },
+          {
+            "card_id": "EX1_029",
+            "name": "Leper Gnome"
+          },
+          {
+            "card_id": "CS2_171",
+            "name": "Stonetusk Boar"
+          },
+          {
+            "card_id": "EX1_539",
+            "name": "Kill Command"
+          },
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          },
+          {
+            "card_id": "EX1_536",
+            "name": "Eaglehorn Bow"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_08",
+          "name": "Jaina Proudmoore",
+          "hero_class": "MAGE",
+          "health": 9,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_08bp",
+          "name": "Fireblast",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 1 damage."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 7,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 3,
+        "board": [
+          {
+            "entity_id": 7,
+            "card_id": "NEW1_012",
+            "name": "Mana Wyrm",
+            "attack": 4,
+            "health": 1,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Whenever you cast a spell, gain +1 Attack."
+          },
+          {
+            "entity_id": 18,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "attack": 2,
+            "health": 1,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+          },
+          {
+            "entity_id": 22,
+            "card_id": "CS2_033",
+            "name": "Water Elemental",
+            "attack": 3,
+            "health": 1,
+            "max_health": 6,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Freeze any character damaged by this minion."
+          },
+          {
+            "entity_id": 6,
+            "card_id": "NEW1_012",
+            "name": "Mana Wyrm",
+            "attack": 3,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Whenever you cast a spell, gain +1 Attack."
+          },
+          {
+            "entity_id": 32,
+            "card_id": "CS2_200",
+            "name": "Boulderfist Ogre",
+            "attack": 6,
+            "health": 1,
+            "max_health": 7,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          },
+          {
+            "entity_id": 19,
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti",
+            "attack": 4,
+            "health": 5,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 18,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "CS2_023",
+            "name": "Arcane Intellect"
+          },
+          {
+            "card_id": "CS2_024",
+            "name": "Frostbolt"
+          },
+          {
+            "card_id": "EX1_277",
+            "name": "Arcane Missiles"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "play_card",
+          "player": 2,
+          "card_id": "DS1_175",
+          "name": "Timber Wolf",
+          "entity_id": 39,
+          "cost": 1,
+          "target": null,
+          "position": 0,
+          "choose": null
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "hero_attack_available": false
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  },
+  {
+    "game_id": "paladin-s42101-p1",
+    "seed": 42101,
+    "candidate_seat": 1,
+    "candidate_first": false,
+    "opponent": "paladin",
+    "winner": 2,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 13,
+    "hero_damage": 26,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 20
+    },
+    "replay": "experiments/face-hunter-v2-fixed-screen/games/paladin-s42101-p1/replay.jsonl",
+    "signals": [
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "paladin-s42101-p1",
+      "seq": 21,
+      "player": 1,
+      "turn": 12,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794350018.914,
+      "you": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 7,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 3,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": {
+          "entity_id": 30,
+          "card_id": "EX1_536",
+          "name": "Eaglehorn Bow",
+          "attack": 3,
+          "durability": 1
+        },
+        "mana": 0,
+        "max_mana": 6,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 70,
+            "card_id": "GAME_005",
+            "name": "The Coin",
+            "type": "SPELL",
+            "cost": 0,
+            "text": "Gain 1 Mana Crystal this turn only.",
+            "playable": true
+          },
+          {
+            "entity_id": 31,
+            "card_id": "EX1_536",
+            "name": "Eaglehorn Bow",
+            "type": "WEAPON",
+            "cost": 3,
+            "attack": 3,
+            "durability": 2,
+            "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 34,
+            "card_id": "CS2_124",
+            "name": "Wolfrider",
+            "attack": 3,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 20,
+        "deck_remaining_counts": {
+          "CS2_120": 1,
+          "CS2_124": 1,
+          "CS2_171": 2,
+          "CS2_172": 2,
+          "DS1_175": 2,
+          "DS1_185": 2,
+          "EX1_017": 1,
+          "EX1_531": 1,
+          "EX1_534": 2,
+          "EX1_538": 2,
+          "EX1_539": 1,
+          "EX1_610": 2,
+          "NEW1_031": 1
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_531",
+            "name": "Scavenging Hyena"
+          },
+          {
+            "card_id": "EX1_017",
+            "name": "Jungle Panther"
+          },
+          {
+            "card_id": "EX1_029",
+            "name": "Leper Gnome"
+          },
+          {
+            "card_id": "CS2_120",
+            "name": "River Crocolisk"
+          },
+          {
+            "card_id": "EX1_029",
+            "name": "Leper Gnome"
+          },
+          {
+            "card_id": "EX1_539",
+            "name": "Kill Command"
+          },
+          {
+            "card_id": "NEW1_031",
+            "name": "Animal Companion"
+          },
+          {
+            "card_id": "NEW1_034",
+            "name": "Huffer"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_04",
+          "name": "Uther Lightbringer",
+          "hero_class": "PALADIN",
+          "health": 8,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_04bp",
+          "name": "Reinforce",
+          "cost": 2,
+          "usable": false,
+          "text": "Summon a 1/1 Silver Hand Recruit."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 6,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 3,
+        "board": [
+          {
+            "entity_id": 46,
+            "card_id": "NEW1_023",
+            "name": "Faerie Dragon",
+            "attack": 3,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Can't be targeted by spells or Hero Powers."
+          },
+          {
+            "entity_id": 64,
+            "card_id": "CS2_151",
+            "name": "Silver Hand Knight",
+            "attack": 4,
+            "health": 4,
+            "max_health": 4,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Summon a 2/2 Squire."
+          },
+          {
+            "entity_id": 51,
+            "card_id": "EX1_382",
+            "name": "Aldor Peacekeeper",
+            "attack": 3,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Change an enemy minion's Attack to 1."
+          },
+          {
+            "entity_id": 40,
+            "card_id": "EX1_008",
+            "name": "Argent Squire",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Divine Shield"
+          },
+          {
+            "entity_id": 71,
+            "card_id": "CS2_101t",
+            "name": "Silver Hand Recruit",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 21,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "CS2_097",
+            "name": "Truesilver Champion"
+          },
+          {
+            "card_id": "CS2_152",
+            "name": "Squire"
+          },
+          {
+            "card_id": "CS2_093",
+            "name": "Consecration"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "play_card",
+          "card": 70,
+          "targets": null,
+          "positions": null,
+          "choose": null
+        },
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "attack",
+          "player": 1,
+          "attacker": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar"
+          },
+          "target": {
+            "entity_id": 37,
+            "card_id": "HERO_04",
+            "name": "Uther Lightbringer"
+          }
+        },
+        {
+          "event": "damage",
+          "player": 2,
+          "entity_id": 37,
+          "card_id": "HERO_04",
+          "name": "Uther Lightbringer",
+          "amount": 3,
+          "health_after": 8,
+          "source": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar"
+          },
+          "armor_absorbed": 0,
+          "armor_after": 0
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "hero_attack_available": false
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  },
+  {
+    "game_id": "paladin-s42101-p2",
+    "seed": 42101,
+    "candidate_seat": 2,
+    "candidate_first": true,
+    "opponent": "paladin",
+    "winner": 1,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 14,
+    "hero_damage": 28,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 29
+    },
+    "replay": "experiments/face-hunter-v2-fixed-screen/games/paladin-s42101-p2/replay.jsonl",
+    "signals": [
+      "low_hand_resources",
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "paladin-s42101-p2",
+      "seq": 30,
+      "player": 2,
+      "turn": 13,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794350018.957,
+      "you": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 4,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 7,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 55,
+            "card_id": "EX1_610",
+            "name": "Explosive Trap",
+            "type": "SPELL",
+            "cost": 2,
+            "text": "Secret: When your hero is attacked, deal 2 damage to all enemies.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 46,
+            "card_id": "CS2_172",
+            "name": "Bloodfen Raptor",
+            "attack": 3,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          },
+          {
+            "entity_id": 51,
+            "card_id": "EX1_534",
+            "name": "Savannah Highmane",
+            "attack": 6,
+            "health": 5,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon two 2/2 Hyenas."
+          },
+          {
+            "entity_id": 75,
+            "card_id": "EX1_538t",
+            "name": "Hound",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          },
+          {
+            "entity_id": 76,
+            "card_id": "EX1_538t",
+            "name": "Hound",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          },
+          {
+            "entity_id": 77,
+            "card_id": "EX1_538t",
+            "name": "Hound",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          },
+          {
+            "entity_id": 78,
+            "card_id": "EX1_538t",
+            "name": "Hound",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          },
+          {
+            "entity_id": 79,
+            "card_id": "EX1_538t",
+            "name": "Hound",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 20,
+        "deck_remaining_counts": {
+          "CS2_120": 2,
+          "CS2_124": 2,
+          "CS2_171": 2,
+          "CS2_172": 1,
+          "DS1_185": 2,
+          "EX1_017": 1,
+          "EX1_029": 1,
+          "EX1_531": 2,
+          "EX1_534": 1,
+          "EX1_536": 1,
+          "EX1_538": 1,
+          "EX1_539": 2,
+          "EX1_610": 1,
+          "NEW1_031": 1
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "DS1_175",
+            "name": "Timber Wolf"
+          },
+          {
+            "card_id": "EX1_017",
+            "name": "Jungle Panther"
+          },
+          {
+            "card_id": "EX1_029",
+            "name": "Leper Gnome"
+          },
+          {
+            "card_id": "DS1_175",
+            "name": "Timber Wolf"
+          },
+          {
+            "card_id": "NEW1_031",
+            "name": "Animal Companion"
+          },
+          {
+            "card_id": "NEW1_034",
+            "name": "Huffer"
+          },
+          {
+            "card_id": "EX1_536",
+            "name": "Eaglehorn Bow"
+          },
+          {
+            "card_id": "EX1_538",
+            "name": "Unleash the Hounds"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_04",
+          "name": "Uther Lightbringer",
+          "hero_class": "PALADIN",
+          "health": 6,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_04bp",
+          "name": "Reinforce",
+          "cost": 2,
+          "usable": false,
+          "text": "Summon a 1/1 Silver Hand Recruit."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 6,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 3,
+        "board": [
+          {
+            "entity_id": 14,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "attack": 2,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+          },
+          {
+            "entity_id": 16,
+            "card_id": "EX1_019",
+            "name": "Shattered Sun Cleric",
+            "attack": 3,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Give a friendly minion +1/+1."
+          },
+          {
+            "entity_id": 18,
+            "card_id": "EX1_382",
+            "name": "Aldor Peacekeeper",
+            "attack": 3,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Change an enemy minion's Attack to 1."
+          },
+          {
+            "entity_id": 11,
+            "card_id": "EX1_362",
+            "name": "Argent Protector",
+            "attack": 2,
+            "health": 1,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Give a friendly minion Divine Shield."
+          },
+          {
+            "entity_id": 10,
+            "card_id": "EX1_362",
+            "name": "Argent Protector",
+            "attack": 3,
+            "health": 2,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Give a friendly minion Divine Shield."
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 20,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta"
+          },
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          },
+          {
+            "card_id": "CS2_097",
+            "name": "Truesilver Champion"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "hero_power",
+          "player": 2,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "target": null
+        },
+        {
+          "event": "damage",
+          "player": 1,
+          "entity_id": 4,
+          "card_id": "HERO_04",
+          "name": "Uther Lightbringer",
+          "amount": 2,
+          "health_after": 6,
+          "source": {
+            "entity_id": 38,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot"
+          },
+          "armor_absorbed": 0,
+          "armor_after": 0
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "hero_attack_available": true
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  },
+  {
+    "game_id": "paladin-s42104-p2",
+    "seed": 42104,
+    "candidate_seat": 2,
+    "candidate_first": false,
+    "opponent": "paladin",
+    "winner": 1,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 17,
+    "hero_damage": 39,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 30
+    },
+    "replay": "experiments/face-hunter-v2-fixed-screen/games/paladin-s42104-p2/replay.jsonl",
+    "signals": [
+      "low_hand_resources",
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "paladin-s42104-p2",
+      "seq": 31,
+      "player": 2,
+      "turn": 16,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794350019.67,
+      "you": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 5,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": null,
+        "mana": 3,
+        "max_mana": 8,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 52,
+            "card_id": "EX1_534",
+            "name": "Savannah Highmane",
+            "type": "MINION",
+            "cost": 6,
+            "attack": 6,
+            "health": 5,
+            "text": "Deathrattle: Summon two 2/2 Hyenas.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 67,
+            "card_id": "CS2_124",
+            "name": "Wolfrider",
+            "attack": 3,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          },
+          {
+            "entity_id": 39,
+            "card_id": "DS1_175",
+            "name": "Timber Wolf",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Your other Beasts have +1 Attack."
+          },
+          {
+            "entity_id": 51,
+            "card_id": "EX1_534",
+            "name": "Savannah Highmane",
+            "attack": 7,
+            "health": 5,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon two 2/2 Hyenas."
+          },
+          {
+            "entity_id": 72,
+            "card_id": "NEW1_032",
+            "name": "Misha",
+            "attack": 5,
+            "health": 4,
+            "max_health": 4,
+            "can_attack": false,
+            "taunt": true,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Taunt"
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 18,
+        "deck_remaining_counts": {
+          "CS2_120": 1,
+          "CS2_124": 1,
+          "CS2_171": 1,
+          "CS2_172": 1,
+          "DS1_175": 1,
+          "DS1_185": 2,
+          "EX1_017": 2,
+          "EX1_029": 1,
+          "EX1_531": 2,
+          "EX1_536": 1,
+          "EX1_538": 2,
+          "EX1_539": 1,
+          "EX1_610": 1,
+          "NEW1_031": 1
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "CS2_172",
+            "name": "Bloodfen Raptor"
+          },
+          {
+            "card_id": "EX1_029",
+            "name": "Leper Gnome"
+          },
+          {
+            "card_id": "CS2_120",
+            "name": "River Crocolisk"
+          },
+          {
+            "card_id": "CS2_171",
+            "name": "Stonetusk Boar"
+          },
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          },
+          {
+            "card_id": "EX1_536",
+            "name": "Eaglehorn Bow"
+          },
+          {
+            "card_id": "EX1_539",
+            "name": "Kill Command"
+          },
+          {
+            "card_id": "EX1_610",
+            "name": "Explosive Trap"
+          },
+          {
+            "card_id": "NEW1_031",
+            "name": "Animal Companion"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_04",
+          "name": "Uther Lightbringer",
+          "hero_class": "PALADIN",
+          "health": 1,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_04bp",
+          "name": "Reinforce",
+          "cost": 2,
+          "usable": false,
+          "text": "Summon a 1/1 Silver Hand Recruit."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 8,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 1,
+        "board": [
+          {
+            "entity_id": 35,
+            "card_id": "CS2_088",
+            "name": "Guardian of Kings",
+            "attack": 5,
+            "health": 6,
+            "max_health": 6,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Restore 6 Health to your hero."
+          },
+          {
+            "entity_id": 6,
+            "card_id": "EX1_008",
+            "name": "Argent Squire",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": true,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Divine Shield"
+          },
+          {
+            "entity_id": 15,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "attack": 2,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+          },
+          {
+            "entity_id": 14,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "attack": 2,
+            "health": 1,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+          },
+          {
+            "entity_id": 18,
+            "card_id": "EX1_382",
+            "name": "Aldor Peacekeeper",
+            "attack": 3,
+            "health": 1,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Change an enemy minion's Attack to 1."
+          },
+          {
+            "entity_id": 7,
+            "card_id": "EX1_008",
+            "name": "Argent Squire",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Divine Shield"
+          },
+          {
+            "entity_id": 73,
+            "card_id": "CS2_101t",
+            "name": "Silver Hand Recruit",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 19,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_067",
+            "name": "Argent Commander"
+          },
+          {
+            "card_id": "EX1_362",
+            "name": "Argent Protector"
+          },
+          {
+            "card_id": "NEW1_023",
+            "name": "Faerie Dragon"
+          },
+          {
+            "card_id": "CS2_097",
+            "name": "Truesilver Champion"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "hero_power",
+          "player": 2,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "target": null
+        },
+        {
+          "event": "damage",
+          "player": 1,
+          "entity_id": 4,
+          "card_id": "HERO_04",
+          "name": "Uther Lightbringer",
+          "amount": 2,
+          "health_after": 1,
+          "source": {
+            "entity_id": 38,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot"
+          },
+          "armor_absorbed": 0,
+          "armor_after": 0
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "hero_attack_available": true
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  },
+  {
+    "game_id": "priest-s42100-p2",
+    "seed": 42100,
+    "candidate_seat": 2,
+    "candidate_first": true,
+    "opponent": "priest",
+    "winner": 1,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 16,
+    "hero_damage": 31,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 34
+    },
+    "replay": "experiments/face-hunter-v2-fixed-screen/games/priest-s42100-p2/replay.jsonl",
+    "signals": [
+      "low_hand_resources",
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "priest-s42100-p2",
+      "seq": 35,
+      "player": 2,
+      "turn": 15,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794350019.885,
+      "you": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 5,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": null,
+        "mana": 3,
+        "max_mana": 8,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [],
+        "board": [
+          {
+            "entity_id": 76,
+            "card_id": "NEW1_032",
+            "name": "Misha",
+            "attack": 4,
+            "health": 4,
+            "max_health": 4,
+            "can_attack": false,
+            "taunt": true,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Taunt"
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 19,
+        "deck_remaining_counts": {
+          "CS2_120": 1,
+          "CS2_124": 1,
+          "CS2_171": 1,
+          "CS2_172": 1,
+          "DS1_175": 2,
+          "DS1_185": 1,
+          "EX1_017": 1,
+          "EX1_029": 2,
+          "EX1_531": 1,
+          "EX1_534": 2,
+          "EX1_536": 1,
+          "EX1_538": 1,
+          "EX1_539": 1,
+          "EX1_610": 2,
+          "NEW1_031": 1
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "CS2_124",
+            "name": "Wolfrider"
+          },
+          {
+            "card_id": "EX1_531",
+            "name": "Scavenging Hyena"
+          },
+          {
+            "card_id": "EX1_017",
+            "name": "Jungle Panther"
+          },
+          {
+            "card_id": "CS2_120",
+            "name": "River Crocolisk"
+          },
+          {
+            "card_id": "CS2_171",
+            "name": "Stonetusk Boar"
+          },
+          {
+            "card_id": "CS2_172",
+            "name": "Bloodfen Raptor"
+          },
+          {
+            "card_id": "DS1_185",
+            "name": "Arcane Shot"
+          },
+          {
+            "card_id": "EX1_538",
+            "name": "Unleash the Hounds"
+          },
+          {
+            "card_id": "EX1_538t",
+            "name": "Hound"
+          },
+          {
+            "card_id": "EX1_538t",
+            "name": "Hound"
+          },
+          {
+            "card_id": "EX1_536",
+            "name": "Eaglehorn Bow"
+          },
+          {
+            "card_id": "EX1_539",
+            "name": "Kill Command"
+          },
+          {
+            "card_id": "EX1_538t",
+            "name": "Hound"
+          },
+          {
+            "card_id": "NEW1_031",
+            "name": "Animal Companion"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_09",
+          "name": "Anduin Wrynn",
+          "hero_class": "PRIEST",
+          "health": 4,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_09bp",
+          "name": "Lesser Heal",
+          "cost": 2,
+          "usable": false,
+          "text": "Restore 2 Health."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 7,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 2,
+        "board": [
+          {
+            "entity_id": 18,
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti",
+            "attack": 4,
+            "health": 5,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          },
+          {
+            "entity_id": 8,
+            "card_id": "NEW1_023",
+            "name": "Faerie Dragon",
+            "attack": 3,
+            "health": 1,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Can't be targeted by spells or Hero Powers."
+          },
+          {
+            "entity_id": 14,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "attack": 2,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+          },
+          {
+            "entity_id": 15,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "attack": 2,
+            "health": 2,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+          },
+          {
+            "entity_id": 6,
+            "card_id": "EX1_066",
+            "name": "Acidic Swamp Ooze",
+            "attack": 3,
+            "health": 1,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Destroy your opponent's weapon."
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 19,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "CS2_117",
+            "name": "Earthen Ring Farseer"
+          },
+          {
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta"
+          },
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          },
+          {
+            "card_id": "CS2_234",
+            "name": "Shadow Word: Pain"
+          },
+          {
+            "card_id": "EX1_622",
+            "name": "Shadow Word: Death"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "hero_power",
+          "player": 2,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "target": null
+        },
+        {
+          "event": "damage",
+          "player": 1,
+          "entity_id": 4,
+          "card_id": "HERO_09",
+          "name": "Anduin Wrynn",
+          "amount": 2,
+          "health_after": 4,
+          "source": {
+            "entity_id": 38,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot"
+          },
+          "armor_absorbed": 0,
+          "armor_after": 0
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "hero_attack_available": true
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  },
+  {
+    "game_id": "priest-s42104-p2",
+    "seed": 42104,
+    "candidate_seat": 2,
+    "candidate_first": false,
+    "opponent": "priest",
+    "winner": 1,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 15,
+    "hero_damage": 26,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 28
+    },
+    "replay": "experiments/face-hunter-v2-fixed-screen/games/priest-s42104-p2/replay.jsonl",
+    "signals": [
+      "low_hand_resources",
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "priest-s42104-p2",
+      "seq": 29,
+      "player": 2,
+      "turn": 14,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794350020.154,
+      "you": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 7,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 7,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 52,
+            "card_id": "EX1_534",
+            "name": "Savannah Highmane",
+            "type": "MINION",
+            "cost": 6,
+            "attack": 6,
+            "health": 5,
+            "text": "Deathrattle: Summon two 2/2 Hyenas.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 39,
+            "card_id": "DS1_175",
+            "name": "Timber Wolf",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Your other Beasts have +1 Attack."
+          },
+          {
+            "entity_id": 51,
+            "card_id": "EX1_534",
+            "name": "Savannah Highmane",
+            "attack": 7,
+            "health": 5,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon two 2/2 Hyenas."
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 19,
+        "deck_remaining_counts": {
+          "CS2_120": 1,
+          "CS2_124": 2,
+          "CS2_171": 1,
+          "CS2_172": 1,
+          "DS1_175": 1,
+          "DS1_185": 2,
+          "EX1_017": 2,
+          "EX1_029": 1,
+          "EX1_531": 2,
+          "EX1_536": 1,
+          "EX1_538": 2,
+          "EX1_539": 1,
+          "EX1_610": 1,
+          "NEW1_031": 1
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "CS2_172",
+            "name": "Bloodfen Raptor"
+          },
+          {
+            "card_id": "CS2_120",
+            "name": "River Crocolisk"
+          },
+          {
+            "card_id": "CS2_171",
+            "name": "Stonetusk Boar"
+          },
+          {
+            "card_id": "EX1_539",
+            "name": "Kill Command"
+          },
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          },
+          {
+            "card_id": "EX1_536",
+            "name": "Eaglehorn Bow"
+          },
+          {
+            "card_id": "NEW1_031",
+            "name": "Animal Companion"
+          },
+          {
+            "card_id": "NEW1_032",
+            "name": "Misha"
+          },
+          {
+            "card_id": "EX1_610",
+            "name": "Explosive Trap"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_09",
+          "name": "Anduin Wrynn",
+          "hero_class": "PRIEST",
+          "health": 8,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_09bp",
+          "name": "Lesser Heal",
+          "cost": 2,
+          "usable": false,
+          "text": "Restore 2 Health."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 7,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 3,
+        "board": [
+          {
+            "entity_id": 15,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "attack": 2,
+            "health": 1,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+          },
+          {
+            "entity_id": 14,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "attack": 2,
+            "health": 1,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+          },
+          {
+            "entity_id": 18,
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti",
+            "attack": 4,
+            "health": 1,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 20,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_066",
+            "name": "Acidic Swamp Ooze"
+          },
+          {
+            "card_id": "EX1_029",
+            "name": "Leper Gnome"
+          },
+          {
+            "card_id": "EX1_091",
+            "name": "Cabal Shadow Priest"
+          },
+          {
+            "card_id": "EX1_066",
+            "name": "Acidic Swamp Ooze"
+          },
+          {
+            "card_id": "CS2_234",
+            "name": "Shadow Word: Pain"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "play_card",
+          "player": 2,
+          "card_id": "DS1_175",
+          "name": "Timber Wolf",
+          "entity_id": 39,
+          "cost": 1,
+          "target": null,
+          "position": 0,
+          "choose": null
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "hero_attack_available": true
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  },
+  {
+    "game_id": "zoo-s42100-p1",
+    "seed": 42100,
+    "candidate_seat": 1,
+    "candidate_first": false,
+    "opponent": "zoo",
+    "winner": 2,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 11,
+    "hero_damage": 21,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 20
+    },
+    "replay": "experiments/face-hunter-v2-fixed-screen/games/zoo-s42100-p1/replay.jsonl",
+    "signals": [
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "zoo-s42100-p1",
+      "seq": 21,
+      "player": 1,
+      "turn": 10,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794350019.447,
+      "you": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 9,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 3,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": {
+          "entity_id": 31,
+          "card_id": "EX1_536",
+          "name": "Eaglehorn Bow",
+          "attack": 3,
+          "durability": 1
+        },
+        "mana": 0,
+        "max_mana": 5,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 22,
+            "card_id": "EX1_610",
+            "name": "Explosive Trap",
+            "type": "SPELL",
+            "cost": 2,
+            "text": "Secret: When your hero is attacked, deal 2 damage to all enemies.",
+            "playable": false
+          },
+          {
+            "entity_id": 23,
+            "card_id": "EX1_610",
+            "name": "Explosive Trap",
+            "type": "SPELL",
+            "cost": 2,
+            "text": "Secret: When your hero is attacked, deal 2 damage to all enemies.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 10,
+            "card_id": "EX1_531",
+            "name": "Scavenging Hyena",
+            "attack": 2,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Whenever a friendly Beast dies, gain +2/+1."
+          },
+          {
+            "entity_id": 16,
+            "card_id": "EX1_017",
+            "name": "Jungle Panther",
+            "attack": 4,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Stealth"
+          },
+          {
+            "entity_id": 15,
+            "card_id": "CS2_120",
+            "name": "River Crocolisk",
+            "attack": 2,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 21,
+        "deck_remaining_counts": {
+          "CS2_124": 1,
+          "CS2_171": 2,
+          "CS2_172": 2,
+          "DS1_175": 2,
+          "DS1_185": 2,
+          "EX1_017": 1,
+          "EX1_029": 1,
+          "EX1_531": 1,
+          "EX1_534": 2,
+          "EX1_536": 1,
+          "EX1_538": 2,
+          "EX1_539": 2,
+          "NEW1_031": 2
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "CS2_124",
+            "name": "Wolfrider"
+          },
+          {
+            "card_id": "CS2_120",
+            "name": "River Crocolisk"
+          },
+          {
+            "card_id": "EX1_029",
+            "name": "Leper Gnome"
+          },
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_07",
+          "name": "Gul'dan",
+          "hero_class": "WARLOCK",
+          "health": 4,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_07bp",
+          "name": "Life Tap",
+          "cost": 2,
+          "usable": false,
+          "text": "Draw a card and take 2 damage."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 5,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 2,
+        "board": [
+          {
+            "entity_id": 44,
+            "card_id": "EX1_008",
+            "name": "Argent Squire",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": true,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Divine Shield"
+          },
+          {
+            "entity_id": 68,
+            "card_id": "EX1_586",
+            "name": "Sea Giant",
+            "attack": 8,
+            "health": 8,
+            "max_health": 8,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Costs (1) less for each other minion on the battlefield."
+          },
+          {
+            "entity_id": 46,
+            "card_id": "CS2_188",
+            "name": "Abusive Sergeant",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Give a minion +2 Attack this turn."
+          },
+          {
+            "entity_id": 61,
+            "card_id": "EX1_046",
+            "name": "Dark Iron Dwarf",
+            "attack": 4,
+            "health": 2,
+            "max_health": 4,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Give a minion +2 Attack this turn."
+          },
+          {
+            "entity_id": 54,
+            "card_id": "EX1_066",
+            "name": "Acidic Swamp Ooze",
+            "attack": 3,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Destroy your opponent's weapon."
+          },
+          {
+            "entity_id": 39,
+            "card_id": "EX1_319",
+            "name": "Flame Imp",
+            "attack": 3,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Deal 3 damage to your hero."
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 21,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_008",
+            "name": "Argent Squire"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "play_card",
+          "player": 1,
+          "card_id": "EX1_531",
+          "name": "Scavenging Hyena",
+          "entity_id": 10,
+          "cost": 2,
+          "target": null,
+          "position": 0,
+          "choose": null
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "hero_attack_available": false
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  },
+  {
+    "game_id": "zoo-s42100-p2",
+    "seed": 42100,
+    "candidate_seat": 2,
+    "candidate_first": true,
+    "opponent": "zoo",
+    "winner": 1,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 10,
+    "hero_damage": 18,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 21
+    },
+    "replay": "experiments/face-hunter-v2-fixed-screen/games/zoo-s42100-p2/replay.jsonl",
+    "signals": [
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "zoo-s42100-p2",
+      "seq": 22,
+      "player": 2,
+      "turn": 9,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794350019.546,
+      "you": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 9,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 5,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 64,
+            "card_id": "EX1_536",
+            "name": "Eaglehorn Bow",
+            "type": "WEAPON",
+            "cost": 3,
+            "attack": 3,
+            "durability": 2,
+            "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+            "playable": false
+          },
+          {
+            "entity_id": 44,
+            "card_id": "EX1_531",
+            "name": "Scavenging Hyena",
+            "type": "MINION",
+            "cost": 2,
+            "attack": 2,
+            "health": 2,
+            "text": "Whenever a friendly Beast dies, gain +2/+1.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 49,
+            "card_id": "EX1_017",
+            "name": "Jungle Panther",
+            "attack": 4,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Stealth"
+          },
+          {
+            "entity_id": 48,
+            "card_id": "CS2_120",
+            "name": "River Crocolisk",
+            "attack": 2,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          },
+          {
+            "entity_id": 76,
+            "card_id": "EX1_538t",
+            "name": "Hound",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          },
+          {
+            "entity_id": 77,
+            "card_id": "EX1_538t",
+            "name": "Hound",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          },
+          {
+            "entity_id": 78,
+            "card_id": "EX1_538t",
+            "name": "Hound",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          },
+          {
+            "entity_id": 79,
+            "card_id": "EX1_538t",
+            "name": "Hound",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          },
+          {
+            "entity_id": 80,
+            "card_id": "EX1_538t",
+            "name": "Hound",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 22,
+        "deck_remaining_counts": {
+          "CS2_120": 1,
+          "CS2_124": 2,
+          "CS2_171": 1,
+          "CS2_172": 1,
+          "DS1_175": 2,
+          "DS1_185": 1,
+          "EX1_017": 1,
+          "EX1_029": 2,
+          "EX1_531": 1,
+          "EX1_534": 2,
+          "EX1_536": 1,
+          "EX1_538": 1,
+          "EX1_539": 2,
+          "EX1_610": 2,
+          "NEW1_031": 2
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "CS2_171",
+            "name": "Stonetusk Boar"
+          },
+          {
+            "card_id": "CS2_172",
+            "name": "Bloodfen Raptor"
+          },
+          {
+            "card_id": "DS1_185",
+            "name": "Arcane Shot"
+          },
+          {
+            "card_id": "EX1_538",
+            "name": "Unleash the Hounds"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_07",
+          "name": "Gul'dan",
+          "hero_class": "WARLOCK",
+          "health": 9,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_07bp",
+          "name": "Life Tap",
+          "cost": 2,
+          "usable": false,
+          "text": "Draw a card and take 2 damage."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 4,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 2,
+        "board": [
+          {
+            "entity_id": 22,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "attack": 2,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+          },
+          {
+            "entity_id": 10,
+            "card_id": "EX1_008",
+            "name": "Argent Squire",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Divine Shield"
+          },
+          {
+            "entity_id": 13,
+            "card_id": "CS2_188",
+            "name": "Abusive Sergeant",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Give a minion +2 Attack this turn."
+          },
+          {
+            "entity_id": 34,
+            "card_id": "EX1_586",
+            "name": "Sea Giant",
+            "attack": 9,
+            "health": 8,
+            "max_health": 8,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Costs (1) less for each other minion on the battlefield."
+          },
+          {
+            "entity_id": 16,
+            "card_id": "EX1_162",
+            "name": "Dire Wolf Alpha",
+            "attack": 2,
+            "health": 1,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Adjacent minions have +1 Attack."
+          },
+          {
+            "entity_id": 6,
+            "card_id": "EX1_319",
+            "name": "Flame Imp",
+            "attack": 4,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Deal 3 damage to your hero."
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 22,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "hero_power",
+          "player": 2,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "target": null
+        },
+        {
+          "event": "damage",
+          "player": 1,
+          "entity_id": 4,
+          "card_id": "HERO_07",
+          "name": "Gul'dan",
+          "amount": 2,
+          "health_after": 9,
+          "source": {
+            "entity_id": 38,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot"
+          },
+          "armor_absorbed": 0,
+          "armor_after": 0
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "hero_attack_available": true
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  },
+  {
+    "game_id": "zoo-s42101-p1",
+    "seed": 42101,
+    "candidate_seat": 1,
+    "candidate_first": false,
+    "opponent": "zoo",
+    "winner": 2,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 13,
+    "hero_damage": 18,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 20
+    },
+    "replay": "experiments/face-hunter-v2-fixed-screen/games/zoo-s42101-p1/replay.jsonl",
+    "signals": [
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "zoo-s42101-p1",
+      "seq": 21,
+      "player": 1,
+      "turn": 12,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794350019.593,
+      "you": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 1,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 3,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": {
+          "entity_id": 30,
+          "card_id": "EX1_536",
+          "name": "Eaglehorn Bow",
+          "attack": 3,
+          "durability": 1
+        },
+        "mana": 0,
+        "max_mana": 6,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 70,
+            "card_id": "GAME_005",
+            "name": "The Coin",
+            "type": "SPELL",
+            "cost": 0,
+            "text": "Gain 1 Mana Crystal this turn only.",
+            "playable": true
+          },
+          {
+            "entity_id": 31,
+            "card_id": "EX1_536",
+            "name": "Eaglehorn Bow",
+            "type": "WEAPON",
+            "cost": 3,
+            "attack": 3,
+            "durability": 2,
+            "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 34,
+            "card_id": "CS2_124",
+            "name": "Wolfrider",
+            "attack": 3,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge"
+          },
+          {
+            "entity_id": 10,
+            "card_id": "EX1_531",
+            "name": "Scavenging Hyena",
+            "attack": 4,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Whenever a friendly Beast dies, gain +2/+1."
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 20,
+        "deck_remaining_counts": {
+          "CS2_120": 1,
+          "CS2_124": 1,
+          "CS2_171": 2,
+          "CS2_172": 2,
+          "DS1_175": 2,
+          "DS1_185": 2,
+          "EX1_017": 1,
+          "EX1_531": 1,
+          "EX1_534": 2,
+          "EX1_538": 2,
+          "EX1_539": 1,
+          "EX1_610": 2,
+          "NEW1_031": 1
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_029",
+            "name": "Leper Gnome"
+          },
+          {
+            "card_id": "EX1_017",
+            "name": "Jungle Panther"
+          },
+          {
+            "card_id": "CS2_120",
+            "name": "River Crocolisk"
+          },
+          {
+            "card_id": "EX1_029",
+            "name": "Leper Gnome"
+          },
+          {
+            "card_id": "EX1_539",
+            "name": "Kill Command"
+          },
+          {
+            "card_id": "NEW1_031",
+            "name": "Animal Companion"
+          },
+          {
+            "card_id": "NEW1_034",
+            "name": "Huffer"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_07",
+          "name": "Gul'dan",
+          "hero_class": "WARLOCK",
+          "health": 9,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_07bp",
+          "name": "Life Tap",
+          "cost": 2,
+          "usable": false,
+          "text": "Draw a card and take 2 damage."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 6,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 2,
+        "board": [
+          {
+            "entity_id": 65,
+            "card_id": "EX1_067",
+            "name": "Argent Commander",
+            "attack": 4,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": true,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Charge Divine Shield"
+          },
+          {
+            "entity_id": 55,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "attack": 2,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+          },
+          {
+            "entity_id": 64,
+            "card_id": "EX1_093",
+            "name": "Defender of Argus",
+            "attack": 3,
+            "health": 2,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Give adjacent minions +1/+1 and Taunt."
+          },
+          {
+            "entity_id": 50,
+            "card_id": "EX1_162",
+            "name": "Dire Wolf Alpha",
+            "attack": 2,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Adjacent minions have +1 Attack."
+          },
+          {
+            "entity_id": 40,
+            "card_id": "EX1_319",
+            "name": "Flame Imp",
+            "attack": 4,
+            "health": 1,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Deal 3 damage to your hero."
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 21,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "NEW1_019",
+            "name": "Knife Juggler"
+          },
+          {
+            "card_id": "EX1_019",
+            "name": "Shattered Sun Cleric"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "play_card",
+          "card": 70,
+          "targets": null,
+          "positions": null,
+          "choose": null
+        },
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "attack",
+          "player": 1,
+          "attacker": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar"
+          },
+          "target": {
+            "entity_id": 37,
+            "card_id": "HERO_07",
+            "name": "Gul'dan"
+          }
+        },
+        {
+          "event": "damage",
+          "player": 2,
+          "entity_id": 37,
+          "card_id": "HERO_07",
+          "name": "Gul'dan",
+          "amount": 3,
+          "health_after": 9,
+          "source": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar"
+          },
+          "armor_absorbed": 0,
+          "armor_after": 0
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "hero_attack_available": false
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  },
+  {
+    "game_id": "zoo-s42102-p2",
+    "seed": 42102,
+    "candidate_seat": 2,
+    "candidate_first": true,
+    "opponent": "zoo",
+    "winner": 1,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 10,
+    "hero_damage": 12,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 13
+    },
+    "replay": "experiments/face-hunter-v2-fixed-screen/games/zoo-s42102-p2/replay.jsonl",
+    "signals": [
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "zoo-s42102-p2",
+      "seq": 14,
+      "player": 2,
+      "turn": 9,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794350019.678,
+      "you": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 12,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 5,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 63,
+            "card_id": "EX1_536",
+            "name": "Eaglehorn Bow",
+            "type": "WEAPON",
+            "cost": 3,
+            "attack": 3,
+            "durability": 2,
+            "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+            "playable": false
+          },
+          {
+            "entity_id": 55,
+            "card_id": "EX1_610",
+            "name": "Explosive Trap",
+            "type": "SPELL",
+            "cost": 2,
+            "text": "Secret: When your hero is attacked, deal 2 damage to all enemies.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 44,
+            "card_id": "EX1_531",
+            "name": "Scavenging Hyena",
+            "attack": 2,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Whenever a friendly Beast dies, gain +2/+1."
+          },
+          {
+            "entity_id": 50,
+            "card_id": "EX1_017",
+            "name": "Jungle Panther",
+            "attack": 4,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Stealth"
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 22,
+        "deck_remaining_counts": {
+          "CS2_120": 2,
+          "CS2_124": 1,
+          "CS2_171": 2,
+          "CS2_172": 2,
+          "DS1_175": 1,
+          "DS1_185": 2,
+          "EX1_017": 1,
+          "EX1_029": 2,
+          "EX1_534": 2,
+          "EX1_536": 1,
+          "EX1_538": 2,
+          "EX1_539": 1,
+          "EX1_610": 1,
+          "NEW1_031": 2
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "DS1_175",
+            "name": "Timber Wolf"
+          },
+          {
+            "card_id": "CS2_124",
+            "name": "Wolfrider"
+          },
+          {
+            "card_id": "EX1_531",
+            "name": "Scavenging Hyena"
+          },
+          {
+            "card_id": "EX1_539",
+            "name": "Kill Command"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_07",
+          "name": "Gul'dan",
+          "hero_class": "WARLOCK",
+          "health": 15,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_07bp",
+          "name": "Life Tap",
+          "cost": 2,
+          "usable": false,
+          "text": "Draw a card and take 2 damage."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 4,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 2,
+        "board": [
+          {
+            "entity_id": 12,
+            "card_id": "CS2_188",
+            "name": "Abusive Sergeant",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Give a minion +2 Attack this turn."
+          },
+          {
+            "entity_id": 22,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "attack": 2,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+          },
+          {
+            "entity_id": 23,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "attack": 3,
+            "health": 2,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+          },
+          {
+            "entity_id": 17,
+            "card_id": "EX1_162",
+            "name": "Dire Wolf Alpha",
+            "attack": 2,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Adjacent minions have +1 Attack."
+          },
+          {
+            "entity_id": 7,
+            "card_id": "EX1_319",
+            "name": "Flame Imp",
+            "attack": 4,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Deal 3 damage to your hero."
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 22,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_008",
+            "name": "Argent Squire"
+          },
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "play_card",
+          "player": 2,
+          "card_id": "EX1_531",
+          "name": "Scavenging Hyena",
+          "entity_id": 44,
+          "cost": 2,
+          "target": null,
+          "position": 0,
+          "choose": null
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "hero_attack_available": true
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  }
+]

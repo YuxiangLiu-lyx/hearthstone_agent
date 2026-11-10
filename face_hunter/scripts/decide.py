@@ -41,6 +41,14 @@ if __name__ == "__main__":
     parser.add_argument("--worker", action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
     state = json.loads(Path(args.state).read_text(encoding="utf-8"))
+    history_path = Path(args.state).parent / "history.jsonl"
+    if history_path.is_file():
+        from state_features import with_public_history
+        try:
+            history = [json.loads(line) for line in history_path.read_text(encoding="utf-8").splitlines()]
+            state = with_public_history(state, history)
+        except (ValueError, OSError) as error:
+            print(f"public history unavailable: {error}", file=sys.stderr)
     if args.worker or args.fallback or state["phase"] in ("deck_submission", "game_over"):
         result = response(state, args.fallback)
     else:

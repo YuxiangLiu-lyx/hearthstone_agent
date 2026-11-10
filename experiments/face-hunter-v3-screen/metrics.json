@@ -1,0 +1,865 @@
+{
+  "version": "v3",
+  "attempted": 40,
+  "games": 40,
+  "wins": 23,
+  "win_rate": 0.575,
+  "wilson95": [
+    0.42194800436059987,
+    0.7149083147518411
+  ],
+  "mean_turns": 13.85,
+  "mean_hero_damage": 26.75,
+  "hero_damage_definition": "Damage events to the opposing hero with an observed friendly source, including armor damage and overkill.",
+  "illegal": 0,
+  "timeouts": 0,
+  "early_exits": 0,
+  "void_or_aborted": 0,
+  "policy_errors": 22,
+  "decision_modes": {
+    "baseline": 40,
+    "stable_pressure": 951,
+    "guaranteed_lethal": 53,
+    "high_risk_comeback": 1
+  },
+  "cli_fallbacks": 0,
+  "missed_lethals": null,
+  "lethal_audit_status": "Not audited; no zero-miss claim.",
+  "decision_s_mean": 0.0031756625345785035,
+  "decision_s_max": 0.1912604159442708,
+  "failure_signals": {
+    "race_or_board_loss": 3,
+    "low_hand_resources": 6,
+    "visible_board_lethal_threat": 14
+  },
+  "by_opponent": {
+    "greedy": {
+      "games": 10,
+      "wins": 5
+    },
+    "paladin": {
+      "games": 10,
+      "wins": 6
+    },
+    "priest": {
+      "games": 10,
+      "wins": 4
+    },
+    "zoo": {
+      "games": 10,
+      "wins": 8
+    }
+  },
+  "by_first": {
+    "True": {
+      "games": 20,
+      "wins": 11
+    },
+    "False": {
+      "games": 20,
+      "wins": 12
+    }
+  },
+  "results": [
+    {
+      "game_id": "greedy-s42100-p1",
+      "seed": 42100,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 9,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 20
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/greedy-s42100-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s42100-p2",
+      "seed": 42100,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 19,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 26
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/greedy-s42100-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s42101-p1",
+      "seed": 42101,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 12,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 19
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/greedy-s42101-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s42101-p2",
+      "seed": 42101,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 25,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 28
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/greedy-s42101-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s42102-p1",
+      "seed": 42102,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 27
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/greedy-s42102-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s42102-p2",
+      "seed": 42102,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 11,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 20
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/greedy-s42102-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s42103-p1",
+      "seed": 42103,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 29,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 28
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/greedy-s42103-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s42103-p2",
+      "seed": 42103,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 11,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 21
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/greedy-s42103-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s42104-p1",
+      "seed": 42104,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 11,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 24
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/greedy-s42104-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s42104-p2",
+      "seed": 42104,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 13,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 17
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/greedy-s42104-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s42100-p1",
+      "seed": 42100,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 12,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 24
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/paladin-s42100-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s42100-p2",
+      "seed": 42100,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 27,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 29
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/paladin-s42100-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s42101-p1",
+      "seed": 42101,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 23,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 19
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/paladin-s42101-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s42101-p2",
+      "seed": 42101,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 28,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 29
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/paladin-s42101-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s42102-p1",
+      "seed": 42102,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 28
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/paladin-s42102-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s42102-p2",
+      "seed": 42102,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 28
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/paladin-s42102-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s42103-p1",
+      "seed": 42103,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 34
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/paladin-s42103-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s42103-p2",
+      "seed": 42103,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 10,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 21
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/paladin-s42103-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s42104-p1",
+      "seed": 42104,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 11,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 22
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/paladin-s42104-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s42104-p2",
+      "seed": 42104,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 39,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 30
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/paladin-s42104-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s42100-p1",
+      "seed": 42100,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 23,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 29
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/priest-s42100-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s42100-p2",
+      "seed": 42100,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 29,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/priest-s42100-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s42101-p1",
+      "seed": 42101,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 26,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 23
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/priest-s42101-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s42101-p2",
+      "seed": 42101,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 12,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 16
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/priest-s42101-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s42102-p1",
+      "seed": 42102,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 12,
+      "hero_damage": 35,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 23
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/priest-s42102-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s42102-p2",
+      "seed": 42102,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 20,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/priest-s42102-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s42103-p1",
+      "seed": 42103,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 38,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 45
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/priest-s42103-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s42103-p2",
+      "seed": 42103,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 12,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 25
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/priest-s42103-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s42104-p1",
+      "seed": 42104,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 37,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 30
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/priest-s42104-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s42104-p2",
+      "seed": 42104,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 20,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 25
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/priest-s42104-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s42100-p1",
+      "seed": 42100,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 12,
+      "hero_damage": 27,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 20
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/zoo-s42100-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s42100-p2",
+      "seed": 42100,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 10,
+      "hero_damage": 18,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 21
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/zoo-s42100-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s42101-p1",
+      "seed": 42101,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 18,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 20
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/zoo-s42101-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s42101-p2",
+      "seed": 42101,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 28,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 29
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/zoo-s42101-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s42102-p1",
+      "seed": 42102,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 19,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 29
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/zoo-s42102-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s42102-p2",
+      "seed": 42102,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 26,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 22
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/zoo-s42102-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s42103-p1",
+      "seed": 42103,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 11,
+      "hero_damage": 26,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 28
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/zoo-s42103-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s42103-p2",
+      "seed": 42103,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 27,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 28
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/zoo-s42103-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s42104-p1",
+      "seed": 42104,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/zoo-s42104-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s42104-p2",
+      "seed": 42104,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 12,
+      "hero_damage": 26,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 21
+      },
+      "replay": "experiments/face-hunter-v3-screen/games/zoo-s42104-p2/replay.jsonl"
+    }
+  ]
+}

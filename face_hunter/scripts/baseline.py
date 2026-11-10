@@ -25,7 +25,7 @@ def score(state, action):
             return -1000.0
         if target is o["hero"]:
             return 35.0 + source["attack"]
-        kills = not target.get("divine_shield") and (source["attack"] >= target["health"] or source.get("poisonous"))
+        kills = not target.get("divine_shield") and (source["attack"] >= target["health"] or source.get("poisonous", False))
         dies = not source.get("divine_shield") and target["attack"] >= source["health"]
         return (19 if target.get("taunt") else -6) + 5 * kills + minion_value(target) * kills - 3 * dies
     if kind == "hero_power":
