@@ -15,3 +15,5 @@ Change: Expand paired development sample to resolve V1 versus V3 uncertainty
 Next hypothesis: Inspect measured failure categories before choosing one further change.
 
 See config.json for exact seeds, deck, code fingerprint and conditions; metrics.json for per-game results.
+
+Tactical audit: 0 confirmed missed-lethal turns (bounded, non-exhaustive). See docs/face_hunter/v3-turn-lethal-audit.json.

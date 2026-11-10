@@ -1,5 +1,13 @@
 # Hearthstone Agent Arena
 
+Face Hunter is available as a separate validated skill: [project report](docs/face_hunter/README.md),
+[submission ZIP](dist/face-hunter-agent.zip), [skill](face_hunter/SKILL.md), and
+[offline win/loss review](docs/face_hunter/review.html). V3 won 119/200 on an untouched,
+equally weighted four-opponent holdout (95% Wilson interval 52.6%–66.1%). Three real Luna
+games completed with two wins and all 77 actions relayed exactly from Python. The
+original fixed Hunter deck is retained after an inconclusive deck-only challenger.
+Hunter has its own `FACE_HUNTER_CHAMPION.json`; existing Paladin and Zoo releases are unchanged.
+
 Validated local Champion: `v3-paladin-relay-champion`, a stateless Python tempo/value Paladin policy with a Luna MCP relay.
 The exact course runtime and files in `hs-arena-0.2.2/` are unchanged. Nothing has been submitted to Slack.
 

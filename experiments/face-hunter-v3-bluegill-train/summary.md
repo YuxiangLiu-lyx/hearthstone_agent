@@ -15,3 +15,7 @@ Change: Deck-only challenger: replace two Highmanes with two Bluegill Warriors t
 Next hypothesis: Inspect measured failure categories before choosing one further change.
 
 See config.json for exact seeds, deck, code fingerprint and conditions; metrics.json for per-game results.
+
+Final decision: Rejected: +3 wins in 400 paired games; uncertainty interval includes meaningful regressions.
+
+Next hypothesis: Retain the original deck and prioritize tactical coverage.

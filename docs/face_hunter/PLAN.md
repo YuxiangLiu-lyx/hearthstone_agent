@@ -30,8 +30,10 @@ V0 has no multi-action search; V1 adds guaranteed lethal; V2 adds two-turn value
 V3 adds survival-aware selection and conditional random comeback. All versions use the
 same fixed deck initially. Deck changes, if any, require a separate later experiment.
 
-Initial MCP smoke seeds: 42000-42005. Development paired seeds: 42100-42124. An untouched
-final validation block is reserved at 142100-142124 and must not select parameters.
+Initial MCP smoke seeds: 42000-42005. Initial development paired seeds: 42100-42124;
+V1/V3 were subsequently expanded through 42149 to resolve uncertainty. The deck-only
+challenger used 42100-42149. The independent validation block was 142100-142124 and
+did not select parameters. Final MCP seeds were 43010-43012; Luna seeds 43000-43002.
 Seat swapping is separate from the seeded first-player choice; report actual first/second.
 
 Each experiment saves config.json, metrics.json, summary.md and failures.md, with raw

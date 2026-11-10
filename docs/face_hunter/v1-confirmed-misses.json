@@ -1,0 +1,45 @@
+{
+  "audit": "docs/face_hunter/v1-turn-lethal-audit.json",
+  "candidates": 1,
+  "confirmed": 1,
+  "scope": "Engine-confirmed alternatives at public observations; non-exhaustive missed-lethal lower bound, one per game/turn.",
+  "results": [
+    {
+      "run": "experiments/face-hunter-v1-train",
+      "game": "zoo-s42121-p2",
+      "seq": 15,
+      "turn": 9,
+      "confirmed": true,
+      "winner": 2,
+      "actions": [
+        {
+          "type": "play_card",
+          "card": 61
+        },
+        {
+          "type": "attack",
+          "attacker": 79,
+          "target": 7
+        },
+        {
+          "type": "attack",
+          "attacker": 80,
+          "target": 7
+        },
+        {
+          "type": "attack",
+          "attacker": 81,
+          "target": 24
+        },
+        {
+          "type": "attack",
+          "attacker": 43,
+          "target": 4
+        },
+        {
+          "type": "hero_power"
+        }
+      ]
+    }
+  ]
+}

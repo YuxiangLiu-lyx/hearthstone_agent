@@ -1,7 +1,7 @@
 {
   "version": "v3-fixed-deck",
   "path": "development/checkpoints/face-hunter-v3-champion",
-  "status": "frozen before independent validation",
+  "status": "validated and packaged",
   "selection": "V3 won 236/400 versus V1 224/400 on paired development seeds 42100-42149. Exploratory paired 95% interval includes zero at its lower endpoint; provisional selection, not conclusive superiority. V2 alone did not improve.",
   "deck_decision": "Retain original 30-card deck; Bluegill challenger 239/400 versus 236/400 has insufficient evidence for replacement.",
   "code_sha256": "bebf4a8f9290c70d5592015981f4284a0541c21f45ede424b2fd5bfb9bb409d7",
@@ -32,5 +32,25 @@
     142123,
     142124
   ],
-  "holdout_policy": "Validate all V0-V3 once; do not retune using results."
+  "holdout_policy": "Validate all V0-V3 once; do not retune using results.",
+  "holdout": {
+    "wins": 119,
+    "games": 200,
+    "wilson95": [
+      0.5257958199999483,
+      0.6606234388755706
+    ],
+    "report": "docs/face_hunter/holdout-comparison/comparison.md"
+  },
+  "luna": {
+    "wins": 2,
+    "games": 3,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exits": 0,
+    "relayed_actions": 77,
+    "report": "docs/face_hunter/luna-relay-audit.json"
+  },
+  "archive": "dist/face-hunter-agent.zip",
+  "archive_sha256": "6dfec4d76b68dee4e142096df6bf822f010e1ddce59e31f7b0d24ca82e275861"
 }

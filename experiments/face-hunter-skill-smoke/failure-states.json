@@ -1,0 +1,323 @@
+[
+  {
+    "game_id": "g_20261110_000001",
+    "seed": 43000,
+    "candidate_seat": 1,
+    "candidate_first": true,
+    "opponent": "greedy",
+    "winner": 2,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 14,
+    "hero_damage": 13,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "deck_submission": 1,
+      "mulligan": 1,
+      "main": 18,
+      "game_over": 1
+    },
+    "replay": "experiments/face-hunter-skill-smoke/games/g_20261110_000001/replay.jsonl",
+    "signals": [
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "g_20261110_000001",
+      "seq": 20,
+      "player": 1,
+      "turn": 13,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794351692.017,
+      "you": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_05",
+          "name": "Rexxar",
+          "hero_class": "HUNTER",
+          "health": 5,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_05bp",
+          "name": "Steady Shot",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 2 damage to the enemy hero."
+        },
+        "weapon": null,
+        "mana": 1,
+        "max_mana": 7,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 29,
+            "card_id": "EX1_538",
+            "name": "Unleash the Hounds",
+            "type": "SPELL",
+            "cost": 3,
+            "text": "For each enemy minion, summon a 1/1 Hound with Charge.",
+            "playable": false
+          },
+          {
+            "entity_id": 28,
+            "card_id": "EX1_538",
+            "name": "Unleash the Hounds",
+            "type": "SPELL",
+            "cost": 3,
+            "text": "For each enemy minion, summon a 1/1 Hound with Charge.",
+            "playable": false
+          },
+          {
+            "entity_id": 22,
+            "card_id": "EX1_610",
+            "name": "Explosive Trap",
+            "type": "SPELL",
+            "cost": 2,
+            "text": "Secret: When your hero is attacked, deal 2 damage to all enemies.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 18,
+            "card_id": "EX1_534",
+            "name": "Savannah Highmane",
+            "attack": 6,
+            "health": 5,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Deathrattle: Summon two 2/2 Hyenas."
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 20,
+        "deck_remaining_counts": {
+          "CS2_120": 2,
+          "CS2_124": 1,
+          "CS2_171": 1,
+          "CS2_172": 2,
+          "DS1_175": 2,
+          "DS1_185": 2,
+          "EX1_017": 2,
+          "EX1_029": 1,
+          "EX1_531": 1,
+          "EX1_536": 2,
+          "EX1_539": 1,
+          "EX1_610": 1,
+          "NEW1_031": 2
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_531",
+            "name": "Scavenging Hyena"
+          },
+          {
+            "card_id": "CS2_tk1",
+            "name": "Sheep"
+          },
+          {
+            "card_id": "CS2_124",
+            "name": "Wolfrider"
+          },
+          {
+            "card_id": "CS2_171",
+            "name": "Stonetusk Boar"
+          },
+          {
+            "card_id": "EX1_029",
+            "name": "Leper Gnome"
+          },
+          {
+            "card_id": "EX1_539",
+            "name": "Kill Command"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_08",
+          "name": "Jaina Proudmoore",
+          "hero_class": "MAGE",
+          "health": 17,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_08bp",
+          "name": "Fireblast",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 1 damage."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 6,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 2,
+        "board": [
+          {
+            "entity_id": 40,
+            "card_id": "NEW1_012",
+            "name": "Mana Wyrm",
+            "attack": 5,
+            "health": 1,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Whenever you cast a spell, gain +1 Attack."
+          },
+          {
+            "entity_id": 55,
+            "card_id": "CS2_033",
+            "name": "Water Elemental",
+            "attack": 3,
+            "health": 5,
+            "max_health": 6,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Freeze any character damaged by this minion."
+          },
+          {
+            "entity_id": 63,
+            "card_id": "EX1_028",
+            "name": "Stranglethorn Tiger",
+            "attack": 5,
+            "health": 5,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Stealth"
+          },
+          {
+            "entity_id": 49,
+            "card_id": "EX1_012",
+            "name": "Bloodmage Thalnos",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 1,
+            "silenced": false,
+            "text": "Spell Damage +1 Deathrattle: Draw a card."
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 20,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_277",
+            "name": "Arcane Missiles"
+          },
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          },
+          {
+            "card_id": "EX1_277",
+            "name": "Arcane Missiles"
+          },
+          {
+            "card_id": "CS2_024",
+            "name": "Frostbolt"
+          },
+          {
+            "card_id": "CS2_022",
+            "name": "Polymorph"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "play_card",
+          "player": 1,
+          "card_id": "EX1_534",
+          "name": "Savannah Highmane",
+          "entity_id": 18,
+          "cost": 6,
+          "target": null,
+          "position": 0,
+          "choose": null
+        }
+      ],
+      "last_action_result": null,
+      "result": null
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  }
+]

@@ -1,0 +1,445 @@
+{
+  "scope": "Observed main decisions in turns that did not win; first finding per game/turn; conservative public tactical model; bounded beam search, not exhaustive. Positive findings require engine replay confirmation before calling them proven misses.",
+  "counts": {
+    "decisions_checked": 5044,
+    "supported": 4153,
+    "bounded_out": 17,
+    "model_detected_misses": 1
+  },
+  "findings": [
+    {
+      "run": "experiments/face-hunter-v1-train",
+      "game": "zoo-s42121-p2",
+      "seed": 42121,
+      "candidate_seat": 2,
+      "state": {
+        "protocol_version": "1",
+        "game_id": "zoo-s42121-p2",
+        "seq": 15,
+        "player": 2,
+        "turn": 9,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794351123.477,
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 15,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": true,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 5,
+          "max_mana": 5,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 61,
+              "card_id": "EX1_538",
+              "name": "Unleash the Hounds",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "For each enemy minion, summon a 1/1 Hound with Charge.",
+              "playable": true
+            },
+            {
+              "entity_id": 63,
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow",
+              "type": "WEAPON",
+              "cost": 3,
+              "attack": 3,
+              "durability": 2,
+              "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+              "playable": true
+            },
+            {
+              "entity_id": 66,
+              "card_id": "EX1_029",
+              "name": "Leper Gnome",
+              "type": "MINION",
+              "cost": 1,
+              "attack": 1,
+              "health": 1,
+              "text": "Deathrattle: Deal 2 damage to the enemy hero.",
+              "playable": true
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 50,
+              "card_id": "EX1_017",
+              "name": "Jungle Panther",
+              "attack": 4,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Stealth"
+            },
+            {
+              "entity_id": 43,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "attack": 4,
+              "health": 1,
+              "max_health": 3,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Whenever a friendly Beast dies, gain +2/+1."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 22,
+          "deck_remaining_counts": {
+            "CS2_120": 2,
+            "CS2_124": 2,
+            "CS2_171": 2,
+            "CS2_172": 2,
+            "DS1_175": 1,
+            "DS1_185": 2,
+            "EX1_017": 1,
+            "EX1_531": 1,
+            "EX1_534": 2,
+            "EX1_536": 1,
+            "EX1_538": 1,
+            "EX1_539": 1,
+            "EX1_610": 2,
+            "NEW1_031": 2
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_029",
+              "name": "Leper Gnome"
+            },
+            {
+              "card_id": "DS1_175",
+              "name": "Timber Wolf"
+            },
+            {
+              "card_id": "EX1_539",
+              "name": "Kill Command"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_07",
+            "name": "Gul'dan",
+            "hero_class": "WARLOCK",
+            "health": 12,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_07bp",
+            "name": "Life Tap",
+            "cost": 2,
+            "usable": false,
+            "text": "Draw a card and take 2 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 4,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 2,
+          "board": [
+            {
+              "entity_id": 7,
+              "card_id": "EX1_319",
+              "name": "Flame Imp",
+              "attack": 3,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Battlecry: Deal 3 damage to your hero."
+            },
+            {
+              "entity_id": 24,
+              "card_id": "EX1_019",
+              "name": "Shattered Sun Cleric",
+              "attack": 3,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Battlecry: Give a friendly minion +1/+1."
+            },
+            {
+              "entity_id": 13,
+              "card_id": "CS2_188",
+              "name": "Abusive Sergeant",
+              "attack": 4,
+              "health": 2,
+              "max_health": 3,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Battlecry: Give a minion +2 Attack this turn."
+            },
+            {
+              "entity_id": 16,
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Adjacent minions have +1 Attack."
+            },
+            {
+              "entity_id": 25,
+              "card_id": "EX1_019",
+              "name": "Shattered Sun Cleric",
+              "attack": 4,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Battlecry: Give a friendly minion +1/+1."
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 22,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "CS2_065",
+              "name": "Voidwalker"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 61,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 63,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 66,
+            "targets": null,
+            "positions": [
+              0,
+              1,
+              2
+            ],
+            "choose": null
+          },
+          {
+            "type": "attack",
+            "attacker": 43,
+            "targets": [
+              4,
+              7,
+              13,
+              16,
+              24,
+              25
+            ]
+          },
+          {
+            "type": "hero_power",
+            "targets": null
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "attack",
+            "player": 2,
+            "attacker": {
+              "entity_id": 50,
+              "card_id": "EX1_017",
+              "name": "Jungle Panther"
+            },
+            "target": {
+              "entity_id": 4,
+              "card_id": "HERO_07",
+              "name": "Gul'dan"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 1,
+            "entity_id": 4,
+            "card_id": "HERO_07",
+            "name": "Gul'dan",
+            "amount": 4,
+            "health_after": 12,
+            "source": {
+              "entity_id": 50,
+              "card_id": "EX1_017",
+              "name": "Jungle Panther"
+            },
+            "armor_absorbed": 0,
+            "armor_after": 0
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "hero_attack_available": true
+      },
+      "plan": {
+        "guaranteed": true,
+        "first_action": {
+          "type": "play_card",
+          "card": 61
+        },
+        "sequence": [
+          {
+            "type": "play_card",
+            "card": 61
+          },
+          {
+            "type": "attack",
+            "attacker": -1,
+            "target": 7
+          },
+          {
+            "type": "attack",
+            "attacker": 43,
+            "target": 4
+          },
+          {
+            "type": "hero_power"
+          },
+          {
+            "type": "attack",
+            "attacker": -2,
+            "target": 4
+          },
+          {
+            "type": "attack",
+            "attacker": -3,
+            "target": 4
+          },
+          {
+            "type": "attack",
+            "attacker": -4,
+            "target": 4
+          },
+          {
+            "type": "attack",
+            "attacker": -5,
+            "target": 4
+          }
+        ],
+        "mana_required": 5,
+        "damage": 12,
+        "depends_on_random": false,
+        "nodes": 3118,
+        "bounded_out": false,
+        "supported": true,
+        "elapsed_s": 0.2976674579549581
+      }
+    }
+  ]
+}
