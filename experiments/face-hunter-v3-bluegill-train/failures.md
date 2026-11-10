@@ -1,0 +1,167 @@
+# Failure review
+
+Signals below are observations, not proven causal explanations. No exhaustive lethal audit has been run.
+
+- greedy-s42100-p1, seed 42100, seat 1: low_hand_resources, visible_board_lethal_threat; turn 12.
+- greedy-s42105-p1, seed 42105, seat 1: low_hand_resources, visible_board_lethal_threat; turn 12.
+- greedy-s42105-p2, seed 42105, seat 2: low_hand_resources; turn 17.
+- greedy-s42109-p2, seed 42109, seat 2: low_hand_resources, visible_board_lethal_threat; turn 12.
+- greedy-s42114-p1, seed 42114, seat 1: low_hand_resources; turn 11.
+- greedy-s42116-p1, seed 42116, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- greedy-s42117-p1, seed 42117, seat 1: low_hand_resources; turn 15.
+- greedy-s42117-p2, seed 42117, seat 2: low_hand_resources; turn 10.
+- greedy-s42118-p1, seed 42118, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- greedy-s42119-p2, seed 42119, seat 2: low_hand_resources, visible_board_lethal_threat; turn 12.
+- greedy-s42121-p1, seed 42121, seat 1: low_hand_resources; turn 16.
+- greedy-s42127-p2, seed 42127, seat 2: low_hand_resources, visible_board_lethal_threat; turn 15.
+- greedy-s42130-p1, seed 42130, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- greedy-s42130-p2, seed 42130, seat 2: low_hand_resources, visible_board_lethal_threat; turn 15.
+- greedy-s42131-p1, seed 42131, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- greedy-s42133-p2, seed 42133, seat 2: low_hand_resources, visible_board_lethal_threat; turn 12.
+- greedy-s42138-p2, seed 42138, seat 2: low_hand_resources; turn 11.
+- greedy-s42139-p1, seed 42139, seat 1: low_hand_resources; turn 11.
+- greedy-s42140-p1, seed 42140, seat 1: low_hand_resources; turn 14.
+- greedy-s42142-p1, seed 42142, seat 1: low_hand_resources, visible_board_lethal_threat; turn 15.
+- greedy-s42145-p1, seed 42145, seat 1: low_hand_resources; turn 14.
+- greedy-s42145-p2, seed 42145, seat 2: low_hand_resources; turn 15.
+- greedy-s42147-p1, seed 42147, seat 1: low_hand_resources, visible_board_lethal_threat; turn 13.
+- greedy-s42148-p1, seed 42148, seat 1: low_hand_resources, visible_board_lethal_threat; turn 12.
+- paladin-s42101-p2, seed 42101, seat 2: low_hand_resources, visible_board_lethal_threat; turn 17.
+- paladin-s42105-p1, seed 42105, seat 1: visible_board_lethal_threat; turn 10.
+- paladin-s42111-p2, seed 42111, seat 2: low_hand_resources, visible_board_lethal_threat; turn 12.
+- paladin-s42114-p1, seed 42114, seat 1: low_hand_resources, visible_board_lethal_threat; turn 15.
+- paladin-s42114-p2, seed 42114, seat 2: low_hand_resources, visible_board_lethal_threat; turn 12.
+- paladin-s42115-p2, seed 42115, seat 2: low_hand_resources, visible_board_lethal_threat; turn 12.
+- paladin-s42116-p1, seed 42116, seat 1: low_hand_resources, visible_board_lethal_threat; turn 12.
+- paladin-s42117-p2, seed 42117, seat 2: low_hand_resources, visible_board_lethal_threat; turn 10.
+- paladin-s42118-p1, seed 42118, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- paladin-s42119-p2, seed 42119, seat 2: low_hand_resources, visible_board_lethal_threat; turn 14.
+- paladin-s42120-p2, seed 42120, seat 2: low_hand_resources, visible_board_lethal_threat; turn 16.
+- paladin-s42121-p1, seed 42121, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 16.
+- paladin-s42121-p2, seed 42121, seat 2: low_hand_resources, visible_board_lethal_threat; turn 13.
+- paladin-s42122-p1, seed 42122, seat 1: low_hand_resources, visible_board_lethal_threat; turn 15.
+- paladin-s42123-p1, seed 42123, seat 1: low_hand_resources, visible_board_lethal_threat; turn 16.
+- paladin-s42123-p2, seed 42123, seat 2: low_hand_resources, visible_board_lethal_threat; turn 13.
+- paladin-s42124-p1, seed 42124, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- paladin-s42124-p2, seed 42124, seat 2: low_hand_resources, visible_board_lethal_threat; turn 17.
+- paladin-s42126-p2, seed 42126, seat 2: low_hand_resources; turn 14.
+- paladin-s42127-p1, seed 42127, seat 1: visible_board_lethal_threat; turn 12.
+- paladin-s42127-p2, seed 42127, seat 2: low_hand_resources, visible_board_lethal_threat; turn 11.
+- paladin-s42128-p1, seed 42128, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- paladin-s42128-p2, seed 42128, seat 2: low_hand_resources, visible_board_lethal_threat; turn 15.
+- paladin-s42129-p1, seed 42129, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- paladin-s42129-p2, seed 42129, seat 2: low_hand_resources, visible_board_lethal_threat; turn 17.
+- paladin-s42131-p1, seed 42131, seat 1: low_hand_resources; turn 16.
+- paladin-s42132-p1, seed 42132, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- paladin-s42133-p1, seed 42133, seat 1: low_hand_resources, visible_board_lethal_threat; turn 15.
+- paladin-s42133-p2, seed 42133, seat 2: low_hand_resources, visible_board_lethal_threat; turn 16.
+- paladin-s42135-p2, seed 42135, seat 2: low_hand_resources, visible_board_lethal_threat; turn 14.
+- paladin-s42139-p1, seed 42139, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 15.
+- paladin-s42140-p1, seed 42140, seat 1: low_hand_resources, visible_board_lethal_threat; turn 12.
+- paladin-s42140-p2, seed 42140, seat 2: low_hand_resources, visible_board_lethal_threat; turn 13.
+- paladin-s42141-p1, seed 42141, seat 1: low_hand_resources, visible_board_lethal_threat; turn 15.
+- paladin-s42142-p2, seed 42142, seat 2: low_hand_resources, visible_board_lethal_threat; turn 14.
+- paladin-s42144-p1, seed 42144, seat 1: low_hand_resources; turn 13.
+- paladin-s42145-p1, seed 42145, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- paladin-s42145-p2, seed 42145, seat 2: low_hand_resources, visible_board_lethal_threat; turn 13.
+- paladin-s42147-p1, seed 42147, seat 1: low_hand_resources, visible_board_lethal_threat; turn 11.
+- paladin-s42147-p2, seed 42147, seat 2: low_hand_resources, visible_board_lethal_threat; turn 16.
+- paladin-s42149-p1, seed 42149, seat 1: low_hand_resources, visible_board_lethal_threat; turn 16.
+- priest-s42100-p1, seed 42100, seat 1: low_hand_resources, visible_board_lethal_threat; turn 18.
+- priest-s42100-p2, seed 42100, seat 2: low_hand_resources, visible_board_lethal_threat; turn 15.
+- priest-s42101-p2, seed 42101, seat 2: low_hand_resources, visible_board_lethal_threat; turn 17.
+- priest-s42105-p1, seed 42105, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- priest-s42106-p2, seed 42106, seat 2: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 18.
+- priest-s42107-p1, seed 42107, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 22.
+- priest-s42112-p1, seed 42112, seat 1: low_hand_resources, visible_board_lethal_threat; turn 15.
+- priest-s42113-p2, seed 42113, seat 2: low_hand_resources, visible_board_lethal_threat; turn 13.
+- priest-s42114-p2, seed 42114, seat 2: low_hand_resources, visible_board_lethal_threat; turn 12.
+- priest-s42116-p1, seed 42116, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- priest-s42117-p2, seed 42117, seat 2: low_hand_resources, visible_board_lethal_threat; turn 14.
+- priest-s42118-p1, seed 42118, seat 1: opposing_taunt, visible_board_lethal_threat; turn 16.
+- priest-s42118-p2, seed 42118, seat 2: low_hand_resources, visible_board_lethal_threat; turn 19.
+- priest-s42121-p2, seed 42121, seat 2: low_hand_resources, visible_board_lethal_threat; turn 15.
+- priest-s42122-p1, seed 42122, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 17.
+- priest-s42123-p1, seed 42123, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 16.
+- priest-s42124-p2, seed 42124, seat 2: low_hand_resources, visible_board_lethal_threat; turn 21.
+- priest-s42127-p1, seed 42127, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 14.
+- priest-s42128-p1, seed 42128, seat 1: low_hand_resources, visible_board_lethal_threat; turn 12.
+- priest-s42129-p1, seed 42129, seat 1: low_hand_resources, visible_board_lethal_threat; turn 16.
+- priest-s42131-p1, seed 42131, seat 1: low_hand_resources, visible_board_lethal_threat; turn 16.
+- priest-s42132-p1, seed 42132, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 18.
+- priest-s42136-p2, seed 42136, seat 2: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 18.
+- priest-s42139-p2, seed 42139, seat 2: low_hand_resources, visible_board_lethal_threat; turn 16.
+- priest-s42140-p2, seed 42140, seat 2: low_hand_resources, visible_board_lethal_threat; turn 15.
+- priest-s42142-p1, seed 42142, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 17.
+- priest-s42143-p1, seed 42143, seat 1: low_hand_resources, visible_board_lethal_threat; turn 18.
+- priest-s42143-p2, seed 42143, seat 2: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 17.
+- priest-s42144-p1, seed 42144, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 17.
+- priest-s42147-p2, seed 42147, seat 2: low_hand_resources, visible_board_lethal_threat; turn 16.
+- priest-s42148-p1, seed 42148, seat 1: low_hand_resources, visible_board_lethal_threat; turn 16.
+- priest-s42148-p2, seed 42148, seat 2: low_hand_resources, visible_board_lethal_threat; turn 17.
+- priest-s42149-p2, seed 42149, seat 2: low_hand_resources, visible_board_lethal_threat; turn 15.
+- zoo-s42100-p1, seed 42100, seat 1: visible_board_lethal_threat; turn 10.
+- zoo-s42100-p2, seed 42100, seat 2: visible_board_lethal_threat; turn 9.
+- zoo-s42101-p1, seed 42101, seat 1: low_hand_resources, visible_board_lethal_threat; turn 12.
+- zoo-s42104-p1, seed 42104, seat 1: low_hand_resources, visible_board_lethal_threat; turn 17.
+- zoo-s42105-p1, seed 42105, seat 1: opposing_taunt, visible_board_lethal_threat; turn 10.
+- zoo-s42105-p2, seed 42105, seat 2: low_hand_resources, visible_board_lethal_threat; turn 15.
+- zoo-s42109-p2, seed 42109, seat 2: low_hand_resources, visible_board_lethal_threat; turn 12.
+- zoo-s42110-p2, seed 42110, seat 2: low_hand_resources, visible_board_lethal_threat; turn 10.
+- zoo-s42111-p2, seed 42111, seat 2: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 12.
+- zoo-s42112-p1, seed 42112, seat 1: low_hand_resources; turn 13.
+- zoo-s42112-p2, seed 42112, seat 2: low_hand_resources, visible_board_lethal_threat; turn 12.
+- zoo-s42113-p1, seed 42113, seat 1: low_hand_resources, visible_board_lethal_threat; turn 10.
+- zoo-s42113-p2, seed 42113, seat 2: low_hand_resources, visible_board_lethal_threat; turn 11.
+- zoo-s42114-p1, seed 42114, seat 1: low_hand_resources, visible_board_lethal_threat; turn 13.
+- zoo-s42114-p2, seed 42114, seat 2: low_hand_resources, visible_board_lethal_threat; turn 12.
+- zoo-s42115-p1, seed 42115, seat 1: low_hand_resources, visible_board_lethal_threat; turn 9.
+- zoo-s42115-p2, seed 42115, seat 2: visible_board_lethal_threat; turn 10.
+- zoo-s42116-p1, seed 42116, seat 1: low_hand_resources, visible_board_lethal_threat; turn 12.
+- zoo-s42116-p2, seed 42116, seat 2: visible_board_lethal_threat; turn 9.
+- zoo-s42117-p1, seed 42117, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 15.
+- zoo-s42118-p1, seed 42118, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- zoo-s42119-p2, seed 42119, seat 2: low_hand_resources, visible_board_lethal_threat; turn 12.
+- zoo-s42120-p1, seed 42120, seat 1: low_hand_resources, visible_board_lethal_threat; turn 15.
+- zoo-s42121-p1, seed 42121, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- zoo-s42122-p1, seed 42122, seat 1: visible_board_lethal_threat; turn 9.
+- zoo-s42123-p1, seed 42123, seat 1: race_or_board_loss; turn 8.
+- zoo-s42123-p2, seed 42123, seat 2: low_hand_resources, visible_board_lethal_threat; turn 11.
+- zoo-s42124-p1, seed 42124, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- zoo-s42124-p2, seed 42124, seat 2: low_hand_resources, visible_board_lethal_threat; turn 17.
+- zoo-s42125-p1, seed 42125, seat 1: low_hand_resources, visible_board_lethal_threat; turn 9.
+- zoo-s42125-p2, seed 42125, seat 2: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 10.
+- zoo-s42126-p1, seed 42126, seat 1: low_hand_resources, visible_board_lethal_threat; turn 9.
+- zoo-s42126-p2, seed 42126, seat 2: visible_board_lethal_threat; turn 8.
+- zoo-s42127-p1, seed 42127, seat 1: opposing_taunt, visible_board_lethal_threat; turn 12.
+- zoo-s42127-p2, seed 42127, seat 2: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 11.
+- zoo-s42128-p2, seed 42128, seat 2: low_hand_resources, visible_board_lethal_threat; turn 11.
+- zoo-s42129-p2, seed 42129, seat 2: low_hand_resources, visible_board_lethal_threat; turn 11.
+- zoo-s42130-p1, seed 42130, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- zoo-s42130-p2, seed 42130, seat 2: low_hand_resources; turn 13.
+- zoo-s42131-p1, seed 42131, seat 1: low_hand_resources; turn 12.
+- zoo-s42131-p2, seed 42131, seat 2: low_hand_resources, visible_board_lethal_threat; turn 9.
+- zoo-s42132-p1, seed 42132, seat 1: low_hand_resources, visible_board_lethal_threat; turn 12.
+- zoo-s42132-p2, seed 42132, seat 2: low_hand_resources, visible_board_lethal_threat; turn 13.
+- zoo-s42134-p1, seed 42134, seat 1: low_hand_resources, visible_board_lethal_threat; turn 13.
+- zoo-s42135-p2, seed 42135, seat 2: race_or_board_loss; turn 8.
+- zoo-s42136-p1, seed 42136, seat 1: low_hand_resources, visible_board_lethal_threat; turn 11.
+- zoo-s42136-p2, seed 42136, seat 2: low_hand_resources, visible_board_lethal_threat; turn 14.
+- zoo-s42137-p2, seed 42137, seat 2: visible_board_lethal_threat; turn 10.
+- zoo-s42140-p1, seed 42140, seat 1: visible_board_lethal_threat; turn 10.
+- zoo-s42140-p2, seed 42140, seat 2: low_hand_resources, visible_board_lethal_threat; turn 13.
+- zoo-s42141-p1, seed 42141, seat 1: low_hand_resources, visible_board_lethal_threat; turn 11.
+- zoo-s42141-p2, seed 42141, seat 2: visible_board_lethal_threat; turn 10.
+- zoo-s42142-p1, seed 42142, seat 1: low_hand_resources, visible_board_lethal_threat; turn 9.
+- zoo-s42142-p2, seed 42142, seat 2: visible_board_lethal_threat; turn 8.
+- zoo-s42143-p2, seed 42143, seat 2: low_hand_resources, visible_board_lethal_threat; turn 15.
+- zoo-s42144-p1, seed 42144, seat 1: low_hand_resources, visible_board_lethal_threat; turn 13.
+- zoo-s42145-p1, seed 42145, seat 1: visible_board_lethal_threat; turn 10.
+- zoo-s42146-p2, seed 42146, seat 2: low_hand_resources, visible_board_lethal_threat; turn 10.
+- zoo-s42147-p1, seed 42147, seat 1: low_hand_resources, visible_board_lethal_threat; turn 11.
+- zoo-s42147-p2, seed 42147, seat 2: low_hand_resources, visible_board_lethal_threat; turn 12.
+- zoo-s42148-p1, seed 42148, seat 1: low_hand_resources, visible_board_lethal_threat; turn 12.
+- zoo-s42149-p1, seed 42149, seat 1: low_hand_resources, visible_board_lethal_threat; turn 14.
+- zoo-s42149-p2, seed 42149, seat 2: low_hand_resources, visible_board_lethal_threat; turn 15.
+
+Concrete observations and selected actions are saved in failure-states.json; full official logs remain in games/.

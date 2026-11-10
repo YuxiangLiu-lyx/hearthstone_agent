@@ -28,8 +28,8 @@ OPPONENTS = {
 class HunterPlayer(Player):
     kind = "hunter-python"
 
-    def __init__(self, config):
-        super().__init__("hunter-"+config["version"], load_deck(ROOT / "face_hunter/deck.json"))
+    def __init__(self, config, deck_path=None):
+        super().__init__("hunter-"+config["version"], load_deck(deck_path or ROOT / "face_hunter/deck.json"))
         self.config = config
         self.history = []
 
@@ -63,8 +63,8 @@ class HunterPlayer(Player):
 
 def worker(task):
     sys.path.insert(0, str(ROOT / "face_hunter/scripts"))
-    config, name, seed, seat, output = task
-    hunter = HunterPlayer(config)
+    config, name, seed, seat, output, deck_path = task
+    hunter = HunterPlayer(config, deck_path)
     mage_deck = load_deck(ROOT / "hs-arena-0.2.2/decks/greedy_mage.json")
     if name == "greedy": opponent = GreedyBot("greedy", mage_deck)
     elif name == "random": opponent = RandomBot("random", mage_deck)
@@ -86,6 +86,7 @@ def main():
     p.add_argument("--opponents", default="greedy,paladin,zoo,priest")
     p.add_argument("--workers", type=int, default=4);p.add_argument("--holdout", action="store_true")
     p.add_argument("--change", default="Fixed-deck strategy comparison")
+    p.add_argument("--deck", default=str(ROOT/"face_hunter/deck.json"))
     args = p.parse_args()
     assert args.holdout == (args.start >= 100000), "Reserved holdout seeds require --holdout"
     out = Path(args.out);out.mkdir(parents=True, exist_ok=False)
@@ -93,13 +94,14 @@ def main():
     metadata = {"version":config["version"], "config":config, "transport":"official Python runner, no model",
                 "code_sha256":fingerprint(ROOT/"face_hunter"),
                 "git_commit":subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),
-                "deck":json.loads((ROOT/"face_hunter/deck.json").read_text()),
+                "deck":json.loads(Path(args.deck).read_text()), "deck_path":str(Path(args.deck).resolve()),
                 "seeds":list(range(args.start,args.start+args.seeds)),"seat_swap":True,
                 "holdout":args.holdout,"opponents":args.opponents.split(","),"change":args.change,
                 "next_hypothesis":"Inspect measured failure categories before choosing one further change.",
                 "opponent_fingerprints":{n:fingerprint(ROOT/OPPONENTS[n]) for n in args.opponents.split(",") if n in OPPONENTS}}
     (out/"config.json").write_text(json.dumps(metadata,indent=2)+"\n")
-    tasks = [(config,n,s,seat,str(out)) for n in args.opponents.split(",") for s in metadata["seeds"] for seat in (1,2)]
+    load_deck(args.deck)
+    tasks = [(config,n,s,seat,str(out),args.deck) for n in args.opponents.split(",") for s in metadata["seeds"] for seat in (1,2)]
     completed = 0
     with concurrent.futures.ProcessPoolExecutor(max_workers=args.workers) as pool:
         futures = [pool.submit(worker,t) for t in tasks]

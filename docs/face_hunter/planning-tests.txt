@@ -1,36 +1,37 @@
-test_bow_against_large_minion_has_no_poison_flag (__main__.BaselineTests.test_bow_against_large_minion_has_no_poison_flag) ... ok
-test_cli_reads_current_seq (__main__.BaselineTests.test_cli_reads_current_seq) ... ok
-test_exact_deck_and_submission (__main__.BaselineTests.test_exact_deck_and_submission) ... ok
-test_legal_targets_and_state_is_immutable (__main__.BaselineTests.test_legal_targets_and_state_is_immutable) ... ok
-test_mulligan_and_tracking_choice (__main__.BaselineTests.test_mulligan_and_tracking_choice) ... ok
-test_terminal_and_exception_recovery (__main__.BaselineTests.test_terminal_and_exception_recovery) ... policy fallback: ValueError: injected failure
+test_bow_against_large_minion_has_no_poison_flag (tests.test_face_hunter.BaselineTests.test_bow_against_large_minion_has_no_poison_flag) ... ok
+test_cli_reads_current_seq (tests.test_face_hunter.BaselineTests.test_cli_reads_current_seq) ... ok
+test_exact_deck_and_submission (tests.test_face_hunter.BaselineTests.test_exact_deck_and_submission) ... ok
+test_hard_watchdog_returns_legal_fallback (tests.test_face_hunter.BaselineTests.test_hard_watchdog_returns_legal_fallback) ... ok
+test_legal_targets_and_state_is_immutable (tests.test_face_hunter.BaselineTests.test_legal_targets_and_state_is_immutable) ... ok
+test_mulligan_and_tracking_choice (tests.test_face_hunter.BaselineTests.test_mulligan_and_tracking_choice) ... ok
+test_terminal_and_exception_recovery (tests.test_face_hunter.BaselineTests.test_terminal_and_exception_recovery) ... policy fallback: ValueError: injected failure
 ok
-test_01_minion_attack (__main__.LethalTests.test_01_minion_attack) ... ok
-test_02_hero_power_finisher (__main__.LethalTests.test_02_hero_power_finisher) ... ok
-test_03_beast_before_kill_command (__main__.LethalTests.test_03_beast_before_kill_command) ... ok
-test_04_one_wolf_unleash (__main__.LethalTests.test_04_one_wolf_unleash) ... ok
-test_05_two_wolves_unleash (__main__.LethalTests.test_05_two_wolves_unleash) ... ok
-test_06_board_space_limits_hounds (__main__.LethalTests.test_06_board_space_limits_hounds) ... ok
-test_07_taunt_blocks_face (__main__.LethalTests.test_07_taunt_blocks_face) ... ok
-test_08_armor (__main__.LethalTests.test_08_armor) ... ok
-test_09_coin (__main__.LethalTests.test_09_coin) ... ok
-test_10_random_companion_is_not_guaranteed (__main__.LethalTests.test_10_random_companion_is_not_guaranteed) ... ok
-test_11_dead_wolf_removes_aura (__main__.LethalTests.test_11_dead_wolf_removes_aura) ... ok
-test_12_order_preserves_last_beast (__main__.LethalTests.test_12_order_preserves_last_beast) ... ok
-test_hyena_gains_attack_from_beast_death (__main__.LethalTests.test_hyena_gains_attack_from_beast_death) ... ok
-test_new_bow_uses_only_observed_unused_attack (__main__.LethalTests.test_new_bow_uses_only_observed_unused_attack) ... ok
-test_one_step_differential (__main__.LethalTests.test_one_step_differential) ... ok
-test_search_avoids_baseline_development_over_lethal (__main__.LethalTests.test_search_avoids_baseline_development_over_lethal) ... ok
-test_unknown_secrets_abstain_and_budget (__main__.LethalTests.test_unknown_secrets_abstain_and_budget) ... ok
-test_weapon_burn_and_hero_power (__main__.LethalTests.test_weapon_burn_and_hero_power) ... ok
-test_banked_kill_command_and_power (__main__.TwoTurnRiskTests.test_banked_kill_command_and_power) ... ok
-test_comeback_requires_a_real_random_win_branch (__main__.TwoTurnRiskTests.test_comeback_requires_a_real_random_win_branch) ... ok
-test_hero_power_lethal_precedes_gambling (__main__.TwoTurnRiskTests.test_hero_power_lethal_precedes_gambling) ... ok
-test_saved_wolf_unleash_is_in_next_turn_estimate (__main__.TwoTurnRiskTests.test_saved_wolf_unleash_is_in_next_turn_estimate) ... ok
-test_survival_trade_when_face_is_fatal (__main__.TwoTurnRiskTests.test_survival_trade_when_face_is_fatal) ... ok
-test_two_health_next_turn_power (__main__.TwoTurnRiskTests.test_two_health_next_turn_power) ... ok
+test_01_minion_attack (tests.test_face_hunter.LethalTests.test_01_minion_attack) ... ok
+test_02_hero_power_finisher (tests.test_face_hunter.LethalTests.test_02_hero_power_finisher) ... ok
+test_03_beast_before_kill_command (tests.test_face_hunter.LethalTests.test_03_beast_before_kill_command) ... ok
+test_04_one_wolf_unleash (tests.test_face_hunter.LethalTests.test_04_one_wolf_unleash) ... ok
+test_05_two_wolves_unleash (tests.test_face_hunter.LethalTests.test_05_two_wolves_unleash) ... ok
+test_06_board_space_limits_hounds (tests.test_face_hunter.LethalTests.test_06_board_space_limits_hounds) ... ok
+test_07_taunt_blocks_face (tests.test_face_hunter.LethalTests.test_07_taunt_blocks_face) ... ok
+test_08_armor (tests.test_face_hunter.LethalTests.test_08_armor) ... ok
+test_09_coin (tests.test_face_hunter.LethalTests.test_09_coin) ... ok
+test_10_random_companion_is_not_guaranteed (tests.test_face_hunter.LethalTests.test_10_random_companion_is_not_guaranteed) ... ok
+test_11_dead_wolf_removes_aura (tests.test_face_hunter.LethalTests.test_11_dead_wolf_removes_aura) ... ok
+test_12_order_preserves_last_beast (tests.test_face_hunter.LethalTests.test_12_order_preserves_last_beast) ... ok
+test_hyena_gains_attack_from_beast_death (tests.test_face_hunter.LethalTests.test_hyena_gains_attack_from_beast_death) ... ok
+test_new_bow_uses_only_observed_unused_attack (tests.test_face_hunter.LethalTests.test_new_bow_uses_only_observed_unused_attack) ... ok
+test_one_step_differential (tests.test_face_hunter.LethalTests.test_one_step_differential) ... ok
+test_search_avoids_baseline_development_over_lethal (tests.test_face_hunter.LethalTests.test_search_avoids_baseline_development_over_lethal) ... ok
+test_unknown_secrets_abstain_and_budget (tests.test_face_hunter.LethalTests.test_unknown_secrets_abstain_and_budget) ... ok
+test_weapon_burn_and_hero_power (tests.test_face_hunter.LethalTests.test_weapon_burn_and_hero_power) ... ok
+test_banked_kill_command_and_power (tests.test_face_hunter.TwoTurnRiskTests.test_banked_kill_command_and_power) ... ok
+test_comeback_requires_a_real_random_win_branch (tests.test_face_hunter.TwoTurnRiskTests.test_comeback_requires_a_real_random_win_branch) ... ok
+test_hero_power_lethal_precedes_gambling (tests.test_face_hunter.TwoTurnRiskTests.test_hero_power_lethal_precedes_gambling) ... ok
+test_saved_wolf_unleash_is_in_next_turn_estimate (tests.test_face_hunter.TwoTurnRiskTests.test_saved_wolf_unleash_is_in_next_turn_estimate) ... ok
+test_survival_trade_when_face_is_fatal (tests.test_face_hunter.TwoTurnRiskTests.test_survival_trade_when_face_is_fatal) ... ok
+test_two_health_next_turn_power (tests.test_face_hunter.TwoTurnRiskTests.test_two_health_next_turn_power) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 3.763s
+Ran 31 tests in 3.471s
 
 OK
