@@ -1,0 +1,110 @@
+{
+  "version": "v0",
+  "attempted": 3,
+  "games": 3,
+  "wins": 1,
+  "win_rate": 0.3333333333333333,
+  "wilson95": [
+    0.0614903152761605,
+    0.7923450448735121
+  ],
+  "mean_turns": 13.333333333333334,
+  "mean_hero_damage": 22.666666666666668,
+  "hero_damage_definition": "Damage events to the opposing hero with an observed friendly source, including armor damage and overkill.",
+  "illegal": 0,
+  "timeouts": 0,
+  "early_exits": 0,
+  "void_or_aborted": 0,
+  "missed_lethals": null,
+  "lethal_audit_status": "Not audited; no zero-miss claim.",
+  "decision_s_mean": null,
+  "decision_s_max": null,
+  "failure_signals": {
+    "low_hand_resources": 2,
+    "visible_board_lethal_threat": 1
+  },
+  "by_opponent": {
+    "greedy": {
+      "games": 3,
+      "wins": 1
+    }
+  },
+  "by_first": {
+    "True": {
+      "games": 2,
+      "wins": 0
+    },
+    "False": {
+      "games": 1,
+      "wins": 1
+    }
+  },
+  "results": [
+    {
+      "game_id": "g_20261110_000001",
+      "seed": 42003,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 21,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "deck_submission": 1,
+        "mulligan": 1,
+        "main": 26,
+        "game_over": 1
+      },
+      "replay": "experiments/face-hunter-v0-greedy/games/g_20261110_000001/replay.jsonl"
+    },
+    {
+      "game_id": "g_20261110_000002",
+      "seed": 42004,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 12,
+      "hero_damage": 16,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "deck_submission": 1,
+        "mulligan": 1,
+        "main": 24,
+        "game_over": 1
+      },
+      "replay": "experiments/face-hunter-v0-greedy/games/g_20261110_000002/replay.jsonl"
+    },
+    {
+      "game_id": "g_20261110_000003",
+      "seed": 42005,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "deck_submission": 1,
+        "mulligan": 1,
+        "main": 30,
+        "game_over": 1
+      },
+      "replay": "experiments/face-hunter-v0-greedy/games/g_20261110_000003/replay.jsonl"
+    }
+  ]
+}

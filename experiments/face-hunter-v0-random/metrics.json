@@ -1,0 +1,107 @@
+{
+  "version": "v0",
+  "attempted": 3,
+  "games": 3,
+  "wins": 3,
+  "win_rate": 1.0,
+  "wilson95": [
+    0.43849391955098227,
+    1.0
+  ],
+  "mean_turns": 15,
+  "mean_hero_damage": 35,
+  "hero_damage_definition": "Damage events to the opposing hero with an observed friendly source, including armor damage and overkill.",
+  "illegal": 0,
+  "timeouts": 0,
+  "early_exits": 0,
+  "void_or_aborted": 0,
+  "missed_lethals": null,
+  "lethal_audit_status": "Not audited; no zero-miss claim.",
+  "decision_s_mean": null,
+  "decision_s_max": null,
+  "failure_signals": {},
+  "by_opponent": {
+    "random": {
+      "games": 3,
+      "wins": 3
+    }
+  },
+  "by_first": {
+    "True": {
+      "games": 2,
+      "wins": 2
+    },
+    "False": {
+      "games": 1,
+      "wins": 1
+    }
+  },
+  "results": [
+    {
+      "game_id": "g_20261110_000001",
+      "seed": 42000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "random",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 33,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "deck_submission": 1,
+        "mulligan": 1,
+        "main": 37,
+        "game_over": 1
+      },
+      "replay": "experiments/face-hunter-v0-random/games/g_20261110_000001/replay.jsonl"
+    },
+    {
+      "game_id": "g_20261110_000002",
+      "seed": 42001,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "random",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 11,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "deck_submission": 1,
+        "mulligan": 1,
+        "main": 24,
+        "game_over": 1
+      },
+      "replay": "experiments/face-hunter-v0-random/games/g_20261110_000002/replay.jsonl"
+    },
+    {
+      "game_id": "g_20261110_000003",
+      "seed": 42002,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "random",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "deck_submission": 1,
+        "mulligan": 1,
+        "main": 31,
+        "game_over": 1
+      },
+      "replay": "experiments/face-hunter-v0-random/games/g_20261110_000003/replay.jsonl"
+    }
+  ]
+}
