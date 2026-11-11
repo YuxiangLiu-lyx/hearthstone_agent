@@ -1,5 +1,5 @@
 """Public-policy terminal continuations with explicit conditional-randomness limits."""
-import copy,json,sys,time,traceback
+import argparse,copy,json,sys,time,traceback
 from concurrent.futures import ProcessPoolExecutor,as_completed
 from development.secret_hunter_program.common import ROOT,readlines,write
 from development.secret_hunter_next.accounting import reserve,finish
@@ -11,6 +11,8 @@ def worker(task):
  sys.path.insert(0,str(C/'scripts'))
  from hs_arena.engine import Engine
  from hs_arena.deck import load_deck
+ from hs_arena.runner import build_state
+ from hs_arena.protocol import Config
  from development.secret_hunter_tactics.run import opponent
  from program_policy import decide
  from secret_policy import rank
@@ -47,7 +49,7 @@ def worker(task):
        assert b.step(seat,action).accepted
        steps=0
        while not b.over and steps<600:
-        p,_=b.pending();public=b.view(p)
+        p,_=b.pending();public=build_state(b,'counterfactual',p,steps+1,None,Config(max_turns=180))
         if p==seat:
          history=[ev.view(seat) for ev in b.events if ev.view(seat) is not None]
          public=with_public_history(public,history);a,inf=decide(public,cfg)
@@ -65,14 +67,15 @@ def worker(task):
  return {'game':row['game'],'skipped':'no early supported three-action state'}
 
 def main():
+ parser=argparse.ArgumentParser();parser.add_argument('--name',default='counterfactual-v2');parser.add_argument('--limit',type=int,default=24);args=parser.parse_args()
  rows=readlines(SRC/'results.jsonl');specs={s['name']:s for s in json.loads((SRC/'config.json').read_text())['population']}
  losses=sorted([r for r in rows if not r['score']],key=lambda r:(r['opponent'],r['seed'],r['seat']));wins=sorted([r for r in rows if r['score']],key=lambda r:(r['opponent'],r['seed'],r['seat']))
- selected=losses[:16]+wins[:8];reserve('counterfactual-v1',full=len(selected)*18,short=1000)
- dest=ROOT/'docs/secret_hunter_next/counterfactual.jsonl';out=[]
+ selected=(losses[:16]+wins[:8])[:args.limit];reserve(args.name,full=len(selected)*18,short=1000)
+ dest=ROOT/'docs/secret_hunter_next'/f'{args.name}.jsonl';out=[]
  with ProcessPoolExecutor(max_workers=6) as pool,dest.open('w') as f:
   fs=[pool.submit(worker,(r,specs[r['opponent']],i)) for i,r in enumerate(selected)]
   for future in as_completed(fs):
    result=future.result();out.append(result);f.write(json.dumps(result)+'\n');f.flush();print('cases',len(out),len(selected),flush=True)
- actual=sum(len(a['outcomes']) for c in out for a in c.get('alternatives',[]));finish('counterfactual-v1',actual_full=actual,cases=len(out))
+ actual=sum(len(a['outcomes']) for c in out for a in c.get('alternatives',[]));finish(args.name,actual_full=actual,cases=len(out),errors=sum(bool(o['error']) for c in out for a in c.get('alternatives',[]) for o in a['outcomes']))
  print(json.dumps({'cases':len(out),'full_rollouts':actual,'skipped':sum('skipped' in x for x in out)}))
 if __name__=='__main__':main()

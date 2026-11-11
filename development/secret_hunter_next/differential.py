@@ -1,8 +1,9 @@
 """Recorded development prefixes and short official-engine action branches."""
-import copy,json,sys
+import argparse,copy,json,sys
 from development.secret_hunter_program.common import ROOT,write,readlines
 from development.secret_hunter_next.accounting import reserve,finish
-sys.path.insert(0,str(ROOT/'development/secret_hunter_next/candidates/M1/scripts'))
+parser=argparse.ArgumentParser();parser.add_argument('--candidate',default='M1');args=parser.parse_args()
+sys.path.insert(0,str(ROOT/'development/secret_hunter_next/candidates'/args.candidate/'scripts'))
 from hs_arena.engine import Engine
 from hs_arena.deck import load_deck
 import tactical_model as m
@@ -16,7 +17,8 @@ def project(s):
  return out
 
 def main():
- reserve('development-differential',full=40,short=1200)
+ name='development-differential-'+args.candidate
+ reserve(name,full=40,short=1200)
  src=ROOT/'experiments/secret-hunter-next-d1-screen';specs={x['name']:x for x in json.loads((src/'config.json').read_text())['population']};cases=[];prefixes=0;terminal=0
  rows=sorted(readlines(src/'results.jsonl'),key=lambda r:(r['score'],r['opponent'],r['seed'],r['seat']))[:16]
  for row in rows:
@@ -48,6 +50,6 @@ def main():
    if idx[who]+1==len(obs[who]) and z['state'].get('phase')=='game_over':break
    assert e.step(who,z['action']).accepted;terminal+=int(e.over);idx[who]+=1;prefixes+=1
  report={'n':len(cases),'matches':sum(c['equal'] for c in cases),'terminal_attempts':terminal,'prefix_actions':prefixes,'cases':cases}
- write(ROOT/'docs/secret_hunter_next/development-differential.json',report);finish('development-differential',actual_short=len(cases),actual_full=terminal)
+ write(ROOT/'docs/secret_hunter_next'/f'{name}.json',report);finish(name,actual_short=len(cases),actual_full=terminal)
  print(json.dumps({k:v for k,v in report.items() if k!='cases'}));print(json.dumps([c for c in cases if not c['equal']])[:10000])
 if __name__=='__main__':main()

@@ -1,0 +1,71 @@
+{
+  "features": [
+    "health_reserve",
+    "enemy_health",
+    "own_material",
+    "enemy_material",
+    "own_engines",
+    "enemy_generators",
+    "hand",
+    "secrets",
+    "beasts",
+    "enemy_taunts"
+  ],
+  "coefficients": [
+    0.2321103464372898,
+    -0.000449828480026805,
+    -0.1704746093177265,
+    -0.3160567630449055,
+    -0.7140395843249109,
+    -0.374412761747205,
+    -0.04305998548292908,
+    -0.27848707699307607,
+    -0.21839910178151223,
+    0.10706470489774603
+  ],
+  "training_games": [
+    "e962708fc06c412f",
+    "bce07602289c45ab",
+    "b8ef0b10f69945f6",
+    "6fdcb947eba14894",
+    "5abfcceb2ba741de",
+    "d83fc260c0bb4cdd",
+    "83ecc3fb8aba43b2",
+    "63441575d72948c3",
+    "a589252928ad4f6c",
+    "67fd53b4c6714cc9",
+    "9f8f9796520a4ea3",
+    "be27a878821b4822",
+    "1ddb194b5c0d4360",
+    "029d274599a54e26",
+    "fec3d247ff1c46c5",
+    "f892f920b8e24c45",
+    "5292c326327e41b8",
+    "a7521297ec2c421b"
+  ],
+  "validation_games": [
+    "c4f499dc143a4be3",
+    "6e79bb710c1746cc",
+    "caa7ec6013d1432e",
+    "22772b68d4be48e5",
+    "f4bfc7d75e5a4832",
+    "6940d469dfe04724"
+  ],
+  "metrics": {
+    "train": {
+      "pairs": 54,
+      "informative_pairs": 31,
+      "mse": 4.018305573101476,
+      "zero_model_mse": 4.444444444444445,
+      "direction_accuracy": 0.7096774193548387
+    },
+    "validation": {
+      "pairs": 18,
+      "informative_pairs": 8,
+      "mse": 3.6937066770303244,
+      "zero_model_mse": 3.111111111111111,
+      "direction_accuracy": 0.625
+    }
+  },
+  "scope": "24 selected development games, six conditional future samples per action, not an estimate over unknown hands; no final block used. Fixed ridge and learning rate. No learned model is eligible for the submission because the current assignment forbids bundled model weights."
+}

@@ -1,0 +1,108 @@
+{
+  "baseline": "experiments/secret-hunter-next-d1-screen",
+  "candidate": "experiments/secret-hunter-next-m1-screen",
+  "all": {
+    "n_per_arm": 120,
+    "seed_clusters": 10,
+    "a_wins": 101,
+    "b_wins": 105,
+    "a_rate": 0.8416666666666667,
+    "b_rate": 0.875,
+    "gain": 0.033333333333333326,
+    "gain_seed_cluster_95": [
+      -1.1102230246251566e-17,
+      0.06666666666666668
+    ],
+    "a_only_wins": 1,
+    "b_only_wins": 5,
+    "weighting": "equal games",
+    "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+  },
+  "by_group": {
+    "astra": {
+      "n_per_arm": 60,
+      "seed_clusters": 10,
+      "a_wins": 45,
+      "b_wins": 49,
+      "a_rate": 0.75,
+      "b_rate": 0.8166666666666667,
+      "gain": 0.06666666666666665,
+      "gain_seed_cluster_95": [
+        -2.7755575615628914e-17,
+        0.13333333333333333
+      ],
+      "a_only_wins": 1,
+      "b_only_wins": 5,
+      "weighting": "equal games",
+      "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+    },
+    "bot1": {
+      "n_per_arm": 20,
+      "seed_clusters": 10,
+      "a_wins": 18,
+      "b_wins": 18,
+      "a_rate": 0.9,
+      "b_rate": 0.9,
+      "gain": 0.0,
+      "gain_seed_cluster_95": [
+        0.0,
+        0.0
+      ],
+      "a_only_wins": 0,
+      "b_only_wins": 0,
+      "weighting": "equal games",
+      "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+    },
+    "bot2": {
+      "n_per_arm": 40,
+      "seed_clusters": 10,
+      "a_wins": 38,
+      "b_wins": 38,
+      "a_rate": 0.95,
+      "b_rate": 0.95,
+      "gain": 0.0,
+      "gain_seed_cluster_95": [
+        0.0,
+        0.0
+      ],
+      "a_only_wins": 0,
+      "b_only_wins": 0,
+      "weighting": "equal games",
+      "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+    }
+  },
+  "hard_family_macro": {
+    "n_per_arm": 100,
+    "seed_clusters": 10,
+    "a_wins": 83,
+    "b_wins": 87,
+    "a_rate": 0.85,
+    "b_rate": 0.8833333333333333,
+    "gain": 0.033333333333333326,
+    "gain_seed_cluster_95": [
+      -5.551115123125783e-17,
+      0.06666666666666664
+    ],
+    "a_only_wins": 1,
+    "b_only_wins": 5,
+    "weighting": "equal family macro",
+    "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+  },
+  "teacher_family_macro": {
+    "n_per_arm": 120,
+    "seed_clusters": 10,
+    "a_wins": 101,
+    "b_wins": 105,
+    "a_rate": 0.8666666666666667,
+    "b_rate": 0.8888888888888888,
+    "gain": 0.022222222222222143,
+    "gain_seed_cluster_95": [
+      0.0,
+      0.04444444444444447
+    ],
+    "a_only_wins": 1,
+    "b_only_wins": 5,
+    "weighting": "equal family macro",
+    "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+  }
+}
