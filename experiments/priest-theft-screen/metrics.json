@@ -1,0 +1,864 @@
+{
+  "version": "Control deck with Shadow Madness and Faceless value",
+  "attempted": 40,
+  "games": 40,
+  "wins": 37,
+  "win_rate": 0.925,
+  "wilson95": [
+    0.8013546984090248,
+    0.9741644432281419
+  ],
+  "mean_turns": 21.6,
+  "mean_hero_damage": 31.125,
+  "hero_damage_definition": "Damage events to the opposing hero with an observed friendly source, including armor damage and overkill.",
+  "illegal": 0,
+  "timeouts": 0,
+  "early_exits": 0,
+  "void_or_aborted": 0,
+  "policy_errors": 0,
+  "decision_modes": {},
+  "cli_fallbacks": 0,
+  "missed_lethals": null,
+  "lethal_audit_status": "Not audited; no zero-miss claim.",
+  "decision_s_mean": 9.330493849408995e-05,
+  "decision_s_max": 0.00037441588938236237,
+  "failure_signals": {
+    "race_or_board_loss": 1,
+    "low_hand_resources": 2,
+    "visible_board_lethal_threat": 1
+  },
+  "by_opponent": {
+    "greedy": {
+      "games": 8,
+      "wins": 8
+    },
+    "hunter-v3": {
+      "games": 8,
+      "wins": 7
+    },
+    "paladin": {
+      "games": 8,
+      "wins": 7
+    },
+    "priest": {
+      "games": 8,
+      "wins": 7
+    },
+    "zoo": {
+      "games": 8,
+      "wins": 8
+    }
+  },
+  "by_first": {
+    "True": {
+      "games": 20,
+      "wins": 17
+    },
+    "False": {
+      "games": 20,
+      "wins": 20
+    }
+  },
+  "results": [
+    {
+      "game_id": "greedy-s51000-p1",
+      "seed": 51000,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 35,
+      "hero_damage": 33,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 69
+      },
+      "replay": "experiments/priest-theft-screen/games/greedy-s51000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s51000-p2",
+      "seed": 51000,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 48
+      },
+      "replay": "experiments/priest-theft-screen/games/greedy-s51000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s51001-p1",
+      "seed": 51001,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 28,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 52
+      },
+      "replay": "experiments/priest-theft-screen/games/greedy-s51001-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s51001-p2",
+      "seed": 51001,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 28
+      },
+      "replay": "experiments/priest-theft-screen/games/greedy-s51001-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s51002-p1",
+      "seed": 51002,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 25
+      },
+      "replay": "experiments/priest-theft-screen/games/greedy-s51002-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s51002-p2",
+      "seed": 51002,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 29
+      },
+      "replay": "experiments/priest-theft-screen/games/greedy-s51002-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s51003-p1",
+      "seed": 51003,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 45
+      },
+      "replay": "experiments/priest-theft-screen/games/greedy-s51003-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s51003-p2",
+      "seed": 51003,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 39,
+      "hero_damage": 33,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 77
+      },
+      "replay": "experiments/priest-theft-screen/games/greedy-s51003-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s51000-p1",
+      "seed": 51000,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 2,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 23
+      },
+      "replay": "experiments/priest-theft-screen/games/hunter-s51000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s51000-p2",
+      "seed": 51000,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 12,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 25
+      },
+      "replay": "experiments/priest-theft-screen/games/hunter-s51000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s51001-p1",
+      "seed": 51001,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/priest-theft-screen/games/hunter-s51001-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s51001-p2",
+      "seed": 51001,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 30
+      },
+      "replay": "experiments/priest-theft-screen/games/hunter-s51001-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s51002-p1",
+      "seed": 51002,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/priest-theft-screen/games/hunter-s51002-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s51002-p2",
+      "seed": 51002,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 32
+      },
+      "replay": "experiments/priest-theft-screen/games/hunter-s51002-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s51003-p1",
+      "seed": 51003,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 42
+      },
+      "replay": "experiments/priest-theft-screen/games/hunter-s51003-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s51003-p2",
+      "seed": 51003,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 37
+      },
+      "replay": "experiments/priest-theft-screen/games/hunter-s51003-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s51000-p1",
+      "seed": 51000,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 31,
+      "hero_damage": 38,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 73
+      },
+      "replay": "experiments/priest-theft-screen/games/paladin-s51000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s51000-p2",
+      "seed": 51000,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 40
+      },
+      "replay": "experiments/priest-theft-screen/games/paladin-s51000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s51001-p1",
+      "seed": 51001,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 41,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 44
+      },
+      "replay": "experiments/priest-theft-screen/games/paladin-s51001-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s51001-p2",
+      "seed": 51001,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 43,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 44
+      },
+      "replay": "experiments/priest-theft-screen/games/paladin-s51001-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s51002-p1",
+      "seed": 51002,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 38,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 42
+      },
+      "replay": "experiments/priest-theft-screen/games/paladin-s51002-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s51002-p2",
+      "seed": 51002,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 40,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-theft-screen/games/paladin-s51002-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s51003-p1",
+      "seed": 51003,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 43,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 45
+      },
+      "replay": "experiments/priest-theft-screen/games/paladin-s51003-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s51003-p2",
+      "seed": 51003,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 28,
+      "hero_damage": 4,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 54
+      },
+      "replay": "experiments/priest-theft-screen/games/paladin-s51003-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s51000-p1",
+      "seed": 51000,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 33,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 46
+      },
+      "replay": "experiments/priest-theft-screen/games/priest-s51000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s51000-p2",
+      "seed": 51000,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 38,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 47
+      },
+      "replay": "experiments/priest-theft-screen/games/priest-s51000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s51001-p1",
+      "seed": 51001,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 46,
+      "hero_damage": 62,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 94
+      },
+      "replay": "experiments/priest-theft-screen/games/priest-s51001-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s51001-p2",
+      "seed": 51001,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/priest-theft-screen/games/priest-s51001-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s51002-p1",
+      "seed": 51002,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 39,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-theft-screen/games/priest-s51002-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s51002-p2",
+      "seed": 51002,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 38,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 47
+      },
+      "replay": "experiments/priest-theft-screen/games/priest-s51002-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s51003-p1",
+      "seed": 51003,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 28,
+      "hero_damage": 48,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 57
+      },
+      "replay": "experiments/priest-theft-screen/games/priest-s51003-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s51003-p2",
+      "seed": 51003,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 30,
+      "hero_damage": 14,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 60
+      },
+      "replay": "experiments/priest-theft-screen/games/priest-s51003-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s51000-p1",
+      "seed": 51000,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 25,
+      "hero_damage": 18,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 49
+      },
+      "replay": "experiments/priest-theft-screen/games/zoo-s51000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s51000-p2",
+      "seed": 51000,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 25,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 37
+      },
+      "replay": "experiments/priest-theft-screen/games/zoo-s51000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s51001-p1",
+      "seed": 51001,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 25,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 32
+      },
+      "replay": "experiments/priest-theft-screen/games/zoo-s51001-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s51001-p2",
+      "seed": 51001,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 24,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/priest-theft-screen/games/zoo-s51001-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s51002-p1",
+      "seed": 51002,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 23,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 27
+      },
+      "replay": "experiments/priest-theft-screen/games/zoo-s51002-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s51002-p2",
+      "seed": 51002,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 24,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 28
+      },
+      "replay": "experiments/priest-theft-screen/games/zoo-s51002-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s51003-p1",
+      "seed": 51003,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 26,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-theft-screen/games/zoo-s51003-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s51003-p2",
+      "seed": 51003,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 26,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 56
+      },
+      "replay": "experiments/priest-theft-screen/games/zoo-s51003-p2/replay.jsonl"
+    }
+  ]
+}

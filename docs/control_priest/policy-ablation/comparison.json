@@ -1,0 +1,54 @@
+{
+  "arms": {
+    "GenericTheft": {
+      "sources": [
+        "experiments/priest-generic-theft-train"
+      ],
+      "wins": 114,
+      "games": 240,
+      "win_rate": 0.475,
+      "wilson95": [
+        0.41271267669999606,
+        0.5380750477900005
+      ],
+      "mean_turns": 22.4625,
+      "mean_hero_damage": 20.770833333333332,
+      "policy_errors": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exits": 0
+    },
+    "SpecialistTheft": {
+      "sources": [
+        "experiments/priest-theft-screen",
+        "experiments/priest-theft-train"
+      ],
+      "wins": 185,
+      "games": 240,
+      "win_rate": 0.7708333333333334,
+      "wilson95": [
+        0.7136398864226179,
+        0.8194930982690836
+      ],
+      "mean_turns": 21.7625,
+      "mean_hero_damage": 27.3125,
+      "policy_errors": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exits": 0
+    }
+  },
+  "comparisons": {
+    "SpecialistTheft-GenericTheft": {
+      "paired_games": 240,
+      "seed_clusters": 24,
+      "delta": 0.29583333333333334,
+      "cluster_bootstrap95": [
+        0.19583333333333333,
+        0.4
+      ],
+      "gains": 81,
+      "losses": 10
+    }
+  }
+}

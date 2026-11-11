@@ -1,0 +1,148 @@
+{
+  "arms": {
+    "Copy": {
+      "sources": [
+        "experiments/priest-v0-screen",
+        "experiments/priest-v0-train"
+      ],
+      "wins": 124,
+      "games": 240,
+      "win_rate": 0.5166666666666667,
+      "wilson95": [
+        0.45367997248566677,
+        0.5791282111876689
+      ],
+      "mean_turns": 22.183333333333334,
+      "mean_hero_damage": 23.466666666666665,
+      "policy_errors": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exits": 0
+    },
+    "Policy": {
+      "sources": [
+        "experiments/priest-v1-screen",
+        "experiments/priest-v1-train"
+      ],
+      "wins": 133,
+      "games": 240,
+      "win_rate": 0.5541666666666667,
+      "wilson95": [
+        0.49091837418388323,
+        0.6157082227544571
+      ],
+      "mean_turns": 21.425,
+      "mean_hero_damage": 23.504166666666666,
+      "policy_errors": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exits": 0
+    },
+    "Synergy": {
+      "sources": [
+        "experiments/priest-synergy-screen",
+        "experiments/priest-synergy-train"
+      ],
+      "wins": 178,
+      "games": 240,
+      "win_rate": 0.7416666666666667,
+      "wilson95": [
+        0.6827865408610609,
+        0.7929321224023036
+      ],
+      "mean_turns": 21.604166666666668,
+      "mean_hero_damage": 27.325,
+      "policy_errors": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exits": 0
+    },
+    "Theft": {
+      "sources": [
+        "experiments/priest-theft-screen",
+        "experiments/priest-theft-train"
+      ],
+      "wins": 185,
+      "games": 240,
+      "win_rate": 0.7708333333333334,
+      "wilson95": [
+        0.7136398864226179,
+        0.8194930982690836
+      ],
+      "mean_turns": 21.7625,
+      "mean_hero_damage": 27.3125,
+      "policy_errors": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exits": 0
+    }
+  },
+  "comparisons": {
+    "Policy-Copy": {
+      "paired_games": 240,
+      "seed_clusters": 24,
+      "delta": 0.0375,
+      "cluster_bootstrap95": [
+        -0.025,
+        0.1
+      ],
+      "gains": 31,
+      "losses": 22
+    },
+    "Synergy-Copy": {
+      "paired_games": 240,
+      "seed_clusters": 24,
+      "delta": 0.225,
+      "cluster_bootstrap95": [
+        0.14166666666666666,
+        0.30416666666666664
+      ],
+      "gains": 74,
+      "losses": 20
+    },
+    "Synergy-Policy": {
+      "paired_games": 240,
+      "seed_clusters": 24,
+      "delta": 0.1875,
+      "cluster_bootstrap95": [
+        0.09583333333333333,
+        0.2833333333333333
+      ],
+      "gains": 75,
+      "losses": 30
+    },
+    "Theft-Copy": {
+      "paired_games": 240,
+      "seed_clusters": 24,
+      "delta": 0.25416666666666665,
+      "cluster_bootstrap95": [
+        0.16666666666666669,
+        0.3375
+      ],
+      "gains": 83,
+      "losses": 22
+    },
+    "Theft-Policy": {
+      "paired_games": 240,
+      "seed_clusters": 24,
+      "delta": 0.21666666666666667,
+      "cluster_bootstrap95": [
+        0.12916666666666665,
+        0.30416666666666664
+      ],
+      "gains": 75,
+      "losses": 23
+    },
+    "Theft-Synergy": {
+      "paired_games": 240,
+      "seed_clusters": 24,
+      "delta": 0.02916666666666667,
+      "cluster_bootstrap95": [
+        -0.07083333333333333,
+        0.13333333333333333
+      ],
+      "gains": 44,
+      "losses": 37
+    }
+  }
+}
