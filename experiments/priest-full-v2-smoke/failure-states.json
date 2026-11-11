@@ -1,0 +1,875 @@
+[
+  {
+    "game_id": "adversarial-priest-v1-s53000-p1",
+    "seed": 53000,
+    "candidate_seat": 1,
+    "candidate_first": false,
+    "opponent": "adversarial-priest-v1",
+    "winner": 2,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 27,
+    "hero_damage": 14,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 44
+    },
+    "replay": "experiments/priest-full-v2-smoke/games/adversarial-priest-v1-s53000-p1/replay.jsonl",
+    "signals": [
+      "low_hand_resources",
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "adversarial-priest-v1-s53000-p1",
+      "seq": 45,
+      "player": 1,
+      "turn": 26,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794358082.586,
+      "you": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_09",
+          "name": "Anduin Wrynn",
+          "hero_class": "PRIEST",
+          "health": 7,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_09bp",
+          "name": "Lesser Heal",
+          "cost": 2,
+          "usable": false,
+          "text": "Restore 2 Health."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 10,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 34,
+            "card_id": "EX1_334",
+            "name": "Shadow Madness",
+            "type": "SPELL",
+            "cost": 3,
+            "text": "Gain control of an enemy minion with 3 or less Attack until end of turn.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 33,
+            "card_id": "EX1_032",
+            "name": "Sunwalker",
+            "attack": 4,
+            "health": 5,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": true,
+            "divine_shield": true,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Taunt Divine Shield"
+          },
+          {
+            "entity_id": 21,
+            "card_id": "EX1_623",
+            "name": "Temple Enforcer",
+            "attack": 5,
+            "health": 2,
+            "max_health": 6,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Give a friendly minion +3 Health."
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 13,
+        "deck_remaining_counts": {
+          "CS2_179": 1,
+          "CS2_234": 1,
+          "EX1_066": 1,
+          "EX1_093": 1,
+          "EX1_110": 1,
+          "EX1_195": 2,
+          "EX1_196": 1,
+          "EX1_198": 1,
+          "EX1_339": 2,
+          "EX1_622": 2
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_091",
+            "name": "Cabal Shadow Priest"
+          },
+          {
+            "card_id": "EX1_623",
+            "name": "Temple Enforcer"
+          },
+          {
+            "card_id": "EX1_091",
+            "name": "Cabal Shadow Priest"
+          },
+          {
+            "card_id": "EX1_093",
+            "name": "Defender of Argus"
+          },
+          {
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta"
+          },
+          {
+            "card_id": "skele21",
+            "name": "Damaged Golem"
+          },
+          {
+            "card_id": "EX1_556",
+            "name": "Harvest Golem"
+          },
+          {
+            "card_id": "EX1_196",
+            "name": "Scarlet Subjugator"
+          },
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          },
+          {
+            "card_id": "CS2_004",
+            "name": "Power Word: Shield"
+          },
+          {
+            "card_id": "CS1_112",
+            "name": "Holy Nova"
+          },
+          {
+            "card_id": "CS1_112",
+            "name": "Holy Nova"
+          },
+          {
+            "card_id": "CS1_113",
+            "name": "Mind Control"
+          },
+          {
+            "card_id": "CS2_234",
+            "name": "Shadow Word: Pain"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_09",
+          "name": "Anduin Wrynn",
+          "hero_class": "PRIEST",
+          "health": 24,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_09bp",
+          "name": "Lesser Heal",
+          "cost": 2,
+          "usable": false,
+          "text": "Restore 2 Health."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 10,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 1,
+        "board": [
+          {
+            "entity_id": 39,
+            "card_id": "EX1_066",
+            "name": "Acidic Swamp Ooze",
+            "attack": 3,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Destroy your opponent's weapon."
+          },
+          {
+            "entity_id": 80,
+            "card_id": "skele21",
+            "name": "Damaged Golem",
+            "attack": 2,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          },
+          {
+            "entity_id": 59,
+            "card_id": "EX1_623",
+            "name": "Temple Enforcer",
+            "attack": 5,
+            "health": 6,
+            "max_health": 6,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Give a friendly minion +3 Health."
+          },
+          {
+            "entity_id": 22,
+            "card_id": "EX1_623",
+            "name": "Temple Enforcer",
+            "attack": 5,
+            "health": 9,
+            "max_health": 9,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Give a friendly minion +3 Health."
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 14,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_556",
+            "name": "Harvest Golem"
+          },
+          {
+            "card_id": "EX1_091",
+            "name": "Cabal Shadow Priest"
+          },
+          {
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti"
+          },
+          {
+            "card_id": "CS2_200",
+            "name": "Boulderfist Ogre"
+          },
+          {
+            "card_id": "NEW1_023",
+            "name": "Faerie Dragon"
+          },
+          {
+            "card_id": "NEW1_023",
+            "name": "Faerie Dragon"
+          },
+          {
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti"
+          },
+          {
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta"
+          },
+          {
+            "card_id": "EX1_066",
+            "name": "Acidic Swamp Ooze"
+          },
+          {
+            "card_id": "CS2_234",
+            "name": "Shadow Word: Pain"
+          },
+          {
+            "card_id": "EX1_194",
+            "name": "Power Infusion"
+          },
+          {
+            "card_id": "CS1_113",
+            "name": "Mind Control"
+          },
+          {
+            "card_id": "CS1_113",
+            "name": "Mind Control"
+          },
+          {
+            "card_id": "EX1_622",
+            "name": "Shadow Word: Death"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "hero_power",
+          "player": 1,
+          "card_id": "HERO_09bp",
+          "name": "Lesser Heal",
+          "target": {
+            "entity_id": 4,
+            "card_id": "HERO_09",
+            "name": "Anduin Wrynn"
+          }
+        },
+        {
+          "event": "heal",
+          "player": 1,
+          "entity_id": 4,
+          "card_id": "HERO_09",
+          "name": "Anduin Wrynn",
+          "amount": 2,
+          "health_after": 7,
+          "source": {
+            "entity_id": 5,
+            "card_id": "HERO_09bp",
+            "name": "Lesser Heal"
+          }
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "temporary_control": []
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  },
+  {
+    "game_id": "search-shaman-s53000-p2",
+    "seed": 53000,
+    "candidate_seat": 2,
+    "candidate_first": true,
+    "opponent": "search-shaman",
+    "winner": 1,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 30,
+    "hero_damage": 25,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "mulligan": 1,
+      "main": 62
+    },
+    "replay": "experiments/priest-full-v2-smoke/games/search-shaman-s53000-p2/replay.jsonl",
+    "signals": [
+      "low_hand_resources",
+      "opposing_taunt",
+      "visible_board_lethal_threat"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "search-shaman-s53000-p2",
+      "seq": 63,
+      "player": 2,
+      "turn": 29,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794358082.65,
+      "you": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_09",
+          "name": "Anduin Wrynn",
+          "hero_class": "PRIEST",
+          "health": 6,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_09bp",
+          "name": "Lesser Heal",
+          "cost": 2,
+          "usable": false,
+          "text": "Restore 2 Health."
+        },
+        "weapon": null,
+        "mana": 6,
+        "max_mana": 10,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 46,
+            "card_id": "EX1_622",
+            "name": "Shadow Word: Death",
+            "type": "SPELL",
+            "cost": 2,
+            "text": "Destroy a minion with 5 or more Attack.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 43,
+            "card_id": "EX1_195",
+            "name": "Kul Tiran Chaplain",
+            "attack": 2,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Give a friendly minion +2 Health."
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 12,
+        "deck_remaining_counts": {
+          "CS1_112": 1,
+          "CS2_004": 1,
+          "CS2_234": 1,
+          "EX1_091": 1,
+          "EX1_110": 1,
+          "EX1_198": 1,
+          "EX1_339": 2,
+          "EX1_556": 2,
+          "EX1_622": 1,
+          "EX1_623": 1
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta"
+          },
+          {
+            "card_id": "EX1_196",
+            "name": "Scarlet Subjugator"
+          },
+          {
+            "card_id": "EX1_091",
+            "name": "Cabal Shadow Priest"
+          },
+          {
+            "card_id": "EX1_093",
+            "name": "Defender of Argus"
+          },
+          {
+            "card_id": "hexfrog",
+            "name": "Frog"
+          },
+          {
+            "card_id": "EX1_066",
+            "name": "Acidic Swamp Ooze"
+          },
+          {
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti"
+          },
+          {
+            "card_id": "EX1_196",
+            "name": "Scarlet Subjugator"
+          },
+          {
+            "card_id": "EX1_093",
+            "name": "Defender of Argus"
+          },
+          {
+            "card_id": "EX1_623",
+            "name": "Temple Enforcer"
+          },
+          {
+            "card_id": "EX1_195",
+            "name": "Kul Tiran Chaplain"
+          },
+          {
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta"
+          },
+          {
+            "card_id": "EX1_334",
+            "name": "Shadow Madness"
+          },
+          {
+            "card_id": "EX1_066",
+            "name": "Acidic Swamp Ooze"
+          },
+          {
+            "card_id": "CS2_234",
+            "name": "Shadow Word: Pain"
+          },
+          {
+            "card_id": "CS1_112",
+            "name": "Holy Nova"
+          },
+          {
+            "card_id": "EX1_008",
+            "name": "Argent Squire"
+          },
+          {
+            "card_id": "CS1_113",
+            "name": "Mind Control"
+          },
+          {
+            "card_id": "CS2_151",
+            "name": "Silver Hand Knight"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_02",
+          "name": "Thrall",
+          "hero_class": "SHAMAN",
+          "health": 5,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_02bp",
+          "name": "Totemic Call",
+          "cost": 2,
+          "usable": false,
+          "text": "Summon a random Totem."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 10,
+        "overloaded": 0,
+        "overload_next_turn": 1,
+        "hand_size": 0,
+        "board": [
+          {
+            "entity_id": 81,
+            "card_id": "CS2_052",
+            "name": "Wrath of Air Totem",
+            "attack": 2,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 1,
+            "silenced": false,
+            "text": "Spell Damage +1"
+          },
+          {
+            "entity_id": 14,
+            "card_id": "EX1_565",
+            "name": "Flametongue Totem",
+            "attack": 2,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Adjacent minions have +2 Attack."
+          },
+          {
+            "entity_id": 15,
+            "card_id": "EX1_565",
+            "name": "Flametongue Totem",
+            "attack": 2,
+            "health": 3,
+            "max_health": 3,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Adjacent minions have +2 Attack."
+          },
+          {
+            "entity_id": 97,
+            "card_id": "NEW1_009",
+            "name": "Healing Totem",
+            "attack": 2,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "At the end of your turn, restore 1 Health to all friendly minions."
+          },
+          {
+            "entity_id": 111,
+            "card_id": "CS2_051",
+            "name": "Stoneclaw Totem",
+            "attack": 0,
+            "health": 2,
+            "max_health": 2,
+            "can_attack": false,
+            "taunt": true,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Taunt"
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 12,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "skele21",
+            "name": "Damaged Golem"
+          },
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          },
+          {
+            "card_id": "CS2_152",
+            "name": "Squire"
+          },
+          {
+            "card_id": "CS2_152",
+            "name": "Squire"
+          },
+          {
+            "card_id": "EX1_066",
+            "name": "Acidic Swamp Ooze"
+          },
+          {
+            "card_id": "EX1_556",
+            "name": "Harvest Golem"
+          },
+          {
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti"
+          },
+          {
+            "card_id": "CS2_151",
+            "name": "Silver Hand Knight"
+          },
+          {
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta"
+          },
+          {
+            "card_id": "CS2_051",
+            "name": "Stoneclaw Totem"
+          },
+          {
+            "card_id": "CS2_042",
+            "name": "Fire Elemental"
+          },
+          {
+            "card_id": "CS2_051",
+            "name": "Stoneclaw Totem"
+          },
+          {
+            "card_id": "EX1_259",
+            "name": "Lightning Storm"
+          },
+          {
+            "card_id": "EX1_248",
+            "name": "Feral Spirit"
+          },
+          {
+            "card_id": "EX1_tk11",
+            "name": "Spirit Wolf"
+          },
+          {
+            "card_id": "EX1_tk11",
+            "name": "Spirit Wolf"
+          },
+          {
+            "card_id": "EX1_248",
+            "name": "Feral Spirit"
+          },
+          {
+            "card_id": "EX1_tk11",
+            "name": "Spirit Wolf"
+          },
+          {
+            "card_id": "CS2_051",
+            "name": "Stoneclaw Totem"
+          },
+          {
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti"
+          },
+          {
+            "card_id": "EX1_tk11",
+            "name": "Spirit Wolf"
+          },
+          {
+            "card_id": "EX1_246",
+            "name": "Hex"
+          },
+          {
+            "card_id": "CS2_046",
+            "name": "Bloodlust"
+          },
+          {
+            "card_id": "CS2_051",
+            "name": "Stoneclaw Totem"
+          },
+          {
+            "card_id": "EX1_238",
+            "name": "Lightning Bolt"
+          },
+          {
+            "card_id": "CS2_050",
+            "name": "Searing Totem"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "hero_power",
+          "player": 2,
+          "card_id": "HERO_09bp",
+          "name": "Lesser Heal",
+          "target": {
+            "entity_id": 37,
+            "card_id": "HERO_09",
+            "name": "Anduin Wrynn"
+          }
+        },
+        {
+          "event": "heal",
+          "player": 2,
+          "entity_id": 37,
+          "card_id": "HERO_09",
+          "name": "Anduin Wrynn",
+          "amount": 2,
+          "health_after": 6,
+          "source": {
+            "entity_id": 38,
+            "card_id": "HERO_09bp",
+            "name": "Lesser Heal"
+          }
+        }
+      ],
+      "last_action_result": null,
+      "result": null,
+      "temporary_control": []
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  }
+]

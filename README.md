@@ -5,6 +5,10 @@ exchanges and durable minions: [report](docs/control_priest/README.md),
 [deck](docs/control_priest/DECK.md), [ZIP](dist/hearthstone-control-priest.zip).
 Final V2 wins 231/300 on fresh five-opponent validation versus 151/300 for the copied
 opposing Priest, a paired +26.7 points (95% seed-cluster interval +18.7 to +35.0).
+The restored [full 14-opponent test](docs/control_priest/full-suite-comparison/comparison.md)
+uses 40 fresh seeds and both seats: **1012/1120 (90.36%)** versus **892/1120 (79.64%)**,
+a paired +10.71 points (95% seed-cluster interval +6.61 to +14.91), with no execution
+defects in either arm. These populations have different difficulty; the policy is unchanged.
 The original Priest opponent and all earlier agent releases remain unchanged.
 
 Face Hunter is available as a separate validated skill: [project report](docs/face_hunter/README.md),

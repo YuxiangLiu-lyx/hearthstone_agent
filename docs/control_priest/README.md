@@ -12,6 +12,12 @@ from visible Leper Gnome/Abomination deathrattles or fatigue draws. On its fresh
 151/300 for the original opponent, a paired +26.7 points [18.7, 35.0]. All previously
 completed V1 results below remain recorded separately.
 
+Final V2 has also completed the restored **1,120-game historical suite**: **1012/1120
+(90.36%)** versus **892/1120 (79.64%)** for the original Priest, paired +10.71 points
+[+6.61, +14.91]. This adds the same 14 opponent configurations used in Zoo V7 testing,
+with 40 fresh seeds and both seats. The five-opponent result above remains separate;
+the historical pool is easier on aggregate and the strategy did not change.
+
 ## Deck and actual runtime rules
 
 See [the full 30-card deck](DECK.md) and [official catalog audit](card-audit.json).
@@ -123,10 +129,49 @@ proved bad action but has **no measured incremental win-rate gain**. See the
 | Original control Priest | 48/60 | 30/60 |
 | Zoo V7 | 47/60 | 25/60 |
 
-There are 3,240 model-free games in this iteration: 1,440 development/ablation and
+The initial iteration had 3,240 model-free games: 1,440 development/ablation and
 1,800 validation. All completed without policy exceptions, illegal actions, timeouts,
 early exits or engine voids. Final holdout in-process decisions average 0.116 ms,
 maximum 1.67 ms; interpreter/model relay latency is excluded.
+
+## Restored full 1,120-game validation
+
+The original final acceptance used only five opponents, 30 seeds and two seats.
+That 300-game check did not maintain the historical 14-opponent, 40-seed, two-seat
+coverage. The earlier 3,240-game cumulative total combined many arms and cannot
+substitute for a full final-agent test. The full suite was added without changing
+the released source, deck or ZIP.
+
+[The frozen plan](../../development/priest/full-suite-plan.json) was committed before
+testing seeds 152000–152039. The population, decks and opponent code match the old
+Zoo suite. A [harness check](full-suite-harness-check.json) matches all 2,553 actions
+in 28 baseline games against the historical runner, and a separate 28-game V2 smoke
+passes. These checks and the 28-game duplicate parity arm are excluded from holdout.
+
+| Frozen agent | Wins / games | Rate | Wilson 95% |
+|---|---:|---:|---|
+| Original opposing Priest | 892/1120 | 79.64% | 77.19%–81.90% |
+| Final V2 | **1012/1120** | **90.36%** | **88.49%–91.95%** |
+
+Paired improvement is +10.71 percentage points, seed-cluster 95% interval
+[+6.61, +14.91]. Every opponent has 80 games per arm. V2 wins 516/560 when going first
+and 496/560 when going second. The largest subgroup declines are one game each
+against the simple control-Priest and value-Warlock policies. The weakest historical
+opponent matchup is aggressive Hunter at 58/80; the separate modern Hunter V3 result
+remains 31/60. Both pools expose fast Hunter as a relative weakness.
+
+All 2,240 full-suite games complete with zero illegal actions, timeouts, exceptions,
+forfeits or engine voids for **either** player. The [full decision audit](full-suite-decision-audit.json)
+covers 47,789 main decisions, preserving 997/997 inherited immediate-lethal choices;
+it records 861 permanent steals, 298 temporary steals and 36 Scarlet→Cabal sequences.
+This is not an exhaustive missed-lethal search. Each of the 108 losses has a recorded
+public state and action. [The full report](full-suite-comparison/comparison.md) includes
+all 14 matchups, confidence intervals, first/second results and loss signals.
+
+Direct Python benchmarks now total 5,564 games: the initial 3,240, this 2,240-game
+validation, and 84 adapter/smoke games. The two final test populations remain
+separately reported; their aggregate percentages are not a before/after improvement.
+Historical Zoo percentages on different seeds are not a paired cross-agent ranking.
 
 ## Tests, observed combinations and weaknesses
 
@@ -179,6 +224,9 @@ course submission is performed. Commands (use new output directories/seeds):
 .venv/bin/hs-arena validate control_priest --no-game
 .venv/bin/python -m unittest tests.test_control_priest tests.test_priest_safety -v
 .venv/bin/python -m development.priest.run --candidate control_priest --out experiments/priest-reproduce --version reproduce --start 51100 --seeds 20
+.venv/bin/python -m development.priest.full_suite --candidate development/candidates/priest-v0-copy --out experiments/priest-reproduce-full-original --version reproduce-original --start 152100 --seeds 40 --holdout
+.venv/bin/python -m development.priest.full_suite --candidate development/checkpoints/control-priest-v2 --out experiments/priest-reproduce-full-v2 --version reproduce-v2 --start 152100 --seeds 40 --holdout
+.venv/bin/python -m development.priest.full_suite_report --baseline experiments/priest-reproduce-full-original --candidate experiments/priest-reproduce-full-v2 --out docs/control_priest/reproduced-full-comparison
 .venv/bin/hs-arena play --p1 client:development/clients/control-priest-v2 --p2 greedy --games 3 --seed 52100 --out experiments/priest-reproduce-mcp/games
 .venv/bin/python -m development.priest.build
 ```

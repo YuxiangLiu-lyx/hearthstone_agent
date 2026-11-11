@@ -65,5 +65,24 @@
     "exact_script_relays": 125,
     "audit": "docs/control_priest/luna-relay-audit-v2.json",
     "report": "experiments/priest-safety-luna-smoke/summary.md"
+  },
+  "full_suite_validation": {
+    "report": "docs/control_priest/full-suite-comparison/comparison.md",
+    "population": "development/opponents/zoo-research.json",
+    "opponents": 14,
+    "seed_start": 152000,
+    "seed_count": 40,
+    "seat_swap": true,
+    "wins": 1012,
+    "games": 1120,
+    "baseline_wins": 892,
+    "baseline_games": 1120,
+    "paired_gain": 0.10714285714285714,
+    "paired_seed_cluster_95": [
+      0.06607142857142857,
+      0.14910714285714285
+    ],
+    "both_arms_execution_defects": 0,
+    "source_and_deck_changed": false
   }
 }

@@ -1,0 +1,114 @@
+# Failure review
+
+Signals below are observations, not proven causal explanations. No exhaustive lethal audit has been run.
+
+- adversarial-priest-v1-s152002-p1, seed 152002, seat 1: visible_board_lethal_threat; turn 18.
+- adversarial-priest-v1-s152003-p1, seed 152003, seat 1: visible_board_lethal_threat; turn 22.
+- adversarial-priest-v1-s152004-p2, seed 152004, seat 2: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 33.
+- adversarial-priest-v1-s152008-p1, seed 152008, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 29.
+- adversarial-priest-v1-s152008-p2, seed 152008, seat 2: visible_board_lethal_threat; turn 14.
+- adversarial-priest-v1-s152010-p2, seed 152010, seat 2: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 27.
+- adversarial-priest-v1-s152011-p1, seed 152011, seat 1: visible_board_lethal_threat; turn 17.
+- adversarial-priest-v1-s152021-p1, seed 152021, seat 1: low_hand_resources, visible_board_lethal_threat; turn 26.
+- adversarial-priest-v1-s152024-p2, seed 152024, seat 2: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 42.
+- adversarial-priest-v1-s152026-p2, seed 152026, seat 2: race_or_board_loss; turn 16.
+- adversarial-priest-v1-s152028-p2, seed 152028, seat 2: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 28.
+- adversarial-priest-v1-s152030-p1, seed 152030, seat 1: low_hand_resources, visible_board_lethal_threat; turn 27.
+- adversarial-priest-v1-s152033-p1, seed 152033, seat 1: opposing_taunt, visible_board_lethal_threat; turn 16.
+- adversarial-priest-v1-s152034-p1, seed 152034, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 31.
+- adversarial-priest-v1-s152035-p1, seed 152035, seat 1: low_hand_resources, visible_board_lethal_threat; turn 48.
+- adversarial-zoo-s152001-p2, seed 152001, seat 2: visible_board_lethal_threat; turn 18.
+- adversarial-zoo-s152006-p2, seed 152006, seat 2: race_or_board_loss; turn 12.
+- adversarial-zoo-s152008-p2, seed 152008, seat 2: race_or_board_loss; turn 10.
+- adversarial-zoo-s152011-p1, seed 152011, seat 1: visible_board_lethal_threat; turn 21.
+- adversarial-zoo-s152020-p1, seed 152020, seat 1: visible_board_lethal_threat; turn 13.
+- adversarial-zoo-s152025-p2, seed 152025, seat 2: visible_board_lethal_threat; turn 14.
+- adversarial-zoo-s152027-p1, seed 152027, seat 1: race_or_board_loss; turn 11.
+- adversarial-zoo-s152032-p2, seed 152032, seat 2: race_or_board_loss; turn 16.
+- adversarial-zoo-s152033-p1, seed 152033, seat 1: visible_board_lethal_threat; turn 8.
+- adversarial-zoo-s152034-p1, seed 152034, seat 1: visible_board_lethal_threat; turn 13.
+- adversarial-zoo-s152036-p1, seed 152036, seat 1: visible_board_lethal_threat; turn 11.
+- aggressive-hunter-s152003-p1, seed 152003, seat 1: race_or_board_loss; turn 12.
+- aggressive-hunter-s152003-p2, seed 152003, seat 2: race_or_board_loss; turn 13.
+- aggressive-hunter-s152006-p2, seed 152006, seat 2: race_or_board_loss; turn 14.
+- aggressive-hunter-s152007-p1, seed 152007, seat 1: race_or_board_loss; turn 13.
+- aggressive-hunter-s152008-p2, seed 152008, seat 2: race_or_board_loss; turn 14.
+- aggressive-hunter-s152010-p1, seed 152010, seat 1: race_or_board_loss; turn 18.
+- aggressive-hunter-s152012-p2, seed 152012, seat 2: race_or_board_loss; turn 12.
+- aggressive-hunter-s152014-p2, seed 152014, seat 2: visible_board_lethal_threat; turn 11.
+- aggressive-hunter-s152015-p1, seed 152015, seat 1: race_or_board_loss; turn 13.
+- aggressive-hunter-s152015-p2, seed 152015, seat 2: race_or_board_loss; turn 16.
+- aggressive-hunter-s152016-p1, seed 152016, seat 1: race_or_board_loss; turn 10.
+- aggressive-hunter-s152019-p1, seed 152019, seat 1: race_or_board_loss; turn 14.
+- aggressive-hunter-s152020-p1, seed 152020, seat 1: race_or_board_loss; turn 17.
+- aggressive-hunter-s152021-p1, seed 152021, seat 1: race_or_board_loss; turn 14.
+- aggressive-hunter-s152021-p2, seed 152021, seat 2: race_or_board_loss; turn 13.
+- aggressive-hunter-s152023-p2, seed 152023, seat 2: race_or_board_loss; turn 10.
+- aggressive-hunter-s152025-p2, seed 152025, seat 2: visible_board_lethal_threat; turn 14.
+- aggressive-hunter-s152027-p1, seed 152027, seat 1: race_or_board_loss; turn 11.
+- aggressive-hunter-s152030-p2, seed 152030, seat 2: race_or_board_loss; turn 14.
+- aggressive-hunter-s152033-p1, seed 152033, seat 1: race_or_board_loss; turn 10.
+- aggressive-hunter-s152036-p1, seed 152036, seat 1: race_or_board_loss; turn 11.
+- aggressive-hunter-s152037-p1, seed 152037, seat 1: race_or_board_loss; turn 10.
+- aggressive-paladin-s152025-p2, seed 152025, seat 2: visible_board_lethal_threat; turn 14.
+- aggressive-paladin-s152031-p1, seed 152031, seat 1: visible_board_lethal_threat; turn 11.
+- aggressive-paladin-s152032-p2, seed 152032, seat 2: low_hand_resources, visible_board_lethal_threat; turn 22.
+- aggressive-paladin-s152038-p2, seed 152038, seat 2: opposing_taunt, visible_board_lethal_threat; turn 12.
+- control-mage-s152005-p2, seed 152005, seat 2: visible_board_lethal_threat; turn 60.
+- control-mage-s152007-p1, seed 152007, seat 1: race_or_board_loss; turn 13.
+- control-mage-s152008-p2, seed 152008, seat 2: visible_board_lethal_threat; turn 18.
+- control-mage-s152021-p2, seed 152021, seat 2: race_or_board_loss; turn 11.
+- control-mage-s152023-p2, seed 152023, seat 2: visible_board_lethal_threat; turn 12.
+- control-mage-s152032-p1, seed 152032, seat 1: low_hand_resources; turn 27.
+- control-mage-s152036-p2, seed 152036, seat 2: low_hand_resources, visible_board_lethal_threat; turn 20.
+- control-priest-s152026-p2, seed 152026, seat 2: visible_board_lethal_threat; turn 18.
+- control-priest-s152033-p1, seed 152033, seat 1: opposing_taunt, visible_board_lethal_threat; turn 16.
+- historical-mage-s152005-p2, seed 152005, seat 2: race_or_board_loss; turn 60.
+- historical-mage-s152007-p1, seed 152007, seat 1: race_or_board_loss; turn 21.
+- historical-mage-s152008-p2, seed 152008, seat 2: visible_board_lethal_threat; turn 12.
+- historical-mage-s152010-p2, seed 152010, seat 2: visible_board_lethal_threat; turn 25.
+- historical-mage-s152011-p1, seed 152011, seat 1: visible_board_lethal_threat; turn 25.
+- historical-mage-s152011-p2, seed 152011, seat 2: visible_board_lethal_threat; turn 24.
+- historical-mage-s152018-p1, seed 152018, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 20.
+- historical-mage-s152022-p1, seed 152022, seat 1: race_or_board_loss; turn 17.
+- historical-mage-s152023-p2, seed 152023, seat 2: visible_board_lethal_threat; turn 12.
+- historical-mage-s152024-p1, seed 152024, seat 1: race_or_board_loss; turn 11.
+- historical-mage-s152025-p2, seed 152025, seat 2: race_or_board_loss; turn 14.
+- historical-mage-s152033-p1, seed 152033, seat 1: race_or_board_loss; turn 12.
+- historical-mage-s152034-p1, seed 152034, seat 1: visible_board_lethal_threat; turn 17.
+- historical-mage-s152036-p2, seed 152036, seat 2: low_hand_resources, visible_board_lethal_threat; turn 20.
+- official-mage-s152008-p1, seed 152008, seat 1: low_hand_resources; turn 33.
+- official-mage-s152015-p1, seed 152015, seat 1: race_or_board_loss; turn 25.
+- official-mage-s152020-p1, seed 152020, seat 1: low_hand_resources; turn 19.
+- official-mage-s152022-p1, seed 152022, seat 1: race_or_board_loss; turn 17.
+- official-mage-s152025-p2, seed 152025, seat 2: visible_board_lethal_threat; turn 12.
+- official-mage-s152026-p1, seed 152026, seat 1: race_or_board_loss; turn 17.
+- official-mage-s152027-p1, seed 152027, seat 1: race_or_board_loss; turn 15.
+- official-mage-s152028-p1, seed 152028, seat 1: race_or_board_loss; turn 15.
+- official-mage-s152029-p1, seed 152029, seat 1: race_or_board_loss; turn 18.
+- official-mage-s152031-p1, seed 152031, seat 1: race_or_board_loss; turn 23.
+- official-mage-s152032-p1, seed 152032, seat 1: low_hand_resources; turn 25.
+- official-mage-s152034-p1, seed 152034, seat 1: visible_board_lethal_threat; turn 17.
+- official-mage-s152034-p2, seed 152034, seat 2: visible_board_lethal_threat; turn 22.
+- search-paladin-s152012-p1, seed 152012, seat 1: visible_board_lethal_threat; turn 17.
+- search-paladin-s152025-p2, seed 152025, seat 2: visible_board_lethal_threat; turn 18.
+- search-paladin-s152033-p1, seed 152033, seat 1: visible_board_lethal_threat; turn 12.
+- search-paladin-s152034-p1, seed 152034, seat 1: opposing_taunt, visible_board_lethal_threat; turn 15.
+- search-paladin-s152038-p2, seed 152038, seat 2: opposing_taunt, visible_board_lethal_threat; turn 12.
+- search-shaman-s152015-p1, seed 152015, seat 1: opposing_taunt, visible_board_lethal_threat; turn 15.
+- search-shaman-s152023-p2, seed 152023, seat 2: opposing_taunt, visible_board_lethal_threat; turn 18.
+- search-shaman-s152027-p2, seed 152027, seat 2: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 32.
+- search-shaman-s152033-p1, seed 152033, seat 1: low_hand_resources, visible_board_lethal_threat; turn 26.
+- tempo-paladin-s152034-p1, seed 152034, seat 1: visible_board_lethal_threat; turn 15.
+- tempo-paladin-s152034-p2, seed 152034, seat 2: visible_board_lethal_threat; turn 18.
+- tempo-warlock-s152015-p2, seed 152015, seat 2: visible_board_lethal_threat; turn 12.
+- tempo-warlock-s152026-p2, seed 152026, seat 2: visible_board_lethal_threat; turn 18.
+- value-priest-s152008-p2, seed 152008, seat 2: visible_board_lethal_threat; turn 14.
+- value-priest-s152025-p2, seed 152025, seat 2: opposing_taunt, visible_board_lethal_threat; turn 12.
+- value-priest-s152026-p2, seed 152026, seat 2: visible_board_lethal_threat; turn 16.
+- value-warlock-s152001-p2, seed 152001, seat 2: opposing_taunt, visible_board_lethal_threat; turn 22.
+- value-warlock-s152008-p2, seed 152008, seat 2: opposing_taunt, visible_board_lethal_threat; turn 18.
+- value-warlock-s152034-p1, seed 152034, seat 1: visible_board_lethal_threat; turn 13.
+- value-warlock-s152034-p2, seed 152034, seat 2: low_hand_resources, visible_board_lethal_threat; turn 28.
+
+Concrete observations and selected actions are saved in failure-states.json; full official logs remain in games/.

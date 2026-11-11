@@ -1,5 +1,5 @@
 {
-  "status": "frozen before evaluation",
+  "status": "completed; full paired coverage verified without retuning",
   "reason": "Restore the 14-opponent, 40-seed, two-seat final validation coverage used for Zoo V7. Prior 3,240 games span multiple arms and are not a replacement for 1,120 final-agent games.",
   "population": "development/opponents/zoo-research.json",
   "population_sha256": "5be681abbce9b8d2515d234cc753109f5fa7acff0ff6ced3fa9c1d1116ccfde5",
@@ -62,5 +62,24 @@
   "retuning_allowed": false,
   "acceptance": "Complete the full paired schedule, report every matchup and actual first/second player, seed-cluster confidence interval, both-player execution defects and concrete loss observations. Never count defective games as evidence of strength.",
   "prior_smaller_validation": "experiments/priest-safety-v2-holdout",
-  "integration": "No submitted policy, skill or ZIP changes; previous final Luna integration remains applicable."
+  "integration": "No submitted policy, skill or ZIP changes; previous final Luna integration remains applicable.",
+  "results": {
+    "report": "docs/control_priest/full-suite-comparison/comparison.md",
+    "population": "development/opponents/zoo-research.json",
+    "opponents": 14,
+    "seed_start": 152000,
+    "seed_count": 40,
+    "seat_swap": true,
+    "wins": 1012,
+    "games": 1120,
+    "baseline_wins": 892,
+    "baseline_games": 1120,
+    "paired_gain": 0.10714285714285714,
+    "paired_seed_cluster_95": [
+      0.06607142857142857,
+      0.14910714285714285
+    ],
+    "both_arms_execution_defects": 0,
+    "source_and_deck_changed": false
+  }
 }

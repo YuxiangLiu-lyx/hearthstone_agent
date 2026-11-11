@@ -1,0 +1,661 @@
+{
+  "version": "priest-full-original-smoke",
+  "attempted": 28,
+  "games": 28,
+  "wins": 21,
+  "win_rate": 0.75,
+  "wilson95": [
+    0.566439747592954,
+    0.8732366505779922
+  ],
+  "mean_turns": 25.321428571428573,
+  "mean_hero_damage": 27.321428571428573,
+  "hero_damage_definition": "Damage events to the opposing hero with an observed friendly source, including armor damage and overkill.",
+  "illegal": 0,
+  "timeouts": 0,
+  "early_exits": 0,
+  "void_or_aborted": 0,
+  "policy_errors": 0,
+  "decision_modes": {},
+  "cli_fallbacks": 0,
+  "missed_lethals": null,
+  "lethal_audit_status": "Not audited; no zero-miss claim.",
+  "decision_s_mean": 7.919921299703685e-05,
+  "decision_s_max": 0.0007874580333009362,
+  "failure_signals": {
+    "low_hand_resources": 1,
+    "visible_board_lethal_threat": 4,
+    "race_or_board_loss": 2,
+    "opposing_taunt": 1
+  },
+  "by_opponent": {
+    "adversarial-priest-v1": {
+      "games": 2,
+      "wins": 1
+    },
+    "adversarial-zoo": {
+      "games": 2,
+      "wins": 1
+    },
+    "aggressive-hunter": {
+      "games": 2,
+      "wins": 2
+    },
+    "aggressive-paladin": {
+      "games": 2,
+      "wins": 1
+    },
+    "control-mage": {
+      "games": 2,
+      "wins": 2
+    },
+    "control-priest": {
+      "games": 2,
+      "wins": 2
+    },
+    "historical-mage": {
+      "games": 2,
+      "wins": 1
+    },
+    "official-mage": {
+      "games": 2,
+      "wins": 2
+    },
+    "search-paladin": {
+      "games": 2,
+      "wins": 1
+    },
+    "search-shaman": {
+      "games": 2,
+      "wins": 1
+    },
+    "tempo-paladin": {
+      "games": 2,
+      "wins": 1
+    },
+    "tempo-warlock": {
+      "games": 2,
+      "wins": 2
+    },
+    "value-priest": {
+      "games": 2,
+      "wins": 2
+    },
+    "value-warlock": {
+      "games": 2,
+      "wins": 2
+    }
+  },
+  "by_first": {
+    "True": {
+      "games": 14,
+      "wins": 8
+    },
+    "False": {
+      "games": 14,
+      "wins": 13
+    }
+  },
+  "results": [
+    {
+      "game_id": "adversarial-priest-v1-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "adversarial-priest-v1",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 49,
+      "hero_damage": 43,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 84
+      },
+      "replay": "experiments/priest-full-original-smoke/games/adversarial-priest-v1-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "adversarial-priest-v1-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "adversarial-priest-v1",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 49,
+      "hero_damage": 49,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 87
+      },
+      "replay": "experiments/priest-full-original-smoke/games/adversarial-priest-v1-s53000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "adversarial-zoo-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "adversarial-zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 24,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 40
+      },
+      "replay": "experiments/priest-full-original-smoke/games/adversarial-zoo-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "adversarial-zoo-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "adversarial-zoo",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 16
+      },
+      "replay": "experiments/priest-full-original-smoke/games/adversarial-zoo-s53000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "aggressive-hunter-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "aggressive-hunter",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 30
+      },
+      "replay": "experiments/priest-full-original-smoke/games/aggressive-hunter-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "aggressive-hunter-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "aggressive-hunter",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 25
+      },
+      "replay": "experiments/priest-full-original-smoke/games/aggressive-hunter-s53000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "aggressive-paladin-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "aggressive-paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 40
+      },
+      "replay": "experiments/priest-full-original-smoke/games/aggressive-paladin-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "aggressive-paladin-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "aggressive-paladin",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 12,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 28
+      },
+      "replay": "experiments/priest-full-original-smoke/games/aggressive-paladin-s53000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "control-mage-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "control-mage",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 42
+      },
+      "replay": "experiments/priest-full-original-smoke/games/control-mage-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "control-mage-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "control-mage",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 39,
+      "hero_damage": 33,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 67
+      },
+      "replay": "experiments/priest-full-original-smoke/games/control-mage-s53000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "control-priest-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "control-priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 36
+      },
+      "replay": "experiments/priest-full-original-smoke/games/control-priest-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "control-priest-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "control-priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 27,
+      "hero_damage": 42,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 44
+      },
+      "replay": "experiments/priest-full-original-smoke/games/control-priest-s53000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "historical-mage-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "historical-mage",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 50
+      },
+      "replay": "experiments/priest-full-original-smoke/games/historical-mage-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "historical-mage-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "historical-mage",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 10,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-full-original-smoke/games/historical-mage-s53000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "official-mage-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "official-mage",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 41
+      },
+      "replay": "experiments/priest-full-original-smoke/games/official-mage-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "official-mage-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "official-mage",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 27,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 50
+      },
+      "replay": "experiments/priest-full-original-smoke/games/official-mage-s53000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "search-paladin-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "search-paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 35,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 49
+      },
+      "replay": "experiments/priest-full-original-smoke/games/search-paladin-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "search-paladin-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "search-paladin",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 40
+      },
+      "replay": "experiments/priest-full-original-smoke/games/search-paladin-s53000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "search-shaman-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "search-shaman",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 35,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 46
+      },
+      "replay": "experiments/priest-full-original-smoke/games/search-shaman-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "search-shaman-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "search-shaman",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 15,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 36
+      },
+      "replay": "experiments/priest-full-original-smoke/games/search-shaman-s53000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "tempo-paladin-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "tempo-paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 47
+      },
+      "replay": "experiments/priest-full-original-smoke/games/tempo-paladin-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "tempo-paladin-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "tempo-paladin",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 9,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 26
+      },
+      "replay": "experiments/priest-full-original-smoke/games/tempo-paladin-s53000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "tempo-warlock-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "tempo-warlock",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 25,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 40
+      },
+      "replay": "experiments/priest-full-original-smoke/games/tempo-warlock-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "tempo-warlock-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "tempo-warlock",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 37,
+      "hero_damage": 28,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 65
+      },
+      "replay": "experiments/priest-full-original-smoke/games/tempo-warlock-s53000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "value-priest-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "value-priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 37
+      },
+      "replay": "experiments/priest-full-original-smoke/games/value-priest-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "value-priest-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "value-priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 27,
+      "hero_damage": 37,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 45
+      },
+      "replay": "experiments/priest-full-original-smoke/games/value-priest-s53000-p2/replay.jsonl"
+    },
+    {
+      "game_id": "value-warlock-s53000-p1",
+      "seed": 53000,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "value-warlock",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 25,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 40
+      },
+      "replay": "experiments/priest-full-original-smoke/games/value-warlock-s53000-p1/replay.jsonl"
+    },
+    {
+      "game_id": "value-warlock-s53000-p2",
+      "seed": 53000,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "value-warlock",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 27,
+      "hero_damage": 24,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 51
+      },
+      "replay": "experiments/priest-full-original-smoke/games/value-warlock-s53000-p2/replay.jsonl"
+    }
+  ]
+}
