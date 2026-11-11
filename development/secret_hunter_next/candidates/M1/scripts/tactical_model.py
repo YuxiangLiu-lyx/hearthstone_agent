@@ -12,7 +12,7 @@ COMPANIONS = ("NEW1_032", "NEW1_033", "NEW1_034")
 TOKENS = {"EX1_538t": (1, 1, True, False), "EX1_534t": (2, 2, False, False),
           "NEW1_032": (4, 4, False, True), "NEW1_033": (2, 4, False, False),
           "NEW1_034": (4, 2, True, False), "skele21": (2, 1, False, False),
-          "EX1_554t": (1, 1, False, False), "EX1_110t": (4, 5, False, False)}
+          "EX1_598": (1, 1, False, False), "EX1_554t": (1, 1, False, False), "EX1_110t": (4, 5, False, False)}
 DEATH_TOKENS = {"EX1_534": ["EX1_534t"] * 2, "EX1_556": ["skele21"], "EX1_110": ["EX1_110t"]}
 CHARGE = {"CS2_171", "CS2_173", "CS2_124", "CS2_131", "CS2_213", "EX1_067", "NEW1_011", "EX1_543"}
 AURAS = {WOLF, LEOK, "EX1_162", "CS2_122"}
@@ -26,7 +26,7 @@ SAFE = {
     "CS2_022t", "hexfrog", "EX1_017", "EX1_531", "EX1_091", "EX1_019", "EX1_093", "EX1_046",
     "CS2_188", "EX1_586", "DS1_070", "CS2_189", "CS2_141", "CS2_150"
 } | CHARGE | AURAS | set(TOKENS)
-SAFE |= {"EX1_080", "NEW1_019", "CS2_042", "CS2_064"}
+SAFE |= {"EX1_393", "EX1_597", "CS2_203", "EX1_080", "NEW1_019", "CS2_042", "CS2_064"}
 PLAY_MINIONS = {WOLF, HYENA, "EX1_162", "EX1_080", "CS2_172", "CS2_120", "EX1_017", "EX1_534", "EX1_029"} | CHARGE
 BASE_PLAY = PLAY_MINIONS.copy()
 SECRETS = {"EX1_610", "EX1_611", "EX1_554", "EX1_533"}
@@ -59,10 +59,14 @@ def aura(board, index):
                     or (source["card_id"] == "EX1_162" and abs(j-index) == 1)))
 
 
+def enrage(m):
+    return 3 if m["card_id"] == "EX1_393" and not m.get("silenced") and m["health"] < m.get("max_health", m["health"]) else 0
+
+
 def refresh(state):
     for side in (state["you"], state["opponent"]):
         for i, m in enumerate(side["board"]):
-            m["attack"] = m["base_attack"] + aura(side["board"], i)
+            m["attack"] = m["base_attack"] + aura(side["board"], i) + enrage(m)
             m["can_attack"] = bool(m.get("remaining_attacks") and m["attack"] > 0 and not m.get("frozen"))
 
 
@@ -71,7 +75,7 @@ def prepare(state):
     for key in ("you", "opponent"):
         result[key] = copy.deepcopy(state[key])
         for i, m in enumerate(result[key]["board"]):
-            m["base_attack"] = m["attack"] - aura(result[key]["board"], i)
+            m["base_attack"] = m["attack"] - aura(result[key]["board"], i) - enrage(m)
             # The observation does not expose attacks already spent on Windfury.
             m["remaining_attacks"] = int(m.get("can_attack", False))
     hero = result["you"]["hero"]
@@ -290,3 +294,22 @@ def signature(state):
     values.append(tuple(sorted((c["entity_id"], c["cost"]) for c in state["you"]["hand"])))
     values.append(tuple((state["you"].get("weapon") or {}).get(k, 0) for k in ("attack", "durability")))
     return tuple(values)
+
+
+def end_effects(state, side_key):
+    """Project Imp Master end triggers, rejecting random summon interactions."""
+    s = copy.deepcopy(state)
+    side = s[side_key]
+    masters = [m for m in side['board'] if m['card_id'] == 'EX1_597' and not m.get('silenced')]
+    if masters and any(m['card_id'] == 'NEW1_019' and not m.get('silenced') for m in side['board']):
+        return None
+    for master in masters:
+        if master not in side['board']:
+            continue
+        damage(master, 1)
+        # The trigger batch summons before its pending deaths are swept.
+        summon(s, side, 'EX1_598')
+    if not cleanup(s):
+        return None
+    refresh(s)
+    return s

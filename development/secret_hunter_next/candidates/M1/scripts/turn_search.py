@@ -30,7 +30,7 @@ def value(s,cfg):
 
 def plan(state,ranked,cfg,outer_deadline):
     begin=time.monotonic();deadline=min(outer_deadline,begin+cfg.get('turn_budget_s',.045))
-    report={'nodes':0,'action':None,'supported':model.supported(state),'bounded_out':False,'depth':0}
+    report={'nodes':0,'action':None,'supported':model.supported(state),'bounded_out':False,'depth':0,'excluded':0,'deduplicated':0,'beam_pruned':0,'stop_reason':None}
     if not report['supported'] or not ranked:return report
     initial=model.prepare({**state,'planning_mode':'response' if cfg.get('extended_turn') or cfg.get('public_response') else 'base'})
     # Do not replace a strong unmodelled random/development action with an incomplete comparison.
@@ -53,11 +53,11 @@ def plan(state,ranked,cfg,outer_deadline):
             choices=(a for _,a in ranked if a['type']!='end_turn') if not line else model.options(current)
             for action in choices:
                 if time.monotonic()>=deadline or report['nodes']>=cap:
-                    report['bounded_out']=True;break
+                    report['bounded_out']=True;report['stop_reason']='time' if time.monotonic()>=deadline else 'nodes';break
                 successor=model.transition(current,action);report['nodes']+=1
-                if successor is None:continue
+                if successor is None:report['excluded']+=1;continue
                 key=model.signature(successor)
-                if key in seen:continue
+                if key in seen:report['deduplicated']+=1;continue
                 seen.add(key);path=line+[action];v=value(successor,cfg)
                 root=json.dumps(path[0],sort_keys=True)
                 if root not in endpoints or v>endpoints[root][0]:endpoints[root]=(v,successor,path)
@@ -68,6 +68,7 @@ def plan(state,ranked,cfg,outer_deadline):
         report['depth']=d+1
         if report['bounded_out'] or not following:break
         following.sort(key=lambda x:x[0],reverse=True)
+        report['beam_pruned']+=max(0,len(following)-width)
         frontier=[(s,line) for _,s,line in following[:width]]
     if cfg.get('public_response') and time.monotonic()<outer_deadline:
         from public_response import worst_reply

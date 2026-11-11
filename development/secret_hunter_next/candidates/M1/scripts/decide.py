@@ -20,6 +20,7 @@ def atomic(path,value):
 def worker(snapshot,checkpoint):
     from program_policy import decide
     data=json.loads(snapshot.read_text());state=data['state'];cfg=data['config']
+    cfg['_deadline']=data['search_deadline']
     memory=data.get('memory',{})
     def publish(action,info):atomic(checkpoint,{'action':action,'info':info,'memory':memory})
     action,info=decide(state,cfg,publish,memory=memory)
@@ -31,7 +32,10 @@ def main():
     scratch=ROOT/'scratch';scratch.mkdir(exist_ok=True)
     snapshot=scratch/'input.json';checkpoint=scratch/'best.json'
     if args.worker:worker(snapshot,checkpoint);return
-    path=ROOT/'game/state.json';raw=json.loads(path.read_text());best=basic(raw)
+    path=ROOT/'game/state.json'
+    try:raw=json.loads(path.read_text());best=basic(raw)
+    except (OSError,ValueError,KeyError,TypeError):
+        print(json.dumps({'refresh_required':True,'reason':'invalid_current_observation'}));return
     if raw['phase']=='game_over':print(json.dumps({'game_over':True}));return
     info={'fallback':True,'reason':'prepared_fallback','nodes':0};error=None;cache_hit=False
     try:cfg=json.loads((ROOT/'config.json').read_text())
@@ -42,13 +46,23 @@ def main():
     history=path.parent/'history.jsonl'
     if history.exists() and raw['phase']=='main':
         from state_features import with_public_history
-        state=with_public_history(raw,[json.loads(line) for line in history.read_text().splitlines() if line])
+        try:
+            # Incomplete history is optional evidence, never a reason to emit a stale action.
+            events=[]
+            if history.stat().st_size<=4_000_000:
+                with history.open() as stream:
+                    for line in stream:
+                        if time.monotonic()>=START+.30:events=[];break
+                        if line.strip():events.append(json.loads(line))
+                state=with_public_history(raw,events)
+            else:error='history_size_limit'
+        except (OSError,ValueError,TypeError):error='history_parse_error'
     memory={}
     memory_path=scratch/'plan.json'
     if memory_path.exists():
         try:memory=json.loads(memory_path.read_text())
         except (OSError,ValueError):pass
-    data={'state':state,'config':cfg,'memory':memory}
+    data={'state':state,'config':cfg,'memory':memory,'search_deadline':min(START+1.5,deadline-.1)}
     key=hashlib.sha256(json.dumps({'state':state,'config':cfg},sort_keys=True,separators=(',',':')).encode()).hexdigest()
     cache=scratch/'cache.json'
     if cache.exists():
@@ -73,7 +87,9 @@ def main():
             if legal(raw,saved['action']):
                 best=saved['action'];info=saved['info'];atomic(memory_path,saved.get('memory',{}))
         except (OSError,ValueError,KeyError):pass
-    latest=json.loads(path.read_text())
+    try:latest=json.loads(path.read_text())
+    except (OSError,ValueError):
+        print(json.dumps({'refresh_required':True,'reason':'observation_changed_or_invalid'}));return
     if latest['seq']!=raw['seq'] or latest.get('game_id')!=raw.get('game_id'):
         print(json.dumps({'refresh_required':True}));return
     row={'game_id':raw.get('game_id'),'seq':raw['seq'],'phase':raw['phase'],'action':best,'info':info,

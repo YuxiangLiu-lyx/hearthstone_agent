@@ -10,7 +10,9 @@ from race_plan import value
 
 
 def prepare_reply(state):
-    s=copy.deepcopy(state);y,o=s['you'],s['opponent']
+    s=m.end_effects(state, 'you')
+    if s is None:return None
+    y,o=s['you'],s['opponent']
     # Observation omits exhaustion/attacks spent needed for exact end-turn thaw.
     if any(x.get('frozen') for x in y['board']+[y['hero']]):return None
     if any(c['card_id']=='EX1_533' for c in y.get('secrets',[])):return None
@@ -39,6 +41,8 @@ def attack(state,action):
     attacker=next((x for x in o['board']+[o['hero']] if x['entity_id']==action['attacker']),None)
     if attacker is None:return None
     target_hero=action['target']==y['hero']['entity_id'];bounced=False
+    before_attack=attacker['attack']
+    before_retaliation=next(x['attack'] for x in y['board']+[y['hero']] if x['entity_id']==action['target'])
     for secret in list(y.get('secrets',[])):
         cid=secret['card_id']
         trigger=(cid=='EX1_610' and target_hero and not bounced) or (cid=='EX1_611' and attacker is not o['hero']) or (cid=='EX1_554' and not target_hero and len(y['board'])<7)
@@ -61,6 +65,11 @@ def attack(state,action):
     # Trigger filters are re-evaluated after each Secret (bounced attackers stop Explosive).
     if not any(x['entity_id']==action['attacker'] for x in o['board']+[o['hero']]):return s
     # Reuse the exact combat projector with roles reversed, never exposing a real hidden hand.
+    # Secret damage does not refresh attack auras/enrage until combat completes.
+    attacker['attack']=before_attack
+    defender=next((x for x in y['board']+[y['hero']] if x['entity_id']==action['target']),None)
+    if defender is None:return None
+    defender['attack']=before_retaliation
     swapped={**s,'you':o,'opponent':y}
     swapped['you'].setdefault('hand',[])
     result=m.transition(swapped,action)

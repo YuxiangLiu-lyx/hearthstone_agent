@@ -1,0 +1,9 @@
+"""Apply one shared deadline and bounded optional-history loading to a candidate."""
+from pathlib import Path
+P=Path('development/secret_hunter_next/candidates/M1/scripts/decide.py');s=P.read_text()
+s=s.replace("data=json.loads(snapshot.read_text());state=data['state'];cfg=data['config']","data=json.loads(snapshot.read_text());state=data['state'];cfg=data['config']\n    cfg['_deadline']=data['search_deadline']")
+s=s.replace("path=ROOT/'game/state.json';raw=json.loads(path.read_text());best=basic(raw)","path=ROOT/'game/state.json'\n    try:raw=json.loads(path.read_text());best=basic(raw)\n    except (OSError,ValueError,KeyError,TypeError):\n        print(json.dumps({'refresh_required':True,'reason':'invalid_current_observation'}));return")
+s=s.replace("state=with_public_history(raw,[json.loads(line) for line in history.read_text().splitlines() if line])", "try:\n            # Incomplete history is optional evidence, never a reason to emit a stale action.\n            events=[]\n            if history.stat().st_size<=4_000_000:\n                with history.open() as stream:\n                    for line in stream:\n                        if time.monotonic()>=START+.30:events=[];break\n                        if line.strip():events.append(json.loads(line))\n                state=with_public_history(raw,events)\n            else:error='history_size_limit'\n        except (OSError,ValueError,TypeError):error='history_parse_error'")
+s=s.replace("data={'state':state,'config':cfg,'memory':memory}","data={'state':state,'config':cfg,'memory':memory,'search_deadline':min(START+1.5,deadline-.1)}")
+s=s.replace("latest=json.loads(path.read_text())", "try:latest=json.loads(path.read_text())\n    except (OSError,ValueError):\n        print(json.dumps({'refresh_required':True,'reason':'observation_changed_or_invalid'}));return")
+P.write_text(s)

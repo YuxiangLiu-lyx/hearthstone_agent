@@ -25,15 +25,15 @@ def decide(state, config, publish=None, memory=None):
             if cached is not None:
                 save(cached,'verified_plan_cache');info.update(cache_hit=True,elapsed_s=time.monotonic()-start)
                 return best,info
-        deadline=start+min(1.5,config.get('search_soft_s',1.5))
+        deadline=min(start+min(1.5,config.get('search_soft_s',1.5)),config.get('_deadline',float('inf')))
         ranked=rank(state,config,deadline)
         if ranked:save(ranked[0][1],'baseline_rank')
-        deadline=start+min(1.5,config.get('search_soft_s',1.5))
+        deadline=min(start+min(1.5,config.get('search_soft_s',1.5)),config.get('_deadline',float('inf')))
         if state['phase']=='main' and time.monotonic()<deadline:
             if config.get('race_plan'):
                 from race_plan import describe
                 info['race']=describe(state,config)
-            lethal=search(state,budget_s=max(0,min(config.get('search_budget_s',.15),deadline-time.monotonic())),max_nodes=config.get('search_nodes',1600))
+            lethal=search({**state,'planning_mode':'proof'},budget_s=max(0,min(config.get('search_budget_s',.15),deadline-time.monotonic())),max_nodes=config.get('search_nodes',1600))
             info.update(lethal=lethal,nodes=lethal['nodes'])
             if lethal['guaranteed']:save(lethal['first_action'],'guaranteed_lethal')
             else:
