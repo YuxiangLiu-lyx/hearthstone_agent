@@ -1,0 +1,75 @@
+# Failure review
+
+Signals below are observations, not proven causal explanations. No exhaustive lethal audit has been run.
+
+- greedy-s151104-p1, seed 151104, seat 1: race_or_board_loss; turn 14.
+- greedy-s151109-p1, seed 151109, seat 1: low_hand_resources, visible_board_lethal_threat; turn 26.
+- greedy-s151111-p2, seed 151111, seat 2: visible_board_lethal_threat; turn 23.
+- greedy-s151112-p1, seed 151112, seat 1: race_or_board_loss; turn 14.
+- greedy-s151118-p2, seed 151118, seat 2: low_hand_resources, visible_board_lethal_threat; turn 21.
+- greedy-s151126-p1, seed 151126, seat 1: race_or_board_loss; turn 14.
+- greedy-s151128-p2, seed 151128, seat 2: race_or_board_loss; turn 38.
+- hunter-s151100-p1, seed 151100, seat 1: race_or_board_loss; turn 14.
+- hunter-s151100-p2, seed 151100, seat 2: race_or_board_loss; turn 11.
+- hunter-s151101-p2, seed 151101, seat 2: visible_board_lethal_threat; turn 14.
+- hunter-s151102-p1, seed 151102, seat 1: race_or_board_loss; turn 15.
+- hunter-s151103-p1, seed 151103, seat 1: visible_board_lethal_threat; turn 15.
+- hunter-s151103-p2, seed 151103, seat 2: race_or_board_loss; turn 12.
+- hunter-s151104-p1, seed 151104, seat 1: visible_board_lethal_threat; turn 16.
+- hunter-s151104-p2, seed 151104, seat 2: visible_board_lethal_threat; turn 15.
+- hunter-s151105-p2, seed 151105, seat 2: race_or_board_loss; turn 9.
+- hunter-s151107-p2, seed 151107, seat 2: race_or_board_loss; turn 14.
+- hunter-s151111-p1, seed 151111, seat 1: race_or_board_loss; turn 12.
+- hunter-s151111-p2, seed 151111, seat 2: race_or_board_loss; turn 15.
+- hunter-s151112-p1, seed 151112, seat 1: race_or_board_loss; turn 14.
+- hunter-s151114-p1, seed 151114, seat 1: race_or_board_loss; turn 12.
+- hunter-s151115-p1, seed 151115, seat 1: visible_board_lethal_threat; turn 19.
+- hunter-s151116-p1, seed 151116, seat 1: visible_board_lethal_threat; turn 14.
+- hunter-s151116-p2, seed 151116, seat 2: race_or_board_loss; turn 9.
+- hunter-s151118-p1, seed 151118, seat 1: race_or_board_loss; turn 12.
+- hunter-s151118-p2, seed 151118, seat 2: low_hand_resources; turn 17.
+- hunter-s151119-p1, seed 151119, seat 1: race_or_board_loss; turn 13.
+- hunter-s151119-p2, seed 151119, seat 2: race_or_board_loss; turn 16.
+- hunter-s151121-p2, seed 151121, seat 2: race_or_board_loss; turn 20.
+- hunter-s151122-p2, seed 151122, seat 2: race_or_board_loss; turn 12.
+- hunter-s151123-p1, seed 151123, seat 1: visible_board_lethal_threat; turn 12.
+- hunter-s151124-p1, seed 151124, seat 1: race_or_board_loss; turn 15.
+- hunter-s151124-p2, seed 151124, seat 2: race_or_board_loss; turn 12.
+- hunter-s151125-p1, seed 151125, seat 1: visible_board_lethal_threat; turn 13.
+- hunter-s151125-p2, seed 151125, seat 2: race_or_board_loss; turn 10.
+- hunter-s151128-p2, seed 151128, seat 2: visible_board_lethal_threat; turn 12.
+- paladin-s151100-p1, seed 151100, seat 1: race_or_board_loss; turn 14.
+- paladin-s151101-p1, seed 151101, seat 1: low_hand_resources, visible_board_lethal_threat; turn 23.
+- paladin-s151110-p2, seed 151110, seat 2: visible_board_lethal_threat; turn 31.
+- paladin-s151111-p1, seed 151111, seat 1: visible_board_lethal_threat; turn 16.
+- paladin-s151113-p1, seed 151113, seat 1: low_hand_resources, visible_board_lethal_threat; turn 27.
+- paladin-s151115-p2, seed 151115, seat 2: low_hand_resources; turn 20.
+- paladin-s151120-p2, seed 151120, seat 2: race_or_board_loss; turn 18.
+- paladin-s151128-p2, seed 151128, seat 2: visible_board_lethal_threat; turn 16.
+- priest-s151107-p1, seed 151107, seat 1: low_hand_resources, visible_board_lethal_threat; turn 55.
+- priest-s151109-p1, seed 151109, seat 1: visible_board_lethal_threat; turn 26.
+- priest-s151109-p2, seed 151109, seat 2: visible_board_lethal_threat; turn 33.
+- priest-s151110-p1, seed 151110, seat 1: low_hand_resources, visible_board_lethal_threat; turn 56.
+- priest-s151115-p1, seed 151115, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 31.
+- priest-s151115-p2, seed 151115, seat 2: visible_board_lethal_threat; turn 18.
+- priest-s151116-p2, seed 151116, seat 2: low_hand_resources, visible_board_lethal_threat; turn 33.
+- priest-s151119-p2, seed 151119, seat 2: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 24.
+- priest-s151124-p1, seed 151124, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 35.
+- priest-s151126-p1, seed 151126, seat 1: low_hand_resources, visible_board_lethal_threat; turn 28.
+- priest-s151129-p1, seed 151129, seat 1: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 32.
+- priest-s151129-p2, seed 151129, seat 2: low_hand_resources, opposing_taunt, visible_board_lethal_threat; turn 45.
+- zoo-s151100-p2, seed 151100, seat 2: visible_board_lethal_threat; turn 13.
+- zoo-s151106-p1, seed 151106, seat 1: visible_board_lethal_threat; turn 16.
+- zoo-s151107-p2, seed 151107, seat 2: race_or_board_loss; turn 10.
+- zoo-s151111-p1, seed 151111, seat 1: opposing_taunt, visible_board_lethal_threat; turn 12.
+- zoo-s151112-p1, seed 151112, seat 1: opposing_taunt, visible_board_lethal_threat; turn 12.
+- zoo-s151114-p1, seed 151114, seat 1: race_or_board_loss; turn 20.
+- zoo-s151116-p2, seed 151116, seat 2: visible_board_lethal_threat; turn 15.
+- zoo-s151119-p1, seed 151119, seat 1: visible_board_lethal_threat; turn 13.
+- zoo-s151121-p2, seed 151121, seat 2: visible_board_lethal_threat; turn 20.
+- zoo-s151122-p2, seed 151122, seat 2: visible_board_lethal_threat; turn 12.
+- zoo-s151124-p1, seed 151124, seat 1: visible_board_lethal_threat; turn 15.
+- zoo-s151124-p2, seed 151124, seat 2: race_or_board_loss; turn 14.
+- zoo-s151128-p2, seed 151128, seat 2: visible_board_lethal_threat; turn 14.
+
+Concrete observations and selected actions are saved in failure-states.json; full official logs remain in games/.

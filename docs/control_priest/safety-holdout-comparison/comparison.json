@@ -1,0 +1,93 @@
+{
+  "arms": {
+    "Original": {
+      "sources": [
+        "experiments/priest-safety-original-holdout"
+      ],
+      "wins": 151,
+      "games": 300,
+      "win_rate": 0.5033333333333333,
+      "wilson95": [
+        0.44707091826263046,
+        0.559511458870718
+      ],
+      "mean_turns": 21.79,
+      "mean_hero_damage": 21.973333333333333,
+      "policy_errors": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exits": 0
+    },
+    "V1": {
+      "sources": [
+        "experiments/priest-safety-v1-holdout"
+      ],
+      "wins": 231,
+      "games": 300,
+      "win_rate": 0.77,
+      "wilson95": [
+        0.7191436245386645,
+        0.8140289232625583
+      ],
+      "mean_turns": 21.813333333333333,
+      "mean_hero_damage": 27.86,
+      "policy_errors": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exits": 0
+    },
+    "V2": {
+      "sources": [
+        "experiments/priest-safety-v2-holdout"
+      ],
+      "wins": 231,
+      "games": 300,
+      "win_rate": 0.77,
+      "wilson95": [
+        0.7191436245386645,
+        0.8140289232625583
+      ],
+      "mean_turns": 21.816666666666666,
+      "mean_hero_damage": 27.866666666666667,
+      "policy_errors": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exits": 0
+    }
+  },
+  "comparisons": {
+    "V1-Original": {
+      "paired_games": 300,
+      "seed_clusters": 30,
+      "delta": 0.26666666666666666,
+      "cluster_bootstrap95": [
+        0.18666666666666668,
+        0.35
+      ],
+      "gains": 100,
+      "losses": 20
+    },
+    "V2-Original": {
+      "paired_games": 300,
+      "seed_clusters": 30,
+      "delta": 0.26666666666666666,
+      "cluster_bootstrap95": [
+        0.18666666666666668,
+        0.35
+      ],
+      "gains": 100,
+      "losses": 20
+    },
+    "V2-V1": {
+      "paired_games": 300,
+      "seed_clusters": 30,
+      "delta": 0,
+      "cluster_bootstrap95": [
+        0,
+        0
+      ],
+      "gains": 0,
+      "losses": 0
+    }
+  }
+}

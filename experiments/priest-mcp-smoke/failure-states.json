@@ -1,0 +1,354 @@
+[
+  {
+    "game_id": "g_20261111_000001",
+    "seed": 52010,
+    "candidate_seat": 1,
+    "candidate_first": true,
+    "opponent": "greedy",
+    "winner": 2,
+    "won": false,
+    "reason": "hero_death",
+    "turns": 16,
+    "hero_damage": 9,
+    "illegal": 0,
+    "timeouts": 0,
+    "early_exit": false,
+    "phases": {
+      "deck_submission": 1,
+      "mulligan": 1,
+      "main": 26,
+      "game_over": 1
+    },
+    "replay": "experiments/priest-mcp-smoke/games/g_20261111_000001/replay.jsonl",
+    "signals": [
+      "race_or_board_loss"
+    ],
+    "key_state": {
+      "protocol_version": "1",
+      "game_id": "g_20261111_000001",
+      "seq": 28,
+      "player": 1,
+      "turn": 15,
+      "phase": "main",
+      "timeout_s": 180.0,
+      "deadline_epoch_s": 1794356360.433,
+      "you": {
+        "hero": {
+          "entity_id": 4,
+          "card_id": "HERO_09",
+          "name": "Anduin Wrynn",
+          "hero_class": "PRIEST",
+          "health": 16,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 5,
+          "card_id": "HERO_09bp",
+          "name": "Lesser Heal",
+          "cost": 2,
+          "usable": false,
+          "text": "Restore 2 Health."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 8,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand": [
+          {
+            "entity_id": 20,
+            "card_id": "CS1_112",
+            "name": "Holy Nova",
+            "type": "SPELL",
+            "cost": 4,
+            "text": "Deal 2 damage to all enemy minions. Restore 2 Health to all friendly characters.",
+            "playable": false
+          },
+          {
+            "entity_id": 29,
+            "card_id": "EX1_339",
+            "name": "Thoughtsteal",
+            "type": "SPELL",
+            "cost": 2,
+            "text": "Copy 2 cards in your opponent's deck and add them to your hand.",
+            "playable": false
+          },
+          {
+            "entity_id": 17,
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta",
+            "type": "MINION",
+            "cost": 4,
+            "attack": 3,
+            "health": 5,
+            "text": "Taunt",
+            "playable": false
+          },
+          {
+            "entity_id": 11,
+            "card_id": "CS2_234",
+            "name": "Shadow Word: Pain",
+            "type": "SPELL",
+            "cost": 2,
+            "text": "Destroy a minion with 3 or less Attack.",
+            "playable": false
+          }
+        ],
+        "board": [
+          {
+            "entity_id": 32,
+            "card_id": "EX1_198",
+            "name": "Natalie Seline",
+            "attack": 8,
+            "health": 4,
+            "max_health": 4,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Destroy a minion and gain its Health."
+          },
+          {
+            "entity_id": 6,
+            "card_id": "EX1_196",
+            "name": "Scarlet Subjugator",
+            "attack": 2,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": "Battlecry: Give an enemy minion -2 Attack until your next turn."
+          },
+          {
+            "entity_id": 79,
+            "card_id": "EX1_110t",
+            "name": "Baine Bloodhoof",
+            "attack": 4,
+            "health": 3,
+            "max_health": 5,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": false,
+            "spell_damage": 0,
+            "silenced": false,
+            "text": ""
+          }
+        ],
+        "secrets": [],
+        "deck_remaining": 19,
+        "deck_remaining_counts": {
+          "CS1_112": 1,
+          "CS1_113": 1,
+          "CS2_179": 1,
+          "CS2_234": 1,
+          "EX1_032": 1,
+          "EX1_066": 1,
+          "EX1_091": 2,
+          "EX1_093": 2,
+          "EX1_195": 1,
+          "EX1_196": 1,
+          "EX1_334": 1,
+          "EX1_556": 2,
+          "EX1_622": 2,
+          "EX1_623": 2
+        },
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "EX1_110",
+            "name": "Cairne Bloodhoof"
+          },
+          {
+            "card_id": "EX1_028",
+            "name": "Stranglethorn Tiger"
+          },
+          {
+            "card_id": "CS2_tk1",
+            "name": "Sheep"
+          },
+          {
+            "card_id": "NEW1_012",
+            "name": "Mana Wyrm"
+          },
+          {
+            "card_id": "CS2_004",
+            "name": "Power Word: Shield"
+          },
+          {
+            "card_id": "CS2_tk1",
+            "name": "Sheep"
+          },
+          {
+            "card_id": "EX1_339",
+            "name": "Thoughtsteal"
+          }
+        ]
+      },
+      "opponent": {
+        "hero": {
+          "entity_id": 37,
+          "card_id": "HERO_08",
+          "name": "Jaina Proudmoore",
+          "hero_class": "MAGE",
+          "health": 21,
+          "max_health": 30,
+          "armor": 0,
+          "attack": 0,
+          "can_attack": false,
+          "frozen": false,
+          "immune": false
+        },
+        "hero_power": {
+          "entity_id": 38,
+          "card_id": "HERO_08bp",
+          "name": "Fireblast",
+          "cost": 2,
+          "usable": false,
+          "text": "Deal 1 damage."
+        },
+        "weapon": null,
+        "mana": 0,
+        "max_mana": 7,
+        "overloaded": 0,
+        "overload_next_turn": 0,
+        "hand_size": 4,
+        "board": [
+          {
+            "entity_id": 49,
+            "card_id": "EX1_012",
+            "name": "Bloodmage Thalnos",
+            "attack": 1,
+            "health": 1,
+            "max_health": 1,
+            "can_attack": false,
+            "taunt": false,
+            "divine_shield": false,
+            "frozen": false,
+            "stealth": false,
+            "windfury": false,
+            "charge": false,
+            "poisonous": false,
+            "deathrattle": true,
+            "spell_damage": 1,
+            "silenced": false,
+            "text": "Spell Damage +1 Deathrattle: Draw a card."
+          }
+        ],
+        "secrets_count": 0,
+        "deck_remaining": 19,
+        "fatigue": 0,
+        "graveyard": [
+          {
+            "card_id": "skele21",
+            "name": "Damaged Golem"
+          },
+          {
+            "card_id": "skele21",
+            "name": "Damaged Golem"
+          },
+          {
+            "card_id": "GAME_005",
+            "name": "The Coin"
+          },
+          {
+            "card_id": "CS2_022",
+            "name": "Polymorph"
+          },
+          {
+            "card_id": "CS2_033",
+            "name": "Water Elemental"
+          },
+          {
+            "card_id": "EX1_556",
+            "name": "Harvest Golem"
+          },
+          {
+            "card_id": "EX1_556",
+            "name": "Harvest Golem"
+          },
+          {
+            "card_id": "CS2_022",
+            "name": "Polymorph"
+          },
+          {
+            "card_id": "CS2_200",
+            "name": "Boulderfist Ogre"
+          }
+        ]
+      },
+      "choice": null,
+      "legal_actions": [
+        {
+          "type": "end_turn"
+        },
+        {
+          "type": "concede"
+        }
+      ],
+      "events": [
+        {
+          "event": "attack",
+          "player": 1,
+          "attacker": {
+            "entity_id": 6,
+            "card_id": "EX1_196",
+            "name": "Scarlet Subjugator"
+          },
+          "target": {
+            "entity_id": 37,
+            "card_id": "HERO_08",
+            "name": "Jaina Proudmoore"
+          }
+        },
+        {
+          "event": "damage",
+          "player": 2,
+          "entity_id": 37,
+          "card_id": "HERO_08",
+          "name": "Jaina Proudmoore",
+          "amount": 2,
+          "health_after": 21,
+          "source": {
+            "entity_id": 6,
+            "card_id": "EX1_196",
+            "name": "Scarlet Subjugator"
+          },
+          "armor_absorbed": 0,
+          "armor_after": 0
+        }
+      ],
+      "last_action_result": null,
+      "result": null
+    },
+    "action": {
+      "type": "end_turn"
+    }
+  }
+]

@@ -1,5 +1,12 @@
 # Hearthstone Agent Arena
 
+Control Priest adds permanent/temporary theft, attack-reduction setup, health-buff
+exchanges and durable minions: [report](docs/control_priest/README.md),
+[deck](docs/control_priest/DECK.md), [ZIP](dist/hearthstone-control-priest.zip).
+Final V2 wins 231/300 on fresh five-opponent validation versus 151/300 for the copied
+opposing Priest, a paired +26.7 points (95% seed-cluster interval +18.7 to +35.0).
+The original Priest opponent and all earlier agent releases remain unchanged.
+
 Face Hunter is available as a separate validated skill: [project report](docs/face_hunter/README.md),
 [submission ZIP](dist/face-hunter-agent.zip), [skill](face_hunter/SKILL.md), and
 [offline win/loss review](docs/face_hunter/review.html). V3 won 119/200 on an untouched,

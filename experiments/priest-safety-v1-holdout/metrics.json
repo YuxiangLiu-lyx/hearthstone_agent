@@ -1,0 +1,6065 @@
+{
+  "version": "v1",
+  "attempted": 300,
+  "games": 300,
+  "wins": 231,
+  "win_rate": 0.77,
+  "wilson95": [
+    0.7191436245386645,
+    0.8140289232625583
+  ],
+  "mean_turns": 21.813333333333333,
+  "mean_hero_damage": 27.86,
+  "hero_damage_definition": "Damage events to the opposing hero with an observed friendly source, including armor damage and overkill.",
+  "illegal": 0,
+  "timeouts": 0,
+  "early_exits": 0,
+  "void_or_aborted": 0,
+  "policy_errors": 0,
+  "decision_modes": {},
+  "cli_fallbacks": 0,
+  "missed_lethals": null,
+  "lethal_audit_status": "Not audited; no zero-miss claim.",
+  "decision_s_mean": 0.00011473416971961562,
+  "decision_s_max": 0.006644416018389165,
+  "failure_signals": {
+    "race_or_board_loss": 28,
+    "low_hand_resources": 15,
+    "visible_board_lethal_threat": 39,
+    "opposing_taunt": 7
+  },
+  "by_opponent": {
+    "greedy": {
+      "games": 60,
+      "wins": 53
+    },
+    "hunter-v3": {
+      "games": 60,
+      "wins": 31
+    },
+    "paladin": {
+      "games": 60,
+      "wins": 52
+    },
+    "priest": {
+      "games": 60,
+      "wins": 48
+    },
+    "zoo": {
+      "games": 60,
+      "wins": 47
+    }
+  },
+  "by_first": {
+    "True": {
+      "games": 150,
+      "wins": 123
+    },
+    "False": {
+      "games": 150,
+      "wins": 108
+    }
+  },
+  "results": [
+    {
+      "game_id": "greedy-s151100-p1",
+      "seed": 151100,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 28,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 52
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151100-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151100-p2",
+      "seed": 151100,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 46
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151100-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151101-p1",
+      "seed": 151101,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 30
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151101-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151101-p2",
+      "seed": 151101,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 42
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151101-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151102-p1",
+      "seed": 151102,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151102-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151102-p2",
+      "seed": 151102,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 41
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151102-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151103-p1",
+      "seed": 151103,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 47
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151103-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151103-p2",
+      "seed": 151103,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 34,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 60
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151103-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151104-p1",
+      "seed": 151104,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 14,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 26
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151104-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151104-p2",
+      "seed": 151104,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 41
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151104-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151105-p1",
+      "seed": 151105,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151105-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151105-p2",
+      "seed": 151105,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 29,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 59
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151105-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151106-p1",
+      "seed": 151106,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 32,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 60
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151106-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151106-p2",
+      "seed": 151106,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 34
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151106-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151107-p1",
+      "seed": 151107,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 46
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151107-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151107-p2",
+      "seed": 151107,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151107-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151108-p1",
+      "seed": 151108,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151108-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151108-p2",
+      "seed": 151108,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 32
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151108-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151109-p1",
+      "seed": 151109,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 27,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 45
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151109-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151109-p2",
+      "seed": 151109,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 37
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151109-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151110-p1",
+      "seed": 151110,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 43
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151110-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151110-p2",
+      "seed": 151110,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 31,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 57
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151110-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151111-p1",
+      "seed": 151111,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 33,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 48
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151111-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151111-p2",
+      "seed": 151111,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 7,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151111-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151112-p1",
+      "seed": 151112,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 4,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 22
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151112-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151112-p2",
+      "seed": 151112,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 34
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151112-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151113-p1",
+      "seed": 151113,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 27,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 50
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151113-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151113-p2",
+      "seed": 151113,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 52
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151113-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151114-p1",
+      "seed": 151114,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 44
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151114-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151114-p2",
+      "seed": 151114,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 46
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151114-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151115-p1",
+      "seed": 151115,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151115-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151115-p2",
+      "seed": 151115,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 36,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 65
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151115-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151116-p1",
+      "seed": 151116,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 34,
+      "hero_damage": 35,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 61
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151116-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151116-p2",
+      "seed": 151116,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 46
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151116-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151117-p1",
+      "seed": 151117,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 25,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 44
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151117-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151117-p2",
+      "seed": 151117,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151117-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151118-p1",
+      "seed": 151118,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 34,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 59
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151118-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151118-p2",
+      "seed": 151118,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 13,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 41
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151118-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151119-p1",
+      "seed": 151119,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 25,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 46
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151119-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151119-p2",
+      "seed": 151119,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 28,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 50
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151119-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151120-p1",
+      "seed": 151120,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 40
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151120-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151120-p2",
+      "seed": 151120,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 52
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151120-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151121-p1",
+      "seed": 151121,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 36
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151121-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151121-p2",
+      "seed": 151121,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151121-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151122-p1",
+      "seed": 151122,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151122-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151122-p2",
+      "seed": 151122,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 46
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151122-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151123-p1",
+      "seed": 151123,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 38,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 76
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151123-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151123-p2",
+      "seed": 151123,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151123-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151124-p1",
+      "seed": 151124,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 27,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 57
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151124-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151124-p2",
+      "seed": 151124,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 56
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151124-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151125-p1",
+      "seed": 151125,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 39
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151125-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151125-p2",
+      "seed": 151125,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 51
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151125-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151126-p1",
+      "seed": 151126,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 6,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 24
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151126-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151126-p2",
+      "seed": 151126,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151126-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151127-p1",
+      "seed": 151127,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 31,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 59
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151127-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151127-p2",
+      "seed": 151127,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 28,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 54
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151127-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151128-p1",
+      "seed": 151128,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 39
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151128-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151128-p2",
+      "seed": 151128,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 39,
+      "hero_damage": 19,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 70
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151128-p2/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151129-p1",
+      "seed": 151129,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 30,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 58
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151129-p1/replay.jsonl"
+    },
+    {
+      "game_id": "greedy-s151129-p2",
+      "seed": 151129,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 34
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/greedy-s151129-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151100-p1",
+      "seed": 151100,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 16,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 28
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151100-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151100-p2",
+      "seed": 151100,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 12,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 13
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151100-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151101-p1",
+      "seed": 151101,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 37
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151101-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151101-p2",
+      "seed": 151101,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 10,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 29
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151101-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151102-p1",
+      "seed": 151102,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 22,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 30
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151102-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151102-p2",
+      "seed": 151102,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 41
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151102-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151103-p1",
+      "seed": 151103,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 23,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 39
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151103-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151103-p2",
+      "seed": 151103,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 4,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 17
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151103-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151104-p1",
+      "seed": 151104,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 6,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151104-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151104-p2",
+      "seed": 151104,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 27,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151104-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151105-p1",
+      "seed": 151105,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 32
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151105-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151105-p2",
+      "seed": 151105,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 10,
+      "hero_damage": 2,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 16
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151105-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151106-p1",
+      "seed": 151106,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 29
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151106-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151106-p2",
+      "seed": 151106,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151106-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151107-p1",
+      "seed": 151107,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 42
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151107-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151107-p2",
+      "seed": 151107,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 20,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 29
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151107-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151108-p1",
+      "seed": 151108,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 30
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151108-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151108-p2",
+      "seed": 151108,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 33,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 41
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151108-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151109-p1",
+      "seed": 151109,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 36
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151109-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151109-p2",
+      "seed": 151109,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151109-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151110-p1",
+      "seed": 151110,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 37
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151110-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151110-p2",
+      "seed": 151110,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151110-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151111-p1",
+      "seed": 151111,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 14,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 24
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151111-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151111-p2",
+      "seed": 151111,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 25,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 36
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151111-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151112-p1",
+      "seed": 151112,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 6,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 19
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151112-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151112-p2",
+      "seed": 151112,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 30
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151112-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151113-p1",
+      "seed": 151113,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 35,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 34
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151113-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151113-p2",
+      "seed": 151113,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 34
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151113-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151114-p1",
+      "seed": 151114,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 26,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 30
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151114-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151114-p2",
+      "seed": 151114,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151114-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151115-p1",
+      "seed": 151115,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 29,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151115-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151115-p2",
+      "seed": 151115,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 47
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151115-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151116-p1",
+      "seed": 151116,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 15,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 29
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151116-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151116-p2",
+      "seed": 151116,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 10,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 9
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151116-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151117-p1",
+      "seed": 151117,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 27
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151117-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151117-p2",
+      "seed": 151117,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151117-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151118-p1",
+      "seed": 151118,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 14,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 24
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151118-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151118-p2",
+      "seed": 151118,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 22,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 48
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151118-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151119-p1",
+      "seed": 151119,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 27,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 23
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151119-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151119-p2",
+      "seed": 151119,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 29,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 32
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151119-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151120-p1",
+      "seed": 151120,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151120-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151120-p2",
+      "seed": 151120,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151120-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151121-p1",
+      "seed": 151121,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 32
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151121-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151121-p2",
+      "seed": 151121,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 11,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151121-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151122-p1",
+      "seed": 151122,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 33,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151122-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151122-p2",
+      "seed": 151122,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 8,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 24
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151122-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151123-p1",
+      "seed": 151123,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 9,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 26
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151123-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151123-p2",
+      "seed": 151123,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151123-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151124-p1",
+      "seed": 151124,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 9,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 28
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151124-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151124-p2",
+      "seed": 151124,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 10,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 23
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151124-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151125-p1",
+      "seed": 151125,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 2,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 25
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151125-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151125-p2",
+      "seed": 151125,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 11,
+      "hero_damage": 4,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 16
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151125-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151126-p1",
+      "seed": 151126,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 39
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151126-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151126-p2",
+      "seed": 151126,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 27
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151126-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151127-p1",
+      "seed": 151127,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 28
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151127-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151127-p2",
+      "seed": 151127,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 34
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151127-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151128-p1",
+      "seed": 151128,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 40
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151128-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151128-p2",
+      "seed": 151128,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 12,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 15
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151128-p2/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151129-p1",
+      "seed": 151129,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "hunter-v3",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 12,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 24
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151129-p1/replay.jsonl"
+    },
+    {
+      "game_id": "hunter-s151129-p2",
+      "seed": 151129,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "hunter-v3",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/hunter-s151129-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151100-p1",
+      "seed": 151100,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 3,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 20
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151100-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151100-p2",
+      "seed": 151100,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 33,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 46
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151100-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151101-p1",
+      "seed": 151101,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 5,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 41
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151101-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151101-p2",
+      "seed": 151101,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 28,
+      "hero_damage": 40,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 70
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151101-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151102-p1",
+      "seed": 151102,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 27,
+      "hero_damage": 38,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 59
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151102-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151102-p2",
+      "seed": 151102,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 40,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 43
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151102-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151103-p1",
+      "seed": 151103,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 37,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 44
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151103-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151103-p2",
+      "seed": 151103,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 30,
+      "hero_damage": 49,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 56
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151103-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151104-p1",
+      "seed": 151104,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 40,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 47
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151104-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151104-p2",
+      "seed": 151104,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 40,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 30
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151104-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151105-p1",
+      "seed": 151105,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 38,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 47
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151105-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151105-p2",
+      "seed": 151105,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 42
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151105-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151106-p1",
+      "seed": 151106,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 37,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 54
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151106-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151106-p2",
+      "seed": 151106,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 43
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151106-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151107-p1",
+      "seed": 151107,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 31,
+      "hero_damage": 44,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 74
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151107-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151107-p2",
+      "seed": 151107,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 46
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151107-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151108-p1",
+      "seed": 151108,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 41,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 47
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151108-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151108-p2",
+      "seed": 151108,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 51
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151108-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151109-p1",
+      "seed": 151109,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 43,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 39
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151109-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151109-p2",
+      "seed": 151109,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 39,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 39
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151109-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151110-p1",
+      "seed": 151110,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 42,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 50
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151110-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151110-p2",
+      "seed": 151110,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 32,
+      "hero_damage": 21,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 53
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151110-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151111-p1",
+      "seed": 151111,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 6,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 26
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151111-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151111-p2",
+      "seed": 151111,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 43,
+      "hero_damage": 38,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 98
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151111-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151112-p1",
+      "seed": 151112,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 43
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151112-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151112-p2",
+      "seed": 151112,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 50
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151112-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151113-p1",
+      "seed": 151113,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 28,
+      "hero_damage": 11,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 52
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151113-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151113-p2",
+      "seed": 151113,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 49
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151113-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151114-p1",
+      "seed": 151114,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 46
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151114-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151114-p2",
+      "seed": 151114,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 33,
+      "hero_damage": 44,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 75
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151114-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151115-p1",
+      "seed": 151115,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 44
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151115-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151115-p2",
+      "seed": 151115,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 14,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 39
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151115-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151116-p1",
+      "seed": 151116,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 37,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 54
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151116-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151116-p2",
+      "seed": 151116,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 25,
+      "hero_damage": 38,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 50
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151116-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151117-p1",
+      "seed": 151117,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 37
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151117-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151117-p2",
+      "seed": 151117,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 32,
+      "hero_damage": 42,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 64
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151117-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151118-p1",
+      "seed": 151118,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 38,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 40
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151118-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151118-p2",
+      "seed": 151118,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 25,
+      "hero_damage": 43,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 63
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151118-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151119-p1",
+      "seed": 151119,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 46,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 32
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151119-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151119-p2",
+      "seed": 151119,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 34,
+      "hero_damage": 40,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 77
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151119-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151120-p1",
+      "seed": 151120,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 27,
+      "hero_damage": 37,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 55
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151120-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151120-p2",
+      "seed": 151120,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 4,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 27
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151120-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151121-p1",
+      "seed": 151121,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151121-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151121-p2",
+      "seed": 151121,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 47
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151121-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151122-p1",
+      "seed": 151122,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 40,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 41
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151122-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151122-p2",
+      "seed": 151122,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 44
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151122-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151123-p1",
+      "seed": 151123,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 33,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 49
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151123-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151123-p2",
+      "seed": 151123,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 27,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 61
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151123-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151124-p1",
+      "seed": 151124,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 25,
+      "hero_damage": 41,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 56
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151124-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151124-p2",
+      "seed": 151124,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 42,
+      "hero_damage": 48,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 85
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151124-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151125-p1",
+      "seed": 151125,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 42,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 49
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151125-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151125-p2",
+      "seed": 151125,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 28,
+      "hero_damage": 41,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 61
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151125-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151126-p1",
+      "seed": 151126,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 45
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151126-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151126-p2",
+      "seed": 151126,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 29,
+      "hero_damage": 45,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 66
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151126-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151127-p1",
+      "seed": 151127,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 47
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151127-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151127-p2",
+      "seed": 151127,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 57
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151127-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151128-p1",
+      "seed": 151128,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 33,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 42
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151128-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151128-p2",
+      "seed": 151128,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 23
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151128-p2/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151129-p1",
+      "seed": 151129,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "paladin",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 45,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 48
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151129-p1/replay.jsonl"
+    },
+    {
+      "game_id": "paladin-s151129-p2",
+      "seed": 151129,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "paladin",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 41,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 45
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/paladin-s151129-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151100-p1",
+      "seed": 151100,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 30,
+      "hero_damage": 51,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 58
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151100-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151100-p2",
+      "seed": 151100,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 33,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 49
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151100-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151101-p1",
+      "seed": 151101,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 26
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151101-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151101-p2",
+      "seed": 151101,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 42,
+      "hero_damage": 58,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 85
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151101-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151102-p1",
+      "seed": 151102,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 39
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151102-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151102-p2",
+      "seed": 151102,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 34,
+      "hero_damage": 50,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 66
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151102-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151103-p1",
+      "seed": 151103,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 35,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 27
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151103-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151103-p2",
+      "seed": 151103,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 34,
+      "hero_damage": 52,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 61
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151103-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151104-p1",
+      "seed": 151104,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 42,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 45
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151104-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151104-p2",
+      "seed": 151104,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 29,
+      "hero_damage": 41,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 56
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151104-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151105-p1",
+      "seed": 151105,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 41,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 55
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151105-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151105-p2",
+      "seed": 151105,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 35,
+      "hero_damage": 56,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 82
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151105-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151106-p1",
+      "seed": 151106,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 44,
+      "hero_damage": 51,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 86
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151106-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151106-p2",
+      "seed": 151106,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 31,
+      "hero_damage": 47,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 66
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151106-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151107-p1",
+      "seed": 151107,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 56,
+      "hero_damage": 18,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 105
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151107-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151107-p2",
+      "seed": 151107,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 36
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151107-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151108-p1",
+      "seed": 151108,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 34
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151108-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151108-p2",
+      "seed": 151108,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 29,
+      "hero_damage": 41,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 57
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151108-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151109-p1",
+      "seed": 151109,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 27,
+      "hero_damage": 13,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 50
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151109-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151109-p2",
+      "seed": 151109,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 34,
+      "hero_damage": 18,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 64
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151109-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151110-p1",
+      "seed": 151110,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 57,
+      "hero_damage": 15,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 101
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151110-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151110-p2",
+      "seed": 151110,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 35,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 36
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151110-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151111-p1",
+      "seed": 151111,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 42
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151111-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151111-p2",
+      "seed": 151111,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 30
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151111-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151112-p1",
+      "seed": 151112,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 49,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 51
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151112-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151112-p2",
+      "seed": 151112,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 38,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 36
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151112-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151113-p1",
+      "seed": 151113,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 35,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 26
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151113-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151113-p2",
+      "seed": 151113,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151113-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151114-p1",
+      "seed": 151114,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 42,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 46
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151114-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151114-p2",
+      "seed": 151114,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 35,
+      "hero_damage": 50,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 70
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151114-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151115-p1",
+      "seed": 151115,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 32,
+      "hero_damage": 6,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 52
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151115-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151115-p2",
+      "seed": 151115,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 16,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 32
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151115-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151116-p1",
+      "seed": 151116,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151116-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151116-p2",
+      "seed": 151116,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 34,
+      "hero_damage": 8,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 54
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151116-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151117-p1",
+      "seed": 151117,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 39,
+      "hero_damage": 49,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 81
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151117-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151117-p2",
+      "seed": 151117,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 42,
+      "hero_damage": 62,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 89
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151117-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151118-p1",
+      "seed": 151118,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 38,
+      "hero_damage": 51,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 71
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151118-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151118-p2",
+      "seed": 151118,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151118-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151119-p1",
+      "seed": 151119,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 37,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 29
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151119-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151119-p2",
+      "seed": 151119,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 25,
+      "hero_damage": 4,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 39
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151119-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151120-p1",
+      "seed": 151120,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 26
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151120-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151120-p2",
+      "seed": 151120,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 39
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151120-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151121-p1",
+      "seed": 151121,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 38,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 43
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151121-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151121-p2",
+      "seed": 151121,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 36,
+      "hero_damage": 48,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 77
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151121-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151122-p1",
+      "seed": 151122,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151122-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151122-p2",
+      "seed": 151122,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 43,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 53
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151122-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151123-p1",
+      "seed": 151123,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 33,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151123-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151123-p2",
+      "seed": 151123,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 30
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151123-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151124-p1",
+      "seed": 151124,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 36,
+      "hero_damage": 22,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 69
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151124-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151124-p2",
+      "seed": 151124,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 41,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 42
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151124-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151125-p1",
+      "seed": 151125,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 34,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 32
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151125-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151125-p2",
+      "seed": 151125,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 32,
+      "hero_damage": 49,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 74
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151125-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151126-p1",
+      "seed": 151126,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 29,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 47
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151126-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151126-p2",
+      "seed": 151126,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 37,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 48
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151126-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151127-p1",
+      "seed": 151127,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 36,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 39
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151127-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151127-p2",
+      "seed": 151127,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 38,
+      "hero_damage": 49,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 72
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151127-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151128-p1",
+      "seed": 151128,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 37,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 41
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151128-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151128-p2",
+      "seed": 151128,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 30,
+      "hero_damage": 45,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 65
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151128-p2/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151129-p1",
+      "seed": 151129,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "priest",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 33,
+      "hero_damage": 15,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 58
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151129-p1/replay.jsonl"
+    },
+    {
+      "game_id": "priest-s151129-p2",
+      "seed": 151129,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "priest",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 46,
+      "hero_damage": 31,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 94
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/priest-s151129-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151100-p1",
+      "seed": 151100,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 17,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 39
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151100-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151100-p2",
+      "seed": 151100,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 17
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151100-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151101-p1",
+      "seed": 151101,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 25,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151101-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151101-p2",
+      "seed": 151101,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 27,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 37
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151101-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151102-p1",
+      "seed": 151102,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 21,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151102-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151102-p2",
+      "seed": 151102,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 24,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 44
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151102-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151103-p1",
+      "seed": 151103,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 34
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151103-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151103-p2",
+      "seed": 151103,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 21,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 30
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151103-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151104-p1",
+      "seed": 151104,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 26,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 46
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151104-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151104-p2",
+      "seed": 151104,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 26,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151104-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151105-p1",
+      "seed": 151105,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 25,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 36
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151105-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151105-p2",
+      "seed": 151105,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 18,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 37
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151105-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151106-p1",
+      "seed": 151106,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 28
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151106-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151106-p2",
+      "seed": 151106,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 23,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151106-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151107-p1",
+      "seed": 151107,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 24,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 50
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151107-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151107-p2",
+      "seed": 151107,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 11,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 15
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151107-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151108-p1",
+      "seed": 151108,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 28,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 37
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151108-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151108-p2",
+      "seed": 151108,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 28,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151108-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151109-p1",
+      "seed": 151109,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 22,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 29
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151109-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151109-p2",
+      "seed": 151109,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 27,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151109-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151110-p1",
+      "seed": 151110,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 26,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 40
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151110-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151110-p2",
+      "seed": 151110,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 27,
+      "hero_damage": 23,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 49
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151110-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151111-p1",
+      "seed": 151111,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 19
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151111-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151111-p2",
+      "seed": 151111,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 20,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 37
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151111-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151112-p1",
+      "seed": 151112,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 11
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151112-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151112-p2",
+      "seed": 151112,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 23,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 45
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151112-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151113-p1",
+      "seed": 151113,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 23,
+      "hero_damage": 24,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 50
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151113-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151113-p2",
+      "seed": 151113,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 24,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 29
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151113-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151114-p1",
+      "seed": 151114,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 4,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 35
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151114-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151114-p2",
+      "seed": 151114,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 25,
+      "hero_damage": 19,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 54
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151114-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151115-p1",
+      "seed": 151115,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 24,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 34
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151115-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151115-p2",
+      "seed": 151115,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 23,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 51
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151115-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151116-p1",
+      "seed": 151116,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 24,
+      "hero_damage": 26,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151116-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151116-p2",
+      "seed": 151116,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 17
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151116-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151117-p1",
+      "seed": 151117,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 25,
+      "hero_damage": 20,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 45
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151117-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151117-p2",
+      "seed": 151117,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 23,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 53
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151117-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151118-p1",
+      "seed": 151118,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 22,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 34
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151118-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151118-p2",
+      "seed": 151118,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 26,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151118-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151119-p1",
+      "seed": 151119,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 14,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 19
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151119-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151119-p2",
+      "seed": 151119,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 21,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 32
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151119-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151120-p1",
+      "seed": 151120,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 21,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 36
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151120-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151120-p2",
+      "seed": 151120,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 18,
+      "hero_damage": 22,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151120-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151121-p1",
+      "seed": 151121,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 24,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 37
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151121-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151121-p2",
+      "seed": 151121,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 21,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151121-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151122-p1",
+      "seed": 151122,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 23,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 39
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151122-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151122-p2",
+      "seed": 151122,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 13,
+      "hero_damage": 2,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 17
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151122-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151123-p1",
+      "seed": 151123,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 21,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 43
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151123-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151123-p2",
+      "seed": 151123,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 31,
+      "hero_damage": 18,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 61
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151123-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151124-p1",
+      "seed": 151124,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 23
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151124-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151124-p2",
+      "seed": 151124,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 4,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 24
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151124-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151125-p1",
+      "seed": 151125,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 25,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151125-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151125-p2",
+      "seed": 151125,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 18,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 45
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151125-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151126-p1",
+      "seed": 151126,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 22,
+      "hero_damage": 26,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 48
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151126-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151126-p2",
+      "seed": 151126,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 17,
+      "hero_damage": 28,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 33
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151126-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151127-p1",
+      "seed": 151127,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 28,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 26
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151127-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151127-p2",
+      "seed": 151127,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 23,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151127-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151128-p1",
+      "seed": 151128,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 27,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151128-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151128-p2",
+      "seed": 151128,
+      "candidate_seat": 2,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 15,
+      "hero_damage": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 20
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151128-p2/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151129-p1",
+      "seed": 151129,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "zoo",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 16,
+      "hero_damage": 20,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 31
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151129-p1/replay.jsonl"
+    },
+    {
+      "game_id": "zoo-s151129-p2",
+      "seed": 151129,
+      "candidate_seat": 2,
+      "candidate_first": true,
+      "opponent": "zoo",
+      "winner": 2,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 25,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "mulligan": 1,
+        "main": 38
+      },
+      "replay": "experiments/priest-safety-v1-holdout/games/zoo-s151129-p2/replay.jsonl"
+    }
+  ]
+}

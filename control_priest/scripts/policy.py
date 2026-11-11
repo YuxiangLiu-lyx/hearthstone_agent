@@ -40,6 +40,7 @@ def rank_actions(state, config=None):
     danger = threat(o)+3 >= health or next_fatigue >= health
     temporary = set(state.get("temporary_control", []))
     combined = joint_scores(state, ranked) if config.get("joint_combat", True) else {}
+    from priest_safety import fatal_attack
     result = []
     for score, action in ranked:
         kind, target = action["type"], action.get("target")
@@ -132,6 +133,8 @@ def rank_actions(state, config=None):
                 if cid not in ("EX1_091", "EX1_198", "EX1_093", "EX1_623"):
                     score -= 5  # Preserve follow-up bodies while ahead of public board pressure.
         score = max(score, combined.get(key(action), -100000))
+        if fatal_attack(state, action):
+            score = -10000.
         result.append((score, action))
     return sorted(result, key=lambda pair: pair[0], reverse=True)
 

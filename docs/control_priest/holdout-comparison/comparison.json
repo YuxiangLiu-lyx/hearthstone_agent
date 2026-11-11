@@ -1,0 +1,93 @@
+{
+  "arms": {
+    "Original": {
+      "sources": [
+        "experiments/priest-original-holdout"
+      ],
+      "wins": 157,
+      "games": 300,
+      "win_rate": 0.5233333333333333,
+      "wilson95": [
+        0.46687729355961566,
+        0.5791993463738232
+      ],
+      "mean_turns": 22.496666666666666,
+      "mean_hero_damage": 22.756666666666668,
+      "policy_errors": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exits": 0
+    },
+    "GenericNewDeck": {
+      "sources": [
+        "experiments/priest-generic-holdout"
+      ],
+      "wins": 159,
+      "games": 300,
+      "win_rate": 0.53,
+      "wilson95": [
+        0.47349920136870094,
+        0.585742192831435
+      ],
+      "mean_turns": 22.576666666666668,
+      "mean_hero_damage": 22.473333333333333,
+      "policy_errors": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exits": 0
+    },
+    "ControlPriest": {
+      "sources": [
+        "experiments/priest-final-holdout"
+      ],
+      "wins": 231,
+      "games": 300,
+      "win_rate": 0.77,
+      "wilson95": [
+        0.7191436245386645,
+        0.8140289232625583
+      ],
+      "mean_turns": 22.036666666666665,
+      "mean_hero_damage": 28.436666666666667,
+      "policy_errors": 0,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exits": 0
+    }
+  },
+  "comparisons": {
+    "GenericNewDeck-Original": {
+      "paired_games": 300,
+      "seed_clusters": 30,
+      "delta": 0.006666666666666667,
+      "cluster_bootstrap95": [
+        -0.06666666666666667,
+        0.07666666666666667
+      ],
+      "gains": 63,
+      "losses": 61
+    },
+    "ControlPriest-Original": {
+      "paired_games": 300,
+      "seed_clusters": 30,
+      "delta": 0.24666666666666667,
+      "cluster_bootstrap95": [
+        0.15333333333333332,
+        0.3333333333333333
+      ],
+      "gains": 103,
+      "losses": 29
+    },
+    "ControlPriest-GenericNewDeck": {
+      "paired_games": 300,
+      "seed_clusters": 30,
+      "delta": 0.24,
+      "cluster_bootstrap95": [
+        0.18,
+        0.3
+      ],
+      "gains": 85,
+      "losses": 13
+    }
+  }
+}

@@ -1,0 +1,2284 @@
+{
+  "run": "experiments/priest-final-holdout",
+  "counts": {
+    "main_decisions": 12896,
+    "inherited_immediate_lethals": 230,
+    "temporary_steals": 97,
+    "permanent_steals": 218,
+    "scarlet_then_cabal": 10
+  },
+  "played_cards": {
+    "EX1_196": 300,
+    "EX1_195": 305,
+    "EX1_556": 288,
+    "CS2_179": 262,
+    "CS2_234": 145,
+    "EX1_110": 136,
+    "EX1_623": 285,
+    "EX1_339": 218,
+    "EX1_066": 170,
+    "EX1_093": 261,
+    "EX1_334": 97,
+    "GAME_005": 132,
+    "EX1_091": 256,
+    "CS1_112": 219,
+    "EX1_198": 123,
+    "CS2_004": 119,
+    "EX1_608": 5,
+    "CS2_024": 7,
+    "NEW1_012": 4,
+    "EX1_067": 13,
+    "EX1_564": 112,
+    "CS2_182": 21,
+    "EX1_032": 114,
+    "EX1_622": 156,
+    "EX1_028": 10,
+    "CS2_033": 5,
+    "CS1_113": 61,
+    "CS2_029": 7,
+    "CS2_023": 5,
+    "CS2_022": 5,
+    "CS2_200": 11,
+    "EX1_277": 5,
+    "CS2_032": 2,
+    "EX1_012": 1,
+    "CS2_171": 2,
+    "DS1_185": 4,
+    "EX1_534": 3,
+    "EX1_536": 4,
+    "EX1_531": 2,
+    "EX1_538": 2,
+    "CS2_120": 1,
+    "NEW1_031": 2,
+    "DS1_175": 1,
+    "EX1_017": 2,
+    "CS2_172": 3,
+    "EX1_029": 3,
+    "CS2_124": 1,
+    "EX1_008": 7,
+    "NEW1_023": 14,
+    "EX1_362": 6,
+    "CS2_088": 8,
+    "EX1_019": 10,
+    "CS2_097": 6,
+    "CS2_092": 3,
+    "EX1_382": 4,
+    "CS2_151": 4,
+    "CS2_093": 1,
+    "CS2_117": 3,
+    "EX1_194": 7,
+    "EX1_046": 4,
+    "EX1_162": 5,
+    "NEW1_019": 3,
+    "CS2_065": 1,
+    "CS2_188": 2,
+    "EX1_308": 4,
+    "EX1_586": 8,
+    "EX1_319": 4
+  },
+  "lethal_priority_differences": [],
+  "scope": "Observed actions and adjacent public states only. This verifies inherited direct-lethal priority, not exhaustive missed-lethal absence. Steals without a following same-turn observation are not counted.",
+  "examples": {
+    "temporary_steals": {
+      "game": "greedy-s151000-p2",
+      "seq": 10,
+      "before": {
+        "protocol_version": "1",
+        "game_id": "greedy-s151000-p2",
+        "seq": 10,
+        "player": 2,
+        "turn": 10,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794356321.222,
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_09",
+            "name": "Anduin Wrynn",
+            "hero_class": "PRIEST",
+            "health": 23,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_09bp",
+            "name": "Lesser Heal",
+            "cost": 2,
+            "usable": true,
+            "text": "Restore 2 Health."
+          },
+          "weapon": null,
+          "mana": 5,
+          "max_mana": 5,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 67,
+              "card_id": "EX1_334",
+              "name": "Shadow Madness",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "Gain control of an enemy minion with 3 or less Attack until end of turn.",
+              "playable": true
+            },
+            {
+              "entity_id": 54,
+              "card_id": "EX1_623",
+              "name": "Temple Enforcer",
+              "type": "MINION",
+              "cost": 5,
+              "attack": 5,
+              "health": 6,
+              "text": "Battlecry: Give a friendly minion +3 Health.",
+              "playable": true
+            },
+            {
+              "entity_id": 57,
+              "card_id": "EX1_091",
+              "name": "Cabal Shadow Priest",
+              "type": "MINION",
+              "cost": 6,
+              "attack": 4,
+              "health": 5,
+              "text": "Battlecry: Take control of an enemy minion that has 2 or less Attack.",
+              "playable": false
+            },
+            {
+              "entity_id": 70,
+              "card_id": "GAME_005",
+              "name": "The Coin",
+              "type": "SPELL",
+              "cost": 0,
+              "text": "Gain 1 Mana Crystal this turn only.",
+              "playable": true
+            },
+            {
+              "entity_id": 53,
+              "card_id": "CS1_112",
+              "name": "Holy Nova",
+              "type": "SPELL",
+              "cost": 4,
+              "text": "Deal 2 damage to all enemy minions. Restore 2 Health to all friendly characters.",
+              "playable": true
+            },
+            {
+              "entity_id": 51,
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta",
+              "type": "MINION",
+              "cost": 4,
+              "attack": 3,
+              "health": 5,
+              "text": "Taunt",
+              "playable": true
+            },
+            {
+              "entity_id": 45,
+              "card_id": "CS2_234",
+              "name": "Shadow Word: Pain",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Destroy a minion with 3 or less Attack.",
+              "playable": true
+            },
+            {
+              "entity_id": 48,
+              "card_id": "EX1_556",
+              "name": "Harvest Golem",
+              "type": "MINION",
+              "cost": 3,
+              "attack": 2,
+              "health": 3,
+              "text": "Deathrattle: Summon a 2/1 Damaged Golem.",
+              "playable": true
+            }
+          ],
+          "board": [],
+          "secrets": [],
+          "deck_remaining": 21,
+          "deck_remaining_counts": {
+            "CS1_112": 1,
+            "CS1_113": 1,
+            "CS2_004": 1,
+            "CS2_179": 1,
+            "CS2_234": 1,
+            "EX1_032": 1,
+            "EX1_091": 1,
+            "EX1_093": 1,
+            "EX1_110": 1,
+            "EX1_195": 2,
+            "EX1_196": 2,
+            "EX1_198": 1,
+            "EX1_339": 2,
+            "EX1_556": 1,
+            "EX1_564": 1,
+            "EX1_622": 2,
+            "EX1_623": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_093",
+              "name": "Defender of Argus"
+            },
+            {
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_08",
+            "name": "Jaina Proudmoore",
+            "hero_class": "MAGE",
+            "health": 30,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_08bp",
+            "name": "Fireblast",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 1 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 5,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 4,
+          "board": [
+            {
+              "entity_id": 17,
+              "card_id": "EX1_556",
+              "name": "Harvest Golem",
+              "attack": 2,
+              "health": 3,
+              "max_health": 3,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": true,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+            },
+            {
+              "entity_id": 20,
+              "card_id": "CS2_182",
+              "name": "Chillwind Yeti",
+              "attack": 4,
+              "health": 1,
+              "max_health": 5,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": ""
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 20,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_277",
+              "name": "Arcane Missiles"
+            },
+            {
+              "card_id": "NEW1_012",
+              "name": "Mana Wyrm"
+            },
+            {
+              "card_id": "CS2_024",
+              "name": "Frostbolt"
+            },
+            {
+              "card_id": "CS2_023",
+              "name": "Arcane Intellect"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 67,
+            "targets": [
+              17
+            ],
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 54,
+            "targets": null,
+            "positions": [
+              0
+            ],
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 70,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 53,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 51,
+            "targets": null,
+            "positions": [
+              0
+            ],
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 45,
+            "targets": [
+              17
+            ],
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 48,
+            "targets": null,
+            "positions": [
+              0
+            ],
+            "choose": null
+          },
+          {
+            "type": "hero_power",
+            "targets": [
+              4,
+              17,
+              20,
+              37
+            ]
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "end_turn",
+            "player": 2
+          },
+          {
+            "event": "turn_start",
+            "turn": 9,
+            "player": 1
+          },
+          {
+            "event": "draw",
+            "player": 1
+          },
+          {
+            "event": "attack",
+            "player": 1,
+            "attacker": {
+              "entity_id": 20,
+              "card_id": "CS2_182",
+              "name": "Chillwind Yeti"
+            },
+            "target": {
+              "entity_id": 41,
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 2,
+            "entity_id": 41,
+            "card_id": "EX1_066",
+            "name": "Acidic Swamp Ooze",
+            "amount": 4,
+            "health_after": -2,
+            "source": {
+              "entity_id": 20,
+              "card_id": "CS2_182",
+              "name": "Chillwind Yeti"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 1,
+            "entity_id": 20,
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti",
+            "amount": 4,
+            "health_after": 1,
+            "source": {
+              "entity_id": 41,
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze"
+            }
+          },
+          {
+            "event": "death",
+            "player": 2,
+            "entity_id": 41,
+            "card_id": "EX1_066",
+            "name": "Acidic Swamp Ooze"
+          },
+          {
+            "event": "play_card",
+            "player": 1,
+            "card_id": "CS2_024",
+            "name": "Frostbolt",
+            "entity_id": 10,
+            "cost": 2,
+            "target": {
+              "entity_id": 58,
+              "card_id": "EX1_093",
+              "name": "Defender of Argus"
+            },
+            "position": null,
+            "choose": null
+          },
+          {
+            "event": "damage",
+            "player": 2,
+            "entity_id": 58,
+            "card_id": "EX1_093",
+            "name": "Defender of Argus",
+            "amount": 3,
+            "health_after": 0,
+            "source": {
+              "entity_id": 10,
+              "card_id": "CS2_024",
+              "name": "Frostbolt"
+            }
+          },
+          {
+            "event": "death",
+            "player": 2,
+            "entity_id": 58,
+            "card_id": "EX1_093",
+            "name": "Defender of Argus"
+          },
+          {
+            "event": "play_card",
+            "player": 1,
+            "card_id": "CS2_023",
+            "name": "Arcane Intellect",
+            "entity_id": 15,
+            "cost": 3,
+            "target": null,
+            "position": null,
+            "choose": null
+          },
+          {
+            "event": "draw",
+            "player": 1
+          },
+          {
+            "event": "draw",
+            "player": 1
+          },
+          {
+            "event": "attack",
+            "player": 1,
+            "attacker": {
+              "entity_id": 17,
+              "card_id": "EX1_556",
+              "name": "Harvest Golem"
+            },
+            "target": {
+              "entity_id": 37,
+              "card_id": "HERO_09",
+              "name": "Anduin Wrynn"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 2,
+            "entity_id": 37,
+            "card_id": "HERO_09",
+            "name": "Anduin Wrynn",
+            "amount": 2,
+            "health_after": 23,
+            "source": {
+              "entity_id": 17,
+              "card_id": "EX1_556",
+              "name": "Harvest Golem"
+            },
+            "armor_absorbed": 0,
+            "armor_after": 0
+          },
+          {
+            "event": "end_turn",
+            "player": 1
+          },
+          {
+            "event": "turn_start",
+            "turn": 10,
+            "player": 2
+          },
+          {
+            "event": "draw",
+            "player": 2,
+            "card_id": "EX1_556",
+            "entity_id": 48
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "temporary_control": []
+      },
+      "action": {
+        "type": "play_card",
+        "card": 67,
+        "target": 17
+      },
+      "after": {
+        "protocol_version": "1",
+        "game_id": "greedy-s151000-p2",
+        "seq": 11,
+        "player": 2,
+        "turn": 10,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794356321.223,
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_09",
+            "name": "Anduin Wrynn",
+            "hero_class": "PRIEST",
+            "health": 23,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_09bp",
+            "name": "Lesser Heal",
+            "cost": 2,
+            "usable": true,
+            "text": "Restore 2 Health."
+          },
+          "weapon": null,
+          "mana": 2,
+          "max_mana": 5,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 54,
+              "card_id": "EX1_623",
+              "name": "Temple Enforcer",
+              "type": "MINION",
+              "cost": 5,
+              "attack": 5,
+              "health": 6,
+              "text": "Battlecry: Give a friendly minion +3 Health.",
+              "playable": false
+            },
+            {
+              "entity_id": 57,
+              "card_id": "EX1_091",
+              "name": "Cabal Shadow Priest",
+              "type": "MINION",
+              "cost": 6,
+              "attack": 4,
+              "health": 5,
+              "text": "Battlecry: Take control of an enemy minion that has 2 or less Attack.",
+              "playable": false
+            },
+            {
+              "entity_id": 70,
+              "card_id": "GAME_005",
+              "name": "The Coin",
+              "type": "SPELL",
+              "cost": 0,
+              "text": "Gain 1 Mana Crystal this turn only.",
+              "playable": true
+            },
+            {
+              "entity_id": 53,
+              "card_id": "CS1_112",
+              "name": "Holy Nova",
+              "type": "SPELL",
+              "cost": 4,
+              "text": "Deal 2 damage to all enemy minions. Restore 2 Health to all friendly characters.",
+              "playable": false
+            },
+            {
+              "entity_id": 51,
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta",
+              "type": "MINION",
+              "cost": 4,
+              "attack": 3,
+              "health": 5,
+              "text": "Taunt",
+              "playable": false
+            },
+            {
+              "entity_id": 45,
+              "card_id": "CS2_234",
+              "name": "Shadow Word: Pain",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Destroy a minion with 3 or less Attack.",
+              "playable": true
+            },
+            {
+              "entity_id": 48,
+              "card_id": "EX1_556",
+              "name": "Harvest Golem",
+              "type": "MINION",
+              "cost": 3,
+              "attack": 2,
+              "health": 3,
+              "text": "Deathrattle: Summon a 2/1 Damaged Golem.",
+              "playable": false
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 17,
+              "card_id": "EX1_556",
+              "name": "Harvest Golem",
+              "attack": 2,
+              "health": 3,
+              "max_health": 3,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": true,
+              "poisonous": false,
+              "deathrattle": true,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 21,
+          "deck_remaining_counts": {
+            "CS1_112": 1,
+            "CS1_113": 1,
+            "CS2_004": 1,
+            "CS2_179": 1,
+            "CS2_234": 1,
+            "EX1_032": 1,
+            "EX1_091": 1,
+            "EX1_093": 1,
+            "EX1_110": 1,
+            "EX1_195": 2,
+            "EX1_196": 2,
+            "EX1_198": 1,
+            "EX1_339": 2,
+            "EX1_556": 1,
+            "EX1_564": 1,
+            "EX1_622": 2,
+            "EX1_623": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_093",
+              "name": "Defender of Argus"
+            },
+            {
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze"
+            },
+            {
+              "card_id": "EX1_334",
+              "name": "Shadow Madness"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_08",
+            "name": "Jaina Proudmoore",
+            "hero_class": "MAGE",
+            "health": 30,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_08bp",
+            "name": "Fireblast",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 1 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 5,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 4,
+          "board": [
+            {
+              "entity_id": 20,
+              "card_id": "CS2_182",
+              "name": "Chillwind Yeti",
+              "attack": 4,
+              "health": 1,
+              "max_health": 5,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": ""
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 20,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_277",
+              "name": "Arcane Missiles"
+            },
+            {
+              "card_id": "NEW1_012",
+              "name": "Mana Wyrm"
+            },
+            {
+              "card_id": "CS2_024",
+              "name": "Frostbolt"
+            },
+            {
+              "card_id": "CS2_023",
+              "name": "Arcane Intellect"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 70,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 45,
+            "targets": [
+              17
+            ],
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "attack",
+            "attacker": 17,
+            "targets": [
+              4,
+              20
+            ]
+          },
+          {
+            "type": "hero_power",
+            "targets": [
+              4,
+              17,
+              20,
+              37
+            ]
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "play_card",
+            "player": 2,
+            "card_id": "EX1_334",
+            "name": "Shadow Madness",
+            "entity_id": 67,
+            "cost": 3,
+            "target": {
+              "entity_id": 17,
+              "card_id": "EX1_556",
+              "name": "Harvest Golem"
+            },
+            "position": null,
+            "choose": null
+          },
+          {
+            "event": "leave_board",
+            "player": 1,
+            "entity_id": 17,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem"
+          },
+          {
+            "event": "summon",
+            "player": 2,
+            "entity_id": 17,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem"
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "temporary_control": [
+          17
+        ]
+      }
+    },
+    "permanent_steals": {
+      "game": "greedy-s151003-p2",
+      "seq": 41,
+      "before": {
+        "protocol_version": "1",
+        "game_id": "greedy-s151003-p2",
+        "seq": 41,
+        "player": 2,
+        "turn": 26,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794356321.375,
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_09",
+            "name": "Anduin Wrynn",
+            "hero_class": "PRIEST",
+            "health": 23,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_09bp",
+            "name": "Lesser Heal",
+            "cost": 2,
+            "usable": true,
+            "text": "Restore 2 Health."
+          },
+          "weapon": null,
+          "mana": 10,
+          "max_mana": 10,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 61,
+              "card_id": "CS1_113",
+              "name": "Mind Control",
+              "type": "SPELL",
+              "cost": 10,
+              "text": "Take control of an enemy minion.",
+              "playable": true
+            }
+          ],
+          "board": [],
+          "secrets": [],
+          "deck_remaining": 13,
+          "deck_remaining_counts": {
+            "CS2_234": 1,
+            "EX1_066": 1,
+            "EX1_195": 1,
+            "EX1_196": 2,
+            "EX1_198": 1,
+            "EX1_339": 2,
+            "EX1_556": 1,
+            "EX1_564": 1,
+            "EX1_622": 1,
+            "EX1_623": 2
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta"
+            },
+            {
+              "card_id": "EX1_091",
+              "name": "Cabal Shadow Priest"
+            },
+            {
+              "card_id": "EX1_093",
+              "name": "Defender of Argus"
+            },
+            {
+              "card_id": "EX1_195",
+              "name": "Kul Tiran Chaplain"
+            },
+            {
+              "card_id": "EX1_091",
+              "name": "Cabal Shadow Priest"
+            },
+            {
+              "card_id": "EX1_093",
+              "name": "Defender of Argus"
+            },
+            {
+              "card_id": "skele21",
+              "name": "Damaged Golem"
+            },
+            {
+              "card_id": "CS2_tk1",
+              "name": "Sheep"
+            },
+            {
+              "card_id": "CS2_tk1",
+              "name": "Sheep"
+            },
+            {
+              "card_id": "EX1_556",
+              "name": "Harvest Golem"
+            },
+            {
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "skele21",
+              "name": "Damaged Golem"
+            },
+            {
+              "card_id": "EX1_334",
+              "name": "Shadow Madness"
+            },
+            {
+              "card_id": "EX1_556",
+              "name": "Harvest Golem"
+            },
+            {
+              "card_id": "CS1_112",
+              "name": "Holy Nova"
+            },
+            {
+              "card_id": "CS2_004",
+              "name": "Power Word: Shield"
+            },
+            {
+              "card_id": "CS1_112",
+              "name": "Holy Nova"
+            },
+            {
+              "card_id": "CS2_234",
+              "name": "Shadow Word: Pain"
+            },
+            {
+              "card_id": "EX1_622",
+              "name": "Shadow Word: Death"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_08",
+            "name": "Jaina Proudmoore",
+            "hero_class": "MAGE",
+            "health": 25,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_08bp",
+            "name": "Fireblast",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 1 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 10,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 0,
+          "board": [
+            {
+              "entity_id": 34,
+              "card_id": "EX1_067",
+              "name": "Argent Commander",
+              "attack": 4,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": true,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Charge Divine Shield"
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 10,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_277",
+              "name": "Arcane Missiles"
+            },
+            {
+              "card_id": "EX1_608",
+              "name": "Sorcerer's Apprentice"
+            },
+            {
+              "card_id": "EX1_277",
+              "name": "Arcane Missiles"
+            },
+            {
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta"
+            },
+            {
+              "card_id": "CS2_029",
+              "name": "Fireball"
+            },
+            {
+              "card_id": "CS2_024",
+              "name": "Frostbolt"
+            },
+            {
+              "card_id": "CS2_022",
+              "name": "Polymorph"
+            },
+            {
+              "card_id": "CS2_022",
+              "name": "Polymorph"
+            },
+            {
+              "card_id": "CS2_023",
+              "name": "Arcane Intellect"
+            },
+            {
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta"
+            },
+            {
+              "card_id": "CS2_032",
+              "name": "Flamestrike"
+            },
+            {
+              "card_id": "EX1_028",
+              "name": "Stranglethorn Tiger"
+            },
+            {
+              "card_id": "EX1_608",
+              "name": "Sorcerer's Apprentice"
+            },
+            {
+              "card_id": "CS2_033",
+              "name": "Water Elemental"
+            },
+            {
+              "card_id": "CS2_023",
+              "name": "Arcane Intellect"
+            },
+            {
+              "card_id": "CS2_200",
+              "name": "Boulderfist Ogre"
+            },
+            {
+              "card_id": "EX1_067",
+              "name": "Argent Commander"
+            },
+            {
+              "card_id": "CS2_024",
+              "name": "Frostbolt"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 61,
+            "targets": [
+              34
+            ],
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "hero_power",
+            "targets": [
+              4,
+              34,
+              37
+            ]
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "end_turn",
+            "player": 2
+          },
+          {
+            "event": "turn_start",
+            "turn": 25,
+            "player": 1
+          },
+          {
+            "event": "draw",
+            "player": 1
+          },
+          {
+            "event": "play_card",
+            "player": 1,
+            "card_id": "EX1_067",
+            "name": "Argent Commander",
+            "entity_id": 34,
+            "cost": 6,
+            "target": null,
+            "position": 0,
+            "choose": null
+          },
+          {
+            "event": "play_card",
+            "player": 1,
+            "card_id": "CS2_024",
+            "name": "Frostbolt",
+            "entity_id": 10,
+            "cost": 2,
+            "target": {
+              "entity_id": 56,
+              "card_id": "EX1_091",
+              "name": "Cabal Shadow Priest"
+            },
+            "position": null,
+            "choose": null
+          },
+          {
+            "event": "damage",
+            "player": 2,
+            "entity_id": 56,
+            "card_id": "EX1_091",
+            "name": "Cabal Shadow Priest",
+            "amount": 3,
+            "health_after": -2,
+            "source": {
+              "entity_id": 10,
+              "card_id": "CS2_024",
+              "name": "Frostbolt"
+            }
+          },
+          {
+            "event": "death",
+            "player": 2,
+            "entity_id": 56,
+            "card_id": "EX1_091",
+            "name": "Cabal Shadow Priest"
+          },
+          {
+            "event": "attack",
+            "player": 1,
+            "attacker": {
+              "entity_id": 34,
+              "card_id": "EX1_067",
+              "name": "Argent Commander"
+            },
+            "target": {
+              "entity_id": 50,
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 2,
+            "entity_id": 50,
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta",
+            "amount": 4,
+            "health_after": 1,
+            "source": {
+              "entity_id": 34,
+              "card_id": "EX1_067",
+              "name": "Argent Commander"
+            }
+          },
+          {
+            "event": "divine_shield_lost",
+            "player": 1,
+            "entity_id": 34,
+            "card_id": "EX1_067",
+            "name": "Argent Commander"
+          },
+          {
+            "event": "hero_power",
+            "player": 1,
+            "card_id": "HERO_08bp",
+            "name": "Fireblast",
+            "target": {
+              "entity_id": 50,
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 2,
+            "entity_id": 50,
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta",
+            "amount": 1,
+            "health_after": 0,
+            "source": {
+              "entity_id": 5,
+              "card_id": "HERO_08bp",
+              "name": "Fireblast"
+            }
+          },
+          {
+            "event": "death",
+            "player": 2,
+            "entity_id": 50,
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta"
+          },
+          {
+            "event": "end_turn",
+            "player": 1
+          },
+          {
+            "event": "turn_start",
+            "turn": 26,
+            "player": 2
+          },
+          {
+            "event": "draw",
+            "player": 2,
+            "card_id": "CS1_113",
+            "entity_id": 61
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "temporary_control": []
+      },
+      "action": {
+        "type": "play_card",
+        "card": 61,
+        "target": 34
+      },
+      "after": {
+        "protocol_version": "1",
+        "game_id": "greedy-s151003-p2",
+        "seq": 42,
+        "player": 2,
+        "turn": 26,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794356321.376,
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_09",
+            "name": "Anduin Wrynn",
+            "hero_class": "PRIEST",
+            "health": 23,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_09bp",
+            "name": "Lesser Heal",
+            "cost": 2,
+            "usable": false,
+            "text": "Restore 2 Health."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 10,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [],
+          "board": [
+            {
+              "entity_id": 34,
+              "card_id": "EX1_067",
+              "name": "Argent Commander",
+              "attack": 4,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": true,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Charge Divine Shield"
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 13,
+          "deck_remaining_counts": {
+            "CS2_234": 1,
+            "EX1_066": 1,
+            "EX1_195": 1,
+            "EX1_196": 2,
+            "EX1_198": 1,
+            "EX1_339": 2,
+            "EX1_556": 1,
+            "EX1_564": 1,
+            "EX1_622": 1,
+            "EX1_623": 2
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta"
+            },
+            {
+              "card_id": "EX1_091",
+              "name": "Cabal Shadow Priest"
+            },
+            {
+              "card_id": "EX1_093",
+              "name": "Defender of Argus"
+            },
+            {
+              "card_id": "EX1_195",
+              "name": "Kul Tiran Chaplain"
+            },
+            {
+              "card_id": "EX1_091",
+              "name": "Cabal Shadow Priest"
+            },
+            {
+              "card_id": "EX1_093",
+              "name": "Defender of Argus"
+            },
+            {
+              "card_id": "skele21",
+              "name": "Damaged Golem"
+            },
+            {
+              "card_id": "CS2_tk1",
+              "name": "Sheep"
+            },
+            {
+              "card_id": "CS2_tk1",
+              "name": "Sheep"
+            },
+            {
+              "card_id": "EX1_556",
+              "name": "Harvest Golem"
+            },
+            {
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "skele21",
+              "name": "Damaged Golem"
+            },
+            {
+              "card_id": "EX1_334",
+              "name": "Shadow Madness"
+            },
+            {
+              "card_id": "EX1_556",
+              "name": "Harvest Golem"
+            },
+            {
+              "card_id": "CS1_112",
+              "name": "Holy Nova"
+            },
+            {
+              "card_id": "CS2_004",
+              "name": "Power Word: Shield"
+            },
+            {
+              "card_id": "CS1_112",
+              "name": "Holy Nova"
+            },
+            {
+              "card_id": "CS2_234",
+              "name": "Shadow Word: Pain"
+            },
+            {
+              "card_id": "EX1_622",
+              "name": "Shadow Word: Death"
+            },
+            {
+              "card_id": "CS1_113",
+              "name": "Mind Control"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_08",
+            "name": "Jaina Proudmoore",
+            "hero_class": "MAGE",
+            "health": 25,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_08bp",
+            "name": "Fireblast",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 1 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 10,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 0,
+          "board": [],
+          "secrets_count": 0,
+          "deck_remaining": 10,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_277",
+              "name": "Arcane Missiles"
+            },
+            {
+              "card_id": "EX1_608",
+              "name": "Sorcerer's Apprentice"
+            },
+            {
+              "card_id": "EX1_277",
+              "name": "Arcane Missiles"
+            },
+            {
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta"
+            },
+            {
+              "card_id": "CS2_029",
+              "name": "Fireball"
+            },
+            {
+              "card_id": "CS2_024",
+              "name": "Frostbolt"
+            },
+            {
+              "card_id": "CS2_022",
+              "name": "Polymorph"
+            },
+            {
+              "card_id": "CS2_022",
+              "name": "Polymorph"
+            },
+            {
+              "card_id": "CS2_023",
+              "name": "Arcane Intellect"
+            },
+            {
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta"
+            },
+            {
+              "card_id": "CS2_032",
+              "name": "Flamestrike"
+            },
+            {
+              "card_id": "EX1_028",
+              "name": "Stranglethorn Tiger"
+            },
+            {
+              "card_id": "EX1_608",
+              "name": "Sorcerer's Apprentice"
+            },
+            {
+              "card_id": "CS2_033",
+              "name": "Water Elemental"
+            },
+            {
+              "card_id": "CS2_023",
+              "name": "Arcane Intellect"
+            },
+            {
+              "card_id": "CS2_200",
+              "name": "Boulderfist Ogre"
+            },
+            {
+              "card_id": "EX1_067",
+              "name": "Argent Commander"
+            },
+            {
+              "card_id": "CS2_024",
+              "name": "Frostbolt"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "attack",
+            "attacker": 34,
+            "targets": [
+              4
+            ]
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "play_card",
+            "player": 2,
+            "card_id": "CS1_113",
+            "name": "Mind Control",
+            "entity_id": 61,
+            "cost": 10,
+            "target": {
+              "entity_id": 34,
+              "card_id": "EX1_067",
+              "name": "Argent Commander"
+            },
+            "position": null,
+            "choose": null
+          },
+          {
+            "event": "leave_board",
+            "player": 1,
+            "entity_id": 34,
+            "card_id": "EX1_067",
+            "name": "Argent Commander"
+          },
+          {
+            "event": "summon",
+            "player": 2,
+            "entity_id": 34,
+            "card_id": "EX1_067",
+            "name": "Argent Commander"
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "temporary_control": []
+      }
+    },
+    "scarlet_then_cabal": {
+      "game": "greedy-s151012-p2",
+      "seq": 23,
+      "before": {
+        "protocol_version": "1",
+        "game_id": "greedy-s151012-p2",
+        "seq": 23,
+        "player": 2,
+        "turn": 15,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794356321.687,
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_09",
+            "name": "Anduin Wrynn",
+            "hero_class": "PRIEST",
+            "health": 24,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_09bp",
+            "name": "Lesser Heal",
+            "cost": 2,
+            "usable": true,
+            "text": "Restore 2 Health."
+          },
+          "weapon": null,
+          "mana": 7,
+          "max_mana": 8,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 66,
+              "card_id": "EX1_032",
+              "name": "Sunwalker",
+              "type": "MINION",
+              "cost": 6,
+              "attack": 4,
+              "health": 5,
+              "text": "Taunt Divine Shield",
+              "playable": true
+            },
+            {
+              "entity_id": 67,
+              "card_id": "EX1_334",
+              "name": "Shadow Madness",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "Gain control of an enemy minion with 3 or less Attack until end of turn.",
+              "playable": true
+            },
+            {
+              "entity_id": 57,
+              "card_id": "EX1_091",
+              "name": "Cabal Shadow Priest",
+              "type": "MINION",
+              "cost": 6,
+              "attack": 4,
+              "health": 5,
+              "text": "Battlecry: Take control of an enemy minion that has 2 or less Attack.",
+              "playable": true
+            },
+            {
+              "entity_id": 46,
+              "card_id": "EX1_622",
+              "name": "Shadow Word: Death",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Destroy a minion with 5 or more Attack.",
+              "playable": false
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 39,
+              "card_id": "EX1_196",
+              "name": "Scarlet Subjugator",
+              "attack": 2,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Battlecry: Give an enemy minion -2 Attack until your next turn."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 19,
+          "deck_remaining_counts": {
+            "CS1_112": 2,
+            "CS1_113": 1,
+            "CS2_004": 1,
+            "CS2_179": 2,
+            "CS2_234": 1,
+            "EX1_091": 1,
+            "EX1_195": 2,
+            "EX1_196": 1,
+            "EX1_198": 1,
+            "EX1_339": 2,
+            "EX1_556": 2,
+            "EX1_564": 1,
+            "EX1_622": 1,
+            "EX1_623": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_093",
+              "name": "Defender of Argus"
+            },
+            {
+              "card_id": "CS2_tk1",
+              "name": "Sheep"
+            },
+            {
+              "card_id": "EX1_623",
+              "name": "Temple Enforcer"
+            },
+            {
+              "card_id": "EX1_093",
+              "name": "Defender of Argus"
+            },
+            {
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze"
+            },
+            {
+              "card_id": "CS2_234",
+              "name": "Shadow Word: Pain"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_08",
+            "name": "Jaina Proudmoore",
+            "hero_class": "MAGE",
+            "health": 22,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_08bp",
+            "name": "Fireblast",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 1 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 7,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 2,
+          "board": [
+            {
+              "entity_id": 20,
+              "card_id": "CS2_182",
+              "name": "Chillwind Yeti",
+              "attack": 2,
+              "health": 1,
+              "max_health": 5,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": ""
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 19,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "NEW1_012",
+              "name": "Mana Wyrm"
+            },
+            {
+              "card_id": "NEW1_012",
+              "name": "Mana Wyrm"
+            },
+            {
+              "card_id": "CS2_024",
+              "name": "Frostbolt"
+            },
+            {
+              "card_id": "CS2_182",
+              "name": "Chillwind Yeti"
+            },
+            {
+              "card_id": "CS2_029",
+              "name": "Fireball"
+            },
+            {
+              "card_id": "EX1_277",
+              "name": "Arcane Missiles"
+            },
+            {
+              "card_id": "EX1_608",
+              "name": "Sorcerer's Apprentice"
+            },
+            {
+              "card_id": "CS2_022",
+              "name": "Polymorph"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 66,
+            "targets": null,
+            "positions": [
+              0,
+              1
+            ],
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 67,
+            "targets": [
+              20
+            ],
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 57,
+            "targets": [
+              20
+            ],
+            "positions": [
+              0,
+              1
+            ],
+            "choose": null
+          },
+          {
+            "type": "hero_power",
+            "targets": [
+              4,
+              20,
+              37,
+              39
+            ]
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "play_card",
+            "player": 2,
+            "card_id": "EX1_196",
+            "name": "Scarlet Subjugator",
+            "entity_id": 39,
+            "cost": 1,
+            "target": {
+              "entity_id": 20,
+              "card_id": "CS2_182",
+              "name": "Chillwind Yeti"
+            },
+            "position": 0,
+            "choose": null
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "temporary_control": []
+      },
+      "action": {
+        "type": "play_card",
+        "card": 57,
+        "target": 20,
+        "position": 0
+      },
+      "after": {
+        "protocol_version": "1",
+        "game_id": "greedy-s151012-p2",
+        "seq": 24,
+        "player": 2,
+        "turn": 15,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794356321.688,
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_09",
+            "name": "Anduin Wrynn",
+            "hero_class": "PRIEST",
+            "health": 24,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_09bp",
+            "name": "Lesser Heal",
+            "cost": 2,
+            "usable": false,
+            "text": "Restore 2 Health."
+          },
+          "weapon": null,
+          "mana": 1,
+          "max_mana": 8,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 66,
+              "card_id": "EX1_032",
+              "name": "Sunwalker",
+              "type": "MINION",
+              "cost": 6,
+              "attack": 4,
+              "health": 5,
+              "text": "Taunt Divine Shield",
+              "playable": false
+            },
+            {
+              "entity_id": 67,
+              "card_id": "EX1_334",
+              "name": "Shadow Madness",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "Gain control of an enemy minion with 3 or less Attack until end of turn.",
+              "playable": false
+            },
+            {
+              "entity_id": 46,
+              "card_id": "EX1_622",
+              "name": "Shadow Word: Death",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Destroy a minion with 5 or more Attack.",
+              "playable": false
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 57,
+              "card_id": "EX1_091",
+              "name": "Cabal Shadow Priest",
+              "attack": 4,
+              "health": 5,
+              "max_health": 5,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Battlecry: Take control of an enemy minion that has 2 or less Attack."
+            },
+            {
+              "entity_id": 39,
+              "card_id": "EX1_196",
+              "name": "Scarlet Subjugator",
+              "attack": 2,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Battlecry: Give an enemy minion -2 Attack until your next turn."
+            },
+            {
+              "entity_id": 20,
+              "card_id": "CS2_182",
+              "name": "Chillwind Yeti",
+              "attack": 2,
+              "health": 5,
+              "max_health": 5,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": ""
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 19,
+          "deck_remaining_counts": {
+            "CS1_112": 2,
+            "CS1_113": 1,
+            "CS2_004": 1,
+            "CS2_179": 2,
+            "CS2_234": 1,
+            "EX1_091": 1,
+            "EX1_195": 2,
+            "EX1_196": 1,
+            "EX1_198": 1,
+            "EX1_339": 2,
+            "EX1_556": 2,
+            "EX1_564": 1,
+            "EX1_622": 1,
+            "EX1_623": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_093",
+              "name": "Defender of Argus"
+            },
+            {
+              "card_id": "CS2_tk1",
+              "name": "Sheep"
+            },
+            {
+              "card_id": "EX1_623",
+              "name": "Temple Enforcer"
+            },
+            {
+              "card_id": "EX1_093",
+              "name": "Defender of Argus"
+            },
+            {
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze"
+            },
+            {
+              "card_id": "CS2_234",
+              "name": "Shadow Word: Pain"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_08",
+            "name": "Jaina Proudmoore",
+            "hero_class": "MAGE",
+            "health": 22,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_08bp",
+            "name": "Fireblast",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 1 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 7,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 2,
+          "board": [],
+          "secrets_count": 0,
+          "deck_remaining": 19,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "NEW1_012",
+              "name": "Mana Wyrm"
+            },
+            {
+              "card_id": "NEW1_012",
+              "name": "Mana Wyrm"
+            },
+            {
+              "card_id": "CS2_024",
+              "name": "Frostbolt"
+            },
+            {
+              "card_id": "CS2_182",
+              "name": "Chillwind Yeti"
+            },
+            {
+              "card_id": "CS2_029",
+              "name": "Fireball"
+            },
+            {
+              "card_id": "EX1_277",
+              "name": "Arcane Missiles"
+            },
+            {
+              "card_id": "EX1_608",
+              "name": "Sorcerer's Apprentice"
+            },
+            {
+              "card_id": "CS2_022",
+              "name": "Polymorph"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "play_card",
+            "player": 2,
+            "card_id": "EX1_091",
+            "name": "Cabal Shadow Priest",
+            "entity_id": 57,
+            "cost": 6,
+            "target": {
+              "entity_id": 20,
+              "card_id": "CS2_182",
+              "name": "Chillwind Yeti"
+            },
+            "position": 0,
+            "choose": null
+          },
+          {
+            "event": "leave_board",
+            "player": 1,
+            "entity_id": 20,
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti"
+          },
+          {
+            "event": "summon",
+            "player": 2,
+            "entity_id": 20,
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti"
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "temporary_control": []
+      }
+    }
+  }
+}
