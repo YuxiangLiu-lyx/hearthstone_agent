@@ -1,0 +1,19 @@
+{
+  "frozen_utc": "2026-11-11T06:17:23.973764+00:00",
+  "selected": "F1",
+  "baseline": "B1",
+  "validation_parent": "V3-trained",
+  "selection_reason": "Highest validation primary macro, Greedy no regression. T1 local training adds one validation win beyond untuned search. New scoring, secret rules and continuation reuse are disabled because they did not add stable benefit.",
+  "engineering_changes_after_validation": "Identical action logic; cooperative deadline checks added to bounded ranking loops, optional disabled plan cache retained, public phase API and supervised runtime shared by both arms. Changes receive final confirmation.",
+  "candidate_sha256": "2c0167b850c40a3e72e7e508351ffa1c137ed8a05b15da8cf8f127cb332c8a1a",
+  "baseline_sha256": "b45512be7a5b4d22c41dea436070f2d3391d3c9b58d4337595d740bd021098e1",
+  "candidate_config_sha256": "e6fa7b5ace59e598ba8bf26cf04efda50ff6afaa7083d00dfc6d152abce653b2",
+  "baseline_config_sha256": "c7213a4418bf69290fabf89d4f9eee9d8161ac02ed65469768b425ecca0c2530",
+  "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+  "opponents_sha256": "1fa1adfde39f3ae857f28cc75e4a93809540bbcd7ecd7c059171877e2ad9500d",
+  "seeds": {
+    "start": 173000,
+    "seeds": 30
+  },
+  "promotion_gate": "Positive primary paired 95% seed-cluster interval, at least +2 percentage points, no own illegal/timeouts/forfeits/errors, measured supervised maximum <2s, exact final relay smoke if available. Otherwise preserve baseline."
+}

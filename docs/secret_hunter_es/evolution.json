@@ -1,0 +1,928 @@
+{
+  "algorithm": "(2+4) self-adaptive ES; fixed opponents; fresh parent re-evaluation",
+  "rng_seed": 2026111107,
+  "bounds": {
+    "own_attack": [
+      0.5,
+      2.8
+    ],
+    "own_health": [
+      0.1,
+      1.5
+    ],
+    "enemy_attack": [
+      0.5,
+      2.8
+    ],
+    "enemy_health": [
+      0.1,
+      1.5
+    ],
+    "shield": [
+      0.3,
+      4
+    ],
+    "taunt": [
+      0.1,
+      3.5
+    ],
+    "stealth": [
+      0,
+      1.5
+    ],
+    "windfury": [
+      0,
+      1.5
+    ],
+    "poison": [
+      0.3,
+      5
+    ],
+    "death": [
+      0.3,
+      2
+    ],
+    "engine": [
+      0.3,
+      2.5
+    ],
+    "face": [
+      0.4,
+      2.5
+    ],
+    "hero_health": [
+      0.03,
+      0.7
+    ],
+    "hand": [
+      0.1,
+      2.5
+    ],
+    "weapon": [
+      0.1,
+      1.5
+    ],
+    "risk": [
+      0.5,
+      8
+    ],
+    "secret": [
+      0.2,
+      2.5
+    ],
+    "exposure": [
+      0,
+      1.5
+    ],
+    "beast": [
+      0,
+      1.5
+    ],
+    "mana": [
+      0,
+      0.5
+    ],
+    "finish": [
+      0,
+      1.5
+    ]
+  },
+  "generations": [
+    {
+      "index": 1,
+      "offspring": [
+        {
+          "name": "E11",
+          "parent": "C2",
+          "sigma": {
+            "own_attack": 0.08206593095740687,
+            "own_health": 0.0652532919228479,
+            "enemy_attack": 0.07428214676440684,
+            "enemy_health": 0.1234991700387716,
+            "shield": 0.08682493162530865,
+            "taunt": 0.06182044885124141,
+            "stealth": 0.13385220954045265,
+            "windfury": 0.1167069875311926,
+            "poison": 0.07681060219695189,
+            "death": 0.09641254609788391,
+            "engine": 0.0967439865280321,
+            "face": 0.14404460877803965,
+            "hero_health": 0.07436058174317546,
+            "hand": 0.05995753459381079,
+            "weapon": 0.1010333006461244,
+            "risk": 0.06858945595596194,
+            "secret": 0.13091453346684104,
+            "exposure": 0.0556213389652103,
+            "beast": 0.08678266330105996,
+            "mana": 0.07780810772205472,
+            "finish": 0.08369658771536738
+          },
+          "weights": {
+            "own_attack": 1.443926,
+            "own_health": 0.608736,
+            "enemy_attack": 1.611956,
+            "enemy_health": 0.658852,
+            "shield": 1.573618,
+            "taunt": 1.346188,
+            "stealth": 0.725015,
+            "windfury": 0.632179,
+            "poison": 2.371468,
+            "death": 1.406656,
+            "engine": 0.856288,
+            "face": 1.526127,
+            "hero_health": 0.184351,
+            "hand": 0.970725,
+            "weapon": 0.591992,
+            "risk": 3.161385,
+            "secret": 0.91922,
+            "exposure": 0.266725,
+            "beast": 0.292389,
+            "mana": 0.03808,
+            "finish": 0.585096
+          },
+          "search": {
+            "turn_width": 10,
+            "turn_depth": 9,
+            "turn_nodes": 350
+          },
+          "tree_sha256": "2f4512114a781540e9b965c734f59683c3bb639a3f4296af3a3e43b3ba6ebb28"
+        },
+        {
+          "name": "E12",
+          "parent": "C3",
+          "sigma": {
+            "own_attack": 0.06986241601379972,
+            "own_health": 0.1305794856549709,
+            "enemy_attack": 0.178867067160895,
+            "enemy_health": 0.15227729364306308,
+            "shield": 0.048437130543440565,
+            "taunt": 0.11826265707393062,
+            "stealth": 0.16613520312962746,
+            "windfury": 0.11210489515089508,
+            "poison": 0.11834661722868801,
+            "death": 0.06507352831026353,
+            "engine": 0.08189926244143904,
+            "face": 0.10543824334495695,
+            "hero_health": 0.08453884140600575,
+            "hand": 0.06547542467470512,
+            "weapon": 0.09218199644969909,
+            "risk": 0.14265219445018448,
+            "secret": 0.08164897226767757,
+            "exposure": 0.1548168245399093,
+            "beast": 0.06711260630140527,
+            "mana": 0.06198909528059877,
+            "finish": 0.1170364299177023
+          },
+          "weights": {
+            "own_attack": 1.437101,
+            "own_health": 0.900878,
+            "enemy_attack": 1.611168,
+            "enemy_health": 0.338622,
+            "shield": 2.051428,
+            "taunt": 0.474984,
+            "stealth": 0.271635,
+            "windfury": 0.657206,
+            "poison": 2.568242,
+            "death": 1.122266,
+            "engine": 0.915415,
+            "face": 1.412017,
+            "hero_health": 0.26541,
+            "hand": 1.16267,
+            "weapon": 0.644061,
+            "risk": 3.160655,
+            "secret": 1.168401,
+            "exposure": 0.417122,
+            "beast": 0.044297,
+            "mana": 0.044007,
+            "finish": 0.535894
+          },
+          "search": {
+            "turn_width": 6,
+            "turn_depth": 9,
+            "turn_nodes": 350
+          },
+          "tree_sha256": "e4a3c22c16fc2ad461f7b79d6c6c41bf4f1da05fb02bdc70ef25789d789ea8cc"
+        },
+        {
+          "name": "E13",
+          "parent": "C2",
+          "sigma": {
+            "own_attack": 0.06059813389850347,
+            "own_health": 0.05786106133226344,
+            "enemy_attack": 0.09920906655027667,
+            "enemy_health": 0.09192348779777555,
+            "shield": 0.10395241770564781,
+            "taunt": 0.06847768179117653,
+            "stealth": 0.08102594102517474,
+            "windfury": 0.05182667945188602,
+            "poison": 0.06170878380252435,
+            "death": 0.11135162538118863,
+            "engine": 0.03272478739954613,
+            "face": 0.12368330271852945,
+            "hero_health": 0.05550331362328611,
+            "hand": 0.09141462949157111,
+            "weapon": 0.0954471305742397,
+            "risk": 0.10816170201235391,
+            "secret": 0.11296161964547709,
+            "exposure": 0.0575385584191066,
+            "beast": 0.1459023011588582,
+            "mana": 0.08101332496262593,
+            "finish": 0.14622048466652546
+          },
+          "weights": {
+            "own_attack": 1.353827,
+            "own_health": 0.787753,
+            "enemy_attack": 1.549146,
+            "enemy_health": 0.882934,
+            "shield": 2.423687,
+            "taunt": 1.197455,
+            "stealth": 0.493404,
+            "windfury": 0.526656,
+            "poison": 2.431842,
+            "death": 0.931614,
+            "engine": 1.023347,
+            "face": 1.045947,
+            "hero_health": 0.222999,
+            "hand": 1.188325,
+            "weapon": 0.531852,
+            "risk": 4.570323,
+            "secret": 1.034942,
+            "exposure": 0.275547,
+            "beast": 0.0,
+            "mana": 0.021928,
+            "finish": 0.510357
+          },
+          "search": {
+            "turn_width": 10,
+            "turn_depth": 9,
+            "turn_nodes": 250
+          },
+          "tree_sha256": "fdb8094808fe4cd0f41ddefb0d0579306159e96d1f9c64f319461410420b577b"
+        },
+        {
+          "name": "E14",
+          "parent": "C3",
+          "sigma": {
+            "own_attack": 0.1502972061041399,
+            "own_health": 0.1099186143240908,
+            "enemy_attack": 0.08213904386488247,
+            "enemy_health": 0.10985212886836873,
+            "shield": 0.09221609712694064,
+            "taunt": 0.19284949086641287,
+            "stealth": 0.1037838539236568,
+            "windfury": 0.10131106082567366,
+            "poison": 0.13843308068227508,
+            "death": 0.06393523491199095,
+            "engine": 0.18593132355934433,
+            "face": 0.1293194467846014,
+            "hero_health": 0.1282344739614772,
+            "hand": 0.06542377817814612,
+            "weapon": 0.10017104967290474,
+            "risk": 0.2359672106774923,
+            "secret": 0.11147053432453327,
+            "exposure": 0.09730359460816934,
+            "beast": 0.15647822932047042,
+            "mana": 0.16788960392830168,
+            "finish": 0.20696258712708016
+          },
+          "weights": {
+            "own_attack": 1.19357,
+            "own_health": 0.743466,
+            "enemy_attack": 1.694808,
+            "enemy_health": 0.389213,
+            "shield": 2.582526,
+            "taunt": 1.503851,
+            "stealth": 0.667749,
+            "windfury": 0.546573,
+            "poison": 1.605897,
+            "death": 1.066775,
+            "engine": 0.770038,
+            "face": 0.691583,
+            "hero_health": 0.078742,
+            "hand": 1.14777,
+            "weapon": 0.193128,
+            "risk": 3.47536,
+            "secret": 1.190253,
+            "exposure": 0.030214,
+            "beast": 0.433556,
+            "mana": 0.012632,
+            "finish": 0.964546
+          },
+          "search": {
+            "turn_width": 10,
+            "turn_depth": 7,
+            "turn_nodes": 250
+          },
+          "tree_sha256": "f999d0a4b27394391578315603b9943e8f03ad43fc38df67be813f1ac2bf8a83"
+        }
+      ],
+      "fitness": [
+        {
+          "name": "C2",
+          "primary_wins": 82,
+          "primary_n": 104,
+          "base_wins": 8,
+          "out": "experiments/es-g1-c2"
+        },
+        {
+          "name": "C3",
+          "primary_wins": 81,
+          "primary_n": 104,
+          "base_wins": 8,
+          "out": "experiments/es-g1-c3"
+        },
+        {
+          "name": "E11",
+          "primary_wins": 82,
+          "primary_n": 104,
+          "base_wins": 8,
+          "out": "experiments/es-g1-e11"
+        },
+        {
+          "name": "E12",
+          "primary_wins": 80,
+          "primary_n": 104,
+          "base_wins": 7,
+          "out": "experiments/es-g1-e12"
+        },
+        {
+          "name": "E13",
+          "primary_wins": 81,
+          "primary_n": 104,
+          "base_wins": 7,
+          "out": "experiments/es-g1-e13"
+        },
+        {
+          "name": "E14",
+          "primary_wins": 79,
+          "primary_n": 104,
+          "base_wins": 8,
+          "out": "experiments/es-g1-e14"
+        }
+      ],
+      "retained": [
+        "C2",
+        "E11"
+      ]
+    },
+    {
+      "index": 2,
+      "offspring": [
+        {
+          "name": "E21",
+          "parent": "C2",
+          "sigma": {
+            "own_attack": 0.0878913015947886,
+            "own_health": 0.1499899667606763,
+            "enemy_attack": 0.2299442910626438,
+            "enemy_health": 0.08769490118339061,
+            "shield": 0.07440139265617979,
+            "taunt": 0.0935495789484196,
+            "stealth": 0.14780400771062932,
+            "windfury": 0.09664075101796099,
+            "poison": 0.10792884235101696,
+            "death": 0.09962642359735194,
+            "engine": 0.1365965959771162,
+            "face": 0.08632299492552076,
+            "hero_health": 0.166201271702276,
+            "hand": 0.10947838053333842,
+            "weapon": 0.20841371016521718,
+            "risk": 0.16297794442492464,
+            "secret": 0.15869271265759644,
+            "exposure": 0.1503130381074734,
+            "beast": 0.1782549672932458,
+            "mana": 0.2005978298416159,
+            "finish": 0.1591193071456086
+          },
+          "weights": {
+            "own_attack": 1.34989,
+            "own_health": 0.540678,
+            "enemy_attack": 1.527768,
+            "enemy_health": 0.544129,
+            "shield": 2.667805,
+            "taunt": 1.028072,
+            "stealth": 0.347704,
+            "windfury": 0.675138,
+            "poison": 2.542379,
+            "death": 1.034713,
+            "engine": 0.626771,
+            "face": 1.141829,
+            "hero_health": 0.215031,
+            "hand": 0.968264,
+            "weapon": 0.725672,
+            "risk": 0.5,
+            "secret": 0.295219,
+            "exposure": 0.351834,
+            "beast": 0.0,
+            "mana": 0.152409,
+            "finish": 0.686773
+          },
+          "search": {
+            "turn_width": 10,
+            "turn_depth": 9,
+            "turn_nodes": 350
+          },
+          "tree_sha256": "d4231defbe2ea0b3c4c5bb43627b9c7d04ae48a583da507672432a8050c5c2d5"
+        },
+        {
+          "name": "E22",
+          "parent": "E11",
+          "sigma": {
+            "own_attack": 0.11653681007173129,
+            "own_health": 0.16064497649504395,
+            "enemy_attack": 0.08955744784888513,
+            "enemy_health": 0.23346005996678504,
+            "shield": 0.1324849311702349,
+            "taunt": 0.07197926644996516,
+            "stealth": 0.10167070716406829,
+            "windfury": 0.15171592168180228,
+            "poison": 0.09480629458059882,
+            "death": 0.07360809623550665,
+            "engine": 0.06045127603352765,
+            "face": 0.13223413063550668,
+            "hero_health": 0.08147151588704332,
+            "hand": 0.046532609082007605,
+            "weapon": 0.1583111858213741,
+            "risk": 0.10665020304695778,
+            "secret": 0.13019897797069424,
+            "exposure": 0.07244401024397985,
+            "beast": 0.12749940310204835,
+            "mana": 0.09926841711389493,
+            "finish": 0.11266362285522877
+          },
+          "weights": {
+            "own_attack": 1.530471,
+            "own_health": 0.586377,
+            "enemy_attack": 1.434218,
+            "enemy_health": 1.242491,
+            "shield": 1.649258,
+            "taunt": 1.47132,
+            "stealth": 0.702288,
+            "windfury": 0.753566,
+            "poison": 1.625672,
+            "death": 1.333892,
+            "engine": 0.960596,
+            "face": 1.665977,
+            "hero_health": 0.201689,
+            "hand": 1.135026,
+            "weapon": 0.624126,
+            "risk": 3.226683,
+            "secret": 1.044167,
+            "exposure": 0.313272,
+            "beast": 0.381107,
+            "mana": 0.106342,
+            "finish": 0.666218
+          },
+          "search": {
+            "turn_width": 10,
+            "turn_depth": 9,
+            "turn_nodes": 250
+          },
+          "tree_sha256": "eea247455a174b5f2616f8d47a5f0fd1440494788421bd5ee18ab911796ea6d9"
+        },
+        {
+          "name": "E23",
+          "parent": "C2",
+          "sigma": {
+            "own_attack": 0.1248242184780319,
+            "own_health": 0.14018519146036504,
+            "enemy_attack": 0.14657657267469096,
+            "enemy_health": 0.1586339358568805,
+            "shield": 0.2129013573027135,
+            "taunt": 0.14001028120704032,
+            "stealth": 0.16413320770361453,
+            "windfury": 0.10022505052173615,
+            "poison": 0.18971289046760975,
+            "death": 0.1429611290344031,
+            "engine": 0.12339748025167786,
+            "face": 0.1205766813390583,
+            "hero_health": 0.10263575811993231,
+            "hand": 0.12681581643117376,
+            "weapon": 0.21335905712913872,
+            "risk": 0.16270451600685795,
+            "secret": 0.12217140468324195,
+            "exposure": 0.17050423774411663,
+            "beast": 0.11170005497445767,
+            "mana": 0.10965336755346862,
+            "finish": 0.1590815206040206
+          },
+          "weights": {
+            "own_attack": 1.629801,
+            "own_health": 0.746487,
+            "enemy_attack": 0.85402,
+            "enemy_health": 0.750842,
+            "shield": 1.814364,
+            "taunt": 1.539857,
+            "stealth": 0.303383,
+            "windfury": 0.066152,
+            "poison": 2.335626,
+            "death": 1.073273,
+            "engine": 1.29587,
+            "face": 1.327937,
+            "hero_health": 0.189582,
+            "hand": 0.423317,
+            "weapon": 0.794822,
+            "risk": 3.546585,
+            "secret": 1.20534,
+            "exposure": 0.280445,
+            "beast": 0.007595,
+            "mana": 0.008292,
+            "finish": 0.973705
+          },
+          "search": {
+            "turn_width": 6,
+            "turn_depth": 9,
+            "turn_nodes": 250
+          },
+          "tree_sha256": "0abed5a9a0421fec17f8a87b5fd19ccbfd0ddf84a392a4e4a53757b34228d105"
+        },
+        {
+          "name": "E24",
+          "parent": "E11",
+          "sigma": {
+            "own_attack": 0.06046527725498451,
+            "own_health": 0.1238534685449443,
+            "enemy_attack": 0.05896027975889294,
+            "enemy_health": 0.14317818795601975,
+            "shield": 0.09690525927737315,
+            "taunt": 0.03534385609216959,
+            "stealth": 0.10863427370535449,
+            "windfury": 0.14500003185365062,
+            "poison": 0.06389217837317702,
+            "death": 0.2251182715305967,
+            "engine": 0.11697936551897659,
+            "face": 0.18098128659241405,
+            "hero_health": 0.06160804439446118,
+            "hand": 0.05931232497233989,
+            "weapon": 0.07749370865390537,
+            "risk": 0.1430365641413254,
+            "secret": 0.09157599687924177,
+            "exposure": 0.06881308894358742,
+            "beast": 0.07569418442748797,
+            "mana": 0.08636644894605179,
+            "finish": 0.13513661854098472
+          },
+          "weights": {
+            "own_attack": 1.568684,
+            "own_health": 0.556799,
+            "enemy_attack": 1.699329,
+            "enemy_health": 0.800977,
+            "shield": 1.584398,
+            "taunt": 1.4161,
+            "stealth": 0.746131,
+            "windfury": 0.445679,
+            "poison": 2.267921,
+            "death": 0.92066,
+            "engine": 0.84626,
+            "face": 1.649673,
+            "hero_health": 0.119734,
+            "hand": 0.992197,
+            "weapon": 0.722233,
+            "risk": 2.71171,
+            "secret": 1.047964,
+            "exposure": 0.118528,
+            "beast": 0.294126,
+            "mana": 0.044576,
+            "finish": 0.255948
+          },
+          "search": {
+            "turn_width": 10,
+            "turn_depth": 7,
+            "turn_nodes": 350
+          },
+          "tree_sha256": "1bed75b45268bd9372492ed2f13854dc1db836e95c416b4bc7caa9552bca37d0"
+        }
+      ],
+      "fitness": [
+        {
+          "name": "C2",
+          "primary_wins": 90,
+          "primary_n": 104,
+          "base_wins": 7,
+          "out": "experiments/es-g2-c2"
+        },
+        {
+          "name": "E11",
+          "primary_wins": 78,
+          "primary_n": 104,
+          "base_wins": 8,
+          "out": "experiments/es-g2-e11"
+        },
+        {
+          "name": "E21",
+          "primary_wins": 84,
+          "primary_n": 104,
+          "base_wins": 7,
+          "out": "experiments/es-g2-e21"
+        },
+        {
+          "name": "E22",
+          "primary_wins": 80,
+          "primary_n": 104,
+          "base_wins": 5,
+          "out": "experiments/es-g2-e22"
+        },
+        {
+          "name": "E23",
+          "primary_wins": 84,
+          "primary_n": 104,
+          "base_wins": 6,
+          "out": "experiments/es-g2-e23"
+        },
+        {
+          "name": "E24",
+          "primary_wins": 83,
+          "primary_n": 104,
+          "base_wins": 8,
+          "out": "experiments/es-g2-e24"
+        }
+      ],
+      "retained": [
+        "C2",
+        "E21"
+      ]
+    },
+    {
+      "index": 3,
+      "offspring": [
+        {
+          "name": "E31",
+          "parent": "C2",
+          "sigma": {
+            "own_attack": 0.09935182495761039,
+            "own_health": 0.08966542102964369,
+            "enemy_attack": 0.10781908538131907,
+            "enemy_health": 0.12791323743002467,
+            "shield": 0.2609325228194697,
+            "taunt": 0.07902913180433765,
+            "stealth": 0.13008724576592595,
+            "windfury": 0.1322564544787585,
+            "poison": 0.13922684024046716,
+            "death": 0.1656397973647471,
+            "engine": 0.20299826684090513,
+            "face": 0.16878684426624543,
+            "hero_health": 0.17752517055034298,
+            "hand": 0.18015582698372223,
+            "weapon": 0.09868888045265567,
+            "risk": 0.13933272213096698,
+            "secret": 0.09460202559780664,
+            "exposure": 0.13685123147289663,
+            "beast": 0.21516860118931386,
+            "mana": 0.17468490483883387,
+            "finish": 0.10739380356737502
+          },
+          "weights": {
+            "own_attack": 1.1962,
+            "own_health": 0.754576,
+            "enemy_attack": 1.403652,
+            "enemy_health": 0.674909,
+            "shield": 0.3,
+            "taunt": 0.759208,
+            "stealth": 0.671192,
+            "windfury": 0.696652,
+            "poison": 2.021197,
+            "death": 0.797988,
+            "engine": 1.927997,
+            "face": 1.200795,
+            "hero_health": 0.365,
+            "hand": 0.744331,
+            "weapon": 0.673723,
+            "risk": 3.705549,
+            "secret": 1.114696,
+            "exposure": 0.423802,
+            "beast": 0.084581,
+            "mana": 0.041437,
+            "finish": 0.359266
+          },
+          "search": {
+            "turn_width": 6,
+            "turn_depth": 9,
+            "turn_nodes": 350
+          },
+          "tree_sha256": "1a6c2dfe972b2f1b85adac54f9c6fe372e1eb2764ac561a1ffb7217f03c6f674"
+        },
+        {
+          "name": "E32",
+          "parent": "E21",
+          "sigma": {
+            "own_attack": 0.10877893118157936,
+            "own_health": 0.16160966796914653,
+            "enemy_attack": 0.20138833779235546,
+            "enemy_health": 0.09112243777794257,
+            "shield": 0.06717960249101344,
+            "taunt": 0.1184774764189937,
+            "stealth": 0.10652040476161928,
+            "windfury": 0.12438583999333894,
+            "poison": 0.11031632540379266,
+            "death": 0.05823595070386878,
+            "engine": 0.13078309792968432,
+            "face": 0.09896957313079993,
+            "hero_health": 0.09232725432505896,
+            "hand": 0.12505990214578833,
+            "weapon": 0.1838910478631926,
+            "risk": 0.194700226430057,
+            "secret": 0.1372874542695253,
+            "exposure": 0.15652559704398217,
+            "beast": 0.09168971629990144,
+            "mana": 0.1401246896577612,
+            "finish": 0.1920074692932313
+          },
+          "weights": {
+            "own_attack": 0.950633,
+            "own_health": 0.572629,
+            "enemy_attack": 0.992342,
+            "enemy_health": 0.698578,
+            "shield": 2.839239,
+            "taunt": 1.593378,
+            "stealth": 0.513828,
+            "windfury": 0.849991,
+            "poison": 3.392724,
+            "death": 1.102658,
+            "engine": 0.758465,
+            "face": 1.11064,
+            "hero_health": 0.243876,
+            "hand": 0.753866,
+            "weapon": 0.768474,
+            "risk": 0.5,
+            "secret": 0.2,
+            "exposure": 0.555439,
+            "beast": 0.132156,
+            "mana": 0.197235,
+            "finish": 0.778884
+          },
+          "search": {
+            "turn_width": 6,
+            "turn_depth": 7,
+            "turn_nodes": 350
+          },
+          "tree_sha256": "1776b06ef412af43e8513f1cd7a9df55a59050198d7db00ddaf181dad4bfe62f"
+        },
+        {
+          "name": "E33",
+          "parent": "C2",
+          "sigma": {
+            "own_attack": 0.14533544391214145,
+            "own_health": 0.14364874712766423,
+            "enemy_attack": 0.14412829379904216,
+            "enemy_health": 0.13854012988465322,
+            "shield": 0.16350835184781357,
+            "taunt": 0.10580886776403141,
+            "stealth": 0.08292397730617451,
+            "windfury": 0.12566026425192092,
+            "poison": 0.15613870729605123,
+            "death": 0.13308698416337916,
+            "engine": 0.16464689429917095,
+            "face": 0.08791471800761509,
+            "hero_health": 0.1106058075144505,
+            "hand": 0.094496982886756,
+            "weapon": 0.15596447565177946,
+            "risk": 0.10217226036104118,
+            "secret": 0.118062953888348,
+            "exposure": 0.21714806920214022,
+            "beast": 0.11241973154844391,
+            "mana": 0.17960793656443338,
+            "finish": 0.18866194902010222
+          },
+          "weights": {
+            "own_attack": 1.117881,
+            "own_health": 0.773837,
+            "enemy_attack": 1.770363,
+            "enemy_health": 0.58666,
+            "shield": 2.387251,
+            "taunt": 1.653641,
+            "stealth": 0.398319,
+            "windfury": 0.875776,
+            "poison": 1.8814,
+            "death": 1.561585,
+            "engine": 1.418773,
+            "face": 1.247727,
+            "hero_health": 0.157176,
+            "hand": 1.367874,
+            "weapon": 0.635971,
+            "risk": 3.976567,
+            "secret": 1.105375,
+            "exposure": 0.625114,
+            "beast": 0.318531,
+            "mana": 0.11577,
+            "finish": 0.480464
+          },
+          "search": {
+            "turn_width": 10,
+            "turn_depth": 9,
+            "turn_nodes": 350
+          },
+          "tree_sha256": "f306eb7e7d82b531f0b5c0687d7ac367e331c9de6cd9cee1a7075a89f2675da2"
+        },
+        {
+          "name": "E34",
+          "parent": "E21",
+          "sigma": {
+            "own_attack": 0.07434921226443035,
+            "own_health": 0.11664560067522763,
+            "enemy_attack": 0.20656539161143136,
+            "enemy_health": 0.07775174570084414,
+            "shield": 0.05869375640379347,
+            "taunt": 0.04975553941697393,
+            "stealth": 0.12242407671201416,
+            "windfury": 0.07692656763122106,
+            "poison": 0.08226291186043072,
+            "death": 0.05750524578735132,
+            "engine": 0.189665585784458,
+            "face": 0.06802812627394152,
+            "hero_health": 0.106260607092089,
+            "hand": 0.07838046170072069,
+            "weapon": 0.24027808428322145,
+            "risk": 0.22892100585972586,
+            "secret": 0.21695110113241173,
+            "exposure": 0.07930851243420393,
+            "beast": 0.1801821743497865,
+            "mana": 0.16594372845742822,
+            "finish": 0.28387947028973864
+          },
+          "weights": {
+            "own_attack": 1.534359,
+            "own_health": 0.420083,
+            "enemy_attack": 0.643461,
+            "enemy_health": 0.443379,
+            "shield": 2.71484,
+            "taunt": 0.862985,
+            "stealth": 0.269398,
+            "windfury": 0.610005,
+            "poison": 3.229547,
+            "death": 0.875269,
+            "engine": 0.448749,
+            "face": 1.003522,
+            "hero_health": 0.145432,
+            "hand": 1.021382,
+            "weapon": 0.27146,
+            "risk": 2.482973,
+            "secret": 1.339683,
+            "exposure": 0.271546,
+            "beast": 0.0,
+            "mana": 0.09784,
+            "finish": 1.372102
+          },
+          "search": {
+            "turn_width": 14,
+            "turn_depth": 11,
+            "turn_nodes": 350
+          },
+          "tree_sha256": "5d32627e64076652ae223f8571323079aeee8a9c8acc3839a353bfdd4c934dac"
+        }
+      ],
+      "fitness": [
+        {
+          "name": "C2",
+          "primary_wins": 87,
+          "primary_n": 104,
+          "base_wins": 6,
+          "out": "experiments/es-g3-c2"
+        },
+        {
+          "name": "E21",
+          "primary_wins": 81,
+          "primary_n": 104,
+          "base_wins": 7,
+          "out": "experiments/es-g3-e21"
+        },
+        {
+          "name": "E31",
+          "primary_wins": 83,
+          "primary_n": 104,
+          "base_wins": 7,
+          "out": "experiments/es-g3-e31"
+        },
+        {
+          "name": "E32",
+          "primary_wins": 76,
+          "primary_n": 104,
+          "base_wins": 6,
+          "out": "experiments/es-g3-e32"
+        },
+        {
+          "name": "E33",
+          "primary_wins": 84,
+          "primary_n": 104,
+          "base_wins": 6,
+          "out": "experiments/es-g3-e33"
+        },
+        {
+          "name": "E34",
+          "primary_wins": 80,
+          "primary_n": 104,
+          "base_wins": 7,
+          "out": "experiments/es-g3-e34"
+        }
+      ],
+      "retained": [
+        "C2",
+        "E33"
+      ]
+    }
+  ],
+  "sigma_rule": "clip(sigma * exp(tau*N_i + global_tau*N), .01, .35)",
+  "final_parents": [
+    "C2",
+    "E33"
+  ]
+}

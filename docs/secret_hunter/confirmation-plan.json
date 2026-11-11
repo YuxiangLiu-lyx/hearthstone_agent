@@ -1,0 +1,28 @@
+{
+  "frozen_before_results": true,
+  "challenger": "development/secret_hunter/frozen/secret-hunter-agent",
+  "challenger_sha256": "1703f0592e678100a6c5b0c0e2489713ff3f55b9760b6b586abef14bc66540ee",
+  "ablation": "development/secret_hunter/ablation/secret-hunter-agent",
+  "ablation_sha256": "f7fc4c2c5dca7daf0305a2aa49e4dc20c998d9def51585687214b5ff9ec02d8a",
+  "only_ablation_change": "config.model_authority true -> false; identical prompt, tools, deck, state preprocessing",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "K": 14,
+  "S": 2,
+  "seeds": [
+    163000,
+    163001
+  ],
+  "seats": [
+    1,
+    2
+  ],
+  "games_per_arm": 56,
+  "total_model_games": 112,
+  "primary": "13 non-base opponents, equally weighted",
+  "base": "official-mage separate",
+  "draws": "loss",
+  "statistical_warning": "Only two seed clusters; broad opponent coverage is not precise win-rate inference. Report instability; no optional topping up.",
+  "stop_rule": "Three consecutive course-side model startup/generation failures cancel unstarted work; running games finish.",
+  "release_status": "research-only due no independent main-model-stall submission"
+}

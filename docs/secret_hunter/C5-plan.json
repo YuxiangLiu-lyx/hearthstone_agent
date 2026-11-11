@@ -1,0 +1,26 @@
+{
+  "reason": "Observed bool/int validation bug plus an actual C4 early session exit. Fix input types/extra keys and make session-lifecycle instruction explicit. No scoring, deck or opponent changes.",
+  "selection_rule": "C5 is the safety challenger regardless of win-rate direction; do not tune after this confirmation. Retain C4 results separately.",
+  "python_seeds": [
+    162100,
+    162119
+  ],
+  "python_games_per_arm": 560,
+  "real_model_seed": 163100,
+  "K": 14,
+  "S": 1,
+  "seats": [
+    1,
+    2
+  ],
+  "real_games_per_arm": 28,
+  "real_total": 56,
+  "warning": "One seed cluster, exploratory paired outcomes only; no reliable cluster confidence interval.",
+  "budget_after_planned_runs": {
+    "python": 3024,
+    "real_model": 178
+  },
+  "old_confirmation": "C4 112-game confirmation continues unchanged; neither its seeds nor its scores are reused for C5.",
+  "hybrid_sha256": "88dbde8ffc7033d4caa9ed69b51b77b9c2742ec88ffd5db54a331425e13269da",
+  "off_sha256": "3a5fc2fd485afdc868a1661f97d2b8381335cf0215bde81a1b18c628b1d695db"
+}

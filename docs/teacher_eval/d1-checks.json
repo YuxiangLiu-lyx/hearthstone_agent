@@ -1,0 +1,104 @@
+{
+  "tests": 10,
+  "failures": 0,
+  "errors": 0,
+  "fixtures": 43,
+  "evidence": [
+    {
+      "mechanism": "Coin -> newly affordable Juggler is not pruned by incomplete search",
+      "engine_board": [
+        "NEW1_019"
+      ]
+    },
+    {
+      "mechanism": "Juggler before Hounds; Keeper/Secret opening curve",
+      "action": {
+        "type": "play_card",
+        "card": 74,
+        "position": 0
+      },
+      "reason": "baseline_rank"
+    },
+    {
+      "mechanism": "survival witness through Taunt; contingent Explosive protection",
+      "cases": 3
+    },
+    {
+      "mechanism": "Hounds trades before grown Hyena attack",
+      "engine_winner": 1,
+      "actions": [
+        {
+          "type": "play_card",
+          "card": 75
+        },
+        {
+          "type": "attack",
+          "attacker": 76,
+          "target": 72
+        },
+        {
+          "type": "attack",
+          "attacker": 77,
+          "target": 73
+        },
+        {
+          "type": "attack",
+          "attacker": 78,
+          "target": 74
+        },
+        {
+          "type": "attack",
+          "attacker": 71,
+          "target": 37
+        }
+      ]
+    },
+    {
+      "mechanism": "continuous face value and mana-constrained hand clock",
+      "values_hp_15_to_1": [
+        -10.740000000000002,
+        -9.624000000000002,
+        -8.508000000000001,
+        -7.392000000000001,
+        -6.276000000000002,
+        -5.16,
+        -3.444000000000001,
+        -1.7280000000000006,
+        -0.012000000000001343,
+        1.7039999999999988,
+        3.42,
+        5.135999999999999,
+        6.852,
+        23.567999999999998,
+        25.834
+      ]
+    },
+    {
+      "mechanism": "visible attack response with ordered Secrets",
+      "exact_engine_branches": 112
+    },
+    {
+      "mechanism": "safe face damage sets up next-turn power; current lethal outranks lethal incoming",
+      "engine_terminal_win": true
+    },
+    {
+      "mechanism": "1/1 Snake removes 6/1 Ogre and preserves Juggler",
+      "actions": [
+        {
+          "type": "attack",
+          "attacker": 71,
+          "target": 73
+        },
+        {
+          "type": "attack",
+          "attacker": 72,
+          "target": 37
+        },
+        {
+          "type": "end_turn"
+        }
+      ]
+    }
+  ],
+  "scope": "Existing tactical regressions plus actual-engine Arcane Shot lethal/removal; old ledgers unchanged."
+}

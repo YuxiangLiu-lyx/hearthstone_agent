@@ -1,0 +1,22 @@
+{
+  "trigger": "Frozen D1 improved core but failed old-pool guardrail. Preserve that result and H7 canonical release.",
+  "candidates": {
+    "D2": "Keep King Krush, replace only Misdirection with one Arcane Shot.",
+    "D3": "Keep Misdirection, replace only King Krush with one Arcane Shot."
+  },
+  "screen": {
+    "core_start": 86000,
+    "core_seeds": 8,
+    "guard_start": 911000,
+    "guard_seeds": 10,
+    "scope": "Adaptive reuse of already examined data; the old guardrail is now development evidence for D2/D3, never fresh confirmation."
+  },
+  "selection": "Among one-slot variants passing the existing old-pool point guard, prefer the higher hard-family macro on the screening core. Otherwise retain scoped D1 and general H7.",
+  "new_confirmation_if_selected": {
+    "core_start": 920000,
+    "core_seeds": 40,
+    "guard_start": 921000,
+    "guard_seeds": 20
+  },
+  "stop": "One additional deck-ablation round. Do not tune after its new confirmation."
+}

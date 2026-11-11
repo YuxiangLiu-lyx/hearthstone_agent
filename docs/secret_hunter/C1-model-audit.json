@@ -1,0 +1,1322 @@
+{
+  "games": 1,
+  "decisions": 37,
+  "model_choices": 20,
+  "phase_counts": {
+    "deck_submission": 1,
+    "mulligan": 1,
+    "main": 35
+  },
+  "latency_by_phase": {
+    "deck_submission": {
+      "n": 1,
+      "mean": 12.401000022888184,
+      "max": 12.401000022888184,
+      "p50": 12.401000022888184,
+      "p95": 12.401000022888184,
+      "p99": 12.401000022888184
+    },
+    "main": {
+      "n": 35,
+      "mean": 5.522685752596174,
+      "max": 8.872999906539917,
+      "p50": 5.664999961853027,
+      "p95": 8.086999893188477,
+      "p99": 8.872999906539917
+    },
+    "mulligan": {
+      "n": 1,
+      "mean": 7.70799994468689,
+      "max": 7.70799994468689,
+      "p50": 7.70799994468689,
+      "p95": 7.70799994468689,
+      "p99": 7.70799994468689
+    }
+  },
+  "different_from_default": 6,
+  "outside_candidates": 2,
+  "validation_bypassed": 1,
+  "missing_prepare": 10,
+  "selection_mismatch": 1,
+  "latency_publication_to_mcp_act": {
+    "n": 37,
+    "mean": 5.767648684011923,
+    "max": 12.401000022888184,
+    "p50": 5.687999963760376,
+    "p95": 8.872999906539917,
+    "p99": 12.401000022888184
+  },
+  "deck_submission_latency": {
+    "n": 1,
+    "mean": 12.401000022888184,
+    "max": 12.401000022888184,
+    "p50": 12.401000022888184,
+    "p95": 12.401000022888184,
+    "p99": 12.401000022888184
+  },
+  "unsubmitted_decisions": [],
+  "all_decisions_elapsed_including_failures": {
+    "n": 37,
+    "mean": 5.767648684011923,
+    "max": 12.401000022888184,
+    "p50": 5.687999963760376,
+    "p95": 8.872999906539917,
+    "p99": 12.401000022888184
+  },
+  "tool_latency": {
+    "n": 27,
+    "mean": 0.03955555555555556,
+    "max": 0.048,
+    "p50": 0.0403,
+    "p95": 0.0453,
+    "p99": 0.048
+  },
+  "actual_tool_commands": 57,
+  "mcp_calls": 38,
+  "selection_requests": 20,
+  "other_commands": [],
+  "deep_requests": 0,
+  "audits": [
+    {
+      "decisions": [
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 1,
+          "phase": "deck_submission",
+          "action": {
+            "type": "submit_deck",
+            "hero_class": "HUNTER",
+            "cards": [
+              "EX1_029",
+              "EX1_029",
+              "EX1_080",
+              "EX1_080",
+              "DS1_184",
+              "EX1_162",
+              "EX1_531",
+              "EX1_531",
+              "EX1_533",
+              "EX1_554",
+              "EX1_066",
+              "EX1_610",
+              "EX1_610",
+              "EX1_611",
+              "EX1_611",
+              "NEW1_019",
+              "NEW1_019",
+              "EX1_536",
+              "EX1_536",
+              "EX1_538",
+              "EX1_538",
+              "EX1_539",
+              "EX1_539",
+              "EX1_617",
+              "NEW1_031",
+              "NEW1_031",
+              "DS1_070",
+              "EX1_534",
+              "EX1_534",
+              "EX1_543"
+            ]
+          },
+          "default": {
+            "type": "submit_deck",
+            "hero_class": "HUNTER",
+            "cards": [
+              "EX1_029",
+              "EX1_029",
+              "EX1_080",
+              "EX1_080",
+              "DS1_184",
+              "EX1_162",
+              "EX1_531",
+              "EX1_531",
+              "EX1_533",
+              "EX1_554",
+              "EX1_066",
+              "EX1_610",
+              "EX1_610",
+              "EX1_611",
+              "EX1_611",
+              "NEW1_019",
+              "NEW1_019",
+              "EX1_536",
+              "EX1_536",
+              "EX1_538",
+              "EX1_538",
+              "EX1_539",
+              "EX1_539",
+              "EX1_617",
+              "NEW1_031",
+              "NEW1_031",
+              "DS1_070",
+              "EX1_534",
+              "EX1_534",
+              "EX1_543"
+            ]
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 12.401000022888184,
+          "remaining_s": 167.59899997711182
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 2,
+          "phase": "mulligan",
+          "action": {
+            "type": "mulligan",
+            "replace": [
+              17,
+              34
+            ]
+          },
+          "default": {
+            "type": "mulligan",
+            "replace": [
+              17,
+              34
+            ]
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 2,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Mulligan the secret and six drop for early curve, retaining Bow and Juggler.",
+            "action": {
+              "type": "mulligan",
+              "replace": [
+                17,
+                34
+              ]
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.530291795730591,
+            "remaining_s": 174.4697064149659
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.70799994468689,
+          "remaining_s": 172.2920000553131
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 3,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "play_card",
+            "card": 70
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 3,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 1,
+            "reason": "Keep Coin for a meaningful future curve turn; no playable development now.",
+            "action": {
+              "type": "end_turn"
+            },
+            "different_from_default": true,
+            "publication_elapsed_s": 6.2531960010528564,
+            "remaining_s": 173.7468029410811
+          },
+          "different_from_default": true,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.086999893188477,
+          "remaining_s": 171.91300010681152
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 4,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 22,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 22,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 4,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Develop Juggler as early board threat.",
+            "action": {
+              "type": "play_card",
+              "card": 22,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.661841154098511,
+            "remaining_s": 174.33815844159108
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.687999963760376,
+          "remaining_s": 174.31200003623962
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 5,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 5,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "End turn and keep Coin for next turn\u2019s curve.",
+            "action": {
+              "type": "end_turn"
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.022682189941406,
+            "remaining_s": 174.9773177226307
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.049000024795532,
+          "remaining_s": 174.95099997520447
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 6,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 30
+          },
+          "default": {
+            "type": "play_card",
+            "card": 30
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 6,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Animal Companion develops a Beast and maximizes tempo; attack face.",
+            "action": {
+              "type": "play_card",
+              "card": 30
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.162562847137451,
+            "remaining_s": 173.83743678580504
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.187999963760376,
+          "remaining_s": 173.81200003623962
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 7,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 71,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 71,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 7,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Send Charge Huffer face for pressure.",
+            "action": {
+              "type": "attack",
+              "attacker": 71,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 7.607914924621582,
+            "remaining_s": 172.39208465372212
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.633000135421753,
+          "remaining_s": 172.36699986457825
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 8,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 8,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Attack face and continue pressure.",
+            "action": {
+              "type": "attack",
+              "attacker": 22,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.675302028656006,
+            "remaining_s": 174.32469815562945
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.70199990272522,
+          "remaining_s": 174.29800009727478
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 9,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 9,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "End turn with Coin preserved.",
+            "action": {
+              "type": "end_turn"
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 4.394506931304932,
+            "remaining_s": 175.60549403401092
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 4.421000003814697,
+          "remaining_s": 175.5789999961853
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 10,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 70
+          },
+          "default": {
+            "type": "play_card",
+            "card": 16,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 10,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": null,
+            "reason": "Use Coin to reach Kill Command mana and remove the Taunt.",
+            "action": {
+              "type": "play_card",
+              "card": 70
+            },
+            "different_from_default": true,
+            "publication_elapsed_s": 6.021994113922119,
+            "remaining_s": 173.97800470667426
+          },
+          "different_from_default": true,
+          "outside_candidates": true,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.729000091552734,
+          "remaining_s": 172.27099990844727
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 11,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 28,
+            "target": 61
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 3.5809998512268066,
+          "remaining_s": 176.4190001487732
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 12,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 18
+          },
+          "default": {
+            "type": "play_card",
+            "card": 18
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 12,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Set Explosive Trap to punish attacks and remove enemy board.",
+            "action": {
+              "type": "play_card",
+              "card": 18
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.3870460987091064,
+            "remaining_s": 173.61295406904537
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.413000106811523,
+          "remaining_s": 173.58699989318848
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 13,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 61
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 13,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 1,
+            "reason": "Trade Juggler into the damaged Taunt to clear it.",
+            "action": {
+              "type": "attack",
+              "attacker": 22,
+              "target": 61
+            },
+            "different_from_default": true,
+            "publication_elapsed_s": 5.618746995925903,
+            "remaining_s": 174.3812535192119
+          },
+          "different_from_default": true,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.644000053405762,
+          "remaining_s": 174.35599994659424
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 14,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.275000095367432,
+          "remaining_s": 174.72499990463257
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 15,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 16,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 16,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 15,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Develop Ooze body and use Steady Shot while mana permits.",
+            "action": {
+              "type": "play_card",
+              "card": 16,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.857141971588135,
+            "remaining_s": 174.14285805111285
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.883000135421753,
+          "remaining_s": 174.11699986457825
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 16,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 23
+          },
+          "default": {
+            "type": "play_card",
+            "card": 23
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 16,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Equip Bow for removal and future face pressure.",
+            "action": {
+              "type": "play_card",
+              "card": 23
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.998322010040283,
+            "remaining_s": 174.00167717039585
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.02400016784668,
+          "remaining_s": 173.97599983215332
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 17,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 17,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Attack face for tempo and preserve weapon durability.",
+            "action": {
+              "type": "attack",
+              "attacker": 4,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.516202926635742,
+            "remaining_s": 173.48379699664656
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.54200005531311,
+          "remaining_s": 173.4579999446869
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 18,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 4.130000114440918,
+          "remaining_s": 175.86999988555908
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 19,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 55
+          },
+          "default": {
+            "type": "play_card",
+            "card": 13,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 19,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": null,
+            "reason": "Remove Water Elemental to stop freezes and protect future weapon attacks.",
+            "action": {
+              "type": "attack",
+              "attacker": 4,
+              "target": 55
+            },
+            "different_from_default": true,
+            "publication_elapsed_s": 8.059530973434448,
+            "remaining_s": 171.94046947965398
+          },
+          "different_from_default": true,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.085000038146973,
+          "remaining_s": 171.91499996185303
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 20,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 13,
+            "position": 0
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 5.562999963760376,
+          "remaining_s": 174.43700003623962
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 21,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 19
+          },
+          "default": {
+            "type": "play_card",
+            "card": 19
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 21,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Set Freezing Trap to tax the Ogre attack, then keep developing.",
+            "action": {
+              "type": "play_card",
+              "card": 19
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.067233085632324,
+            "remaining_s": 173.9327665673336
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.0929999351501465,
+          "remaining_s": 173.90700006484985
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 22,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 12,
+            "position": 1
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 3.4260001182556152,
+          "remaining_s": 176.57399988174438
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 23,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.396000146865845,
+          "remaining_s": 172.60399985313416
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 24,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 9,
+            "position": 2
+          },
+          "default": {
+            "type": "play_card",
+            "card": 9,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 24,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Secretkeeper before Freezing Trap triggers its growth.",
+            "action": {
+              "type": "play_card",
+              "card": 9,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 7.719887971878052,
+            "remaining_s": 172.28011248772964
+          },
+          "different_from_default": true,
+          "outside_candidates": true,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": true,
+          "elapsed_s": 7.746000051498413,
+          "remaining_s": 172.2539999485016
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 25,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 20
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 3.8959999084472656,
+          "remaining_s": 176.10400009155273
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 26,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 37
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 5.664999961853027,
+          "remaining_s": 174.33500003814697
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 27,
+          "phase": "main",
+          "action": {
+            "type": "hero_power"
+          },
+          "default": {
+            "type": "hero_power"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 27,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Use hero power before ending; remaining Hyena can attack after.",
+            "action": {
+              "type": "hero_power"
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 8.846106052398682,
+            "remaining_s": 171.15389388380572
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.872999906539917,
+          "remaining_s": 171.12700009346008
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 28,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 12,
+            "target": 37
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 3.4760000705718994,
+          "remaining_s": 176.5239999294281
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 29,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 2.6530001163482666,
+          "remaining_s": 177.34699988365173
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 30,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 15
+          },
+          "default": {
+            "type": "play_card",
+            "card": 15
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 30,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Set Snake Trap to punish the Ogre attacking a minion.",
+            "action": {
+              "type": "play_card",
+              "card": 15
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 7.725373983383179,
+            "remaining_s": 172.27462639007717
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.751000165939331,
+          "remaining_s": 172.24899983406067
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 31,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 37
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 3.4830000400543213,
+          "remaining_s": 176.51699995994568
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 32,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 12,
+            "target": 37
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 4.684000015258789,
+          "remaining_s": 175.3159999847412
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 33,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 9,
+            "target": 37
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 3.802000045776367,
+          "remaining_s": 176.19799995422363
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 34,
+          "phase": "main",
+          "action": {
+            "type": "hero_power"
+          },
+          "default": {
+            "type": "hero_power"
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 2.9790000915527344,
+          "remaining_s": 177.02099990844727
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 35,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 3.240999937057495,
+          "remaining_s": 176.7590000629425
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 36,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 37
+          },
+          "default": {
+            "type": "play_card",
+            "card": 21,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "1cabf11b2c4147fb",
+            "seq": 36,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": null,
+            "reason": "Attack face; lethal is available across board attacks.",
+            "action": {
+              "type": "attack",
+              "attacker": 13,
+              "target": 37
+            },
+            "different_from_default": true,
+            "publication_elapsed_s": 7.7016260623931885,
+            "remaining_s": 172.29837457137182
+          },
+          "different_from_default": true,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.728000164031982,
+          "remaining_s": 172.27199983596802
+        },
+        {
+          "game": "1cabf11b2c4147fb",
+          "seq": 37,
+          "phase": "main",
+          "action": {
+            "type": "hero_power"
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 2.765000104904175,
+          "remaining_s": 177.23499989509583
+        }
+      ],
+      "tool_elapsed_s": [
+        0.0056,
+        0.0386,
+        0.0395,
+        0.0389,
+        0.0453,
+        0.0396,
+        0.0391,
+        0.0405,
+        0.0393,
+        0.0405,
+        0.0435,
+        0.042,
+        0.0403,
+        0.0389,
+        0.0419,
+        0.0396,
+        0.0403,
+        0.039,
+        0.0398,
+        0.0392,
+        0.0406,
+        0.0393,
+        0.0411,
+        0.048,
+        0.0444,
+        0.0405,
+        0.0427
+      ],
+      "rejected_events": {
+        "rejected_stale": 10
+      },
+      "deep_requests": 0,
+      "commands": 57,
+      "other_commands": [],
+      "selection_requests": 20,
+      "selection_status": {
+        "adopted": 20
+      },
+      "tool_errors": {},
+      "has_client_mcp_env": false,
+      "mcp_calls": 38,
+      "usage": {
+        "input_tokens": 2168362,
+        "cached_input_tokens": 1997440,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 6381,
+        "reasoning_output_tokens": 1533
+      },
+      "model": "gpt-6-luna",
+      "effort": "medium",
+      "unsubmitted_decisions": []
+    }
+  ],
+  "note": "MCP act entry is a conservative approximation of submission time; no model cancellation claim."
+}

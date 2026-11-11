@@ -1,0 +1,1271 @@
+{
+  "games": 1,
+  "decisions": 32,
+  "model_choices": 20,
+  "phase_counts": {
+    "deck_submission": 1,
+    "mulligan": 1,
+    "main": 29,
+    "choice": 1
+  },
+  "latency_by_phase": {
+    "choice": {
+      "n": 1,
+      "mean": 8.111999988555908,
+      "max": 8.111999988555908,
+      "p50": 8.111999988555908,
+      "p95": 8.111999988555908,
+      "p99": 8.111999988555908
+    },
+    "deck_submission": {
+      "n": 1,
+      "mean": 16.888000011444092,
+      "max": 16.888000011444092,
+      "p50": 16.888000011444092,
+      "p95": 16.888000011444092,
+      "p99": 16.888000011444092
+    },
+    "main": {
+      "n": 29,
+      "mean": 8.443620689984026,
+      "max": 19.71399998664856,
+      "p50": 7.6549999713897705,
+      "p95": 14.950999975204468,
+      "p99": 19.71399998664856
+    },
+    "mulligan": {
+      "n": 1,
+      "mean": 9.674999952316284,
+      "max": 9.674999952316284,
+      "p50": 9.674999952316284,
+      "p95": 9.674999952316284,
+      "p99": 9.674999952316284
+    }
+  },
+  "different_from_default": 2,
+  "outside_candidates": 0,
+  "validation_bypassed": 0,
+  "missing_prepare": 0,
+  "selection_mismatch": 0,
+  "latency_publication_to_mcp_act": {
+    "n": 32,
+    "mean": 8.735624998807907,
+    "max": 19.71399998664856,
+    "p50": 7.832000017166138,
+    "p95": 16.888000011444092,
+    "p99": 19.71399998664856
+  },
+  "deck_submission_latency": {
+    "n": 1,
+    "mean": 16.888000011444092,
+    "max": 16.888000011444092,
+    "p50": 16.888000011444092,
+    "p95": 16.888000011444092,
+    "p99": 16.888000011444092
+  },
+  "unsubmitted_decisions": [],
+  "all_decisions_elapsed_including_failures": {
+    "n": 32,
+    "mean": 8.735624998807907,
+    "max": 19.71399998664856,
+    "p50": 7.832000017166138,
+    "p95": 16.888000011444092,
+    "p99": 19.71399998664856
+  },
+  "tool_latency": {
+    "n": 32,
+    "mean": 0.042934375,
+    "max": 0.0767,
+    "p50": 0.0417,
+    "p95": 0.0643,
+    "p99": 0.0767
+  },
+  "actual_tool_commands": 52,
+  "mcp_calls": 33,
+  "selection_requests": 20,
+  "other_commands": [],
+  "deep_requests": 0,
+  "audits": [
+    {
+      "decisions": [
+        {
+          "game": "g_20261111_000001",
+          "seq": 1,
+          "phase": "deck_submission",
+          "action": {
+            "type": "submit_deck",
+            "hero_class": "HUNTER",
+            "cards": [
+              "EX1_029",
+              "EX1_029",
+              "EX1_080",
+              "EX1_080",
+              "DS1_184",
+              "EX1_162",
+              "EX1_531",
+              "EX1_531",
+              "EX1_533",
+              "EX1_554",
+              "EX1_066",
+              "EX1_610",
+              "EX1_610",
+              "EX1_611",
+              "EX1_611",
+              "NEW1_019",
+              "NEW1_019",
+              "EX1_536",
+              "EX1_536",
+              "EX1_538",
+              "EX1_538",
+              "EX1_539",
+              "EX1_539",
+              "EX1_617",
+              "NEW1_031",
+              "NEW1_031",
+              "DS1_070",
+              "EX1_534",
+              "EX1_534",
+              "EX1_543"
+            ]
+          },
+          "default": {
+            "type": "submit_deck",
+            "hero_class": "HUNTER",
+            "cards": [
+              "EX1_029",
+              "EX1_029",
+              "EX1_080",
+              "EX1_080",
+              "DS1_184",
+              "EX1_162",
+              "EX1_531",
+              "EX1_531",
+              "EX1_533",
+              "EX1_554",
+              "EX1_066",
+              "EX1_610",
+              "EX1_610",
+              "EX1_611",
+              "EX1_611",
+              "NEW1_019",
+              "NEW1_019",
+              "EX1_536",
+              "EX1_536",
+              "EX1_538",
+              "EX1_538",
+              "EX1_539",
+              "EX1_539",
+              "EX1_617",
+              "NEW1_031",
+              "NEW1_031",
+              "DS1_070",
+              "EX1_534",
+              "EX1_534",
+              "EX1_543"
+            ]
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 16.888000011444092,
+          "remaining_s": 163.1119999885559
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 2,
+          "phase": "mulligan",
+          "action": {
+            "type": "mulligan",
+            "replace": [
+              32,
+              10
+            ]
+          },
+          "default": {
+            "type": "mulligan",
+            "replace": [
+              32,
+              10
+            ]
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 2,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Keep the early Beast body; redraw the slow Houndmaster and Tracking.",
+            "action": {
+              "type": "mulligan",
+              "replace": [
+                32,
+                10
+              ]
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.899542808532715,
+            "remaining_s": 173.1004563755123
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 9.674999952316284,
+          "remaining_s": 170.32500004768372
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 3,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.664000034332275,
+          "remaining_s": 174.33599996566772
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 4,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 13,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 13,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 4,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Develop a threat while the opponent has no board.",
+            "action": {
+              "type": "play_card",
+              "card": 13,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 4.099564075469971,
+            "remaining_s": 175.90043568052351
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.486000061035156,
+          "remaining_s": 173.51399993896484
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 5,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 4.642999887466431,
+          "remaining_s": 175.35700011253357
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 6,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 31
+          },
+          "default": {
+            "type": "play_card",
+            "card": 31
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 6,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Build a board with Animal Companion and preserve the Hyena for a follow up.",
+            "action": {
+              "type": "play_card",
+              "card": 31
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 9.016203880310059,
+            "remaining_s": 170.9837957045529
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 10.935999870300293,
+          "remaining_s": 169.0640001296997
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 7,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 71,
+            "target": 39
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 71,
+            "target": 39
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 7,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Use the Charge minion to remove Mana Wyrm before it grows from Mage spells.",
+            "action": {
+              "type": "attack",
+              "attacker": 71,
+              "target": 39
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 7.416266918182373,
+            "remaining_s": 172.58373266807757
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 9.16100001335144,
+          "remaining_s": 170.83899998664856
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 8,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 8,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Take available face damage with the surviving Hyena.",
+            "action": {
+              "type": "attack",
+              "attacker": 13,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 7.075013875961304,
+            "remaining_s": 172.92498563672416
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 9.61899995803833,
+          "remaining_s": 170.38100004196167
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 9,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 3.553999900817871,
+          "remaining_s": 176.44600009918213
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 10,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 32,
+            "target": 13,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 32,
+            "target": 13,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 10,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Buff the Hyena into a durable Taunt Beast and develop Houndmaster.",
+            "action": {
+              "type": "play_card",
+              "card": 32,
+              "target": 13,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.627805948257446,
+            "remaining_s": 174.3721931532491
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.448000192642212,
+          "remaining_s": 172.5519998073578
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 11,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 50
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 50
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 11,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Clear Harvest Golem with the buffed Hyena; its Beast trigger grows Hyena on death.",
+            "action": {
+              "type": "attack",
+              "attacker": 13,
+              "target": 50
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 7.617132902145386,
+            "remaining_s": 172.38286711846013
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 10.120999813079834,
+          "remaining_s": 169.87900018692017
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 12,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 71,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 71,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 12,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Send the remaining Charge damage face.",
+            "action": {
+              "type": "attack",
+              "attacker": 71,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 4.72127890586853,
+            "remaining_s": 175.27872102404945
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.615000009536743,
+          "remaining_s": 173.38499999046326
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 13,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.96399998664856,
+          "remaining_s": 173.03600001335144
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 14,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 30
+          },
+          "default": {
+            "type": "play_card",
+            "card": 30
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 14,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Develop Animal Companion while the opponent board is empty.",
+            "action": {
+              "type": "play_card",
+              "card": 30
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 7.009126901626587,
+            "remaining_s": 172.99087265518028
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.492999792098999,
+          "remaining_s": 171.507000207901
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 15,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 9,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 9,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 15,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Add a low cost minion to the board before attacking.",
+            "action": {
+              "type": "play_card",
+              "card": 9,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.889636278152466,
+            "remaining_s": 173.11036445293576
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.710999965667725,
+          "remaining_s": 171.28900003433228
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 16,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 10
+          },
+          "default": {
+            "type": "play_card",
+            "card": 10
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 16,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Use Tracking to find useful reach or development while mana remains.",
+            "action": {
+              "type": "play_card",
+              "card": 10
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.331861972808838,
+            "remaining_s": 173.66813785012346
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.091000080108643,
+          "remaining_s": 171.90899991989136
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 17,
+          "phase": "choice",
+          "action": {
+            "type": "choose",
+            "options": [
+              20
+            ]
+          },
+          "default": {
+            "type": "choose",
+            "options": [
+              20
+            ]
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 17,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Take Freezing Trap for defense and Secretkeeper synergy.",
+            "action": {
+              "type": "choose",
+              "options": [
+                20
+              ]
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.707849979400635,
+            "remaining_s": 173.292150254827
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.111999988555908,
+          "remaining_s": 171.8880000114441
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 18,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 32,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 32,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 18,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Start pushing face damage with Houndmaster.",
+            "action": {
+              "type": "attack",
+              "attacker": 32,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.148653984069824,
+            "remaining_s": 174.8513460420072
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.706000089645386,
+          "remaining_s": 173.29399991035461
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 19,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 74,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 74,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 19,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Push Huffer damage face.",
+            "action": {
+              "type": "attack",
+              "attacker": 74,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 10.573380947113037,
+            "remaining_s": 169.42661984066945
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 14.950999975204468,
+          "remaining_s": 165.04900002479553
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 20,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 4.66100001335144,
+          "remaining_s": 175.33899998664856
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 21,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 32,
+            "target": 40
+          },
+          "default": {
+            "type": "play_card",
+            "card": 17
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 21,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 1,
+            "reason": "Remove Mana Wyrm before more Mage spells can increase its attack.",
+            "action": {
+              "type": "attack",
+              "attacker": 32,
+              "target": 40
+            },
+            "different_from_default": true,
+            "publication_elapsed_s": 8.323123931884766,
+            "remaining_s": 171.67687686206773
+          },
+          "different_from_default": true,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 12.811000108718872,
+          "remaining_s": 167.18899989128113
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 22,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 74,
+            "target": 41
+          },
+          "default": {
+            "type": "play_card",
+            "card": 17
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 22,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 4,
+            "reason": "Trade Huffer into Sorcerer\u2019s Apprentice to remove the spell cost reduction threat.",
+            "action": {
+              "type": "attack",
+              "attacker": 74,
+              "target": 41
+            },
+            "different_from_default": true,
+            "publication_elapsed_s": 15.65983510017395,
+            "remaining_s": 164.34016269876156
+          },
+          "different_from_default": true,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 19.71399998664856,
+          "remaining_s": 160.28600001335144
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 23,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 17
+          },
+          "default": {
+            "type": "play_card",
+            "card": 17
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 23,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Play Explosive Trap for Secretkeeper growth and protection from a face attack.",
+            "action": {
+              "type": "play_card",
+              "card": 17
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 8.659548997879028,
+            "remaining_s": 171.3404503252823
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 14.550999879837036,
+          "remaining_s": 165.44900012016296
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 24,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 20
+          },
+          "default": {
+            "type": "play_card",
+            "card": 20
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 24,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Add Freezing Trap; a second secret grows Secretkeeper and may disrupt their attack.",
+            "action": {
+              "type": "play_card",
+              "card": 20
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 10.167503118515015,
+            "remaining_s": 169.83249649801292
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 11.581000089645386,
+          "remaining_s": 168.41899991035461
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 25,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 9,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 9,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 25,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Push Secretkeeper damage before spending the remaining mana.",
+            "action": {
+              "type": "attack",
+              "attacker": 9,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.423120975494385,
+            "remaining_s": 174.57687940518372
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.5350000858306885,
+          "remaining_s": 172.4649999141693
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 26,
+          "phase": "main",
+          "action": {
+            "type": "hero_power"
+          },
+          "default": {
+            "type": "hero_power"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 26,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Use Steady Shot for face damage.",
+            "action": {
+              "type": "hero_power"
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.878783941268921,
+            "remaining_s": 174.12121630064212
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.694000005722046,
+          "remaining_s": 171.30599999427795
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 27,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.187000036239624,
+          "remaining_s": 174.81299996376038
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 28,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 24
+          },
+          "default": {
+            "type": "play_card",
+            "card": 24
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.684000015258789,
+          "remaining_s": 174.3159999847412
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 29,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 37
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.832000017166138,
+          "remaining_s": 172.16799998283386
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 30,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 32,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 32,
+            "target": 37
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.801000118255615,
+          "remaining_s": 173.19899988174438
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 31,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 9,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 9,
+            "target": 37
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 3.996000051498413,
+          "remaining_s": 176.0039999485016
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 32,
+          "phase": "main",
+          "action": {
+            "type": "hero_power"
+          },
+          "default": {
+            "type": "hero_power"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.6549999713897705,
+          "remaining_s": 172.34500002861023
+        }
+      ],
+      "tool_elapsed_s": [
+        0.0048,
+        0.0418,
+        0.0475,
+        0.0454,
+        0.0445,
+        0.0458,
+        0.0407,
+        0.0404,
+        0.0425,
+        0.0496,
+        0.0433,
+        0.0407,
+        0.0426,
+        0.0391,
+        0.0432,
+        0.0405,
+        0.039,
+        0.0408,
+        0.0416,
+        0.0454,
+        0.0406,
+        0.0394,
+        0.0417,
+        0.0437,
+        0.045,
+        0.0402,
+        0.04,
+        0.0767,
+        0.0643,
+        0.0441,
+        0.0403,
+        0.0387
+      ],
+      "rejected_events": {},
+      "deep_requests": 0,
+      "commands": 52,
+      "other_commands": [],
+      "selection_requests": 20,
+      "selection_status": {
+        "adopted": 20
+      },
+      "tool_errors": {},
+      "has_client_mcp_env": false,
+      "mcp_calls": 33,
+      "usage": {
+        "input_tokens": 3042456,
+        "cached_input_tokens": 2903040,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5801,
+        "reasoning_output_tokens": 1330
+      },
+      "model": "gpt-6-luna",
+      "effort": "medium",
+      "unsubmitted_decisions": []
+    }
+  ],
+  "note": "MCP act entry is a conservative approximation of submission time; no model cancellation claim."
+}

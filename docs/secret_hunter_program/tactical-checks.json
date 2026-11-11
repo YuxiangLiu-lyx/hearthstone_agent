@@ -1,0 +1,55 @@
+{
+  "passed": 6,
+  "fixtures": 5,
+  "evidence": [
+    {
+      "case": "known-board-lethal-defense",
+      "actions": [
+        {
+          "type": "play_card",
+          "card": 73,
+          "target": 72
+        },
+        {
+          "type": "attack",
+          "attacker": 71,
+          "target": 72
+        },
+        {
+          "type": "end_turn"
+        }
+      ],
+      "enemy_board_empty": true,
+      "own_hp": 6,
+      "claim": "Current visible board threat removed; no hidden-hand survival guarantee."
+    },
+    {
+      "case": "explosive-can-be-avoided-by-trading",
+      "secret_still_active": true
+    },
+    {
+      "case": "explosive-shield-survival",
+      "enemy_health": 1,
+      "own_hp": 29
+    },
+    {
+      "case": "cache-exact-result-and-invalidated-health",
+      "reused": true,
+      "changed_state_rejected": true
+    },
+    {
+      "case": "two-jugglers-hounds",
+      "projector_rejected_random_branch": true,
+      "engine_action_accepted": true,
+      "board_size": 7
+    },
+    {
+      "case": "zero-search-budget",
+      "action": {
+        "type": "play_card",
+        "card": 78
+      },
+      "elapsed_s": 0.00015924999024719
+    }
+  ]
+}

@@ -1,0 +1,885 @@
+{
+  "baseline": {
+    "counts": {
+      "wins": 109,
+      "losses": 35,
+      "losses_with_unaffordable_krush_observed": 13,
+      "losses_with_unaffordable_highmane_observed": 18
+    },
+    "loss_examples": [
+      {
+        "game": "00e1bb7f0c104b90",
+        "seed": 86104,
+        "seat": 2,
+        "opponent": "astra-board-proxy",
+        "observation": "experiments/teacher-h7-followup/games/00e1bb7f0c104b90/p2/observations.jsonl",
+        "last_end_turn_seq": 21,
+        "last_end_turn": 12,
+        "own_health": 3,
+        "enemy_health": 22,
+        "own_board": 1,
+        "enemy_board": 5,
+        "hand": [
+          "EX1_543",
+          "EX1_611"
+        ],
+        "arcane_casts": []
+      },
+      {
+        "game": "411b119546b64c46",
+        "seed": 86109,
+        "seat": 1,
+        "opponent": "astra-board-proxy",
+        "observation": "experiments/teacher-h7-followup/games/411b119546b64c46/p1/observations.jsonl",
+        "last_end_turn_seq": 33,
+        "last_end_turn": 18,
+        "own_health": 4,
+        "enemy_health": 10,
+        "own_board": 1,
+        "enemy_board": 4,
+        "hand": [
+          "GAME_005",
+          "NEW1_031"
+        ],
+        "arcane_casts": []
+      },
+      {
+        "game": "9b9f803142ef4fa5",
+        "seed": 86108,
+        "seat": 1,
+        "opponent": "astra-board-proxy",
+        "observation": "experiments/teacher-h7-followup/games/9b9f803142ef4fa5/p1/observations.jsonl",
+        "last_end_turn_seq": 30,
+        "last_end_turn": 18,
+        "own_health": 11,
+        "enemy_health": 9,
+        "own_board": 1,
+        "enemy_board": 6,
+        "hand": [
+          "GAME_005",
+          "EX1_162"
+        ],
+        "arcane_casts": []
+      },
+      {
+        "game": "332a3798e98e444d",
+        "seed": 86109,
+        "seat": 2,
+        "opponent": "astra-board-proxy",
+        "observation": "experiments/teacher-h7-followup/games/332a3798e98e444d/p2/observations.jsonl",
+        "last_end_turn_seq": 32,
+        "last_end_turn": 15,
+        "own_health": 11,
+        "enemy_health": 8,
+        "own_board": 1,
+        "enemy_board": 2,
+        "hand": [],
+        "arcane_casts": []
+      },
+      {
+        "game": "d7e85ac455c04873",
+        "seed": 86111,
+        "seat": 2,
+        "opponent": "astra-board-proxy",
+        "observation": "experiments/teacher-h7-followup/games/d7e85ac455c04873/p2/observations.jsonl",
+        "last_end_turn_seq": 31,
+        "last_end_turn": 15,
+        "own_health": 3,
+        "enemy_health": 13,
+        "own_board": 3,
+        "enemy_board": 3,
+        "hand": [],
+        "arcane_casts": []
+      },
+      {
+        "game": "cae7d2f5da264590",
+        "seed": 86105,
+        "seat": 2,
+        "opponent": "astra-tempo-proxy",
+        "observation": "experiments/teacher-h7-followup/games/cae7d2f5da264590/p2/observations.jsonl",
+        "last_end_turn_seq": 37,
+        "last_end_turn": 16,
+        "own_health": 4,
+        "enemy_health": 7,
+        "own_board": 2,
+        "enemy_board": 4,
+        "hand": [
+          "EX1_543"
+        ],
+        "arcane_casts": []
+      },
+      {
+        "game": "b47c73b7067943ee",
+        "seed": 86108,
+        "seat": 1,
+        "opponent": "astra-tempo-proxy",
+        "observation": "experiments/teacher-h7-followup/games/b47c73b7067943ee/p1/observations.jsonl",
+        "last_end_turn_seq": 17,
+        "last_end_turn": 10,
+        "own_health": 4,
+        "enemy_health": 15,
+        "own_board": 1,
+        "enemy_board": 1,
+        "hand": [
+          "EX1_543",
+          "EX1_534",
+          "EX1_080"
+        ],
+        "arcane_casts": []
+      },
+      {
+        "game": "2e437b3795244979",
+        "seed": 86107,
+        "seat": 2,
+        "opponent": "astra-tempo-proxy",
+        "observation": "experiments/teacher-h7-followup/games/2e437b3795244979/p2/observations.jsonl",
+        "last_end_turn_seq": 18,
+        "last_end_turn": 10,
+        "own_health": 4,
+        "enemy_health": 15,
+        "own_board": 2,
+        "enemy_board": 2,
+        "hand": [
+          "EX1_611",
+          "EX1_534",
+          "EX1_617",
+          "EX1_531"
+        ],
+        "arcane_casts": []
+      },
+      {
+        "game": "7d802e6e2d584c0e",
+        "seed": 86110,
+        "seat": 1,
+        "opponent": "astra-tempo-proxy",
+        "observation": "experiments/teacher-h7-followup/games/7d802e6e2d584c0e/p1/observations.jsonl",
+        "last_end_turn_seq": 34,
+        "last_end_turn": 14,
+        "own_health": 3,
+        "enemy_health": 11,
+        "own_board": 5,
+        "enemy_board": 3,
+        "hand": [],
+        "arcane_casts": []
+      },
+      {
+        "game": "b6c51e0eb5374c8d",
+        "seed": 86111,
+        "seat": 2,
+        "opponent": "astra-tempo-proxy",
+        "observation": "experiments/teacher-h7-followup/games/b6c51e0eb5374c8d/p2/observations.jsonl",
+        "last_end_turn_seq": 25,
+        "last_end_turn": 13,
+        "own_health": 3,
+        "enemy_health": 18,
+        "own_board": 3,
+        "enemy_board": 2,
+        "hand": [
+          "EX1_617"
+        ],
+        "arcane_casts": []
+      },
+      {
+        "game": "a2069539d2934fa1",
+        "seed": 86101,
+        "seat": 2,
+        "opponent": "astra-sticky-proxy",
+        "observation": "experiments/teacher-h7-followup/games/a2069539d2934fa1/p2/observations.jsonl",
+        "last_end_turn_seq": 19,
+        "last_end_turn": 13,
+        "own_health": 7,
+        "enemy_health": 26,
+        "own_board": 1,
+        "enemy_board": 2,
+        "hand": [
+          "EX1_617",
+          "EX1_611"
+        ],
+        "arcane_casts": []
+      },
+      {
+        "game": "f2d46f3b977b45f5",
+        "seed": 86103,
+        "seat": 1,
+        "opponent": "astra-sticky-proxy",
+        "observation": "experiments/teacher-h7-followup/games/f2d46f3b977b45f5/p1/observations.jsonl",
+        "last_end_turn_seq": 27,
+        "last_end_turn": 13,
+        "own_health": 6,
+        "enemy_health": 14,
+        "own_board": 0,
+        "enemy_board": 3,
+        "hand": [
+          "EX1_543"
+        ],
+        "arcane_casts": []
+      }
+    ]
+  },
+  "candidate": {
+    "counts": {
+      "arcane_face": 35,
+      "wins": 112,
+      "arcane_minion": 64,
+      "losses": 32,
+      "losses_with_unaffordable_krush_observed": 0,
+      "losses_with_unaffordable_highmane_observed": 14
+    },
+    "loss_examples": [
+      {
+        "game": "f1f6f401266546a3",
+        "seed": 86102,
+        "seat": 1,
+        "opponent": "astra-board-proxy",
+        "observation": "experiments/teacher-d1-followup/games/f1f6f401266546a3/p1/observations.jsonl",
+        "last_end_turn_seq": 42,
+        "last_end_turn": 16,
+        "own_health": 1,
+        "enemy_health": 6,
+        "own_board": 1,
+        "enemy_board": 2,
+        "hand": [],
+        "arcane_casts": [
+          {
+            "seq": 12,
+            "turn": 8,
+            "target": "Loot Hoarder",
+            "kind": "minion"
+          }
+        ]
+      },
+      {
+        "game": "35b1fd1097094eba",
+        "seed": 86104,
+        "seat": 2,
+        "opponent": "astra-board-proxy",
+        "observation": "experiments/teacher-d1-followup/games/35b1fd1097094eba/p2/observations.jsonl",
+        "last_end_turn_seq": 24,
+        "last_end_turn": 14,
+        "own_health": 13,
+        "enemy_health": 21,
+        "own_board": 1,
+        "enemy_board": 6,
+        "hand": [],
+        "arcane_casts": [
+          {
+            "seq": 6,
+            "turn": 4,
+            "target": "Dire Wolf Alpha",
+            "kind": "minion"
+          }
+        ]
+      },
+      {
+        "game": "c4da4d15c0204681",
+        "seed": 86106,
+        "seat": 1,
+        "opponent": "astra-board-proxy",
+        "observation": "experiments/teacher-d1-followup/games/c4da4d15c0204681/p1/observations.jsonl",
+        "last_end_turn_seq": 36,
+        "last_end_turn": 18,
+        "own_health": 7,
+        "enemy_health": 2,
+        "own_board": 1,
+        "enemy_board": 7,
+        "hand": [],
+        "arcane_casts": []
+      },
+      {
+        "game": "517c91b8a26240d4",
+        "seed": 86105,
+        "seat": 2,
+        "opponent": "astra-board-proxy",
+        "observation": "experiments/teacher-d1-followup/games/517c91b8a26240d4/p2/observations.jsonl",
+        "last_end_turn_seq": 31,
+        "last_end_turn": 16,
+        "own_health": 9,
+        "enemy_health": 7,
+        "own_board": 0,
+        "enemy_board": 5,
+        "hand": [],
+        "arcane_casts": [
+          {
+            "seq": 2,
+            "turn": 2,
+            "target": "Flame Imp",
+            "kind": "minion"
+          },
+          {
+            "seq": 26,
+            "turn": 14,
+            "target": "Abusive Sergeant",
+            "kind": "minion"
+          }
+        ]
+      },
+      {
+        "game": "53c7ddc593c94f73",
+        "seed": 86111,
+        "seat": 1,
+        "opponent": "astra-board-proxy",
+        "observation": "experiments/teacher-d1-followup/games/53c7ddc593c94f73/p1/observations.jsonl",
+        "last_end_turn_seq": 26,
+        "last_end_turn": 14,
+        "own_health": 8,
+        "enemy_health": 15,
+        "own_board": 2,
+        "enemy_board": 6,
+        "hand": [
+          "EX1_539",
+          "EX1_617",
+          "NEW1_031"
+        ],
+        "arcane_casts": []
+      },
+      {
+        "game": "247860895cf3412b",
+        "seed": 86102,
+        "seat": 2,
+        "opponent": "astra-tempo-proxy",
+        "observation": "experiments/teacher-d1-followup/games/247860895cf3412b/p2/observations.jsonl",
+        "last_end_turn_seq": 35,
+        "last_end_turn": 19,
+        "own_health": 1,
+        "enemy_health": 3,
+        "own_board": 1,
+        "enemy_board": 5,
+        "hand": [],
+        "arcane_casts": [
+          {
+            "seq": 3,
+            "turn": 3,
+            "target": "Flame Imp",
+            "kind": "minion"
+          }
+        ]
+      },
+      {
+        "game": "3965883e04a64e13",
+        "seed": 86102,
+        "seat": 1,
+        "opponent": "astra-tempo-proxy",
+        "observation": "experiments/teacher-d1-followup/games/3965883e04a64e13/p1/observations.jsonl",
+        "last_end_turn_seq": 37,
+        "last_end_turn": 16,
+        "own_health": 2,
+        "enemy_health": 14,
+        "own_board": 0,
+        "enemy_board": 1,
+        "hand": [],
+        "arcane_casts": [
+          {
+            "seq": 12,
+            "turn": 8,
+            "target": "Gul'dan",
+            "kind": "face"
+          }
+        ]
+      },
+      {
+        "game": "3951cc07961c4fc8",
+        "seed": 86104,
+        "seat": 2,
+        "opponent": "astra-tempo-proxy",
+        "observation": "experiments/teacher-d1-followup/games/3951cc07961c4fc8/p2/observations.jsonl",
+        "last_end_turn_seq": 33,
+        "last_end_turn": 16,
+        "own_health": 9,
+        "enemy_health": 13,
+        "own_board": 1,
+        "enemy_board": 4,
+        "hand": [
+          "EX1_617"
+        ],
+        "arcane_casts": [
+          {
+            "seq": 4,
+            "turn": 2,
+            "target": "Leper Gnome",
+            "kind": "minion"
+          }
+        ]
+      },
+      {
+        "game": "f0d36722382d40de",
+        "seed": 86106,
+        "seat": 2,
+        "opponent": "astra-tempo-proxy",
+        "observation": "experiments/teacher-d1-followup/games/f0d36722382d40de/p2/observations.jsonl",
+        "last_end_turn_seq": 45,
+        "last_end_turn": 19,
+        "own_health": 5,
+        "enemy_health": 3,
+        "own_board": 1,
+        "enemy_board": 4,
+        "hand": [],
+        "arcane_casts": [
+          {
+            "seq": 27,
+            "turn": 11,
+            "target": "Loot Hoarder",
+            "kind": "minion"
+          },
+          {
+            "seq": 38,
+            "turn": 15,
+            "target": "Imp",
+            "kind": "minion"
+          }
+        ]
+      },
+      {
+        "game": "73c04a0b3fb74302",
+        "seed": 86110,
+        "seat": 1,
+        "opponent": "astra-tempo-proxy",
+        "observation": "experiments/teacher-d1-followup/games/73c04a0b3fb74302/p1/observations.jsonl",
+        "last_end_turn_seq": 23,
+        "last_end_turn": 12,
+        "own_health": 7,
+        "enemy_health": 16,
+        "own_board": 1,
+        "enemy_board": 4,
+        "hand": [
+          "EX1_610",
+          "EX1_531"
+        ],
+        "arcane_casts": []
+      },
+      {
+        "game": "db367ecefaed4faf",
+        "seed": 86102,
+        "seat": 1,
+        "opponent": "astra-sticky-proxy",
+        "observation": "experiments/teacher-d1-followup/games/db367ecefaed4faf/p1/observations.jsonl",
+        "last_end_turn_seq": 43,
+        "last_end_turn": 18,
+        "own_health": 1,
+        "enemy_health": 1,
+        "own_board": 1,
+        "enemy_board": 2,
+        "hand": [],
+        "arcane_casts": [
+          {
+            "seq": 12,
+            "turn": 8,
+            "target": "Dire Wolf Alpha",
+            "kind": "minion"
+          }
+        ]
+      },
+      {
+        "game": "30d0c47a6c264d5b",
+        "seed": 86103,
+        "seat": 2,
+        "opponent": "astra-sticky-proxy",
+        "observation": "experiments/teacher-d1-followup/games/30d0c47a6c264d5b/p2/observations.jsonl",
+        "last_end_turn_seq": 40,
+        "last_end_turn": 20,
+        "own_health": 4,
+        "enemy_health": 2,
+        "own_board": 1,
+        "enemy_board": 2,
+        "hand": [],
+        "arcane_casts": [
+          {
+            "seq": 13,
+            "turn": 8,
+            "target": "Shattered Sun Cleric",
+            "kind": "minion"
+          }
+        ]
+      }
+    ]
+  },
+  "changed_winners": [
+    {
+      "opponent": "astra-board-proxy",
+      "seed": 86102,
+      "seat": 1,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "d91d53cfbc2e41ca",
+      "candidate_game": "f1f6f401266546a3"
+    },
+    {
+      "opponent": "astra-board-proxy",
+      "seed": 86105,
+      "seat": 2,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "2389e296ad704aab",
+      "candidate_game": "517c91b8a26240d4"
+    },
+    {
+      "opponent": "astra-board-proxy",
+      "seed": 86106,
+      "seat": 1,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "688b33f40d824b38",
+      "candidate_game": "c4da4d15c0204681"
+    },
+    {
+      "opponent": "astra-board-proxy",
+      "seed": 86108,
+      "seat": 1,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "9b9f803142ef4fa5",
+      "candidate_game": "6dd84f4cc9ff4250"
+    },
+    {
+      "opponent": "astra-board-proxy",
+      "seed": 86109,
+      "seat": 1,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "411b119546b64c46",
+      "candidate_game": "90c418198ee949fa"
+    },
+    {
+      "opponent": "astra-board-proxy",
+      "seed": 86109,
+      "seat": 2,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "332a3798e98e444d",
+      "candidate_game": "904e5af933614233"
+    },
+    {
+      "opponent": "astra-board-proxy",
+      "seed": 86111,
+      "seat": 1,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "4d846b7445ed41d0",
+      "candidate_game": "53c7ddc593c94f73"
+    },
+    {
+      "opponent": "astra-board-proxy",
+      "seed": 86111,
+      "seat": 2,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "d7e85ac455c04873",
+      "candidate_game": "7585c3f7911c4988"
+    },
+    {
+      "opponent": "astra-sticky-proxy",
+      "seed": 86101,
+      "seat": 2,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "a2069539d2934fa1",
+      "candidate_game": "b9b8b34ece594428"
+    },
+    {
+      "opponent": "astra-sticky-proxy",
+      "seed": 86102,
+      "seat": 1,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "6811b13017f74322",
+      "candidate_game": "db367ecefaed4faf"
+    },
+    {
+      "opponent": "astra-sticky-proxy",
+      "seed": 86102,
+      "seat": 2,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "18eb542153444bce",
+      "candidate_game": "fa4ed66f2daa4b35"
+    },
+    {
+      "opponent": "astra-sticky-proxy",
+      "seed": 86103,
+      "seat": 1,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "f2d46f3b977b45f5",
+      "candidate_game": "f7f58eabc54b45d8"
+    },
+    {
+      "opponent": "astra-sticky-proxy",
+      "seed": 86103,
+      "seat": 2,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "e686229696da4d6c",
+      "candidate_game": "30d0c47a6c264d5b"
+    },
+    {
+      "opponent": "astra-sticky-proxy",
+      "seed": 86104,
+      "seat": 2,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "bec025a9aec94765",
+      "candidate_game": "cfbaaeb05e04429c"
+    },
+    {
+      "opponent": "astra-sticky-proxy",
+      "seed": 86105,
+      "seat": 1,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "3a48697a8ccc4c2d",
+      "candidate_game": "48014a571a184cee"
+    },
+    {
+      "opponent": "astra-sticky-proxy",
+      "seed": 86105,
+      "seat": 2,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "2a27136c398f429d",
+      "candidate_game": "85b3219cb38b4bf8"
+    },
+    {
+      "opponent": "astra-sticky-proxy",
+      "seed": 86106,
+      "seat": 1,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "bbf6bf5f3a044218",
+      "candidate_game": "b503f5ac052d49b5"
+    },
+    {
+      "opponent": "astra-sticky-proxy",
+      "seed": 86107,
+      "seat": 2,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "a0556637f6d247c7",
+      "candidate_game": "4d30dac4e77a43bf"
+    },
+    {
+      "opponent": "astra-sticky-proxy",
+      "seed": 86109,
+      "seat": 2,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "0a77a116b0514e36",
+      "candidate_game": "964599951f8248db"
+    },
+    {
+      "opponent": "astra-sticky-proxy",
+      "seed": 86111,
+      "seat": 1,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "230cf3aefc9343aa",
+      "candidate_game": "4715134fb5f7432c"
+    },
+    {
+      "opponent": "astra-tempo-proxy",
+      "seed": 86102,
+      "seat": 1,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "d3cbc7ac335d48f0",
+      "candidate_game": "3965883e04a64e13"
+    },
+    {
+      "opponent": "astra-tempo-proxy",
+      "seed": 86102,
+      "seat": 2,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "a52afbbdaf37444f",
+      "candidate_game": "247860895cf3412b"
+    },
+    {
+      "opponent": "astra-tempo-proxy",
+      "seed": 86104,
+      "seat": 2,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "59ecf1cc306c44b1",
+      "candidate_game": "3951cc07961c4fc8"
+    },
+    {
+      "opponent": "astra-tempo-proxy",
+      "seed": 86105,
+      "seat": 2,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "cae7d2f5da264590",
+      "candidate_game": "151532fbbba2452f"
+    },
+    {
+      "opponent": "astra-tempo-proxy",
+      "seed": 86106,
+      "seat": 2,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "5bb604ed68d9428e",
+      "candidate_game": "f0d36722382d40de"
+    },
+    {
+      "opponent": "astra-tempo-proxy",
+      "seed": 86107,
+      "seat": 2,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "2e437b3795244979",
+      "candidate_game": "0ab0011248604f28"
+    },
+    {
+      "opponent": "astra-tempo-proxy",
+      "seed": 86108,
+      "seat": 1,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "b47c73b7067943ee",
+      "candidate_game": "86bdb532a8674e8d"
+    },
+    {
+      "opponent": "astra-tempo-proxy",
+      "seed": 86111,
+      "seat": 2,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "b6c51e0eb5374c8d",
+      "candidate_game": "2a68fbae4a7e449e"
+    },
+    {
+      "opponent": "bot1-mage-proxy",
+      "seed": 86100,
+      "seat": 1,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "9a138941d4644943",
+      "candidate_game": "28e546d806e24017"
+    },
+    {
+      "opponent": "bot1-mage-proxy",
+      "seed": 86101,
+      "seat": 1,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "c03a8367a12e4872",
+      "candidate_game": "9e65988a354041eb"
+    },
+    {
+      "opponent": "bot1-mage-proxy",
+      "seed": 86105,
+      "seat": 1,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "6766e88be6794c07",
+      "candidate_game": "f82dcb314c1e4069"
+    },
+    {
+      "opponent": "bot1-mage-proxy",
+      "seed": 86111,
+      "seat": 1,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "4559f370cc11486d",
+      "candidate_game": "7e236d333a8c437e"
+    },
+    {
+      "opponent": "bot2-face-proxy",
+      "seed": 86100,
+      "seat": 1,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "cb0613b3e5f2421f",
+      "candidate_game": "b6473657560e4b66"
+    },
+    {
+      "opponent": "bot2-face-proxy",
+      "seed": 86101,
+      "seat": 2,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "b146d68c74414aee",
+      "candidate_game": "9a4600ab7d8045ae"
+    },
+    {
+      "opponent": "bot2-face-proxy",
+      "seed": 86109,
+      "seat": 1,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "a2dbfce2146f4651",
+      "candidate_game": "e6532ce9424f447e"
+    },
+    {
+      "opponent": "bot2-face-proxy",
+      "seed": 86110,
+      "seat": 2,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "a0bf2cec07394513",
+      "candidate_game": "52bdd82a9b1d4744"
+    },
+    {
+      "opponent": "bot2-face-proxy",
+      "seed": 86111,
+      "seat": 2,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "314b674de0de4529",
+      "candidate_game": "aac738aa62e640dd"
+    },
+    {
+      "opponent": "bot2-trade-proxy",
+      "seed": 86100,
+      "seat": 2,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "f582bfd3b6d64193",
+      "candidate_game": "4075496e484144e9"
+    },
+    {
+      "opponent": "bot2-trade-proxy",
+      "seed": 86101,
+      "seat": 2,
+      "baseline_win": 1,
+      "candidate_win": 0,
+      "baseline_game": "9b95adc8157a4cbf",
+      "candidate_game": "df6457f7cc46431b"
+    },
+    {
+      "opponent": "bot2-trade-proxy",
+      "seed": 86103,
+      "seat": 1,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "227a21175cac4402",
+      "candidate_game": "4777a2449fc74cb9"
+    },
+    {
+      "opponent": "bot2-trade-proxy",
+      "seed": 86107,
+      "seat": 2,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "d9c1e295247b45e4",
+      "candidate_game": "2a029b664a004a0a"
+    },
+    {
+      "opponent": "bot2-trade-proxy",
+      "seed": 86110,
+      "seat": 1,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "7215b4453284421f",
+      "candidate_game": "309fbf2689454a37"
+    },
+    {
+      "opponent": "bot2-trade-proxy",
+      "seed": 86111,
+      "seat": 2,
+      "baseline_win": 0,
+      "candidate_win": 1,
+      "baseline_game": "0daa12fc6e97497c",
+      "candidate_game": "38baaa4727a24627"
+    }
+  ],
+  "limitation": "Descriptive observations only. Deck substitutions change shuffle/draw trajectories even on shared seeds. A stranded card or different action does not prove a cause of defeat or a forced alternative win."
+}

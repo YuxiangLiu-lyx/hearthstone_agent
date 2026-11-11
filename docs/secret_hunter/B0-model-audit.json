@@ -1,0 +1,971 @@
+{
+  "games": 1,
+  "decisions": 34,
+  "model_choices": 2,
+  "phase_counts": {
+    "deck_submission": 1,
+    "mulligan": 1,
+    "main": 32
+  },
+  "latency_by_phase": {
+    "deck_submission": {
+      "n": 1,
+      "mean": 14.333999872207642,
+      "max": 14.333999872207642,
+      "p50": 14.333999872207642,
+      "p95": 14.333999872207642,
+      "p99": 14.333999872207642
+    },
+    "main": {
+      "n": 32,
+      "mean": 4.459656238555908,
+      "max": 9.277000188827515,
+      "p50": 4.082000017166138,
+      "p95": 9.060999870300293,
+      "p99": 9.277000188827515
+    },
+    "mulligan": {
+      "n": 1,
+      "mean": 8.483000040054321,
+      "max": 8.483000040054321,
+      "p50": 8.483000040054321,
+      "p95": 8.483000040054321,
+      "p99": 8.483000040054321
+    }
+  },
+  "different_from_default": 2,
+  "outside_candidates": 1,
+  "validation_bypassed": 14,
+  "missing_prepare": 16,
+  "selection_mismatch": 0,
+  "latency_publication_to_mcp_act": {
+    "n": 34,
+    "mean": 4.868411751354442,
+    "max": 14.333999872207642,
+    "p50": 4.0980000495910645,
+    "p95": 9.277000188827515,
+    "p99": 14.333999872207642
+  },
+  "deck_submission_latency": {
+    "n": 1,
+    "mean": 14.333999872207642,
+    "max": 14.333999872207642,
+    "p50": 14.333999872207642,
+    "p95": 14.333999872207642,
+    "p99": 14.333999872207642
+  },
+  "unsubmitted_decisions": [],
+  "all_decisions_elapsed_including_failures": {
+    "n": 34,
+    "mean": 4.868411751354442,
+    "max": 14.333999872207642,
+    "p50": 4.0980000495910645,
+    "p95": 9.277000188827515,
+    "p99": 14.333999872207642
+  },
+  "tool_latency": {
+    "n": 18,
+    "mean": 0.04136666666666667,
+    "max": 0.066,
+    "p50": 0.0395,
+    "p95": 0.066,
+    "p99": 0.066
+  },
+  "actual_tool_commands": 20,
+  "mcp_calls": 35,
+  "selection_requests": 2,
+  "other_commands": [],
+  "deep_requests": 0,
+  "audits": [
+    {
+      "decisions": [
+        {
+          "game": "g_20261111_000001",
+          "seq": 1,
+          "phase": "deck_submission",
+          "action": {
+            "type": "submit_deck",
+            "hero_class": "HUNTER",
+            "cards": [
+              "EX1_029",
+              "EX1_029",
+              "EX1_080",
+              "EX1_080",
+              "DS1_184",
+              "EX1_162",
+              "EX1_531",
+              "EX1_531",
+              "EX1_533",
+              "EX1_554",
+              "EX1_066",
+              "EX1_610",
+              "EX1_610",
+              "EX1_611",
+              "EX1_611",
+              "NEW1_019",
+              "NEW1_019",
+              "EX1_536",
+              "EX1_536",
+              "EX1_538",
+              "EX1_538",
+              "EX1_539",
+              "EX1_539",
+              "EX1_617",
+              "NEW1_031",
+              "NEW1_031",
+              "DS1_070",
+              "EX1_534",
+              "EX1_534",
+              "EX1_543"
+            ]
+          },
+          "default": {
+            "type": "submit_deck",
+            "hero_class": "HUNTER",
+            "cards": [
+              "EX1_029",
+              "EX1_029",
+              "EX1_080",
+              "EX1_080",
+              "DS1_184",
+              "EX1_162",
+              "EX1_531",
+              "EX1_531",
+              "EX1_533",
+              "EX1_554",
+              "EX1_066",
+              "EX1_610",
+              "EX1_610",
+              "EX1_611",
+              "EX1_611",
+              "NEW1_019",
+              "NEW1_019",
+              "EX1_536",
+              "EX1_536",
+              "EX1_538",
+              "EX1_538",
+              "EX1_539",
+              "EX1_539",
+              "EX1_617",
+              "NEW1_031",
+              "NEW1_031",
+              "DS1_070",
+              "EX1_534",
+              "EX1_534",
+              "EX1_543"
+            ]
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 14.333999872207642,
+          "remaining_s": 165.66600012779236
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 2,
+          "phase": "mulligan",
+          "action": {
+            "type": "mulligan",
+            "replace": [
+              17,
+              34
+            ]
+          },
+          "default": {
+            "type": "mulligan",
+            "replace": [
+              17,
+              34
+            ]
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 2,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Mulligan the slow Highmane and situational trap; keep early Juggler and Bow.",
+            "action": {
+              "type": "mulligan",
+              "replace": [
+                17,
+                34
+              ]
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.425325155258179,
+            "remaining_s": 173.5746751249535
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.483000040054321,
+          "remaining_s": 171.51699995994568
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 3,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 70
+          },
+          "default": {
+            "type": "play_card",
+            "card": 70
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.668999910354614,
+          "remaining_s": 174.33100008964539
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 4,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 22,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 22,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 4,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Establish early Juggler pressure; hold the Secret until it pairs with Secretkeeper or has a useful trigger.",
+            "action": {
+              "type": "play_card",
+              "card": 22,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 7.428499937057495,
+            "remaining_s": 172.57149954047054
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 9.060999870300293,
+          "remaining_s": 170.9390001296997
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 5,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 1.813999891281128,
+          "remaining_s": 178.18600010871887
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 6,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 16,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 16,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.240000009536743,
+          "remaining_s": 174.75999999046326
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 7,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 2.0929999351501465,
+          "remaining_s": 177.90700006484985
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 8,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 30
+          },
+          "default": {
+            "type": "play_card",
+            "card": 30
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.25,
+          "remaining_s": 172.75
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 9,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 71,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 71,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.309999942779541,
+          "remaining_s": 174.69000005722046
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 10,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 16,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 16,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.057999849319458,
+          "remaining_s": 174.94200015068054
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 11,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 2.2819998264312744,
+          "remaining_s": 177.71800017356873
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 12,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 16,
+            "target": 61
+          },
+          "default": {
+            "type": "play_card",
+            "card": 23
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": true,
+          "outside_candidates": true,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.664999961853027,
+          "remaining_s": 172.33500003814697
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 13,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 71,
+            "target": 61
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 4.0980000495910645,
+          "remaining_s": 175.90199995040894
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 14,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 23
+          },
+          "default": {
+            "type": "play_card",
+            "card": 23
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 4.911999940872192,
+          "remaining_s": 175.0880000591278
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 15,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 37
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 2.759000062942505,
+          "remaining_s": 177.2409999370575
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 16,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 4.082000017166138,
+          "remaining_s": 175.91799998283386
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 17,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 51
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 51
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.526000022888184,
+          "remaining_s": 171.47399997711182
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 18,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 13,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 13,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.991999864578247,
+          "remaining_s": 173.00800013542175
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 19,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 28,
+            "target": 37
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 1.880000114440918,
+          "remaining_s": 178.11999988555908
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 20,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 1.8580000400543213,
+          "remaining_s": 178.14199995994568
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 21,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 18
+          },
+          "default": {
+            "type": "play_card",
+            "card": 18
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.920000076293945,
+          "remaining_s": 173.07999992370605
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 22,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 19
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 2.4220001697540283,
+          "remaining_s": 177.57799983024597
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 23,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 12,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 12,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 4.799000024795532,
+          "remaining_s": 175.20099997520447
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 24,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 2.1459999084472656,
+          "remaining_s": 177.85400009155273
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 25,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 9,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 9,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.383000135421753,
+          "remaining_s": 173.61699986457825
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 26,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 20
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 1.8480000495910645,
+          "remaining_s": 178.15199995040894
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 27,
+          "phase": "main",
+          "action": {
+            "type": "hero_power"
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 2.687999963760376,
+          "remaining_s": 177.31200003623962
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 28,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 1.5079998970031738,
+          "remaining_s": 178.49200010299683
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 29,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 15
+          },
+          "default": {
+            "type": "hero_power"
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": true,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.89300012588501,
+          "remaining_s": 172.106999874115
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 30,
+          "phase": "main",
+          "action": {
+            "type": "hero_power"
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 2.7009999752044678,
+          "remaining_s": 177.29900002479553
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 31,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 1.9479999542236328,
+          "remaining_s": 178.05200004577637
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 32,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 21,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 21,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": true,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 9.277000188827515,
+          "remaining_s": 170.72299981117249
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 33,
+          "phase": "main",
+          "action": {
+            "type": "hero_power"
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 2.555999994277954,
+          "remaining_s": 177.44400000572205
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 34,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": null,
+          "model_needed": null,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": true,
+          "selection_mismatch": false,
+          "elapsed_s": 3.07099986076355,
+          "remaining_s": 176.92900013923645
+        }
+      ],
+      "tool_elapsed_s": [
+        0.0053,
+        0.0554,
+        0.066,
+        0.0405,
+        0.0408,
+        0.0391,
+        0.0422,
+        0.0472,
+        0.0395,
+        0.0389,
+        0.0411,
+        0.05,
+        0.0387,
+        0.0388,
+        0.0391,
+        0.0383,
+        0.0447,
+        0.039
+      ],
+      "rejected_events": {},
+      "deep_requests": 0,
+      "commands": 20,
+      "other_commands": [],
+      "selection_requests": 2,
+      "selection_status": {
+        "adopted": 2
+      },
+      "tool_errors": {},
+      "has_client_mcp_env": false,
+      "mcp_calls": 35,
+      "usage": {
+        "input_tokens": 1671420,
+        "cached_input_tokens": 1523584,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 4739,
+        "reasoning_output_tokens": 1240
+      },
+      "model": "gpt-6-luna",
+      "effort": "medium",
+      "unsubmitted_decisions": []
+    }
+  ],
+  "note": "MCP act entry is a conservative approximation of submission time; no model cancellation claim."
+}

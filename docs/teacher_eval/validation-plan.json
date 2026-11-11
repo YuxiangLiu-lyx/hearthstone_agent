@@ -1,0 +1,28 @@
+{
+  "baseline": "secret-hunter-program",
+  "baseline_sha256": "ce225953aa32c23415449a3b0d90f239ac1206de6697e6a26abe1fa90c92c967",
+  "candidate": "development/teacher_eval/candidates/D1",
+  "candidate_sha256": "e53b7314d77f7e3ab63b268fe857dc16527f646bed4247bb7d0a930d8d92e723",
+  "development_followup": {
+    "start": 86100,
+    "seeds": 12
+  },
+  "confirmation": {
+    "start": 910000,
+    "seeds": 40,
+    "population": "development/teacher_eval/core.json",
+    "population_sha256": "cb2b90a069c91a02ba655ef51fa836363888f204b6e64379047442cca2c8b741"
+  },
+  "guardrail": {
+    "start": 911000,
+    "seeds": 10,
+    "population": "development/teacher_eval/guardrail.json"
+  },
+  "selection_primary": "Equal macro of Astra and bot2 families; each family equally averages its proxy variants.",
+  "gates": {
+    "core": "gain >= 0.01 and paired seed-cluster 95% lower bound > 0; neither hard family down more than .05",
+    "guardrail": "old-pool overall point rate drop <= .03 and no per-opponent point drop > .10; this is a practical screen, not proof of statistical noninferiority",
+    "reliability": "zero illegal actions, timeouts, forfeits, exceptions, emergency fallbacks or >2s decisions; valid exact ZIP and engine/client checks"
+  },
+  "scope": "New local teacher-informed candidate. No real Astra model evaluation. Never use confirmation seeds to adjust the candidate."
+}

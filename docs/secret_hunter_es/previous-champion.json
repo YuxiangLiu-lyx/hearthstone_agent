@@ -1,0 +1,28 @@
+{
+  "status": "local_program_champion",
+  "candidate": "F2",
+  "source": "secret-hunter-program",
+  "zip": "dist/secret-hunter-program.zip",
+  "zip_sha256": "31d62e755cf2d0a51a291b6c23a329d97af8d93f448d56084e91f555775bd173",
+  "source_sha256": "b859dc0d07fca9e75a2c17f19c7710b493b48325f7fc75fb3025765940edd5e6",
+  "base_commit": "6a7fc2475a17190268594ef2f5940b5b3a62f8f0",
+  "baseline": "development/secret_hunter_program/candidates/B1",
+  "paired": {
+    "n_per_arm": 260,
+    "a_wins": 207,
+    "b_wins": 224,
+    "gain": 0.06538461538461539,
+    "seed_clusters": 10,
+    "gain_seed_cluster_95": [
+      0.015384615384615385,
+      0.11538461538461538
+    ],
+    "a_only_wins": 12,
+    "b_only_wins": 29,
+    "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+  },
+  "reliability_passed": true,
+  "official_host_scope": "Two F1 games, 77 exact relays. F2 changes only unused Companion identities and metadata; decision and relay functions unchanged, 77/77 F2 public-state replay matches. Exact F2 ZIP has official client/static tests but no third model-host game.",
+  "updated_utc": "2026-11-11T06:46:43.612225+00:00",
+  "official_submission": false
+}

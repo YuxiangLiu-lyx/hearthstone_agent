@@ -1,0 +1,115 @@
+"""Render measured evidence and scoped release decisions; never promote automatically."""
+import json
+from collections import Counter
+
+from hs_arena.cards import load
+from development.secret_hunter_program.common import ROOT, write
+
+OUT=ROOT/'docs/teacher_eval'
+read=lambda name:json.loads((OUT/name).read_text())
+pct=lambda value:f'{100*value:.2f}%'
+pp=lambda value:f'{100*value:+.2f}'
+
+
+def gates(core,guard):
+    primary=core['hard_family_macro']
+    return {'core':primary['gain']>=.01 and primary['gain_seed_cluster_95'][0]>0
+            and all(core['by_group'][g]['gain']>=-.05 for g in ('astra','bot2')),
+            'old_pool':guard['all']['gain']>=-.03 and all(g['gain']>=-.100000001 for g in guard['by_group'].values())}
+
+
+def main():
+    evidence=read('analysis.json');core=read('confirmation-paired.json');guard=read('guardrail-paired.json')
+    core2=read('round2-confirmation-paired.json');guard2=read('round2-guardrail-paired.json')
+    integrity=read('integrity.json');client=read('client-audit.json');reproduction=read('zip-reproduction.json')
+    first=gates(core,guard);second=gates(core2,guard2)
+    # This report is for the measured outcome of this run, not a generic promotion command.
+    assert first['core'] and not first['old_pool'] and not second['core']
+    decision={'canonical_champion':'H7','canonical_zip':'dist/secret-hunter-program.zip',
+              'promoted':False,'teacher_core_candidate':'D1','teacher_core_zip':'dist/secret-hunter-teacher-d1.zip',
+              'D1_gates':first,'D3_gates':second,'D1_core':core['hard_family_macro'],
+              'reason':'D1 improves teacher-informed proxies but fails the predeclared old-pool regression guard. D3 does not confirm a core improvement. Keep H7 general champion and expose D1 as a scoped candidate.',
+              'official_submission':False,'real_astra_evaluation':False,
+              'python_games':integrity['complete_python_games'],'client_games':client['games'],
+              'report':'docs/teacher_eval/REPORT.md'}
+    write(OUT/'decision.json',decision)
+    lines=['# 老师回传评测驱动的奥秘猎优化（2026-11-11）','',
+      '**结论：保留 H7 为通用默认版本；D1 是针对老师测试方向的专用候选。** D1 将暴龙王克鲁什、误导各一张换成两张奥术射击。40 组新种子、双方座位的核心测试从 H7 的 355/480（73.96%）提高到 D1 的 393/480（81.88%）。但旧对手池未通过预先设定的退步门槛，不能把它宣称为全面升级。','',
+      '[D1 打包文件](../../dist/secret-hunter-teacher-d1.zip) · [D1 卡组](../../development/teacher_eval/candidates/D1/deck.json) · [H7 默认版本](../../dist/secret-hunter-program.zip) · [可复现命令](REPRODUCE.md) · [机器可读决策](decision.json)','',
+      '这些结果来自真实课程引擎上的本地模拟对手，**不是重新击败了老师的 Astra**。本轮没有正式提交，也没有调用 Astra/其他模型作为对手。','',
+      '## 文件归档与版本纠正','',
+      '- `SECRET_HUNTER_CHAMPION.json` 留在根目录：发布与校验脚本依赖这个位置；源代码与 ZIP 哈希均核对通过。',
+      '- `secret-hunter.code-workspace` 留在根目录：其相对路径由这里解析，新增 Teacher tests 和 Teacher results 两个工作区目录。',
+      '- 老师返回的 `games.json`、`results.md` 已原样移至 `experiments/teacher-submission-1/raw/`，父目录的 `manifest.json` 保存原路径及 SHA-256。',
+      '- 修复 README 仍把 F2 写成当前冠军的问题；从已有测量记录恢复 H7 缺失的报告。没有改动 H7 策略或发布 ZIP。','',
+      '## 老师的原始结果','',
+      'Submission 1 提交的是 **WARLOCK / 术士**，并非奥秘猎。以下数字不可当作 H7 的胜负：','',
+      '| 对手 | 胜 | 负 | 弃权 | 非法动作 | 超时 |','|---|---:|---:|---:|---:|---:|']
+    for name,s in evidence['summary'].items():
+        lines.append(f"| {name} | {s['wins']} | {s['losses']} | {s['forfeits']} | {s['illegal_actions']} | {s['timeouts']} |")
+    lines += ['', '共 14 局、7 胜 7 负；回传评分是 9 基础分、0 Astra 奖励分。原文明确不含天梯分和最终迟交调整。', '',
+      'Astra 四局均展示术士。其 15 种已见卡牌、同局最多副本数合计证明至少 19 个卡位；剩余 11 个卡位未知。重复观察不重复计数，跨局副本数取最大值；召唤出的 Imp、Hound、硬币不计入原始牌库。Explosive Trap 的公开揭示没有实体 ID，只计至少一张。', '',
+      '| Astra 已见卡牌 | ID | 至少副本数 |','|---|---|---:|']
+    for card in evidence['opponent_evidence']['astra']['cards']:
+        lines.append(f"| {card['name']} | `{card['card_id']}` | {card['observed_min_copies']} |")
+    lines += ['', '上述下界还依赖“同一对手各局使用同一卡组”的假设，不能从 4 局还原未展示的手牌、牌序或完整 30 张卡。逐卡来源见 [analysis.json](analysis.json)。', '',
+      '## 推测卡组与核心对手','',
+      '| 核心对手 | 卡组假设 | 决策策略 |','|---|---|---|',
+      '| astra-board-proxy | 15 种已见卡各 2 张 | 已有 Zoo v7 控场/增益/交换策略 |',
+      '| astra-tempo-proxy | 同一套 30 张假设 | 独立的铺场节奏策略 |',
+      '| astra-sticky-proxy | 保留全部已见下界；四个未证实双份的卡位改为 2 麦田傀儡、2 银色指挥官 | Zoo v7 控场策略 |',
+      '| bot2-face-proxy | 14 种已见猎人卡各 2 张，未知 2 位补叫嚣的中士 | 以抢血为主 |',
+      '| bot2-trade-proxy | 同一猎人假设 | 两层随从交换搜索 |',
+      '| bot1-mage-proxy | 与已见卡一致的课程 Greedy Mage 卡组 | 课程 Greedy 策略 |','',
+      '所有假设卡组通过课程卡池、职业、30 张和副本上限校验。主测试入口默认使用 [core.json](../../development/teacher_eval/core.json)。Astra 与 bot2 两类各占主指标的 50%，各类内部对变体等权；不会因多添加一种 Astra 变体而改变两类的权重。bot1 另报，旧 14 对手池作为退步检查。','',
+      '老师记录显示，Astra 不只是打脸，还持续交换随从、保留增益目标，利用小鬼召唤师和飞刀维持场面。四局失利的最后一次己方结束回合，Astra 仍有 25/27/16/23 血；原术士没有形成接近斩杀的抢血局面。bot2 三场胜利则在双方总回合 12–13 结束，冲锋、杀戮命令、放狗和英雄技能使“清空可见场面”不等于安全。','',
+      '因此奥秘猎的测试重点是：低费拆飞刀/狼等持续威胁、合理交换保护己方飞刀与土狼、放狗顺序、陷阱的实际触发条件，以及在能斩杀时及时结束对局。老师的术士状态只用于证据分析，没有冒充奥秘猎状态回放成胜负。','',
+      '## 第一轮筛选与复测','',
+      '| 版本 | 改动 | 初筛胜场 /96 | Astra /48 | bot2 /32 | bot1 /16 |','|---|---|---:|---:|---:|---:|']
+    descriptions={'h7':'原始 H7','c1':'小鬼召唤师威胁值 + 控场/保护权重与爆发余量','d1':'暴龙王、误导 → 2 奥术射击','c2':'C1 策略 + D1 换牌'}
+    for name,label in descriptions.items():
+        s=json.loads((ROOT/f'experiments/teacher-{name}-development/summary.json').read_text())
+        lines.append(f"| {name.upper()} | {label} | {s['all']['wins']} | {s['by_group']['astra']['wins']} | {s['by_group']['bot2']['wins']} | {s['by_group']['bot1']['wins']} |")
+    lines += ['', '另一个开发种子块中，H7 为 109/144，D1 为 112/144。单纯提高防御权重、或叠加到换牌上都没有优于 D1，因此最终候选保留 H7 的全部策略代码，仅更换两张牌。筛选数据不作为独立证明。','',
+      '## D1 冻结后的独立确认','',
+      '种子 910000–910039，40 个种子簇；每种对手、每个种子都测两个座位。冻结后没有调整 D1。', '',
+      '| 家族 | H7 | D1 | 胜率变化 | 配对种子簇 95% 区间（百分点） |',
+      '|---|---:|---:|---:|---|']
+    for name,p in core['by_group'].items():
+        lo,hi=p['gain_seed_cluster_95']
+        lines.append(f"| {name} | {p['a_wins']}/{p['n_per_arm']} ({pct(p['a_rate'])}) | {p['b_wins']}/{p['n_per_arm']} ({pct(p['b_rate'])}) | {pp(p['gain'])} pp | {pp(lo)} 至 {pp(hi)} |")
+    p=core['hard_family_macro'];lo,hi=p['gain_seed_cluster_95']
+    lines += ['',f"主指标（Astra/bot2 两类等权）由 **{pct(p['a_rate'])} → {pct(p['b_rate'])}**，提升 **{pp(p['gain'])} 个百分点**，95% 配对种子簇区间 **{pp(lo)} 至 {pp(hi)}**。Astra 单独的提升也通过这一描述性区间；bot2 单独区间跨零，不能声称每个子群都已证明提升。",'',
+      '新对手池的难度与早期 13 对手池不同，不能把 H7 在这里的较低胜率当作程序退化。换牌还会改变洗牌和后续抽牌轨迹，同种子配对并不等于相同起手或逐步反事实。', '',
+      '在这 480 局 D1 中，奥术射击有 184 次以随从为目标、108 次以英雄为目标。H7 的 125 场败局中，43 场曾在结束回合时持有当前最大法力无法打出的暴龙王。这些是支持低费解场方向的观察，不能证明某一张卡或某一次操作必然导致胜负。完整胜负变更和失败样本见 [confirmation-diagnostics.json](confirmation-diagnostics.json)。','',
+      '## 旧对手池检查与第二轮','',
+      'D1 在种子 911000–911009 的原 14 对手池中为 **240/280（85.71%）**，H7 为 **252/280（90.00%）**。总体退步 4.29 个百分点，超过预设 3 点门槛；节奏圣骑从 19/20 降到 13/20，也未通过单对局最多退步 10 点的门槛。样本仅 10 个种子簇，区间跨零；这里是拒绝替换默认版本的实用筛查，不是证明统计上的全面劣势。','',
+      '据此做了一轮单卡替换消融。以下旧池样本已被看过，明确作为自适应开发数据，不能再次称为独立确认：','',
+      '| 版本 | 改动 | 开发核心 /96 | 已看旧池 /280 | 选择 |','|---|---|---:|---:|---|',
+      '| D2 | 只把误导换成奥术射击，保留暴龙王 | 76 | 240 | 仍未通过旧池门槛 |',
+      '| D3 | 只把暴龙王换成奥术射击，保留误导 | 68 | 253 | 进入新的独立确认 |','',
+      f"D3 新种子 920000–920039 的核心确认：**{core2['all']['b_wins']}/480**，同批 H7 为 **{core2['all']['a_wins']}/480**。主指标提升 {pp(core2['hard_family_macro']['gain'])} 点，95% 区间 {pp(core2['hard_family_macro']['gain_seed_cluster_95'][0])} 至 {pp(core2['hard_family_macro']['gain_seed_cluster_95'][1])}，没有验证出收益。",'',
+      f"D3 的第二组独立旧池检查（921000–921019，20 个种子簇）：**{guard2['all']['b_wins']}/{guard2['all']['n_per_arm']}**，H7 为 **{guard2['all']['a_wins']}/{guard2['all']['n_per_arm']}**。本轮按预先记录的一次额外消融上限停止，没有根据最终确认再调参。",'',
+      '## 交付与后续使用','',
+      '- 通用默认：继续使用 H7，根目录冠军索引与默认 ZIP 不变。',
+      '- 更重视本轮老师对手假设：可使用独立 D1 ZIP；它是经过核心确认的专用候选，通用退步和没有真实 Astra 复测的限制随报告保留。',
+      '- 后续新回传先归档为新的 submission 目录，再更新已见副本下界和卡组假设。开发数据可以复用；新候选的最终结论必须使用新的种子块，并保留旧池检查。', '',
+      '## 校验范围','',
+      f"本轮完成 **{integrity['complete_python_games']:,} 局 Python 引擎对局 + {client['games']} 局真实本地客户端对局**；没有混入老师原来的 14 局。所有调度结果与哈希均核验，两方非法动作、超时、执行异常为零。",'',
+      f"7 个证据/统计测试通过；10 个实际引擎战术测试通过，涵盖斩杀优先、飞刀/放狗/土狼顺序、陷阱触发、奥术射击解飞刀与双射击斩杀。实际 ZIP 解压后再次校验，并复现 **{reproduction['games']} 局中的 {reproduction['same_outcomes']} 个胜负、{reproduction['same_action_traces']} 份完整动作轨迹**。",'',
+      f"D1 实际 ZIP 客户端两局均胜，**{client['decisions']}/{client['decisions']}** 个请求与当时脚本输出完全一致。该客户端不调用模型，因此它验证传输与脚本执行，不能替代模型宿主或真实 Astra 对局。",'',
+      '可审计记录：[完整性检查](integrity.json)、[客户端审计](client-audit.json)、[ZIP 复现](zip-reproduction.json)、[原始结果哈希](../../experiments/teacher-submission-1/manifest.json)。']
+    (OUT/'REPORT.md').write_text('\n'.join(lines)+'\n')
+    deck=json.loads((ROOT/'development/teacher_eval/candidates/D1/deck.json').read_text())
+    catalog=load();counts=Counter(deck['cards'])
+    deck_lines=['# D1 专用候选卡组','', '职业：猎人。30 张；策略程序与 H7 相同。用途与限制见 [报告](REPORT.md)。','',
+                '相对 H7：移除 `EX1_543` King Krush、`EX1_533` Misdirection；加入 `DS1_185` Arcane Shot ×2。','',
+                '| 卡牌 | ID | 费用 | 数量 |','|---|---|---:|---:|']
+    for cid,n in sorted(counts.items(),key=lambda item:(catalog[item[0]]['cost'],item[0])):
+        card=catalog[cid];deck_lines.append(f"| {card['name']} | `{cid}` | {card['cost']} | {n} |")
+    (OUT/'DECK.md').write_text('\n'.join(deck_lines)+'\n')
+    print(json.dumps(decision,indent=2))
+
+
+if __name__=='__main__':
+    main()

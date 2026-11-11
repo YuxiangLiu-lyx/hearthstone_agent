@@ -1,0 +1,62 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.analysis.exclude": [
+    "**/.git",
+    "**/.venv",
+    "**/node_modules",
+    "**/__pycache__",
+    "**/experiments",
+    "hs-arena-0.2.2",
+    "dist",
+    "development/**/candidates",
+    "development/checkpoints",
+    "development/clients",
+    "development/**/release*",
+    "development/**/package*",
+    "development/**/previous-champion",
+    "**/scratch"
+  ],
+  "python.analysis.diagnosticMode": "openFilesOnly",
+  "files.watcherExclude": {
+    "**/.venv/**": true,
+    "**/node_modules/**": true,
+    "**/__pycache__/**": true,
+    "**/experiments/**": true,
+    "hs-arena-0.2.2/**": true,
+    "dist/**": true,
+    "development/**/candidates/**": true,
+    "development/checkpoints/**": true,
+    "development/clients/**": true,
+    "development/**/release*/**": true,
+    "development/**/package*/**": true,
+    "development/**/previous-champion/**": true,
+    "**/scratch/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true
+  },
+  "search.exclude": {
+    "**/.git/**": true,
+    "**/.venv/**": true,
+    "**/node_modules/**": true,
+    "**/__pycache__/**": true,
+    "**/experiments/**": true,
+    "hs-arena-0.2.2/**": true,
+    "dist/**": true,
+    "development/**/candidates/**": true,
+    "development/checkpoints/**": true,
+    "development/clients/**": true,
+    "development/**/release*/**": true,
+    "development/**/package*/**": true,
+    "development/**/previous-champion/**": true,
+    "**/scratch/**": true
+  },
+  "search.followSymlinks": false,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    ".venv": true,
+    "experiments/**/games": true,
+    "experiments/**/g_*": true,
+    "development/experiments": true
+  }
+}

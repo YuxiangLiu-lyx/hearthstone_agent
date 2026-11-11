@@ -1,0 +1,150 @@
+{
+  "candidate": "development/teacher_eval/candidates/D3",
+  "population": [
+    {
+      "name": "official-mage",
+      "mode": "official",
+      "deck": "hs-arena-0.2.2/decks/greedy_mage.json"
+    },
+    {
+      "name": "aggressive-hunter",
+      "mode": "aggressive",
+      "deck": "development/decks/hunter-face.json"
+    },
+    {
+      "name": "control-priest",
+      "mode": "control",
+      "deck": "development/decks/priest-control.json"
+    },
+    {
+      "name": "tempo-paladin",
+      "mode": "tempo",
+      "deck": "development/decks/paladin-mid.json"
+    },
+    {
+      "name": "value-warlock",
+      "mode": "value",
+      "deck": "development/decks/warlock-value.json"
+    },
+    {
+      "name": "adversarial-zoo",
+      "mode": "tempo",
+      "deck": "development/decks/warlock-zoo.json"
+    },
+    {
+      "name": "search-paladin",
+      "mode": "search",
+      "deck": "development/decks/paladin-mid.json"
+    },
+    {
+      "name": "historical-mage",
+      "mode": "official",
+      "deck": "development/checkpoints/v1-deck-champion/deck.json"
+    },
+    {
+      "name": "control-mage",
+      "mode": "control",
+      "deck": "development/decks/mage-tempo.json"
+    },
+    {
+      "name": "tempo-warlock",
+      "mode": "tempo",
+      "deck": "development/decks/warlock-value.json"
+    },
+    {
+      "name": "aggressive-paladin",
+      "mode": "aggressive",
+      "deck": "development/decks/paladin-mid.json"
+    },
+    {
+      "name": "value-priest",
+      "mode": "value",
+      "deck": "development/decks/priest-control.json"
+    },
+    {
+      "name": "search-shaman",
+      "mode": "search",
+      "deck": "development/decks/shaman-token.json"
+    },
+    {
+      "name": "adversarial-priest-v1",
+      "mode": "frozen",
+      "deck": "development/candidates/adversaries/priest-control/deck.json",
+      "policy": "development/candidates/adversaries/priest-control"
+    }
+  ],
+  "out": "experiments/teacher-d3-adaptive-guard",
+  "start": 911000,
+  "seeds": 10,
+  "workers": 4,
+  "split": "guardrail",
+  "candidate_sha256": "1d3404893744a89a519a7deabe7740fad8c5fb80f416eb6ad0eb953392e9a8c6",
+  "population_sha256": "5be681abbce9b8d2515d234cc753109f5fa7acff0ff6ced3fa9c1d1116ccfde5",
+  "opponent_versions": {
+    "official-mage": {
+      "deck": "1e02dc64d9a7585580609857a4a95f36ef61d34a0266d863e00413cde8674e90",
+      "policy": null
+    },
+    "aggressive-hunter": {
+      "deck": "69ffd5dc5a3719bf383041ba68d40082965aed3a58f1041b03c1ba08d0718244",
+      "policy": null
+    },
+    "control-priest": {
+      "deck": "17ddc9079acd4ed49389b98a3fd0d0dea8933de6b7258411e6f22b0cb8f8f999",
+      "policy": null
+    },
+    "tempo-paladin": {
+      "deck": "df47f26bb84f9f2e2697661695917a05e69abc329950762888171c0f9389dea0",
+      "policy": null
+    },
+    "value-warlock": {
+      "deck": "bca9559bb9d01b2ebcae78a53de7becc2935a5d19cba0159534bb276a045c6c5",
+      "policy": null
+    },
+    "adversarial-zoo": {
+      "deck": "a8ae4189b12c7a6e227fb749064b19a56c3cee71311b97baabf025774fa3f1e9",
+      "policy": null
+    },
+    "search-paladin": {
+      "deck": "df47f26bb84f9f2e2697661695917a05e69abc329950762888171c0f9389dea0",
+      "policy": null
+    },
+    "historical-mage": {
+      "deck": "8f078ac10a68c2cba863506356279f2152d3ebfee8502ed4433ea8878c6a7d2c",
+      "policy": null
+    },
+    "control-mage": {
+      "deck": "8f078ac10a68c2cba863506356279f2152d3ebfee8502ed4433ea8878c6a7d2c",
+      "policy": null
+    },
+    "tempo-warlock": {
+      "deck": "bca9559bb9d01b2ebcae78a53de7becc2935a5d19cba0159534bb276a045c6c5",
+      "policy": null
+    },
+    "aggressive-paladin": {
+      "deck": "df47f26bb84f9f2e2697661695917a05e69abc329950762888171c0f9389dea0",
+      "policy": null
+    },
+    "value-priest": {
+      "deck": "17ddc9079acd4ed49389b98a3fd0d0dea8933de6b7258411e6f22b0cb8f8f999",
+      "policy": null
+    },
+    "search-shaman": {
+      "deck": "877aeb0265d58722cedc43dca85b457ebc7a96c6b2f8923a9b4075e48b6d47ee",
+      "policy": null
+    },
+    "adversarial-priest-v1": {
+      "deck": "17ddc9079acd4ed49389b98a3fd0d0dea8933de6b7258411e6f22b0cb8f8f999",
+      "policy": "d526499a4a7bd51a3450ffc0115d90fc1e179c1a105b9cd08c2333a7efec4cd6"
+    }
+  },
+  "code_sha256": {
+    "development/teacher_eval/run.py": "a984833146dfa2cfe84d8e4d51c490439cc2d6fd03c9768522c7bc39d5c0c947",
+    "development/secret_hunter_tactics/run.py": "830efbd3ad7570cea8019cf084844ca25eb3a6fab8e1af6c01a9bc3ea0142d0e",
+    "development/opponents/population.py": "63c38fddc6990e0d535de8a351378d510ad83578fe34a72df93cfffc7d4e2f70",
+    "development/opponents/search.py": "2661f93e2f930d8ed05d9e73d97673aa4bba009f8f08261495bf8079dd80bfb5",
+    "development/benchmarks/run.py": "c6693b22bb52d08245e021f4b17d14685bcaa0a64cd4c7d1ef33b623490aaa9e"
+  },
+  "planned_games": 280,
+  "scope": "Local proxies derived from teacher evidence, NOT real Astra or official resubmission."
+}

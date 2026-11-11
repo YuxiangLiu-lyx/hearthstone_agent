@@ -1,0 +1,244 @@
+{
+  "baseline": "experiments/secret-a0-selection",
+  "candidate": "experiments/secret-c3-selection",
+  "all": {
+    "n_per_arm": 280,
+    "a_wins": 196,
+    "b_wins": 242,
+    "gain": 0.16428571428571428,
+    "seed_clusters": 10,
+    "gain_seed_cluster_95": [
+      0.08571428571428572,
+      0.25
+    ],
+    "a_only_wins": 11,
+    "b_only_wins": 57,
+    "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+  },
+  "primary": {
+    "n_per_arm": 260,
+    "a_wins": 181,
+    "b_wins": 222,
+    "gain": 0.1576923076923077,
+    "seed_clusters": 10,
+    "gain_seed_cluster_95": [
+      0.07692307692307693,
+      0.24230769230769234
+    ],
+    "a_only_wins": 11,
+    "b_only_wins": 52,
+    "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+  },
+  "base": {
+    "n_per_arm": 20,
+    "a_wins": 15,
+    "b_wins": 20,
+    "gain": 0.25,
+    "seed_clusters": 10,
+    "gain_seed_cluster_95": [
+      0.1,
+      0.4
+    ],
+    "a_only_wins": 0,
+    "b_only_wins": 5,
+    "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+  },
+  "by_opponent": {
+    "adversarial-priest-v1": {
+      "n_per_arm": 20,
+      "a_wins": 9,
+      "b_wins": 15,
+      "gain": 0.3,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        0.1,
+        0.5
+      ],
+      "a_only_wins": 0,
+      "b_only_wins": 6,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    },
+    "adversarial-zoo": {
+      "n_per_arm": 20,
+      "a_wins": 10,
+      "b_wins": 17,
+      "gain": 0.35,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        0.1,
+        0.55
+      ],
+      "a_only_wins": 1,
+      "b_only_wins": 8,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    },
+    "aggressive-hunter": {
+      "n_per_arm": 20,
+      "a_wins": 14,
+      "b_wins": 18,
+      "gain": 0.2,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        0.05,
+        0.35
+      ],
+      "a_only_wins": 0,
+      "b_only_wins": 4,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    },
+    "aggressive-paladin": {
+      "n_per_arm": 20,
+      "a_wins": 15,
+      "b_wins": 19,
+      "gain": 0.2,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        0.05,
+        0.35
+      ],
+      "a_only_wins": 0,
+      "b_only_wins": 4,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    },
+    "control-mage": {
+      "n_per_arm": 20,
+      "a_wins": 13,
+      "b_wins": 13,
+      "gain": 0.0,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        -0.25,
+        0.25
+      ],
+      "a_only_wins": 3,
+      "b_only_wins": 3,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    },
+    "control-priest": {
+      "n_per_arm": 20,
+      "a_wins": 19,
+      "b_wins": 17,
+      "gain": -0.1,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        -0.25,
+        0.0
+      ],
+      "a_only_wins": 2,
+      "b_only_wins": 0,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    },
+    "historical-mage": {
+      "n_per_arm": 20,
+      "a_wins": 12,
+      "b_wins": 16,
+      "gain": 0.2,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        -0.1,
+        0.5
+      ],
+      "a_only_wins": 2,
+      "b_only_wins": 6,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    },
+    "official-mage": {
+      "n_per_arm": 20,
+      "a_wins": 15,
+      "b_wins": 20,
+      "gain": 0.25,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        0.1,
+        0.4
+      ],
+      "a_only_wins": 0,
+      "b_only_wins": 5,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    },
+    "search-paladin": {
+      "n_per_arm": 20,
+      "a_wins": 11,
+      "b_wins": 14,
+      "gain": 0.15,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        -0.05,
+        0.35
+      ],
+      "a_only_wins": 1,
+      "b_only_wins": 4,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    },
+    "search-shaman": {
+      "n_per_arm": 20,
+      "a_wins": 15,
+      "b_wins": 19,
+      "gain": 0.2,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        0.05,
+        0.35
+      ],
+      "a_only_wins": 0,
+      "b_only_wins": 4,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    },
+    "tempo-paladin": {
+      "n_per_arm": 20,
+      "a_wins": 11,
+      "b_wins": 16,
+      "gain": 0.25,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        0.0,
+        0.5
+      ],
+      "a_only_wins": 1,
+      "b_only_wins": 6,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    },
+    "tempo-warlock": {
+      "n_per_arm": 20,
+      "a_wins": 19,
+      "b_wins": 19,
+      "gain": 0.0,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        -0.15,
+        0.15
+      ],
+      "a_only_wins": 1,
+      "b_only_wins": 1,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    },
+    "value-priest": {
+      "n_per_arm": 20,
+      "a_wins": 14,
+      "b_wins": 19,
+      "gain": 0.25,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        0.1,
+        0.4
+      ],
+      "a_only_wins": 0,
+      "b_only_wins": 5,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    },
+    "value-warlock": {
+      "n_per_arm": 20,
+      "a_wins": 19,
+      "b_wins": 20,
+      "gain": 0.05,
+      "seed_clusters": 10,
+      "gain_seed_cluster_95": [
+        0.0,
+        0.15
+      ],
+      "a_only_wins": 0,
+      "b_only_wins": 1,
+      "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+    }
+  }
+}

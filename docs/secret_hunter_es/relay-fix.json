@@ -1,0 +1,30 @@
+{
+  "status": "Unconfirmed host-instruction revision; no further model-host tests in this round",
+  "source": "development/secret_hunter_es/relay-fix/secret-hunter-program",
+  "changed_files": [
+    "SKILL.md"
+  ],
+  "strategy_and_config_bytes_unchanged": true,
+  "incident": {
+    "game": "386be7bf18554160",
+    "seq": 5,
+    "actual": {
+      "type": "end_turn"
+    },
+    "script_call_missing": true
+  },
+  "reason": "Official host skipped the script once despite the prior general instruction. The revised instruction explicitly prohibits the forced-end-turn shortcut.",
+  "client_reproduction": [
+    {
+      "game": "g_20261111_000001",
+      "identical_script_actions": true,
+      "actions": 33
+    },
+    {
+      "game": "g_20261111_000002",
+      "identical_script_actions": true,
+      "actions": 40
+    }
+  ],
+  "client_relay_audit": "relay-fix-client-audit.json"
+}

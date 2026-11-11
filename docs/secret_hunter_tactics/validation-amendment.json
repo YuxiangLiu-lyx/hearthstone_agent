@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-11T08:25:14.744275+00:00",
+  "extra_arm": "H7",
+  "extra_full_games": 280,
+  "reason": "Initial validation preferred H4 (230/260) over trained T5 (228/260). Apply the same observed-loss coverage guard to H4, before opening holdout.",
+  "seeds": [
+    83000,
+    83001,
+    83002,
+    83003,
+    83004,
+    83005,
+    83006,
+    83007,
+    83008,
+    83009
+  ],
+  "scope": "Validation remains selection data; final block 291000-291039 is unopened. Original five arms are preserved. Total planned games 5996 including all final and smoke games.",
+  "unrun_prototype": "H6 (T5 + guard), never evaluated",
+  "selection": "Highest validation primary then Greedy wins; exact ties prefer the guarded H7 over its unguarded parent H4, then earlier simpler arm. This is adaptive validation selection; only untouched confirmation supports promotion."
+}

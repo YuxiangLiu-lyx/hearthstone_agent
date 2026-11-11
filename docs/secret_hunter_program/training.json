@@ -1,0 +1,2081 @@
+{
+  "random_seed": 4611,
+  "method": "Two generations, three Gaussian/local categorical mutations per generation; retained best paired development fitness (primary macro, then Greedy). Selection-biased until validation.",
+  "retained": "T1",
+  "fitness": [
+    0.8269230769230769,
+    0.8333333333333334
+  ],
+  "records": [
+    {
+      "candidate": "T1",
+      "generation": 0,
+      "parent": "P2",
+      "hypothesis": "T1: local mutation of P2; optimize board/face/hand/risk weights and beam/node/depth controls on frozen development seeds.",
+      "config": {
+        "version": "T1",
+        "parent": "P2",
+        "guide_rules": true,
+        "risk_summaries": true,
+        "search_budget_s": 0.15,
+        "search_nodes": 1600,
+        "scoring": false,
+        "turn_search": true,
+        "secret_rules": false,
+        "total_budget_s": 2.0,
+        "search_soft_s": 1.5,
+        "turn_face": 1.116,
+        "turn_board": 1.094,
+        "turn_hand": 0.973,
+        "turn_risk": 3.273,
+        "turn_width": 10,
+        "turn_depth": 9,
+        "turn_nodes": 350,
+        "turn_budget_s": 0.08
+      },
+      "candidate_sha256": "0b75eae3aa5913bf4baed5302b6c9f973e7e5529454d6995279b7f5af4f9b5eb",
+      "command": [
+        "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/bin/python",
+        "-m",
+        "development.secret_hunter_program.run",
+        "--candidate",
+        "development/secret_hunter_program/candidates/T1",
+        "--out",
+        "experiments/program-t1-development",
+        "--start",
+        "73000",
+        "--seeds",
+        "6",
+        "--workers",
+        "4",
+        "--hypothesis",
+        "T1: local mutation of P2; optimize board/face/hand/risk weights and beam/node/depth controls on frozen development seeds."
+      ],
+      "status": "completed",
+      "result": {
+        "all": {
+          "n": 168,
+          "wins": 139,
+          "losses": 29,
+          "draws_or_voids": 0,
+          "win_rate": 0.8273809523809523,
+          "wilson95_descriptive": [
+            0.7630849127185396,
+            0.8770394809090801
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "base": {
+          "n": 12,
+          "wins": 10,
+          "losses": 2,
+          "draws_or_voids": 0,
+          "win_rate": 0.8333333333333334,
+          "wilson95_descriptive": [
+            0.5519636426153274,
+            0.9530358523851776
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "primary": {
+          "n": 156,
+          "wins": 129,
+          "losses": 27,
+          "draws_or_voids": 0,
+          "win_rate": 0.8269230769230769,
+          "wilson95_descriptive": [
+            0.7598925414874306,
+            0.8782392089454979
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "by_opponent": {
+          "adversarial-priest-v1": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "adversarial-zoo": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-hunter": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-paladin": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-mage": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-priest": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "historical-mage": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "official-mage": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-paladin": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-shaman": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-paladin": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-warlock": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-priest": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-warlock": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 84,
+            "wins": 70,
+            "losses": 14,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.7394676499262363,
+              0.8980435065190016
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "False": {
+            "n": 84,
+            "wins": 69,
+            "losses": 15,
+            "draws_or_voids": 0,
+            "win_rate": 0.8214285714285714,
+            "wilson95_descriptive": [
+              0.7260538098918103,
+              0.8886890909660974
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "planned": 168,
+        "completed": 168,
+        "stopped_for_external_failure": false
+      },
+      "fitness": [
+        0.8269230769230769,
+        0.8333333333333334
+      ],
+      "retained_after_generation": "T1"
+    },
+    {
+      "candidate": "T2",
+      "generation": 0,
+      "parent": "P2",
+      "hypothesis": "T2: local mutation of P2; optimize board/face/hand/risk weights and beam/node/depth controls on frozen development seeds.",
+      "config": {
+        "version": "T2",
+        "parent": "P2",
+        "guide_rules": true,
+        "risk_summaries": true,
+        "search_budget_s": 0.15,
+        "search_nodes": 1600,
+        "scoring": false,
+        "turn_search": true,
+        "secret_rules": false,
+        "total_budget_s": 2.0,
+        "search_soft_s": 1.5,
+        "turn_face": 1.402,
+        "turn_board": 0.819,
+        "turn_hand": 1.335,
+        "turn_risk": 4.576,
+        "turn_width": 14,
+        "turn_depth": 5,
+        "turn_nodes": 350,
+        "turn_budget_s": 0.08
+      },
+      "candidate_sha256": "6ad8fcf69cf4c01e902783b80a3b9859790e9bc484c19811638e33d0b979517f",
+      "command": [
+        "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/bin/python",
+        "-m",
+        "development.secret_hunter_program.run",
+        "--candidate",
+        "development/secret_hunter_program/candidates/T2",
+        "--out",
+        "experiments/program-t2-development",
+        "--start",
+        "73000",
+        "--seeds",
+        "6",
+        "--workers",
+        "4",
+        "--hypothesis",
+        "T2: local mutation of P2; optimize board/face/hand/risk weights and beam/node/depth controls on frozen development seeds."
+      ],
+      "status": "completed",
+      "result": {
+        "all": {
+          "n": 168,
+          "wins": 135,
+          "losses": 33,
+          "draws_or_voids": 0,
+          "win_rate": 0.8035714285714286,
+          "wilson95_descriptive": [
+            0.7369957994314368,
+            0.8565740928414473
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "base": {
+          "n": 12,
+          "wins": 9,
+          "losses": 3,
+          "draws_or_voids": 0,
+          "win_rate": 0.75,
+          "wilson95_descriptive": [
+            0.46768966087934005,
+            0.9110599603710386
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "primary": {
+          "n": 156,
+          "wins": 126,
+          "losses": 30,
+          "draws_or_voids": 0,
+          "win_rate": 0.8076923076923077,
+          "wilson95_descriptive": [
+            0.7387526287757789,
+            0.8618419598669775
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "by_opponent": {
+          "adversarial-priest-v1": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "adversarial-zoo": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-hunter": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-mage": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-priest": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "historical-mage": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "official-mage": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-paladin": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-shaman": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-paladin": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-warlock": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-priest": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-warlock": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 84,
+            "wins": 67,
+            "losses": 17,
+            "draws_or_voids": 0,
+            "win_rate": 0.7976190476190477,
+            "wilson95_descriptive": [
+              0.6995798859846238,
+              0.8696265036986242
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "False": {
+            "n": 84,
+            "wins": 68,
+            "losses": 16,
+            "draws_or_voids": 0,
+            "win_rate": 0.8095238095238095,
+            "wilson95_descriptive": [
+              0.7127605972340397,
+              0.8792140480365381
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "planned": 168,
+        "completed": 168,
+        "stopped_for_external_failure": false
+      },
+      "fitness": [
+        0.8076923076923077,
+        0.75
+      ],
+      "retained_after_generation": "T1"
+    },
+    {
+      "candidate": "T3",
+      "generation": 0,
+      "parent": "P2",
+      "hypothesis": "T3: local mutation of P2; optimize board/face/hand/risk weights and beam/node/depth controls on frozen development seeds.",
+      "config": {
+        "version": "T3",
+        "parent": "P2",
+        "guide_rules": true,
+        "risk_summaries": true,
+        "search_budget_s": 0.15,
+        "search_nodes": 1600,
+        "scoring": false,
+        "turn_search": true,
+        "secret_rules": false,
+        "total_budget_s": 2.0,
+        "search_soft_s": 1.5,
+        "turn_face": 0.719,
+        "turn_board": 1.058,
+        "turn_hand": 1.25,
+        "turn_risk": 4.21,
+        "turn_width": 10,
+        "turn_depth": 9,
+        "turn_nodes": 350,
+        "turn_budget_s": 0.08
+      },
+      "candidate_sha256": "2a92ef2161957fe584d3d3916fca037f0fc7c1da5e1594d894a73fe1dacd3cc2",
+      "command": [
+        "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/bin/python",
+        "-m",
+        "development.secret_hunter_program.run",
+        "--candidate",
+        "development/secret_hunter_program/candidates/T3",
+        "--out",
+        "experiments/program-t3-development",
+        "--start",
+        "73000",
+        "--seeds",
+        "6",
+        "--workers",
+        "4",
+        "--hypothesis",
+        "T3: local mutation of P2; optimize board/face/hand/risk weights and beam/node/depth controls on frozen development seeds."
+      ],
+      "status": "completed",
+      "result": {
+        "all": {
+          "n": 168,
+          "wins": 133,
+          "losses": 35,
+          "draws_or_voids": 0,
+          "win_rate": 0.7916666666666666,
+          "wilson95_descriptive": [
+            0.7240757447992636,
+            0.8462168967962522
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "base": {
+          "n": 12,
+          "wins": 9,
+          "losses": 3,
+          "draws_or_voids": 0,
+          "win_rate": 0.75,
+          "wilson95_descriptive": [
+            0.46768966087934005,
+            0.9110599603710386
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "primary": {
+          "n": 156,
+          "wins": 124,
+          "losses": 32,
+          "draws_or_voids": 0,
+          "win_rate": 0.7948717948717948,
+          "wilson95_descriptive": [
+            0.7247853117175942,
+            0.8507845023983804
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "by_opponent": {
+          "adversarial-priest-v1": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "adversarial-zoo": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-hunter": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-mage": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-priest": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "historical-mage": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "official-mage": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-shaman": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-paladin": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-warlock": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-priest": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-warlock": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 84,
+            "wins": 69,
+            "losses": 15,
+            "draws_or_voids": 0,
+            "win_rate": 0.8214285714285714,
+            "wilson95_descriptive": [
+              0.7260538098918103,
+              0.8886890909660974
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "False": {
+            "n": 84,
+            "wins": 64,
+            "losses": 20,
+            "draws_or_voids": 0,
+            "win_rate": 0.7619047619047619,
+            "wilson95_descriptive": [
+              0.6606473307381485,
+              0.8402542921831097
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "planned": 168,
+        "completed": 168,
+        "stopped_for_external_failure": false
+      },
+      "fitness": [
+        0.7948717948717948,
+        0.75
+      ],
+      "retained_after_generation": "T1"
+    },
+    {
+      "candidate": "T4",
+      "generation": 1,
+      "parent": "T1",
+      "hypothesis": "T4: local mutation of T1; optimize board/face/hand/risk weights and beam/node/depth controls on frozen development seeds.",
+      "config": {
+        "version": "T4",
+        "parent": "T1",
+        "guide_rules": true,
+        "risk_summaries": true,
+        "search_budget_s": 0.15,
+        "search_nodes": 1600,
+        "scoring": false,
+        "turn_search": true,
+        "secret_rules": false,
+        "total_budget_s": 2.0,
+        "search_soft_s": 1.5,
+        "turn_face": 1.096,
+        "turn_board": 0.887,
+        "turn_hand": 1.391,
+        "turn_risk": 2.574,
+        "turn_width": 6,
+        "turn_depth": 7,
+        "turn_nodes": 350,
+        "turn_budget_s": 0.08
+      },
+      "candidate_sha256": "f05ace256a0c3d07d1e617d5e05502f9d7a31510c67ff87c001991a8de01260d",
+      "command": [
+        "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/bin/python",
+        "-m",
+        "development.secret_hunter_program.run",
+        "--candidate",
+        "development/secret_hunter_program/candidates/T4",
+        "--out",
+        "experiments/program-t4-development",
+        "--start",
+        "73000",
+        "--seeds",
+        "6",
+        "--workers",
+        "4",
+        "--hypothesis",
+        "T4: local mutation of T1; optimize board/face/hand/risk weights and beam/node/depth controls on frozen development seeds."
+      ],
+      "status": "completed",
+      "result": {
+        "all": {
+          "n": 168,
+          "wins": 136,
+          "losses": 32,
+          "draws_or_voids": 0,
+          "win_rate": 0.8095238095238095,
+          "wilson95_descriptive": [
+            0.7434858828864568,
+            0.8617226347251112
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "base": {
+          "n": 12,
+          "wins": 10,
+          "losses": 2,
+          "draws_or_voids": 0,
+          "win_rate": 0.8333333333333334,
+          "wilson95_descriptive": [
+            0.5519636426153274,
+            0.9530358523851776
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "primary": {
+          "n": 156,
+          "wins": 126,
+          "losses": 30,
+          "draws_or_voids": 0,
+          "win_rate": 0.8076923076923077,
+          "wilson95_descriptive": [
+            0.7387526287757789,
+            0.8618419598669775
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "by_opponent": {
+          "adversarial-priest-v1": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "adversarial-zoo": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-hunter": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-paladin": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-mage": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-priest": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "historical-mage": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "official-mage": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-paladin": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-shaman": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-paladin": {
+            "n": 12,
+            "wins": 7,
+            "losses": 5,
+            "draws_or_voids": 0,
+            "win_rate": 0.5833333333333334,
+            "wilson95_descriptive": [
+              0.3195073356553728,
+              0.8067425380947535
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-warlock": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-priest": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-warlock": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 84,
+            "wins": 71,
+            "losses": 13,
+            "draws_or_voids": 0,
+            "win_rate": 0.8452380952380952,
+            "wilson95_descriptive": [
+              0.753011640086769,
+              0.9072677719457987
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "False": {
+            "n": 84,
+            "wins": 65,
+            "losses": 19,
+            "draws_or_voids": 0,
+            "win_rate": 0.7738095238095238,
+            "wilson95_descriptive": [
+              0.6735289274916636,
+              0.8501409510169247
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "planned": 168,
+        "completed": 168,
+        "stopped_for_external_failure": false
+      },
+      "fitness": [
+        0.8076923076923077,
+        0.8333333333333334
+      ],
+      "retained_after_generation": "T1"
+    },
+    {
+      "candidate": "T5",
+      "generation": 1,
+      "parent": "T1",
+      "hypothesis": "T5: local mutation of T1; optimize board/face/hand/risk weights and beam/node/depth controls on frozen development seeds.",
+      "config": {
+        "version": "T5",
+        "parent": "T1",
+        "guide_rules": true,
+        "risk_summaries": true,
+        "search_budget_s": 0.15,
+        "search_nodes": 1600,
+        "scoring": false,
+        "turn_search": true,
+        "secret_rules": false,
+        "total_budget_s": 2.0,
+        "search_soft_s": 1.5,
+        "turn_face": 1.031,
+        "turn_board": 1.256,
+        "turn_hand": 0.507,
+        "turn_risk": 1.775,
+        "turn_width": 6,
+        "turn_depth": 7,
+        "turn_nodes": 350,
+        "turn_budget_s": 0.08
+      },
+      "candidate_sha256": "1a83cfce998f8176f2940bf7156b6e048b6ca6647c0e863a7e2d3d0a3483daa3",
+      "command": [
+        "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/bin/python",
+        "-m",
+        "development.secret_hunter_program.run",
+        "--candidate",
+        "development/secret_hunter_program/candidates/T5",
+        "--out",
+        "experiments/program-t5-development",
+        "--start",
+        "73000",
+        "--seeds",
+        "6",
+        "--workers",
+        "4",
+        "--hypothesis",
+        "T5: local mutation of T1; optimize board/face/hand/risk weights and beam/node/depth controls on frozen development seeds."
+      ],
+      "status": "completed",
+      "result": {
+        "all": {
+          "n": 168,
+          "wins": 136,
+          "losses": 32,
+          "draws_or_voids": 0,
+          "win_rate": 0.8095238095238095,
+          "wilson95_descriptive": [
+            0.7434858828864568,
+            0.8617226347251112
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "base": {
+          "n": 12,
+          "wins": 9,
+          "losses": 3,
+          "draws_or_voids": 0,
+          "win_rate": 0.75,
+          "wilson95_descriptive": [
+            0.46768966087934005,
+            0.9110599603710386
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "primary": {
+          "n": 156,
+          "wins": 127,
+          "losses": 29,
+          "draws_or_voids": 0,
+          "win_rate": 0.8141025641025641,
+          "wilson95_descriptive": [
+            0.7457731232007083,
+            0.8673338527054386
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "by_opponent": {
+          "adversarial-priest-v1": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "adversarial-zoo": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-hunter": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-mage": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-priest": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "historical-mage": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "official-mage": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-shaman": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-paladin": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-warlock": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-priest": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-warlock": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 84,
+            "wins": 69,
+            "losses": 15,
+            "draws_or_voids": 0,
+            "win_rate": 0.8214285714285714,
+            "wilson95_descriptive": [
+              0.7260538098918103,
+              0.8886890909660974
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "False": {
+            "n": 84,
+            "wins": 67,
+            "losses": 17,
+            "draws_or_voids": 0,
+            "win_rate": 0.7976190476190477,
+            "wilson95_descriptive": [
+              0.6995798859846238,
+              0.8696265036986242
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "planned": 168,
+        "completed": 168,
+        "stopped_for_external_failure": false
+      },
+      "fitness": [
+        0.8141025641025641,
+        0.75
+      ],
+      "retained_after_generation": "T1"
+    },
+    {
+      "candidate": "T6",
+      "generation": 1,
+      "parent": "T1",
+      "hypothesis": "T6: local mutation of T1; optimize board/face/hand/risk weights and beam/node/depth controls on frozen development seeds.",
+      "config": {
+        "version": "T6",
+        "parent": "T1",
+        "guide_rules": true,
+        "risk_summaries": true,
+        "search_budget_s": 0.15,
+        "search_nodes": 1600,
+        "scoring": false,
+        "turn_search": true,
+        "secret_rules": false,
+        "total_budget_s": 2.0,
+        "search_soft_s": 1.5,
+        "turn_face": 0.934,
+        "turn_board": 1.4,
+        "turn_hand": 0.928,
+        "turn_risk": 1.946,
+        "turn_width": 10,
+        "turn_depth": 5,
+        "turn_nodes": 350,
+        "turn_budget_s": 0.08
+      },
+      "candidate_sha256": "2284500cacc16625a6d3dc28e89af12323da60f6eb3883846888638edee2f92e",
+      "command": [
+        "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/bin/python",
+        "-m",
+        "development.secret_hunter_program.run",
+        "--candidate",
+        "development/secret_hunter_program/candidates/T6",
+        "--out",
+        "experiments/program-t6-development",
+        "--start",
+        "73000",
+        "--seeds",
+        "6",
+        "--workers",
+        "4",
+        "--hypothesis",
+        "T6: local mutation of T1; optimize board/face/hand/risk weights and beam/node/depth controls on frozen development seeds."
+      ],
+      "status": "completed",
+      "result": {
+        "all": {
+          "n": 168,
+          "wins": 132,
+          "losses": 36,
+          "draws_or_voids": 0,
+          "win_rate": 0.7857142857142857,
+          "wilson95_descriptive": [
+            0.7176445248005752,
+            0.8410094914562567
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "base": {
+          "n": 12,
+          "wins": 9,
+          "losses": 3,
+          "draws_or_voids": 0,
+          "win_rate": 0.75,
+          "wilson95_descriptive": [
+            0.46768966087934005,
+            0.9110599603710386
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "primary": {
+          "n": 156,
+          "wins": 123,
+          "losses": 33,
+          "draws_or_voids": 0,
+          "win_rate": 0.7884615384615384,
+          "wilson95_descriptive": [
+            0.7178368061593736,
+            0.8452206206932102
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "by_opponent": {
+          "adversarial-priest-v1": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "adversarial-zoo": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-hunter": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-mage": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-priest": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "historical-mage": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "official-mage": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-shaman": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-paladin": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-warlock": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-priest": {
+            "n": 12,
+            "wins": 7,
+            "losses": 5,
+            "draws_or_voids": 0,
+            "win_rate": 0.5833333333333334,
+            "wilson95_descriptive": [
+              0.3195073356553728,
+              0.8067425380947535
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-warlock": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 84,
+            "wins": 68,
+            "losses": 16,
+            "draws_or_voids": 0,
+            "win_rate": 0.8095238095238095,
+            "wilson95_descriptive": [
+              0.7127605972340397,
+              0.8792140480365381
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "False": {
+            "n": 84,
+            "wins": 64,
+            "losses": 20,
+            "draws_or_voids": 0,
+            "win_rate": 0.7619047619047619,
+            "wilson95_descriptive": [
+              0.6606473307381485,
+              0.8402542921831097
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "planned": 168,
+        "completed": 168,
+        "stopped_for_external_failure": false
+      },
+      "fitness": [
+        0.7884615384615384,
+        0.75
+      ],
+      "retained_after_generation": "T1"
+    }
+  ]
+}

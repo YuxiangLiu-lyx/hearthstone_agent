@@ -1,0 +1,85 @@
+{
+  "candidate": "development/teacher_eval/candidates/D3",
+  "population": [
+    {
+      "name": "astra-board-proxy",
+      "group": "astra",
+      "mode": "frozen",
+      "policy": "development/candidates/v7-zoo-strength",
+      "deck": "development/teacher_eval/decks/astra-doubled.json"
+    },
+    {
+      "name": "astra-tempo-proxy",
+      "group": "astra",
+      "mode": "tempo",
+      "deck": "development/teacher_eval/decks/astra-doubled.json"
+    },
+    {
+      "name": "astra-sticky-proxy",
+      "group": "astra",
+      "mode": "frozen",
+      "policy": "development/candidates/v7-zoo-strength",
+      "deck": "development/teacher_eval/decks/astra-sticky.json"
+    },
+    {
+      "name": "bot2-face-proxy",
+      "group": "bot2",
+      "mode": "aggressive",
+      "deck": "development/teacher_eval/decks/bot2-face.json"
+    },
+    {
+      "name": "bot2-trade-proxy",
+      "group": "bot2",
+      "mode": "search",
+      "deck": "development/teacher_eval/decks/bot2-face.json"
+    },
+    {
+      "name": "bot1-mage-proxy",
+      "group": "bot1",
+      "mode": "official",
+      "deck": "hs-arena-0.2.2/decks/greedy_mage.json"
+    }
+  ],
+  "out": "experiments/teacher-d3-development",
+  "start": 86000,
+  "seeds": 8,
+  "workers": 4,
+  "split": "development",
+  "candidate_sha256": "1d3404893744a89a519a7deabe7740fad8c5fb80f416eb6ad0eb953392e9a8c6",
+  "population_sha256": "cb2b90a069c91a02ba655ef51fa836363888f204b6e64379047442cca2c8b741",
+  "opponent_versions": {
+    "astra-board-proxy": {
+      "deck": "86a6f47082c7f0e29ab307e999744cd8924f714a7857f1c255ddc0b327ed4cd2",
+      "policy": "80dcfb8c4dc79d39c36853acd1b848b8d2b02a4eced6bfb0334559dc9600a9c6"
+    },
+    "astra-tempo-proxy": {
+      "deck": "86a6f47082c7f0e29ab307e999744cd8924f714a7857f1c255ddc0b327ed4cd2",
+      "policy": null
+    },
+    "astra-sticky-proxy": {
+      "deck": "f4737f08a11648b0394a1f84ccc99f28972317d4fad225dbd0b1fad6c35a0007",
+      "policy": "80dcfb8c4dc79d39c36853acd1b848b8d2b02a4eced6bfb0334559dc9600a9c6"
+    },
+    "bot2-face-proxy": {
+      "deck": "37ba3dd2e30e14a67a3674322966017e14fbf4a15078f6b1a1e3ce4b33da9d49",
+      "policy": null
+    },
+    "bot2-trade-proxy": {
+      "deck": "37ba3dd2e30e14a67a3674322966017e14fbf4a15078f6b1a1e3ce4b33da9d49",
+      "policy": null
+    },
+    "bot1-mage-proxy": {
+      "deck": "1e02dc64d9a7585580609857a4a95f36ef61d34a0266d863e00413cde8674e90",
+      "policy": null
+    }
+  },
+  "code_sha256": {
+    "development/teacher_eval/run.py": "a984833146dfa2cfe84d8e4d51c490439cc2d6fd03c9768522c7bc39d5c0c947",
+    "development/secret_hunter_tactics/run.py": "830efbd3ad7570cea8019cf084844ca25eb3a6fab8e1af6c01a9bc3ea0142d0e",
+    "development/opponents/population.py": "63c38fddc6990e0d535de8a351378d510ad83578fe34a72df93cfffc7d4e2f70",
+    "development/opponents/search.py": "2661f93e2f930d8ed05d9e73d97673aa4bba009f8f08261495bf8079dd80bfb5",
+    "development/benchmarks/run.py": "c6693b22bb52d08245e021f4b17d14685bcaa0a64cd4c7d1ef33b623490aaa9e"
+  },
+  "planned_games": 96,
+  "scope": "Local proxies derived from teacher evidence, NOT real Astra or official resubmission."
+}

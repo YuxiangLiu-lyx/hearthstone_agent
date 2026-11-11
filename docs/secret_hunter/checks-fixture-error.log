@@ -1,0 +1,174 @@
+test_deck_and_live_card_stats (__main__.Mechanisms.test_deck_and_live_card_stats) ... ERROR
+test_explosive_freezing_order_bow (__main__.Mechanisms.test_explosive_freezing_order_bow) ... ERROR
+test_freezing_minion_target_and_hero_no_trigger (__main__.Mechanisms.test_freezing_minion_target_and_hero_no_trigger) ... ERROR
+test_misdirection_never_original_hero (__main__.Mechanisms.test_misdirection_never_original_hero) ... ERROR
+test_ooze_highmane_houndmaster (__main__.Mechanisms.test_ooze_highmane_houndmaster) ... ERROR
+test_proven_lethals_with_secrekeeper_juggler_wolf_and_krush (__main__.Mechanisms.test_proven_lethals_with_secrekeeper_juggler_wolf_and_krush) ... ERROR
+test_random_and_unknown_are_not_guaranteed (__main__.Mechanisms.test_random_and_unknown_are_not_guaranteed) ... ERROR
+test_secretkeeper_own_only (__main__.Mechanisms.test_secretkeeper_own_only) ... ERROR
+test_snake_capacity_hyena_juggler (__main__.Mechanisms.test_snake_capacity_hyena_juggler) ... ERROR
+test_tracking_choice_and_discard (__main__.Mechanisms.test_tracking_choice_and_discard) ... ERROR
+test_invalid_stale_duplicate_and_new_game (__main__.Timing.test_invalid_stale_duplicate_and_new_game) ... ERROR
+test_late_missing_short_and_game_over (__main__.Timing.test_late_missing_short_and_game_over) ... ERROR
+test_worker_hang_and_crash (__main__.Timing.test_worker_hang_and_crash) ... ERROR
+
+======================================================================
+ERROR: test_deck_and_live_card_stats (__main__.Mechanisms.test_deck_and_live_card_stats)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 53, in test_deck_and_live_card_stats
+    e,i=fixture();p=e.player(i);actual=[]
+        ^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 32, in fixture
+    if p.hero.card_class.name!='HUNTER':
+       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'name'
+
+======================================================================
+ERROR: test_explosive_freezing_order_bow (__main__.Mechanisms.test_explosive_freezing_order_bow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 80, in test_explosive_freezing_order_bow
+    e,i=fixture(enemy=['CS2_172'],hand=list(order));p,o=e.player(i),e.player(3-i)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 32, in fixture
+    if p.hero.card_class.name!='HUNTER':
+       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'name'
+
+======================================================================
+ERROR: test_freezing_minion_target_and_hero_no_trigger (__main__.Mechanisms.test_freezing_minion_target_and_hero_no_trigger)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 91, in test_freezing_minion_target_and_hero_no_trigger
+    e,i=fixture(own=['EX1_080'],enemy=['CS2_200'],hand=['EX1_611']);p,o=e.player(i),e.player(3-i)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 32, in fixture
+    if p.hero.card_class.name!='HUNTER':
+       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'name'
+
+======================================================================
+ERROR: test_misdirection_never_original_hero (__main__.Mechanisms.test_misdirection_never_original_hero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 109, in test_misdirection_never_original_hero
+    e,i=fixture(enemy=['CS2_200'],hand=['EX1_533'],seed=seed);p,o=e.player(i),e.player(3-i)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 32, in fixture
+    if p.hero.card_class.name!='HUNTER':
+       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'name'
+
+======================================================================
+ERROR: test_ooze_highmane_houndmaster (__main__.Mechanisms.test_ooze_highmane_houndmaster)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 116, in test_ooze_highmane_houndmaster
+    e,i=fixture(own=['EX1_534'],hand=['EX1_066','DS1_070']);p,o=e.player(i),e.player(3-i)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 32, in fixture
+    if p.hero.card_class.name!='HUNTER':
+       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'name'
+
+======================================================================
+ERROR: test_proven_lethals_with_secrekeeper_juggler_wolf_and_krush (__main__.Mechanisms.test_proven_lethals_with_secrekeeper_juggler_wolf_and_krush)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 127, in test_proven_lethals_with_secrekeeper_juggler_wolf_and_krush
+    e,i=fixture(**case);steps=0
+        ^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 32, in fixture
+    if p.hero.card_class.name!='HUNTER':
+       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'name'
+
+======================================================================
+ERROR: test_random_and_unknown_are_not_guaranteed (__main__.Mechanisms.test_random_and_unknown_are_not_guaranteed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 136, in test_random_and_unknown_are_not_guaranteed
+    e,i=fixture(hand=['NEW1_031'],mana=3,enemy_hp=4)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 32, in fixture
+    if p.hero.card_class.name!='HUNTER':
+       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'name'
+
+======================================================================
+ERROR: test_secretkeeper_own_only (__main__.Mechanisms.test_secretkeeper_own_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 72, in test_secretkeeper_own_only
+    e,i=fixture(own=['EX1_080'],hand=['EX1_610']);p,o=e.player(i),e.player(3-i)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 32, in fixture
+    if p.hero.card_class.name!='HUNTER':
+       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'name'
+
+======================================================================
+ERROR: test_snake_capacity_hyena_juggler (__main__.Mechanisms.test_snake_capacity_hyena_juggler)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 98, in test_snake_capacity_hyena_juggler
+    e,i=fixture(own=['EX1_531','NEW1_019'],enemy=['CS2_200'],hand=['EX1_554']);p,o=e.player(i),e.player(3-i)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 32, in fixture
+    if p.hero.card_class.name!='HUNTER':
+       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'name'
+
+======================================================================
+ERROR: test_tracking_choice_and_discard (__main__.Mechanisms.test_tracking_choice_and_discard)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 63, in test_tracking_choice_and_discard
+    e,i=fixture(hand=['DS1_184']);before=len(e.player(i).deck);play(e,i,'DS1_184')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 32, in fixture
+    if p.hero.card_class.name!='HUNTER':
+       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'name'
+
+======================================================================
+ERROR: test_invalid_stale_duplicate_and_new_game (__main__.Timing.test_invalid_stale_duplicate_and_new_game)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 149, in setUp
+    (self.d/'game').mkdir();e,i=fixture(hand=['EX1_080','EX1_531']);self.state=e.view(i)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 32, in fixture
+    if p.hero.card_class.name!='HUNTER':
+       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'name'
+
+======================================================================
+ERROR: test_late_missing_short_and_game_over (__main__.Timing.test_late_missing_short_and_game_over)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 149, in setUp
+    (self.d/'game').mkdir();e,i=fixture(hand=['EX1_080','EX1_531']);self.state=e.view(i)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 32, in fixture
+    if p.hero.card_class.name!='HUNTER':
+       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'name'
+
+======================================================================
+ERROR: test_worker_hang_and_crash (__main__.Timing.test_worker_hang_and_crash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 149, in setUp
+    (self.d/'game').mkdir();e,i=fixture(hand=['EX1_080','EX1_531']);self.state=e.view(i)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter/checks.py", line 32, in fixture
+    if p.hero.card_class.name!='HUNTER':
+       ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'name'
+
+----------------------------------------------------------------------
+Ran 13 tests in 2.949s
+
+FAILED (errors=13)

@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "family": "keeper",
+      "dedicated_base_search_lethal": false,
+      "offline_extended_proof_lethal": true,
+      "release_policy_engine_win": true,
+      "actions": [
+        {
+          "type": "play_card",
+          "card": 73
+        },
+        {
+          "type": "hero_power"
+        },
+        {
+          "type": "attack",
+          "attacker": 71,
+          "target": 37
+        },
+        {
+          "type": "attack",
+          "attacker": 72,
+          "target": 37
+        }
+      ],
+      "reasons": [
+        "turn_search",
+        "guaranteed_lethal",
+        "guaranteed_lethal",
+        "guaranteed_lethal"
+      ]
+    },
+    {
+      "family": "houndmaster",
+      "dedicated_base_search_lethal": false,
+      "offline_extended_proof_lethal": true,
+      "release_policy_engine_win": true,
+      "actions": [
+        {
+          "type": "play_card",
+          "card": 74,
+          "target": 71,
+          "position": 0
+        },
+        {
+          "type": "attack",
+          "attacker": 71,
+          "target": 73
+        },
+        {
+          "type": "attack",
+          "attacker": 72,
+          "target": 37
+        }
+      ],
+      "reasons": [
+        "turn_search",
+        "guaranteed_lethal",
+        "guaranteed_lethal"
+      ]
+    }
+  ],
+  "short_cases": 11,
+  "limitation": "The release dedicated lethal entrypoint still prepares base coverage. Houndmaster/Secretkeeper buff lines can be found by ordinary response-mode turn search with a terminal score, but are not part of the independent proof-first coverage. No post-holdout policy patch was made."
+}

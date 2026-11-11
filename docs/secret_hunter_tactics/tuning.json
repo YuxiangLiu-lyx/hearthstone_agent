@@ -1,0 +1,3100 @@
+{
+  "plan": {
+    "method": "One (1+5) interpretable mutation/retention generation; parent re-evaluated on the same fresh block. No coevolution or rarity features.",
+    "parent": "H4",
+    "seeds": [
+      82200,
+      82201,
+      82202,
+      82203,
+      82204,
+      82205
+    ],
+    "mutations": [
+      {
+        "name": "T1",
+        "changes": {
+          "reply_weight": 0.55,
+          "reply_nodes": 72,
+          "reply_width": 5,
+          "turn_nodes": 450,
+          "turn_width": 12,
+          "turn_budget_s": 0.1
+        },
+        "hypothesis": "Broader response search, less pessimistic post-response weight."
+      },
+      {
+        "name": "T2",
+        "changes": {
+          "race_face_bonus": 0.9,
+          "hand_clock_bonus": 22,
+          "board_clock_bonus": 7,
+          "turn_face": 1.28,
+          "reply_weight": 0.7
+        },
+        "hypothesis": "Stronger two-turn closure when visible health reserve is safe."
+      },
+      {
+        "name": "T3",
+        "changes": {
+          "hidden_burst_buffer": 5,
+          "turn_risk": 4.2,
+          "protection_weight": 0.9,
+          "reply_weight": 1.0,
+          "reply_nodes": 72
+        },
+        "hypothesis": "Higher hidden-burst reserve and protection of key minions."
+      },
+      {
+        "name": "T4",
+        "changes": {
+          "trap_resource": 2.1,
+          "explosive_priority": 3.5,
+          "combo_weight": 1.3,
+          "turn_width": 12,
+          "turn_nodes": 450,
+          "turn_budget_s": 0.1
+        },
+        "hypothesis": "More contingent trap value and combo ordering with wider own-turn search."
+      },
+      {
+        "name": "T5",
+        "changes": {
+          "opening_plan": false,
+          "race_face_bonus": 0.35,
+          "hand_clock_bonus": 10,
+          "board_clock_bonus": 3,
+          "turn_board": 1.2,
+          "reply_weight": 0.7
+        },
+        "hypothesis": "Conservative closure and stronger material with the old opening policy."
+      }
+    ]
+  },
+  "fitness": [
+    {
+      "name": "H4",
+      "out": "experiments/tactics-h4-tuning",
+      "primary_wins": 130,
+      "base_wins": 10,
+      "summary": {
+        "all": {
+          "n": 168,
+          "wins": 140,
+          "losses": 28,
+          "draws_or_voids": 0,
+          "win_rate": 0.8333333333333334,
+          "wilson95_descriptive": [
+            0.7696635738848362,
+            0.8820994450814678
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "base": {
+          "n": 12,
+          "wins": 10,
+          "losses": 2,
+          "draws_or_voids": 0,
+          "win_rate": 0.8333333333333334,
+          "wilson95_descriptive": [
+            0.5519636426153274,
+            0.9530358523851776
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "primary": {
+          "n": 156,
+          "wins": 130,
+          "losses": 26,
+          "draws_or_voids": 0,
+          "win_rate": 0.8333333333333334,
+          "wilson95_descriptive": [
+            0.7669936261510178,
+            0.8836505115453016
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "by_opponent": {
+          "adversarial-priest-v1": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "adversarial-zoo": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-hunter": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-paladin": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-mage": {
+            "n": 12,
+            "wins": 7,
+            "losses": 5,
+            "draws_or_voids": 0,
+            "win_rate": 0.5833333333333334,
+            "wilson95_descriptive": [
+              0.3195073356553728,
+              0.8067425380947535
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-priest": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "historical-mage": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "official-mage": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-paladin": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-shaman": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-warlock": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-priest": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-warlock": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 84,
+            "wins": 74,
+            "losses": 10,
+            "draws_or_voids": 0,
+            "win_rate": 0.8809523809523809,
+            "wilson95_descriptive": [
+              0.7945489613310683,
+              0.9340352174634889
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "False": {
+            "n": 84,
+            "wins": 66,
+            "losses": 18,
+            "draws_or_voids": 0,
+            "win_rate": 0.7857142857142857,
+            "wilson95_descriptive": [
+              0.6865046833134146,
+              0.8599334507825035
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "planned": 168,
+        "completed": 168,
+        "stopped_for_external_failure": false
+      }
+    },
+    {
+      "name": "T1",
+      "out": "experiments/tactics-t1-tuning",
+      "primary_wins": 131,
+      "base_wins": 11,
+      "summary": {
+        "all": {
+          "n": 168,
+          "wins": 142,
+          "losses": 26,
+          "draws_or_voids": 0,
+          "win_rate": 0.8452380952380952,
+          "wilson95_descriptive": [
+            0.7828950412531233,
+            0.8921452283905487
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "base": {
+          "n": 12,
+          "wins": 11,
+          "losses": 1,
+          "draws_or_voids": 0,
+          "win_rate": 0.9166666666666666,
+          "wilson95_descriptive": [
+            0.6461140782014047,
+            0.9851352905492264
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "primary": {
+          "n": 156,
+          "wins": 131,
+          "losses": 25,
+          "draws_or_voids": 0,
+          "win_rate": 0.8397435897435898,
+          "wilson95_descriptive": [
+            0.774123903748844,
+            0.889032621210866
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "by_opponent": {
+          "adversarial-priest-v1": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "adversarial-zoo": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-hunter": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-paladin": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-mage": {
+            "n": 12,
+            "wins": 7,
+            "losses": 5,
+            "draws_or_voids": 0,
+            "win_rate": 0.5833333333333334,
+            "wilson95_descriptive": [
+              0.3195073356553728,
+              0.8067425380947535
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-priest": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "historical-mage": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "official-mage": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-paladin": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-shaman": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-warlock": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-priest": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-warlock": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 84,
+            "wins": 76,
+            "losses": 8,
+            "draws_or_voids": 0,
+            "win_rate": 0.9047619047619048,
+            "wilson95_descriptive": [
+              0.8231718131587017,
+              0.9509488768105155
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "False": {
+            "n": 84,
+            "wins": 66,
+            "losses": 18,
+            "draws_or_voids": 0,
+            "win_rate": 0.7857142857142857,
+            "wilson95_descriptive": [
+              0.6865046833134146,
+              0.8599334507825035
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "planned": 168,
+        "completed": 168,
+        "stopped_for_external_failure": false
+      }
+    },
+    {
+      "name": "T2",
+      "out": "experiments/tactics-t2-tuning",
+      "primary_wins": 131,
+      "base_wins": 10,
+      "summary": {
+        "all": {
+          "n": 168,
+          "wins": 141,
+          "losses": 27,
+          "draws_or_voids": 0,
+          "win_rate": 0.8392857142857143,
+          "wilson95_descriptive": [
+            0.776266600491963,
+            0.8871350438130249
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "base": {
+          "n": 12,
+          "wins": 10,
+          "losses": 2,
+          "draws_or_voids": 0,
+          "win_rate": 0.8333333333333334,
+          "wilson95_descriptive": [
+            0.5519636426153274,
+            0.9530358523851776
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "primary": {
+          "n": 156,
+          "wins": 131,
+          "losses": 25,
+          "draws_or_voids": 0,
+          "win_rate": 0.8397435897435898,
+          "wilson95_descriptive": [
+            0.774123903748844,
+            0.889032621210866
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "by_opponent": {
+          "adversarial-priest-v1": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "adversarial-zoo": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-hunter": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-mage": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-priest": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "historical-mage": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "official-mage": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-paladin": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-shaman": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-warlock": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-priest": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-warlock": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 84,
+            "wins": 75,
+            "losses": 9,
+            "draws_or_voids": 0,
+            "win_rate": 0.8928571428571429,
+            "wilson95_descriptive": [
+              0.8087519975771198,
+              0.9426004368047676
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "False": {
+            "n": 84,
+            "wins": 66,
+            "losses": 18,
+            "draws_or_voids": 0,
+            "win_rate": 0.7857142857142857,
+            "wilson95_descriptive": [
+              0.6865046833134146,
+              0.8599334507825035
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "planned": 168,
+        "completed": 168,
+        "stopped_for_external_failure": false
+      }
+    },
+    {
+      "name": "T3",
+      "out": "experiments/tactics-t3-tuning",
+      "primary_wins": 130,
+      "base_wins": 10,
+      "summary": {
+        "all": {
+          "n": 168,
+          "wins": 140,
+          "losses": 28,
+          "draws_or_voids": 0,
+          "win_rate": 0.8333333333333334,
+          "wilson95_descriptive": [
+            0.7696635738848362,
+            0.8820994450814678
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "base": {
+          "n": 12,
+          "wins": 10,
+          "losses": 2,
+          "draws_or_voids": 0,
+          "win_rate": 0.8333333333333334,
+          "wilson95_descriptive": [
+            0.5519636426153274,
+            0.9530358523851776
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "primary": {
+          "n": 156,
+          "wins": 130,
+          "losses": 26,
+          "draws_or_voids": 0,
+          "win_rate": 0.8333333333333334,
+          "wilson95_descriptive": [
+            0.7669936261510178,
+            0.8836505115453016
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "by_opponent": {
+          "adversarial-priest-v1": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "adversarial-zoo": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-hunter": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-paladin": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-mage": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-priest": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "historical-mage": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "official-mage": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-paladin": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-shaman": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-warlock": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-priest": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-warlock": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 84,
+            "wins": 74,
+            "losses": 10,
+            "draws_or_voids": 0,
+            "win_rate": 0.8809523809523809,
+            "wilson95_descriptive": [
+              0.7945489613310683,
+              0.9340352174634889
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "False": {
+            "n": 84,
+            "wins": 66,
+            "losses": 18,
+            "draws_or_voids": 0,
+            "win_rate": 0.7857142857142857,
+            "wilson95_descriptive": [
+              0.6865046833134146,
+              0.8599334507825035
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "planned": 168,
+        "completed": 168,
+        "stopped_for_external_failure": false
+      }
+    },
+    {
+      "name": "T4",
+      "out": "experiments/tactics-t4-tuning",
+      "primary_wins": 132,
+      "base_wins": 12,
+      "summary": {
+        "all": {
+          "n": 168,
+          "wins": 144,
+          "losses": 24,
+          "draws_or_voids": 0,
+          "win_rate": 0.8571428571428571,
+          "wilson95_descriptive": [
+            0.7962328640010609,
+            0.902084656319979
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "base": {
+          "n": 12,
+          "wins": 12,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.7574992425007574,
+            1.0
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "primary": {
+          "n": 156,
+          "wins": 132,
+          "losses": 24,
+          "draws_or_voids": 0,
+          "win_rate": 0.8461538461538461,
+          "wilson95_descriptive": [
+            0.7812847279622355,
+            0.8943841842608653
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "by_opponent": {
+          "adversarial-priest-v1": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "adversarial-zoo": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-hunter": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-paladin": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-mage": {
+            "n": 12,
+            "wins": 7,
+            "losses": 5,
+            "draws_or_voids": 0,
+            "win_rate": 0.5833333333333334,
+            "wilson95_descriptive": [
+              0.3195073356553728,
+              0.8067425380947535
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-priest": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "historical-mage": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "official-mage": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-paladin": {
+            "n": 12,
+            "wins": 7,
+            "losses": 5,
+            "draws_or_voids": 0,
+            "win_rate": 0.5833333333333334,
+            "wilson95_descriptive": [
+              0.3195073356553728,
+              0.8067425380947535
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-shaman": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-paladin": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-warlock": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-priest": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-warlock": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 84,
+            "wins": 76,
+            "losses": 8,
+            "draws_or_voids": 0,
+            "win_rate": 0.9047619047619048,
+            "wilson95_descriptive": [
+              0.8231718131587017,
+              0.9509488768105155
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "False": {
+            "n": 84,
+            "wins": 68,
+            "losses": 16,
+            "draws_or_voids": 0,
+            "win_rate": 0.8095238095238095,
+            "wilson95_descriptive": [
+              0.7127605972340397,
+              0.8792140480365381
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "planned": 168,
+        "completed": 168,
+        "stopped_for_external_failure": false
+      }
+    },
+    {
+      "name": "T5",
+      "out": "experiments/tactics-t5-tuning",
+      "primary_wins": 133,
+      "base_wins": 10,
+      "summary": {
+        "all": {
+          "n": 168,
+          "wins": 143,
+          "losses": 25,
+          "draws_or_voids": 0,
+          "win_rate": 0.8511904761904762,
+          "wilson95_descriptive": [
+            0.789550043034709,
+            0.8971288519476469
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "base": {
+          "n": 12,
+          "wins": 10,
+          "losses": 2,
+          "draws_or_voids": 0,
+          "win_rate": 0.8333333333333334,
+          "wilson95_descriptive": [
+            0.5519636426153274,
+            0.9530358523851776
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "primary": {
+          "n": 156,
+          "wins": 133,
+          "losses": 23,
+          "draws_or_voids": 0,
+          "win_rate": 0.8525641025641025,
+          "wilson95_descriptive": [
+            0.7884775894319942,
+            0.8997037100544973
+          ],
+          "forfeits": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "opponent_errors": 0
+        },
+        "by_opponent": {
+          "adversarial-priest-v1": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "adversarial-zoo": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-hunter": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "aggressive-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-mage": {
+            "n": 12,
+            "wins": 7,
+            "losses": 5,
+            "draws_or_voids": 0,
+            "win_rate": 0.5833333333333334,
+            "wilson95_descriptive": [
+              0.3195073356553728,
+              0.8067425380947535
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "control-priest": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "historical-mage": {
+            "n": 12,
+            "wins": 8,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.3906175873976139,
+              0.8618821601026385
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "official-mage": {
+            "n": 12,
+            "wins": 10,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.8333333333333334,
+            "wilson95_descriptive": [
+              0.5519636426153274,
+              0.9530358523851776
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-paladin": {
+            "n": 12,
+            "wins": 9,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.46768966087934005,
+              0.9110599603710386
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "search-shaman": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-paladin": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "tempo-warlock": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-priest": {
+            "n": 12,
+            "wins": 11,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.9166666666666666,
+            "wilson95_descriptive": [
+              0.6461140782014047,
+              0.9851352905492264
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "value-warlock": {
+            "n": 12,
+            "wins": 12,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.7574992425007574,
+              1.0
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 84,
+            "wins": 76,
+            "losses": 8,
+            "draws_or_voids": 0,
+            "win_rate": 0.9047619047619048,
+            "wilson95_descriptive": [
+              0.8231718131587017,
+              0.9509488768105155
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          },
+          "False": {
+            "n": 84,
+            "wins": 67,
+            "losses": 17,
+            "draws_or_voids": 0,
+            "win_rate": 0.7976190476190477,
+            "wilson95_descriptive": [
+              0.6995798859846238,
+              0.8696265036986242
+            ],
+            "forfeits": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "opponent_errors": 0
+          }
+        },
+        "planned": 168,
+        "completed": 168,
+        "stopped_for_external_failure": false
+      }
+    }
+  ],
+  "retained": "T5",
+  "best_mutation": "T5",
+  "paired_vs_parent": {
+    "T1": {
+      "baseline": "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/experiments/tactics-h4-tuning",
+      "candidate": "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/experiments/tactics-t1-tuning",
+      "all": {
+        "n_per_arm": 168,
+        "a_wins": 140,
+        "b_wins": 142,
+        "gain": 0.011904761904761904,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.023809523809523808
+        ],
+        "a_only_wins": 3,
+        "b_only_wins": 5,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "primary": {
+        "n_per_arm": 156,
+        "a_wins": 130,
+        "b_wins": 131,
+        "gain": 0.00641025641025641,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.019230769230769232
+        ],
+        "a_only_wins": 3,
+        "b_only_wins": 4,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "base": {
+        "n_per_arm": 12,
+        "a_wins": 10,
+        "b_wins": 11,
+        "gain": 0.08333333333333333,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.25
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 1,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "by_opponent": {
+        "adversarial-priest-v1": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 11,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "adversarial-zoo": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 10,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "aggressive-hunter": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 9,
+          "gain": -0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.25,
+            0.0
+          ],
+          "a_only_wins": 1,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "aggressive-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 12,
+          "gain": 0.16666666666666666,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.3333333333333333
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 2,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "control-mage": {
+          "n_per_arm": 12,
+          "a_wins": 7,
+          "b_wins": 7,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "control-priest": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 10,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "historical-mage": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 8,
+          "gain": -0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.25,
+            0.0
+          ],
+          "a_only_wins": 1,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "official-mage": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 11,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "search-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 9,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "search-shaman": {
+          "n_per_arm": 12,
+          "a_wins": 12,
+          "b_wins": 12,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "tempo-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 11,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "tempo-warlock": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 10,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "value-priest": {
+          "n_per_arm": 12,
+          "a_wins": 12,
+          "b_wins": 11,
+          "gain": -0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.25,
+            0.0
+          ],
+          "a_only_wins": 1,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "value-warlock": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 11,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        }
+      }
+    },
+    "T2": {
+      "baseline": "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/experiments/tactics-h4-tuning",
+      "candidate": "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/experiments/tactics-t2-tuning",
+      "all": {
+        "n_per_arm": 168,
+        "a_wins": 140,
+        "b_wins": 141,
+        "gain": 0.005952380952380952,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          -0.011904761904761904,
+          0.023809523809523808
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 3,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "primary": {
+        "n_per_arm": 156,
+        "a_wins": 130,
+        "b_wins": 131,
+        "gain": 0.00641025641025641,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          -0.012820512820512822,
+          0.025641025641025644
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 3,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "base": {
+        "n_per_arm": 12,
+        "a_wins": 10,
+        "b_wins": 10,
+        "gain": 0.0,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.0
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 0,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "by_opponent": {
+        "adversarial-priest-v1": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 11,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "adversarial-zoo": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 9,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "aggressive-hunter": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 9,
+          "gain": -0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.25,
+            0.0
+          ],
+          "a_only_wins": 1,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "aggressive-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 11,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "control-mage": {
+          "n_per_arm": 12,
+          "a_wins": 7,
+          "b_wins": 8,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "control-priest": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 10,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "historical-mage": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 9,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "official-mage": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 10,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "search-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 9,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "search-shaman": {
+          "n_per_arm": 12,
+          "a_wins": 12,
+          "b_wins": 12,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "tempo-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 11,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "tempo-warlock": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 10,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "value-priest": {
+          "n_per_arm": 12,
+          "a_wins": 12,
+          "b_wins": 11,
+          "gain": -0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.25,
+            0.0
+          ],
+          "a_only_wins": 1,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "value-warlock": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 11,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        }
+      }
+    },
+    "T3": {
+      "baseline": "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/experiments/tactics-h4-tuning",
+      "candidate": "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/experiments/tactics-t3-tuning",
+      "all": {
+        "n_per_arm": 168,
+        "a_wins": 140,
+        "b_wins": 140,
+        "gain": 0.0,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          -0.03571428571428571,
+          0.023809523809523808
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 2,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "primary": {
+        "n_per_arm": 156,
+        "a_wins": 130,
+        "b_wins": 130,
+        "gain": 0.0,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          -0.038461538461538464,
+          0.025641025641025644
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 2,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "base": {
+        "n_per_arm": 12,
+        "a_wins": 10,
+        "b_wins": 10,
+        "gain": 0.0,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.0
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 0,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "by_opponent": {
+        "adversarial-priest-v1": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 11,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "adversarial-zoo": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 10,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "aggressive-hunter": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 10,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "aggressive-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 10,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "control-mage": {
+          "n_per_arm": 12,
+          "a_wins": 7,
+          "b_wins": 8,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "control-priest": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 9,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "historical-mage": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 9,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "official-mage": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 10,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "search-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 9,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "search-shaman": {
+          "n_per_arm": 12,
+          "a_wins": 12,
+          "b_wins": 10,
+          "gain": -0.16666666666666666,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.5,
+            0.0
+          ],
+          "a_only_wins": 2,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "tempo-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 11,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "tempo-warlock": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 10,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "value-priest": {
+          "n_per_arm": 12,
+          "a_wins": 12,
+          "b_wins": 12,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "value-warlock": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 11,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        }
+      }
+    },
+    "T4": {
+      "baseline": "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/experiments/tactics-h4-tuning",
+      "candidate": "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/experiments/tactics-t4-tuning",
+      "all": {
+        "n_per_arm": 168,
+        "a_wins": 140,
+        "b_wins": 144,
+        "gain": 0.023809523809523808,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          0.011904761904761904,
+          0.035714285714285705
+        ],
+        "a_only_wins": 9,
+        "b_only_wins": 13,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "primary": {
+        "n_per_arm": 156,
+        "a_wins": 130,
+        "b_wins": 132,
+        "gain": 0.01282051282051282,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          -0.012820512820512822,
+          0.032051282051282055
+        ],
+        "a_only_wins": 9,
+        "b_only_wins": 11,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "base": {
+        "n_per_arm": 12,
+        "a_wins": 10,
+        "b_wins": 12,
+        "gain": 0.16666666666666666,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.3333333333333333
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 2,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "by_opponent": {
+        "adversarial-priest-v1": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 10,
+          "gain": -0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.25,
+            0.0
+          ],
+          "a_only_wins": 1,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "adversarial-zoo": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 11,
+          "gain": 0.16666666666666666,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.3333333333333333
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 2,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "aggressive-hunter": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 11,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "aggressive-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 12,
+          "gain": 0.16666666666666666,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.3333333333333333
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 2,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "control-mage": {
+          "n_per_arm": 12,
+          "a_wins": 7,
+          "b_wins": 7,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.25,
+            0.25
+          ],
+          "a_only_wins": 1,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "control-priest": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 11,
+          "gain": 0.16666666666666666,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.3333333333333333
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 2,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "historical-mage": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 10,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.16666666666666666,
+            0.3333333333333333
+          ],
+          "a_only_wins": 1,
+          "b_only_wins": 2,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "official-mage": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 12,
+          "gain": 0.16666666666666666,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.3333333333333333
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 2,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "search-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 7,
+          "gain": -0.16666666666666666,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.3333333333333333,
+            0.0
+          ],
+          "a_only_wins": 2,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "search-shaman": {
+          "n_per_arm": 12,
+          "a_wins": 12,
+          "b_wins": 11,
+          "gain": -0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.25,
+            0.0
+          ],
+          "a_only_wins": 1,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "tempo-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 12,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "tempo-warlock": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 9,
+          "gain": -0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.25,
+            0.0
+          ],
+          "a_only_wins": 1,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "value-priest": {
+          "n_per_arm": 12,
+          "a_wins": 12,
+          "b_wins": 10,
+          "gain": -0.16666666666666666,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.3333333333333333,
+            0.0
+          ],
+          "a_only_wins": 2,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "value-warlock": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 11,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        }
+      }
+    },
+    "T5": {
+      "baseline": "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/experiments/tactics-h4-tuning",
+      "candidate": "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/experiments/tactics-t5-tuning",
+      "all": {
+        "n_per_arm": 168,
+        "a_wins": 140,
+        "b_wins": 143,
+        "gain": 0.017857142857142856,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          -0.03571428571428571,
+          0.07142857142857142
+        ],
+        "a_only_wins": 5,
+        "b_only_wins": 8,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "primary": {
+        "n_per_arm": 156,
+        "a_wins": 130,
+        "b_wins": 133,
+        "gain": 0.019230769230769232,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          -0.038461538461538464,
+          0.07692307692307693
+        ],
+        "a_only_wins": 5,
+        "b_only_wins": 8,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "base": {
+        "n_per_arm": 12,
+        "a_wins": 10,
+        "b_wins": 10,
+        "gain": 0.0,
+        "seed_clusters": 6,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.0
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 0,
+        "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+      },
+      "by_opponent": {
+        "adversarial-priest-v1": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 11,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "adversarial-zoo": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 9,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.25,
+            0.25
+          ],
+          "a_only_wins": 1,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "aggressive-hunter": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 11,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "aggressive-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 11,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "control-mage": {
+          "n_per_arm": 12,
+          "a_wins": 7,
+          "b_wins": 7,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.25,
+            0.25
+          ],
+          "a_only_wins": 1,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "control-priest": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 10,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "historical-mage": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 8,
+          "gain": -0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.3333333333333333,
+            0.16666666666666666
+          ],
+          "a_only_wins": 2,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "official-mage": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 10,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "search-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 9,
+          "b_wins": 9,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "search-shaman": {
+          "n_per_arm": 12,
+          "a_wins": 12,
+          "b_wins": 12,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "tempo-paladin": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 11,
+          "gain": 0.0,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "tempo-warlock": {
+          "n_per_arm": 12,
+          "a_wins": 10,
+          "b_wins": 11,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "value-priest": {
+          "n_per_arm": 12,
+          "a_wins": 12,
+          "b_wins": 11,
+          "gain": -0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            -0.25,
+            0.0
+          ],
+          "a_only_wins": 1,
+          "b_only_wins": 0,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        },
+        "value-warlock": {
+          "n_per_arm": 12,
+          "a_wins": 11,
+          "b_wins": 12,
+          "gain": 0.08333333333333333,
+          "seed_clusters": 6,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.25
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "limitation": "Fixed opponents; fewer than 20 seed clusters give unstable intervals."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6142 @@
+{
+  "source": "experiments/tactics-b0-development",
+  "candidate": "development/secret_hunter_tactics/candidates/H4",
+  "cases": [
+    {
+      "game": "7de8d91aab694f90",
+      "opponent": "official-mage",
+      "source_seq": 2,
+      "turn": 2,
+      "category": "resource_use",
+      "state": {
+        "protocol_version": "1",
+        "game_id": "7de8d91aab694f90",
+        "seq": 2,
+        "player": 1,
+        "turn": 2,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794384235.431,
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 30,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 1,
+          "max_mana": 1,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 7,
+              "card_id": "EX1_029",
+              "name": "Leper Gnome",
+              "type": "MINION",
+              "cost": 1,
+              "attack": 1,
+              "health": 1,
+              "text": "Deathrattle: Deal 2 damage to the enemy hero.",
+              "playable": true
+            },
+            {
+              "entity_id": 21,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "After you summon a minion, deal 1 damage to a random enemy.",
+              "playable": false
+            },
+            {
+              "entity_id": 16,
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 3,
+              "health": 2,
+              "text": "Battlecry: Destroy your opponent's weapon.",
+              "playable": false
+            },
+            {
+              "entity_id": 29,
+              "card_id": "EX1_617",
+              "name": "Deadly Shot",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "Destroy a random enemy minion.",
+              "playable": false
+            },
+            {
+              "entity_id": 70,
+              "card_id": "GAME_005",
+              "name": "The Coin",
+              "type": "SPELL",
+              "cost": 0,
+              "text": "Gain 1 Mana Crystal this turn only.",
+              "playable": true
+            },
+            {
+              "entity_id": 22,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "After you summon a minion, deal 1 damage to a random enemy.",
+              "playable": false
+            }
+          ],
+          "board": [],
+          "secrets": [],
+          "deck_remaining": 25,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 1,
+            "EX1_080": 2,
+            "EX1_162": 1,
+            "EX1_531": 2,
+            "EX1_533": 1,
+            "EX1_534": 2,
+            "EX1_536": 2,
+            "EX1_538": 2,
+            "EX1_539": 2,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 2,
+            "EX1_611": 2,
+            "NEW1_031": 2
+          },
+          "fatigue": 0,
+          "graveyard": []
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_08",
+            "name": "Jaina Proudmoore",
+            "hero_class": "MAGE",
+            "health": 30,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_08bp",
+            "name": "Fireblast",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 1 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 1,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 4,
+          "board": [],
+          "secrets_count": 0,
+          "deck_remaining": 26,
+          "fatigue": 0,
+          "graveyard": []
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 7,
+            "targets": null,
+            "positions": [
+              0
+            ],
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 70,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "mulligan",
+            "player": 1,
+            "replaced": 2,
+            "replaced_card_ids": [
+              "EX1_610",
+              "EX1_533"
+            ],
+            "drawn_card_ids": [
+              "NEW1_019",
+              "EX1_617"
+            ]
+          },
+          {
+            "event": "mulligan",
+            "player": 2,
+            "replaced": 2
+          },
+          {
+            "event": "turn_start",
+            "turn": 1,
+            "player": 2
+          },
+          {
+            "event": "draw",
+            "player": 2
+          },
+          {
+            "event": "end_turn",
+            "player": 2
+          },
+          {
+            "event": "turn_start",
+            "turn": 2,
+            "player": 1
+          },
+          {
+            "event": "draw",
+            "player": 1,
+            "card_id": "NEW1_019",
+            "entity_id": 22
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "public_opponent_evidence": {
+          "shown_cards": [],
+          "face_attacks": 0,
+          "other_attacks": 0,
+          "cheap_minions_played": 0,
+          "weapons_seen": [],
+          "tendency": "insufficient_or_mixed",
+          "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+        },
+        "hero_attack_available": true
+      },
+      "current": {
+        "type": "play_card",
+        "card": "EX1_029",
+        "position": 0
+      },
+      "alternative": {
+        "type": "play_card",
+        "card": "GAME_005"
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 5,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 30,
+          "enemy_ehp": 30,
+          "visible_incoming_before_taunts": 0,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 5,
+          "action": {
+            "type": "play_card",
+            "card": 70
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 3,
+          "reply": {
+            "nodes": 0,
+            "candidates": 3,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "play_card",
+              "card": 70
+            },
+            {
+              "type": "play_card",
+              "card": 16,
+              "position": 0
+            }
+          ],
+          "value": -18.063300000000005,
+          "elapsed_s": 0.0009371249470859766
+        },
+        "elapsed_s": 0.0021592919947579503,
+        "over_budget": false
+      },
+      "counterfactual": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": "EX1_029",
+            "position": 0
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "EX1_029",
+              "position": 0
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 30,
+          "enemy_hp": 30,
+          "own_board": [
+            [
+              "EX1_029",
+              1,
+              1
+            ]
+          ],
+          "enemy_board": [],
+          "own_secrets": [],
+          "mana_left": 0
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": "GAME_005"
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "GAME_005"
+            },
+            {
+              "type": "play_card",
+              "card": "NEW1_019",
+              "position": 0
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 30,
+          "enemy_hp": 30,
+          "own_board": [
+            [
+              "NEW1_019",
+              2,
+              2
+            ]
+          ],
+          "enemy_board": [],
+          "own_secrets": [],
+          "mana_left": 0
+        }
+      ],
+      "scope": "Actual engine clones with the same candidate continuation through this turn only; nonterminal differences do not establish a changed match winner."
+    },
+    {
+      "game": "399df291ad234f8d",
+      "opponent": "official-mage",
+      "source_seq": 20,
+      "turn": 13,
+      "category": "trade_or_placement",
+      "state": {
+        "protocol_version": "1",
+        "game_id": "399df291ad234f8d",
+        "seq": 20,
+        "player": 2,
+        "turn": 13,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794384235.498,
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 24,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": true,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 4,
+          "max_mana": 7,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 49,
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 3,
+              "health": 2,
+              "text": "Battlecry: Destroy your opponent's weapon.",
+              "playable": true
+            },
+            {
+              "entity_id": 61,
+              "card_id": "EX1_539",
+              "name": "Kill Command",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "Deal 3 damage. If you control a Beast, deal 5 damage instead.",
+              "playable": true
+            },
+            {
+              "entity_id": 47,
+              "card_id": "EX1_533",
+              "name": "Misdirection",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When an enemy attacks your hero, instead it attacks another random character.",
+              "playable": true
+            },
+            {
+              "entity_id": 52,
+              "card_id": "EX1_611",
+              "name": "Freezing Trap",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When an enemy minion attacks, return it to its owner's hand. It costs (2) more.",
+              "playable": true
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 66,
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane",
+              "attack": 6,
+              "health": 2,
+              "max_health": 5,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": true,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Deathrattle: Summon two 2/2 Hyenas."
+            },
+            {
+              "entity_id": 73,
+              "card_id": "EX1_538t",
+              "name": "Hound",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": true,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Charge"
+            },
+            {
+              "entity_id": 74,
+              "card_id": "EX1_538t",
+              "name": "Hound",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": true,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Charge"
+            },
+            {
+              "entity_id": 75,
+              "card_id": "EX1_538t",
+              "name": "Hound",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": true,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Charge"
+            },
+            {
+              "entity_id": 76,
+              "card_id": "EX1_538t",
+              "name": "Hound",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": true,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Charge"
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 20,
+          "deck_remaining_counts": {
+            "DS1_184": 1,
+            "EX1_029": 2,
+            "EX1_080": 2,
+            "EX1_162": 1,
+            "EX1_531": 2,
+            "EX1_534": 1,
+            "EX1_536": 1,
+            "EX1_538": 1,
+            "EX1_539": 1,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 2,
+            "EX1_611": 1,
+            "EX1_617": 1,
+            "NEW1_019": 1,
+            "NEW1_031": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            },
+            {
+              "card_id": "DS1_070",
+              "name": "Houndmaster"
+            },
+            {
+              "card_id": "NEW1_031",
+              "name": "Animal Companion"
+            },
+            {
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow"
+            },
+            {
+              "card_id": "NEW1_034",
+              "name": "Huffer"
+            },
+            {
+              "card_id": "EX1_538",
+              "name": "Unleash the Hounds"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_08",
+            "name": "Jaina Proudmoore",
+            "hero_class": "MAGE",
+            "health": 20,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_08bp",
+            "name": "Fireblast",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 1 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 6,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 4,
+          "board": [
+            {
+              "entity_id": 18,
+              "card_id": "EX1_556",
+              "name": "Harvest Golem",
+              "attack": 2,
+              "health": 1,
+              "max_health": 3,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": true,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+            },
+            {
+              "entity_id": 6,
+              "card_id": "NEW1_012",
+              "name": "Mana Wyrm",
+              "attack": 1,
+              "health": 3,
+              "max_health": 3,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Whenever you cast a spell, gain +1 Attack."
+            },
+            {
+              "entity_id": 32,
+              "card_id": "CS2_200",
+              "name": "Boulderfist Ogre",
+              "attack": 6,
+              "health": 7,
+              "max_health": 7,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": ""
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 19,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "skele21",
+              "name": "Damaged Golem"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "NEW1_012",
+              "name": "Mana Wyrm"
+            },
+            {
+              "card_id": "EX1_012",
+              "name": "Bloodmage Thalnos"
+            },
+            {
+              "card_id": "EX1_556",
+              "name": "Harvest Golem"
+            },
+            {
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 49,
+            "targets": null,
+            "positions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 61,
+            "targets": [
+              4,
+              6,
+              18,
+              32,
+              37,
+              66,
+              73,
+              74,
+              75,
+              76
+            ],
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 47,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 52,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "attack",
+            "attacker": 73,
+            "targets": [
+              4,
+              6,
+              18,
+              32
+            ]
+          },
+          {
+            "type": "attack",
+            "attacker": 74,
+            "targets": [
+              4,
+              6,
+              18,
+              32
+            ]
+          },
+          {
+            "type": "attack",
+            "attacker": 75,
+            "targets": [
+              4,
+              6,
+              18,
+              32
+            ]
+          },
+          {
+            "type": "attack",
+            "attacker": 76,
+            "targets": [
+              4,
+              6,
+              18,
+              32
+            ]
+          },
+          {
+            "type": "hero_power",
+            "targets": null
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "attack",
+            "player": 2,
+            "attacker": {
+              "entity_id": 66,
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane"
+            },
+            "target": {
+              "entity_id": 27,
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 1,
+            "entity_id": 27,
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta",
+            "amount": 6,
+            "health_after": -5,
+            "source": {
+              "entity_id": 66,
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 2,
+            "entity_id": 66,
+            "card_id": "EX1_534",
+            "name": "Savannah Highmane",
+            "amount": 3,
+            "health_after": 2,
+            "source": {
+              "entity_id": 27,
+              "card_id": "CS2_179",
+              "name": "Sen'jin Shieldmasta"
+            }
+          },
+          {
+            "event": "death",
+            "player": 1,
+            "entity_id": 27,
+            "card_id": "CS2_179",
+            "name": "Sen'jin Shieldmasta"
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "public_opponent_evidence": {
+          "shown_cards": [
+            "GAME_005",
+            "NEW1_012",
+            "EX1_012",
+            "EX1_556",
+            "CS2_179",
+            "CS2_200"
+          ],
+          "face_attacks": 3,
+          "other_attacks": 3,
+          "cheap_minions_played": 3,
+          "weapons_seen": [],
+          "tendency": "fast_pressure_evidence",
+          "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+        },
+        "hero_attack_available": true
+      },
+      "current": {
+        "type": "play_card",
+        "card": "EX1_066",
+        "position": 0
+      },
+      "alternative": {
+        "type": "attack",
+        "attacker": "EX1_538t",
+        "target": "EX1_556"
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 0,
+        "search_used": false,
+        "reason": "baseline_rank",
+        "race": {
+          "own_ehp": 24,
+          "enemy_ehp": 20,
+          "visible_incoming_before_taunts": 9,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": false
+        },
+        "turn_search": {
+          "nodes": 0,
+          "action": null,
+          "supported": false,
+          "bounded_out": false,
+          "depth": 0
+        },
+        "elapsed_s": 0.0001966250129044056,
+        "over_budget": false
+      },
+      "counterfactual": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": "EX1_066",
+            "position": 0
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "EX1_066",
+              "position": 0
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_538t",
+              "target": "EX1_556"
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_538t",
+              "target": "skele21"
+            },
+            {
+              "type": "play_card",
+              "card": "EX1_533"
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_538t",
+              "target": "HERO_08"
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_538t",
+              "target": "HERO_08"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 24,
+          "enemy_hp": 18,
+          "own_board": [
+            [
+              "EX1_066",
+              3,
+              2
+            ],
+            [
+              "EX1_534",
+              6,
+              2
+            ],
+            [
+              "EX1_538t",
+              1,
+              1
+            ],
+            [
+              "EX1_538t",
+              1,
+              1
+            ]
+          ],
+          "enemy_board": [
+            [
+              "NEW1_012",
+              1,
+              3
+            ],
+            [
+              "CS2_200",
+              6,
+              7
+            ]
+          ],
+          "own_secrets": [
+            "EX1_533"
+          ],
+          "mana_left": 0
+        },
+        {
+          "action": {
+            "type": "attack",
+            "attacker": "EX1_538t",
+            "target": "EX1_556"
+          },
+          "line": [
+            {
+              "type": "attack",
+              "attacker": "EX1_538t",
+              "target": "EX1_556"
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_538t",
+              "target": "skele21"
+            },
+            {
+              "type": "play_card",
+              "card": "EX1_066",
+              "position": 0
+            },
+            {
+              "type": "play_card",
+              "card": "EX1_533"
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_538t",
+              "target": "HERO_08"
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_538t",
+              "target": "HERO_08"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 24,
+          "enemy_hp": 18,
+          "own_board": [
+            [
+              "EX1_066",
+              3,
+              2
+            ],
+            [
+              "EX1_534",
+              6,
+              2
+            ],
+            [
+              "EX1_538t",
+              1,
+              1
+            ],
+            [
+              "EX1_538t",
+              1,
+              1
+            ]
+          ],
+          "enemy_board": [
+            [
+              "NEW1_012",
+              1,
+              3
+            ],
+            [
+              "CS2_200",
+              6,
+              7
+            ]
+          ],
+          "own_secrets": [
+            "EX1_533"
+          ],
+          "mana_left": 0
+        }
+      ],
+      "scope": "Actual engine clones with the same candidate continuation through this turn only; nonterminal differences do not establish a changed match winner."
+    },
+    {
+      "game": "1a3dead62b0540eb",
+      "opponent": "official-mage",
+      "source_seq": 2,
+      "turn": 2,
+      "category": "resource_use",
+      "state": {
+        "protocol_version": "1",
+        "game_id": "1a3dead62b0540eb",
+        "seq": 2,
+        "player": 1,
+        "turn": 2,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794384235.559,
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 27,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 1,
+          "max_mana": 1,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 20,
+              "card_id": "EX1_611",
+              "name": "Freezing Trap",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When an enemy minion attacks, return it to its owner's hand. It costs (2) more.",
+              "playable": false
+            },
+            {
+              "entity_id": 26,
+              "card_id": "EX1_538",
+              "name": "Unleash the Hounds",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "For each enemy minion, summon a 1/1 Hound with Charge.",
+              "playable": false
+            },
+            {
+              "entity_id": 22,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "After you summon a minion, deal 1 damage to a random enemy.",
+              "playable": false
+            },
+            {
+              "entity_id": 35,
+              "card_id": "EX1_543",
+              "name": "King Krush",
+              "type": "MINION",
+              "cost": 9,
+              "attack": 8,
+              "health": 8,
+              "text": "Charge",
+              "playable": false
+            },
+            {
+              "entity_id": 70,
+              "card_id": "GAME_005",
+              "name": "The Coin",
+              "type": "SPELL",
+              "cost": 0,
+              "text": "Gain 1 Mana Crystal this turn only.",
+              "playable": true
+            },
+            {
+              "entity_id": 19,
+              "card_id": "EX1_611",
+              "name": "Freezing Trap",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When an enemy minion attacks, return it to its owner's hand. It costs (2) more.",
+              "playable": false
+            }
+          ],
+          "board": [],
+          "secrets": [],
+          "deck_remaining": 25,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 2,
+            "EX1_066": 1,
+            "EX1_080": 2,
+            "EX1_162": 1,
+            "EX1_531": 2,
+            "EX1_533": 1,
+            "EX1_534": 2,
+            "EX1_536": 2,
+            "EX1_538": 1,
+            "EX1_539": 2,
+            "EX1_554": 1,
+            "EX1_610": 2,
+            "EX1_617": 1,
+            "NEW1_019": 1,
+            "NEW1_031": 2
+          },
+          "fatigue": 0,
+          "graveyard": []
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_08",
+            "name": "Jaina Proudmoore",
+            "hero_class": "MAGE",
+            "health": 30,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_08bp",
+            "name": "Fireblast",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 1 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 1,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 3,
+          "board": [],
+          "secrets_count": 0,
+          "deck_remaining": 26,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_277",
+              "name": "Arcane Missiles"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 70,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "mulligan",
+            "player": 1,
+            "replaced": 3,
+            "replaced_card_ids": [
+              "DS1_070",
+              "EX1_534",
+              "EX1_539"
+            ],
+            "drawn_card_ids": [
+              "EX1_611",
+              "EX1_538",
+              "EX1_543"
+            ]
+          },
+          {
+            "event": "mulligan",
+            "player": 2,
+            "replaced": 2
+          },
+          {
+            "event": "turn_start",
+            "turn": 1,
+            "player": 2
+          },
+          {
+            "event": "draw",
+            "player": 2
+          },
+          {
+            "event": "play_card",
+            "player": 2,
+            "card_id": "EX1_277",
+            "name": "Arcane Missiles",
+            "entity_id": 45,
+            "cost": 1,
+            "target": null,
+            "position": null,
+            "choose": null
+          },
+          {
+            "event": "damage",
+            "player": 1,
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "amount": 1,
+            "health_after": 29,
+            "source": {
+              "entity_id": 45,
+              "card_id": "EX1_277",
+              "name": "Arcane Missiles"
+            },
+            "armor_absorbed": 0,
+            "armor_after": 0
+          },
+          {
+            "event": "damage",
+            "player": 1,
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "amount": 1,
+            "health_after": 28,
+            "source": {
+              "entity_id": 45,
+              "card_id": "EX1_277",
+              "name": "Arcane Missiles"
+            },
+            "armor_absorbed": 0,
+            "armor_after": 0
+          },
+          {
+            "event": "damage",
+            "player": 1,
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "amount": 1,
+            "health_after": 27,
+            "source": {
+              "entity_id": 45,
+              "card_id": "EX1_277",
+              "name": "Arcane Missiles"
+            },
+            "armor_absorbed": 0,
+            "armor_after": 0
+          },
+          {
+            "event": "end_turn",
+            "player": 2
+          },
+          {
+            "event": "turn_start",
+            "turn": 2,
+            "player": 1
+          },
+          {
+            "event": "draw",
+            "player": 1,
+            "card_id": "EX1_611",
+            "entity_id": 19
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "public_opponent_evidence": {
+          "shown_cards": [
+            "EX1_277"
+          ],
+          "face_attacks": 0,
+          "other_attacks": 0,
+          "cheap_minions_played": 0,
+          "weapons_seen": [],
+          "tendency": "insufficient_or_mixed",
+          "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+        },
+        "hero_attack_available": true
+      },
+      "current": {
+        "type": "play_card",
+        "card": "GAME_005"
+      },
+      "alternative": {
+        "type": "end_turn"
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 3,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 27,
+          "enemy_ehp": 30,
+          "visible_incoming_before_taunts": 0,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 3,
+          "action": {
+            "type": "end_turn"
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 3,
+          "reply": {
+            "nodes": 0,
+            "candidates": 2,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "end_turn"
+            }
+          ],
+          "value": -22.242000000000004,
+          "elapsed_s": 0.00039458402898162603
+        },
+        "elapsed_s": 0.000522666028700769,
+        "over_budget": false
+      },
+      "counterfactual": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": "GAME_005"
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "GAME_005"
+            },
+            {
+              "type": "play_card",
+              "card": "NEW1_019",
+              "position": 0
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 27,
+          "enemy_hp": 30,
+          "own_board": [
+            [
+              "NEW1_019",
+              2,
+              2
+            ]
+          ],
+          "enemy_board": [],
+          "own_secrets": [],
+          "mana_left": 0
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "line": [
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 27,
+          "enemy_hp": 30,
+          "own_board": [],
+          "enemy_board": [],
+          "own_secrets": [],
+          "mana_left": 0
+        }
+      ],
+      "scope": "Actual engine clones with the same candidate continuation through this turn only; nonterminal differences do not establish a changed match winner."
+    },
+    {
+      "game": "edd55d18bb4546eb",
+      "opponent": "tempo-paladin",
+      "source_seq": 5,
+      "turn": 5,
+      "category": "resource_use",
+      "state": {
+        "protocol_version": "1",
+        "game_id": "edd55d18bb4546eb",
+        "seq": 5,
+        "player": 1,
+        "turn": 5,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794384236.831,
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 30,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": true,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 3,
+          "max_mana": 3,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 27,
+              "card_id": "EX1_539",
+              "name": "Kill Command",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "Deal 3 damage. If you control a Beast, deal 5 damage instead.",
+              "playable": true
+            },
+            {
+              "entity_id": 14,
+              "card_id": "EX1_533",
+              "name": "Misdirection",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When an enemy attacks your hero, instead it attacks another random character.",
+              "playable": true
+            },
+            {
+              "entity_id": 13,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "Whenever a friendly Beast dies, gain +2/+1.",
+              "playable": true
+            },
+            {
+              "entity_id": 8,
+              "card_id": "EX1_080",
+              "name": "Secretkeeper",
+              "type": "MINION",
+              "cost": 1,
+              "attack": 1,
+              "health": 2,
+              "text": "Whenever a Secret is played, gain +1/+1.",
+              "playable": true
+            },
+            {
+              "entity_id": 16,
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 3,
+              "health": 2,
+              "text": "Battlecry: Destroy your opponent's weapon.",
+              "playable": true
+            }
+          ],
+          "board": [],
+          "secrets": [],
+          "deck_remaining": 24,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 2,
+            "EX1_080": 1,
+            "EX1_162": 1,
+            "EX1_534": 2,
+            "EX1_536": 2,
+            "EX1_538": 2,
+            "EX1_539": 1,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 2,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_019": 2,
+            "NEW1_031": 2
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_04",
+            "name": "Uther Lightbringer",
+            "hero_class": "PALADIN",
+            "health": 30,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_04bp",
+            "name": "Reinforce",
+            "cost": 2,
+            "usable": false,
+            "text": "Summon a 1/1 Silver Hand Recruit."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 2,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 4,
+          "board": [
+            {
+              "entity_id": 44,
+              "card_id": "EX1_362",
+              "name": "Argent Protector",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Battlecry: Give a friendly minion Divine Shield."
+            },
+            {
+              "entity_id": 45,
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon",
+              "attack": 3,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Can't be targeted by spells or Hero Powers."
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 24,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 27,
+            "targets": [
+              4,
+              37,
+              44
+            ],
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 14,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 13,
+            "targets": null,
+            "positions": [
+              0
+            ],
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 8,
+            "targets": null,
+            "positions": [
+              0
+            ],
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 16,
+            "targets": null,
+            "positions": [
+              0
+            ],
+            "choose": null
+          },
+          {
+            "type": "hero_power",
+            "targets": null
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "end_turn",
+            "player": 1
+          },
+          {
+            "event": "turn_start",
+            "turn": 4,
+            "player": 2
+          },
+          {
+            "event": "draw",
+            "player": 2
+          },
+          {
+            "event": "play_card",
+            "player": 2,
+            "card_id": "EX1_362",
+            "name": "Argent Protector",
+            "entity_id": 44,
+            "cost": 2,
+            "target": {
+              "entity_id": 45,
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon"
+            },
+            "position": 0,
+            "choose": null
+          },
+          {
+            "event": "attack",
+            "player": 2,
+            "attacker": {
+              "entity_id": 45,
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon"
+            },
+            "target": {
+              "entity_id": 12,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 1,
+            "entity_id": 12,
+            "card_id": "EX1_531",
+            "name": "Scavenging Hyena",
+            "amount": 3,
+            "health_after": -1,
+            "source": {
+              "entity_id": 45,
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon"
+            }
+          },
+          {
+            "event": "divine_shield_lost",
+            "player": 2,
+            "entity_id": 45,
+            "card_id": "NEW1_023",
+            "name": "Faerie Dragon"
+          },
+          {
+            "event": "death",
+            "player": 1,
+            "entity_id": 12,
+            "card_id": "EX1_531",
+            "name": "Scavenging Hyena"
+          },
+          {
+            "event": "end_turn",
+            "player": 2
+          },
+          {
+            "event": "turn_start",
+            "turn": 5,
+            "player": 1
+          },
+          {
+            "event": "draw",
+            "player": 1,
+            "card_id": "EX1_066",
+            "entity_id": 16
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "public_opponent_evidence": {
+          "shown_cards": [
+            "GAME_005",
+            "NEW1_023",
+            "EX1_362"
+          ],
+          "face_attacks": 0,
+          "other_attacks": 1,
+          "cheap_minions_played": 2,
+          "weapons_seen": [],
+          "tendency": "fast_pressure_evidence",
+          "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+        },
+        "hero_attack_available": true
+      },
+      "current": {
+        "type": "play_card",
+        "card": "EX1_531",
+        "position": 0
+      },
+      "alternative": {
+        "type": "play_card",
+        "card": "EX1_080",
+        "position": 0
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 77,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 30,
+          "enemy_ehp": 30,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 3,
+          "next_turn_hand_damage_if_beast_survives": 3,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 77,
+          "action": {
+            "type": "play_card",
+            "card": 8,
+            "position": 0
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 3,
+          "reply": {
+            "nodes": 61,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "play_card",
+              "card": 8,
+              "position": 0
+            },
+            {
+              "type": "play_card",
+              "card": 16,
+              "position": 1
+            }
+          ],
+          "value": -28.857685000000004,
+          "elapsed_s": 0.009468124946579337
+        },
+        "elapsed_s": 0.009640416945330799,
+        "over_budget": false
+      },
+      "counterfactual": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": "EX1_531",
+            "position": 0
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "EX1_531",
+              "position": 0
+            },
+            {
+              "type": "play_card",
+              "card": "EX1_080",
+              "position": 0
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 30,
+          "enemy_hp": 30,
+          "own_board": [
+            [
+              "EX1_080",
+              1,
+              2
+            ],
+            [
+              "EX1_531",
+              2,
+              2
+            ]
+          ],
+          "enemy_board": [
+            [
+              "EX1_362",
+              2,
+              2
+            ],
+            [
+              "NEW1_023",
+              3,
+              2
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": "EX1_080",
+            "position": 0
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "EX1_080",
+              "position": 0
+            },
+            {
+              "type": "play_card",
+              "card": "EX1_066",
+              "position": 0
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 30,
+          "enemy_hp": 30,
+          "own_board": [
+            [
+              "EX1_066",
+              3,
+              2
+            ],
+            [
+              "EX1_080",
+              1,
+              2
+            ]
+          ],
+          "enemy_board": [
+            [
+              "EX1_362",
+              2,
+              2
+            ],
+            [
+              "NEW1_023",
+              3,
+              2
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        }
+      ],
+      "scope": "Actual engine clones with the same candidate continuation through this turn only; nonterminal differences do not establish a changed match winner."
+    },
+    {
+      "game": "795fc5cb9a324b04",
+      "opponent": "tempo-paladin",
+      "source_seq": 9,
+      "turn": 6,
+      "category": "trade_or_placement",
+      "state": {
+        "protocol_version": "1",
+        "game_id": "795fc5cb9a324b04",
+        "seq": 9,
+        "player": 2,
+        "turn": 6,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794384236.893,
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 30,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 3,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 56,
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow",
+              "type": "WEAPON",
+              "cost": 3,
+              "attack": 3,
+              "durability": 2,
+              "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+              "playable": false
+            },
+            {
+              "entity_id": 66,
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane",
+              "type": "MINION",
+              "cost": 6,
+              "attack": 6,
+              "health": 5,
+              "text": "Deathrattle: Summon two 2/2 Hyenas.",
+              "playable": false
+            },
+            {
+              "entity_id": 67,
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane",
+              "type": "MINION",
+              "cost": 6,
+              "attack": 6,
+              "health": 5,
+              "text": "Deathrattle: Summon two 2/2 Hyenas.",
+              "playable": false
+            },
+            {
+              "entity_id": 58,
+              "card_id": "EX1_538",
+              "name": "Unleash the Hounds",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "For each enemy minion, summon a 1/1 Hound with Charge.",
+              "playable": false
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 44,
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Adjacent minions have +1 Attack."
+            },
+            {
+              "entity_id": 72,
+              "card_id": "NEW1_032",
+              "name": "Misha",
+              "attack": 5,
+              "health": 4,
+              "max_health": 4,
+              "can_attack": false,
+              "taunt": true,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Taunt"
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 23,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 2,
+            "EX1_066": 1,
+            "EX1_080": 2,
+            "EX1_531": 1,
+            "EX1_533": 1,
+            "EX1_536": 1,
+            "EX1_538": 1,
+            "EX1_539": 2,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 2,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_019": 2,
+            "NEW1_031": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "NEW1_031",
+              "name": "Animal Companion"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_04",
+            "name": "Uther Lightbringer",
+            "hero_class": "PALADIN",
+            "health": 28,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_04bp",
+            "name": "Reinforce",
+            "cost": 2,
+            "usable": false,
+            "text": "Summon a 1/1 Silver Hand Recruit."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 3,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 3,
+          "board": [
+            {
+              "entity_id": 6,
+              "card_id": "EX1_008",
+              "name": "Argent Squire",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": true,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Divine Shield"
+            },
+            {
+              "entity_id": 10,
+              "card_id": "EX1_362",
+              "name": "Argent Protector",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Battlecry: Give a friendly minion Divine Shield."
+            },
+            {
+              "entity_id": 12,
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon",
+              "attack": 3,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Can't be targeted by spells or Hero Powers."
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 24,
+          "fatigue": 0,
+          "graveyard": []
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "attack",
+            "attacker": 44,
+            "targets": [
+              4,
+              6,
+              10,
+              12
+            ]
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "play_card",
+            "player": 2,
+            "card_id": "NEW1_031",
+            "name": "Animal Companion",
+            "entity_id": 63,
+            "cost": 3,
+            "target": null,
+            "position": null,
+            "choose": null
+          },
+          {
+            "event": "summon",
+            "player": 2,
+            "entity_id": 72,
+            "card_id": "NEW1_032",
+            "name": "Misha"
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "public_opponent_evidence": {
+          "shown_cards": [
+            "NEW1_023",
+            "EX1_362",
+            "EX1_008"
+          ],
+          "face_attacks": 0,
+          "other_attacks": 1,
+          "cheap_minions_played": 3,
+          "weapons_seen": [],
+          "tendency": "fast_pressure_evidence",
+          "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+        },
+        "hero_attack_available": true
+      },
+      "current": {
+        "type": "attack",
+        "attacker": "EX1_162",
+        "target": "HERO_04"
+      },
+      "alternative": {
+        "type": "attack",
+        "attacker": "EX1_162",
+        "target": "NEW1_023"
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 54,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 30,
+          "enemy_ehp": 28,
+          "visible_incoming_before_taunts": 6,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 54,
+          "action": {
+            "type": "attack",
+            "attacker": 44,
+            "target": 12
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 2,
+          "reply": {
+            "nodes": 50,
+            "candidates": 5,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 44,
+              "target": 12
+            }
+          ],
+          "value": -20.043200000000006,
+          "elapsed_s": 0.007601708057336509
+        },
+        "elapsed_s": 0.00776199996471405,
+        "over_budget": false
+      },
+      "counterfactual": [
+        {
+          "action": {
+            "type": "attack",
+            "attacker": "EX1_162",
+            "target": "HERO_04"
+          },
+          "line": [
+            {
+              "type": "attack",
+              "attacker": "EX1_162",
+              "target": "HERO_04"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 30,
+          "enemy_hp": 26,
+          "own_board": [
+            [
+              "EX1_162",
+              2,
+              2
+            ],
+            [
+              "NEW1_032",
+              5,
+              4
+            ]
+          ],
+          "enemy_board": [
+            [
+              "EX1_008",
+              1,
+              1
+            ],
+            [
+              "EX1_362",
+              2,
+              2
+            ],
+            [
+              "NEW1_023",
+              3,
+              2
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        },
+        {
+          "action": {
+            "type": "attack",
+            "attacker": "EX1_162",
+            "target": "NEW1_023"
+          },
+          "line": [
+            {
+              "type": "attack",
+              "attacker": "EX1_162",
+              "target": "NEW1_023"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 30,
+          "enemy_hp": 28,
+          "own_board": [
+            [
+              "NEW1_032",
+              4,
+              4
+            ]
+          ],
+          "enemy_board": [
+            [
+              "EX1_008",
+              1,
+              1
+            ],
+            [
+              "EX1_362",
+              2,
+              2
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        }
+      ],
+      "scope": "Actual engine clones with the same candidate continuation through this turn only; nonterminal differences do not establish a changed match winner."
+    },
+    {
+      "game": "603c602a82624957",
+      "opponent": "adversarial-zoo",
+      "source_seq": 13,
+      "turn": 8,
+      "category": "trade_or_placement",
+      "state": {
+        "protocol_version": "1",
+        "game_id": "603c602a82624957",
+        "seq": 13,
+        "player": 1,
+        "turn": 8,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794384238.16,
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 20,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 1,
+          "max_mana": 4,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 34,
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane",
+              "type": "MINION",
+              "cost": 6,
+              "attack": 6,
+              "health": 5,
+              "text": "Deathrattle: Summon two 2/2 Hyenas.",
+              "playable": false
+            },
+            {
+              "entity_id": 14,
+              "card_id": "EX1_533",
+              "name": "Misdirection",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When an enemy attacks your hero, instead it attacks another random character.",
+              "playable": false
+            },
+            {
+              "entity_id": 17,
+              "card_id": "EX1_610",
+              "name": "Explosive Trap",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When your hero is attacked, deal 2 damage to all enemies.",
+              "playable": false
+            },
+            {
+              "entity_id": 23,
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow",
+              "type": "WEAPON",
+              "cost": 3,
+              "attack": 3,
+              "durability": 2,
+              "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+              "playable": false
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 12,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "attack": 3,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Whenever a friendly Beast dies, gain +2/+1."
+            },
+            {
+              "entity_id": 11,
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Adjacent minions have +1 Attack."
+            },
+            {
+              "entity_id": 22,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler",
+              "attack": 3,
+              "health": 1,
+              "max_health": 2,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "After you summon a minion, deal 1 damage to a random enemy."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 22,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 2,
+            "EX1_066": 1,
+            "EX1_080": 2,
+            "EX1_531": 1,
+            "EX1_534": 1,
+            "EX1_536": 1,
+            "EX1_538": 2,
+            "EX1_539": 1,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 1,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_019": 1,
+            "NEW1_031": 2
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "EX1_539",
+              "name": "Kill Command"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_07",
+            "name": "Gul'dan",
+            "hero_class": "WARLOCK",
+            "health": 25,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_07bp",
+            "name": "Life Tap",
+            "cost": 2,
+            "usable": false,
+            "text": "Draw a card and take 2 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 4,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 3,
+          "board": [
+            {
+              "entity_id": 59,
+              "card_id": "EX1_020",
+              "name": "Scarlet Crusader",
+              "attack": 3,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Divine Shield"
+            },
+            {
+              "entity_id": 51,
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon",
+              "attack": 3,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Can't be targeted by spells or Hero Powers."
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 23,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "CS2_182",
+              "name": "Chillwind Yeti"
+            },
+            {
+              "card_id": "CS2_065",
+              "name": "Voidwalker"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "attack",
+            "attacker": 12,
+            "targets": [
+              37,
+              51,
+              59
+            ]
+          },
+          {
+            "type": "attack",
+            "attacker": 11,
+            "targets": [
+              37,
+              51,
+              59
+            ]
+          },
+          {
+            "type": "attack",
+            "attacker": 22,
+            "targets": [
+              37,
+              51,
+              59
+            ]
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "play_card",
+            "player": 1,
+            "card_id": "EX1_539",
+            "name": "Kill Command",
+            "entity_id": 28,
+            "cost": 3,
+            "target": {
+              "entity_id": 65,
+              "card_id": "CS2_182",
+              "name": "Chillwind Yeti"
+            },
+            "position": null,
+            "choose": null
+          },
+          {
+            "event": "damage",
+            "player": 2,
+            "entity_id": 65,
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti",
+            "amount": 5,
+            "health_after": 0,
+            "source": {
+              "entity_id": 28,
+              "card_id": "EX1_539",
+              "name": "Kill Command"
+            }
+          },
+          {
+            "event": "death",
+            "player": 2,
+            "entity_id": 65,
+            "card_id": "CS2_182",
+            "name": "Chillwind Yeti"
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "public_opponent_evidence": {
+          "shown_cards": [
+            "CS2_065",
+            "NEW1_023",
+            "EX1_020",
+            "CS2_182"
+          ],
+          "face_attacks": 4,
+          "other_attacks": 0,
+          "cheap_minions_played": 2,
+          "weapons_seen": [],
+          "tendency": "fast_pressure_evidence",
+          "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+        },
+        "hero_attack_available": true
+      },
+      "current": {
+        "type": "attack",
+        "attacker": "EX1_531",
+        "target": "HERO_07"
+      },
+      "alternative": {
+        "type": "attack",
+        "attacker": "NEW1_019",
+        "target": "HERO_07"
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 255,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 20,
+          "enemy_ehp": 25,
+          "visible_incoming_before_taunts": 6,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 95,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.006344291032291949
+        },
+        "turn_search": {
+          "nodes": 160,
+          "action": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 4,
+          "reply": {
+            "nodes": 86,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 22,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 12,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 11,
+              "target": 37
+            }
+          ],
+          "value": -4.752500000000001,
+          "elapsed_s": 0.01805662491824478
+        },
+        "elapsed_s": 0.02461933298036456,
+        "over_budget": false
+      },
+      "counterfactual": [
+        {
+          "action": {
+            "type": "attack",
+            "attacker": "EX1_531",
+            "target": "HERO_07"
+          },
+          "line": [
+            {
+              "type": "attack",
+              "attacker": "EX1_531",
+              "target": "HERO_07"
+            },
+            {
+              "type": "attack",
+              "attacker": "NEW1_019",
+              "target": "HERO_07"
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_162",
+              "target": "HERO_07"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 20,
+          "enemy_hp": 17,
+          "own_board": [
+            [
+              "EX1_531",
+              3,
+              2
+            ],
+            [
+              "EX1_162",
+              2,
+              2
+            ],
+            [
+              "NEW1_019",
+              3,
+              1
+            ]
+          ],
+          "enemy_board": [
+            [
+              "EX1_020",
+              3,
+              1
+            ],
+            [
+              "NEW1_023",
+              3,
+              2
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        },
+        {
+          "action": {
+            "type": "attack",
+            "attacker": "NEW1_019",
+            "target": "HERO_07"
+          },
+          "line": [
+            {
+              "type": "attack",
+              "attacker": "NEW1_019",
+              "target": "HERO_07"
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_531",
+              "target": "HERO_07"
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_162",
+              "target": "HERO_07"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 20,
+          "enemy_hp": 17,
+          "own_board": [
+            [
+              "EX1_531",
+              3,
+              2
+            ],
+            [
+              "EX1_162",
+              2,
+              2
+            ],
+            [
+              "NEW1_019",
+              3,
+              1
+            ]
+          ],
+          "enemy_board": [
+            [
+              "EX1_020",
+              3,
+              1
+            ],
+            [
+              "NEW1_023",
+              3,
+              2
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        }
+      ],
+      "scope": "Actual engine clones with the same candidate continuation through this turn only; nonterminal differences do not establish a changed match winner."
+    },
+    {
+      "game": "6644e1158ef3417d",
+      "opponent": "search-paladin",
+      "source_seq": 5,
+      "turn": 5,
+      "category": "combo_order",
+      "state": {
+        "protocol_version": "1",
+        "game_id": "6644e1158ef3417d",
+        "seq": 5,
+        "player": 1,
+        "turn": 5,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794384239.056,
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 27,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": true,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 3,
+          "max_mana": 3,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 27,
+              "card_id": "EX1_539",
+              "name": "Kill Command",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "Deal 3 damage. If you control a Beast, deal 5 damage instead.",
+              "playable": true
+            },
+            {
+              "entity_id": 14,
+              "card_id": "EX1_533",
+              "name": "Misdirection",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When an enemy attacks your hero, instead it attacks another random character.",
+              "playable": true
+            },
+            {
+              "entity_id": 13,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "Whenever a friendly Beast dies, gain +2/+1.",
+              "playable": true
+            },
+            {
+              "entity_id": 8,
+              "card_id": "EX1_080",
+              "name": "Secretkeeper",
+              "type": "MINION",
+              "cost": 1,
+              "attack": 1,
+              "health": 2,
+              "text": "Whenever a Secret is played, gain +1/+1.",
+              "playable": true
+            },
+            {
+              "entity_id": 16,
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 3,
+              "health": 2,
+              "text": "Battlecry: Destroy your opponent's weapon.",
+              "playable": true
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 12,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Whenever a friendly Beast dies, gain +2/+1."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 24,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 2,
+            "EX1_080": 1,
+            "EX1_162": 1,
+            "EX1_534": 2,
+            "EX1_536": 2,
+            "EX1_538": 2,
+            "EX1_539": 1,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 2,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_019": 2,
+            "NEW1_031": 2
+          },
+          "fatigue": 0,
+          "graveyard": []
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_04",
+            "name": "Uther Lightbringer",
+            "hero_class": "PALADIN",
+            "health": 30,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_04bp",
+            "name": "Reinforce",
+            "cost": 2,
+            "usable": false,
+            "text": "Summon a 1/1 Silver Hand Recruit."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 2,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 4,
+          "board": [
+            {
+              "entity_id": 45,
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon",
+              "attack": 3,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": true,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Can't be targeted by spells or Hero Powers."
+            },
+            {
+              "entity_id": 44,
+              "card_id": "EX1_362",
+              "name": "Argent Protector",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Battlecry: Give a friendly minion Divine Shield."
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 24,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 27,
+            "targets": [
+              4,
+              12,
+              37,
+              44
+            ],
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 14,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 13,
+            "targets": null,
+            "positions": [
+              0,
+              1
+            ],
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 8,
+            "targets": null,
+            "positions": [
+              0,
+              1
+            ],
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 16,
+            "targets": null,
+            "positions": [
+              0,
+              1
+            ],
+            "choose": null
+          },
+          {
+            "type": "attack",
+            "attacker": 12,
+            "targets": [
+              37,
+              44,
+              45
+            ]
+          },
+          {
+            "type": "hero_power",
+            "targets": null
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "end_turn",
+            "player": 1
+          },
+          {
+            "event": "turn_start",
+            "turn": 4,
+            "player": 2
+          },
+          {
+            "event": "draw",
+            "player": 2
+          },
+          {
+            "event": "attack",
+            "player": 2,
+            "attacker": {
+              "entity_id": 45,
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon"
+            },
+            "target": {
+              "entity_id": 4,
+              "card_id": "HERO_05",
+              "name": "Rexxar"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 1,
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "amount": 3,
+            "health_after": 27,
+            "source": {
+              "entity_id": 45,
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon"
+            },
+            "armor_absorbed": 0,
+            "armor_after": 0
+          },
+          {
+            "event": "play_card",
+            "player": 2,
+            "card_id": "EX1_362",
+            "name": "Argent Protector",
+            "entity_id": 44,
+            "cost": 2,
+            "target": {
+              "entity_id": 45,
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon"
+            },
+            "position": 1,
+            "choose": null
+          },
+          {
+            "event": "end_turn",
+            "player": 2
+          },
+          {
+            "event": "turn_start",
+            "turn": 5,
+            "player": 1
+          },
+          {
+            "event": "draw",
+            "player": 1,
+            "card_id": "EX1_066",
+            "entity_id": 16
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "public_opponent_evidence": {
+          "shown_cards": [
+            "GAME_005",
+            "NEW1_023",
+            "EX1_362"
+          ],
+          "face_attacks": 1,
+          "other_attacks": 0,
+          "cheap_minions_played": 2,
+          "weapons_seen": [],
+          "tendency": "fast_pressure_evidence",
+          "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+        },
+        "hero_attack_available": true
+      },
+      "current": {
+        "type": "play_card",
+        "card": "EX1_531",
+        "position": 0
+      },
+      "alternative": {
+        "type": "play_card",
+        "card": "EX1_531",
+        "position": 1
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 183,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 27,
+          "enemy_ehp": 30,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 3,
+          "next_turn_hand_damage_if_beast_survives": 5,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 183,
+          "action": {
+            "type": "play_card",
+            "card": 13,
+            "position": 1
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 4,
+          "reply": {
+            "nodes": 105,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "play_card",
+              "card": 13,
+              "position": 1
+            },
+            {
+              "type": "attack",
+              "attacker": 12,
+              "target": 37
+            },
+            {
+              "type": "play_card",
+              "card": 8,
+              "position": 2
+            }
+          ],
+          "value": -25.752810000000004,
+          "elapsed_s": 0.020866042003035545
+        },
+        "elapsed_s": 0.021103624952957034,
+        "over_budget": false
+      },
+      "counterfactual": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": "EX1_531",
+            "position": 0
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "EX1_531",
+              "position": 0
+            },
+            {
+              "type": "play_card",
+              "card": "EX1_080",
+              "position": 1
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_531",
+              "target": "HERO_04"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 27,
+          "enemy_hp": 28,
+          "own_board": [
+            [
+              "EX1_531",
+              2,
+              2
+            ],
+            [
+              "EX1_080",
+              1,
+              2
+            ],
+            [
+              "EX1_531",
+              2,
+              2
+            ]
+          ],
+          "enemy_board": [
+            [
+              "NEW1_023",
+              3,
+              2
+            ],
+            [
+              "EX1_362",
+              2,
+              2
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": "EX1_531",
+            "position": 1
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "EX1_531",
+              "position": 1
+            },
+            {
+              "type": "play_card",
+              "card": "EX1_080",
+              "position": 1
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_531",
+              "target": "HERO_04"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 27,
+          "enemy_hp": 28,
+          "own_board": [
+            [
+              "EX1_531",
+              2,
+              2
+            ],
+            [
+              "EX1_080",
+              1,
+              2
+            ],
+            [
+              "EX1_531",
+              2,
+              2
+            ]
+          ],
+          "enemy_board": [
+            [
+              "NEW1_023",
+              3,
+              2
+            ],
+            [
+              "EX1_362",
+              2,
+              2
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        }
+      ],
+      "scope": "Actual engine clones with the same candidate continuation through this turn only; nonterminal differences do not establish a changed match winner."
+    },
+    {
+      "game": "c1ddebf91ae24f98",
+      "opponent": "search-paladin",
+      "source_seq": 2,
+      "turn": 2,
+      "category": "resource_use",
+      "state": {
+        "protocol_version": "1",
+        "game_id": "c1ddebf91ae24f98",
+        "seq": 2,
+        "player": 1,
+        "turn": 2,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794384239.497,
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 30,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 1,
+          "max_mana": 1,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 20,
+              "card_id": "EX1_611",
+              "name": "Freezing Trap",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When an enemy minion attacks, return it to its owner's hand. It costs (2) more.",
+              "playable": false
+            },
+            {
+              "entity_id": 26,
+              "card_id": "EX1_538",
+              "name": "Unleash the Hounds",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "For each enemy minion, summon a 1/1 Hound with Charge.",
+              "playable": false
+            },
+            {
+              "entity_id": 22,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "After you summon a minion, deal 1 damage to a random enemy.",
+              "playable": false
+            },
+            {
+              "entity_id": 35,
+              "card_id": "EX1_543",
+              "name": "King Krush",
+              "type": "MINION",
+              "cost": 9,
+              "attack": 8,
+              "health": 8,
+              "text": "Charge",
+              "playable": false
+            },
+            {
+              "entity_id": 70,
+              "card_id": "GAME_005",
+              "name": "The Coin",
+              "type": "SPELL",
+              "cost": 0,
+              "text": "Gain 1 Mana Crystal this turn only.",
+              "playable": true
+            },
+            {
+              "entity_id": 19,
+              "card_id": "EX1_611",
+              "name": "Freezing Trap",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When an enemy minion attacks, return it to its owner's hand. It costs (2) more.",
+              "playable": false
+            }
+          ],
+          "board": [],
+          "secrets": [],
+          "deck_remaining": 25,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 2,
+            "EX1_066": 1,
+            "EX1_080": 2,
+            "EX1_162": 1,
+            "EX1_531": 2,
+            "EX1_533": 1,
+            "EX1_534": 2,
+            "EX1_536": 2,
+            "EX1_538": 1,
+            "EX1_539": 2,
+            "EX1_554": 1,
+            "EX1_610": 2,
+            "EX1_617": 1,
+            "NEW1_019": 1,
+            "NEW1_031": 2
+          },
+          "fatigue": 0,
+          "graveyard": []
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_04",
+            "name": "Uther Lightbringer",
+            "hero_class": "PALADIN",
+            "health": 30,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_04bp",
+            "name": "Reinforce",
+            "cost": 2,
+            "usable": false,
+            "text": "Summon a 1/1 Silver Hand Recruit."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 1,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 4,
+          "board": [],
+          "secrets_count": 0,
+          "deck_remaining": 26,
+          "fatigue": 0,
+          "graveyard": []
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 70,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "mulligan",
+            "player": 1,
+            "replaced": 3,
+            "replaced_card_ids": [
+              "DS1_070",
+              "EX1_534",
+              "EX1_539"
+            ],
+            "drawn_card_ids": [
+              "EX1_611",
+              "EX1_538",
+              "EX1_543"
+            ]
+          },
+          {
+            "event": "mulligan",
+            "player": 2,
+            "replaced": 2
+          },
+          {
+            "event": "turn_start",
+            "turn": 1,
+            "player": 2
+          },
+          {
+            "event": "draw",
+            "player": 2
+          },
+          {
+            "event": "end_turn",
+            "player": 2
+          },
+          {
+            "event": "turn_start",
+            "turn": 2,
+            "player": 1
+          },
+          {
+            "event": "draw",
+            "player": 1,
+            "card_id": "EX1_611",
+            "entity_id": 19
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "public_opponent_evidence": {
+          "shown_cards": [],
+          "face_attacks": 0,
+          "other_attacks": 0,
+          "cheap_minions_played": 0,
+          "weapons_seen": [],
+          "tendency": "insufficient_or_mixed",
+          "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+        },
+        "hero_attack_available": true
+      },
+      "current": {
+        "type": "play_card",
+        "card": "GAME_005"
+      },
+      "alternative": {
+        "type": "end_turn"
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 3,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 30,
+          "enemy_ehp": 30,
+          "visible_incoming_before_taunts": 0,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 3,
+          "action": {
+            "type": "end_turn"
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 3,
+          "reply": {
+            "nodes": 0,
+            "candidates": 2,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "end_turn"
+            }
+          ],
+          "value": -21.642000000000003,
+          "elapsed_s": 0.00037595792673528194
+        },
+        "elapsed_s": 0.0005040420219302177,
+        "over_budget": false
+      },
+      "counterfactual": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": "GAME_005"
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "GAME_005"
+            },
+            {
+              "type": "play_card",
+              "card": "NEW1_019",
+              "position": 0
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 30,
+          "enemy_hp": 30,
+          "own_board": [
+            [
+              "NEW1_019",
+              2,
+              2
+            ]
+          ],
+          "enemy_board": [],
+          "own_secrets": [],
+          "mana_left": 0
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "line": [
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 30,
+          "enemy_hp": 30,
+          "own_board": [],
+          "enemy_board": [],
+          "own_secrets": [],
+          "mana_left": 0
+        }
+      ],
+      "scope": "Actual engine clones with the same candidate continuation through this turn only; nonterminal differences do not establish a changed match winner."
+    },
+    {
+      "game": "d95d6048491b40b7",
+      "opponent": "historical-mage",
+      "source_seq": 5,
+      "turn": 5,
+      "category": "combo_order",
+      "state": {
+        "protocol_version": "1",
+        "game_id": "d95d6048491b40b7",
+        "seq": 5,
+        "player": 1,
+        "turn": 5,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794384240.046,
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 27,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": true,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 3,
+          "max_mana": 3,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 27,
+              "card_id": "EX1_539",
+              "name": "Kill Command",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "Deal 3 damage. If you control a Beast, deal 5 damage instead.",
+              "playable": true
+            },
+            {
+              "entity_id": 14,
+              "card_id": "EX1_533",
+              "name": "Misdirection",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When an enemy attacks your hero, instead it attacks another random character.",
+              "playable": true
+            },
+            {
+              "entity_id": 13,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "Whenever a friendly Beast dies, gain +2/+1.",
+              "playable": true
+            },
+            {
+              "entity_id": 8,
+              "card_id": "EX1_080",
+              "name": "Secretkeeper",
+              "type": "MINION",
+              "cost": 1,
+              "attack": 1,
+              "health": 2,
+              "text": "Whenever a Secret is played, gain +1/+1.",
+              "playable": true
+            },
+            {
+              "entity_id": 16,
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 3,
+              "health": 2,
+              "text": "Battlecry: Destroy your opponent's weapon.",
+              "playable": true
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 12,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Whenever a friendly Beast dies, gain +2/+1."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 24,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 2,
+            "EX1_080": 1,
+            "EX1_162": 1,
+            "EX1_534": 2,
+            "EX1_536": 2,
+            "EX1_538": 2,
+            "EX1_539": 1,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 2,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_019": 2,
+            "NEW1_031": 2
+          },
+          "fatigue": 0,
+          "graveyard": []
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_08",
+            "name": "Jaina Proudmoore",
+            "hero_class": "MAGE",
+            "health": 30,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_08bp",
+            "name": "Fireblast",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 1 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 2,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 4,
+          "board": [
+            {
+              "entity_id": 44,
+              "card_id": "EX1_608",
+              "name": "Sorcerer's Apprentice",
+              "attack": 3,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Your spells cost (1) less."
+            },
+            {
+              "entity_id": 41,
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon",
+              "attack": 3,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Can't be targeted by spells or Hero Powers."
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 24,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 27,
+            "targets": [
+              4,
+              12,
+              37,
+              44
+            ],
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 14,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 13,
+            "targets": null,
+            "positions": [
+              0,
+              1
+            ],
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 8,
+            "targets": null,
+            "positions": [
+              0,
+              1
+            ],
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 16,
+            "targets": null,
+            "positions": [
+              0,
+              1
+            ],
+            "choose": null
+          },
+          {
+            "type": "attack",
+            "attacker": 12,
+            "targets": [
+              37,
+              41,
+              44
+            ]
+          },
+          {
+            "type": "hero_power",
+            "targets": null
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "end_turn",
+            "player": 1
+          },
+          {
+            "event": "turn_start",
+            "turn": 4,
+            "player": 2
+          },
+          {
+            "event": "draw",
+            "player": 2
+          },
+          {
+            "event": "play_card",
+            "player": 2,
+            "card_id": "NEW1_023",
+            "name": "Faerie Dragon",
+            "entity_id": 41,
+            "cost": 2,
+            "target": null,
+            "position": 1,
+            "choose": null
+          },
+          {
+            "event": "attack",
+            "player": 2,
+            "attacker": {
+              "entity_id": 44,
+              "card_id": "EX1_608",
+              "name": "Sorcerer's Apprentice"
+            },
+            "target": {
+              "entity_id": 4,
+              "card_id": "HERO_05",
+              "name": "Rexxar"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 1,
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "amount": 3,
+            "health_after": 27,
+            "source": {
+              "entity_id": 44,
+              "card_id": "EX1_608",
+              "name": "Sorcerer's Apprentice"
+            },
+            "armor_absorbed": 0,
+            "armor_after": 0
+          },
+          {
+            "event": "end_turn",
+            "player": 2
+          },
+          {
+            "event": "turn_start",
+            "turn": 5,
+            "player": 1
+          },
+          {
+            "event": "draw",
+            "player": 1,
+            "card_id": "EX1_066",
+            "entity_id": 16
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "public_opponent_evidence": {
+          "shown_cards": [
+            "GAME_005",
+            "EX1_608",
+            "NEW1_023"
+          ],
+          "face_attacks": 1,
+          "other_attacks": 0,
+          "cheap_minions_played": 2,
+          "weapons_seen": [],
+          "tendency": "fast_pressure_evidence",
+          "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+        },
+        "hero_attack_available": true
+      },
+      "current": {
+        "type": "play_card",
+        "card": "EX1_080",
+        "position": 0
+      },
+      "alternative": {
+        "type": "play_card",
+        "card": "EX1_531",
+        "position": 0
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 0,
+        "search_used": false,
+        "reason": "baseline_rank",
+        "race": {
+          "own_ehp": 27,
+          "enemy_ehp": 30,
+          "visible_incoming_before_taunts": 6,
+          "next_turn_hand_damage_no_surviving_beast": 3,
+          "next_turn_hand_damage_if_beast_survives": 5,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": false
+        },
+        "turn_search": {
+          "nodes": 0,
+          "action": null,
+          "supported": false,
+          "bounded_out": false,
+          "depth": 0
+        },
+        "elapsed_s": 0.00017233402468264103,
+        "over_budget": false
+      },
+      "counterfactual": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": "EX1_080",
+            "position": 0
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "EX1_080",
+              "position": 0
+            },
+            {
+              "type": "play_card",
+              "card": "EX1_531",
+              "position": 0
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_531",
+              "target": "EX1_608"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 27,
+          "enemy_hp": 30,
+          "own_board": [
+            [
+              "EX1_531",
+              4,
+              3
+            ],
+            [
+              "EX1_080",
+              1,
+              2
+            ]
+          ],
+          "enemy_board": [
+            [
+              "NEW1_023",
+              3,
+              2
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": "EX1_531",
+            "position": 0
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "EX1_531",
+              "position": 0
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_531",
+              "target": "EX1_608"
+            },
+            {
+              "type": "play_card",
+              "card": "EX1_080",
+              "position": 0
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 27,
+          "enemy_hp": 30,
+          "own_board": [
+            [
+              "EX1_080",
+              1,
+              2
+            ],
+            [
+              "EX1_531",
+              4,
+              3
+            ]
+          ],
+          "enemy_board": [
+            [
+              "NEW1_023",
+              3,
+              2
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        }
+      ],
+      "scope": "Actual engine clones with the same candidate continuation through this turn only; nonterminal differences do not establish a changed match winner."
+    },
+    {
+      "game": "4008477eefe44267",
+      "opponent": "search-paladin",
+      "source_seq": 7,
+      "turn": 5,
+      "category": "trade_or_placement",
+      "state": {
+        "protocol_version": "1",
+        "game_id": "4008477eefe44267",
+        "seq": 7,
+        "player": 2,
+        "turn": 5,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794384239.157,
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 29,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 3,
+            "can_attack": true,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": {
+            "entity_id": 56,
+            "card_id": "EX1_536",
+            "name": "Eaglehorn Bow",
+            "attack": 3,
+            "durability": 2
+          },
+          "mana": 0,
+          "max_mana": 3,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 66,
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane",
+              "type": "MINION",
+              "cost": 6,
+              "attack": 6,
+              "health": 5,
+              "text": "Deathrattle: Summon two 2/2 Hyenas.",
+              "playable": false
+            },
+            {
+              "entity_id": 49,
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 3,
+              "health": 2,
+              "text": "Battlecry: Destroy your opponent's weapon.",
+              "playable": false
+            },
+            {
+              "entity_id": 58,
+              "card_id": "EX1_538",
+              "name": "Unleash the Hounds",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "For each enemy minion, summon a 1/1 Hound with Charge.",
+              "playable": false
+            },
+            {
+              "entity_id": 61,
+              "card_id": "EX1_539",
+              "name": "Kill Command",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "Deal 3 damage. If you control a Beast, deal 5 damage instead.",
+              "playable": false
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 55,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "After you summon a minion, deal 1 damage to a random enemy."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 24,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 2,
+            "EX1_080": 2,
+            "EX1_162": 1,
+            "EX1_531": 2,
+            "EX1_533": 1,
+            "EX1_534": 1,
+            "EX1_536": 1,
+            "EX1_538": 1,
+            "EX1_539": 1,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 2,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_019": 1,
+            "NEW1_031": 2
+          },
+          "fatigue": 0,
+          "graveyard": []
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_04",
+            "name": "Uther Lightbringer",
+            "hero_class": "PALADIN",
+            "health": 28,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_04bp",
+            "name": "Reinforce",
+            "cost": 2,
+            "usable": false,
+            "text": "Summon a 1/1 Silver Hand Recruit."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 2,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 6,
+          "board": [
+            {
+              "entity_id": 7,
+              "card_id": "EX1_008",
+              "name": "Argent Squire",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": true,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Divine Shield"
+            },
+            {
+              "entity_id": 71,
+              "card_id": "CS2_101t",
+              "name": "Silver Hand Recruit",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": ""
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 24,
+          "fatigue": 0,
+          "graveyard": []
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "attack",
+            "attacker": 37,
+            "targets": [
+              4,
+              7,
+              71
+            ]
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "attack",
+            "player": 2,
+            "attacker": {
+              "entity_id": 55,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            },
+            "target": {
+              "entity_id": 4,
+              "card_id": "HERO_04",
+              "name": "Uther Lightbringer"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 1,
+            "entity_id": 4,
+            "card_id": "HERO_04",
+            "name": "Uther Lightbringer",
+            "amount": 2,
+            "health_after": 28,
+            "source": {
+              "entity_id": 55,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            },
+            "armor_absorbed": 0,
+            "armor_after": 0
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "public_opponent_evidence": {
+          "shown_cards": [
+            "EX1_008"
+          ],
+          "face_attacks": 1,
+          "other_attacks": 0,
+          "cheap_minions_played": 1,
+          "weapons_seen": [],
+          "tendency": "insufficient_or_mixed",
+          "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+        },
+        "hero_attack_available": true
+      },
+      "current": {
+        "type": "attack",
+        "attacker": "HERO_05",
+        "target": "HERO_04"
+      },
+      "alternative": {
+        "type": "attack",
+        "attacker": "HERO_05",
+        "target": "CS2_101t"
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 41,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 29,
+          "enemy_ehp": 28,
+          "visible_incoming_before_taunts": 2,
+          "next_turn_hand_damage_no_surviving_beast": 3,
+          "next_turn_hand_damage_if_beast_survives": 3,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 41,
+          "action": {
+            "type": "attack",
+            "attacker": 37,
+            "target": 71
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 2,
+          "reply": {
+            "nodes": 38,
+            "candidates": 4,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 37,
+              "target": 71
+            }
+          ],
+          "value": -16.734600000000004,
+          "elapsed_s": 0.005201834021136165
+        },
+        "elapsed_s": 0.005323708988726139,
+        "over_budget": false
+      },
+      "counterfactual": [
+        {
+          "action": {
+            "type": "attack",
+            "attacker": "HERO_05",
+            "target": "HERO_04"
+          },
+          "line": [
+            {
+              "type": "attack",
+              "attacker": "HERO_05",
+              "target": "HERO_04"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 29,
+          "enemy_hp": 25,
+          "own_board": [
+            [
+              "NEW1_019",
+              2,
+              2
+            ]
+          ],
+          "enemy_board": [
+            [
+              "EX1_008",
+              1,
+              1
+            ],
+            [
+              "CS2_101t",
+              1,
+              1
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        },
+        {
+          "action": {
+            "type": "attack",
+            "attacker": "HERO_05",
+            "target": "CS2_101t"
+          },
+          "line": [
+            {
+              "type": "attack",
+              "attacker": "HERO_05",
+              "target": "CS2_101t"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 28,
+          "enemy_hp": 28,
+          "own_board": [
+            [
+              "NEW1_019",
+              2,
+              2
+            ]
+          ],
+          "enemy_board": [
+            [
+              "EX1_008",
+              1,
+              1
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        }
+      ],
+      "scope": "Actual engine clones with the same candidate continuation through this turn only; nonterminal differences do not establish a changed match winner."
+    },
+    {
+      "game": "8ec5c362b78c447d",
+      "opponent": "historical-mage",
+      "source_seq": 8,
+      "turn": 6,
+      "category": "combo_order",
+      "state": {
+        "protocol_version": "1",
+        "game_id": "8ec5c362b78c447d",
+        "seq": 8,
+        "player": 2,
+        "turn": 6,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794384240.454,
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 29,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": true,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 3,
+          "max_mana": 3,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 40,
+              "card_id": "EX1_029",
+              "name": "Leper Gnome",
+              "type": "MINION",
+              "cost": 1,
+              "attack": 1,
+              "health": 1,
+              "text": "Deathrattle: Deal 2 damage to the enemy hero.",
+              "playable": true
+            },
+            {
+              "entity_id": 51,
+              "card_id": "EX1_610",
+              "name": "Explosive Trap",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When your hero is attacked, deal 2 damage to all enemies.",
+              "playable": true
+            },
+            {
+              "entity_id": 57,
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow",
+              "type": "WEAPON",
+              "cost": 3,
+              "attack": 3,
+              "durability": 2,
+              "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+              "playable": true
+            },
+            {
+              "entity_id": 68,
+              "card_id": "EX1_543",
+              "name": "King Krush",
+              "type": "MINION",
+              "cost": 9,
+              "attack": 8,
+              "health": 8,
+              "text": "Charge",
+              "playable": false
+            },
+            {
+              "entity_id": 46,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "Whenever a friendly Beast dies, gain +2/+1.",
+              "playable": true
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 44,
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Adjacent minions have +1 Attack."
+            },
+            {
+              "entity_id": 45,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "attack": 3,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Whenever a friendly Beast dies, gain +2/+1."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 23,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 1,
+            "EX1_066": 1,
+            "EX1_080": 2,
+            "EX1_533": 1,
+            "EX1_534": 2,
+            "EX1_536": 1,
+            "EX1_538": 2,
+            "EX1_539": 2,
+            "EX1_554": 1,
+            "EX1_610": 1,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_019": 2,
+            "NEW1_031": 2
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_08",
+            "name": "Jaina Proudmoore",
+            "hero_class": "MAGE",
+            "health": 27,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_08bp",
+            "name": "Fireblast",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 1 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 3,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 5,
+          "board": [
+            {
+              "entity_id": 14,
+              "card_id": "EX1_556",
+              "name": "Harvest Golem",
+              "attack": 2,
+              "health": 3,
+              "max_health": 3,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": true,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 24,
+          "fatigue": 0,
+          "graveyard": []
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 40,
+            "targets": null,
+            "positions": [
+              0,
+              1,
+              2
+            ],
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 51,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 57,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 46,
+            "targets": null,
+            "positions": [
+              0,
+              1,
+              2
+            ],
+            "choose": null
+          },
+          {
+            "type": "attack",
+            "attacker": 44,
+            "targets": [
+              4,
+              14
+            ]
+          },
+          {
+            "type": "attack",
+            "attacker": 45,
+            "targets": [
+              4,
+              14
+            ]
+          },
+          {
+            "type": "hero_power",
+            "targets": null
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "end_turn",
+            "player": 2
+          },
+          {
+            "event": "turn_start",
+            "turn": 5,
+            "player": 1
+          },
+          {
+            "event": "draw",
+            "player": 1
+          },
+          {
+            "event": "play_card",
+            "player": 1,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "entity_id": 14,
+            "cost": 3,
+            "target": null,
+            "position": 0,
+            "choose": null
+          },
+          {
+            "event": "end_turn",
+            "player": 1
+          },
+          {
+            "event": "turn_start",
+            "turn": 6,
+            "player": 2
+          },
+          {
+            "event": "draw",
+            "player": 2,
+            "card_id": "EX1_531",
+            "entity_id": 46
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "public_opponent_evidence": {
+          "shown_cards": [
+            "EX1_556"
+          ],
+          "face_attacks": 0,
+          "other_attacks": 0,
+          "cheap_minions_played": 0,
+          "weapons_seen": [],
+          "tendency": "insufficient_or_mixed",
+          "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+        },
+        "hero_attack_available": true
+      },
+      "current": {
+        "type": "play_card",
+        "card": "EX1_029",
+        "position": 0
+      },
+      "alternative": {
+        "type": "play_card",
+        "card": "EX1_531",
+        "position": 0
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 367,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 29,
+          "enemy_ehp": 27,
+          "visible_incoming_before_taunts": 2,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 213,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.01418220903724432
+        },
+        "turn_search": {
+          "nodes": 154,
+          "action": {
+            "type": "play_card",
+            "card": 46,
+            "position": 0
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 5,
+          "reply": {
+            "nodes": 24,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "play_card",
+              "card": 46,
+              "position": 0
+            },
+            {
+              "type": "play_card",
+              "card": 40,
+              "position": 3
+            },
+            {
+              "type": "attack",
+              "attacker": 45,
+              "target": 14
+            },
+            {
+              "type": "attack",
+              "attacker": 44,
+              "target": 4
+            }
+          ],
+          "value": -4.6308,
+          "elapsed_s": 0.014501625089906156
+        },
+        "elapsed_s": 0.028946207952685654,
+        "over_budget": false
+      },
+      "counterfactual": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": "EX1_029",
+            "position": 0
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "EX1_029",
+              "position": 0
+            },
+            {
+              "type": "play_card",
+              "card": "EX1_531",
+              "position": 1
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_531",
+              "target": "HERO_08"
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_162",
+              "target": "HERO_08"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 29,
+          "enemy_hp": 22,
+          "own_board": [
+            [
+              "EX1_029",
+              1,
+              1
+            ],
+            [
+              "EX1_531",
+              3,
+              2
+            ],
+            [
+              "EX1_162",
+              2,
+              2
+            ],
+            [
+              "EX1_531",
+              3,
+              2
+            ]
+          ],
+          "enemy_board": [
+            [
+              "EX1_556",
+              2,
+              3
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": "EX1_531",
+            "position": 0
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "EX1_531",
+              "position": 0
+            },
+            {
+              "type": "play_card",
+              "card": "EX1_029",
+              "position": 1
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_531",
+              "target": "HERO_08"
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_162",
+              "target": "HERO_08"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 29,
+          "enemy_hp": 22,
+          "own_board": [
+            [
+              "EX1_531",
+              2,
+              2
+            ],
+            [
+              "EX1_029",
+              2,
+              1
+            ],
+            [
+              "EX1_162",
+              2,
+              2
+            ],
+            [
+              "EX1_531",
+              3,
+              2
+            ]
+          ],
+          "enemy_board": [
+            [
+              "EX1_556",
+              2,
+              3
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        }
+      ],
+      "scope": "Actual engine clones with the same candidate continuation through this turn only; nonterminal differences do not establish a changed match winner."
+    },
+    {
+      "game": "789b83ab4a884adc",
+      "opponent": "control-mage",
+      "source_seq": 8,
+      "turn": 6,
+      "category": "combo_order",
+      "state": {
+        "protocol_version": "1",
+        "game_id": "789b83ab4a884adc",
+        "seq": 8,
+        "player": 1,
+        "turn": 6,
+        "phase": "main",
+        "timeout_s": 180.0,
+        "deadline_epoch_s": 1794384240.748,
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 30,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": true,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 3,
+          "max_mana": 3,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 28,
+              "card_id": "EX1_539",
+              "name": "Kill Command",
+              "type": "SPELL",
+              "cost": 3,
+              "text": "Deal 3 damage. If you control a Beast, deal 5 damage instead.",
+              "playable": true
+            },
+            {
+              "entity_id": 12,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "Whenever a friendly Beast dies, gain +2/+1.",
+              "playable": true
+            },
+            {
+              "entity_id": 34,
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane",
+              "type": "MINION",
+              "cost": 6,
+              "attack": 6,
+              "health": 5,
+              "text": "Deathrattle: Summon two 2/2 Hyenas.",
+              "playable": false
+            },
+            {
+              "entity_id": 14,
+              "card_id": "EX1_533",
+              "name": "Misdirection",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When an enemy attacks your hero, instead it attacks another random character.",
+              "playable": true
+            },
+            {
+              "entity_id": 17,
+              "card_id": "EX1_610",
+              "name": "Explosive Trap",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When your hero is attacked, deal 2 damage to all enemies.",
+              "playable": true
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 11,
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Adjacent minions have +1 Attack."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 23,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 2,
+            "EX1_066": 1,
+            "EX1_080": 2,
+            "EX1_531": 1,
+            "EX1_534": 1,
+            "EX1_536": 2,
+            "EX1_538": 2,
+            "EX1_539": 1,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 1,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_019": 1,
+            "NEW1_031": 2
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_08",
+            "name": "Jaina Proudmoore",
+            "hero_class": "MAGE",
+            "health": 27,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_08bp",
+            "name": "Fireblast",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 1 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 3,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 4,
+          "board": [
+            {
+              "entity_id": 48,
+              "card_id": "EX1_556",
+              "name": "Harvest Golem",
+              "attack": 2,
+              "health": 3,
+              "max_health": 3,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": true,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 24,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": [
+          {
+            "type": "play_card",
+            "card": 28,
+            "targets": [
+              4,
+              11,
+              37,
+              48
+            ],
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 12,
+            "targets": null,
+            "positions": [
+              0,
+              1
+            ],
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 14,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "play_card",
+            "card": 17,
+            "targets": null,
+            "positions": null,
+            "choose": null
+          },
+          {
+            "type": "attack",
+            "attacker": 11,
+            "targets": [
+              37,
+              48
+            ]
+          },
+          {
+            "type": "hero_power",
+            "targets": null
+          },
+          {
+            "type": "end_turn"
+          },
+          {
+            "type": "concede"
+          }
+        ],
+        "events": [
+          {
+            "event": "end_turn",
+            "player": 1
+          },
+          {
+            "event": "turn_start",
+            "turn": 5,
+            "player": 2
+          },
+          {
+            "event": "draw",
+            "player": 2
+          },
+          {
+            "event": "attack",
+            "player": 2,
+            "attacker": {
+              "entity_id": 42,
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon"
+            },
+            "target": {
+              "entity_id": 22,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 1,
+            "entity_id": 22,
+            "card_id": "NEW1_019",
+            "name": "Knife Juggler",
+            "amount": 3,
+            "health_after": -1,
+            "source": {
+              "entity_id": 42,
+              "card_id": "NEW1_023",
+              "name": "Faerie Dragon"
+            }
+          },
+          {
+            "event": "damage",
+            "player": 2,
+            "entity_id": 42,
+            "card_id": "NEW1_023",
+            "name": "Faerie Dragon",
+            "amount": 3,
+            "health_after": -2,
+            "source": {
+              "entity_id": 22,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            }
+          },
+          {
+            "event": "death",
+            "player": 1,
+            "entity_id": 22,
+            "card_id": "NEW1_019",
+            "name": "Knife Juggler"
+          },
+          {
+            "event": "death",
+            "player": 2,
+            "entity_id": 42,
+            "card_id": "NEW1_023",
+            "name": "Faerie Dragon"
+          },
+          {
+            "event": "play_card",
+            "player": 2,
+            "card_id": "EX1_556",
+            "name": "Harvest Golem",
+            "entity_id": 48,
+            "cost": 3,
+            "target": null,
+            "position": 0,
+            "choose": null
+          },
+          {
+            "event": "end_turn",
+            "player": 2
+          },
+          {
+            "event": "turn_start",
+            "turn": 6,
+            "player": 1
+          },
+          {
+            "event": "draw",
+            "player": 1,
+            "card_id": "EX1_610",
+            "entity_id": 17
+          }
+        ],
+        "last_action_result": null,
+        "result": null,
+        "public_opponent_evidence": {
+          "shown_cards": [
+            "NEW1_023",
+            "EX1_556"
+          ],
+          "face_attacks": 0,
+          "other_attacks": 1,
+          "cheap_minions_played": 1,
+          "weapons_seen": [],
+          "tendency": "insufficient_or_mixed",
+          "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+        },
+        "hero_attack_available": true
+      },
+      "current": {
+        "type": "play_card",
+        "card": "EX1_539",
+        "target": "HERO_08"
+      },
+      "alternative": {
+        "type": "play_card",
+        "card": "EX1_531",
+        "position": 0
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 53,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 30,
+          "enemy_ehp": 27,
+          "visible_incoming_before_taunts": 2,
+          "next_turn_hand_damage_no_surviving_beast": 3,
+          "next_turn_hand_damage_if_beast_survives": 5,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 53,
+          "action": {
+            "type": "play_card",
+            "card": 12,
+            "position": 0
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 3,
+          "reply": {
+            "nodes": 14,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "play_card",
+              "card": 12,
+              "position": 0
+            },
+            {
+              "type": "attack",
+              "attacker": 11,
+              "target": 37
+            }
+          ],
+          "value": -16.26854,
+          "elapsed_s": 0.004789542057551444
+        },
+        "elapsed_s": 0.004988042055629194,
+        "over_budget": false
+      },
+      "counterfactual": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": "EX1_539",
+            "target": "HERO_08"
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "EX1_539",
+              "target": "HERO_08"
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_162",
+              "target": "HERO_08"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 30,
+          "enemy_hp": 20,
+          "own_board": [
+            [
+              "EX1_162",
+              2,
+              2
+            ]
+          ],
+          "enemy_board": [
+            [
+              "EX1_556",
+              2,
+              3
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": "EX1_531",
+            "position": 0
+          },
+          "line": [
+            {
+              "type": "play_card",
+              "card": "EX1_531",
+              "position": 0
+            },
+            {
+              "type": "attack",
+              "attacker": "EX1_162",
+              "target": "HERO_08"
+            },
+            {
+              "type": "end_turn"
+            }
+          ],
+          "terminal": false,
+          "winner": null,
+          "own_hp": 30,
+          "enemy_hp": 25,
+          "own_board": [
+            [
+              "EX1_531",
+              3,
+              2
+            ],
+            [
+              "EX1_162",
+              2,
+              2
+            ]
+          ],
+          "enemy_board": [
+            [
+              "EX1_556",
+              2,
+              3
+            ]
+          ],
+          "own_secrets": [],
+          "mana_left": 0
+        }
+      ],
+      "scope": "Actual engine clones with the same candidate continuation through this turn only; nonterminal differences do not establish a changed match winner."
+    }
+  ],
+  "branches": 24,
+  "prefix_actions": 163,
+  "taxonomy": {
+    "rules_or_simulation": 0,
+    "missed_lethal": 0,
+    "avoidable_death": 0,
+    "trade_or_placement": 4,
+    "secret_timing": 0,
+    "resource_use": 4,
+    "combo_order": 4,
+    "mulligan": 0,
+    "compute_budget": 0,
+    "draw_or_random_variance": 0
+  },
+  "attribution": "Screened earliest differing main-turn decisions in losses, not a causal assignment of every defeat."
+}

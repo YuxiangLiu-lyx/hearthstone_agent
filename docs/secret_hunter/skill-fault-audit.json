@@ -1,0 +1,1878 @@
+{
+  "games": 1,
+  "decisions": 46,
+  "model_choices": 39,
+  "phase_counts": {
+    "deck_submission": 1,
+    "mulligan": 1,
+    "main": 43,
+    "choice": 1
+  },
+  "latency_by_phase": {
+    "choice": {
+      "n": 1,
+      "mean": 8.669000148773193,
+      "max": 8.669000148773193,
+      "p50": 8.669000148773193,
+      "p95": 8.669000148773193,
+      "p99": 8.669000148773193
+    },
+    "deck_submission": {
+      "n": 1,
+      "mean": 15.794999837875366,
+      "max": 15.794999837875366,
+      "p50": 15.794999837875366,
+      "p95": 15.794999837875366,
+      "p99": 15.794999837875366
+    },
+    "main": {
+      "n": 43,
+      "mean": 8.148976747379747,
+      "max": 18.34000015258789,
+      "p50": 7.880000114440918,
+      "p95": 14.545000076293945,
+      "p99": 18.34000015258789
+    },
+    "mulligan": {
+      "n": 1,
+      "mean": 7.604000091552734,
+      "max": 7.604000091552734,
+      "p50": 7.604000091552734,
+      "p95": 7.604000091552734,
+      "p99": 7.604000091552734
+    }
+  },
+  "different_from_default": 3,
+  "outside_candidates": 0,
+  "validation_bypassed": 0,
+  "missing_prepare": 0,
+  "selection_mismatch": 0,
+  "latency_publication_to_mcp_act": {
+    "n": 46,
+    "mean": 8.314652178598488,
+    "max": 18.34000015258789,
+    "p50": 7.880000114440918,
+    "p95": 15.200000047683716,
+    "p99": 18.34000015258789
+  },
+  "deck_submission_latency": {
+    "n": 1,
+    "mean": 15.794999837875366,
+    "max": 15.794999837875366,
+    "p50": 15.794999837875366,
+    "p95": 15.794999837875366,
+    "p99": 15.794999837875366
+  },
+  "unsubmitted_decisions": [],
+  "all_decisions_elapsed_including_failures": {
+    "n": 46,
+    "mean": 8.314652178598488,
+    "max": 18.34000015258789,
+    "p50": 7.880000114440918,
+    "p95": 15.200000047683716,
+    "p99": 18.34000015258789
+  },
+  "tool_latency": {
+    "n": 46,
+    "mean": 0.0844804347826087,
+    "max": 2.004,
+    "p50": 0.0411,
+    "p95": 0.0505,
+    "p99": 2.004
+  },
+  "actual_tool_commands": 85,
+  "mcp_calls": 47,
+  "selection_requests": 39,
+  "other_commands": [],
+  "deep_requests": 0,
+  "audits": [
+    {
+      "decisions": [
+        {
+          "game": "g_20261111_000001",
+          "seq": 1,
+          "phase": "deck_submission",
+          "action": {
+            "type": "submit_deck",
+            "hero_class": "HUNTER",
+            "cards": [
+              "EX1_029",
+              "EX1_029",
+              "EX1_080",
+              "EX1_080",
+              "DS1_184",
+              "EX1_162",
+              "EX1_531",
+              "EX1_531",
+              "EX1_533",
+              "EX1_554",
+              "EX1_066",
+              "EX1_610",
+              "EX1_610",
+              "EX1_611",
+              "EX1_611",
+              "NEW1_019",
+              "NEW1_019",
+              "EX1_536",
+              "EX1_536",
+              "EX1_538",
+              "EX1_538",
+              "EX1_539",
+              "EX1_539",
+              "EX1_617",
+              "NEW1_031",
+              "NEW1_031",
+              "DS1_070",
+              "EX1_534",
+              "EX1_534",
+              "EX1_543"
+            ]
+          },
+          "default": {
+            "type": "submit_deck",
+            "hero_class": "HUNTER",
+            "cards": [
+              "EX1_029",
+              "EX1_029",
+              "EX1_080",
+              "EX1_080",
+              "DS1_184",
+              "EX1_162",
+              "EX1_531",
+              "EX1_531",
+              "EX1_533",
+              "EX1_554",
+              "EX1_066",
+              "EX1_610",
+              "EX1_610",
+              "EX1_611",
+              "EX1_611",
+              "NEW1_019",
+              "NEW1_019",
+              "EX1_536",
+              "EX1_536",
+              "EX1_538",
+              "EX1_538",
+              "EX1_539",
+              "EX1_539",
+              "EX1_617",
+              "NEW1_031",
+              "NEW1_031",
+              "DS1_070",
+              "EX1_534",
+              "EX1_534",
+              "EX1_543"
+            ]
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 15.794999837875366,
+          "remaining_s": 164.20500016212463
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 2,
+          "phase": "mulligan",
+          "action": {
+            "type": "mulligan",
+            "replace": [
+              29,
+              15
+            ]
+          },
+          "default": {
+            "type": "mulligan",
+            "replace": [
+              29,
+              15
+            ]
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 2,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Keep early minions, replace slow removal and situational secret",
+            "action": {
+              "type": "mulligan",
+              "replace": [
+                29,
+                15
+              ]
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.969038009643555,
+            "remaining_s": 174.0309619156178
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.604000091552734,
+          "remaining_s": 172.39599990844727
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 3,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.816999912261963,
+          "remaining_s": 173.18300008773804
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 4,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 22,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 22,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 4,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Develop Knife Juggler for board pressure and potential ping value",
+            "action": {
+              "type": "play_card",
+              "card": 22,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.326695203781128,
+            "remaining_s": 173.6733048420865
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.934000015258789,
+          "remaining_s": 172.0659999847412
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 5,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 5,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Hold Coin for stronger development next turn",
+            "action": {
+              "type": "end_turn"
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.066023826599121,
+            "remaining_s": 174.933976219967
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.889999866485596,
+          "remaining_s": 173.1100001335144
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 6,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 21,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 21,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 6,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Add second Juggler to build pressure and trigger pings",
+            "action": {
+              "type": "play_card",
+              "card": 21,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.339465856552124,
+            "remaining_s": 174.66053458838724
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.167999982833862,
+          "remaining_s": 172.83200001716614
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 7,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 39
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 39
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 7,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Remove Mana Wyrm before it grows from spells",
+            "action": {
+              "type": "attack",
+              "attacker": 22,
+              "target": 39
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.849274158477783,
+            "remaining_s": 173.15072568308096
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.889000177383423,
+          "remaining_s": 171.11099982261658
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 8,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 6,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 6,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 8,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Deploy Leper Gnome while preserving Coin",
+            "action": {
+              "type": "play_card",
+              "card": 6,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.918874025344849,
+            "remaining_s": 173.08112535020337
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.6489999294281,
+          "remaining_s": 171.3510000705719
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 9,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 9,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "End turn with full board and preserve Coin",
+            "action": {
+              "type": "end_turn"
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.4112091064453125,
+            "remaining_s": 173.58879141660873
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.230000019073486,
+          "remaining_s": 171.7699999809265
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 10,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 32,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 32,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 10,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Develop 4/3 Houndmaster to stabilize against board pressure",
+            "action": {
+              "type": "play_card",
+              "card": 32,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.5195019245147705,
+            "remaining_s": 173.48049896443263
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.702999830245972,
+          "remaining_s": 171.29700016975403
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 11,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 21,
+            "target": 49
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 21,
+            "target": 49
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 11,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Trade a Juggler into Thalnos to remove spell damage",
+            "action": {
+              "type": "attack",
+              "attacker": 21,
+              "target": 49
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.050957918167114,
+            "remaining_s": 173.94904144317843
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.880000114440918,
+          "remaining_s": 172.11999988555908
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 12,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 12,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Send Juggler face damage while keeping other attacker open",
+            "action": {
+              "type": "attack",
+              "attacker": 22,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.608612298965454,
+            "remaining_s": 174.39138799835928
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.244000196456909,
+          "remaining_s": 172.7559998035431
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 13,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 6,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 6,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 13,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Push Leper Gnome face for deathrattle reach",
+            "action": {
+              "type": "attack",
+              "attacker": 6,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.415812969207764,
+            "remaining_s": 174.58418743591756
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.010999917984009,
+          "remaining_s": 172.989000082016
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 14,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 14,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Preserve Coin and end turn",
+            "action": {
+              "type": "end_turn"
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.534077167510986,
+            "remaining_s": 173.46592239348684
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.319000005722046,
+          "remaining_s": 171.68099999427795
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 15,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 17
+          },
+          "default": {
+            "type": "play_card",
+            "card": 17
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 15,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Set Explosive Trap to punish incoming hero attack and protect health",
+            "action": {
+              "type": "play_card",
+              "card": 17
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.173439979553223,
+            "remaining_s": 173.8265592699172
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.733999967575073,
+          "remaining_s": 172.26600003242493
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 16,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 32,
+            "target": 40
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 32,
+            "target": 40
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 16,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Clear Mana Wyrm with Houndmaster, saving Kill Command for reach",
+            "action": {
+              "type": "attack",
+              "attacker": 32,
+              "target": 40
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.384877920150757,
+            "remaining_s": 173.61512175609823
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.003000020980835,
+          "remaining_s": 171.99699997901917
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 17,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 13,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 13,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 17,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Add Hyena to board while retaining Kill Command for reach",
+            "action": {
+              "type": "play_card",
+              "card": 13,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.529200077056885,
+            "remaining_s": 173.47080031211954
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.171000003814697,
+          "remaining_s": 171.8289999961853
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 18,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 10
+          },
+          "default": {
+            "type": "play_card",
+            "card": 10
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 18,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Use spare mana to find useful cards for upcoming turns",
+            "action": {
+              "type": "play_card",
+              "card": 10
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.917454242706299,
+            "remaining_s": 174.08254585647956
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.9690001010894775,
+          "remaining_s": 172.03099989891052
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 19,
+          "phase": "choice",
+          "action": {
+            "type": "choose",
+            "options": [
+              27
+            ]
+          },
+          "default": {
+            "type": "choose",
+            "options": [
+              27
+            ]
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 19,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Take Kill Command for five damage reach with Beast on board",
+            "action": {
+              "type": "choose",
+              "options": [
+                27
+              ]
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.01510214805603,
+            "remaining_s": 173.9848971327301
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.669000148773193,
+          "remaining_s": 171.3309998512268
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 20,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 20,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Push available face damage while ahead on board",
+            "action": {
+              "type": "attack",
+              "attacker": 22,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.4795238971710205,
+            "remaining_s": 174.52047587872948
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.164999961853027,
+          "remaining_s": 172.83500003814697
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 21,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 6,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 6,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 21,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Push Leper Gnome face and retain deathrattle reach",
+            "action": {
+              "type": "attack",
+              "attacker": 6,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.229375123977661,
+            "remaining_s": 174.77062478347216
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.178999900817871,
+          "remaining_s": 172.82100009918213
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 22,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 22,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "End turn with secret active and board pressure",
+            "action": {
+              "type": "end_turn"
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.220040798187256,
+            "remaining_s": 174.77995935990475
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.799999952316284,
+          "remaining_s": 173.20000004768372
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 23,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 28,
+            "target": 62
+          },
+          "default": {
+            "type": "play_card",
+            "card": 28,
+            "target": 62
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 23,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Remove Tiger before it can hit again using Kill Command",
+            "action": {
+              "type": "play_card",
+              "card": 28,
+              "target": 62
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 9.166067123413086,
+            "remaining_s": 170.8339309177827
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 10.85700011253357,
+          "remaining_s": 169.14299988746643
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 24,
+          "phase": "main",
+          "action": {
+            "type": "hero_power"
+          },
+          "default": {
+            "type": "play_card",
+            "card": 27,
+            "target": 66
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 24,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 2,
+            "reason": "Use Steady Shot for guaranteed face damage while the enemy board is reduced",
+            "action": {
+              "type": "hero_power"
+            },
+            "different_from_default": true,
+            "publication_elapsed_s": 12.888427972793579,
+            "remaining_s": 167.11157123965677
+          },
+          "different_from_default": true,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 14.545000076293945,
+          "remaining_s": 165.45499992370605
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 25,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 25,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Send Juggler face while keeping Leper Gnome attack available",
+            "action": {
+              "type": "attack",
+              "attacker": 22,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.479456186294556,
+            "remaining_s": 174.52054361253977
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.121999979019165,
+          "remaining_s": 172.87800002098083
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 26,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 6,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 6,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 26,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Push Leper Gnome face for another point of damage",
+            "action": {
+              "type": "attack",
+              "attacker": 6,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.308246850967407,
+            "remaining_s": 174.6917535866378
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.990999937057495,
+          "remaining_s": 173.0090000629425
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 27,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 70
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 27,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 1,
+            "reason": "Use Coin to enable Freezing Trap and protect against the Charge minion",
+            "action": {
+              "type": "play_card",
+              "card": 70
+            },
+            "different_from_default": true,
+            "publication_elapsed_s": 7.696390151977539,
+            "remaining_s": 172.30361068912316
+          },
+          "different_from_default": true,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 9.76200008392334,
+          "remaining_s": 170.23799991607666
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 28,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 19
+          },
+          "default": {
+            "type": "play_card",
+            "card": 19
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 28,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Deploy Freezing Trap to return the opposing attacker and limit damage",
+            "action": {
+              "type": "play_card",
+              "card": 19
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.256881952285767,
+            "remaining_s": 174.74311832746025
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.109000205993652,
+          "remaining_s": 172.89099979400635
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 29,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 4.127000093460083,
+          "remaining_s": 175.87299990653992
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 30,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 27,
+            "target": 66
+          },
+          "default": {
+            "type": "play_card",
+            "card": 27,
+            "target": 66
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 30,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Remove Argent Commander to prevent further charge damage",
+            "action": {
+              "type": "play_card",
+              "card": 27,
+              "target": 66
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 7.2865917682647705,
+            "remaining_s": 172.7134080803953
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 9.0,
+          "remaining_s": 171.0
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 31,
+          "phase": "main",
+          "action": {
+            "type": "hero_power"
+          },
+          "default": {
+            "type": "hero_power"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 31,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Use Steady Shot now while opponent board is clear",
+            "action": {
+              "type": "hero_power"
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.512497901916504,
+            "remaining_s": 173.487501550233
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.292999982833862,
+          "remaining_s": 171.70700001716614
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 32,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 15
+          },
+          "default": {
+            "type": "play_card",
+            "card": 15
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 32,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Deploy Snake Trap as additional pressure and future beast synergy",
+            "action": {
+              "type": "play_card",
+              "card": 15
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.587871074676514,
+            "remaining_s": 174.41212927980814
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.806999921798706,
+          "remaining_s": 172.1930000782013
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 33,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.489000082015991,
+          "remaining_s": 174.510999917984
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 34,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 29
+          },
+          "default": {
+            "type": "play_card",
+            "card": 29
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 34,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Remove the taunt so King Krush can attack face next turn",
+            "action": {
+              "type": "play_card",
+              "card": 29
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.939394950866699,
+            "remaining_s": 174.0606046023313
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.5909998416900635,
+          "remaining_s": 172.40900015830994
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 35,
+          "phase": "main",
+          "action": {
+            "type": "hero_power"
+          },
+          "default": {
+            "type": "hero_power"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 35,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Deal two more face damage with Steady Shot",
+            "action": {
+              "type": "hero_power"
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 4.998186111450195,
+            "remaining_s": 175.0018139218446
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 6.526000022888184,
+          "remaining_s": 173.47399997711182
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 36,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 4.228999853134155,
+          "remaining_s": 175.77100014686584
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 37,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 35,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 35,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 37,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Deploy King Krush as a large Charge threat",
+            "action": {
+              "type": "play_card",
+              "card": 35,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.68793511390686,
+            "remaining_s": 173.3120643409202
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.667999982833862,
+          "remaining_s": 171.33200001716614
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 38,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 35,
+            "target": 37
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 35,
+            "target": 37
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 38,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Attack face with King Krush to put opponent within burn range",
+            "action": {
+              "type": "attack",
+              "attacker": 35,
+              "target": 37
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 6.587236166000366,
+            "remaining_s": 173.41276457544882
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.430000066757202,
+          "remaining_s": 171.5699999332428
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 39,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 5.240999937057495,
+          "remaining_s": 174.7590000629425
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 40,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 24
+          },
+          "default": {
+            "type": "play_card",
+            "card": 24
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 40,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Equip Bow to attack through the taunt and keep removal options",
+            "action": {
+              "type": "play_card",
+              "card": 24
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 13.451836109161377,
+            "remaining_s": 166.54816347593442
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 15.200000047683716,
+          "remaining_s": 164.79999995231628
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 41,
+          "phase": "main",
+          "action": {
+            "type": "play_card",
+            "card": 12,
+            "position": 0
+          },
+          "default": {
+            "type": "play_card",
+            "card": 12,
+            "position": 0
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 41,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Play Hyena before trading snakes to build a larger beast",
+            "action": {
+              "type": "play_card",
+              "card": 12,
+              "position": 0
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.612514019012451,
+            "remaining_s": 174.38748578412924
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 7.365999937057495,
+          "remaining_s": 172.6340000629425
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 42,
+          "phase": "main",
+          "action": {
+            "type": "hero_power"
+          },
+          "default": {
+            "type": "hero_power"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 42,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Deal two face damage now before clearing the taunt",
+            "action": {
+              "type": "hero_power"
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 8.233474969863892,
+            "remaining_s": 171.76652533293236
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 9.832000017166138,
+          "remaining_s": 170.16799998283386
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 43,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 60
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 60
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 43,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Use Bow attack and snakes to clear taunt, growing Hyena for next turn",
+            "action": {
+              "type": "attack",
+              "attacker": 4,
+              "target": 60
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 16.15096402168274,
+            "remaining_s": 163.84903526806738
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 18.34000015258789,
+          "remaining_s": 161.6599998474121
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 44,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 75,
+            "target": 60
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 44,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 1,
+            "reason": "Finish Senjin with a Snake and grow Hyena; save second Snake for face",
+            "action": {
+              "type": "attack",
+              "attacker": 75,
+              "target": 60
+            },
+            "different_from_default": true,
+            "publication_elapsed_s": 7.04023289680481,
+            "remaining_s": 172.95976608654018
+          },
+          "different_from_default": true,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.703999996185303,
+          "remaining_s": 171.2960000038147
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 45,
+          "phase": "main",
+          "action": {
+            "type": "attack",
+            "attacker": 76,
+            "target": 60
+          },
+          "default": {
+            "type": "attack",
+            "attacker": 76,
+            "target": 60
+          },
+          "model_needed": true,
+          "selected": true,
+          "selection": {
+            "game_id": "g_20261111_000001",
+            "seq": 45,
+            "event": "model_selection",
+            "status": "adopted",
+            "choice": 0,
+            "reason": "Finish the last point of taunt health to open Hyena for lethal pressure",
+            "action": {
+              "type": "attack",
+              "attacker": 76,
+              "target": 60
+            },
+            "different_from_default": false,
+            "publication_elapsed_s": 5.9032909870147705,
+            "remaining_s": 174.0967090651393
+          },
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 8.009000062942505,
+          "remaining_s": 171.9909999370575
+        },
+        {
+          "game": "g_20261111_000001",
+          "seq": 46,
+          "phase": "main",
+          "action": {
+            "type": "end_turn"
+          },
+          "default": {
+            "type": "end_turn"
+          },
+          "model_needed": false,
+          "selected": false,
+          "selection": null,
+          "different_from_default": false,
+          "outside_candidates": false,
+          "validation_bypassed": false,
+          "missing_prepare": false,
+          "selection_mismatch": false,
+          "elapsed_s": 4.412999868392944,
+          "remaining_s": 175.58700013160706
+        }
+      ],
+      "tool_elapsed_s": [
+        0.0049,
+        0.038,
+        2.004,
+        0.039,
+        0.0504,
+        0.0389,
+        0.0395,
+        0.0393,
+        0.0413,
+        0.0409,
+        0.0398,
+        0.0375,
+        0.0423,
+        0.0405,
+        0.0452,
+        0.0408,
+        0.0502,
+        0.0434,
+        0.0373,
+        0.0407,
+        0.0377,
+        0.0406,
+        0.078,
+        0.0441,
+        0.0411,
+        0.0417,
+        0.0416,
+        0.0398,
+        0.0408,
+        0.045,
+        0.0421,
+        0.0425,
+        0.0406,
+        0.0428,
+        0.0423,
+        0.0505,
+        0.0469,
+        0.0407,
+        0.0403,
+        0.042,
+        0.0425,
+        0.0421,
+        0.0426,
+        0.0378,
+        0.04,
+        0.0461
+      ],
+      "rejected_events": {},
+      "deep_requests": 0,
+      "commands": 85,
+      "other_commands": [],
+      "selection_requests": 39,
+      "selection_status": {
+        "adopted": 39
+      },
+      "tool_errors": {
+        "TimeoutExpired": 1
+      },
+      "has_client_mcp_env": false,
+      "mcp_calls": 47,
+      "usage": {
+        "input_tokens": 6820451,
+        "cached_input_tokens": 6690176,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 14182,
+        "reasoning_output_tokens": 2852
+      },
+      "model": "gpt-6-luna",
+      "effort": "medium",
+      "unsubmitted_decisions": []
+    }
+  ],
+  "note": "MCP act entry is a conservative approximation of submission time; no model cancellation claim."
+}

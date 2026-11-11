@@ -1,0 +1,36 @@
+{
+  "scope": "Adversarial structure diagnostic, not a real match or model-quality result",
+  "expected_strict_validation": false,
+  "actual_validator_accepts": true,
+  "action": {
+    "type": "play_card",
+    "card": 40,
+    "position": true
+  },
+  "public_template": {
+    "phase": "main",
+    "legal_actions": [
+      {
+        "type": "play_card",
+        "card": 40,
+        "targets": null,
+        "positions": [
+          0,
+          1
+        ],
+        "choose": null
+      },
+      {
+        "type": "end_turn"
+      }
+    ]
+  },
+  "release_impact": "Known research-only validation gap: Python bool compares equal to integer position. Host MCP schema still validates real actions. Do not claim the helper validates every malformed JSON type.",
+  "next_iteration": "Reject bool/non-int numeric fields and unrecognized keys before legal-template comparison; rerun against a new frozen artifact.",
+  "observed_version": "C4-frozen",
+  "resolution": {
+    "version": "C5-strict-validation",
+    "evidence": "checks-c5.log: 16 tests pass; test_strict_action_types_and_extra_keys covers bool/float/action extra keys",
+    "status": "fixed in final artifact; prior observation retained"
+  }
+}

@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter_es/client_smoke.py", line 8, in <module>
+    write(ROOT/out/'config.json',{'candidate':candidate,'candidate_sha256':fingerprint(ROOT/candidate),
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter_program/common.py", line 6, in write
+    def write(path,value):Path(path).write_text(json.dumps(value,indent=2)+'\n')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1078, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/experiments/es-client-smoke/config.json'
+
+No engine or client was launched. Reservation retained and reused after creating the output directory.

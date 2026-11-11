@@ -1,0 +1,38 @@
+{
+  "canonical_champion": "H7",
+  "canonical_zip": "dist/secret-hunter-program.zip",
+  "promoted": false,
+  "teacher_core_candidate": "D1",
+  "teacher_core_zip": "dist/secret-hunter-teacher-d1.zip",
+  "D1_gates": {
+    "core": true,
+    "old_pool": false
+  },
+  "D3_gates": {
+    "core": false,
+    "old_pool": true
+  },
+  "D1_core": {
+    "n_per_arm": 400,
+    "seed_clusters": 40,
+    "a_wins": 290,
+    "b_wins": 325,
+    "a_rate": 0.7385416666666667,
+    "b_rate": 0.8229166666666667,
+    "gain": 0.08437500000000009,
+    "gain_seed_cluster_95": [
+      0.02291666666666667,
+      0.14375000000000002
+    ],
+    "a_only_wins": 37,
+    "b_only_wins": 72,
+    "weighting": "equal family macro",
+    "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+  },
+  "reason": "D1 improves teacher-informed proxies but fails the predeclared old-pool regression guard. D3 does not confirm a core improvement. Keep H7 general champion and expose D1 as a scoped candidate.",
+  "official_submission": false,
+  "real_astra_evaluation": false,
+  "python_games": 5048,
+  "client_games": 2,
+  "report": "docs/teacher_eval/REPORT.md"
+}

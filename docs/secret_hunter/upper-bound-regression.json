@@ -1,0 +1,291 @@
+{
+  "public_state": {
+    "turn": 2,
+    "phase": "main",
+    "you": {
+      "hero": {
+        "entity_id": 4,
+        "card_id": "HERO_05",
+        "name": "Rexxar",
+        "hero_class": "HUNTER",
+        "health": 30,
+        "max_health": 30,
+        "armor": 0,
+        "attack": 0,
+        "can_attack": false,
+        "frozen": false,
+        "immune": false
+      },
+      "hero_power": {
+        "entity_id": 5,
+        "card_id": "HERO_05bp",
+        "name": "Steady Shot",
+        "cost": 2,
+        "usable": true,
+        "text": "Deal 2 damage to the enemy hero."
+      },
+      "weapon": null,
+      "mana": 4,
+      "max_mana": 4,
+      "overloaded": 0,
+      "overload_next_turn": 0,
+      "hand": [
+        {
+          "entity_id": 74,
+          "card_id": "EX1_162",
+          "name": "Dire Wolf Alpha",
+          "type": "MINION",
+          "cost": 2,
+          "attack": 2,
+          "health": 2,
+          "text": "Adjacent minions have +1 Attack.",
+          "playable": true
+        }
+      ],
+      "board": [
+        {
+          "entity_id": 71,
+          "card_id": "EX1_538t",
+          "name": "Hound",
+          "attack": 1,
+          "health": 1,
+          "max_health": 1,
+          "can_attack": true,
+          "taunt": false,
+          "divine_shield": false,
+          "frozen": false,
+          "stealth": false,
+          "windfury": false,
+          "charge": true,
+          "poisonous": false,
+          "deathrattle": false,
+          "spell_damage": 0,
+          "silenced": false,
+          "text": "Charge"
+        },
+        {
+          "entity_id": 72,
+          "card_id": "EX1_538t",
+          "name": "Hound",
+          "attack": 1,
+          "health": 1,
+          "max_health": 1,
+          "can_attack": true,
+          "taunt": false,
+          "divine_shield": false,
+          "frozen": false,
+          "stealth": false,
+          "windfury": false,
+          "charge": true,
+          "poisonous": false,
+          "deathrattle": false,
+          "spell_damage": 0,
+          "silenced": false,
+          "text": "Charge"
+        },
+        {
+          "entity_id": 73,
+          "card_id": "EX1_538t",
+          "name": "Hound",
+          "attack": 1,
+          "health": 1,
+          "max_health": 1,
+          "can_attack": true,
+          "taunt": false,
+          "divine_shield": false,
+          "frozen": false,
+          "stealth": false,
+          "windfury": false,
+          "charge": true,
+          "poisonous": false,
+          "deathrattle": false,
+          "spell_damage": 0,
+          "silenced": false,
+          "text": "Charge"
+        }
+      ],
+      "secrets": [],
+      "deck_remaining": 25,
+      "deck_remaining_counts": {
+        "DS1_070": 1,
+        "DS1_184": 1,
+        "EX1_029": 1,
+        "EX1_066": 1,
+        "EX1_080": 1,
+        "EX1_162": 1,
+        "EX1_531": 1,
+        "EX1_533": 1,
+        "EX1_534": 2,
+        "EX1_536": 2,
+        "EX1_538": 1,
+        "EX1_539": 2,
+        "EX1_543": 1,
+        "EX1_554": 1,
+        "EX1_610": 2,
+        "EX1_611": 2,
+        "EX1_617": 1,
+        "NEW1_019": 2,
+        "NEW1_031": 1
+      },
+      "fatigue": 0,
+      "graveyard": [
+        {
+          "card_id": "NEW1_031",
+          "name": "Animal Companion"
+        },
+        {
+          "card_id": "EX1_531",
+          "name": "Scavenging Hyena"
+        },
+        {
+          "card_id": "EX1_538",
+          "name": "Unleash the Hounds"
+        },
+        {
+          "card_id": "EX1_029",
+          "name": "Leper Gnome"
+        },
+        {
+          "card_id": "GAME_005",
+          "name": "The Coin"
+        },
+        {
+          "card_id": "EX1_080",
+          "name": "Secretkeeper"
+        }
+      ]
+    },
+    "opponent": {
+      "hero": {
+        "entity_id": 37,
+        "card_id": "HERO_08",
+        "name": "Jaina Proudmoore",
+        "hero_class": "MAGE",
+        "health": 7,
+        "max_health": 30,
+        "armor": 0,
+        "attack": 0,
+        "can_attack": false,
+        "frozen": false,
+        "immune": false
+      },
+      "hero_power": {
+        "entity_id": 38,
+        "card_id": "HERO_08bp",
+        "name": "Fireblast",
+        "cost": 2,
+        "usable": false,
+        "text": "Deal 1 damage."
+      },
+      "weapon": null,
+      "mana": 0,
+      "max_mana": 1,
+      "overloaded": 0,
+      "overload_next_turn": 0,
+      "hand_size": 4,
+      "board": [],
+      "secrets_count": 0,
+      "deck_remaining": 26,
+      "fatigue": 0,
+      "graveyard": []
+    },
+    "choice": null,
+    "legal_actions": [
+      {
+        "type": "play_card",
+        "card": 74,
+        "targets": null,
+        "positions": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "choose": null
+      },
+      {
+        "type": "attack",
+        "attacker": 71,
+        "targets": [
+          37
+        ]
+      },
+      {
+        "type": "attack",
+        "attacker": 72,
+        "targets": [
+          37
+        ]
+      },
+      {
+        "type": "attack",
+        "attacker": 73,
+        "targets": [
+          37
+        ]
+      },
+      {
+        "type": "hero_power",
+        "targets": null
+      },
+      {
+        "type": "end_turn"
+      },
+      {
+        "type": "concede"
+      }
+    ]
+  },
+  "before": {
+    "guaranteed": false,
+    "first_action": null,
+    "sequence": [],
+    "mana_required": null,
+    "damage": null,
+    "depends_on_random": false,
+    "nodes": 0,
+    "bounded_out": false,
+    "supported": true,
+    "pruned_by_upper_bound": true
+  },
+  "after": {
+    "guaranteed": true,
+    "first_action": {
+      "type": "hero_power"
+    },
+    "sequence": [
+      {
+        "type": "hero_power"
+      },
+      {
+        "type": "play_card",
+        "card": 74,
+        "position": 1
+      },
+      {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      {
+        "type": "attack",
+        "attacker": 72,
+        "target": 37
+      },
+      {
+        "type": "attack",
+        "attacker": 73,
+        "target": 37
+      }
+    ],
+    "mana_required": 4,
+    "damage": 7,
+    "depends_on_random": false,
+    "nodes": 228,
+    "bounded_out": false,
+    "supported": true,
+    "elapsed_s": 0.013010666007176042
+  },
+  "family": "three ready Hounds + Dire Wolf + power",
+  "scope": "Unit diagnostic; not a match"
+}

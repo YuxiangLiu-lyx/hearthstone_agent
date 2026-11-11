@@ -1,0 +1,79 @@
+{
+  "passed": 4,
+  "actual": [
+    {
+      "id": "NEW1_032",
+      "name": "Misha",
+      "stats": [
+        4,
+        4,
+        false,
+        true
+      ]
+    },
+    {
+      "id": "NEW1_033",
+      "name": "Leokk",
+      "stats": [
+        2,
+        4,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "NEW1_034",
+      "name": "Huffer",
+      "stats": [
+        4,
+        2,
+        true,
+        false
+      ]
+    }
+  ],
+  "winning_branch": [
+    "NEW1_034"
+  ],
+  "probability": {
+    "first_action": {
+      "type": "play_card",
+      "card": 71
+    },
+    "probability": 0.3333333333333333,
+    "depends_on_random": true,
+    "branches": [
+      {
+        "companion": "NEW1_032",
+        "probability": 0.3333333333333333,
+        "lethal_found": false,
+        "sequence": [],
+        "nodes": 0,
+        "bounded_out": false
+      },
+      {
+        "companion": "NEW1_033",
+        "probability": 0.3333333333333333,
+        "lethal_found": false,
+        "sequence": [],
+        "nodes": 0,
+        "bounded_out": false
+      },
+      {
+        "companion": "NEW1_034",
+        "probability": 0.3333333333333333,
+        "lethal_found": true,
+        "sequence": [
+          {
+            "type": "attack",
+            "attacker": -1,
+            "target": 37
+          }
+        ],
+        "nodes": 1,
+        "bounded_out": false
+      }
+    ],
+    "probability_kind": "Exact uniform Companion probabilities, conservative searched continuation coverage."
+  }
+}

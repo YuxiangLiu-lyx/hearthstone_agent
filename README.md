@@ -1,5 +1,39 @@
 # Hearthstone Agent Arena
 
+## Secret Hunter and teacher evaluation (2026-11-11)
+
+The canonical general-purpose Secret Hunter release is **H7**, selected by
+[`SECRET_HUNTER_CHAMPION.json`](SECRET_HUNTER_CHAMPION.json):
+[report](docs/secret_hunter_tactics/REPORT.md), [ZIP](dist/secret-hunter-program.zip),
+[strategy](docs/secret_hunter_tactics/STRATEGY.md). H7 won 960/1040 on the earlier
+fixed 13-opponent holdout against F2's 910/1040. That result does not estimate
+performance against the teacher's Astra agent.
+
+The teacher-returned **Submission 1** actually used Warlock: bot1 6–0, bot2 1–3,
+Astra 0–4. The original files are preserved in
+[`experiments/teacher-submission-1/raw/`](experiments/teacher-submission-1/raw/),
+with SHA-256 hashes in the parent manifest. The new Hunter investigation uses
+revealed cards and several explicit deck/strategy hypotheses as its core tests:
+[analysis, results and release decision](docs/teacher_eval/REPORT.md),
+[core opponent manifest](development/teacher_eval/core.json),
+[reproduction commands](docs/teacher_eval/REPRODUCE.md).
+These are local proxies, not new official Astra results.
+
+The separate [D1 teacher-focused ZIP](dist/secret-hunter-teacher-d1.zip) replaces
+King Krush and Misdirection with two Arcane Shots. Its frozen core confirmation
+won 393/480 versus H7's 355/480, but it failed the original-pool regression guard
+(240/280 versus 252/280). D1 is a scoped candidate; H7 remains the default.
+
+The champion pointer and `secret-hunter.code-workspace` remain at the repository
+root because existing verification scripts and relative workspace paths use
+those locations. The focused workspace now includes Teacher tests and Teacher
+results. See [workspace layout](docs/WORKSPACE.md).
+
+Historical rounds remain available: [F2](docs/secret_hunter_program/REPORT.md),
+[the ES continuation that retained F2 at that time](docs/secret_hunter_es/REPORT.md),
+and [earlier hybrid research](docs/secret_hunter/PLAN.md). The ES ZIPs are research
+artifacts; H7 supersedes the old F2 recommendation.
+
 Control Priest adds permanent/temporary theft, attack-reduction setup, health-buff
 exchanges and durable minions: [report](docs/control_priest/README.md),
 [deck](docs/control_priest/DECK.md), [ZIP](dist/hearthstone-control-priest.zip).
@@ -96,5 +130,6 @@ Development optimizers never promote automatically:
 .venv/bin/python -m development.optimizers.local_search --out development/experiments/reproduce-deck-search --start 4000 --seeds 8
 ```
 
-The supplied handout lists November 15, 2026, 23:59:59 Eastern Time as the deadline. The user retains all
-three formal submission opportunities; local runs do not consume them. Formal upload requires explicit approval.
+The supplied handout lists November 15, 2026, 23:59:59 Eastern Time as the deadline.
+The teacher export records Submission 1. Local runs do not consume formal submission
+opportunities; the remaining allowance follows the course records. Formal upload requires explicit approval.

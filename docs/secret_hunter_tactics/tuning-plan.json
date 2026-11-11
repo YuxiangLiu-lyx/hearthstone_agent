@@ -1,0 +1,72 @@
+{
+  "method": "One (1+5) interpretable mutation/retention generation; parent re-evaluated on the same fresh block. No coevolution or rarity features.",
+  "parent": "H4",
+  "seeds": [
+    82200,
+    82201,
+    82202,
+    82203,
+    82204,
+    82205
+  ],
+  "mutations": [
+    {
+      "name": "T1",
+      "changes": {
+        "reply_weight": 0.55,
+        "reply_nodes": 72,
+        "reply_width": 5,
+        "turn_nodes": 450,
+        "turn_width": 12,
+        "turn_budget_s": 0.1
+      },
+      "hypothesis": "Broader response search, less pessimistic post-response weight."
+    },
+    {
+      "name": "T2",
+      "changes": {
+        "race_face_bonus": 0.9,
+        "hand_clock_bonus": 22,
+        "board_clock_bonus": 7,
+        "turn_face": 1.28,
+        "reply_weight": 0.7
+      },
+      "hypothesis": "Stronger two-turn closure when visible health reserve is safe."
+    },
+    {
+      "name": "T3",
+      "changes": {
+        "hidden_burst_buffer": 5,
+        "turn_risk": 4.2,
+        "protection_weight": 0.9,
+        "reply_weight": 1.0,
+        "reply_nodes": 72
+      },
+      "hypothesis": "Higher hidden-burst reserve and protection of key minions."
+    },
+    {
+      "name": "T4",
+      "changes": {
+        "trap_resource": 2.1,
+        "explosive_priority": 3.5,
+        "combo_weight": 1.3,
+        "turn_width": 12,
+        "turn_nodes": 450,
+        "turn_budget_s": 0.1
+      },
+      "hypothesis": "More contingent trap value and combo ordering with wider own-turn search."
+    },
+    {
+      "name": "T5",
+      "changes": {
+        "opening_plan": false,
+        "race_face_bonus": 0.35,
+        "hand_clock_bonus": 10,
+        "board_clock_bonus": 3,
+        "turn_board": 1.2,
+        "reply_weight": 0.7
+      },
+      "hypothesis": "Conservative closure and stronger material with the old opening policy."
+    }
+  ]
+}
