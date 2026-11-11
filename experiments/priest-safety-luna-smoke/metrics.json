@@ -1,0 +1,114 @@
+{
+  "version": "control-priest-v2",
+  "attempted": 3,
+  "games": 3,
+  "wins": 2,
+  "win_rate": 0.6666666666666666,
+  "wilson95": [
+    0.2076549551264879,
+    0.9385096847238394
+  ],
+  "mean_turns": 21.666666666666668,
+  "mean_hero_damage": 27.666666666666668,
+  "hero_damage_definition": "Damage events to the opposing hero with an observed friendly source, including armor damage and overkill.",
+  "illegal": 0,
+  "timeouts": 0,
+  "early_exits": 0,
+  "void_or_aborted": 0,
+  "policy_errors": 0,
+  "decision_modes": {},
+  "cli_fallbacks": 0,
+  "missed_lethals": null,
+  "lethal_audit_status": "Not audited; no zero-miss claim.",
+  "decision_s_mean": null,
+  "decision_s_max": null,
+  "failure_signals": {
+    "low_hand_resources": 1,
+    "opposing_taunt": 1,
+    "visible_board_lethal_threat": 1
+  },
+  "by_opponent": {
+    "greedy": {
+      "games": 3,
+      "wins": 2
+    }
+  },
+  "by_first": {
+    "True": {
+      "games": 2,
+      "wins": 1
+    },
+    "False": {
+      "games": 1,
+      "wins": 1
+    }
+  },
+  "results": [
+    {
+      "game_id": "g_20261111_000001",
+      "seed": 52020,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 2,
+      "won": false,
+      "reason": "hero_death",
+      "turns": 26,
+      "hero_damage": 21,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "deck_submission": 1,
+        "mulligan": 1,
+        "main": 51,
+        "game_over": 1
+      },
+      "replay": "experiments/priest-safety-luna-smoke/games/g_20261111_000001/replay.jsonl"
+    },
+    {
+      "game_id": "g_20261111_000002",
+      "seed": 52021,
+      "candidate_seat": 1,
+      "candidate_first": false,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 20,
+      "hero_damage": 30,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "deck_submission": 1,
+        "mulligan": 1,
+        "main": 37,
+        "game_over": 1
+      },
+      "replay": "experiments/priest-safety-luna-smoke/games/g_20261111_000002/replay.jsonl"
+    },
+    {
+      "game_id": "g_20261111_000003",
+      "seed": 52022,
+      "candidate_seat": 1,
+      "candidate_first": true,
+      "opponent": "greedy",
+      "winner": 1,
+      "won": true,
+      "reason": "hero_death",
+      "turns": 19,
+      "hero_damage": 32,
+      "illegal": 0,
+      "timeouts": 0,
+      "early_exit": false,
+      "phases": {
+        "deck_submission": 1,
+        "mulligan": 1,
+        "main": 31,
+        "game_over": 1
+      },
+      "replay": "experiments/priest-safety-luna-smoke/games/g_20261111_000003/replay.jsonl"
+    }
+  ]
+}

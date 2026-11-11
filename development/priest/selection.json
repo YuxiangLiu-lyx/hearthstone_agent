@@ -1,6 +1,6 @@
 {
   "path": "development/checkpoints/control-priest-v2",
-  "status": "validated V2, real Luna smoke in progress",
+  "status": "validated, packaged; real Luna relay audit passed",
   "source": "control_priest",
   "code_sha256": "9f4d18ba121373ec71ff17f3a536b884b04c634a2c93fa022bf637592266cdef",
   "deck": "development/priest/decks/control-theft.json",
@@ -53,5 +53,14 @@
   ],
   "retuning_allowed": false,
   "holdout_wins": 231,
-  "holdout_games": 300
+  "holdout_games": 300,
+  "luna_integration": {
+    "games": 3,
+    "wins": 2,
+    "execution_defects": 0,
+    "decisions": 125,
+    "exact_script_relays": 125,
+    "audit": "docs/control_priest/luna-relay-audit-v2.json",
+    "report": "experiments/priest-safety-luna-smoke/summary.md"
+  }
 }

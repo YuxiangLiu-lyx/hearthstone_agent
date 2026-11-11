@@ -1,6 +1,6 @@
 {
   "path": "development/checkpoints/control-priest-v2",
-  "status": "validated V2, real Luna smoke in progress",
+  "status": "validated, packaged; real Luna relay audit passed",
   "source": "control_priest",
   "code_sha256": "9f4d18ba121373ec71ff17f3a536b884b04c634a2c93fa022bf637592266cdef",
   "deck": "development/priest/decks/control-theft.json",
@@ -56,5 +56,14 @@
   "holdout_games": 300,
   "holdout_report": "docs/control_priest/safety-holdout-comparison/comparison.md",
   "artifact": "dist/hearthstone-control-priest.zip",
-  "artifact_sha256": "255e9e708edf7cc7df364c302783f1a945450fc0111fcbb3dee9ad43678dc513"
+  "artifact_sha256": "255e9e708edf7cc7df364c302783f1a945450fc0111fcbb3dee9ad43678dc513",
+  "luna_integration": {
+    "games": 3,
+    "wins": 2,
+    "execution_defects": 0,
+    "decisions": 125,
+    "exact_script_relays": 125,
+    "audit": "docs/control_priest/luna-relay-audit-v2.json",
+    "report": "experiments/priest-safety-luna-smoke/summary.md"
+  }
 }

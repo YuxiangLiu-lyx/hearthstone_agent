@@ -15,3 +15,5 @@ Change: v2
 Next hypothesis: Review paired results and concrete failures before further changes.
 
 See config.json for exact seeds, deck, code fingerprint and conditions; metrics.json for per-game results.
+
+Decision: Accepted final V2: targeted safety correction, zero execution defects, 231/300 on fresh validation. No measured incremental win gain over V1.

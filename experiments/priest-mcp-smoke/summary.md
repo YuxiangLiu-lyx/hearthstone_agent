@@ -15,3 +15,5 @@ Change: Initial fixed-deck baseline.
 Next hypothesis: Add bounded tactical search without changing the deck.
 
 See config.json for exact seeds, deck, code fingerprint and conditions; metrics.json for per-game results.
+
+Decision: Completed MCP integration; exact outcomes and reliability are in metrics.json.

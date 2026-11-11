@@ -15,3 +15,5 @@ Change: final
 Next hypothesis: Review paired results and concrete failures before further changes.
 
 See config.json for exact seeds, deck, code fingerprint and conditions; metrics.json for per-game results.
+
+Decision: Completed V1 validation; subsequently used diagnostically for the safety correction, not fresh V2 evidence.

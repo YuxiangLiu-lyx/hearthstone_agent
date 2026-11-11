@@ -15,3 +15,5 @@ Change: V2: avoid visible Leper, Abomination and deathrattle-fatigue self-lethal
 Next hypothesis: Review paired results and concrete failures before further changes.
 
 See config.json for exact seeds, deck, code fingerprint and conditions; metrics.json for per-game results.
+
+Decision: Retained development comparison; the final selection was frozen before the subsequent validation block.

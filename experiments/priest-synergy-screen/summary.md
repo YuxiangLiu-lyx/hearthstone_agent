@@ -15,3 +15,5 @@ Change: Specialized control policy with theft and buff deck
 Next hypothesis: Review paired results and concrete failures before further changes.
 
 See config.json for exact seeds, deck, code fingerprint and conditions; metrics.json for per-game results.
+
+Decision: Completed initial small screen; retained as development evidence, not a long-run estimate.

@@ -15,3 +15,5 @@ Change: v1
 Next hypothesis: Review paired results and concrete failures before further changes.
 
 See config.json for exact seeds, deck, code fingerprint and conditions; metrics.json for per-game results.
+
+Decision: Frozen V1 reference for the V2 safety correction; same 231/300 outcomes.

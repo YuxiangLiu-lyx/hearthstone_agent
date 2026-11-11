@@ -161,10 +161,14 @@ hidden hand. It is a development aid, excluded from the submission.
 Official static validation passes on both source and extracted ZIP. Extracted setup
 returns a valid 30-card Priest submission. V1 MCP-client smoke at seeds 52010–52012
 finishes 2–1 with zero illegal actions, timeouts, exits or CLI fallback. V1 real Luna
-smoke at 52000–52002 finishes 3–0, with all 137 actions exactly relayed. V2 receives
-separate MCP and Luna smoke at 52030–52032 and 52020–52022; final results are stored in
-`experiments/priest-safety-mcp-smoke`, `experiments/priest-safety-luna-smoke` and the
-corresponding relay audit. Integration samples are not competitive win-rate estimates.
+smoke at 52000–52002 finishes 3–0, with all 137 actions exactly relayed. Final V2 MCP
+smoke at 52030–52032 finishes 3–0. Final V2 real Luna smoke at 52020–52022 finishes
+2–1, with [all 125 actions exactly relayed](luna-relay-audit-v2.json). Both V2 runs have
+zero illegal actions, timeouts, early exits, voids or CLI fallbacks. Results are stored
+in `experiments/priest-safety-mcp-smoke` and `experiments/priest-safety-luna-smoke`.
+Integration samples are not competitive win-rate estimates. A separate
+[100-state watchdog CLI check](cli-latency-v2.json) passes without failures, averaging
+54.2 ms with a 62.8 ms maximum, excluding model relay latency.
 
 The independent release contains 12 files, 18,200 bytes compressed / 46,252 bytes
 uncompressed, all executable scripts Python-only. The manifest records hashes.

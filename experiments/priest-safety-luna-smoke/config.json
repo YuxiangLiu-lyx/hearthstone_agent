@@ -1,0 +1,55 @@
+{
+  "version": "control-priest-v2",
+  "transport": "real GPT-6-Luna skill through official MCP launcher",
+  "git_commit": "6bb7f4a1dd5fcd482d12845b7e4e9327cfccb167",
+  "code_sha256": "9f4d18ba121373ec71ff17f3a536b884b04c634a2c93fa022bf637592266cdef",
+  "deck": {
+    "hero_class": "PRIEST",
+    "cards": [
+      "EX1_196",
+      "EX1_196",
+      "EX1_066",
+      "EX1_195",
+      "EX1_195",
+      "CS2_234",
+      "CS2_234",
+      "EX1_622",
+      "EX1_622",
+      "EX1_556",
+      "EX1_556",
+      "CS2_179",
+      "CS2_179",
+      "CS1_112",
+      "CS1_112",
+      "EX1_623",
+      "EX1_623",
+      "EX1_091",
+      "EX1_091",
+      "EX1_093",
+      "EX1_093",
+      "CS2_004",
+      "CS1_113",
+      "EX1_339",
+      "EX1_339",
+      "EX1_110",
+      "EX1_198",
+      "EX1_032",
+      "EX1_334",
+      "EX1_564"
+    ]
+  },
+  "config": {
+    "version": "priest-control-v2-safety",
+    "face_weight": 0.35,
+    "decision_budget_s": 2,
+    "specialist": true,
+    "joint_combat": true
+  },
+  "seeds": [
+    52020,
+    52021,
+    52022
+  ],
+  "acceptance": "Passed final V2 model integration: 2 wins in 3 games; all 125 actions exactly relayed, zero execution defects. This sample is not a competitive win-rate estimate.",
+  "next_hypothesis": "Improve early stabilization against Face Hunter in a separate future development block; do not tune on consumed validation seeds."
+}

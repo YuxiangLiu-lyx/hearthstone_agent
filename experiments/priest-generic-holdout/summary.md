@@ -15,3 +15,5 @@ Change: generic
 Next hypothesis: Review paired results and concrete failures before further changes.
 
 See config.json for exact seeds, deck, code fingerprint and conditions; metrics.json for per-game results.
+
+Decision: Retained policy/deck ablation. No promotion of the copied generic policy with the new deck.
