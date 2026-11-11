@@ -1,0 +1,122 @@
+# Secret Hunter continuation: frozen M1, no promotion
+
+**Keep H7 as the general champion and D1 as the existing scoped recommendation.** M1 has a positive independent point estimate, but its paired primary interval crosses zero. It is delivered as a valid, separately packaged research candidate, not a proven upgrade. No final-result-driven policy change or official upload occurred.
+
+## M0: preserved starting point and locked design
+
+Base commit: `be56d61da81064bf0c26015f4fd21252aad3535a`. Work began on the correct Secret Hunter branch with a clean tree; remote fetch found the same head. No applicable AGENTS.md was found. Research branch: `research/secret-hunter-next-20261111`. The final policy was committed/frozen at `86a9916`; later commits archive results and tools only. All 3,243 pre-existing tracked files and 339 installed engine files match their frozen hashes. Original H7/D1 source, decks, ZIPs, champion pointer, opponents and historical reports remain unchanged.
+
+`baseline-reconciliation.json` recomputes the archived H7 355/480 and D1 393/480 core results, their 73.85%/82.29% family-weighted metric, and old-pool 252/280 versus 240/280. The old H7 960/1040 result is a different 13-opponent population. Submission 1 was Warlock, not a Hunter result. D3 was not reused as a successful direction.
+
+The 30-card D1 deck is fixed. The exact six core and fourteen guardrail opponents are frozen in `freeze.json`. Astra proxies are public-replay-informed assumptions, not the real Astra deck or program. No model opponent, self-play, opponent evolution or new opponent was introduced.
+
+`seed-audit.json` scanned historical result rows and nested plans/configs (885 used seed values). New audit/development blocks were 930000–930001 and subsets of 930100–930183. Final core 931000–931039 and guardrail 932000–932019 were reserved before development. They are now examined data and must never be described as fresh again.
+
+Before development, `plan.json` locked the primary metric, 40/20 final seed clusters, both seats, three arms and promotion thresholds. The primary is **0.5 × mean(three Astra variants) + 0.5 × mean(two bot2 variants)**. Bot1 is separate; the all-six rate is also reported. A 3,200-game final reserve was enforced.
+
+## M1: confirmed gaps and differential validation
+
+The initial 24-game D1 audit won 20 games. Of 677 main states, 549 (81.09%) were supported; Amani, Imp Master, Imp and Owl caused real support exclusions. Existing Juggler attack search was already available and was not “fixed” again. The audit is grouped by opponent, outcome and actual first/second player in `audit-d1-audit.json`. It is a diagnostic sample, not a coverage population estimate or proof of loss causation.
+
+M1 independently implements Amani enrage activation/removal, Imp Master end triggers and Imp tokens, static Owl body support, and passes the already implemented extended effect mode into independent lethal search. It adds search telemetry and propagates an absolute CLI search deadline to the worker. Only the root legal action is executed, followed by a new real observation and replan.
+
+The first 48-case mechanism check found four mismatches, preserved in `mechanisms-v1.json`: stale fixture aura updates, pending-death full-board capacity, and Secret/enrage attack refresh. Corrected tests matched **48/48**, including healing, aura, silence, board capacity, Secrets and Beast identity; the recorded development differential matched **644/644**. Ten inherited tactical tests passed. M2 separately matched 7 targeted local-coverage checks and **657/657** development branches, but was not retained. Unknown draws and random triggers are not made deterministic by adding card IDs to a whitelist.
+
+Final core telemetry distinguishes model support from actual expansion:
+
+| Measure | D1 | M1 |
+|---|---:|---:|
+| Main states | 13,658 | 12,927 |
+| Supported states | 10,679 | 12,269 |
+| States with ordinary transition expansion | 8,156 | 9,468 |
+| Ordinary node/time limits | 184 | 325 |
+| Independent lethal limits, combined | 45 | 96 |
+| Independent upper-bound pruning | 8,815 | 10,072 |
+| Decisions with a guaranteed proof found | 727 | 890 |
+| Internal production nodes | 901,253 | 1,358,482 |
+
+Support was 78.19% for D1 and 94.91% for M1 on their respective state distributions. This is not a same-state causal comparison. M1 hit the ordinary node cap in 315/12,927 main states (2.44%) and the time cap in 10/12,927 (0.08%). It pruned 160,808 beam entries, deduplicated 136,518 states, and rejected 15,392 effect transitions. Top-action coverage guards exited 1,064 times and Coin follow-up guards 49 times. No exception is not evidence of exhaustive search.
+
+D1 did not log beam counts or separate node/time stops. Independent lethal limits combine depth, nodes and time; response per-path exhaustion is not fully preserved. These unknowns are explicit, not filled with zero. Full opponent/outcome/actual-first groupings and failure flags are in `final-telemetry.json` and `final-loss-inventory.json`.
+
+## M2: structural selection and counterfactual learning
+
+| Shared development block | D1 | M1 | Other candidates |
+|---|---:|---:|---|
+| 930100–930109, 120 games/arm | 101 | 105 | Mechanism/coverage direction retained provisionally |
+| 930120–930131, 144 games/arm | 111 | 114 | R1 115; L1 117 |
+| 930140–930155, 192 games/arm | — | 143 | M2 143; R2 146 |
+| 930160–930183, 288 games/arm | 240 | 244 | R1 243 |
+
+- **R1/R2 response:** finite subjective Warlock Soulfire, buff and Argus scenarios, public copy/hand/mana evidence, and persistent-generator value. These are hypotheses, never observed hidden hands. R1’s initial one-win advantage reversed in retention and increased latency. R2 was only +0.52 primary points over M1 in its block. Neither is in the final ZIP.
+- **M2 local effects:** opaque enemy deathrattle draws and enemy-only Wyrm/Apprentice body support; own draws, fatigue and hand burn remain guarded. It improved Mage in its block while reducing the primary metric by 1.04 points versus M1. Correctness/coverage alone did not establish value.
+- **L1 learning:** ridge-regularized pairwise endpoint correction from 18 source games, with six entirely separate source games for validation. The fixed fit improved training MSE 4.44 → 4.02 but worsened validation MSE 3.11 → 3.69. Its +3/144 development wins are insufficient evidence of a general gain. The current assignment also forbids bundled model weights, so the fitted model remains research-only.
+- **Final M1:** selected after the new 24-seed retention block. Its mechanism, proof-entrypoint and coverage changes are a bundle; no card-by-card or proof-only causal attribution is claimed. There is no retained response or learned-evaluation contribution.
+
+The initial counterfactual wrapper lacked the official `player` envelope field: all 432 planned continuations failed immediately. Those errors are archived in `counterfactual.jsonl`, fully charged, and excluded from training labels. A corrected 18-continuation smoke run and the 432-continuation main run reached terminals without errors. Policies receive only `build_state` plus legal public history.
+
+The main sample has 24 early/mid-game states, three legal modeled alternatives and six shared future RNG/deck-order samples per alternative. Existing hands are conditioned on the source match and never passed to the other policy; this is not a public-belief reconstruction. Action divergence consumes randomness differently. Records include public observations, original actions, alternatives, features, source game/sequence, continuation, sample outcomes and split.
+
+Examples include early face attack versus Kill Command removal (`bce07602289c45ab`, turn 5: 5/6 versus 6/6), and Hounds versus weapon/removal (`c4f499dc143a4be3`, turn 6: 0/6 versus 1/6). One-sample differences do not prove a repaired loss. Even a source loss can win after future deck/RNG resampling. No original loss is certified “fixed”; first important causal mistakes remain unresolved. `counterfactual-summary.json` gives per-case uncertainty.
+
+## M3: untouched three-arm confirmation
+
+Each core opponent has 80 games per arm (40 seeds × both seats).
+
+| Core opponent/metric | H7 | D1 | M1 |
+|---|---:|---:|---:|
+| astra-board-proxy | 52/80 (65.00%) | 56/80 (70.00%) | 58/80 (72.50%) |
+| astra-tempo-proxy | 63/80 (78.75%) | 67/80 (83.75%) | 69/80 (86.25%) |
+| astra-sticky-proxy | 60/80 (75.00%) | 56/80 (70.00%) | 60/80 (75.00%) |
+| bot2-face-proxy | 72/80 (90.00%) | 67/80 (83.75%) | 72/80 (90.00%) |
+| bot2-trade-proxy | 70/80 (87.50%) | 70/80 (87.50%) | 68/80 (85.00%) |
+| bot1-mage-proxy | 69/80 (86.25%) | 68/80 (85.00%) | 68/80 (85.00%) |
+| All six | 386/480 (80.42%) | 384/480 (80.00%) | 395/480 (82.29%) |
+| Primary Astra/bot2 macro | 80.83% | 80.10% | 82.71% |
+
+| Paired comparison | Primary gain and 95% seed-cluster interval |
+|---|---|
+| M1 minus D1 | +2.60 pp [-0.62, +5.94] |
+| M1 minus H7 | +1.88 pp [-4.06, +8.02] |
+
+| Per-matchup M1 change | Versus D1, pp [95%] | Versus H7, pp [95%] |
+|---|---|---|
+| astra-board-proxy | +2.50 pp [-5.00, +11.25] | +7.50 pp [-7.50, +21.25] |
+| astra-tempo-proxy | +2.50 pp [-3.75, +8.75] | +7.50 pp [-1.25, +16.25] |
+| astra-sticky-proxy | +5.00 pp [-1.25, +11.25] | +0.00 pp [-11.25, +11.25] |
+
+M1’s weakest core matchup is board, 58/80 (72.50%); sticky is 60/80 (75.00%). Astra overall is 187/240 (77.92%), versus D1 179/240 and H7 175/240. Bot2 is 140/160 (87.50%), versus D1 137/160 and H7 142/160. Bot1 is 68/80 (85.00%). Family and actual-first tables are in `final-results.json`.
+
+All schedules, both players’ errors, actual-first fields, duplicate/missing pairs and summaries were checked against individual rows. Intervals resample the entire shared seed cluster, retaining both seats and all opponents, with 10,000 replicates. They are descriptive intervals for fixed proxies after adaptive development selection; subgroup multiplicity and the small number of clusters limit inference. Shared seeds do not ensure identical hands/draws, especially for H7’s different deck.
+
+Old-pool check: 20 different seeds × 14 opponents × both seats. H7 **489/560 (87.32%)**, D1 **512/560 (91.43%)**, M1 **512/560 (91.43%)**. M1’s paired change versus H7 is +4.11 pp [-0.36, +8.93]. Its worst point drop is adversarial Priest, −7.50 points, within the predeclared ten-point per-opponent screen. Thus the practical old-pool gate passes, but this is not a statistical noninferiority proof. It does not reverse D1’s historical failed guardrail on different seeds.
+
+**Promotion: no.** The ≥1-point primary improvement and family/old-pool point screens pass; the paired primary lower-bound gate fails. H7 and D1 pointers/artifacts stay unchanged. No additional candidate was sent to final confirmation and no candidate changed afterward.
+
+## Runtime, errors, and budget
+
+| Local measurement | P50 | P95 | P99 | Maximum |
+|---|---:|---:|---:|---:|
+| Warm file/history read → parse → public features → action, 100 cases | 16.0 ms | 277.5 ms | 292.7 ms | 294.5 ms |
+| Cold complete supervised CLI, 60 cases | 93.6 ms | 278.9 ms | 344.0 ms | 344.0 ms |
+
+Cold startup includes interpreter/import/worker creation and output. Warm imports are already initialized. The regular game harness’s policy-only timers exclude its earlier history decoration, so they are not mislabeled as full CLI times. The CLI propagates one absolute soft search deadline ≤1.5 s from its entry; the supervisor stops the worker around 1.8 s, leaving output/termination margin for a 2 s engineering target. Ordinary OS/filesystem scheduling is not hard real time.
+
+74 CLI cases cover crowded states, cache/sequence changes, forced hang/crash, best-action checkpoint recovery, tiny budgets, long/malformed history and malformed observation. Max was 1.833 s including expected faults. A separate observation-change-during-hang test returned refresh without a stale action in 1.840 s. A malformed observation requests refresh because no legal current action can be inferred safely. Zero >2 s or illegal outputs were observed. Fault-injection fallbacks are expected and separate from normal-game errors.
+
+Across **159,646 scheduled Python-policy decisions**, zero unexpected exceptions, emergency fallbacks, timeouts or illegal actions occurred on either side. The 432 offline wrapper failures are reported separately above. No new model-host test was performed, so host model/tool/network latency is **not measured** and receives no local timing guarantee.
+
+Budget: **6,412/8,000 full attempt charges**: 5,900 completed engine games including 450 terminal counterfactuals and two clients; 432 failed counterfactual attempts; 80 conservatively retained, unused differential reservations. Short-case charges: **16,580/30,000**. Summed experiment wall time is **14.18 minutes/240 minutes**, conservatively summing overlapping runs. Final validation/ZIP/client used 3,170 of the protected 3,200-game reserve. Internal production nodes are recorded separately. The budget was not exhausted mechanically.
+
+Remaining final-policy boundaries: random Juggler summons and Snake/Juggler chains, Companion/Tracking roots, unknown deathrattle draws, hidden enemy Secrets, Mage Wyrm/Apprentice states, unobserved thaw and some full-hand responses. M2’s broader effects were deliberately not merged. Visible-attack responses do not prove safety from hidden burn, buffs, taunts or card draw.
+
+## M4: exact artifact and continuation
+
+- Source: `development/secret_hunter_next/candidates/M1`; SHA-256 `51cb2cb2454dcff6dea5df3be5ce7dd6c9c99edcff42417b663e8490c70f5b75`.
+- ZIP: [`../../dist/secret-hunter-next-m1.zip`](../../dist/secret-hunter-next-m1.zip); SHA-256 `98a1854949caca7f277eeb5a914b36daa49887f25c0a6619bb36264408489990`.
+- Size: 37,465 compressed / 97,925 unpacked bytes. One skill folder; Python plus JSON/Markdown only; no training data, logs, evaluator labels, private engine data, environment or learned model.
+- Current course format validation passed. The exact extracted ZIP reproduced **48/48 outcomes and 48/48 complete action traces** on already used seeds. Two official no-model client games completed, with **64/64 exact current-sequence actions** and zero relay errors. This is not a real Astra or fresh model-host result.
+- Reproduction and resume constraints: [`REPRODUCE.md`](REPRODUCE.md). The shipped artifact is usable as a research submission candidate, but the statistical recommendation remains D1/H7.
+- Next hypothesis: implement bounded chance nodes for **Juggler + one/two summons or Hounds**, first on archived early states where top-action coverage guards exit. Compare preserving Juggler/Hyena against immediate removal, expand small outcome sets exactly, and use fixed-budget public-state-seeded samples for larger sets. Require all outcomes for “guaranteed lethal”; report chance lethal separately. Replan after every observed result. Use the same fresh development block for M1, D1 and the child; do not retune on 931000/932000. The immediate bottleneck is root-level random coverage and lost continuation comparison, not merely a deeper deterministic beam.
+
+The pinned-source/licensing/adaptation record is [`SOURCES.md`](SOURCES.md). Candidate provenance, negative directions, hashes and development measurements are in `candidates.json`. Final machine-readable decisions are in `decision.json`; historical evidence is preserved.

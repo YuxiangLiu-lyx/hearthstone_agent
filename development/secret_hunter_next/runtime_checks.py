@@ -1,5 +1,5 @@
 """Cold end-to-end timing, cooperative and noncooperative failure checks."""
-import argparse,json,shutil,subprocess,sys,tempfile,time
+import argparse,json,shutil,subprocess,sys,tempfile,time,math
 from pathlib import Path
 from development.secret_hunter_program.common import ROOT,write
 from development.secret_hunter_program.common import readlines
@@ -60,7 +60,7 @@ def main():
         for bad in [True,40.0,'40']:
             assert not legal({'phase':'main','legal_actions':[{'type':'play_card','card':40}]},{'type':'play_card','card':bad})
     times=sorted(c['elapsed_s'] for c in cases);normal=sorted(c['elapsed_s'] for c in cases if c['tag'].startswith('cold'))
-    def stats(xs):return {str(q):xs[min(len(xs)-1,int((len(xs)-1)*q))] for q in [.5,.95,.99,1]}
+    def stats(xs):return {str(q):xs[min(len(xs)-1,math.ceil(len(xs)*q)-1)] for q in [.5,.95,.99,1]}
     result={'cases':len(cases),'all_latency_s':stats(times),'cold_latency_s':stats(normal),'over_2s':sum(x>2 for x in times),'illegal':sum(not c['valid'] for c in cases),'details':cases}
     finish('runtime-'+Path(a.candidate).name,actual_short=len(cases));write(ROOT/a.out,result);print(json.dumps({k:v for k,v in result.items() if k!='details'}))
 if __name__=='__main__':main()
