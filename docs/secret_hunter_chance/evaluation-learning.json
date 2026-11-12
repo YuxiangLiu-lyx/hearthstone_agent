@@ -1,0 +1,35 @@
+{
+  "train_games": 11,
+  "validation_games": 3,
+  "grid": [
+    {
+      "threshold": 0,
+      "train_conditional_delta": 0.022727272727272728
+    },
+    {
+      "threshold": 1,
+      "train_conditional_delta": 0.022727272727272728
+    },
+    {
+      "threshold": 2,
+      "train_conditional_delta": 0.011363636363636364
+    },
+    {
+      "threshold": 4,
+      "train_conditional_delta": 0.011363636363636364
+    },
+    {
+      "threshold": 8,
+      "train_conditional_delta": 0.0
+    }
+  ],
+  "chosen_on_train": {
+    "threshold": 1,
+    "train_conditional_delta": 0.022727272727272728
+  },
+  "validation_conditional_delta": -0.125,
+  "all_c1_train_delta": 0.022727272727272728,
+  "all_c1_validation_delta": -0.125,
+  "deployed": false,
+  "reason": "Tiny conditional sample, held-out regression; no reliable evaluation-learning gain. No learned weights or fitted gate included in release."
+}

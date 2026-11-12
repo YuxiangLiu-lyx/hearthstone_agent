@@ -1,0 +1,81 @@
+{
+  "candidate": "C2",
+  "source": "development/secret_hunter_chance/candidates/C2",
+  "source_sha256": "d167be11f4924e82b9c499a92f1a709d7de0ba426529c8ead3b235c4136a4811",
+  "config_sha256": "3a64d0e2869308351119b1659ed763abbff0ba1ec4f4159683a48f19059fcb50",
+  "deck_sha256": "90352de5434e63415093198bb61d46a89ed7a4abd595e809a9ee074be4a0cb32",
+  "frozen_utc": "2026-11-12T00:10:43.548298+00:00",
+  "controls": {
+    "D1": "e53b7314d77f7e3ab63b268fe857dc16527f646bed4247bb7d0a930d8d92e723",
+    "H7": "ce225953aa32c23415449a3b0d90f239ac1206de6697e6a26abe1fa90c92c967"
+  },
+  "plan": {
+    "stage": "M0",
+    "seed_blocks": {
+      "audit": [
+        940000,
+        2
+      ],
+      "development": [
+        940100,
+        200
+      ],
+      "core": [
+        941000,
+        40
+      ],
+      "guardrail": [
+        942000,
+        20
+      ],
+      "client": [
+        943000,
+        4
+      ]
+    },
+    "final_core": {
+      "seeds": 40,
+      "opponents": 6,
+      "seats": [
+        1,
+        2
+      ],
+      "arms": [
+        "D1",
+        "H7",
+        "one_frozen_new_candidate"
+      ],
+      "games": 1440
+    },
+    "final_guardrail": {
+      "seeds": 20,
+      "opponents": 14,
+      "seats": [
+        1,
+        2
+      ],
+      "arms": 3,
+      "games": 1680
+    },
+    "primary": "0.5 * mean(three Astra win rates) + 0.5 * mean(two bot2 win rates)",
+    "gates": {
+      "specialist": "versus D1: primary gain >= .01, paired seed-cluster 95% lower > 0, neither Astra nor bot2 declines > .05",
+      "general": "specialist gate plus old-pool versus H7 overall decline <= .03 and each opponent decline <= .10",
+      "reliability": "No unexplained errors, illegal actions, unexpected emergency fallback, or observed >2s local CLI decision; current-sequence legal output and exact artifact reproduction"
+    },
+    "statistics": "10000 paired bootstrap replicates of whole shared seed clusters; report board, sticky, weakest matchup and both seats. No claims of formal noninferiority.",
+    "errors": "Every scheduled attempt remains charged. Harness errors count as zero score; do not drop anomalous pairs. An unexplained reliability error blocks promotion.",
+    "selection": "Start from unpromoted M1 with frozen D1/H7 controls. C1 exact/sampled public chance effects plus bounded adaptive continuation; C2 targeted search/guide or evaluation ablation chosen from development evidence. Use whole-game held-out counterfactual cases, no fitted weights in release. Re-evaluate parents on each fresh block, then independent retention. Freeze one candidate before final; no final-driven changes.",
+    "stop": [
+      "8000 charged full attempts",
+      "30000 charged short branches",
+      "4 hours cumulative experiment wall time",
+      "At most three structural rounds plus one development retention block",
+      "Preserve 3200 full attempts for final/ZIP/client; reduce screening if necessary"
+    ],
+    "limits": "Fixed D1 deck, fixed existing opponents, no models or external services during decisions. Public views only. Full terminal continuations count as full games."
+  },
+  "selection": "Independent retention: C2 328/384, C1 327/384, M1 325/384, D1 319/384. C2 vs M1 primary +1.04167 pp CI [-0.26042,+2.86458]; vs D1 +2.60417 pp CI [+0.52083,+4.6875]. Development-selected; final independent confirmation still required.",
+  "final_results_seen": false,
+  "no_final_driven_edits": true
+}

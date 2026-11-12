@@ -1,0 +1,2399 @@
+[
+  {
+    "candidate": "M1",
+    "parent": "previous round M1",
+    "hypothesis": "Mechanism reference, unchanged",
+    "source_sha256": "51cb2cb2454dcff6dea5df3be5ce7dd6c9c99edcff42417b663e8490c70f5b75",
+    "deck": "Fixed D1 deck",
+    "runs": [
+      {
+        "path": "experiments/secret-hunter-chance-m1-audit",
+        "summary": {
+          "all": {
+            "n": 24,
+            "wins": 16,
+            "losses": 8,
+            "draws_or_voids": 0,
+            "win_rate": 0.6666666666666666,
+            "wilson95_descriptive": [
+              0.4670595949408046,
+              0.8202802131162036
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "by_group": {
+            "astra": {
+              "n": 12,
+              "wins": 7,
+              "losses": 5,
+              "draws_or_voids": 0,
+              "win_rate": 0.5833333333333334,
+              "wilson95_descriptive": [
+                0.3195073356553728,
+                0.8067425380947535
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2": {
+              "n": 8,
+              "wins": 6,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.75,
+              "wilson95_descriptive": [
+                0.40926987910258916,
+                0.9285223111419724
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1": {
+              "n": 4,
+              "wins": 3,
+              "losses": 1,
+              "draws_or_voids": 0,
+              "win_rate": 0.75,
+              "wilson95_descriptive": [
+                0.3006360524426366,
+                0.9544139373553637
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "by_opponent": {
+            "astra-board-proxy": {
+              "n": 4,
+              "wins": 2,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.5,
+              "wilson95_descriptive": [
+                0.15003570882017148,
+                0.8499642911798285
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-tempo-proxy": {
+              "n": 4,
+              "wins": 2,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.5,
+              "wilson95_descriptive": [
+                0.15003570882017148,
+                0.8499642911798285
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-sticky-proxy": {
+              "n": 4,
+              "wins": 3,
+              "losses": 1,
+              "draws_or_voids": 0,
+              "win_rate": 0.75,
+              "wilson95_descriptive": [
+                0.3006360524426366,
+                0.9544139373553637
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-face-proxy": {
+              "n": 4,
+              "wins": 3,
+              "losses": 1,
+              "draws_or_voids": 0,
+              "win_rate": 0.75,
+              "wilson95_descriptive": [
+                0.3006360524426366,
+                0.9544139373553637
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-trade-proxy": {
+              "n": 4,
+              "wins": 3,
+              "losses": 1,
+              "draws_or_voids": 0,
+              "win_rate": 0.75,
+              "wilson95_descriptive": [
+                0.3006360524426366,
+                0.9544139373553637
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1-mage-proxy": {
+              "n": 4,
+              "wins": 3,
+              "losses": 1,
+              "draws_or_voids": 0,
+              "win_rate": 0.75,
+              "wilson95_descriptive": [
+                0.3006360524426366,
+                0.9544139373553637
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "latency_s": {
+            "n": 640,
+            "mean": 0.010579146109193971,
+            "max": 0.25477120792493224,
+            "p50": 0.0016005829675123096,
+            "p95": 0.050159832928329706,
+            "p99": 0.11003808409441262
+          },
+          "teacher_family_macro": 0.6944444444444444,
+          "by_actual_first": {
+            "True": {
+              "n": 12,
+              "wins": 9,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.75,
+              "wilson95_descriptive": [
+                0.46768966087934005,
+                0.9110599603710386
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "False": {
+              "n": 12,
+              "wins": 7,
+              "losses": 5,
+              "draws_or_voids": 0,
+              "win_rate": 0.5833333333333334,
+              "wilson95_descriptive": [
+                0.3195073356553728,
+                0.8067425380947535
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "primary": 0.6666666666666667,
+          "both_sides_illegal": 0,
+          "both_sides_timeouts": 0
+        }
+      },
+      {
+        "path": "experiments/secret-hunter-chance-m1-response",
+        "summary": {
+          "all": {
+            "n": 192,
+            "wins": 164,
+            "losses": 28,
+            "draws_or_voids": 0,
+            "win_rate": 0.8541666666666666,
+            "wilson95_descriptive": [
+              0.7973021290016528,
+              0.8971366419234214
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "by_group": {
+            "astra": {
+              "n": 96,
+              "wins": 79,
+              "losses": 17,
+              "draws_or_voids": 0,
+              "win_rate": 0.8229166666666666,
+              "wilson95_descriptive": [
+                0.7345877787621297,
+                0.8863958593205933
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2": {
+              "n": 64,
+              "wins": 56,
+              "losses": 8,
+              "draws_or_voids": 0,
+              "win_rate": 0.875,
+              "wilson95_descriptive": [
+                0.7722521366978408,
+                0.9352783460737919
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1": {
+              "n": 32,
+              "wins": 29,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.90625,
+              "wilson95_descriptive": [
+                0.7578150066422116,
+                0.9675990373736805
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "by_opponent": {
+            "astra-board-proxy": {
+              "n": 32,
+              "wins": 23,
+              "losses": 9,
+              "draws_or_voids": 0,
+              "win_rate": 0.71875,
+              "wilson95_descriptive": [
+                0.546251630618882,
+                0.8443559315435214
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-tempo-proxy": {
+              "n": 32,
+              "wins": 30,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.9375,
+              "wilson95_descriptive": [
+                0.7985253275199642,
+                0.9826897968048427
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-sticky-proxy": {
+              "n": 32,
+              "wins": 26,
+              "losses": 6,
+              "draws_or_voids": 0,
+              "win_rate": 0.8125,
+              "wilson95_descriptive": [
+                0.6469050424507756,
+                0.9111057606383721
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-face-proxy": {
+              "n": 32,
+              "wins": 29,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.90625,
+              "wilson95_descriptive": [
+                0.7578150066422116,
+                0.9675990373736805
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-trade-proxy": {
+              "n": 32,
+              "wins": 27,
+              "losses": 5,
+              "draws_or_voids": 0,
+              "win_rate": 0.84375,
+              "wilson95_descriptive": [
+                0.6824550744643347,
+                0.9313568089337279
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1-mage-proxy": {
+              "n": 32,
+              "wins": 29,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.90625,
+              "wilson95_descriptive": [
+                0.7578150066422116,
+                0.9675990373736805
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "latency_s": {
+            "n": 5522,
+            "mean": 0.010789513401185391,
+            "max": 0.26736070797778666,
+            "p50": 0.0019410410895943642,
+            "p95": 0.05278187501244247,
+            "p99": 0.10688800003845245
+          },
+          "teacher_family_macro": 0.8680555555555556,
+          "by_actual_first": {
+            "True": {
+              "n": 96,
+              "wins": 82,
+              "losses": 14,
+              "draws_or_voids": 0,
+              "win_rate": 0.8541666666666666,
+              "wilson95_descriptive": [
+                0.7699800750432338,
+                0.9110987538216883
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "False": {
+              "n": 96,
+              "wins": 82,
+              "losses": 14,
+              "draws_or_voids": 0,
+              "win_rate": 0.8541666666666666,
+              "wilson95_descriptive": [
+                0.7699800750432338,
+                0.9110987538216883
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "primary": 0.8489583333333333,
+          "both_sides_illegal": 0,
+          "both_sides_timeouts": 0
+        }
+      },
+      {
+        "path": "experiments/secret-hunter-chance-m1-retain",
+        "summary": {
+          "all": {
+            "n": 384,
+            "wins": 325,
+            "losses": 59,
+            "draws_or_voids": 0,
+            "win_rate": 0.8463541666666666,
+            "wilson95_descriptive": [
+              0.8068705779572172,
+              0.878976427624443
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "by_group": {
+            "astra": {
+              "n": 192,
+              "wins": 154,
+              "losses": 38,
+              "draws_or_voids": 0,
+              "win_rate": 0.8020833333333334,
+              "wilson95_descriptive": [
+                0.7400413632969393,
+                0.8522740589626828
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2": {
+              "n": 128,
+              "wins": 109,
+              "losses": 19,
+              "draws_or_voids": 0,
+              "win_rate": 0.8515625,
+              "wilson95_descriptive": [
+                0.7797712148689779,
+                0.902866131765165
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1": {
+              "n": 64,
+              "wins": 62,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.96875,
+              "wilson95_descriptive": [
+                0.8930250611770575,
+                0.9913880422874833
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "by_opponent": {
+            "astra-board-proxy": {
+              "n": 64,
+              "wins": 48,
+              "losses": 16,
+              "draws_or_voids": 0,
+              "win_rate": 0.75,
+              "wilson95_descriptive": [
+                0.6318349082561628,
+                0.8398520802582591
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-tempo-proxy": {
+              "n": 64,
+              "wins": 57,
+              "losses": 7,
+              "draws_or_voids": 0,
+              "win_rate": 0.890625,
+              "wilson95_descriptive": [
+                0.7910113670806147,
+                0.9459995524731695
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-sticky-proxy": {
+              "n": 64,
+              "wins": 49,
+              "losses": 15,
+              "draws_or_voids": 0,
+              "win_rate": 0.765625,
+              "wilson95_descriptive": [
+                0.6486650974929234,
+                0.8525023278036498
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-face-proxy": {
+              "n": 64,
+              "wins": 54,
+              "losses": 10,
+              "draws_or_voids": 0,
+              "win_rate": 0.84375,
+              "wilson95_descriptive": [
+                0.7357170979769467,
+                0.9128525112303834
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-trade-proxy": {
+              "n": 64,
+              "wins": 55,
+              "losses": 9,
+              "draws_or_voids": 0,
+              "win_rate": 0.859375,
+              "wilson95_descriptive": [
+                0.7538349160536257,
+                0.9242151299358556
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1-mage-proxy": {
+              "n": 64,
+              "wins": 62,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.96875,
+              "wilson95_descriptive": [
+                0.8930250611770575,
+                0.9913880422874833
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "latency_s": {
+            "n": 10820,
+            "mean": 0.012907788316269927,
+            "max": 0.35615004191640764,
+            "p50": 0.0018047080375254154,
+            "p95": 0.06566941703204066,
+            "p99": 0.13703833403997123
+          },
+          "teacher_family_macro": 0.8741319444444444,
+          "by_actual_first": {
+            "True": {
+              "n": 192,
+              "wins": 165,
+              "losses": 27,
+              "draws_or_voids": 0,
+              "win_rate": 0.859375,
+              "wilson95_descriptive": [
+                0.8031293858263988,
+                0.9015217199652206
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "False": {
+              "n": 192,
+              "wins": 160,
+              "losses": 32,
+              "draws_or_voids": 0,
+              "win_rate": 0.8333333333333334,
+              "wilson95_descriptive": [
+                0.7741907470408648,
+                0.8793986844180285
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "primary": 0.8268229166666667,
+          "both_sides_illegal": 0,
+          "both_sides_timeouts": 0
+        }
+      },
+      {
+        "path": "experiments/secret-hunter-chance-m1-screen",
+        "summary": {
+          "all": {
+            "n": 144,
+            "wins": 123,
+            "losses": 21,
+            "draws_or_voids": 0,
+            "win_rate": 0.8541666666666666,
+            "wilson95_descriptive": [
+              0.7873314674040637,
+              0.9025961307821031
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "by_group": {
+            "astra": {
+              "n": 72,
+              "wins": 58,
+              "losses": 14,
+              "draws_or_voids": 0,
+              "win_rate": 0.8055555555555556,
+              "wilson95_descriptive": [
+                0.6996702472161007,
+                0.8804862895658236
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2": {
+              "n": 48,
+              "wins": 44,
+              "losses": 4,
+              "draws_or_voids": 0,
+              "win_rate": 0.9166666666666666,
+              "wilson95_descriptive": [
+                0.8044643483893369,
+                0.9671167756500444
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1": {
+              "n": 24,
+              "wins": 21,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.875,
+              "wilson95_descriptive": [
+                0.6899571185214243,
+                0.9565574496068442
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "by_opponent": {
+            "astra-board-proxy": {
+              "n": 24,
+              "wins": 19,
+              "losses": 5,
+              "draws_or_voids": 0,
+              "win_rate": 0.7916666666666666,
+              "wilson95_descriptive": [
+                0.5952915551476452,
+                0.9075531089521192
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-tempo-proxy": {
+              "n": 24,
+              "wins": 21,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.875,
+              "wilson95_descriptive": [
+                0.6899571185214243,
+                0.9565574496068442
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-sticky-proxy": {
+              "n": 24,
+              "wins": 18,
+              "losses": 6,
+              "draws_or_voids": 0,
+              "win_rate": 0.75,
+              "wilson95_descriptive": [
+                0.5510017468789357,
+                0.8800079652065766
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-face-proxy": {
+              "n": 24,
+              "wins": 22,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.9166666666666666,
+              "wilson95_descriptive": [
+                0.741507847985494,
+                0.9768416721570266
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-trade-proxy": {
+              "n": 24,
+              "wins": 22,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.9166666666666666,
+              "wilson95_descriptive": [
+                0.741507847985494,
+                0.9768416721570266
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1-mage-proxy": {
+              "n": 24,
+              "wins": 21,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.875,
+              "wilson95_descriptive": [
+                0.6899571185214243,
+                0.9565574496068442
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "latency_s": {
+            "n": 4210,
+            "mean": 0.015646508885652596,
+            "max": 0.2959020420676097,
+            "p50": 0.002299209008924663,
+            "p95": 0.07291308394633234,
+            "p99": 0.1870646249735728
+          },
+          "teacher_family_macro": 0.8657407407407407,
+          "by_actual_first": {
+            "True": {
+              "n": 72,
+              "wins": 61,
+              "losses": 11,
+              "draws_or_voids": 0,
+              "win_rate": 0.8472222222222222,
+              "wilson95_descriptive": [
+                0.7467749821453958,
+                0.9124938096522456
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "False": {
+              "n": 72,
+              "wins": 62,
+              "losses": 10,
+              "draws_or_voids": 0,
+              "win_rate": 0.8611111111111112,
+              "wilson95_descriptive": [
+                0.7628660215842661,
+                0.922773521885281
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "primary": 0.8611111111111112,
+          "both_sides_illegal": 0,
+          "both_sides_timeouts": 0
+        }
+      }
+    ],
+    "decision": "Retained as development control; remains unpromoted"
+  },
+  {
+    "candidate": "C1",
+    "parent": "M1",
+    "hypothesis": "Public exact/sampled summon chance plus contingent deterministic continuation",
+    "source_sha256": "f40c0f3b709636e1d022b3d2aa1cd880ceb254017dd83f29ad6e734eb0a22284",
+    "deck": "Fixed D1 deck",
+    "runs": [
+      {
+        "path": "experiments/secret-hunter-chance-c1-response",
+        "summary": {
+          "all": {
+            "n": 192,
+            "wins": 166,
+            "losses": 26,
+            "draws_or_voids": 0,
+            "win_rate": 0.8645833333333334,
+            "wilson95_descriptive": [
+              0.8089781356972131,
+              0.9058853049609515
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "by_group": {
+            "astra": {
+              "n": 96,
+              "wins": 79,
+              "losses": 17,
+              "draws_or_voids": 0,
+              "win_rate": 0.8229166666666666,
+              "wilson95_descriptive": [
+                0.7345877787621297,
+                0.8863958593205933
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2": {
+              "n": 64,
+              "wins": 58,
+              "losses": 6,
+              "draws_or_voids": 0,
+              "win_rate": 0.90625,
+              "wilson95_descriptive": [
+                0.8101690141672233,
+                0.9563223421687121
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1": {
+              "n": 32,
+              "wins": 29,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.90625,
+              "wilson95_descriptive": [
+                0.7578150066422116,
+                0.9675990373736805
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "by_opponent": {
+            "astra-board-proxy": {
+              "n": 32,
+              "wins": 23,
+              "losses": 9,
+              "draws_or_voids": 0,
+              "win_rate": 0.71875,
+              "wilson95_descriptive": [
+                0.546251630618882,
+                0.8443559315435214
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-tempo-proxy": {
+              "n": 32,
+              "wins": 30,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.9375,
+              "wilson95_descriptive": [
+                0.7985253275199642,
+                0.9826897968048427
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-sticky-proxy": {
+              "n": 32,
+              "wins": 26,
+              "losses": 6,
+              "draws_or_voids": 0,
+              "win_rate": 0.8125,
+              "wilson95_descriptive": [
+                0.6469050424507756,
+                0.9111057606383721
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-face-proxy": {
+              "n": 32,
+              "wins": 29,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.90625,
+              "wilson95_descriptive": [
+                0.7578150066422116,
+                0.9675990373736805
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-trade-proxy": {
+              "n": 32,
+              "wins": 29,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.90625,
+              "wilson95_descriptive": [
+                0.7578150066422116,
+                0.9675990373736805
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1-mage-proxy": {
+              "n": 32,
+              "wins": 29,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.90625,
+              "wilson95_descriptive": [
+                0.7578150066422116,
+                0.9675990373736805
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "latency_s": {
+            "n": 5458,
+            "mean": 0.012313634961764658,
+            "max": 0.34755379206035286,
+            "p50": 0.002269499935209751,
+            "p95": 0.05937699996866286,
+            "p99": 0.12507300009019673
+          },
+          "teacher_family_macro": 0.8784722222222222,
+          "by_actual_first": {
+            "True": {
+              "n": 96,
+              "wins": 82,
+              "losses": 14,
+              "draws_or_voids": 0,
+              "win_rate": 0.8541666666666666,
+              "wilson95_descriptive": [
+                0.7699800750432338,
+                0.9110987538216883
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "False": {
+              "n": 96,
+              "wins": 84,
+              "losses": 12,
+              "draws_or_voids": 0,
+              "win_rate": 0.875,
+              "wilson95_descriptive": [
+                0.7941135793103388,
+                0.9270287100760494
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "primary": 0.8645833333333333,
+          "both_sides_illegal": 0,
+          "both_sides_timeouts": 0
+        }
+      },
+      {
+        "path": "experiments/secret-hunter-chance-c1-retain",
+        "summary": {
+          "all": {
+            "n": 384,
+            "wins": 327,
+            "losses": 57,
+            "draws_or_voids": 0,
+            "win_rate": 0.8515625,
+            "wilson95_descriptive": [
+              0.8125251456659297,
+              0.8836353487214696
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "by_group": {
+            "astra": {
+              "n": 192,
+              "wins": 155,
+              "losses": 37,
+              "draws_or_voids": 0,
+              "win_rate": 0.8072916666666666,
+              "wilson95_descriptive": [
+                0.7456940272075763,
+                0.8568337299185909
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2": {
+              "n": 128,
+              "wins": 110,
+              "losses": 18,
+              "draws_or_voids": 0,
+              "win_rate": 0.859375,
+              "wilson95_descriptive": [
+                0.7886460265596023,
+                0.9091610388886326
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1": {
+              "n": 64,
+              "wins": 62,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.96875,
+              "wilson95_descriptive": [
+                0.8930250611770575,
+                0.9913880422874833
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "by_opponent": {
+            "astra-board-proxy": {
+              "n": 64,
+              "wins": 48,
+              "losses": 16,
+              "draws_or_voids": 0,
+              "win_rate": 0.75,
+              "wilson95_descriptive": [
+                0.6318349082561628,
+                0.8398520802582591
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-tempo-proxy": {
+              "n": 64,
+              "wins": 56,
+              "losses": 8,
+              "draws_or_voids": 0,
+              "win_rate": 0.875,
+              "wilson95_descriptive": [
+                0.7722521366978408,
+                0.9352783460737919
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-sticky-proxy": {
+              "n": 64,
+              "wins": 51,
+              "losses": 13,
+              "draws_or_voids": 0,
+              "win_rate": 0.796875,
+              "wilson95_descriptive": [
+                0.6828613244878341,
+                0.8772669743730419
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-face-proxy": {
+              "n": 64,
+              "wins": 55,
+              "losses": 9,
+              "draws_or_voids": 0,
+              "win_rate": 0.859375,
+              "wilson95_descriptive": [
+                0.7538349160536257,
+                0.9242151299358556
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-trade-proxy": {
+              "n": 64,
+              "wins": 55,
+              "losses": 9,
+              "draws_or_voids": 0,
+              "win_rate": 0.859375,
+              "wilson95_descriptive": [
+                0.7538349160536257,
+                0.9242151299358556
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1-mage-proxy": {
+              "n": 64,
+              "wins": 62,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.96875,
+              "wilson95_descriptive": [
+                0.8930250611770575,
+                0.9913880422874833
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "latency_s": {
+            "n": 10808,
+            "mean": 0.01415520120610474,
+            "max": 0.42710600001737475,
+            "p50": 0.002065083011984825,
+            "p95": 0.07153579103760421,
+            "p99": 0.15464079205412418
+          },
+          "teacher_family_macro": 0.8784722222222222,
+          "by_actual_first": {
+            "True": {
+              "n": 192,
+              "wins": 164,
+              "losses": 28,
+              "draws_or_voids": 0,
+              "win_rate": 0.8541666666666666,
+              "wilson95_descriptive": [
+                0.7973021290016528,
+                0.8971366419234214
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "False": {
+              "n": 192,
+              "wins": 163,
+              "losses": 29,
+              "draws_or_voids": 0,
+              "win_rate": 0.8489583333333334,
+              "wilson95_descriptive": [
+                0.7914954466593332,
+                0.8927309893991958
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "primary": 0.8333333333333333,
+          "both_sides_illegal": 0,
+          "both_sides_timeouts": 0
+        }
+      },
+      {
+        "path": "experiments/secret-hunter-chance-c1-screen",
+        "summary": {
+          "all": {
+            "n": 144,
+            "wins": 122,
+            "losses": 22,
+            "draws_or_voids": 0,
+            "win_rate": 0.8472222222222222,
+            "wilson95_descriptive": [
+              0.7795077130731837,
+              0.8968918929916857
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "by_group": {
+            "astra": {
+              "n": 72,
+              "wins": 57,
+              "losses": 15,
+              "draws_or_voids": 0,
+              "win_rate": 0.7916666666666666,
+              "wilson95_descriptive": [
+                0.6843051941004199,
+                0.8694805910095988
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2": {
+              "n": 48,
+              "wins": 44,
+              "losses": 4,
+              "draws_or_voids": 0,
+              "win_rate": 0.9166666666666666,
+              "wilson95_descriptive": [
+                0.8044643483893369,
+                0.9671167756500444
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1": {
+              "n": 24,
+              "wins": 21,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.875,
+              "wilson95_descriptive": [
+                0.6899571185214243,
+                0.9565574496068442
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "by_opponent": {
+            "astra-board-proxy": {
+              "n": 24,
+              "wins": 19,
+              "losses": 5,
+              "draws_or_voids": 0,
+              "win_rate": 0.7916666666666666,
+              "wilson95_descriptive": [
+                0.5952915551476452,
+                0.9075531089521192
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-tempo-proxy": {
+              "n": 24,
+              "wins": 20,
+              "losses": 4,
+              "draws_or_voids": 0,
+              "win_rate": 0.8333333333333334,
+              "wilson95_descriptive": [
+                0.6414652961213058,
+                0.9332143199927109
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-sticky-proxy": {
+              "n": 24,
+              "wins": 18,
+              "losses": 6,
+              "draws_or_voids": 0,
+              "win_rate": 0.75,
+              "wilson95_descriptive": [
+                0.5510017468789357,
+                0.8800079652065766
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-face-proxy": {
+              "n": 24,
+              "wins": 22,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.9166666666666666,
+              "wilson95_descriptive": [
+                0.741507847985494,
+                0.9768416721570266
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-trade-proxy": {
+              "n": 24,
+              "wins": 22,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.9166666666666666,
+              "wilson95_descriptive": [
+                0.741507847985494,
+                0.9768416721570266
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1-mage-proxy": {
+              "n": 24,
+              "wins": 21,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.875,
+              "wilson95_descriptive": [
+                0.6899571185214243,
+                0.9565574496068442
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "latency_s": {
+            "n": 4201,
+            "mean": 0.017663764688288324,
+            "max": 0.36585329205263406,
+            "p50": 0.0028417089488357306,
+            "p95": 0.08111745899077505,
+            "p99": 0.19431029201950878
+          },
+          "teacher_family_macro": 0.861111111111111,
+          "by_actual_first": {
+            "True": {
+              "n": 72,
+              "wins": 61,
+              "losses": 11,
+              "draws_or_voids": 0,
+              "win_rate": 0.8472222222222222,
+              "wilson95_descriptive": [
+                0.7467749821453958,
+                0.9124938096522456
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "False": {
+              "n": 72,
+              "wins": 61,
+              "losses": 11,
+              "draws_or_voids": 0,
+              "win_rate": 0.8472222222222222,
+              "wilson95_descriptive": [
+                0.7467749821453958,
+                0.9124938096522456
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "primary": 0.8541666666666666,
+          "both_sides_illegal": 0,
+          "both_sides_timeouts": 0
+        }
+      }
+    ],
+    "decision": "166/192 but 327/384 retention, behind C2. No reliable held-out counterfactual gain; do not retain"
+  },
+  {
+    "candidate": "C2",
+    "parent": "C1",
+    "hypothesis": "Evaluate each chance endpoint through bounded visible attack response; reject unsupported reply",
+    "source_sha256": "d167be11f4924e82b9c499a92f1a709d7de0ba426529c8ead3b235c4136a4811",
+    "deck": "Fixed D1 deck",
+    "runs": [
+      {
+        "path": "experiments/secret-hunter-chance-c2-response",
+        "summary": {
+          "all": {
+            "n": 192,
+            "wins": 166,
+            "losses": 26,
+            "draws_or_voids": 0,
+            "win_rate": 0.8645833333333334,
+            "wilson95_descriptive": [
+              0.8089781356972131,
+              0.9058853049609515
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "by_group": {
+            "astra": {
+              "n": 96,
+              "wins": 79,
+              "losses": 17,
+              "draws_or_voids": 0,
+              "win_rate": 0.8229166666666666,
+              "wilson95_descriptive": [
+                0.7345877787621297,
+                0.8863958593205933
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2": {
+              "n": 64,
+              "wins": 58,
+              "losses": 6,
+              "draws_or_voids": 0,
+              "win_rate": 0.90625,
+              "wilson95_descriptive": [
+                0.8101690141672233,
+                0.9563223421687121
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1": {
+              "n": 32,
+              "wins": 29,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.90625,
+              "wilson95_descriptive": [
+                0.7578150066422116,
+                0.9675990373736805
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "by_opponent": {
+            "astra-board-proxy": {
+              "n": 32,
+              "wins": 23,
+              "losses": 9,
+              "draws_or_voids": 0,
+              "win_rate": 0.71875,
+              "wilson95_descriptive": [
+                0.546251630618882,
+                0.8443559315435214
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-tempo-proxy": {
+              "n": 32,
+              "wins": 30,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.9375,
+              "wilson95_descriptive": [
+                0.7985253275199642,
+                0.9826897968048427
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-sticky-proxy": {
+              "n": 32,
+              "wins": 26,
+              "losses": 6,
+              "draws_or_voids": 0,
+              "win_rate": 0.8125,
+              "wilson95_descriptive": [
+                0.6469050424507756,
+                0.9111057606383721
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-face-proxy": {
+              "n": 32,
+              "wins": 29,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.90625,
+              "wilson95_descriptive": [
+                0.7578150066422116,
+                0.9675990373736805
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-trade-proxy": {
+              "n": 32,
+              "wins": 29,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.90625,
+              "wilson95_descriptive": [
+                0.7578150066422116,
+                0.9675990373736805
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1-mage-proxy": {
+              "n": 32,
+              "wins": 29,
+              "losses": 3,
+              "draws_or_voids": 0,
+              "win_rate": 0.90625,
+              "wilson95_descriptive": [
+                0.7578150066422116,
+                0.9675990373736805
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "latency_s": {
+            "n": 5484,
+            "mean": 0.013646380909928986,
+            "max": 0.5504564580041915,
+            "p50": 0.002244125003926456,
+            "p95": 0.06270466709975153,
+            "p99": 0.16135029192082584
+          },
+          "teacher_family_macro": 0.8784722222222222,
+          "by_actual_first": {
+            "True": {
+              "n": 96,
+              "wins": 82,
+              "losses": 14,
+              "draws_or_voids": 0,
+              "win_rate": 0.8541666666666666,
+              "wilson95_descriptive": [
+                0.7699800750432338,
+                0.9110987538216883
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "False": {
+              "n": 96,
+              "wins": 84,
+              "losses": 12,
+              "draws_or_voids": 0,
+              "win_rate": 0.875,
+              "wilson95_descriptive": [
+                0.7941135793103388,
+                0.9270287100760494
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "primary": 0.8645833333333333,
+          "both_sides_illegal": 0,
+          "both_sides_timeouts": 0
+        }
+      },
+      {
+        "path": "experiments/secret-hunter-chance-c2-retain",
+        "summary": {
+          "all": {
+            "n": 384,
+            "wins": 328,
+            "losses": 56,
+            "draws_or_voids": 0,
+            "win_rate": 0.8541666666666666,
+            "wilson95_descriptive": [
+              0.815357887826941,
+              0.8859593509633281
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "by_group": {
+            "astra": {
+              "n": 192,
+              "wins": 155,
+              "losses": 37,
+              "draws_or_voids": 0,
+              "win_rate": 0.8072916666666666,
+              "wilson95_descriptive": [
+                0.7456940272075763,
+                0.8568337299185909
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2": {
+              "n": 128,
+              "wins": 111,
+              "losses": 17,
+              "draws_or_voids": 0,
+              "win_rate": 0.8671875,
+              "wilson95_descriptive": [
+                0.7975783657084263,
+                0.9153984185539006
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1": {
+              "n": 64,
+              "wins": 62,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.96875,
+              "wilson95_descriptive": [
+                0.8930250611770575,
+                0.9913880422874833
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "by_opponent": {
+            "astra-board-proxy": {
+              "n": 64,
+              "wins": 49,
+              "losses": 15,
+              "draws_or_voids": 0,
+              "win_rate": 0.765625,
+              "wilson95_descriptive": [
+                0.6486650974929234,
+                0.8525023278036498
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-tempo-proxy": {
+              "n": 64,
+              "wins": 57,
+              "losses": 7,
+              "draws_or_voids": 0,
+              "win_rate": 0.890625,
+              "wilson95_descriptive": [
+                0.7910113670806147,
+                0.9459995524731695
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "astra-sticky-proxy": {
+              "n": 64,
+              "wins": 49,
+              "losses": 15,
+              "draws_or_voids": 0,
+              "win_rate": 0.765625,
+              "wilson95_descriptive": [
+                0.6486650974929234,
+                0.8525023278036498
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-face-proxy": {
+              "n": 64,
+              "wins": 55,
+              "losses": 9,
+              "draws_or_voids": 0,
+              "win_rate": 0.859375,
+              "wilson95_descriptive": [
+                0.7538349160536257,
+                0.9242151299358556
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot2-trade-proxy": {
+              "n": 64,
+              "wins": 56,
+              "losses": 8,
+              "draws_or_voids": 0,
+              "win_rate": 0.875,
+              "wilson95_descriptive": [
+                0.7722521366978408,
+                0.9352783460737919
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "bot1-mage-proxy": {
+              "n": 64,
+              "wins": 62,
+              "losses": 2,
+              "draws_or_voids": 0,
+              "win_rate": 0.96875,
+              "wilson95_descriptive": [
+                0.8930250611770575,
+                0.9913880422874833
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "latency_s": {
+            "n": 10836,
+            "mean": 0.015586232191662745,
+            "max": 0.5580152079928666,
+            "p50": 0.0020819170167669654,
+            "p95": 0.07663233298808336,
+            "p99": 0.19583416706882417
+          },
+          "teacher_family_macro": 0.8810763888888888,
+          "by_actual_first": {
+            "True": {
+              "n": 192,
+              "wins": 166,
+              "losses": 26,
+              "draws_or_voids": 0,
+              "win_rate": 0.8645833333333334,
+              "wilson95_descriptive": [
+                0.8089781356972131,
+                0.9058853049609515
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            },
+            "False": {
+              "n": 192,
+              "wins": 162,
+              "losses": 30,
+              "draws_or_voids": 0,
+              "win_rate": 0.84375,
+              "wilson95_descriptive": [
+                0.7857084959189619,
+                0.8883056052730217
+              ],
+              "harness_errors": 0,
+              "illegal": 0,
+              "timeouts": 0,
+              "forfeits": 0,
+              "opponent_errors": 0,
+              "policy_errors": 0,
+              "fallbacks": 0,
+              "over_2s": 0,
+              "public_input_violations": 0
+            }
+          },
+          "primary": 0.8372395833333333,
+          "both_sides_illegal": 0,
+          "both_sides_timeouts": 0
+        }
+      }
+    ],
+    "decision": "328/384 vs M1 325/384 and D1 319/384 on independent retention. Freeze for final; development estimate only"
+  }
+]

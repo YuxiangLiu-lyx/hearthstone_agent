@@ -50,6 +50,12 @@ def decide(state, config, publish=None, memory=None):
                         if config.get('plan_cache') and memory is not None:
                             from plan_cache import save as save_plan
                             save_plan(state,config,result.get('sequence',[]),memory,deadline)
+                if config.get('chance_search') and time.monotonic()<deadline:
+                    from chance_search import plan as chance_plan
+                    chance=chance_plan(state,ranked,best,config,deadline)
+                    info['chance']=chance;info['nodes']+=chance['nodes']
+                    if chance.get('action'):
+                        save(chance['action'],'chance_endpoint');info['search_used']=True
     except Exception as exc:
         info['error']=type(exc).__name__+': '+str(exc)
     info['elapsed_s']=time.monotonic()-start

@@ -98,7 +98,7 @@ def damage(target, amount, poison=False):
         target["health"] = 0
 
 
-def summon(state, side, cid, entity_id=None, hand_card=None, position=None):
+def summon(state, side, cid, entity_id=None, hand_card=None, position=None, trigger=True):
     if len(side["board"]) >= 7:
         return
     if cid in TOKENS:
@@ -117,6 +117,9 @@ def summon(state, side, cid, entity_id=None, hand_card=None, position=None):
              remaining_attacks=int(m.get("charge", False)), can_attack=bool(m.get("charge")))
     side["board"].insert(len(side["board"]) if position is None else position, m)
     refresh(state)
+    if trigger and '_chance_tape' in state:
+        from chance_model import knives
+        knives(state, side, entity_id)
 
 
 def cleanup(state):
@@ -235,11 +238,11 @@ def transition(state, action, companion=None):
         extended=result.get('planning_mode') in ('proof','response')
         if not extended and cid in (PLAY_MINIONS-BASE_PLAY)|SECRETS|{'EX1_617'}:return None
         if result.get('planning_mode')=='response' and cid=='NEW1_019':return None
-        if cid in PLAY_MINIONS | {'EX1_538','NEW1_031'} and any(m['card_id']=='NEW1_019' and not m.get('silenced') for m in y['board']):
+        if '_chance_tape' not in result and cid in PLAY_MINIONS | {'EX1_538','NEW1_031'} and any(m['card_id']=='NEW1_019' and not m.get('silenced') for m in y['board']):
             return None  # Keep deterministic attacks available without assuming random summon damage.
         spell_damage = sum(m.get("spell_damage", 0) for m in y["board"])
         if cid in PLAY_MINIONS:
-            summon(result, y, cid, c["entity_id"], c, action.get("position"))
+            summon(result, y, cid, c["entity_id"], c, action.get("position"), trigger=False)
             if cid == 'DS1_070' and target is not None:
                 if target not in y['board'] or not is_beast(target):return None
                 target['base_attack'] += 2; target['health'] += 2; target['max_health'] += 2
@@ -247,6 +250,9 @@ def transition(state, action, companion=None):
             if cid == 'EX1_066':
                 o['weapon'] = None
                 # Enemy hero attack in the observation is zero outside its turn.
+            if '_chance_tape' in result:
+                from chance_model import knives
+                knives(result, y, c['entity_id'])
         elif cid in SECRETS:
             if len(y.get('secrets', [])) >= 5 or cid in {x['card_id'] for x in y.get('secrets', [])}:return None
             y.setdefault('secrets', []).append(c)
