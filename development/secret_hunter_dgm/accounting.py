@@ -21,3 +21,9 @@ def finish(name,**details):
   fcntl.flock(lock,fcntl.LOCK_EX);b=json.loads((D/'budget.json').read_text());r=next(r for r in b['runs'] if r['name']==name)
   r.update(elapsed_s=time.time()-r['started'],status='completed',**details);save(b)
   assert r['elapsed_s']<=r['reserved_seconds'],'Wall reservation exceeded; stop scheduling'
+
+def fail(name,evidence,ended=None):
+ """Close failed experiment accounting while retaining all reservations."""
+ with (D/'budget.lock').open('a') as lock:
+  fcntl.flock(lock,fcntl.LOCK_EX);b=json.loads((D/'budget.json').read_text());r=next(r for r in b['runs'] if r['name']==name)
+  r.update(elapsed_s=max(0,(ended or time.time())-r['started']),status='failed',failure=evidence);save(b)

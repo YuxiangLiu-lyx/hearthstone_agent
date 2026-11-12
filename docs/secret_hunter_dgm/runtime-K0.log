@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone-krush-20261111/development/secret_hunter_dgm/runtime_checks.py", line 66, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone-krush-20261111/development/secret_hunter_dgm/runtime_checks.py", line 52, in main
+    run({**s,'game_id':'malformed-history'},'malformed_history')
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone-krush-20261111/development/secret_hunter_dgm/runtime_checks.py", line 23, in run
+    elapsed=time.monotonic()-start;assert proc.returncode==0,proc.stderr
+                                          ^^^^^^^^^^^^^^^^^^
+AssertionError: Traceback (most recent call last):
+  File "/private/var/folders/f4/3c2p11sd22b76640b44tvyv80000gn/T/tmpi1f9_l8h/skill/scripts/decide.py", line 84, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/private/var/folders/f4/3c2p11sd22b76640b44tvyv80000gn/T/tmpi1f9_l8h/skill/scripts/decide.py", line 45, in main
+    state=with_public_history(raw,[json.loads(line) for line in history.read_text().splitlines() if line])
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/f4/3c2p11sd22b76640b44tvyv80000gn/T/tmpi1f9_l8h/skill/scripts/decide.py", line 45, in <listcomp>
+    state=with_public_history(raw,[json.loads(line) for line in history.read_text().splitlines() if line])
+                                   ^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+

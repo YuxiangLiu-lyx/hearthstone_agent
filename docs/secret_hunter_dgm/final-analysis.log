@@ -1,0 +1,68 @@
+{
+  "candidate": "Y1",
+  "performance_gates_pass": true,
+  "gates": {
+    "primary_gain_at_least_one_point": true,
+    "primary_paired_lower_positive": true,
+    "families_no_drop_over_five_points": true,
+    "old_pool_overall_no_drop_over_three_points": true,
+    "old_pool_each_no_drop_over_ten_points": true
+  },
+  "primary_vs_K0": {
+    "n_per_arm": 800,
+    "seed_clusters": 80,
+    "a_wins": 607,
+    "b_wins": 633,
+    "a_rate": 0.76875,
+    "b_rate": 0.8031250000000001,
+    "gain": 0.034375000000000044,
+    "gain_seed_cluster_95": [
+      0.009375,
+      0.05937500000000002
+    ],
+    "a_only_wins": 29,
+    "b_only_wins": 55,
+    "weighting": "equal family macro",
+    "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+  },
+  "primary_vs_K1": {
+    "n_per_arm": 800,
+    "seed_clusters": 80,
+    "a_wins": 623,
+    "b_wins": 633,
+    "a_rate": 0.7875000000000001,
+    "b_rate": 0.8031250000000001,
+    "gain": 0.015625,
+    "gain_seed_cluster_95": [
+      -0.0005208333333333343,
+      0.0328125
+    ],
+    "a_only_wins": 13,
+    "b_only_wins": 23,
+    "weighting": "equal family macro",
+    "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+  },
+  "guardrail_vs_K0": {
+    "n_per_arm": 560,
+    "seed_clusters": 20,
+    "a_wins": 499,
+    "b_wins": 503,
+    "a_rate": 0.8910714285714286,
+    "b_rate": 0.8982142857142857,
+    "gain": 0.0071428571428571175,
+    "gain_seed_cluster_95": [
+      -0.00892857142857143,
+      0.023214285714285725
+    ],
+    "a_only_wins": 10,
+    "b_only_wins": 14,
+    "weighting": "equal games",
+    "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+  },
+  "promotion": "pending_reliability",
+  "release_zip": "dist/secret-hunter-krush-y1.zip",
+  "no_final_driven_policy_change": true,
+  "no_additional_confirmation": true,
+  "official_submission": false,
+  "scope": "Original 30-card Krush/Misdirection deck; fixed proxies, not real Astra. Old D1/C2 results excluded."
+}

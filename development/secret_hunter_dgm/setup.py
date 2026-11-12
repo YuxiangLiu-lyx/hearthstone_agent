@@ -17,7 +17,7 @@ def main():
     if isinstance(v,int) and (k=='start' or k.endswith('_start')):
      n=x.get(k.replace('start','seeds'),x.get('seeds',x.get('seed_count',1)))
      used.update(range(v,v+(n if isinstance(n,int) and 0<n<10000 else 1)))
-    if k in ('used_seeds','seeds','seed_list') and isinstance(v,list):used.update(z for z in v if isinstance(z,int))
+    if k in ('used_seeds','used_seed_values','seeds','seed_list') and isinstance(v,list):used.update(z for z in v if isinstance(z,int))
     if k in ('seed_blocks','reserved_blocks') and isinstance(v,dict):
      for b in v.values():
       if isinstance(b,list) and len(b)==2 and all(isinstance(n,int) for n in b):used.update(range(b[0],b[0]+b[1]))

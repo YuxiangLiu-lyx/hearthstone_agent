@@ -1,0 +1,123 @@
+{
+  "candidate": "Y1",
+  "performance_gates_pass": true,
+  "gates": {
+    "primary_gain_at_least_one_point": true,
+    "primary_paired_lower_positive": true,
+    "families_no_drop_over_five_points": true,
+    "old_pool_overall_no_drop_over_three_points": true,
+    "old_pool_each_no_drop_over_ten_points": true,
+    "reliability": false
+  },
+  "primary_vs_K0": {
+    "n_per_arm": 800,
+    "seed_clusters": 80,
+    "a_wins": 607,
+    "b_wins": 633,
+    "a_rate": 0.76875,
+    "b_rate": 0.8031250000000001,
+    "gain": 0.034375000000000044,
+    "gain_seed_cluster_95": [
+      0.009375,
+      0.05937500000000002
+    ],
+    "a_only_wins": 29,
+    "b_only_wins": 55,
+    "weighting": "equal family macro",
+    "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+  },
+  "primary_vs_K1": {
+    "n_per_arm": 800,
+    "seed_clusters": 80,
+    "a_wins": 623,
+    "b_wins": 633,
+    "a_rate": 0.7875000000000001,
+    "b_rate": 0.8031250000000001,
+    "gain": 0.015625,
+    "gain_seed_cluster_95": [
+      -0.0005208333333333343,
+      0.0328125
+    ],
+    "a_only_wins": 13,
+    "b_only_wins": 23,
+    "weighting": "equal family macro",
+    "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+  },
+  "guardrail_vs_K0": {
+    "n_per_arm": 560,
+    "seed_clusters": 20,
+    "a_wins": 499,
+    "b_wins": 503,
+    "a_rate": 0.8910714285714286,
+    "b_rate": 0.8982142857142857,
+    "gain": 0.0071428571428571175,
+    "gain_seed_cluster_95": [
+      -0.00892857142857143,
+      0.023214285714285725
+    ],
+    "a_only_wins": 10,
+    "b_only_wins": 14,
+    "weighting": "equal games",
+    "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+  },
+  "promotion": "not_promoted",
+  "release_zip": "dist/secret-hunter-krush-y1.zip",
+  "no_final_driven_policy_change": true,
+  "no_additional_confirmation": true,
+  "official_submission": false,
+  "scope": "Original 30-card Krush/Misdirection deck; fixed proxies, not real Astra. Old D1/C2 results excluded.",
+  "reliability": {
+    "protected_historical_files": 3872,
+    "installed_engine_files": 339,
+    "fixed_populations_verified": true,
+    "source_zip_hashes_match": true,
+    "scheduled_python_games": 10952,
+    "python_policy_decisions": 313452,
+    "normal_game_defects_both_sides": 0,
+    "terminal_counterfactuals": 1380,
+    "counterfactual_errors": 0,
+    "client_games": 2,
+    "completed_full_games": 12334,
+    "full_attempt_charges": 12421,
+    "unused_conservative_full_reservations": 87,
+    "short_branch_charges": 33190,
+    "experiment_wall_seconds_summed": 1315.8916635513306,
+    "final_full_charges": 4610,
+    "failed_runs": [
+      {
+        "name": "pipeline-checks",
+        "full": 0,
+        "short": 200,
+        "final": false,
+        "reserved_seconds": 600,
+        "started": 1794444249.0860128,
+        "status": "failed",
+        "pid": 79487,
+        "elapsed_s": 12.103135824203491,
+        "failure": "Fault-injected stale-observation subprocess exceeded 2.5s communicate timeout under concurrent load; harness cleanup raced a still-running child. No normal-game exception. Original log retained."
+      },
+      {
+        "name": "runtime-K0",
+        "full": 0,
+        "short": 120,
+        "final": false,
+        "reserved_seconds": 600,
+        "started": 1794444515.788875,
+        "status": "failed",
+        "pid": 80259,
+        "elapsed_s": 11.200104713439941,
+        "failure": "Frozen H7/K0 exits with JSONDecodeError on injected malformed history; normal cases preceded this failure. Baseline is preserved; failure is separate from normal matches."
+      }
+    ],
+    "runtime_normal_cold_over_2s": 0,
+    "unresolved_fault_test_timeout": true,
+    "zip_exact_outcomes": 48,
+    "zip_exact_traces": 47,
+    "client_exact_actions": 64,
+    "model_host_test_this_round": false,
+    "model_cost": "No extra model/API calls; current Codex session billing not exposed.",
+    "runs": null
+  },
+  "recommended": "H7",
+  "reason": "Preserve H7. A >2.5s fault-injected full-CLI test remains unexplained; eight later correct refreshes do not erase it. Performance gates are reported independently. No post-final policy repair or seed reuse."
+}

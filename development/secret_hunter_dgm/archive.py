@@ -19,6 +19,7 @@ def main():
   for name,c in archive.items():
    if (name,c['source_sha256'],len(c['runs']),c['status']) not in known:f.write(json.dumps({'timestamp':time.time(),'run_count':len(c['runs']),**c})+'\n')
  used=set(json.loads((D/'seed-audit.json').read_text())['used_seeds'])
+ used.update(range(954000,960000))
  for r in runs:used.update(r['seeds'])
  write(D/'checkpoint.json',{'archive':'docs/secret_hunter_dgm/candidates.json','archive_events':'docs/secret_hunter_dgm/archive.jsonl','used_seed_values':sorted(used),'reserved_blocks':json.loads((D/'plan.json').read_text())['seed_blocks'],'budget':'docs/secret_hunter_dgm/budget.json','candidate_hashes':{n:c['source_sha256'] for n,c in archive.items()},'final_opened':(D/'final-results.json').exists(),'generator':'Current Codex session reads evidence and proposes code; scheduler does not invent strategies.','new_round':'Read this checkpoint and all older reservations; choose a new ledger and unseen final blocks after current final is opened.'})
  print(json.dumps([{'id':n,'status':c['status'],'runs':len(c['runs'])} for n,c in archive.items()]))

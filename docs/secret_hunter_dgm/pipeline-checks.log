@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone-krush-20261111/development/secret_hunter_dgm/pipeline_checks.py", line 33, in main
+    out,err=proc.communicate(timeout=2.5);elapsed=time.monotonic()-start;assert proc.returncode==0 and json.loads(out)['refresh_required']
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 2116, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 1253, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/bin/python', 'scripts/decide.py']' timed out after 2.5 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone-krush-20261111/development/secret_hunter_dgm/pipeline_checks.py", line 36, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone-krush-20261111/development/secret_hunter_dgm/pipeline_checks.py", line 21, in main
+    with tempfile.TemporaryDirectory() as temp:
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/shutil.py", line 752, in rmtree
+    _rmtree_safe_fd(fd, path, onerror)
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/shutil.py", line 672, in _rmtree_safe_fd
+    _rmtree_safe_fd(dirfd, fullname, onerror)
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/shutil.py", line 672, in _rmtree_safe_fd
+    _rmtree_safe_fd(dirfd, fullname, onerror)
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/shutil.py", line 683, in _rmtree_safe_fd
+    onerror(os.rmdir, fullname, sys.exc_info())
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15/Frameworks/Python.framework/Versions/3.11/lib/python3.11/shutil.py", line 681, in _rmtree_safe_fd
+    os.rmdir(entry.name, dir_fd=topfd)
+OSError: [Errno 66] Directory not empty: '__pycache__'
