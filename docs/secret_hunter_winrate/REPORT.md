@@ -73,3 +73,5 @@ The remaining 1,401 charged full attempts were used as follows: 288 development 
 Research artifact: `dist/secret-hunter-krush-winrate-w3.zip`, 42,474 bytes, 24 competition files, no training data or weights. SHA-256: `3db718b39ec0901c9d7a019d7e7f2af6077cef5530f31619e26c58aa30edb997`. Frozen W3 source hash: `aae8e1ccfa7f797fcc4c063e143c49c4f19e092557df00fa6bbb61d5fd78a0e2`.
 
 **Recommended baseline remains** `dist/secret-hunter-krush-y1.zip`, SHA-256 `e1427f2acdf25da33b97bb6ea6ea9d57b9c56d13722224213149f621c40f9084`. W3 is a reproducible research artifact, not a winning replacement. The previous champion pointer is unchanged. See [REPRODUCE.md](REPRODUCE.md) for audit and replay commands and [archive.json](archive.json) for the candidate lineage.
+
+Implementation and experiment commit: `796767a46486d7346ac4b11bcd18078bebcf1e6d`. The final metadata commit is available in branch history. The whitespace check reports one inherited trailing-space line in each copied `improvements.py`; all four copies are byte-identical to frozen Y1 and were preserved to keep evaluated source hashes stable. Newly authored files have no whitespace-check findings.
