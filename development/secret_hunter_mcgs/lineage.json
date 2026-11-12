@@ -1,0 +1,53 @@
+[
+  {
+    "name": "M0-uct",
+    "parent": "Y1",
+    "path": "development/secret_hunter_mcgs/candidates/M0-uct",
+    "sha256": "bcc5e28c785b14d3435bec7efde945e4878f379af4c06aef91b9b9726e60fc3a",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "uct",
+      "chance": "fixed"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4"
+  },
+  {
+    "name": "M1-fixed",
+    "parent": "Y1",
+    "path": "development/secret_hunter_mcgs/candidates/M1-fixed",
+    "sha256": "ca47194a95cf6155af19ce8cb1255a9c9cd3a75471d0c582a0dadd85ca611ca7",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "ucd",
+      "chance": "fixed"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4"
+  },
+  {
+    "name": "M2-dpw",
+    "parent": "Y1",
+    "path": "development/secret_hunter_mcgs/candidates/M2-dpw",
+    "sha256": "3df8d089d814da8837ab195e4e6fcbf22c15dbca01d46fdbbe436149a4d2e715",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "ucd",
+      "chance": "dpw"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4"
+  }
+]

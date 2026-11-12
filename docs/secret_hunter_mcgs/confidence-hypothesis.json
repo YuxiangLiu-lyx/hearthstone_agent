@@ -1,0 +1,20 @@
+{
+  "name": "M6-confidence",
+  "parent": "M5-uct",
+  "path": "development/secret_hunter_mcgs/candidates/M6-confidence",
+  "sha256": "5c1ac33a3c1b780130c0108f919f1e240e9412e330aa504f83df1e946d4839e4",
+  "settings": {
+    "budget_s": 1.3,
+    "max_transitions": 350,
+    "horizon": 3,
+    "min_visits": 6,
+    "margin": 0.12,
+    "iterations": 100,
+    "graph": "uct",
+    "chance": "fixed"
+  },
+  "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+  "origin": "Codex failure-driven configuration revision",
+  "failure": "CLI harmed win at seed 10000600, Astra board, seat 1: M5-DPW overrode Y1 with only two visits per competing root action.",
+  "hypothesis": "Require six visits per competing root action and double the override margin before replacing the baseline."
+}

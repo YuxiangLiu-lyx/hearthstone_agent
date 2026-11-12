@@ -1,0 +1,172 @@
+{
+  "pid": 8122,
+  "mode": "run",
+  "effective_seconds": 2452.5467684140895,
+  "attempts": 693,
+  "attempt_status": {
+    "done": 689,
+    "running": 4
+  },
+  "completed": 689,
+  "continuations": 672,
+  "best": "M5-uct",
+  "archive": [
+    "Y1",
+    "M5-uct",
+    "M5-fixed",
+    "M5-dpw",
+    "M6-confidence"
+  ],
+  "next_experiment": {
+    "batch": "confidence-104",
+    "failure_archive": "/Users/liuyuxiang/.codex/worktrees/hearthstone-mcgs-20261112/runs/krush-mcgs/hard_cases/confidence-104.json",
+    "proposal": "Inspect paired losses: separate poor response particles from cutoff value error; keep a fixed-transition UCT parent.",
+    "requires_code_agent": true,
+    "autonomous_configuration_evaluation_continues": true
+  },
+  "batches": [
+    {
+      "id": "pilot-000",
+      "phase": "development",
+      "arms": [
+        "Y1",
+        "M0-uct",
+        "M1-fixed",
+        "M2-dpw"
+      ],
+      "start": 10000000,
+      "seeds": 2,
+      "status": "aborted_semantic_failure",
+      "progress": {
+        "cancelled_before_launch": 48,
+        "done": 48
+      }
+    },
+    {
+      "id": "pilot-001",
+      "phase": "development",
+      "arms": [
+        "Y1",
+        "M2-dpw"
+      ],
+      "start": 10000100,
+      "seeds": 2,
+      "status": "aborted_semantic_failure",
+      "progress": {
+        "cancelled_before_launch": 48
+      }
+    },
+    {
+      "id": "pilot-100",
+      "phase": "development",
+      "arms": [
+        "Y1",
+        "M3-uct",
+        "M3-fixed",
+        "M3-dpw"
+      ],
+      "start": 10000200,
+      "seeds": 2,
+      "status": "done",
+      "progress": {
+        "done": 96
+      }
+    },
+    {
+      "id": "pilot-101",
+      "phase": "development",
+      "arms": [
+        "Y1",
+        "M3-dpw"
+      ],
+      "start": 10000300,
+      "seeds": 2,
+      "status": "done",
+      "progress": {
+        "done": 48
+      }
+    },
+    {
+      "id": "pilot-102",
+      "phase": "development",
+      "arms": [
+        "Y1",
+        "M3-dpw",
+        "M5-dpw"
+      ],
+      "start": 10000400,
+      "seeds": 4,
+      "status": "done",
+      "progress": {
+        "done": 144
+      }
+    },
+    {
+      "id": "cli-103",
+      "phase": "cli_development",
+      "arms": [
+        "Y1",
+        "M5-uct",
+        "M5-fixed",
+        "M5-dpw"
+      ],
+      "start": 10000600,
+      "seeds": 1,
+      "status": "done",
+      "progress": {
+        "done": 48
+      }
+    },
+    {
+      "id": "confidence-104",
+      "phase": "development",
+      "arms": [
+        "Y1",
+        "M5-uct",
+        "M6-confidence"
+      ],
+      "start": 10000700,
+      "seeds": 4,
+      "status": "done",
+      "progress": {
+        "done": 144
+      }
+    },
+    {
+      "id": "gen-000",
+      "phase": "development",
+      "arms": [
+        "Y1",
+        "M5-uct",
+        "G000"
+      ],
+      "start": 10001000,
+      "seeds": 4,
+      "status": "aborted_storage_failure",
+      "progress": {
+        "cancelled_before_launch": 48,
+        "done": 96
+      }
+    },
+    {
+      "id": "gen-001",
+      "phase": "development",
+      "arms": [
+        "Y1",
+        "M5-fixed",
+        "G001"
+      ],
+      "start": 10001100,
+      "seeds": 4,
+      "status": "pending",
+      "progress": {
+        "done": 65,
+        "pending": 75,
+        "running": 4
+      }
+    }
+  ],
+  "final_opened": false,
+  "promotion": "not evaluated",
+  "autonomy": "Automatic configuration experiments; structural changes require a recorded code revision."
+}

@@ -1,0 +1,184 @@
+{
+  "scope": "Available student logs only; missing historical cloud observations are excluded from these telemetry counts, not silently reconstructed. All cli-103 logs are complete.",
+  "batches": {
+    "pilot-100": {
+      "Y1": {
+        "available_student_logs": 24,
+        "expected_games": 24,
+        "observed_decisions": 644,
+        "mcgs_calls": 0,
+        "changed": 0,
+        "failures": {},
+        "cross_turn": 0,
+        "unique_states_sum": 0,
+        "transposition_hits_sum": 0,
+        "chance_samples_sum": 0
+      },
+      "M3-uct": {
+        "available_student_logs": 24,
+        "expected_games": 24,
+        "observed_decisions": 657,
+        "mcgs_calls": 365,
+        "changed": 78,
+        "failures": {
+          "root_weapon_mismatch": 4,
+          "unknown_enemy_secret": 3
+        },
+        "cross_turn": 11220,
+        "unique_states_sum": 37005,
+        "transposition_hits_sum": 0,
+        "chance_samples_sum": 15933
+      },
+      "M3-fixed": {
+        "available_student_logs": 24,
+        "expected_games": 24,
+        "observed_decisions": 648,
+        "mcgs_calls": 357,
+        "changed": 73,
+        "failures": {
+          "unknown_enemy_secret": 2
+        },
+        "cross_turn": 11002,
+        "unique_states_sum": 36294,
+        "transposition_hits_sum": 598,
+        "chance_samples_sum": 16428
+      },
+      "M3-dpw": {
+        "available_student_logs": 24,
+        "expected_games": 24,
+        "observed_decisions": 657,
+        "mcgs_calls": 370,
+        "changed": 86,
+        "failures": {
+          "root_weapon_mismatch": 5
+        },
+        "cross_turn": 11161,
+        "unique_states_sum": 41670,
+        "transposition_hits_sum": 682,
+        "chance_samples_sum": 13128
+      }
+    },
+    "pilot-101": {
+      "Y1": {
+        "available_student_logs": 24,
+        "expected_games": 24,
+        "observed_decisions": 730,
+        "mcgs_calls": 0,
+        "changed": 0,
+        "failures": {},
+        "cross_turn": 0,
+        "unique_states_sum": 0,
+        "transposition_hits_sum": 0,
+        "chance_samples_sum": 0
+      },
+      "M3-dpw": {
+        "available_student_logs": 24,
+        "expected_games": 24,
+        "observed_decisions": 733,
+        "mcgs_calls": 413,
+        "changed": 100,
+        "failures": {
+          "root_weapon_mismatch": 6,
+          "unknown_enemy_secret": 4
+        },
+        "cross_turn": 12566,
+        "unique_states_sum": 48130,
+        "transposition_hits_sum": 712,
+        "chance_samples_sum": 14506
+      }
+    },
+    "pilot-102": {
+      "Y1": {
+        "available_student_logs": 48,
+        "expected_games": 48,
+        "observed_decisions": 1364,
+        "mcgs_calls": 0,
+        "changed": 0,
+        "failures": {},
+        "cross_turn": 0,
+        "unique_states_sum": 0,
+        "transposition_hits_sum": 0,
+        "chance_samples_sum": 0
+      },
+      "M3-dpw": {
+        "available_student_logs": 47,
+        "expected_games": 48,
+        "observed_decisions": 1407,
+        "mcgs_calls": 799,
+        "changed": 195,
+        "failures": {
+          "unknown_enemy_secret": 5,
+          "root_weapon_mismatch": 16
+        },
+        "cross_turn": 24585,
+        "unique_states_sum": 90599,
+        "transposition_hits_sum": 1611,
+        "chance_samples_sum": 28760
+      },
+      "M5-dpw": {
+        "available_student_logs": 48,
+        "expected_games": 48,
+        "observed_decisions": 1389,
+        "mcgs_calls": 788,
+        "changed": 192,
+        "failures": {
+          "unknown_enemy_secret": 7
+        },
+        "cross_turn": 24233,
+        "unique_states_sum": 89248,
+        "transposition_hits_sum": 1010,
+        "chance_samples_sum": 28000
+      }
+    },
+    "cli-103": {
+      "Y1": {
+        "available_student_logs": 12,
+        "expected_games": 12,
+        "observed_decisions": 323,
+        "mcgs_calls": 0,
+        "changed": 0,
+        "failures": {},
+        "cross_turn": 0,
+        "unique_states_sum": 0,
+        "transposition_hits_sum": 0,
+        "chance_samples_sum": 0
+      },
+      "M5-uct": {
+        "available_student_logs": 12,
+        "expected_games": 12,
+        "observed_decisions": 347,
+        "mcgs_calls": 193,
+        "changed": 26,
+        "failures": {},
+        "cross_turn": 3272,
+        "unique_states_sum": 12180,
+        "transposition_hits_sum": 0,
+        "chance_samples_sum": 4548
+      },
+      "M5-fixed": {
+        "available_student_logs": 12,
+        "expected_games": 12,
+        "observed_decisions": 351,
+        "mcgs_calls": 191,
+        "changed": 28,
+        "failures": {},
+        "cross_turn": 3061,
+        "unique_states_sum": 11591,
+        "transposition_hits_sum": 39,
+        "chance_samples_sum": 4319
+      },
+      "M5-dpw": {
+        "available_student_logs": 12,
+        "expected_games": 12,
+        "observed_decisions": 341,
+        "mcgs_calls": 207,
+        "changed": 39,
+        "failures": {},
+        "cross_turn": 3834,
+        "unique_states_sum": 16176,
+        "transposition_hits_sum": 81,
+        "chance_samples_sum": 4300
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "tests": 12,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 2.8168862080201507,
+  "evidence": [
+    {
+      "test": "companion",
+      "counts": {
+        "NEW1_033": 93,
+        "NEW1_032": 104,
+        "NEW1_034": 103
+      },
+      "exact_probability_each": 0.3333333333333333
+    },
+    {
+      "test": "full_horizon",
+      "metrics": {
+        "transitions": 99,
+        "chance_samples": 11,
+        "opponent_actions": 40,
+        "iterations": 10,
+        "cross_turn": 10,
+        "terminal": 0,
+        "chance_reuses": 4
+      },
+      "transpositions": 1
+    },
+    {
+      "test": "diamond",
+      "offpath_updates": 1,
+      "node_visits": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "edge_visits": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "test": "duplicate_weighting",
+      "samples": {
+        "a": 7977,
+        "b": 4023
+      },
+      "stored_samples": 3,
+      "unique_outcomes": 2
+    },
+    {
+      "test": "latent_particle_retention",
+      "counts": {
+        "no-coil": 513,
+        "coil": 487
+      }
+    },
+    {
+      "test": "friendly_coil_amani",
+      "visible_attack_before": 6,
+      "attack_after": 9,
+      "own_hp": 9,
+      "winner": 2
+    },
+    {
+      "test": "real_engine_diamond",
+      "same_public_successor": true,
+      "position_and_mana_separated": true
+    },
+    {
+      "test": "ordered_secrets_bow",
+      "outcomes": [
+        {
+          "order": [
+            "EX1_610",
+            "EX1_611"
+          ],
+          "durability": 4,
+          "hp": 30
+        },
+        {
+          "order": [
+            "EX1_611",
+            "EX1_610"
+          ],
+          "durability": 3,
+          "hp": 30
+        }
+      ],
+      "misdirection_trials": 12
+    }
+  ]
+}

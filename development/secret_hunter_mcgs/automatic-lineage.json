@@ -1,0 +1,248 @@
+{
+  "Y1": {
+    "path": "development/secret_hunter_response/candidates/Y1",
+    "sha256": "47ea1ba9392507e7eaa28cd4384056cb2acee11c57d7253db95099f3ef924735",
+    "parent": null
+  },
+  "M0-uct": {
+    "name": "M0-uct",
+    "parent": "Y1",
+    "path": "development/secret_hunter_mcgs/candidates/M0-uct",
+    "sha256": "bcc5e28c785b14d3435bec7efde945e4878f379af4c06aef91b9b9726e60fc3a",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "uct",
+      "chance": "fixed"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4"
+  },
+  "M1-fixed": {
+    "name": "M1-fixed",
+    "parent": "Y1",
+    "path": "development/secret_hunter_mcgs/candidates/M1-fixed",
+    "sha256": "ca47194a95cf6155af19ce8cb1255a9c9cd3a75471d0c582a0dadd85ca611ca7",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "ucd",
+      "chance": "fixed"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4"
+  },
+  "M2-dpw": {
+    "name": "M2-dpw",
+    "parent": "Y1",
+    "path": "development/secret_hunter_mcgs/candidates/M2-dpw",
+    "sha256": "3df8d089d814da8837ab195e4e6fcbf22c15dbca01d46fdbbe436149a4d2e715",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "ucd",
+      "chance": "dpw"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4"
+  },
+  "M3-uct": {
+    "name": "M3-uct",
+    "parent": "M0-uct",
+    "path": "development/secret_hunter_mcgs/candidates/M3-uct",
+    "sha256": "b1d5941308adff4ccb94f90cff3d16cdc7f3ae40cb5342019de24b82a35f1529",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "uct",
+      "chance": "fixed"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "origin": "Codex structural revision",
+    "failure": "Weapon.max_health is not durability; public-world bow gained two phantom charges.",
+    "change": "Reconstruct damage from observed durability; reject root weapon mismatch.",
+    "evidence": "checks.test_secret_order_bow_and_misdirection, original 48-game diagnostic"
+  },
+  "M3-fixed": {
+    "name": "M3-fixed",
+    "parent": "M1-fixed",
+    "path": "development/secret_hunter_mcgs/candidates/M3-fixed",
+    "sha256": "cb4688e7675c4b77d7703cb82c12bea66cb150b99cbb59eaa00196e596ef74b2",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "ucd",
+      "chance": "fixed"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "origin": "Codex structural revision",
+    "failure": "Weapon.max_health is not durability; public-world bow gained two phantom charges.",
+    "change": "Reconstruct damage from observed durability; reject root weapon mismatch.",
+    "evidence": "checks.test_secret_order_bow_and_misdirection, original 48-game diagnostic"
+  },
+  "M3-dpw": {
+    "name": "M3-dpw",
+    "parent": "M2-dpw",
+    "path": "development/secret_hunter_mcgs/candidates/M3-dpw",
+    "sha256": "aa8e14d95e856ccb5c54e8047573a287d51c90842fdf7a016df353ce2ed9c2f3",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "ucd",
+      "chance": "dpw"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "origin": "Codex structural revision",
+    "failure": "Weapon.max_health is not durability; public-world bow gained two phantom charges.",
+    "change": "Reconstruct damage from observed durability; reject root weapon mismatch.",
+    "evidence": "checks.test_secret_order_bow_and_misdirection, original 48-game diagnostic"
+  },
+  "M4-particles": {
+    "name": "M4-particles",
+    "parent": "M3-dpw",
+    "path": "development/secret_hunter_mcgs/candidates/M4-particles",
+    "sha256": "0605ed94f44b0f8a3ae08da9d18bf466c0818567995096797853987311bbbb42",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "ucd",
+      "chance": "dpw"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "origin": "Codex structural revision",
+    "failure": "Identical visible chance outcomes retained only the first hidden-response particle.",
+    "change": "Retain all sampled latent payloads with empirical weights; keep choice offers and revealed-history constraints in graph keys; discard incomplete horizons."
+  },
+  "M5-dpw": {
+    "name": "M5-dpw",
+    "parent": "M4-particles",
+    "path": "development/secret_hunter_mcgs/candidates/M5-dpw",
+    "sha256": "3eaf1aa50da6ba55405541ad6cafdaffcb992ee00b64280d06d629fcdf2e6a84",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "ucd",
+      "chance": "dpw"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "origin": "Codex structural revision",
+    "failure": "SETASIDE entities can alias restored public IDs in card equality/selector operations.",
+    "change": "Allocate disposable setup entities in a disjoint ID namespace; retain particle and horizon fixes."
+  },
+  "M5-uct": {
+    "name": "M5-uct",
+    "parent": "M3-uct",
+    "path": "development/secret_hunter_mcgs/candidates/M5-uct",
+    "sha256": "2344bbe19d25c0636221ffc60fc8154e9b02ee045f282cd5fff15a96b35d144f",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "uct",
+      "chance": "fixed"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "origin": "Codex structural revision",
+    "failure": "SETASIDE entities can alias restored public IDs in card equality/selector operations.",
+    "change": "Allocate disposable setup entities in a disjoint ID namespace; retain particle and horizon fixes."
+  },
+  "M5-fixed": {
+    "name": "M5-fixed",
+    "parent": "M3-fixed",
+    "path": "development/secret_hunter_mcgs/candidates/M5-fixed",
+    "sha256": "25ed5566a7e5e04fd738e5e96429d20428b6930880ad0171bffdc71666351d32",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "ucd",
+      "chance": "fixed"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "origin": "Codex structural revision",
+    "failure": "SETASIDE entities can alias restored public IDs in card equality/selector operations.",
+    "change": "Allocate disposable setup entities in a disjoint ID namespace; retain particle and horizon fixes."
+  },
+  "G000": {
+    "name": "G000",
+    "parent": "M5-uct",
+    "path": "development/secret_hunter_mcgs/candidates/G000",
+    "sha256": "53e61f577a68bdbeabc4b2e1f2cbe9f8a56a3cb0b23de493cfe372ef046e5c98",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "uct",
+      "chance": "fixed",
+      "rollout": "filtered"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "hypothesis": {
+      "rollout": "filtered"
+    },
+    "origin": "automatic_preimplemented_configuration",
+    "generation": 0
+  },
+  "G001": {
+    "name": "G001",
+    "parent": "M5-fixed",
+    "path": "development/secret_hunter_mcgs/candidates/G001",
+    "sha256": "d2b3efc1fb1f94c90a5f3d8ee0a79695615ab1ed996960a8483c7f8a866d65e6",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.08,
+      "iterations": 100,
+      "graph": "ucd",
+      "chance": "fixed",
+      "value_board": 1.6
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "hypothesis": {
+      "value_board": 1.6,
+      "margin": 0.08
+    },
+    "origin": "automatic_preimplemented_configuration",
+    "generation": 1
+  }
+}

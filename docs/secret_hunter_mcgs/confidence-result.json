@@ -1,0 +1,959 @@
+{
+  "batch": "confidence-104",
+  "phase": "development",
+  "start": 10000700,
+  "seed_groups": 4,
+  "arms": {
+    "Y1": {
+      "all": {
+        "n": 48,
+        "wins": 45,
+        "losses": 3,
+        "draws_or_voids": 0,
+        "win_rate": 0.9375,
+        "wilson95_descriptive": [
+          0.8316430233725778,
+          0.9785171568687727
+        ],
+        "harness_errors": 0,
+        "illegal": 0,
+        "timeouts": 0,
+        "forfeits": 0,
+        "opponent_errors": 0,
+        "policy_errors": 0,
+        "fallbacks": 0,
+        "over_2s": 0,
+        "public_input_violations": 0
+      },
+      "by_group": {
+        "astra": {
+          "n": 24,
+          "wins": 21,
+          "losses": 3,
+          "draws_or_voids": 0,
+          "win_rate": 0.875,
+          "wilson95_descriptive": [
+            0.6899571185214243,
+            0.9565574496068442
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot1": {
+          "n": 8,
+          "wins": 8,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.6755843804891231,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2": {
+          "n": 16,
+          "wins": 16,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.8063865817272802,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      },
+      "by_opponent": {
+        "astra-board-proxy": {
+          "n": 8,
+          "wins": 7,
+          "losses": 1,
+          "draws_or_voids": 0,
+          "win_rate": 0.875,
+          "wilson95_descriptive": [
+            0.5291051942301386,
+            0.9775830911367038
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "astra-sticky-proxy": {
+          "n": 8,
+          "wins": 6,
+          "losses": 2,
+          "draws_or_voids": 0,
+          "win_rate": 0.75,
+          "wilson95_descriptive": [
+            0.40926987910258916,
+            0.9285223111419724
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "astra-tempo-proxy": {
+          "n": 8,
+          "wins": 8,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.6755843804891231,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot1-mage-proxy": {
+          "n": 8,
+          "wins": 8,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.6755843804891231,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2-face-proxy": {
+          "n": 8,
+          "wins": 8,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.6755843804891231,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2-trade-proxy": {
+          "n": 8,
+          "wins": 8,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.6755843804891231,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      },
+      "latency_s": {
+        "n": 1405,
+        "mean": 0.020129669001127105,
+        "max": 0.7280520839849487,
+        "p50": 0.003513165982440114,
+        "p95": 0.09394275001250207,
+        "p99": 0.2527048329357058
+      },
+      "teacher_family_macro": 0.9583333333333334,
+      "by_actual_first": {
+        "True": {
+          "n": 24,
+          "wins": 22,
+          "losses": 2,
+          "draws_or_voids": 0,
+          "win_rate": 0.9166666666666666,
+          "wilson95_descriptive": [
+            0.741507847985494,
+            0.9768416721570266
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "False": {
+          "n": 24,
+          "wins": 23,
+          "losses": 1,
+          "draws_or_voids": 0,
+          "win_rate": 0.9583333333333334,
+          "wilson95_descriptive": [
+            0.7975777375115778,
+            0.992606734645195
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      }
+    },
+    "M5-uct": {
+      "all": {
+        "n": 48,
+        "wins": 44,
+        "losses": 4,
+        "draws_or_voids": 0,
+        "win_rate": 0.9166666666666666,
+        "wilson95_descriptive": [
+          0.8044643483893369,
+          0.9671167756500444
+        ],
+        "harness_errors": 0,
+        "illegal": 0,
+        "timeouts": 0,
+        "forfeits": 0,
+        "opponent_errors": 0,
+        "policy_errors": 0,
+        "fallbacks": 0,
+        "over_2s": 0,
+        "public_input_violations": 0
+      },
+      "by_group": {
+        "astra": {
+          "n": 24,
+          "wins": 22,
+          "losses": 2,
+          "draws_or_voids": 0,
+          "win_rate": 0.9166666666666666,
+          "wilson95_descriptive": [
+            0.741507847985494,
+            0.9768416721570266
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot1": {
+          "n": 8,
+          "wins": 6,
+          "losses": 2,
+          "draws_or_voids": 0,
+          "win_rate": 0.75,
+          "wilson95_descriptive": [
+            0.40926987910258916,
+            0.9285223111419724
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2": {
+          "n": 16,
+          "wins": 16,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.8063865817272802,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      },
+      "by_opponent": {
+        "astra-board-proxy": {
+          "n": 8,
+          "wins": 7,
+          "losses": 1,
+          "draws_or_voids": 0,
+          "win_rate": 0.875,
+          "wilson95_descriptive": [
+            0.5291051942301386,
+            0.9775830911367038
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "astra-sticky-proxy": {
+          "n": 8,
+          "wins": 8,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.6755843804891231,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "astra-tempo-proxy": {
+          "n": 8,
+          "wins": 7,
+          "losses": 1,
+          "draws_or_voids": 0,
+          "win_rate": 0.875,
+          "wilson95_descriptive": [
+            0.5291051942301386,
+            0.9775830911367038
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot1-mage-proxy": {
+          "n": 8,
+          "wins": 6,
+          "losses": 2,
+          "draws_or_voids": 0,
+          "win_rate": 0.75,
+          "wilson95_descriptive": [
+            0.40926987910258916,
+            0.9285223111419724
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2-face-proxy": {
+          "n": 8,
+          "wins": 8,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.6755843804891231,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2-trade-proxy": {
+          "n": 8,
+          "wins": 8,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.6755843804891231,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      },
+      "latency_s": {
+        "n": 1414,
+        "mean": 0.6787425362230199,
+        "max": 1.4814044589875266,
+        "p50": 0.9729051670292392,
+        "p95": 1.3505760000552982,
+        "p99": 1.4401295830029994
+      },
+      "teacher_family_macro": 0.8888888888888888,
+      "by_actual_first": {
+        "True": {
+          "n": 24,
+          "wins": 24,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.8620194241710247,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "False": {
+          "n": 24,
+          "wins": 20,
+          "losses": 4,
+          "draws_or_voids": 0,
+          "win_rate": 0.8333333333333334,
+          "wilson95_descriptive": [
+            0.6414652961213058,
+            0.9332143199927109
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      }
+    },
+    "M6-confidence": {
+      "all": {
+        "n": 48,
+        "wins": 45,
+        "losses": 3,
+        "draws_or_voids": 0,
+        "win_rate": 0.9375,
+        "wilson95_descriptive": [
+          0.8316430233725778,
+          0.9785171568687727
+        ],
+        "harness_errors": 0,
+        "illegal": 0,
+        "timeouts": 0,
+        "forfeits": 0,
+        "opponent_errors": 0,
+        "policy_errors": 0,
+        "fallbacks": 0,
+        "over_2s": 0,
+        "public_input_violations": 0
+      },
+      "by_group": {
+        "astra": {
+          "n": 24,
+          "wins": 21,
+          "losses": 3,
+          "draws_or_voids": 0,
+          "win_rate": 0.875,
+          "wilson95_descriptive": [
+            0.6899571185214243,
+            0.9565574496068442
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot1": {
+          "n": 8,
+          "wins": 8,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.6755843804891231,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2": {
+          "n": 16,
+          "wins": 16,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.8063865817272802,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      },
+      "by_opponent": {
+        "astra-board-proxy": {
+          "n": 8,
+          "wins": 7,
+          "losses": 1,
+          "draws_or_voids": 0,
+          "win_rate": 0.875,
+          "wilson95_descriptive": [
+            0.5291051942301386,
+            0.9775830911367038
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "astra-sticky-proxy": {
+          "n": 8,
+          "wins": 6,
+          "losses": 2,
+          "draws_or_voids": 0,
+          "win_rate": 0.75,
+          "wilson95_descriptive": [
+            0.40926987910258916,
+            0.9285223111419724
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "astra-tempo-proxy": {
+          "n": 8,
+          "wins": 8,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.6755843804891231,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot1-mage-proxy": {
+          "n": 8,
+          "wins": 8,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.6755843804891231,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2-face-proxy": {
+          "n": 8,
+          "wins": 8,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.6755843804891231,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2-trade-proxy": {
+          "n": 8,
+          "wins": 8,
+          "losses": 0,
+          "draws_or_voids": 0,
+          "win_rate": 1.0,
+          "wilson95_descriptive": [
+            0.6755843804891231,
+            1.0
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      },
+      "latency_s": {
+        "n": 1411,
+        "mean": 0.7343831087743453,
+        "max": 1.476414208067581,
+        "p50": 1.0339818340726197,
+        "p95": 1.3676379160024226,
+        "p99": 1.4523741669254377
+      },
+      "teacher_family_macro": 0.9583333333333334,
+      "by_actual_first": {
+        "True": {
+          "n": 24,
+          "wins": 22,
+          "losses": 2,
+          "draws_or_voids": 0,
+          "win_rate": 0.9166666666666666,
+          "wilson95_descriptive": [
+            0.741507847985494,
+            0.9768416721570266
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "False": {
+          "n": 24,
+          "wins": 23,
+          "losses": 1,
+          "draws_or_voids": 0,
+          "win_rate": 0.9583333333333334,
+          "wilson95_descriptive": [
+            0.7975777375115778,
+            0.992606734645195
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "M5-uct": {
+      "all": {
+        "n_per_arm": 48,
+        "seed_clusters": 4,
+        "a_wins": 45,
+        "b_wins": 44,
+        "a_rate": 0.9375,
+        "b_rate": 0.9166666666666666,
+        "gain": -0.02083333333333337,
+        "gain_seed_cluster_95": [
+          -0.06250000000000003,
+          0.0
+        ],
+        "a_only_wins": 4,
+        "b_only_wins": 3,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "primary": {
+        "n_per_arm": 40,
+        "seed_clusters": 4,
+        "a_wins": 37,
+        "b_wins": 38,
+        "a_rate": 0.9375,
+        "b_rate": 0.9583333333333333,
+        "gain": 0.02083333333333326,
+        "gain_seed_cluster_95": [
+          -0.04166666666666663,
+          0.08333333333333337
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 3,
+        "weighting": "equal family macro",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "by_group": {
+        "astra": {
+          "n_per_arm": 24,
+          "seed_clusters": 4,
+          "a_wins": 21,
+          "b_wins": 22,
+          "a_rate": 0.875,
+          "b_rate": 0.9166666666666666,
+          "gain": 0.04166666666666663,
+          "gain_seed_cluster_95": [
+            -0.08333333333333331,
+            0.16666666666666669
+          ],
+          "a_only_wins": 2,
+          "b_only_wins": 3,
+          "weighting": "equal games",
+          "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+        },
+        "bot1": {
+          "n_per_arm": 8,
+          "seed_clusters": 4,
+          "a_wins": 8,
+          "b_wins": 6,
+          "a_rate": 1,
+          "b_rate": 0.75,
+          "gain": -0.25,
+          "gain_seed_cluster_95": [
+            -0.5,
+            0
+          ],
+          "a_only_wins": 2,
+          "b_only_wins": 0,
+          "weighting": "equal games",
+          "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+        },
+        "bot2": {
+          "n_per_arm": 16,
+          "seed_clusters": 4,
+          "a_wins": 16,
+          "b_wins": 16,
+          "a_rate": 1,
+          "b_rate": 1,
+          "gain": 0,
+          "gain_seed_cluster_95": [
+            0,
+            0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "weighting": "equal games",
+          "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+        }
+      }
+    },
+    "M6-confidence": {
+      "all": {
+        "n_per_arm": 48,
+        "seed_clusters": 4,
+        "a_wins": 45,
+        "b_wins": 45,
+        "a_rate": 0.9375,
+        "b_rate": 0.9375,
+        "gain": 0.0,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.0
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "primary": {
+        "n_per_arm": 40,
+        "seed_clusters": 4,
+        "a_wins": 37,
+        "b_wins": 37,
+        "a_rate": 0.9375,
+        "b_rate": 0.9375,
+        "gain": 0.0,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.0
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 0,
+        "weighting": "equal family macro",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "by_group": {
+        "astra": {
+          "n_per_arm": 24,
+          "seed_clusters": 4,
+          "a_wins": 21,
+          "b_wins": 21,
+          "a_rate": 0.875,
+          "b_rate": 0.875,
+          "gain": 0.0,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "weighting": "equal games",
+          "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+        },
+        "bot1": {
+          "n_per_arm": 8,
+          "seed_clusters": 4,
+          "a_wins": 8,
+          "b_wins": 8,
+          "a_rate": 1,
+          "b_rate": 1,
+          "gain": 0,
+          "gain_seed_cluster_95": [
+            0,
+            0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "weighting": "equal games",
+          "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+        },
+        "bot2": {
+          "n_per_arm": 16,
+          "seed_clusters": 4,
+          "a_wins": 16,
+          "b_wins": 16,
+          "a_rate": 1,
+          "b_rate": 1,
+          "gain": 0,
+          "gain_seed_cluster_95": [
+            0,
+            0
+          ],
+          "a_only_wins": 0,
+          "b_only_wins": 0,
+          "weighting": "equal games",
+          "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+        }
+      }
+    }
+  }
+}

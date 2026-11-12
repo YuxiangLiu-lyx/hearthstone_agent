@@ -1,0 +1,3227 @@
+{
+  "transition_cap": 400,
+  "wall_ceiling_s": 20,
+  "results": [
+    {
+      "case": "wolf",
+      "variant": "UCT",
+      "baseline": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "settings": {
+        "graph": "uct",
+        "chance": "fixed",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "attacker": 71,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6201877490446267,
+          "n": 9
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 0.5631842652042609,
+          "n": 6
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.5584973090322304,
+          "n": 7
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.5580879935685182,
+          "n": 7
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.540407190077035,
+          "n": 6
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.5278082355587144,
+          "n": 5
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 0.49941683205777404,
+          "n": 5
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 74,
+        "opponent_actions": 158,
+        "iterations": 45,
+        "cross_turn": 45,
+        "terminal": 0,
+        "chance_reuses": 18,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 117,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 1.3568694590358064,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "wolf",
+      "variant": "UCD-fixed",
+      "baseline": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "fixed",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "attacker": 72,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.596044031375411,
+          "n": 7
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.5957164931843102,
+          "n": 8
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.5827410902980175,
+          "n": 7
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.5753978798805602,
+          "n": 7
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.5722664542189635,
+          "n": 7
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 0.5286123737071114,
+          "n": 5
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 0.46803121691173066,
+          "n": 4
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 87,
+        "opponent_actions": 151,
+        "iterations": 45,
+        "cross_turn": 45,
+        "terminal": 0,
+        "chance_reuses": 18,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 189,
+      "transpositions": 10,
+      "offpath_updates": 19,
+      "failure": null,
+      "elapsed_s": 1.4319670000113547,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "wolf",
+      "variant": "UCD-DPW",
+      "baseline": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "attacker": 71,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.5847276430065432,
+          "n": 14
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.5512441627186708,
+          "n": 11
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.5323341054645301,
+          "n": 10
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.507828901094564,
+          "n": 9
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.5060770360876816,
+          "n": 8
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 0.4589244346865351,
+          "n": 6
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 0.45589051977645695,
+          "n": 7
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 85,
+        "opponent_actions": 115,
+        "iterations": 65,
+        "cross_turn": 65,
+        "terminal": 0,
+        "chance_reuses": 95
+      },
+      "unique_states": 240,
+      "transpositions": 10,
+      "offpath_updates": 46,
+      "failure": null,
+      "elapsed_s": 2.102456125081517,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "wolf",
+      "variant": "no-opponent-plays",
+      "baseline": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3,
+        "opponent_plays": false
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "attacker": 71,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6546555021041905,
+          "n": 13
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.6409827209825351,
+          "n": 13
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6334268813636238,
+          "n": 11
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.6137078296213907,
+          "n": 10
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.5993334948985629,
+          "n": 9
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 0.556168451835751,
+          "n": 8
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 0.5533685847929709,
+          "n": 7
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 93,
+        "opponent_actions": 99,
+        "iterations": 71,
+        "cross_turn": 71,
+        "terminal": 0,
+        "chance_reuses": 104,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 250,
+      "transpositions": 10,
+      "offpath_updates": 46,
+      "failure": null,
+      "elapsed_s": 2.2341948749963194,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "wolf",
+      "variant": "own-turn-only",
+      "baseline": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 1
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "attacker": 71,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.4692930379980075,
+          "n": 130
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.4692930379980075,
+          "n": 130
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.46588641397664116,
+          "n": 122
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 0.4628236173921478,
+          "n": 117
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 0.4628236173921478,
+          "n": 117
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.4488325261952178,
+          "n": 93
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.4488325261952178,
+          "n": 93
+        }
+      ],
+      "metrics": {
+        "transitions": 229,
+        "chance_samples": 210,
+        "iterations": 802,
+        "cross_turn": 0,
+        "terminal": 0,
+        "chance_reuses": 1741,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 64,
+      "transpositions": 9,
+      "offpath_updates": 690,
+      "failure": null,
+      "elapsed_s": 20.26781191700138,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "wolf",
+      "variant": "filtered-rollout",
+      "baseline": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3,
+        "rollout": "filtered"
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "attacker": 72,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6050398791635384,
+          "n": 16
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.5841519182385327,
+          "n": 14
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 0.5358910746351288,
+          "n": 11
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 0.5092032172775779,
+          "n": 10
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.5085027463932826,
+          "n": 9
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.42291861581644247,
+          "n": 6
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.4016721524185571,
+          "n": 5
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 95,
+        "opponent_actions": 121,
+        "iterations": 71,
+        "cross_turn": 71,
+        "terminal": 0,
+        "chance_reuses": 112,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 255,
+      "transpositions": 9,
+      "offpath_updates": 49,
+      "failure": null,
+      "elapsed_s": 2.8458144169999287,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "wolf",
+      "variant": "terminal-rollout",
+      "baseline": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3,
+        "terminal": true
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 37
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "attacker": 71,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 48,
+            "type": "attack"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 71,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 72,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.7180885751833498,
+          "n": 1
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 7,
+        "opponent_actions": 156,
+        "iterations": 7,
+        "cross_turn": 7,
+        "terminal": 6
+      },
+      "unique_states": 15,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 0.5853107909206301,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "tracking",
+      "variant": "UCT",
+      "baseline": {
+        "type": "choose",
+        "options": [
+          32
+        ]
+      },
+      "settings": {
+        "graph": "uct",
+        "chance": "fixed",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3
+      },
+      "action": {
+        "type": "choose",
+        "options": [
+          32
+        ]
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "options": [
+              30
+            ],
+            "type": "choose"
+          },
+          "mean": 0.41694093994832926,
+          "n": 10
+        },
+        {
+          "action": {
+            "options": [
+              32
+            ],
+            "type": "choose"
+          },
+          "mean": 0.3750922513843441,
+          "n": 8
+        },
+        {
+          "action": {
+            "options": [
+              29
+            ],
+            "type": "choose"
+          },
+          "mean": 0.3651177602838439,
+          "n": 9
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 49,
+        "opponent_actions": 187,
+        "iterations": 27,
+        "cross_turn": 27,
+        "terminal": 0,
+        "chance_reuses": 16,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 80,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 1.6283419999526814,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "tracking",
+      "variant": "UCD-fixed",
+      "baseline": {
+        "type": "choose",
+        "options": [
+          32
+        ]
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "fixed",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3
+      },
+      "action": {
+        "type": "choose",
+        "options": [
+          32
+        ]
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "options": [
+              30
+            ],
+            "type": "choose"
+          },
+          "mean": 0.41694093994832926,
+          "n": 10
+        },
+        {
+          "action": {
+            "options": [
+              32
+            ],
+            "type": "choose"
+          },
+          "mean": 0.3750922513843441,
+          "n": 8
+        },
+        {
+          "action": {
+            "options": [
+              29
+            ],
+            "type": "choose"
+          },
+          "mean": 0.3651177602838439,
+          "n": 9
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 49,
+        "opponent_actions": 187,
+        "iterations": 27,
+        "cross_turn": 27,
+        "terminal": 0,
+        "chance_reuses": 16,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 80,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 1.4893688339507207,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "tracking",
+      "variant": "UCD-DPW",
+      "baseline": {
+        "type": "choose",
+        "options": [
+          32
+        ]
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3
+      },
+      "action": {
+        "options": [
+          30
+        ],
+        "type": "choose"
+      },
+      "changed": true,
+      "root_values": [
+        {
+          "action": {
+            "options": [
+              30
+            ],
+            "type": "choose"
+          },
+          "mean": 0.5028755922888712,
+          "n": 11
+        },
+        {
+          "action": {
+            "options": [
+              29
+            ],
+            "type": "choose"
+          },
+          "mean": 0.4952476714000147,
+          "n": 10
+        },
+        {
+          "action": {
+            "options": [
+              32
+            ],
+            "type": "choose"
+          },
+          "mean": 0.4354253367011754,
+          "n": 6
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 32,
+        "opponent_actions": 164,
+        "iterations": 27,
+        "cross_turn": 27,
+        "terminal": 0,
+        "chance_reuses": 35,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 94,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 1.5248393750516698,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "tracking",
+      "variant": "no-opponent-plays",
+      "baseline": {
+        "type": "choose",
+        "options": [
+          32
+        ]
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3,
+        "opponent_plays": false
+      },
+      "action": {
+        "type": "choose",
+        "options": [
+          32
+        ]
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "options": [
+              32
+            ],
+            "type": "choose"
+          },
+          "mean": 0.5377472017638193,
+          "n": 15
+        },
+        {
+          "action": {
+            "options": [
+              30
+            ],
+            "type": "choose"
+          },
+          "mean": 0.5118614321113536,
+          "n": 12
+        },
+        {
+          "action": {
+            "options": [
+              29
+            ],
+            "type": "choose"
+          },
+          "mean": 0.503641460290555,
+          "n": 11
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 49,
+        "opponent_actions": 146,
+        "iterations": 38,
+        "cross_turn": 38,
+        "terminal": 0,
+        "chance_reuses": 56,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 150,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 1.6603144579567015,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "tracking",
+      "variant": "own-turn-only",
+      "baseline": {
+        "type": "choose",
+        "options": [
+          32
+        ]
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 1
+      },
+      "action": {
+        "options": [
+          30
+        ],
+        "type": "choose"
+      },
+      "changed": true,
+      "root_values": [
+        {
+          "action": {
+            "options": [
+              30
+            ],
+            "type": "choose"
+          },
+          "mean": 0.4025183409871074,
+          "n": 245
+        },
+        {
+          "action": {
+            "options": [
+              29
+            ],
+            "type": "choose"
+          },
+          "mean": 0.3932024649550845,
+          "n": 191
+        },
+        {
+          "action": {
+            "options": [
+              32
+            ],
+            "type": "choose"
+          },
+          "mean": 0.30799690414802605,
+          "n": 51
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 277,
+        "iterations": 487,
+        "cross_turn": 0,
+        "terminal": 0,
+        "chance_reuses": 1389
+      },
+      "unique_states": 287,
+      "transpositions": 1,
+      "offpath_updates": 1,
+      "failure": null,
+      "elapsed_s": 17.665301249944605,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "tracking",
+      "variant": "filtered-rollout",
+      "baseline": {
+        "type": "choose",
+        "options": [
+          32
+        ]
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3,
+        "rollout": "filtered"
+      },
+      "action": {
+        "type": "choose",
+        "options": [
+          32
+        ]
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "options": [
+              32
+            ],
+            "type": "choose"
+          },
+          "mean": 0.4592738272038356,
+          "n": 17
+        },
+        {
+          "action": {
+            "options": [
+              29
+            ],
+            "type": "choose"
+          },
+          "mean": 0.42974150784008935,
+          "n": 15
+        },
+        {
+          "action": {
+            "options": [
+              30
+            ],
+            "type": "choose"
+          },
+          "mean": 0.40236298993005143,
+          "n": 11
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 53,
+        "opponent_actions": 146,
+        "iterations": 43,
+        "cross_turn": 43,
+        "terminal": 0,
+        "chance_reuses": 69,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 157,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 2.4719061669893563,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "tracking",
+      "variant": "terminal-rollout",
+      "baseline": {
+        "type": "choose",
+        "options": [
+          32
+        ]
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3,
+        "terminal": true
+      },
+      "action": {
+        "options": [
+          30
+        ],
+        "type": "choose"
+      },
+      "changed": true,
+      "root_values": [
+        {
+          "action": {
+            "options": [
+              30
+            ],
+            "type": "choose"
+          },
+          "mean": 0.1980843598215219,
+          "n": 7
+        },
+        {
+          "action": {
+            "options": [
+              29
+            ],
+            "type": "choose"
+          },
+          "mean": 0.16666666666666666,
+          "n": 6
+        },
+        {
+          "action": {
+            "options": [
+              32
+            ],
+            "type": "choose"
+          },
+          "mean": 0.0,
+          "n": 3
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 18,
+        "opponent_actions": 213,
+        "iterations": 16,
+        "cross_turn": 16,
+        "terminal": 15,
+        "chance_reuses": 14
+      },
+      "unique_states": 47,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 1.0380060829920694,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "amani",
+      "variant": "UCT",
+      "baseline": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "settings": {
+        "graph": "uct",
+        "chance": "fixed",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3
+      },
+      "action": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "attacker": 83,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.8917105001351119,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 3,
+            "type": "play_card"
+          },
+          "mean": 0.8871211729690167,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.8785033823172121,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 2,
+            "type": "play_card"
+          },
+          "mean": 0.8637352562374246,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 29,
+            "type": "play_card"
+          },
+          "mean": 0.8397900350810975,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.8275458819395762,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.8217623301068488,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 0,
+            "type": "play_card"
+          },
+          "mean": 0.8071608689153315,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.8058604461108697,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 1,
+            "type": "play_card"
+          },
+          "mean": 0.79791816990032,
+          "n": 1
+        },
+        {
+          "action": {
+            "type": "hero_power"
+          },
+          "mean": 0.7735267355049099,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.7729422593967386,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.7604230019887309,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6896178521319509,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 22,
+            "type": "play_card"
+          },
+          "mean": 0.6733406170323591,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.6570104626734988,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6555065759730606,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 70,
+            "type": "play_card"
+          },
+          "mean": 0.6532449007182833,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.5870216828113234,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.5303792011952103,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.4766835901961499,
+          "n": 1
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.13923400633641955,
+          "n": 1
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 23,
+        "opponent_actions": 123,
+        "iterations": 22,
+        "cross_turn": 22,
+        "terminal": 0,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 48,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 0.8671445839572698,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "amani",
+      "variant": "UCD-fixed",
+      "baseline": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "fixed",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3
+      },
+      "action": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "attacker": 83,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.8917105001351119,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 3,
+            "type": "play_card"
+          },
+          "mean": 0.8871211729690167,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.8785033823172121,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 2,
+            "type": "play_card"
+          },
+          "mean": 0.8637352562374246,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 29,
+            "type": "play_card"
+          },
+          "mean": 0.8397900350810975,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.8275458819395762,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.8217623301068488,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 0,
+            "type": "play_card"
+          },
+          "mean": 0.8071608689153315,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.8058604461108697,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 1,
+            "type": "play_card"
+          },
+          "mean": 0.79791816990032,
+          "n": 1
+        },
+        {
+          "action": {
+            "type": "hero_power"
+          },
+          "mean": 0.7735267355049099,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.7729422593967386,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.7604230019887309,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6896178521319509,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 22,
+            "type": "play_card"
+          },
+          "mean": 0.6733406170323591,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.6570104626734988,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6555065759730606,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 70,
+            "type": "play_card"
+          },
+          "mean": 0.6532449007182833,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.5870216828113234,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.5303792011952103,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.4766835901961499,
+          "n": 1
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.13923400633641955,
+          "n": 1
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 23,
+        "opponent_actions": 123,
+        "iterations": 22,
+        "cross_turn": 22,
+        "terminal": 0,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 48,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 0.8727726670913398,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "amani",
+      "variant": "UCD-DPW",
+      "baseline": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3
+      },
+      "action": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "attacker": 83,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.8917105001351119,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 3,
+            "type": "play_card"
+          },
+          "mean": 0.8871211729690167,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.8785033823172121,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 2,
+            "type": "play_card"
+          },
+          "mean": 0.8637352562374246,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 29,
+            "type": "play_card"
+          },
+          "mean": 0.8397900350810975,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.8275458819395762,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.8217623301068488,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 0,
+            "type": "play_card"
+          },
+          "mean": 0.8071608689153315,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.8058604461108697,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 1,
+            "type": "play_card"
+          },
+          "mean": 0.79791816990032,
+          "n": 1
+        },
+        {
+          "action": {
+            "type": "hero_power"
+          },
+          "mean": 0.7735267355049099,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.7729422593967386,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.7604230019887309,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6896178521319509,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 22,
+            "type": "play_card"
+          },
+          "mean": 0.6733406170323591,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.6570104626734988,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6555065759730606,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 70,
+            "type": "play_card"
+          },
+          "mean": 0.6532449007182833,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.5870216828113234,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.5303792011952103,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.4766835901961499,
+          "n": 1
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.13923400633641955,
+          "n": 1
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 23,
+        "opponent_actions": 123,
+        "iterations": 22,
+        "cross_turn": 22,
+        "terminal": 0,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 48,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 0.8655914169503376,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "amani",
+      "variant": "no-opponent-plays",
+      "baseline": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3,
+        "opponent_plays": false
+      },
+      "action": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "card": 33,
+            "position": 2,
+            "type": "play_card"
+          },
+          "mean": 1.0,
+          "n": 2
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 1,
+            "type": "play_card"
+          },
+          "mean": 1.0,
+          "n": 2
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 3,
+            "type": "play_card"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.8958244179061498,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 22,
+            "type": "play_card"
+          },
+          "mean": 0.8647130921617369,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.8599650843722273,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.8534182755686244,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 70,
+            "type": "play_card"
+          },
+          "mean": 0.8527916920311692,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.8289683478095788,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.8193080754242106,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.8097417998322389,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.8058604461108697,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.8035029334533965,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 0,
+            "type": "play_card"
+          },
+          "mean": 0.7979181699003199,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.7941296281990525,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.7795993888183311,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.7711824455558168,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 29,
+            "type": "play_card"
+          },
+          "mean": 0.7676341173216251,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.740774899182154,
+          "n": 1
+        },
+        {
+          "action": {
+            "type": "hero_power"
+          },
+          "mean": 0.7304027009726297,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.7150421057009897,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.684961260029981,
+          "n": 1
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.3340330732481797,
+          "n": 1
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 27,
+        "opponent_actions": 112,
+        "iterations": 26,
+        "cross_turn": 26,
+        "terminal": 6,
+        "chance_reuses": 3,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 103,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 0.9484262079931796,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "amani",
+      "variant": "own-turn-only",
+      "baseline": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 1
+      },
+      "action": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "card": 33,
+            "position": 2,
+            "type": "play_card"
+          },
+          "mean": 0.6248064744684294,
+          "n": 4
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 0,
+            "type": "play_card"
+          },
+          "mean": 0.6248064744684294,
+          "n": 4
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 3,
+            "type": "play_card"
+          },
+          "mean": 0.6248064744684294,
+          "n": 4
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.6248064744684294,
+          "n": 4
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.6248064744684294,
+          "n": 4
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6248064744684294,
+          "n": 4
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6248064744684294,
+          "n": 4
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 1,
+            "type": "play_card"
+          },
+          "mean": 0.6213637122846813,
+          "n": 4
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.6213637122846813,
+          "n": 4
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.6189767175608203,
+          "n": 4
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.6189767175608203,
+          "n": 4
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.6189767175608203,
+          "n": 4
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6189767175608203,
+          "n": 4
+        },
+        {
+          "action": {
+            "card": 70,
+            "type": "play_card"
+          },
+          "mean": 0.611035425733437,
+          "n": 4
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.5922641830607915,
+          "n": 4
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.5861758997229017,
+          "n": 4
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.5765478788408913,
+          "n": 4
+        },
+        {
+          "action": {
+            "card": 29,
+            "type": "play_card"
+          },
+          "mean": 0.5623409887092683,
+          "n": 3
+        },
+        {
+          "action": {
+            "type": "hero_power"
+          },
+          "mean": 0.5260448156332344,
+          "n": 3
+        },
+        {
+          "action": {
+            "card": 22,
+            "type": "play_card"
+          },
+          "mean": 0.4793865749229724,
+          "n": 3
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.45553444825622086,
+          "n": 3
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.4418881091276589,
+          "n": 3
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.4306887916548946,
+          "n": 2
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.3478885453965773,
+          "n": 2
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 109,
+        "iterations": 87,
+        "cross_turn": 0,
+        "terminal": 0,
+        "chance_reuses": 47,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 578,
+      "transpositions": 5,
+      "offpath_updates": 5,
+      "failure": null,
+      "elapsed_s": 2.3012175830081105,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "amani",
+      "variant": "filtered-rollout",
+      "baseline": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3,
+        "rollout": "filtered"
+      },
+      "action": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "attacker": 85,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.9005619288364741,
+          "n": 2
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.8470841798211158,
+          "n": 2
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 1,
+            "type": "play_card"
+          },
+          "mean": 0.8265923787292377,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.8260557273017113,
+          "n": 2
+        },
+        {
+          "action": {
+            "card": 22,
+            "type": "play_card"
+          },
+          "mean": 0.7946740531293329,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.7866752721841397,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.7829325014477408,
+          "n": 2
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 2,
+            "type": "play_card"
+          },
+          "mean": 0.7518182627028918,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 29,
+            "type": "play_card"
+          },
+          "mean": 0.7388500060842489,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.7030087511202541,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.6903308843601136,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 0,
+            "type": "play_card"
+          },
+          "mean": 0.6874733529479272,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.6543766112182574,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 0.653622330899504,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.6208913655142569,
+          "n": 1
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.5850000015372938,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 59,
+            "type": "attack"
+          },
+          "mean": 0.5850000015372938,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.5634067862621936,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.5303792011952103,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 3,
+            "type": "play_card"
+          },
+          "mean": 0.5049998333399996,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 70,
+            "type": "play_card"
+          },
+          "mean": 0.4787627850337259,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 53,
+            "type": "attack"
+          },
+          "mean": 0.4341349971045183,
+          "n": 1
+        },
+        {
+          "action": {
+            "type": "hero_power"
+          },
+          "mean": 0.3381237467605755,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 0.2809003425836161,
+          "n": 1
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 28,
+        "opponent_actions": 116,
+        "iterations": 28,
+        "cross_turn": 28,
+        "terminal": 3,
+        "chance_reuses": 4
+      },
+      "unique_states": 125,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 1.0660870830761269,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "amani",
+      "variant": "terminal-rollout",
+      "baseline": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3,
+        "terminal": true
+      },
+      "action": {
+        "type": "play_card",
+        "card": 33,
+        "position": 2
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "card": 33,
+            "position": 2,
+            "type": "play_card"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 0,
+            "type": "play_card"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 1,
+            "type": "play_card"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 33,
+            "position": 3,
+            "type": "play_card"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 29,
+            "type": "play_card"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "card": 22,
+            "type": "play_card"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "type": "hero_power"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 84,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 43,
+            "type": "attack"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 85,
+            "target": 46,
+            "type": "attack"
+          },
+          "mean": 1.0,
+          "n": 1
+        },
+        {
+          "action": {
+            "attacker": 83,
+            "target": 37,
+            "type": "attack"
+          },
+          "mean": 0.6611298642595631,
+          "n": 1
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "chance_samples": 14,
+        "opponent_actions": 141,
+        "iterations": 14,
+        "cross_turn": 14,
+        "terminal": 13
+      },
+      "unique_states": 39,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 0.6505406249780208,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "coin",
+      "variant": "UCT",
+      "baseline": {
+        "type": "end_turn"
+      },
+      "settings": {
+        "graph": "uct",
+        "chance": "fixed",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3
+      },
+      "action": {
+        "type": "end_turn"
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.49682805522592427,
+          "n": 56
+        },
+        {
+          "action": {
+            "card": 70,
+            "type": "play_card"
+          },
+          "mean": 0.4815604581982381,
+          "n": 45
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "opponent_actions": 122,
+        "chance_samples": 170,
+        "iterations": 101,
+        "cross_turn": 101,
+        "terminal": 0,
+        "chance_reuses": 137,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 231,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 3.5922252499731258,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "coin",
+      "variant": "UCD-fixed",
+      "baseline": {
+        "type": "end_turn"
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "fixed",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3
+      },
+      "action": {
+        "type": "end_turn"
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.483171756470615,
+          "n": 54
+        },
+        {
+          "action": {
+            "card": 70,
+            "type": "play_card"
+          },
+          "mean": 0.4684845782034747,
+          "n": 44
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "opponent_actions": 127,
+        "chance_samples": 171,
+        "iterations": 98,
+        "cross_turn": 98,
+        "terminal": 0,
+        "chance_reuses": 130
+      },
+      "unique_states": 241,
+      "transpositions": 5,
+      "offpath_updates": 5,
+      "failure": null,
+      "elapsed_s": 3.6372250829590484,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "coin",
+      "variant": "UCD-DPW",
+      "baseline": {
+        "type": "end_turn"
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3
+      },
+      "action": {
+        "type": "end_turn"
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.5260953468535388,
+          "n": 70
+        },
+        {
+          "action": {
+            "card": 70,
+            "type": "play_card"
+          },
+          "mean": 0.48142301679548966,
+          "n": 38
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "opponent_actions": 113,
+        "chance_samples": 125,
+        "iterations": 108,
+        "cross_turn": 108,
+        "terminal": 0,
+        "chance_reuses": 179
+      },
+      "unique_states": 273,
+      "transpositions": 4,
+      "offpath_updates": 4,
+      "failure": null,
+      "elapsed_s": 3.704704499919899,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "coin",
+      "variant": "no-opponent-plays",
+      "baseline": {
+        "type": "end_turn"
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3,
+        "opponent_plays": false
+      },
+      "action": {
+        "type": "end_turn"
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.6071678032933255,
+          "n": 95
+        },
+        {
+          "action": {
+            "card": 70,
+            "type": "play_card"
+          },
+          "mean": 0.6005711304685643,
+          "n": 85
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "opponent_actions": 68,
+        "chance_samples": 177,
+        "iterations": 180,
+        "cross_turn": 180,
+        "terminal": 0,
+        "chance_reuses": 420,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 305,
+      "transpositions": 13,
+      "offpath_updates": 35,
+      "failure": null,
+      "elapsed_s": 6.518929334008135,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "coin",
+      "variant": "own-turn-only",
+      "baseline": {
+        "type": "end_turn"
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 1
+      },
+      "action": {
+        "type": "end_turn"
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.5572478545985474,
+          "n": 703
+        },
+        {
+          "action": {
+            "card": 70,
+            "type": "play_card"
+          },
+          "mean": 0.5428115821403897,
+          "n": 422
+        }
+      ],
+      "metrics": {
+        "transitions": 65,
+        "chance_samples": 64,
+        "iterations": 1125,
+        "cross_turn": 0,
+        "terminal": 0,
+        "chance_reuses": 1482,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 7,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 20.001877916045487,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "coin",
+      "variant": "filtered-rollout",
+      "baseline": {
+        "type": "end_turn"
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3,
+        "rollout": "filtered"
+      },
+      "action": {
+        "type": "end_turn"
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 0.5537746909959191,
+          "n": 70
+        },
+        {
+          "action": {
+            "card": 70,
+            "type": "play_card"
+          },
+          "mean": 0.5352016560726982,
+          "n": 54
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "opponent_actions": 94,
+        "chance_samples": 144,
+        "iterations": 124,
+        "cross_turn": 124,
+        "terminal": 0,
+        "chance_reuses": 223,
+        "incomplete_discarded": 1
+      },
+      "unique_states": 302,
+      "transpositions": 7,
+      "offpath_updates": 9,
+      "failure": null,
+      "elapsed_s": 4.216172042069957,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    },
+    {
+      "case": "coin",
+      "variant": "terminal-rollout",
+      "baseline": {
+        "type": "end_turn"
+      },
+      "settings": {
+        "graph": "ucd",
+        "chance": "dpw",
+        "iterations": 10000,
+        "max_transitions": 400,
+        "horizon": 3,
+        "terminal": true
+      },
+      "action": {
+        "type": "end_turn"
+      },
+      "changed": false,
+      "root_values": [
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "mean": 1.0,
+          "n": 3
+        },
+        {
+          "action": {
+            "card": 70,
+            "type": "play_card"
+          },
+          "mean": 0.7822516997605722,
+          "n": 3
+        }
+      ],
+      "metrics": {
+        "transitions": 400,
+        "opponent_actions": 183,
+        "chance_samples": 6,
+        "iterations": 6,
+        "cross_turn": 6,
+        "terminal": 5,
+        "chance_reuses": 5
+      },
+      "unique_states": 25,
+      "transpositions": 0,
+      "offpath_updates": 0,
+      "failure": null,
+      "elapsed_s": 0.5446646249620244,
+      "traces": [],
+      "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+      "guaranteed": false
+    }
+  ],
+  "scope": "Offline matched transition budget; actual transition/iteration counts reported, not full-match wins. Cold CLI separately uses the same 2-second envelope."
+}

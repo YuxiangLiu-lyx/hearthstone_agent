@@ -1,0 +1,22 @@
+[
+  {
+    "name": "M4-particles",
+    "parent": "M3-dpw",
+    "path": "development/secret_hunter_mcgs/candidates/M4-particles",
+    "sha256": "0605ed94f44b0f8a3ae08da9d18bf466c0818567995096797853987311bbbb42",
+    "settings": {
+      "budget_s": 1.3,
+      "max_transitions": 350,
+      "horizon": 3,
+      "min_visits": 2,
+      "margin": 0.06,
+      "iterations": 100,
+      "graph": "ucd",
+      "chance": "dpw"
+    },
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "origin": "Codex structural revision",
+    "failure": "Identical visible chance outcomes retained only the first hidden-response particle.",
+    "change": "Retain all sampled latent payloads with empirical weights; keep choice offers and revealed-history constraints in graph keys; discard incomplete horizons."
+  }
+]

@@ -1,0 +1,2110 @@
+{
+  "n": 28,
+  "invalid": 0,
+  "over_2s": 0,
+  "all_latency_s": {
+    "n": 28,
+    "mean": 1.5401100313631884,
+    "max": 1.8236665829317644,
+    "p50": 1.586844791076146,
+    "p95": 1.8234554580412805,
+    "p99": 1.8236665829317644
+  },
+  "by_candidate": {
+    "Y1": {
+      "n": 0
+    },
+    "M5-dpw": {
+      "n": 12,
+      "mean": 1.5349040001747198,
+      "max": 1.5941472080303356,
+      "p50": 1.528190333978273,
+      "p95": 1.5941472080303356,
+      "p99": 1.5941472080303356
+    }
+  },
+  "ordinary_fallbacks": 0,
+  "records": [
+    {
+      "candidate": "M5-dpw",
+      "tag": "cold",
+      "elapsed_s": 1.5159748749574646,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "attack",
+          "attacker": 72,
+          "target": 11
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "attacker": 75,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.7352971187653264,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 76,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.7307307659105833,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 77,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.71943619334717,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 72,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.6813537337890256,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 76,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.6813537337890256,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 72,
+              "target": 7,
+              "type": "attack"
+            },
+            "mean": 0.6685571899855418,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 72,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.6659669267518202,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 75,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.6592603884513855,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 77,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.48458821698931315,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 78,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.48458821698931315,
+            "n": 1
+          }
+        ],
+        "metrics": {
+          "transitions": 227,
+          "chance_samples": 11,
+          "opponent_actions": 44,
+          "iterations": 10,
+          "cross_turn": 10,
+          "terminal": 0,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 55,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.41101999999955297,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 72,
+        "target": 11
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "cold",
+      "elapsed_s": 1.5065895420266315,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "play_card",
+          "card": 34,
+          "target": 45
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "attacker": 82,
+              "target": 49,
+              "type": "attack"
+            },
+            "mean": 0.1944004357970102,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 34,
+              "target": 49,
+              "type": "play_card"
+            },
+            "mean": 0.10845054310496309,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 9,
+              "position": 5,
+              "type": "play_card"
+            },
+            "mean": 0.08406667541578453,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 34,
+              "target": 63,
+              "type": "play_card"
+            },
+            "mean": 0.052318587841246,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 34,
+              "target": 43,
+              "type": "play_card"
+            },
+            "mean": 0.050131849246584426,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 9,
+              "position": 3,
+              "type": "play_card"
+            },
+            "mean": 0.05005254431465098,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 34,
+              "target": 45,
+              "type": "play_card"
+            },
+            "mean": 0.041753037417581934,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 82,
+              "target": 45,
+              "type": "attack"
+            },
+            "mean": 0.03400448818616374,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 9,
+              "position": 2,
+              "type": "play_card"
+            },
+            "mean": 0.03351519474406066,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 9,
+              "position": 0,
+              "type": "play_card"
+            },
+            "mean": 0.02587321166160022,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 9,
+              "position": 4,
+              "type": "play_card"
+            },
+            "mean": 0.02587321166160022,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 9,
+              "position": 1,
+              "type": "play_card"
+            },
+            "mean": 0.021492312433331228,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 34,
+              "target": 64,
+              "type": "play_card"
+            },
+            "mean": 0.012068674206451298,
+            "n": 1
+          },
+          {
+            "action": {
+              "type": "hero_power"
+            },
+            "mean": 0.009740576319232813,
+            "n": 1
+          },
+          {
+            "action": {
+              "type": "end_turn"
+            },
+            "mean": 0.009300589964063459,
+            "n": 1
+          }
+        ],
+        "metrics": {
+          "transitions": 198,
+          "chance_samples": 15,
+          "opponent_actions": 112,
+          "iterations": 15,
+          "cross_turn": 15,
+          "terminal": 0,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 46,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.46569845802150667,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "play_card",
+        "card": 34,
+        "target": 45
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "cold",
+      "elapsed_s": 1.5941472080303356,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "attack",
+          "attacker": 4,
+          "target": 51
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "attacker": 4,
+              "target": 51,
+              "type": "attack"
+            },
+            "mean": 0.6190469897981835,
+            "n": 2
+          },
+          {
+            "action": {
+              "card": 70,
+              "type": "play_card"
+            },
+            "mean": 0.617747874769249,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 83,
+              "target": 51,
+              "type": "attack"
+            },
+            "mean": 0.6030226973313118,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 81,
+              "target": 51,
+              "type": "attack"
+            },
+            "mean": 0.5866175789173301,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 84,
+              "target": 51,
+              "type": "attack"
+            },
+            "mean": 0.5866175789173301,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 82,
+              "target": 51,
+              "type": "attack"
+            },
+            "mean": 0.5253947968137498,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 85,
+              "target": 51,
+              "type": "attack"
+            },
+            "mean": 0.5253947968137498,
+            "n": 1
+          },
+          {
+            "action": {
+              "type": "end_turn"
+            },
+            "mean": 0.4638133797682052,
+            "n": 1
+          }
+        ],
+        "metrics": {
+          "transitions": 239,
+          "chance_samples": 14,
+          "opponent_actions": 80,
+          "iterations": 14,
+          "cross_turn": 14,
+          "terminal": 0,
+          "chance_reuses": 7,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 80,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.49804833298549056,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 4,
+        "target": 51
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "cold",
+      "elapsed_s": 1.559908292023465,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "attack",
+          "attacker": 82,
+          "target": 49
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "attacker": 85,
+              "target": 49,
+              "type": "attack"
+            },
+            "mean": 0.1497341643655418,
+            "n": 3
+          },
+          {
+            "action": {
+              "attacker": 82,
+              "target": 49,
+              "type": "attack"
+            },
+            "mean": 0.12108971534848732,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 86,
+              "target": 49,
+              "type": "attack"
+            },
+            "mean": 0.08980582891013336,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 84,
+              "target": 49,
+              "type": "attack"
+            },
+            "mean": 0.08291886607693852,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 83,
+              "target": 49,
+              "type": "attack"
+            },
+            "mean": 0.05291076174335674,
+            "n": 2
+          },
+          {
+            "action": {
+              "type": "end_turn"
+            },
+            "mean": 0.041753037417581934,
+            "n": 2
+          }
+        ],
+        "metrics": {
+          "transitions": 160,
+          "chance_samples": 14,
+          "opponent_actions": 94,
+          "iterations": 13,
+          "cross_turn": 13,
+          "terminal": 0,
+          "chance_reuses": 8,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 59,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.46534770901780576,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 82,
+        "target": 49
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "cold",
+      "elapsed_s": 1.5234483330277726,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "play_card",
+          "card": 40,
+          "position": 0
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "card": 40,
+              "position": 0,
+              "type": "play_card"
+            },
+            "mean": 0.7449137405115154,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 40,
+              "position": 4,
+              "type": "play_card"
+            },
+            "mean": 0.7147023892027499,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 76,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.7147023892027498,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 78,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.6813537337890256,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 40,
+              "position": 2,
+              "type": "play_card"
+            },
+            "mean": 0.6813537337890256,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 40,
+              "position": 5,
+              "type": "play_card"
+            },
+            "mean": 0.6813537337890256,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 75,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.6762665183916654,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 77,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.6762665183916654,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 40,
+              "position": 1,
+              "type": "play_card"
+            },
+            "mean": 0.6689264003011612,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 40,
+              "position": 3,
+              "type": "play_card"
+            },
+            "mean": 0.6689264003011611,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 42,
+              "position": 0,
+              "type": "play_card"
+            },
+            "mean": 0.6585112043316601,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 40,
+              "position": 6,
+              "type": "play_card"
+            },
+            "mean": 0.42392857554328783,
+            "n": 1
+          }
+        ],
+        "metrics": {
+          "transitions": 244,
+          "chance_samples": 13,
+          "opponent_actions": 52,
+          "iterations": 12,
+          "cross_turn": 12,
+          "terminal": 0,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 48,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.45618050009943545,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "play_card",
+        "card": 40,
+        "position": 0
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "cold",
+      "elapsed_s": 1.537257167045027,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "attack",
+          "attacker": 75,
+          "target": 35
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "attacker": 77,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.6799045816069196,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 76,
+              "target": 7,
+              "type": "attack"
+            },
+            "mean": 0.6629943263558576,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 75,
+              "target": 12,
+              "type": "attack"
+            },
+            "mean": 0.6524894621927444,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 76,
+              "target": 12,
+              "type": "attack"
+            },
+            "mean": 0.6524894621927444,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 75,
+              "target": 4,
+              "type": "attack"
+            },
+            "mean": 0.6483208974717697,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 77,
+              "target": 7,
+              "type": "attack"
+            },
+            "mean": 0.6429826436621778,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 75,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.6403000462574495,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 78,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.6403000462574495,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 78,
+              "target": 7,
+              "type": "attack"
+            },
+            "mean": 0.6306485256510744,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 77,
+              "target": 4,
+              "type": "attack"
+            },
+            "mean": 0.6306485256510744,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 76,
+              "target": 4,
+              "type": "attack"
+            },
+            "mean": 0.6287053299097083,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 76,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.6014874468379928,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 75,
+              "target": 7,
+              "type": "attack"
+            },
+            "mean": 0.6014874468379928,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 78,
+              "target": 4,
+              "type": "attack"
+            },
+            "mean": 0.598687660112452,
+            "n": 1
+          },
+          {
+            "action": {
+              "type": "end_turn"
+            },
+            "mean": 0.2637308505103769,
+            "n": 1
+          }
+        ],
+        "metrics": {
+          "transitions": 254,
+          "chance_samples": 15,
+          "opponent_actions": 71,
+          "iterations": 15,
+          "cross_turn": 15,
+          "terminal": 0,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 33,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.5523866669973359,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 75,
+        "target": 35
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "cold",
+      "elapsed_s": 1.5138008339563385,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "attack",
+          "attacker": 72,
+          "target": 11
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "attacker": 75,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.7352971187653264,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 76,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.7307307659105833,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 78,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.7307307659105833,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 77,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.71943619334717,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 72,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.6813537337890256,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 76,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.6813537337890256,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 72,
+              "target": 7,
+              "type": "attack"
+            },
+            "mean": 0.6685571899855418,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 72,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.6659669267518202,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 75,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.6592603884513855,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 77,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.48458821698931315,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 78,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.48458821698931315,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 40,
+              "position": 0,
+              "type": "play_card"
+            },
+            "mean": 0.4729431233679933,
+            "n": 1
+          }
+        ],
+        "metrics": {
+          "transitions": 255,
+          "chance_samples": 13,
+          "opponent_actions": 48,
+          "iterations": 12,
+          "cross_turn": 12,
+          "terminal": 0,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 57,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.48421174997929484,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 72,
+        "target": 11
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "cold",
+      "elapsed_s": 1.549656750052236,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "attack",
+          "attacker": 77,
+          "target": 4
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "attacker": 77,
+              "target": 4,
+              "type": "attack"
+            },
+            "mean": 0.9648757018755769,
+            "n": 9
+          },
+          {
+            "action": {
+              "type": "end_turn"
+            },
+            "mean": 0.7765691536039826,
+            "n": 3
+          },
+          {
+            "action": {
+              "attacker": 77,
+              "target": 19,
+              "type": "attack"
+            },
+            "mean": 0.6740733697361548,
+            "n": 3
+          },
+          {
+            "action": {
+              "attacker": 77,
+              "target": 22,
+              "type": "attack"
+            },
+            "mean": 0.6554557283770863,
+            "n": 2
+          }
+        ],
+        "metrics": {
+          "transitions": 115,
+          "chance_samples": 19,
+          "opponent_actions": 63,
+          "iterations": 17,
+          "cross_turn": 17,
+          "terminal": 9,
+          "chance_reuses": 19,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 77,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.5902568750316277,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 77,
+        "target": 4
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "cold",
+      "elapsed_s": 1.5296315000159666,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "attack",
+          "attacker": 76,
+          "target": 4
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "attacker": 76,
+              "target": 4,
+              "type": "attack"
+            },
+            "mean": 0.7233301994853105,
+            "n": 4
+          },
+          {
+            "action": {
+              "type": "end_turn"
+            },
+            "mean": 0.7174132936600778,
+            "n": 3
+          },
+          {
+            "action": {
+              "attacker": 77,
+              "target": 4,
+              "type": "attack"
+            },
+            "mean": 0.7142620858757547,
+            "n": 3
+          },
+          {
+            "action": {
+              "attacker": 76,
+              "target": 22,
+              "type": "attack"
+            },
+            "mean": 0.6920771948010255,
+            "n": 3
+          },
+          {
+            "action": {
+              "attacker": 77,
+              "target": 22,
+              "type": "attack"
+            },
+            "mean": 0.6631739420773032,
+            "n": 3
+          }
+        ],
+        "metrics": {
+          "transitions": 212,
+          "chance_samples": 20,
+          "opponent_actions": 49,
+          "iterations": 16,
+          "cross_turn": 16,
+          "terminal": 0,
+          "chance_reuses": 10,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 62,
+        "transpositions": 2,
+        "offpath_updates": 2,
+        "failure": null,
+        "elapsed_s": 0.6226372079690918,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 76,
+        "target": 4
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "cold",
+      "elapsed_s": 1.5214082919992507,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "play_card",
+          "card": 50
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "card": 50,
+              "type": "play_card"
+            },
+            "mean": 0.6503791985077715,
+            "n": 3
+          },
+          {
+            "action": {
+              "attacker": 44,
+              "target": 4,
+              "type": "attack"
+            },
+            "mean": 0.6301769870365653,
+            "n": 3
+          },
+          {
+            "action": {
+              "attacker": 41,
+              "target": 4,
+              "type": "attack"
+            },
+            "mean": 0.579512105729348,
+            "n": 3
+          },
+          {
+            "action": {
+              "type": "end_turn"
+            },
+            "mean": 0.5366010793535907,
+            "n": 2
+          },
+          {
+            "action": {
+              "type": "hero_power"
+            },
+            "mean": 0.5280195379983484,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 41,
+              "target": 18,
+              "type": "attack"
+            },
+            "mean": 0.521650173680825,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 44,
+              "target": 18,
+              "type": "attack"
+            },
+            "mean": 0.5185292364579315,
+            "n": 2
+          }
+        ],
+        "metrics": {
+          "transitions": 206,
+          "chance_samples": 19,
+          "opponent_actions": 64,
+          "iterations": 17,
+          "cross_turn": 17,
+          "terminal": 0,
+          "chance_reuses": 10,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 74,
+        "transpositions": 1,
+        "offpath_updates": 1,
+        "failure": null,
+        "elapsed_s": 0.5996572499861941,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "play_card",
+        "card": 50
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "cold",
+      "elapsed_s": 1.538834874983877,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "play_card",
+          "card": 24
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "card": 34,
+              "target": 51,
+              "type": "play_card"
+            },
+            "mean": 0.25572016727632,
+            "n": 2
+          },
+          {
+            "action": {
+              "card": 24,
+              "type": "play_card"
+            },
+            "mean": 0.2502484737597815,
+            "n": 2
+          },
+          {
+            "action": {
+              "card": 70,
+              "type": "play_card"
+            },
+            "mean": 0.24477678024324293,
+            "n": 2
+          },
+          {
+            "action": {
+              "card": 34,
+              "target": 50,
+              "type": "play_card"
+            },
+            "mean": 0.21557084379654357,
+            "n": 2
+          },
+          {
+            "action": {
+              "card": 23,
+              "type": "play_card"
+            },
+            "mean": 0.20440303854852876,
+            "n": 2
+          },
+          {
+            "action": {
+              "card": 34,
+              "target": 37,
+              "type": "play_card"
+            },
+            "mean": 0.1584241788449558,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 22,
+              "type": "play_card"
+            },
+            "mean": 0.15144230733356998,
+            "n": 1
+          },
+          {
+            "action": {
+              "type": "end_turn"
+            },
+            "mean": 0.12823373759251924,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 34,
+              "target": 64,
+              "type": "play_card"
+            },
+            "mean": 0.12238888682304884,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 34,
+              "target": 4,
+              "type": "play_card"
+            },
+            "mean": 0.10925891793964579,
+            "n": 1
+          },
+          {
+            "action": {
+              "type": "hero_power"
+            },
+            "mean": 0.10186548646181781,
+            "n": 1
+          }
+        ],
+        "metrics": {
+          "transitions": 207,
+          "chance_samples": 17,
+          "opponent_actions": 103,
+          "iterations": 16,
+          "cross_turn": 16,
+          "terminal": 0,
+          "chance_reuses": 6,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 80,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.5683330419706181,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "play_card",
+        "card": 24
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "cold",
+      "elapsed_s": 1.528190333978273,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "play_card",
+          "card": 21,
+          "position": 0
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "attacker": 4,
+              "target": 51,
+              "type": "attack"
+            },
+            "mean": 0.3714659982116371,
+            "n": 3
+          },
+          {
+            "action": {
+              "card": 24,
+              "type": "play_card"
+            },
+            "mean": 0.22608116738231293,
+            "n": 2
+          },
+          {
+            "action": {
+              "card": 70,
+              "type": "play_card"
+            },
+            "mean": 0.19454591580597985,
+            "n": 2
+          },
+          {
+            "action": {
+              "type": "hero_power"
+            },
+            "mean": 0.131841341536624,
+            "n": 2
+          },
+          {
+            "action": {
+              "card": 21,
+              "position": 0,
+              "type": "play_card"
+            },
+            "mean": 0.06307177390705895,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 22,
+              "type": "play_card"
+            },
+            "mean": 0.03142161648473577,
+            "n": 1
+          },
+          {
+            "action": {
+              "type": "end_turn"
+            },
+            "mean": 0.0,
+            "n": 1
+          }
+        ],
+        "metrics": {
+          "transitions": 223,
+          "chance_samples": 12,
+          "opponent_actions": 90,
+          "iterations": 12,
+          "cross_turn": 11,
+          "terminal": 1,
+          "chance_reuses": 6,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 54,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.5210058341035619,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "play_card",
+        "card": 21,
+        "position": 0
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "concurrent",
+      "elapsed_s": 1.586844791076146,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "attack",
+          "attacker": 72,
+          "target": 11
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "attacker": 75,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.7352971187653264,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 76,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.7307307659105833,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 77,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.71943619334717,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 72,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.6813537337890256,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 76,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.6813537337890256,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 72,
+              "target": 7,
+              "type": "attack"
+            },
+            "mean": 0.6685571899855418,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 72,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.6659669267518202,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 75,
+              "target": 11,
+              "type": "attack"
+            },
+            "mean": 0.6592603884513855,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 77,
+              "target": 35,
+              "type": "attack"
+            },
+            "mean": 0.48458821698931315,
+            "n": 1
+          }
+        ],
+        "metrics": {
+          "transitions": 207,
+          "chance_samples": 10,
+          "opponent_actions": 40,
+          "iterations": 9,
+          "cross_turn": 9,
+          "terminal": 0,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 54,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.40056762495078146,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 72,
+        "target": 11
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "concurrent",
+      "elapsed_s": 1.6001525840256363,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "play_card",
+          "card": 34,
+          "target": 45
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "card": 34,
+              "target": 49,
+              "type": "play_card"
+            },
+            "mean": 0.10845054310496309,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 9,
+              "position": 5,
+              "type": "play_card"
+            },
+            "mean": 0.08406667541578453,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 34,
+              "target": 63,
+              "type": "play_card"
+            },
+            "mean": 0.052318587841246,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 34,
+              "target": 43,
+              "type": "play_card"
+            },
+            "mean": 0.050131849246584426,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 9,
+              "position": 3,
+              "type": "play_card"
+            },
+            "mean": 0.05005254431465098,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 34,
+              "target": 45,
+              "type": "play_card"
+            },
+            "mean": 0.041753037417581934,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 9,
+              "position": 2,
+              "type": "play_card"
+            },
+            "mean": 0.03351519474406066,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 9,
+              "position": 0,
+              "type": "play_card"
+            },
+            "mean": 0.02587321166160022,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 9,
+              "position": 4,
+              "type": "play_card"
+            },
+            "mean": 0.02587321166160022,
+            "n": 1
+          },
+          {
+            "action": {
+              "card": 9,
+              "position": 1,
+              "type": "play_card"
+            },
+            "mean": 0.021492312433331228,
+            "n": 1
+          },
+          {
+            "action": {
+              "type": "hero_power"
+            },
+            "mean": 0.009740576319232813,
+            "n": 1
+          },
+          {
+            "action": {
+              "type": "end_turn"
+            },
+            "mean": 0.009300589964063459,
+            "n": 1
+          }
+        ],
+        "metrics": {
+          "transitions": 156,
+          "chance_samples": 12,
+          "opponent_actions": 89,
+          "iterations": 12,
+          "cross_turn": 12,
+          "terminal": 0,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 43,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.4042322920868173,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "play_card",
+        "card": 34,
+        "target": 45
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "concurrent",
+      "elapsed_s": 1.5970138750271872,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "attack",
+          "attacker": 4,
+          "target": 51
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "attacker": 4,
+              "target": 51,
+              "type": "attack"
+            },
+            "mean": 0.6190469897981835,
+            "n": 2
+          },
+          {
+            "action": {
+              "card": 70,
+              "type": "play_card"
+            },
+            "mean": 0.617747874769249,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 83,
+              "target": 51,
+              "type": "attack"
+            },
+            "mean": 0.6030226973313118,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 81,
+              "target": 51,
+              "type": "attack"
+            },
+            "mean": 0.5866175789173301,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 84,
+              "target": 51,
+              "type": "attack"
+            },
+            "mean": 0.5866175789173301,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 82,
+              "target": 51,
+              "type": "attack"
+            },
+            "mean": 0.5253947968137498,
+            "n": 1
+          },
+          {
+            "action": {
+              "attacker": 85,
+              "target": 51,
+              "type": "attack"
+            },
+            "mean": 0.5253947968137498,
+            "n": 1
+          },
+          {
+            "action": {
+              "type": "end_turn"
+            },
+            "mean": 0.4638133797682052,
+            "n": 1
+          }
+        ],
+        "metrics": {
+          "transitions": 190,
+          "chance_samples": 12,
+          "opponent_actions": 62,
+          "iterations": 11,
+          "cross_turn": 11,
+          "terminal": 0,
+          "chance_reuses": 4,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 64,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.4146538330242038,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 4,
+        "target": 51
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "concurrent",
+      "elapsed_s": 1.599992457893677,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": {
+        "action": {
+          "type": "attack",
+          "attacker": 82,
+          "target": 49
+        },
+        "changed": false,
+        "root_values": [
+          {
+            "action": {
+              "attacker": 85,
+              "target": 49,
+              "type": "attack"
+            },
+            "mean": 0.1364546860001967,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 82,
+              "target": 49,
+              "type": "attack"
+            },
+            "mean": 0.12108971534848732,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 86,
+              "target": 49,
+              "type": "attack"
+            },
+            "mean": 0.08980582891013336,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 84,
+              "target": 49,
+              "type": "attack"
+            },
+            "mean": 0.08291886607693852,
+            "n": 2
+          },
+          {
+            "action": {
+              "attacker": 83,
+              "target": 49,
+              "type": "attack"
+            },
+            "mean": 0.05291076174335674,
+            "n": 2
+          },
+          {
+            "action": {
+              "type": "end_turn"
+            },
+            "mean": 0.041753037417581934,
+            "n": 2
+          }
+        ],
+        "metrics": {
+          "transitions": 143,
+          "chance_samples": 13,
+          "opponent_actions": 87,
+          "iterations": 12,
+          "cross_turn": 12,
+          "terminal": 0,
+          "chance_reuses": 7,
+          "incomplete_discarded": 1
+        },
+        "unique_states": 58,
+        "transpositions": 0,
+        "offpath_updates": 0,
+        "failure": null,
+        "elapsed_s": 0.4692297090077773,
+        "traces": [],
+        "scope": "Sampled hypothetical worlds; cutoff scores are not calibrated win probabilities.",
+        "guaranteed": false
+      },
+      "action": {
+        "type": "attack",
+        "attacker": 82,
+        "target": 49
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "hang",
+      "elapsed_s": 1.8228233749978244,
+      "valid": true,
+      "worker_error": "worker_timeout",
+      "fallback": true,
+      "mcgs": null,
+      "action": {
+        "type": "end_turn"
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "crash",
+      "elapsed_s": 0.06438200001139194,
+      "valid": true,
+      "worker_error": "worker_exit_1: info=decide(state,cfg,publish,memory=memory)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/f4/3c2p11sd22b76640b44tvyv80000gn/T/tmp6fjsra0m/skill/scripts/program_policy.py\", line 2, in decide\n    raise RuntimeError(\"injected crash\")\nRuntimeError: injected crash\n",
+      "fallback": true,
+      "mcgs": null,
+      "action": {
+        "type": "end_turn"
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "published_hang",
+      "elapsed_s": 1.8226755840005353,
+      "valid": true,
+      "worker_error": "worker_timeout",
+      "fallback": false,
+      "mcgs": null,
+      "action": {
+        "type": "attack",
+        "attacker": 72,
+        "target": 11
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "Y1",
+      "tag": "stale-0",
+      "elapsed_s": 1.8213756670011207,
+      "valid": true,
+      "worker_error": null,
+      "fallback": null,
+      "mcgs": null,
+      "action": null,
+      "refresh_required": true
+    },
+    {
+      "candidate": "Y1",
+      "tag": "stale-1",
+      "elapsed_s": 1.8234554580412805,
+      "valid": true,
+      "worker_error": null,
+      "fallback": null,
+      "mcgs": null,
+      "action": null,
+      "refresh_required": true
+    },
+    {
+      "candidate": "Y1",
+      "tag": "stale-2",
+      "elapsed_s": 1.8213478750549257,
+      "valid": true,
+      "worker_error": null,
+      "fallback": null,
+      "mcgs": null,
+      "action": null,
+      "refresh_required": true
+    },
+    {
+      "candidate": "Y1",
+      "tag": "stale-3",
+      "elapsed_s": 1.821535125025548,
+      "valid": true,
+      "worker_error": null,
+      "fallback": null,
+      "mcgs": null,
+      "action": null,
+      "refresh_required": true
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "stale-0",
+      "elapsed_s": 1.8225254169665277,
+      "valid": true,
+      "worker_error": null,
+      "fallback": null,
+      "mcgs": null,
+      "action": null,
+      "refresh_required": true
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "stale-1",
+      "elapsed_s": 1.8236665829317644,
+      "valid": true,
+      "worker_error": null,
+      "fallback": null,
+      "mcgs": null,
+      "action": null,
+      "refresh_required": true
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "stale-2",
+      "elapsed_s": 1.8226215000031516,
+      "valid": true,
+      "worker_error": null,
+      "fallback": null,
+      "mcgs": null,
+      "action": null,
+      "refresh_required": true
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "stale-3",
+      "elapsed_s": 1.8223633749876171,
+      "valid": true,
+      "worker_error": null,
+      "fallback": null,
+      "mcgs": null,
+      "action": null,
+      "refresh_required": true
+    },
+    {
+      "candidate": "M5-dpw",
+      "tag": "game_over",
+      "elapsed_s": 0.03145720902830362,
+      "valid": true,
+      "worker_error": null,
+      "fallback": null,
+      "mcgs": null,
+      "action": null,
+      "refresh_required": false
+    }
+  ],
+  "scope": "Cold CLI ablations share the 2s envelope; direct-call full games are separately reported."
+}
