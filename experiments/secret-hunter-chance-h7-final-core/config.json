@@ -1,0 +1,78 @@
+{
+  "candidate": "development/secret_hunter_chance/candidates/H7",
+  "name": "h7-final-core",
+  "population": [
+    {
+      "name": "astra-board-proxy",
+      "group": "astra",
+      "mode": "frozen",
+      "policy": "development/candidates/v7-zoo-strength",
+      "deck": "development/teacher_eval/decks/astra-doubled.json"
+    },
+    {
+      "name": "astra-tempo-proxy",
+      "group": "astra",
+      "mode": "tempo",
+      "deck": "development/teacher_eval/decks/astra-doubled.json"
+    },
+    {
+      "name": "astra-sticky-proxy",
+      "group": "astra",
+      "mode": "frozen",
+      "policy": "development/candidates/v7-zoo-strength",
+      "deck": "development/teacher_eval/decks/astra-sticky.json"
+    },
+    {
+      "name": "bot2-face-proxy",
+      "group": "bot2",
+      "mode": "aggressive",
+      "deck": "development/teacher_eval/decks/bot2-face.json"
+    },
+    {
+      "name": "bot2-trade-proxy",
+      "group": "bot2",
+      "mode": "search",
+      "deck": "development/teacher_eval/decks/bot2-face.json"
+    },
+    {
+      "name": "bot1-mage-proxy",
+      "group": "bot1",
+      "mode": "official",
+      "deck": "hs-arena-0.2.2/decks/greedy_mage.json"
+    }
+  ],
+  "start": 941000,
+  "seeds": 40,
+  "workers": 2,
+  "final": true,
+  "candidate_sha256": "ce225953aa32c23415449a3b0d90f239ac1206de6697e6a26abe1fa90c92c967",
+  "population_sha256": "cb2b90a069c91a02ba655ef51fa836363888f204b6e64379047442cca2c8b741",
+  "opponent_versions": {
+    "astra-board-proxy": {
+      "deck": "86a6f47082c7f0e29ab307e999744cd8924f714a7857f1c255ddc0b327ed4cd2",
+      "policy": "80dcfb8c4dc79d39c36853acd1b848b8d2b02a4eced6bfb0334559dc9600a9c6"
+    },
+    "astra-tempo-proxy": {
+      "deck": "86a6f47082c7f0e29ab307e999744cd8924f714a7857f1c255ddc0b327ed4cd2",
+      "policy": null
+    },
+    "astra-sticky-proxy": {
+      "deck": "f4737f08a11648b0394a1f84ccc99f28972317d4fad225dbd0b1fad6c35a0007",
+      "policy": "80dcfb8c4dc79d39c36853acd1b848b8d2b02a4eced6bfb0334559dc9600a9c6"
+    },
+    "bot2-face-proxy": {
+      "deck": "37ba3dd2e30e14a67a3674322966017e14fbf4a15078f6b1a1e3ce4b33da9d49",
+      "policy": null
+    },
+    "bot2-trade-proxy": {
+      "deck": "37ba3dd2e30e14a67a3674322966017e14fbf4a15078f6b1a1e3ce4b33da9d49",
+      "policy": null
+    },
+    "bot1-mage-proxy": {
+      "deck": "1e02dc64d9a7585580609857a4a95f36ef61d34a0266d863e00413cde8674e90",
+      "policy": null
+    }
+  },
+  "planned_games": 480,
+  "split": "confirmation"
+}

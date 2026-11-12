@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter_chance/terminal_checks.py", line 38, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter_chance/terminal_checks.py", line 20, in main
+    e,i=c.fixture(own=['NEW1_019']*knives,enemy=['CS2_172']*3,hand=['EX1_538'],enemy_hp=hp,seed=seed)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/development/secret_hunter_tactics/checks.py", line 46, in fixture
+    for cid in own:p.summon(cid).turns_in_play=1
+                   ^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/player.py", line 413, in summon
+    self.game.cheat_action(self, [Summon(self, card)])
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/game.py", line 205, in cheat_action
+    return self.trigger(source, actions, event_args=None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/game.py", line 199, in trigger
+    return self.action_block(source, actions, type, event_args=event_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/game.py", line 153, in action_block
+    self.action_end(type, source)
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/game.py", line 143, in action_end
+    self.process_deaths()
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/game.py", line 191, in process_deaths
+    self.trigger(self, [Death(self.live_entities)], event_args=None)
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/game.py", line 199, in trigger
+    return self.action_block(source, actions, type, event_args=event_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/game.py", line 150, in action_block
+    ret = self.queue_actions(source, actions, event_args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/game.py", line 241, in queue_actions
+    ret = self.trigger_actions(source, actions)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/game.py", line 264, in trigger_actions
+    ret.append(action.trigger(source))
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/actions.py", line 222, in trigger
+    self.do(source, *args)
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/actions.py", line 368, in do
+    self.broadcast(source, EventListener.ON, card)
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/actions.py", line 176, in broadcast
+    source.game.action_end(BlockType.TRIGGER, source)
+  File "/Users/liuyuxiang/Documents/USA/agenticForEverything/hearthstone/.venv/lib/python3.11/site-packages/hs_arena/_vendor/fireplace/game.py", line 136, in action_end
+    raise GameOver("The game has ended.")
+hs_arena._vendor.fireplace.exceptions.GameOver: The game has ended.
