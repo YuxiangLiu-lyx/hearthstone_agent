@@ -40,6 +40,7 @@
       "archive.py": "f7eed177c93923fecf9029a9ffddef3e57222c6e73144a26c2c3071d8ef5b82f",
       "audit.py": "48fee191307a182565d7c16418bddfc17038a5dc5efe3d3db135d9929962960c",
       "batch.py": "18606f30354b65c847e3ca3d685a4163c294f8f2263aa9070e8b26548d95aaa1",
+      "build.py": "5bb8577fefae8dd0e9ea47eacd7b4c0ca82469cfc4a6ef49dd7c55f79bff3e2a",
       "clock_checks.py": "d244b38aad23799d8492091cf42381adde108c02a7a21ee42261f30eb06f7ebe",
       "counterfactual.py": "05fa7d48b53a47e566e447a87e1eb060f3fdbce30938fefa9fa8e428999421cc",
       "coverage_checks.py": "5ebe78ede678603f7cb1ebddd05ef5e0f21396b398526487c076aeb486bf955e",
@@ -48,7 +49,9 @@
       "create_round1.py": "35bbf78d18716639daf8a858e1264e0595b70eaad5b98eefdfdcb9823f9f839c",
       "create_round2.py": "1d75fa8dade3cd93adfdddf1759e3dc9a92e57fd94bda9a403cd50c6b7c8f1d5",
       "deck_guard.py": "36d56c11b88823fcc9b9672736d64c4c6489ff8225f3edd5b8975c025544abcb",
+      "development_analysis.py": "4a6a7f4883ca90749bdd91971ec5ea35c8679b1459f313ec1c4ad08da7a6803a",
       "evidence.py": "082ef6d98552f159283ef06cef7cd0e94aa2781e1c3fae51d38b1ceabab89588",
+      "final_analysis.py": "e634b900c1e8054eb8e334b7c05063b00550a296d15c36abe19699104078c591",
       "mechanisms.py": "55de7125e42c8d1504640fb8fdf47f4f57cfbbb5d9d9addab190a22a1e61383e",
       "misdirection_checks.py": "563e876699a694716c089aec5965849b1295de41fa6952e85e4e377381192c95",
       "resume.py": "60f6aa45003b80ccdee1ec20312ec104658f26fc467acd85f60262413df498ff",
@@ -58,6 +61,385 @@
       "setup.py": "09ea930930f71b1248a03732d0f79bf5185c952ed1de33e01ed37f2dc78e3250"
     },
     "runs": [
+      {
+        "run": "secret-hunter-dgm-k0-guard-dev",
+        "candidate": "K0",
+        "seeds": [
+          950300,
+          950301,
+          950302,
+          950303
+        ],
+        "population": "5be681abbce9b8d2515d234cc753109f5fa7acff0ff6ced3fa9c1d1116ccfde5",
+        "split": "development",
+        "source_hash": "ce225953aa32c23415449a3b0d90f239ac1206de6697e6a26abe1fa90c92c967",
+        "primary": null,
+        "overall": {
+          "n": 112,
+          "wins": 96,
+          "losses": 16,
+          "draws_or_voids": 0,
+          "win_rate": 0.8571428571428571,
+          "wilson95_descriptive": [
+            0.7804840379293225,
+            0.9101141582281891
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "by_opponent": {
+          "official-mage": {
+            "n": 8,
+            "wins": 6,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.40926987910258916,
+              0.9285223111419724
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "aggressive-hunter": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "control-priest": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "tempo-paladin": {
+            "n": 8,
+            "wins": 5,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.625,
+            "wilson95_descriptive": [
+              0.30573785458380187,
+              0.863158240538479
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "value-warlock": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "adversarial-zoo": {
+            "n": 8,
+            "wins": 6,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.40926987910258916,
+              0.9285223111419724
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "search-paladin": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "historical-mage": {
+            "n": 8,
+            "wins": 6,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.40926987910258916,
+              0.9285223111419724
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "control-mage": {
+            "n": 8,
+            "wins": 4,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.5,
+            "wilson95_descriptive": [
+              0.21521252682444186,
+              0.7847874731755582
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "tempo-warlock": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "aggressive-paladin": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "value-priest": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "search-shaman": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "adversarial-priest-v1": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 56,
+            "wins": 44,
+            "losses": 12,
+            "draws_or_voids": 0,
+            "win_rate": 0.7857142857142857,
+            "wilson95_descriptive": [
+              0.6618028634399505,
+              0.8729421968525549
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "False": {
+            "n": 56,
+            "wins": 52,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.9285714285714286,
+            "wilson95_descriptive": [
+              0.830243171685138,
+              0.9718744187536204
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "latency": {
+          "n": 3424,
+          "mean": 0.008622112856670848,
+          "max": 0.25763370899949223,
+          "p50": 0.001189833041280508,
+          "p95": 0.04329604096710682,
+          "p99": 0.09737774997483939
+        },
+        "cost": {
+          "name": "k0-guard-dev",
+          "full": 112,
+          "short": 0,
+          "final": false,
+          "reserved_seconds": 1800,
+          "started": 1794444127.8848882,
+          "status": "completed",
+          "pid": 79205,
+          "elapsed_s": 10.266839981079102,
+          "completed": 112,
+          "wins": 96
+        }
+      },
       {
         "run": "secret-hunter-dgm-k0-pilot",
         "candidate": "K0",
@@ -1031,6 +1413,7 @@
       "archive.py": "f7eed177c93923fecf9029a9ffddef3e57222c6e73144a26c2c3071d8ef5b82f",
       "audit.py": "48fee191307a182565d7c16418bddfc17038a5dc5efe3d3db135d9929962960c",
       "batch.py": "18606f30354b65c847e3ca3d685a4163c294f8f2263aa9070e8b26548d95aaa1",
+      "build.py": "5bb8577fefae8dd0e9ea47eacd7b4c0ca82469cfc4a6ef49dd7c55f79bff3e2a",
       "clock_checks.py": "d244b38aad23799d8492091cf42381adde108c02a7a21ee42261f30eb06f7ebe",
       "counterfactual.py": "05fa7d48b53a47e566e447a87e1eb060f3fdbce30938fefa9fa8e428999421cc",
       "coverage_checks.py": "5ebe78ede678603f7cb1ebddd05ef5e0f21396b398526487c076aeb486bf955e",
@@ -1039,7 +1422,9 @@
       "create_round1.py": "35bbf78d18716639daf8a858e1264e0595b70eaad5b98eefdfdcb9823f9f839c",
       "create_round2.py": "1d75fa8dade3cd93adfdddf1759e3dc9a92e57fd94bda9a403cd50c6b7c8f1d5",
       "deck_guard.py": "36d56c11b88823fcc9b9672736d64c4c6489ff8225f3edd5b8975c025544abcb",
+      "development_analysis.py": "4a6a7f4883ca90749bdd91971ec5ea35c8679b1459f313ec1c4ad08da7a6803a",
       "evidence.py": "082ef6d98552f159283ef06cef7cd0e94aa2781e1c3fae51d38b1ceabab89588",
+      "final_analysis.py": "e634b900c1e8054eb8e334b7c05063b00550a296d15c36abe19699104078c591",
       "mechanisms.py": "55de7125e42c8d1504640fb8fdf47f4f57cfbbb5d9d9addab190a22a1e61383e",
       "misdirection_checks.py": "563e876699a694716c089aec5965849b1295de41fa6952e85e4e377381192c95",
       "resume.py": "60f6aa45003b80ccdee1ec20312ec104658f26fc467acd85f60262413df498ff",
@@ -1049,6 +1434,385 @@
       "setup.py": "09ea930930f71b1248a03732d0f79bf5185c952ed1de33e01ed37f2dc78e3250"
     },
     "runs": [
+      {
+        "run": "secret-hunter-dgm-k1-guard-dev",
+        "candidate": "K1",
+        "seeds": [
+          950300,
+          950301,
+          950302,
+          950303
+        ],
+        "population": "5be681abbce9b8d2515d234cc753109f5fa7acff0ff6ced3fa9c1d1116ccfde5",
+        "split": "development",
+        "source_hash": "ccda3f42b94eb890a88494eba0c6f2a9c1fd82a412b5ef5b6938d3ebcf4828e7",
+        "primary": null,
+        "overall": {
+          "n": 112,
+          "wins": 96,
+          "losses": 16,
+          "draws_or_voids": 0,
+          "win_rate": 0.8571428571428571,
+          "wilson95_descriptive": [
+            0.7804840379293225,
+            0.9101141582281891
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "by_opponent": {
+          "official-mage": {
+            "n": 8,
+            "wins": 6,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.40926987910258916,
+              0.9285223111419724
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "aggressive-hunter": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "control-priest": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "tempo-paladin": {
+            "n": 8,
+            "wins": 5,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.625,
+            "wilson95_descriptive": [
+              0.30573785458380187,
+              0.863158240538479
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "value-warlock": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "adversarial-zoo": {
+            "n": 8,
+            "wins": 6,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.40926987910258916,
+              0.9285223111419724
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "search-paladin": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "historical-mage": {
+            "n": 8,
+            "wins": 6,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.40926987910258916,
+              0.9285223111419724
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "control-mage": {
+            "n": 8,
+            "wins": 4,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.5,
+            "wilson95_descriptive": [
+              0.21521252682444186,
+              0.7847874731755582
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "tempo-warlock": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "aggressive-paladin": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "value-priest": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "search-shaman": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "adversarial-priest-v1": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 56,
+            "wins": 44,
+            "losses": 12,
+            "draws_or_voids": 0,
+            "win_rate": 0.7857142857142857,
+            "wilson95_descriptive": [
+              0.6618028634399505,
+              0.8729421968525549
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "False": {
+            "n": 56,
+            "wins": 52,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.9285714285714286,
+            "wilson95_descriptive": [
+              0.830243171685138,
+              0.9718744187536204
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "latency": {
+          "n": 3424,
+          "mean": 0.01042958231870369,
+          "max": 0.32690829201601446,
+          "p50": 0.0013574999757111073,
+          "p95": 0.053398874937556684,
+          "p99": 0.12419300002511591
+        },
+        "cost": {
+          "name": "k1-guard-dev",
+          "full": 112,
+          "short": 0,
+          "final": false,
+          "reserved_seconds": 1800,
+          "started": 1794444138.373384,
+          "status": "completed",
+          "pid": 79225,
+          "elapsed_s": 11.562294960021973,
+          "completed": 112,
+          "wins": 96
+        }
+      },
       {
         "run": "secret-hunter-dgm-k1-pilot",
         "candidate": "K1",
@@ -2216,7 +2980,7 @@
     "parent_ids": [
       "historical-chance-C2"
     ],
-    "status": "provisional",
+    "status": "stepping_stone",
     "hypothesis": "Retest exact/sampled summon and response search on original Krush/Misdirection deck",
     "id": "C0",
     "source_sha256": "bd3b24a07abc401cda26f4877a789f920e44320dfb0a0f785a59a3274687ede2",
@@ -2255,6 +3019,7 @@
       "archive.py": "f7eed177c93923fecf9029a9ffddef3e57222c6e73144a26c2c3071d8ef5b82f",
       "audit.py": "48fee191307a182565d7c16418bddfc17038a5dc5efe3d3db135d9929962960c",
       "batch.py": "18606f30354b65c847e3ca3d685a4163c294f8f2263aa9070e8b26548d95aaa1",
+      "build.py": "5bb8577fefae8dd0e9ea47eacd7b4c0ca82469cfc4a6ef49dd7c55f79bff3e2a",
       "clock_checks.py": "d244b38aad23799d8492091cf42381adde108c02a7a21ee42261f30eb06f7ebe",
       "counterfactual.py": "05fa7d48b53a47e566e447a87e1eb060f3fdbce30938fefa9fa8e428999421cc",
       "coverage_checks.py": "5ebe78ede678603f7cb1ebddd05ef5e0f21396b398526487c076aeb486bf955e",
@@ -2263,7 +3028,9 @@
       "create_round1.py": "35bbf78d18716639daf8a858e1264e0595b70eaad5b98eefdfdcb9823f9f839c",
       "create_round2.py": "1d75fa8dade3cd93adfdddf1759e3dc9a92e57fd94bda9a403cd50c6b7c8f1d5",
       "deck_guard.py": "36d56c11b88823fcc9b9672736d64c4c6489ff8225f3edd5b8975c025544abcb",
+      "development_analysis.py": "4a6a7f4883ca90749bdd91971ec5ea35c8679b1459f313ec1c4ad08da7a6803a",
       "evidence.py": "082ef6d98552f159283ef06cef7cd0e94aa2781e1c3fae51d38b1ceabab89588",
+      "final_analysis.py": "e634b900c1e8054eb8e334b7c05063b00550a296d15c36abe19699104078c591",
       "mechanisms.py": "55de7125e42c8d1504640fb8fdf47f4f57cfbbb5d9d9addab190a22a1e61383e",
       "misdirection_checks.py": "563e876699a694716c089aec5965849b1295de41fa6952e85e4e377381192c95",
       "resume.py": "60f6aa45003b80ccdee1ec20312ec104658f26fc467acd85f60262413df498ff",
@@ -2721,14 +3488,15 @@
           "wins": 124
         }
       }
-    ]
+    ],
+    "retention_reason": "Transfer evaluated; no independent gain demonstrated."
   },
   "B1": {
     "parent_ids": [
       "K1"
     ],
     "hypothesis": "Count affordable in-hand Krush charge in the next-turn clock only with board space and no visible Taunt; do not wait for an undrawn card.",
-    "status": "provisional",
+    "status": "stepping_stone",
     "tool_version": "stratified-original-root-v1",
     "id": "B1",
     "source_sha256": "86bef3553d94fb757587b062a5f08a6e1241576a26baee05aa565774a9a77d47",
@@ -2765,6 +3533,7 @@
       "archive.py": "f7eed177c93923fecf9029a9ffddef3e57222c6e73144a26c2c3071d8ef5b82f",
       "audit.py": "48fee191307a182565d7c16418bddfc17038a5dc5efe3d3db135d9929962960c",
       "batch.py": "18606f30354b65c847e3ca3d685a4163c294f8f2263aa9070e8b26548d95aaa1",
+      "build.py": "5bb8577fefae8dd0e9ea47eacd7b4c0ca82469cfc4a6ef49dd7c55f79bff3e2a",
       "clock_checks.py": "d244b38aad23799d8492091cf42381adde108c02a7a21ee42261f30eb06f7ebe",
       "counterfactual.py": "05fa7d48b53a47e566e447a87e1eb060f3fdbce30938fefa9fa8e428999421cc",
       "coverage_checks.py": "5ebe78ede678603f7cb1ebddd05ef5e0f21396b398526487c076aeb486bf955e",
@@ -2773,7 +3542,9 @@
       "create_round1.py": "35bbf78d18716639daf8a858e1264e0595b70eaad5b98eefdfdcb9823f9f839c",
       "create_round2.py": "1d75fa8dade3cd93adfdddf1759e3dc9a92e57fd94bda9a403cd50c6b7c8f1d5",
       "deck_guard.py": "36d56c11b88823fcc9b9672736d64c4c6489ff8225f3edd5b8975c025544abcb",
+      "development_analysis.py": "4a6a7f4883ca90749bdd91971ec5ea35c8679b1459f313ec1c4ad08da7a6803a",
       "evidence.py": "082ef6d98552f159283ef06cef7cd0e94aa2781e1c3fae51d38b1ceabab89588",
+      "final_analysis.py": "e634b900c1e8054eb8e334b7c05063b00550a296d15c36abe19699104078c591",
       "mechanisms.py": "55de7125e42c8d1504640fb8fdf47f4f57cfbbb5d9d9addab190a22a1e61383e",
       "misdirection_checks.py": "563e876699a694716c089aec5965849b1295de41fa6952e85e4e377381192c95",
       "resume.py": "60f6aa45003b80ccdee1ec20312ec104658f26fc467acd85f60262413df498ff",
@@ -3241,14 +4012,15 @@
           "wins": 125
         }
       }
-    ]
+    ],
+    "retention_reason": "Clock conditions corrected, but no same-block win gain."
   },
   "C1": {
     "parent_ids": [
       "C0"
     ],
     "hypothesis": "Enumerate standalone Animal Companion roots; inherited C2 only activates with Juggler despite implemented Companion transitions.",
-    "status": "provisional",
+    "status": "stepping_stone",
     "tool_version": "stratified-original-root-v1",
     "id": "C1",
     "source_sha256": "fd138b33e6b1b0a49938af89585464665cd4ccb398ef97fd2f8633924beff51f",
@@ -3287,6 +4059,7 @@
       "archive.py": "f7eed177c93923fecf9029a9ffddef3e57222c6e73144a26c2c3071d8ef5b82f",
       "audit.py": "48fee191307a182565d7c16418bddfc17038a5dc5efe3d3db135d9929962960c",
       "batch.py": "18606f30354b65c847e3ca3d685a4163c294f8f2263aa9070e8b26548d95aaa1",
+      "build.py": "5bb8577fefae8dd0e9ea47eacd7b4c0ca82469cfc4a6ef49dd7c55f79bff3e2a",
       "clock_checks.py": "d244b38aad23799d8492091cf42381adde108c02a7a21ee42261f30eb06f7ebe",
       "counterfactual.py": "05fa7d48b53a47e566e447a87e1eb060f3fdbce30938fefa9fa8e428999421cc",
       "coverage_checks.py": "5ebe78ede678603f7cb1ebddd05ef5e0f21396b398526487c076aeb486bf955e",
@@ -3295,7 +4068,9 @@
       "create_round1.py": "35bbf78d18716639daf8a858e1264e0595b70eaad5b98eefdfdcb9823f9f839c",
       "create_round2.py": "1d75fa8dade3cd93adfdddf1759e3dc9a92e57fd94bda9a403cd50c6b7c8f1d5",
       "deck_guard.py": "36d56c11b88823fcc9b9672736d64c4c6489ff8225f3edd5b8975c025544abcb",
+      "development_analysis.py": "4a6a7f4883ca90749bdd91971ec5ea35c8679b1459f313ec1c4ad08da7a6803a",
       "evidence.py": "082ef6d98552f159283ef06cef7cd0e94aa2781e1c3fae51d38b1ceabab89588",
+      "final_analysis.py": "e634b900c1e8054eb8e334b7c05063b00550a296d15c36abe19699104078c591",
       "mechanisms.py": "55de7125e42c8d1504640fb8fdf47f4f57cfbbb5d9d9addab190a22a1e61383e",
       "misdirection_checks.py": "563e876699a694716c089aec5965849b1295de41fa6952e85e4e377381192c95",
       "resume.py": "60f6aa45003b80ccdee1ec20312ec104658f26fc467acd85f60262413df498ff",
@@ -3763,14 +4538,15 @@
           "wins": 123
         }
       }
-    ]
+    ],
+    "retention_reason": "Standalone Companion coverage validated; no overall gain by itself."
   },
   "O1": {
     "parent_ids": [
       "K1"
     ],
     "hypothesis": "Against pressure classes on the play, return three-drops without a one-plus-two opening curve; keep supported Coin curves, avoid speculative combos.",
-    "status": "provisional",
+    "status": "rejected",
     "tool_version": "stratified-original-root-v1",
     "id": "O1",
     "source_sha256": "b0839133058dbd49bf6960ccb8f6e0b96dfd657679fe5530aed28a503002d874",
@@ -3807,6 +4583,7 @@
       "archive.py": "f7eed177c93923fecf9029a9ffddef3e57222c6e73144a26c2c3071d8ef5b82f",
       "audit.py": "48fee191307a182565d7c16418bddfc17038a5dc5efe3d3db135d9929962960c",
       "batch.py": "18606f30354b65c847e3ca3d685a4163c294f8f2263aa9070e8b26548d95aaa1",
+      "build.py": "5bb8577fefae8dd0e9ea47eacd7b4c0ca82469cfc4a6ef49dd7c55f79bff3e2a",
       "clock_checks.py": "d244b38aad23799d8492091cf42381adde108c02a7a21ee42261f30eb06f7ebe",
       "counterfactual.py": "05fa7d48b53a47e566e447a87e1eb060f3fdbce30938fefa9fa8e428999421cc",
       "coverage_checks.py": "5ebe78ede678603f7cb1ebddd05ef5e0f21396b398526487c076aeb486bf955e",
@@ -3815,7 +4592,9 @@
       "create_round1.py": "35bbf78d18716639daf8a858e1264e0595b70eaad5b98eefdfdcb9823f9f839c",
       "create_round2.py": "1d75fa8dade3cd93adfdddf1759e3dc9a92e57fd94bda9a403cd50c6b7c8f1d5",
       "deck_guard.py": "36d56c11b88823fcc9b9672736d64c4c6489ff8225f3edd5b8975c025544abcb",
+      "development_analysis.py": "4a6a7f4883ca90749bdd91971ec5ea35c8679b1459f313ec1c4ad08da7a6803a",
       "evidence.py": "082ef6d98552f159283ef06cef7cd0e94aa2781e1c3fae51d38b1ceabab89588",
+      "final_analysis.py": "e634b900c1e8054eb8e334b7c05063b00550a296d15c36abe19699104078c591",
       "mechanisms.py": "55de7125e42c8d1504640fb8fdf47f4f57cfbbb5d9d9addab190a22a1e61383e",
       "misdirection_checks.py": "563e876699a694716c089aec5965849b1295de41fa6952e85e4e377381192c95",
       "resume.py": "60f6aa45003b80ccdee1ec20312ec104658f26fc467acd85f60262413df498ff",
@@ -4283,14 +5062,15 @@
           "wins": 123
         }
       }
-    ]
+    ],
+    "retention_reason": "Two common blocks regressed; do not retain opening restriction."
   },
   "C2": {
     "parent_ids": [
       "C1"
     ],
     "hypothesis": "One unsupported alternative response must not discard already comparable roots; unsupported baseline still blocks override.",
-    "status": "provisional",
+    "status": "stepping_stone",
     "tool_version": "stratified-original-root-v1",
     "id": "C2",
     "source_sha256": "213d578eb837ce251140da375243c23cc46d2aee077f000a857c9aa8135842d2",
@@ -4329,6 +5109,7 @@
       "archive.py": "f7eed177c93923fecf9029a9ffddef3e57222c6e73144a26c2c3071d8ef5b82f",
       "audit.py": "48fee191307a182565d7c16418bddfc17038a5dc5efe3d3db135d9929962960c",
       "batch.py": "18606f30354b65c847e3ca3d685a4163c294f8f2263aa9070e8b26548d95aaa1",
+      "build.py": "5bb8577fefae8dd0e9ea47eacd7b4c0ca82469cfc4a6ef49dd7c55f79bff3e2a",
       "clock_checks.py": "d244b38aad23799d8492091cf42381adde108c02a7a21ee42261f30eb06f7ebe",
       "counterfactual.py": "05fa7d48b53a47e566e447a87e1eb060f3fdbce30938fefa9fa8e428999421cc",
       "coverage_checks.py": "5ebe78ede678603f7cb1ebddd05ef5e0f21396b398526487c076aeb486bf955e",
@@ -4337,7 +5118,9 @@
       "create_round1.py": "35bbf78d18716639daf8a858e1264e0595b70eaad5b98eefdfdcb9823f9f839c",
       "create_round2.py": "1d75fa8dade3cd93adfdddf1759e3dc9a92e57fd94bda9a403cd50c6b7c8f1d5",
       "deck_guard.py": "36d56c11b88823fcc9b9672736d64c4c6489ff8225f3edd5b8975c025544abcb",
+      "development_analysis.py": "4a6a7f4883ca90749bdd91971ec5ea35c8679b1459f313ec1c4ad08da7a6803a",
       "evidence.py": "082ef6d98552f159283ef06cef7cd0e94aa2781e1c3fae51d38b1ceabab89588",
+      "final_analysis.py": "e634b900c1e8054eb8e334b7c05063b00550a296d15c36abe19699104078c591",
       "mechanisms.py": "55de7125e42c8d1504640fb8fdf47f4f57cfbbb5d9d9addab190a22a1e61383e",
       "misdirection_checks.py": "563e876699a694716c089aec5965849b1295de41fa6952e85e4e377381192c95",
       "resume.py": "60f6aa45003b80ccdee1ec20312ec104658f26fc467acd85f60262413df498ff",
@@ -4578,14 +5361,15 @@
           "wins": 151
         }
       }
-    ]
+    ],
+    "retention_reason": "Root-local exclusion retains the observed Juggler/Hounds comparison; small overall evidence."
   },
   "E1": {
     "parent_ids": [
       "K1"
     ],
     "hypothesis": "Revive archived M2 opaque enemy draw and enemy-only Mage body coverage with the original deck; test local ability without claiming inherited win gain.",
-    "status": "provisional",
+    "status": "stepping_stone",
     "tool_version": "stratified-original-root-v1",
     "id": "E1",
     "source_sha256": "4819eaebfa394e8e81ce634ac6f122c03d6c1aefc14c4afad257827fe3b2e383",
@@ -4622,6 +5406,7 @@
       "archive.py": "f7eed177c93923fecf9029a9ffddef3e57222c6e73144a26c2c3071d8ef5b82f",
       "audit.py": "48fee191307a182565d7c16418bddfc17038a5dc5efe3d3db135d9929962960c",
       "batch.py": "18606f30354b65c847e3ca3d685a4163c294f8f2263aa9070e8b26548d95aaa1",
+      "build.py": "5bb8577fefae8dd0e9ea47eacd7b4c0ca82469cfc4a6ef49dd7c55f79bff3e2a",
       "clock_checks.py": "d244b38aad23799d8492091cf42381adde108c02a7a21ee42261f30eb06f7ebe",
       "counterfactual.py": "05fa7d48b53a47e566e447a87e1eb060f3fdbce30938fefa9fa8e428999421cc",
       "coverage_checks.py": "5ebe78ede678603f7cb1ebddd05ef5e0f21396b398526487c076aeb486bf955e",
@@ -4630,7 +5415,9 @@
       "create_round1.py": "35bbf78d18716639daf8a858e1264e0595b70eaad5b98eefdfdcb9823f9f839c",
       "create_round2.py": "1d75fa8dade3cd93adfdddf1759e3dc9a92e57fd94bda9a403cd50c6b7c8f1d5",
       "deck_guard.py": "36d56c11b88823fcc9b9672736d64c4c6489ff8225f3edd5b8975c025544abcb",
+      "development_analysis.py": "4a6a7f4883ca90749bdd91971ec5ea35c8679b1459f313ec1c4ad08da7a6803a",
       "evidence.py": "082ef6d98552f159283ef06cef7cd0e94aa2781e1c3fae51d38b1ceabab89588",
+      "final_analysis.py": "e634b900c1e8054eb8e334b7c05063b00550a296d15c36abe19699104078c591",
       "mechanisms.py": "55de7125e42c8d1504640fb8fdf47f4f57cfbbb5d9d9addab190a22a1e61383e",
       "misdirection_checks.py": "563e876699a694716c089aec5965849b1295de41fa6952e85e4e377381192c95",
       "resume.py": "60f6aa45003b80ccdee1ec20312ec104658f26fc467acd85f60262413df498ff",
@@ -4640,6 +5427,385 @@
       "setup.py": "09ea930930f71b1248a03732d0f79bf5185c952ed1de33e01ed37f2dc78e3250"
     },
     "runs": [
+      {
+        "run": "secret-hunter-dgm-e1-guard-dev",
+        "candidate": "E1",
+        "seeds": [
+          950300,
+          950301,
+          950302,
+          950303
+        ],
+        "population": "5be681abbce9b8d2515d234cc753109f5fa7acff0ff6ced3fa9c1d1116ccfde5",
+        "split": "development",
+        "source_hash": "4819eaebfa394e8e81ce634ac6f122c03d6c1aefc14c4afad257827fe3b2e383",
+        "primary": null,
+        "overall": {
+          "n": 112,
+          "wins": 98,
+          "losses": 14,
+          "draws_or_voids": 0,
+          "win_rate": 0.875,
+          "wilson95_descriptive": [
+            0.801067679174165,
+            0.9240604267912221
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "by_opponent": {
+          "official-mage": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "aggressive-hunter": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "control-priest": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "tempo-paladin": {
+            "n": 8,
+            "wins": 5,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.625,
+            "wilson95_descriptive": [
+              0.30573785458380187,
+              0.863158240538479
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "value-warlock": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "adversarial-zoo": {
+            "n": 8,
+            "wins": 6,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.40926987910258916,
+              0.9285223111419724
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "search-paladin": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "historical-mage": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "control-mage": {
+            "n": 8,
+            "wins": 4,
+            "losses": 4,
+            "draws_or_voids": 0,
+            "win_rate": 0.5,
+            "wilson95_descriptive": [
+              0.21521252682444186,
+              0.7847874731755582
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "tempo-warlock": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "aggressive-paladin": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "value-priest": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "search-shaman": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "adversarial-priest-v1": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 56,
+            "wins": 47,
+            "losses": 9,
+            "draws_or_voids": 0,
+            "win_rate": 0.8392857142857143,
+            "wilson95_descriptive": [
+              0.7219354555032431,
+              0.9130743035941074
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "False": {
+            "n": 56,
+            "wins": 51,
+            "losses": 5,
+            "draws_or_voids": 0,
+            "win_rate": 0.9107142857142857,
+            "wilson95_descriptive": [
+              0.807437601433565,
+              0.9612584227369118
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "latency": {
+          "n": 3384,
+          "mean": 0.009907118305696029,
+          "max": 0.26108283398207277,
+          "p50": 0.0015403339639306068,
+          "p95": 0.04816391703207046,
+          "p99": 0.10736300004646182
+        },
+        "cost": {
+          "name": "e1-guard-dev",
+          "full": 112,
+          "short": 0,
+          "final": false,
+          "reserved_seconds": 1800,
+          "started": 1794444150.131346,
+          "status": "completed",
+          "pid": 79253,
+          "elapsed_s": 11.015130996704102,
+          "completed": 112,
+          "wins": 98
+        }
+      },
       {
         "run": "secret-hunter-dgm-e1-retain",
         "candidate": "E1",
@@ -5353,14 +6519,15 @@
           "wins": 202
         }
       }
-    ]
+    ],
+    "retention_reason": "M2 historical branch revived; strongest local-effect direction, retained as parent."
   },
   "S1": {
     "parent_ids": [
       "C2"
     ],
     "hypothesis": "Choose among three own-turn endpoints after public visible responses, instead of responding only to the single best raw endpoint.",
-    "status": "provisional",
+    "status": "stepping_stone",
     "tool_version": "stratified-original-root-v1",
     "id": "S1",
     "source_sha256": "d496ed736e41d320ec67acaed0fe9f50cda5ef2244201090edabef696a4b1a0a",
@@ -5399,6 +6566,7 @@
       "archive.py": "f7eed177c93923fecf9029a9ffddef3e57222c6e73144a26c2c3071d8ef5b82f",
       "audit.py": "48fee191307a182565d7c16418bddfc17038a5dc5efe3d3db135d9929962960c",
       "batch.py": "18606f30354b65c847e3ca3d685a4163c294f8f2263aa9070e8b26548d95aaa1",
+      "build.py": "5bb8577fefae8dd0e9ea47eacd7b4c0ca82469cfc4a6ef49dd7c55f79bff3e2a",
       "clock_checks.py": "d244b38aad23799d8492091cf42381adde108c02a7a21ee42261f30eb06f7ebe",
       "counterfactual.py": "05fa7d48b53a47e566e447a87e1eb060f3fdbce30938fefa9fa8e428999421cc",
       "coverage_checks.py": "5ebe78ede678603f7cb1ebddd05ef5e0f21396b398526487c076aeb486bf955e",
@@ -5407,7 +6575,9 @@
       "create_round1.py": "35bbf78d18716639daf8a858e1264e0595b70eaad5b98eefdfdcb9823f9f839c",
       "create_round2.py": "1d75fa8dade3cd93adfdddf1759e3dc9a92e57fd94bda9a403cd50c6b7c8f1d5",
       "deck_guard.py": "36d56c11b88823fcc9b9672736d64c4c6489ff8225f3edd5b8975c025544abcb",
+      "development_analysis.py": "4a6a7f4883ca90749bdd91971ec5ea35c8679b1459f313ec1c4ad08da7a6803a",
       "evidence.py": "082ef6d98552f159283ef06cef7cd0e94aa2781e1c3fae51d38b1ceabab89588",
+      "final_analysis.py": "e634b900c1e8054eb8e334b7c05063b00550a296d15c36abe19699104078c591",
       "mechanisms.py": "55de7125e42c8d1504640fb8fdf47f4f57cfbbb5d9d9addab190a22a1e61383e",
       "misdirection_checks.py": "563e876699a694716c089aec5965849b1295de41fa6952e85e4e377381192c95",
       "resume.py": "60f6aa45003b80ccdee1ec20312ec104658f26fc467acd85f60262413df498ff",
@@ -5883,14 +7053,15 @@
           "wins": 194
         }
       }
-    ]
+    ],
+    "retention_reason": "Multiple response endpoints gave small round2 gains that did not persist; higher latency."
   },
   "T1": {
     "parent_ids": [
       "C2"
     ],
     "hypothesis": "Resolve a single visible Misdirection by exact target enumeration, then allow outcome-contingent visible attacks; keep all other unsupported secret chains guarded.",
-    "status": "provisional",
+    "status": "stepping_stone",
     "tool_version": "stratified-original-root-v1",
     "id": "T1",
     "source_sha256": "ff7c3088bd17d13820bc830b76b4e1a24312015b66867ba56293d35881c58db6",
@@ -5930,6 +7101,7 @@
       "archive.py": "f7eed177c93923fecf9029a9ffddef3e57222c6e73144a26c2c3071d8ef5b82f",
       "audit.py": "48fee191307a182565d7c16418bddfc17038a5dc5efe3d3db135d9929962960c",
       "batch.py": "18606f30354b65c847e3ca3d685a4163c294f8f2263aa9070e8b26548d95aaa1",
+      "build.py": "5bb8577fefae8dd0e9ea47eacd7b4c0ca82469cfc4a6ef49dd7c55f79bff3e2a",
       "clock_checks.py": "d244b38aad23799d8492091cf42381adde108c02a7a21ee42261f30eb06f7ebe",
       "counterfactual.py": "05fa7d48b53a47e566e447a87e1eb060f3fdbce30938fefa9fa8e428999421cc",
       "coverage_checks.py": "5ebe78ede678603f7cb1ebddd05ef5e0f21396b398526487c076aeb486bf955e",
@@ -5938,7 +7110,9 @@
       "create_round1.py": "35bbf78d18716639daf8a858e1264e0595b70eaad5b98eefdfdcb9823f9f839c",
       "create_round2.py": "1d75fa8dade3cd93adfdddf1759e3dc9a92e57fd94bda9a403cd50c6b7c8f1d5",
       "deck_guard.py": "36d56c11b88823fcc9b9672736d64c4c6489ff8225f3edd5b8975c025544abcb",
+      "development_analysis.py": "4a6a7f4883ca90749bdd91971ec5ea35c8679b1459f313ec1c4ad08da7a6803a",
       "evidence.py": "082ef6d98552f159283ef06cef7cd0e94aa2781e1c3fae51d38b1ceabab89588",
+      "final_analysis.py": "e634b900c1e8054eb8e334b7c05063b00550a296d15c36abe19699104078c591",
       "mechanisms.py": "55de7125e42c8d1504640fb8fdf47f4f57cfbbb5d9d9addab190a22a1e61383e",
       "misdirection_checks.py": "563e876699a694716c089aec5965849b1295de41fa6952e85e4e377381192c95",
       "resume.py": "60f6aa45003b80ccdee1ec20312ec104658f26fc467acd85f60262413df498ff",
@@ -6183,7 +7357,8 @@
           "wins": 192
         }
       }
-    ]
+    ],
+    "retention_reason": "24/24 single-Misdirection mechanism cases, no overall gain; multi-secret chains unresolved."
   },
   "X1": {
     "parent_ids": [
@@ -6192,7 +7367,7 @@
       "E1"
     ],
     "hypothesis": "Combine response-selected chance continuations, corrected Krush clock, and independently retained M2 local effects; test interaction and regressions.",
-    "status": "provisional",
+    "status": "stepping_stone",
     "tool_version": "stratified-original-root-v1",
     "id": "X1",
     "source_sha256": "5d7a12e80fe3b7a197fb7acf9729b63d1f2c322a01d15eaaddb4f05803e1b452",
@@ -6231,6 +7406,7 @@
       "archive.py": "f7eed177c93923fecf9029a9ffddef3e57222c6e73144a26c2c3071d8ef5b82f",
       "audit.py": "48fee191307a182565d7c16418bddfc17038a5dc5efe3d3db135d9929962960c",
       "batch.py": "18606f30354b65c847e3ca3d685a4163c294f8f2263aa9070e8b26548d95aaa1",
+      "build.py": "5bb8577fefae8dd0e9ea47eacd7b4c0ca82469cfc4a6ef49dd7c55f79bff3e2a",
       "clock_checks.py": "d244b38aad23799d8492091cf42381adde108c02a7a21ee42261f30eb06f7ebe",
       "counterfactual.py": "05fa7d48b53a47e566e447a87e1eb060f3fdbce30938fefa9fa8e428999421cc",
       "coverage_checks.py": "5ebe78ede678603f7cb1ebddd05ef5e0f21396b398526487c076aeb486bf955e",
@@ -6239,7 +7415,9 @@
       "create_round1.py": "35bbf78d18716639daf8a858e1264e0595b70eaad5b98eefdfdcb9823f9f839c",
       "create_round2.py": "1d75fa8dade3cd93adfdddf1759e3dc9a92e57fd94bda9a403cd50c6b7c8f1d5",
       "deck_guard.py": "36d56c11b88823fcc9b9672736d64c4c6489ff8225f3edd5b8975c025544abcb",
+      "development_analysis.py": "4a6a7f4883ca90749bdd91971ec5ea35c8679b1459f313ec1c4ad08da7a6803a",
       "evidence.py": "082ef6d98552f159283ef06cef7cd0e94aa2781e1c3fae51d38b1ceabab89588",
+      "final_analysis.py": "e634b900c1e8054eb8e334b7c05063b00550a296d15c36abe19699104078c591",
       "mechanisms.py": "55de7125e42c8d1504640fb8fdf47f4f57cfbbb5d9d9addab190a22a1e61383e",
       "misdirection_checks.py": "563e876699a694716c089aec5965849b1295de41fa6952e85e4e377381192c95",
       "resume.py": "60f6aa45003b80ccdee1ec20312ec104658f26fc467acd85f60262413df498ff",
@@ -6249,6 +7427,632 @@
       "setup.py": "09ea930930f71b1248a03732d0f79bf5185c952ed1de33e01ed37f2dc78e3250"
     },
     "runs": [
+      {
+        "run": "secret-hunter-dgm-x1-guard-dev",
+        "candidate": "X1",
+        "seeds": [
+          950300,
+          950301,
+          950302,
+          950303
+        ],
+        "population": "5be681abbce9b8d2515d234cc753109f5fa7acff0ff6ced3fa9c1d1116ccfde5",
+        "split": "development",
+        "source_hash": "5d7a12e80fe3b7a197fb7acf9729b63d1f2c322a01d15eaaddb4f05803e1b452",
+        "primary": null,
+        "overall": {
+          "n": 112,
+          "wins": 99,
+          "losses": 13,
+          "draws_or_voids": 0,
+          "win_rate": 0.8839285714285714,
+          "wilson95_descriptive": [
+            0.8114927457758987,
+            0.9309003150934263
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "by_opponent": {
+          "official-mage": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "aggressive-hunter": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "control-priest": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "tempo-paladin": {
+            "n": 8,
+            "wins": 5,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.625,
+            "wilson95_descriptive": [
+              0.30573785458380187,
+              0.863158240538479
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "value-warlock": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "adversarial-zoo": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "search-paladin": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "historical-mage": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "control-mage": {
+            "n": 8,
+            "wins": 5,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.625,
+            "wilson95_descriptive": [
+              0.30573785458380187,
+              0.863158240538479
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "tempo-warlock": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "aggressive-paladin": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "value-priest": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "search-shaman": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "adversarial-priest-v1": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 56,
+            "wins": 46,
+            "losses": 10,
+            "draws_or_voids": 0,
+            "win_rate": 0.8214285714285714,
+            "wilson95_descriptive": [
+              0.7015856902425105,
+              0.9000025025865582
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "False": {
+            "n": 56,
+            "wins": 53,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.9464285714285714,
+            "wilson95_descriptive": [
+              0.8539246046357077,
+              0.9816145520713321
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "latency": {
+          "n": 3435,
+          "mean": 0.01739554942888513,
+          "max": 0.6396242090268061,
+          "p50": 0.0021590839605778456,
+          "p95": 0.07732595794368535,
+          "p99": 0.24653133295942098
+        },
+        "cost": {
+          "name": "x1-guard-dev",
+          "full": 112,
+          "short": 0,
+          "final": false,
+          "reserved_seconds": 1800,
+          "started": 1794444161.296361,
+          "status": "completed",
+          "pid": 79274,
+          "elapsed_s": 15.485354900360107,
+          "completed": 112,
+          "wins": 99
+        }
+      },
+      {
+        "run": "secret-hunter-dgm-x1-retain",
+        "candidate": "X1",
+        "seeds": [
+          950240,
+          950241,
+          950242,
+          950243,
+          950244,
+          950245,
+          950246,
+          950247,
+          950248,
+          950249,
+          950250,
+          950251,
+          950252,
+          950253,
+          950254,
+          950255,
+          950256,
+          950257,
+          950258,
+          950259,
+          950260,
+          950261,
+          950262,
+          950263,
+          950264,
+          950265,
+          950266,
+          950267,
+          950268,
+          950269,
+          950270,
+          950271
+        ],
+        "population": "cb2b90a069c91a02ba655ef51fa836363888f204b6e64379047442cca2c8b741",
+        "split": "development",
+        "source_hash": "5d7a12e80fe3b7a197fb7acf9729b63d1f2c322a01d15eaaddb4f05803e1b452",
+        "primary": 0.7200520833333333,
+        "overall": {
+          "n": 384,
+          "wins": 284,
+          "losses": 100,
+          "draws_or_voids": 0,
+          "win_rate": 0.7395833333333334,
+          "wilson95_descriptive": [
+            0.6934684179504436,
+            0.7809520671135621
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "by_opponent": {
+          "astra-board-proxy": {
+            "n": 64,
+            "wins": 36,
+            "losses": 28,
+            "draws_or_voids": 0,
+            "win_rate": 0.5625,
+            "wilson95_descriptive": [
+              0.4408599177828787,
+              0.6770618293457267
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "astra-tempo-proxy": {
+            "n": 64,
+            "wins": 45,
+            "losses": 19,
+            "draws_or_voids": 0,
+            "win_rate": 0.703125,
+            "wilson95_descriptive": [
+              0.5822956740587202,
+              0.8009500041092477
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "astra-sticky-proxy": {
+            "n": 64,
+            "wins": 44,
+            "losses": 20,
+            "draws_or_voids": 0,
+            "win_rate": 0.6875,
+            "wilson95_descriptive": [
+              0.5660743364084737,
+              0.7876909049773426
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "bot2-face-proxy": {
+            "n": 64,
+            "wins": 51,
+            "losses": 13,
+            "draws_or_voids": 0,
+            "win_rate": 0.796875,
+            "wilson95_descriptive": [
+              0.6828613244878341,
+              0.8772669743730419
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "bot2-trade-proxy": {
+            "n": 64,
+            "wins": 50,
+            "losses": 14,
+            "draws_or_voids": 0,
+            "win_rate": 0.78125,
+            "wilson95_descriptive": [
+              0.665669836692222,
+              0.8649780253865025
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "bot1-mage-proxy": {
+            "n": 64,
+            "wins": 58,
+            "losses": 6,
+            "draws_or_voids": 0,
+            "win_rate": 0.90625,
+            "wilson95_descriptive": [
+              0.8101690141672233,
+              0.9563223421687121
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 192,
+            "wins": 153,
+            "losses": 39,
+            "draws_or_voids": 0,
+            "win_rate": 0.796875,
+            "wilson95_descriptive": [
+              0.73440317870563,
+              0.8476999086874468
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "False": {
+            "n": 192,
+            "wins": 131,
+            "losses": 61,
+            "draws_or_voids": 0,
+            "win_rate": 0.6822916666666666,
+            "wilson95_descriptive": [
+              0.613409582762551,
+              0.7440221375665312
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "latency": {
+          "n": 10719,
+          "mean": 0.02075042738756242,
+          "max": 0.8187557080527768,
+          "p50": 0.0028617909410968423,
+          "p95": 0.09364658291451633,
+          "p99": 0.26519837498199195
+        },
+        "cost": {
+          "name": "x1-retain",
+          "full": 384,
+          "short": 0,
+          "final": false,
+          "reserved_seconds": 1800,
+          "started": 1794444044.57469,
+          "status": "completed",
+          "pid": 79069,
+          "elapsed_s": 45.70093584060669,
+          "completed": 384,
+          "wins": 284
+        }
+      },
       {
         "run": "secret-hunter-dgm-x1-round3",
         "candidate": "X1",
@@ -6484,7 +8288,8 @@
           "wins": 200
         }
       }
-    ]
+    ],
+    "retention_reason": "Complementary merge retained, but shortlist ablation Y1 is slightly better and faster."
   },
   "Y1": {
     "parent_ids": [
@@ -6531,6 +8336,7 @@
       "archive.py": "f7eed177c93923fecf9029a9ffddef3e57222c6e73144a26c2c3071d8ef5b82f",
       "audit.py": "48fee191307a182565d7c16418bddfc17038a5dc5efe3d3db135d9929962960c",
       "batch.py": "18606f30354b65c847e3ca3d685a4163c294f8f2263aa9070e8b26548d95aaa1",
+      "build.py": "5bb8577fefae8dd0e9ea47eacd7b4c0ca82469cfc4a6ef49dd7c55f79bff3e2a",
       "clock_checks.py": "d244b38aad23799d8492091cf42381adde108c02a7a21ee42261f30eb06f7ebe",
       "counterfactual.py": "05fa7d48b53a47e566e447a87e1eb060f3fdbce30938fefa9fa8e428999421cc",
       "coverage_checks.py": "5ebe78ede678603f7cb1ebddd05ef5e0f21396b398526487c076aeb486bf955e",
@@ -6539,7 +8345,9 @@
       "create_round1.py": "35bbf78d18716639daf8a858e1264e0595b70eaad5b98eefdfdcb9823f9f839c",
       "create_round2.py": "1d75fa8dade3cd93adfdddf1759e3dc9a92e57fd94bda9a403cd50c6b7c8f1d5",
       "deck_guard.py": "36d56c11b88823fcc9b9672736d64c4c6489ff8225f3edd5b8975c025544abcb",
+      "development_analysis.py": "4a6a7f4883ca90749bdd91971ec5ea35c8679b1459f313ec1c4ad08da7a6803a",
       "evidence.py": "082ef6d98552f159283ef06cef7cd0e94aa2781e1c3fae51d38b1ceabab89588",
+      "final_analysis.py": "e634b900c1e8054eb8e334b7c05063b00550a296d15c36abe19699104078c591",
       "mechanisms.py": "55de7125e42c8d1504640fb8fdf47f4f57cfbbb5d9d9addab190a22a1e61383e",
       "misdirection_checks.py": "563e876699a694716c089aec5965849b1295de41fa6952e85e4e377381192c95",
       "resume.py": "60f6aa45003b80ccdee1ec20312ec104658f26fc467acd85f60262413df498ff",
@@ -6548,6 +8356,634 @@
       "select_v2.py": "ab01989cb1cbe301cd76a729d312cd12d855bae98da230bfef7242c866c1e000",
       "setup.py": "09ea930930f71b1248a03732d0f79bf5185c952ed1de33e01ed37f2dc78e3250"
     },
-    "runs": []
+    "runs": [
+      {
+        "run": "secret-hunter-dgm-y1-guard-dev",
+        "candidate": "Y1",
+        "seeds": [
+          950300,
+          950301,
+          950302,
+          950303
+        ],
+        "population": "5be681abbce9b8d2515d234cc753109f5fa7acff0ff6ced3fa9c1d1116ccfde5",
+        "split": "development",
+        "source_hash": "47ea1ba9392507e7eaa28cd4384056cb2acee11c57d7253db95099f3ef924735",
+        "primary": null,
+        "overall": {
+          "n": 112,
+          "wins": 99,
+          "losses": 13,
+          "draws_or_voids": 0,
+          "win_rate": 0.8839285714285714,
+          "wilson95_descriptive": [
+            0.8114927457758987,
+            0.9309003150934263
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "by_opponent": {
+          "official-mage": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "aggressive-hunter": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "control-priest": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "tempo-paladin": {
+            "n": 8,
+            "wins": 6,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.40926987910258916,
+              0.9285223111419724
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "value-warlock": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "adversarial-zoo": {
+            "n": 8,
+            "wins": 6,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.40926987910258916,
+              0.9285223111419724
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "search-paladin": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "historical-mage": {
+            "n": 8,
+            "wins": 6,
+            "losses": 2,
+            "draws_or_voids": 0,
+            "win_rate": 0.75,
+            "wilson95_descriptive": [
+              0.40926987910258916,
+              0.9285223111419724
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "control-mage": {
+            "n": 8,
+            "wins": 5,
+            "losses": 3,
+            "draws_or_voids": 0,
+            "win_rate": 0.625,
+            "wilson95_descriptive": [
+              0.30573785458380187,
+              0.863158240538479
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "tempo-warlock": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "aggressive-paladin": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "value-priest": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "search-shaman": {
+            "n": 8,
+            "wins": 8,
+            "losses": 0,
+            "draws_or_voids": 0,
+            "win_rate": 1.0,
+            "wilson95_descriptive": [
+              0.6755843804891231,
+              1.0
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "adversarial-priest-v1": {
+            "n": 8,
+            "wins": 7,
+            "losses": 1,
+            "draws_or_voids": 0,
+            "win_rate": 0.875,
+            "wilson95_descriptive": [
+              0.5291051942301386,
+              0.9775830911367038
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 56,
+            "wins": 48,
+            "losses": 8,
+            "draws_or_voids": 0,
+            "win_rate": 0.8571428571428571,
+            "wilson95_descriptive": [
+              0.7426383257914846,
+              0.9257929995741472
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "False": {
+            "n": 56,
+            "wins": 51,
+            "losses": 5,
+            "draws_or_voids": 0,
+            "win_rate": 0.9107142857142857,
+            "wilson95_descriptive": [
+              0.807437601433565,
+              0.9612584227369118
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "latency": {
+          "n": 3427,
+          "mean": 0.014032704707528328,
+          "max": 0.5507726250216365,
+          "p50": 0.0021590410033240914,
+          "p95": 0.05925879196729511,
+          "p99": 0.1864591659978032
+        },
+        "cost": {
+          "name": "y1-guard-dev",
+          "full": 112,
+          "short": 0,
+          "final": false,
+          "reserved_seconds": 1800,
+          "started": 1794444176.975932,
+          "status": "completed",
+          "pid": 79322,
+          "elapsed_s": 13.62964916229248,
+          "completed": 112,
+          "wins": 99
+        }
+      },
+      {
+        "run": "secret-hunter-dgm-y1-retain",
+        "candidate": "Y1",
+        "seeds": [
+          950240,
+          950241,
+          950242,
+          950243,
+          950244,
+          950245,
+          950246,
+          950247,
+          950248,
+          950249,
+          950250,
+          950251,
+          950252,
+          950253,
+          950254,
+          950255,
+          950256,
+          950257,
+          950258,
+          950259,
+          950260,
+          950261,
+          950262,
+          950263,
+          950264,
+          950265,
+          950266,
+          950267,
+          950268,
+          950269,
+          950270,
+          950271
+        ],
+        "population": "cb2b90a069c91a02ba655ef51fa836363888f204b6e64379047442cca2c8b741",
+        "split": "development",
+        "source_hash": "47ea1ba9392507e7eaa28cd4384056cb2acee11c57d7253db95099f3ef924735",
+        "primary": 0.7213541666666667,
+        "overall": {
+          "n": 384,
+          "wins": 284,
+          "losses": 100,
+          "draws_or_voids": 0,
+          "win_rate": 0.7395833333333334,
+          "wilson95_descriptive": [
+            0.6934684179504436,
+            0.7809520671135621
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "by_opponent": {
+          "astra-board-proxy": {
+            "n": 64,
+            "wins": 36,
+            "losses": 28,
+            "draws_or_voids": 0,
+            "win_rate": 0.5625,
+            "wilson95_descriptive": [
+              0.4408599177828787,
+              0.6770618293457267
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "astra-tempo-proxy": {
+            "n": 64,
+            "wins": 45,
+            "losses": 19,
+            "draws_or_voids": 0,
+            "win_rate": 0.703125,
+            "wilson95_descriptive": [
+              0.5822956740587202,
+              0.8009500041092477
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "astra-sticky-proxy": {
+            "n": 64,
+            "wins": 43,
+            "losses": 21,
+            "draws_or_voids": 0,
+            "win_rate": 0.671875,
+            "wilson95_descriptive": [
+              0.5499887622745426,
+              0.7742960423291224
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "bot2-face-proxy": {
+            "n": 64,
+            "wins": 52,
+            "losses": 12,
+            "draws_or_voids": 0,
+            "win_rate": 0.8125,
+            "wilson95_descriptive": [
+              0.7002540844522482,
+              0.889354651190779
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "bot2-trade-proxy": {
+            "n": 64,
+            "wins": 50,
+            "losses": 14,
+            "draws_or_voids": 0,
+            "win_rate": 0.78125,
+            "wilson95_descriptive": [
+              0.665669836692222,
+              0.8649780253865025
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "bot1-mage-proxy": {
+            "n": 64,
+            "wins": 58,
+            "losses": 6,
+            "draws_or_voids": 0,
+            "win_rate": 0.90625,
+            "wilson95_descriptive": [
+              0.8101690141672233,
+              0.9563223421687121
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "by_actual_first": {
+          "True": {
+            "n": 192,
+            "wins": 152,
+            "losses": 40,
+            "draws_or_voids": 0,
+            "win_rate": 0.7916666666666666,
+            "wilson95_descriptive": [
+              0.7287790691776831,
+              0.8431116833488485
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          },
+          "False": {
+            "n": 192,
+            "wins": 132,
+            "losses": 60,
+            "draws_or_voids": 0,
+            "win_rate": 0.6875,
+            "wilson95_descriptive": [
+              0.6187999478210462,
+              0.7488441073745813
+            ],
+            "harness_errors": 0,
+            "illegal": 0,
+            "timeouts": 0,
+            "forfeits": 0,
+            "opponent_errors": 0,
+            "policy_errors": 0,
+            "fallbacks": 0,
+            "over_2s": 0,
+            "public_input_violations": 0
+          }
+        },
+        "latency": {
+          "n": 10713,
+          "mean": 0.016117248183548292,
+          "max": 0.7661436669295654,
+          "p50": 0.0027942920569330454,
+          "p95": 0.07358974998351187,
+          "p99": 0.19505179196130484
+        },
+        "cost": {
+          "name": "y1-retain",
+          "full": 384,
+          "short": 0,
+          "final": false,
+          "reserved_seconds": 1800,
+          "started": 1794444090.456735,
+          "status": "completed",
+          "pid": 79152,
+          "elapsed_s": 37.17868900299072,
+          "completed": 384,
+          "wins": 284
+        }
+      }
+    ],
+    "retention_reason": "Select on 32 new shared development seed clusters and old-pool screen; no superiority claim before final."
   }
 }
