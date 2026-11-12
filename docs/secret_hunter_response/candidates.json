@@ -4,14 +4,25 @@
       "dgm-Y1"
     ],
     "status": "research_baseline",
-    "source_sha256": "47ea1ba9392507e7eaa28cd4384056cb2acee11c57d7253db95099f3ef924735"
+    "source_sha256": "47ea1ba9392507e7eaa28cd4384056cb2acee11c57d7253db95099f3ef924735",
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "runs": [
+      "experiments/secret-hunter-response-y1-pilot",
+      "experiments/secret-hunter-response-y1-response-data",
+      "experiments/secret-hunter-response-y1-retain",
+      "experiments/secret-hunter-response-y1-screen"
+    ]
   },
   "K1": {
     "parent_ids": [
       "dgm-K1"
     ],
     "status": "research_baseline",
-    "source_sha256": "ccda3f42b94eb890a88494eba0c6f2a9c1fd82a412b5ef5b6938d3ebcf4828e7"
+    "source_sha256": "ccda3f42b94eb890a88494eba0c6f2a9c1fd82a412b5ef5b6938d3ebcf4828e7",
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "runs": [
+      "experiments/secret-hunter-response-k1-pilot"
+    ]
   },
   "B1": {
     "parent_ids": [
@@ -20,7 +31,11 @@
     "status": "rejected",
     "hypothesis": "End both public turns, retain distinct complete-turn endpoints and explicitly search the known-hand next turn.",
     "source_sha256": "7250afcacf862c34cec3fdb2dfa71089a73fb84b66bec2ddf37d92c978f25fbe",
-    "failure": "Pilot degraded early tempo; recovery endpoint value overwhelms current-turn safety."
+    "failure": "Pilot degraded early tempo; recovery endpoint value overwhelms current-turn safety.",
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "runs": [
+      "experiments/secret-hunter-response-b1-pilot"
+    ]
   },
   "C1": {
     "parent_ids": [
@@ -29,42 +44,87 @@
     "status": "rejected",
     "hypothesis": "Same candidate generator and budget as B1, with small public-compatible response scenarios; no learned coefficients.",
     "source_sha256": "c148ded5ea845b9d7f2456631dbf0eba6d492dd797075ceafc3831ec2cf2be4f",
-    "failure": "Pilot degraded early tempo; recovery endpoint value overwhelms current-turn safety."
+    "failure": "Pilot degraded early tempo; recovery endpoint value overwhelms current-turn safety.",
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "runs": [
+      "experiments/secret-hunter-response-c1-pilot"
+    ]
   },
   "B2": {
     "parent_ids": [
       "B1"
     ],
-    "status": "provisional",
+    "status": "stepping_stone",
     "hypothesis": "B1/C1 lost early tempo by replacing current value with a shallow next-turn value that advanced the hand clock again. Keep post-response value and use a bounded recovery increment with future clock bonuses disabled.",
     "evidence": "pilot: Y1 81/96, B1 76/96, C1 75/96. Examples: seed 960102 Astra board seat 2 seq 7, seed 960101 Bot2 seats 1 seq 5.",
-    "source_sha256": "ee31bca547e89adf63afc112e6a6515e4958c57d4ddfc8e2d5de01f2d78a83ad"
+    "source_sha256": "ee31bca547e89adf63afc112e6a6515e4958c57d4ddfc8e2d5de01f2d78a83ad",
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "runs": [
+      "experiments/secret-hunter-response-b2-pilot",
+      "experiments/secret-hunter-response-b2-screen"
+    ],
+    "limitation": "Mechanism/candidate coverage improved; no retained development win-rate gain."
   },
   "C2": {
     "parent_ids": [
       "C1"
     ],
-    "status": "provisional",
+    "status": "stepping_stone",
     "hypothesis": "B1/C1 lost early tempo by replacing current value with a shallow next-turn value that advanced the hand clock again. Keep post-response value and use a bounded recovery increment with future clock bonuses disabled.",
     "evidence": "pilot: Y1 81/96, B1 76/96, C1 75/96. Examples: seed 960102 Astra board seat 2 seq 7, seed 960101 Bot2 seats 1 seq 5.",
-    "source_sha256": "20706684eb568f43f785de597aac550d728c68a0ef5ad1e85421a176290e8bed"
+    "source_sha256": "20706684eb568f43f785de597aac550d728c68a0ef5ad1e85421a176290e8bed",
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "runs": [
+      "experiments/secret-hunter-response-c2-pilot",
+      "experiments/secret-hunter-response-c2-screen"
+    ],
+    "limitation": "Mechanism/candidate coverage improved; no retained development win-rate gain."
   },
   "B3": {
     "parent_ids": [
       "B2"
     ],
-    "status": "provisional",
+    "status": "stepping_stone",
     "hypothesis": "Preserve baseline root attribution during state reuse and inherit the Coin/random-followup coverage guard.",
     "evidence": "960100 Bot2-trade seat 1 seq 4: C2 compared Coin/end against Explosive Trap, missing Y1 Coin/Companion continuation.",
-    "source_sha256": "c9863a6c054798bda3e4303282dc94eb283775864a0dc2752578916eb5d3a22b"
+    "source_sha256": "c9863a6c054798bda3e4303282dc94eb283775864a0dc2752578916eb5d3a22b",
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "runs": [
+      "experiments/secret-hunter-response-b3-pilot",
+      "experiments/secret-hunter-response-b3-retain",
+      "experiments/secret-hunter-response-b3-screen"
+    ],
+    "limitation": "Mechanism/candidate coverage improved; no retained development win-rate gain."
   },
   "C3": {
     "parent_ids": [
       "C2"
     ],
-    "status": "provisional",
+    "status": "stepping_stone",
     "hypothesis": "Preserve baseline root attribution during state reuse and inherit the Coin/random-followup coverage guard.",
     "evidence": "960100 Bot2-trade seat 1 seq 4: C2 compared Coin/end against Explosive Trap, missing Y1 Coin/Companion continuation.",
-    "source_sha256": "610c3a8eeb73b609888b3b9b4b37fa74e21aa0c915939a3f2712ddee596b216b"
+    "source_sha256": "610c3a8eeb73b609888b3b9b4b37fa74e21aa0c915939a3f2712ddee596b216b",
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "runs": [
+      "experiments/secret-hunter-response-c3-pilot",
+      "experiments/secret-hunter-response-c3-retain",
+      "experiments/secret-hunter-response-c3-screen"
+    ],
+    "limitation": "Mechanism/candidate coverage improved; no retained development win-rate gain."
+  },
+  "E1": {
+    "parent_ids": [
+      "Y1"
+    ],
+    "status": "provisional",
+    "hypothesis": "Only correct the missing opposing Imp Master end-turn value in Y1 visible response endpoints. Preserve Y1 candidate generator and scoring instead of broad recovery search.",
+    "evidence": "B3 retention 317/384 vs Y1 321/384; expansion not reliably helpful. Exact end-turn mechanics passed differential checks and remain a separately testable parent.",
+    "source_sha256": "9ea5a43260c928000531c2422a55353f7e876624b3013b89296703da976e7b8a",
+    "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+    "runs": [
+      "experiments/secret-hunter-response-e1-pilot",
+      "experiments/secret-hunter-response-e1-retain",
+      "experiments/secret-hunter-response-e1-screen"
+    ]
   }
 }

@@ -1,0 +1,236 @@
+{
+  "cases": 72,
+  "future_validation_per_plan": 5,
+  "source_seed_groups": 17,
+  "baseline_wins": 257,
+  "selected_wins": 263,
+  "changed": 19,
+  "shared_first_action": 59,
+  "errors": 0,
+  "actual_original_win": 36,
+  "actual_first": 35,
+  "selected_minus_Y1": 0.016666666666666666,
+  "paired_source_seed_95": [
+    0.0,
+    0.046153846153846156
+  ],
+  "by_opponent": {
+    "bot2-trade-proxy": 12,
+    "bot1-mage-proxy": 12,
+    "astra-board-proxy": 13,
+    "bot2-face-proxy": 11,
+    "astra-sticky-proxy": 12,
+    "astra-tempo-proxy": 12
+  },
+  "by_own_turn": {
+    "2": 25,
+    "3": 24,
+    "4": 23
+  },
+  "extended_cases": [
+    {
+      "case_id": 16,
+      "seed": 960014,
+      "opponent": "astra-sticky-proxy",
+      "seat": 1,
+      "seq": 5,
+      "own_turn": 3,
+      "source_win": 0,
+      "Y1_wins": 1,
+      "alternative_wins": 4,
+      "n_each": 20,
+      "paired_future_95_descriptive": [
+        -0.05,
+        0.35
+      ],
+      "original_plan": [
+        {
+          "type": "play_card",
+          "card": 12,
+          "position": 0
+        },
+        {
+          "type": "end_turn"
+        }
+      ],
+      "alternative_plan": [
+        {
+          "type": "play_card",
+          "card": 19
+        },
+        {
+          "type": "end_turn"
+        }
+      ],
+      "caveat": "Single conditional source position selected adaptively; interval is not an out-of-sample strategy effect."
+    },
+    {
+      "case_id": 8,
+      "seed": 960003,
+      "opponent": "astra-board-proxy",
+      "seat": 1,
+      "seq": 11,
+      "own_turn": 4,
+      "source_win": 1,
+      "Y1_wins": 19,
+      "alternative_wins": 11,
+      "n_each": 20,
+      "paired_future_95_descriptive": [
+        -0.65,
+        -0.15
+      ],
+      "original_plan": [
+        {
+          "type": "play_card",
+          "card": 25
+        },
+        {
+          "type": "attack",
+          "attacker": 4,
+          "target": 63
+        },
+        {
+          "type": "play_card",
+          "card": 6,
+          "position": 0
+        },
+        {
+          "type": "attack",
+          "attacker": 76,
+          "target": 37
+        },
+        {
+          "type": "attack",
+          "attacker": 77,
+          "target": 37
+        },
+        {
+          "type": "attack",
+          "attacker": 78,
+          "target": 37
+        },
+        {
+          "type": "attack",
+          "attacker": 79,
+          "target": 37
+        },
+        {
+          "type": "end_turn"
+        }
+      ],
+      "alternative_plan": [
+        {
+          "type": "attack",
+          "attacker": 4,
+          "target": 63
+        },
+        {
+          "type": "end_turn"
+        }
+      ],
+      "caveat": "Single conditional source position selected adaptively; interval is not an out-of-sample strategy effect."
+    },
+    {
+      "case_id": 13,
+      "seed": 960004,
+      "opponent": "astra-sticky-proxy",
+      "seat": 1,
+      "seq": 8,
+      "own_turn": 3,
+      "source_win": 0,
+      "Y1_wins": 2,
+      "alternative_wins": 0,
+      "n_each": 20,
+      "paired_future_95_descriptive": [
+        -0.25,
+        0
+      ],
+      "original_plan": [
+        {
+          "type": "play_card",
+          "card": 22,
+          "position": 0
+        },
+        {
+          "type": "attack",
+          "attacker": 16,
+          "target": 37
+        },
+        {
+          "type": "end_turn"
+        }
+      ],
+      "alternative_plan": [
+        {
+          "type": "play_card",
+          "card": 27,
+          "target": 54
+        },
+        {
+          "type": "attack",
+          "attacker": 16,
+          "target": 37
+        },
+        {
+          "type": "end_turn"
+        }
+      ],
+      "caveat": "Single conditional source position selected adaptively; interval is not an out-of-sample strategy effect."
+    },
+    {
+      "case_id": 2,
+      "seed": 960017,
+      "opponent": "astra-board-proxy",
+      "seat": 1,
+      "seq": 11,
+      "own_turn": 4,
+      "source_win": 0,
+      "Y1_wins": 5,
+      "alternative_wins": 5,
+      "n_each": 20,
+      "paired_future_95_descriptive": [
+        -0.2,
+        0.2
+      ],
+      "original_plan": [
+        {
+          "type": "play_card",
+          "card": 13,
+          "position": 0
+        },
+        {
+          "type": "attack",
+          "attacker": 12,
+          "target": 54
+        },
+        {
+          "type": "hero_power"
+        },
+        {
+          "type": "end_turn"
+        }
+      ],
+      "alternative_plan": [
+        {
+          "type": "play_card",
+          "card": 31
+        },
+        {
+          "type": "play_card",
+          "card": 9,
+          "position": 0
+        },
+        {
+          "type": "attack",
+          "attacker": 12,
+          "target": 54
+        },
+        {
+          "type": "end_turn"
+        }
+      ],
+      "caveat": "Single conditional source position selected adaptively; interval is not an out-of-sample strategy effect."
+    }
+  ],
+  "evidence_gap": "No statistically secure general strategy gain. Positive local examples remain conditional, selection-sensitive and continuation-dependent. The harm example is substantially clearer."
+}

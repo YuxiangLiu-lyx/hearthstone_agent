@@ -18,6 +18,15 @@ def reconstruct(case):
  from hs_arena.deck import load_deck
  r=case['row'];seat=r['seat'];src=ROOT/case['source'];spec=next(o for o in json.loads((src/'config.json').read_text())['population'] if o['name']==r['opponent'])
  own=load_deck(C/'deck.json');other=load_deck(ROOT/spec['deck']);e=Engine(own if seat==1 else other,other if seat==1 else own,r['seed'],max_turns=180)
+ import gzip
+ archive=ROOT/'docs/secret_hunter_response/replay-prefixes.jsonl.gz'
+ if archive.exists():
+  records=[json.loads(l) for l in gzip.open(archive,'rt')]
+  record=next((x for x in records if x['game']==r['game'] and x['seq']==case['observation']['seq']),None)
+  if record:
+   for step in record['actions']:assert e.step(step['player'],step['action']).accepted
+   assert public_key(e.view(seat))==public_key(case['observation'])
+   return e,spec,len(record['actions'])
  obs={i:readlines(src/'games'/r['game']/f'p{i}/observations.jsonl') for i in (1,2)};idx={1:0,2:0};prefix=0
  while True:
   who,_=e.pending();z=obs[who][idx[who]]

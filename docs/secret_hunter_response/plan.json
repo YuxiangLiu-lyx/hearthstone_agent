@@ -32,9 +32,11 @@
     "arms": [
       "Y1",
       "K1",
-      "one_challenger"
+      "E1",
+      "B3",
+      "C3"
     ],
-    "games": 2880
+    "games": 4800
   },
   "final_guardrail": {
     "start": 962000,
@@ -65,6 +67,11 @@
     {
       "stage": "before balanced counterfactual expansion",
       "change": "Reserve 964000\u2013979999 for offline future RNG, disjoint from all final match seeds. First 24-case pilot selection exposed a lexicographic opponent imbalance; retain it, then run all 72 opponent/seat/outcome/own-turn strata in the expanded study."
+    },
+    {
+      "stage": "before final opening",
+      "time": 1794452926.928077,
+      "change": "Keep E1 as the sole promotion-eligible challenger. Add frozen B3/C3 as diagnostic core-only A/B/C ablations (960 games each) to answer the response question on the same genuinely new seed block. No post-final selection or promotion of these diagnostic arms. Guardrail remains Y1/K1/E1. Total final matches 6480; within the 16000-attempt cap."
     }
   ]
 }

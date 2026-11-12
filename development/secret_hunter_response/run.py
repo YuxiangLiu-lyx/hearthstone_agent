@@ -19,7 +19,8 @@ def main():
     assert not dest.exists()
     if a.final:
         frozen=json.loads((ROOT/'docs/secret_hunter_response/final-freeze.json').read_text())
-        assert fingerprint(src) in frozen['source_hashes'].values()
+        assert src.name in frozen['arms_'+a.population]
+        assert fingerprint(src)==frozen['source_hashes'][src.name]
         expected_start=961000 if a.population=='core' else 962000
         assert a.start==expected_start and a.seeds==(80 if a.population=='core' else 20)
     else:assert all(960000<=s<960900 for s in range(a.start,a.start+a.seeds))

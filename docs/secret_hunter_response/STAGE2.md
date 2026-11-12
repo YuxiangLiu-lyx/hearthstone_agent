@@ -1,0 +1,23 @@
+# Stage 2: complete-turn counterfactual evidence
+
+The official course engine, not the fast projector, generates the alternative transition labels. A 130-node, depth-7 beam retains complete turn endpoints, and keeps up to two alternatives sharing a first action. It always includes the original Y1 plan and evaluates frozen Y1 as the baseline continuation policy. A candidate prefix is gated by exact public state; chance divergence immediately switches to the same public Y1 continuation policy. No actual hidden hand or future random event is passed to plan scoring or runtime policy.
+
+The first 24-case tool pilot exposed an opponent-stratification bug: sorted buckets filled only Astra board/sticky. We retained that run and corrected the sampler before the 72-case study. The latter contains 13 board, 12 sticky, 12 tempo, 12 Mage, 11 Bot2 face and 12 Bot2 trade cases; own turns 2/3/4 have 25/24/23 cases. There are 36 original wins, 36 losses, and 35 actual first-player cases. Every case is a different source game; the pilot is a subset, not 24 additional independent cases.
+
+Each of four plans gets three selection and five disjoint validation futures: 2,304 full continuations, zero continuation errors. Fifty-nine cases include two plans with the same first action. Selection-only choice changed the plan in 19/72 cases. On validation futures, selected plans win 263/360 versus Y1 257/360: +1.67 percentage points, source-seed-cluster bootstrap interval [0.00, 4.62] points over 17 source groups. This is a small, conditional and continuation-dependent effect, not evidence that the deployed policy improves match win rate. Source hands are retained inside offline engine copies; future RNG and deck order are resampled. Changed actions can consume RNG differently.
+
+## Replayable positive lead and evidence gap
+
+Pilot case 16, source seed 960014, own seat 1, Astra sticky, own turn 3: our board is empty; the enemy has Abusive Sergeant, Knife Juggler and Flame Imp. The original plan plays Scavenging Hyena. Search proposes Freezing Trap, then ends. Selection futures favor the trap 2/3 versus 1/3; the original validation favors it 3/5 versus 0/5. A separately collected 20-future extension still favors the trap, but only 4/20 versus 1/20. The result suggests buying a turn can outperform exposing Hyena to this particular known source hand. It does not establish a robust unknown-hand improvement, and both plans usually lose. We explicitly retain this evidence gap instead of claiming a corrected earliest error.
+
+## Replayable harmful alternative
+
+Pilot case 8, source seed 960003, seat 1 (actual second), Astra board, own turn 4: Y1 plays Unleash the Hounds, uses the equipped hero weapon to remove Amani Berserker, develops Leper Gnome and attacks with surviving Hounds. A legal alternative attacks the Berserker and ends, retaining cards. In 20 fresh paired futures Y1 wins 19/20, the alternative 11/20. Legality and an attractive shallow endpoint do not imply better terminal outcomes. This is the clearest negative example.
+
+Pilot case 13 also documents a hard position: all four alternatives lose all five original validation futures. Extending Y1 versus the chosen removal alternative gives 2/20 versus 0/20. This must not be described as proof the position is unwinnable. Pilot case 2 looked favorable to Animal Companion in the first five validation futures, then ties Y1 5/20 versus 5/20 after extension; its prefix gate correctly stops when the observed Companion result differs.
+
+`counterfactual-analysis.json` contains exact plans, IDs, sample counts and intervals. `replay-prefixes.jsonl.gz` archives 72 engine action prefixes so these states do not depend on ignored raw game logs. `counterfactual.py:reconstruct` prefers this archive and verifies the resulting public state hash. `replay_case.py` re-executes a recorded future and checks its complete first-turn action trace and terminal result. The two stages remain separate: engine transition correctness is established before terminal outcome comparisons.
+
+## Decision
+
+Prioritize evaluation and baseline-candidate coverage over wider search. The runtime B1/C1 failure was followed by a bounded recovery contribution (B2/C2), then preservation of root attribution and the inherited Coin/random-followup guard (B3/C3). On the later 384-game development block, Y1/B3/C3 win 321/317/316. The broader response system does not retain its small screening gains. A separate narrow E1 parent changes only opposing public end-turn valuation; it wins 320/384 and ties Y1 primary across all three common development blocks. Final evidence will evaluate a frozen E1 challenger, with B3/C3 core-only diagnostic ablations; no further strategy selection after opening that block.
