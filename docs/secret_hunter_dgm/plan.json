@@ -1,0 +1,69 @@
+{
+  "started": 1794443273.629598,
+  "seed_blocks": {
+    "pilot": [
+      950000,
+      12
+    ],
+    "development": [
+      950100,
+      600
+    ],
+    "core": [
+      951000,
+      80
+    ],
+    "guardrail": [
+      952000,
+      20
+    ],
+    "client": [
+      953000,
+      4
+    ]
+  },
+  "final_core": {
+    "seeds": 80,
+    "opponents": 6,
+    "seats": [
+      1,
+      2
+    ],
+    "arms": [
+      "K0",
+      "K1",
+      "one_frozen_challenger"
+    ],
+    "games": 2880
+  },
+  "final_guardrail": {
+    "seeds": 20,
+    "opponents": 14,
+    "seats": [
+      1,
+      2
+    ],
+    "arms": 3,
+    "games": 1680
+  },
+  "primary": "0.5 * mean(three Astra rates) + 0.5 * mean(two bot2 rates)",
+  "gates": {
+    "K0_primary_gain": 0.01,
+    "K0_primary_paired_lower_strictly_greater": 0,
+    "family_max_drop": 0.05,
+    "guardrail_overall_max_drop": 0.03,
+    "guardrail_single_max_drop": 0.1,
+    "K1": "Report gain and paired interval; no automatic superiority claim",
+    "reliability": "Fixed deck, public inputs, no unexplained errors, complete CLI target <=2s, extracted artifact validation and traces"
+  },
+  "statistics": "10000 paired bootstrap draws of whole common seed clusters, both seats/all opponents retained. Errors remain in denominator.",
+  "counterfactual": "Start 60 stratified source games; original action retained even outside fast model. Conditional hidden-state diagnostics explicitly labeled. Whole seed clusters determine split. Adaptive extra samples for selected disagreements.",
+  "selection": "Offline Codex proposes explainable code changes from diagnostics; archive complementary parents; common-block comparisons. Runtime Python only, no learned weights. Target 8-12 substantive children, at least 3 evidence-backed directions, stop at documented plateau/reliability/budget.",
+  "stop": [
+    "16000 full attempt reservations",
+    "80000 short branches",
+    "21600 cumulative experiment seconds",
+    "Protect 5000 games and 2700 seconds for final work",
+    "Do not continue after final opening or manufacture empty variants"
+  ]
+}
