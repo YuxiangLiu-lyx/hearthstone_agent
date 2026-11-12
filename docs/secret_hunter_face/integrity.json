@@ -1,0 +1,119 @@
+{
+  "old_protected_files": 4480,
+  "prior_frozen_Y1_and_W3_unchanged": true,
+  "ordered_deck_verified": true,
+  "full_games_added": 0,
+  "budget_full": 16000,
+  "budget_short": 45358,
+  "short_added": 2920,
+  "experiment_seconds_added": 38.63405990600586,
+  "open_reservations": [],
+  "runs": [
+    {
+      "name": "face-preference-fixtures",
+      "full": 0,
+      "short": 400,
+      "final": false,
+      "reserved_seconds": 180,
+      "started": 1794458809.1590872,
+      "status": "completed",
+      "pid": 95678,
+      "elapsed_s": 3.464205741882324,
+      "actual_short": 68,
+      "full_games": 0
+    },
+    {
+      "name": "face-preference-public-audit",
+      "full": 0,
+      "short": 500,
+      "final": false,
+      "reserved_seconds": 300,
+      "started": 1794458856.70291,
+      "status": "completed",
+      "pid": 95694,
+      "elapsed_s": 4.721235990524292,
+      "actual_short": 180,
+      "full_games": 0
+    },
+    {
+      "name": "face-preference-fixtures-F2",
+      "full": 0,
+      "short": 400,
+      "final": false,
+      "reserved_seconds": 180,
+      "started": 1794458908.333333,
+      "status": "failed",
+      "pid": 95758,
+      "elapsed_s": 3.2641689777374268,
+      "failure": "All nonterminal policy assertions completed, but the test harness shadowed the ledger name with the last case name and failed to close accounting. Evidence retained; fixed harness rerun uses a fresh reservation."
+    },
+    {
+      "name": "face-preference-public-audit-F2",
+      "full": 0,
+      "short": 500,
+      "final": false,
+      "reserved_seconds": 300,
+      "started": 1794458911.968858,
+      "status": "completed",
+      "pid": 95747,
+      "elapsed_s": 4.490232944488525,
+      "actual_short": 172,
+      "full_games": 0
+    },
+    {
+      "name": "face-preference-fixtures-F2-v2",
+      "full": 0,
+      "short": 400,
+      "final": false,
+      "reserved_seconds": 180,
+      "started": 1794458999.843067,
+      "status": "failed",
+      "pid": 95979,
+      "elapsed_s": 3.1425180435180664,
+      "failure": "Policy assertions completed, but renaming the child result key left the step-count aggregator using F1, causing KeyError during accounting. Retained evidence; no policy change."
+    },
+    {
+      "name": "runtime-F2",
+      "full": 0,
+      "short": 120,
+      "final": false,
+      "reserved_seconds": 600,
+      "started": 1794459003.3384728,
+      "status": "completed",
+      "pid": 95967,
+      "elapsed_s": 13.202978134155273,
+      "actual_short": 74
+    },
+    {
+      "name": "face-preference-fixtures-F2-v3",
+      "full": 0,
+      "short": 400,
+      "final": false,
+      "reserved_seconds": 180,
+      "started": 1794459111.196434,
+      "status": "completed",
+      "pid": 96364,
+      "elapsed_s": 3.3529720306396484,
+      "actual_short": 69,
+      "full_games": 0
+    },
+    {
+      "name": "face-preference-secret-replay",
+      "full": 0,
+      "short": 200,
+      "final": false,
+      "reserved_seconds": 180,
+      "started": 1794459157.427237,
+      "status": "completed",
+      "pid": 96443,
+      "elapsed_s": 2.9957480430603027,
+      "actual_short": 41,
+      "full_games": 0
+    }
+  ],
+  "source_hashes": {
+    "F1": "531607a944b7fa5fbc6a41678a3aaf5f21bc640a8b0183c2ab8919abc0050fc9",
+    "F2": "f055c456c8f315ab4c6134bc1f194cc6fc45f5e4ac2f0837fba2b963792a99f4"
+  },
+  "limitations": "No new win-rate test. Historical trade observations are selected audit data."
+}
