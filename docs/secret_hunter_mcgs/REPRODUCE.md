@@ -62,7 +62,7 @@ Do not launch a second writer while the detached process is running. The lock re
 
 The exact detached launcher was Python `subprocess.Popen(command, cwd=root, stdout=training_log, stderr=STDOUT, start_new_session=True)` followed by `caffeinate`. The initial detached PID 3235 encountered the cloud failure. PID 4949 resumed in the stable checkout, completed cli-103 and automatically began gen-001. It was drained to load the explicit analysis-time accounting and corrected fresh-pilot entrypoint. The subsequent launch and current PID are in `launch.json`; do not rely on historical PIDs to send signals.
 
-To stop and resume deliberately, read and verify the PID/command before sending SIGTERM. The runner stops dispatching, drains inflight work and leaves pending tasks. Both tested interruptions preserved prior completed keys and charged budgets; the second preserved 528 completed tasks and drained to 532, with no duplicate attempt keys. An injected second writer produced `Another writer owns this run.` Abrupt machine loss was not separately exercised.
+To stop and resume deliberately, read and verify the PID/command before sending SIGTERM. The runner stops dispatching and allows five seconds for inflight games to finish. It then terminates their isolated process groups, including CLI descendants, and returns unfinished tasks to pending. The default whole-game limits are 120 seconds for in-process policy games and 180 seconds for full-CLI games. A timed-out execution stays charged and gets one retry per invocation; a second failure leaves the batch incomplete, with no fabricated strategy loss or promotion. These limits do not replace the unchanged per-decision CLI deadline. The historical pool-based interruption tests preserved completed keys, but a later two-hour stuck game exposed an unbounded drain; the new process supervision fixes that failure mode. An injected second writer produced `Another writer owns this run.` Abrupt machine loss was not separately exercised.
 
 The runner reserves whole seed blocks before dispatch, charges every full-game attempt before launching, atomically writes worker results before acknowledgment and uses WAL SQLite plus one writer lock. A completed atomic result can be reconciled after a parent interruption. A missing result leaves the attempt charged and permits a new attempt for that task; this is a recorded retry, not a free replay. Candidate fingerprints are checked before and after each arm. Previously completed tasks are not replayed by a normal drain/resume.
 
@@ -113,3 +113,16 @@ To restore into a **new**, nonexistent run directory:
 Restore rewrites attempt result paths, clears the copied PID and verifies any existing automatic candidate bytes before reuse. Do not run an original and restored ledger simultaneously as if they were independent research: they share seeds and history. The archive is a point-in-time snapshot; the live run will contain later results.
 
 The confidence batch completed 144 further games (Y1 45/48, M5 UCT 44/48, M6 45/48). These are included in the final data snapshot. New workflow files pass `git diff --check`; the eleven immutable candidate snapshots retain one pre-existing whitespace-only line from Y1 `improvements.py` so their experimental fingerprints remain unchanged.
+
+## Resuming after the November 12 user pause
+
+The paused ledger preserved 4,607 completed tasks and 4,608 charged attempts, including interrupted attempt 4594 (G024, bot2-face-proxy, seed 10003802, seat 2). Its missing result was not scored as a loss. The original eight-hour budget had 3,713.51 seconds remaining; resuming does not reset it. The largest recorded completed warm-policy game was 42.92 seconds (4,127 rows), compared with the stuck execution lasting over two hours.
+
+The supervised runner uses a fresh process per game while leaving policy, deck, opponent, seed and engine bytes unchanged. Each attempt has a request JSON and worker log; a delayed stack dump precedes its whole-game deadline. The resume uses two workers and Unix niceness 10 to reduce foreground interference. All new outputs stay in the checkout outside iCloud-managed Documents.
+
+```sh
+.venv/bin/python -m unittest development.secret_hunter_mcgs.test_supervision -v
+nice -n 10 .venv/bin/python -m development.secret_hunter_mcgs.train resume --run runs/krush-mcgs --workers 2
+```
+
+Four fault-injection tests passed: timeout/retry accounting followed by successful recovery without duplicate completed work; bounded stop with a pending unscored task; budget expiry during an active game; and removal of a CLI descendant. The original checkpoint and pause evidence remain under `runs/krush-mcgs/pause-events/`.

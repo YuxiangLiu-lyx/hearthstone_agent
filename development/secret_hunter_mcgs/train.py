@@ -1,12 +1,12 @@
 """Durable paired experiments; all launched attempts consume budget, including failures."""
 import argparse
-from concurrent.futures import ProcessPoolExecutor, wait, FIRST_COMPLETED
 import fcntl
 import json
 import os
 from pathlib import Path
 import signal
 import sqlite3
+import sys
 import time
 from development.secret_hunter_program.common import ROOT, sha
 from development.benchmarks.run import fingerprint
@@ -14,6 +14,7 @@ from development.teacher_eval.run import worker as play, summarize, snapshot
 from development.teacher_eval.compare import paired
 from development.secret_hunter_mcgs.build import build, Y1, HERE
 from development.secret_hunter_dgm.deck_guard import check
+from development.secret_hunter_mcgs.supervision import GameProcess
 
 STOP=False
 
@@ -131,11 +132,19 @@ def run_arm(db,run,batch,arm,args):
     candidate=meta(db,'candidates')[arm];src=ROOT/candidate['path']
     assert fingerprint(src)==candidate['sha256'],('candidate changed',arm)
     tasks=db.execute("SELECT * FROM tasks WHERE batch=? AND candidate=? AND status='pending' ORDER BY seed,opponent,seat",(batch,arm)).fetchall()
-    # Fresh pool per arm prevents same-named Python modules crossing candidates.
-    with ProcessPoolExecutor(max_workers=args.workers) as pool:
-        active={};index=0;last=time.monotonic()
+    # Fresh processes also prevent same-named modules crossing candidates.
+    active={};index=0;last=time.monotonic();stop_deadline=None;retries={}
+    def interrupt(aid,task,reason):
+        with db:
+            db.execute('UPDATE attempts SET status=?,finished=? WHERE id=?',(reason,time.time(),aid))
+            db.execute("UPDATE tasks SET status='pending' WHERE key=?",(task['key'],))
+        print(json.dumps({'batch':batch,'arm':arm,'attempt':aid,'execution_failure':reason,
+                          'strategy_score':None}),flush=True)
+    try:
         while active or (index<len(tasks) and not STOP):
-            limits=meta(db,'manifest')['limits'];seconds=meta(db,'effective_seconds',0)
+            now=time.monotonic()
+            if STOP and stop_deadline is None:stop_deadline=now+args.stop_grace_seconds
+            limits=meta(db,'manifest')['limits'];seconds=meta(db,'effective_seconds',0)+now-last
             attempts=db.execute('SELECT count(*) FROM attempts').fetchone()[0]
             reserved=0 if meta(db,'final_opened',False) else meta(db,'manifest')['reserved_final_games']
             while index<len(tasks) and len(active)<args.workers and not STOP:
@@ -148,19 +157,51 @@ def run_arm(db,run,batch,arm,args):
                     db.execute("UPDATE tasks SET status='running' WHERE key=?",(task['key'],))
                 job=(str(src),json.loads(task['opponent']),task['seed'],task['seat'],str(run/'batches'/batch/arm),'python')
                 full_cli=task['phase'] in ('cli_development','selection','final_core','final_guard')
-                active[pool.submit(worker,job,str(result_path),full_cli)]=(aid,task);attempts+=1
+                timeout=args.cli_game_timeout_seconds if full_cli else args.game_timeout_seconds
+                request=result_path.with_suffix('.request.json')
+                atomic(request,{'task':job,'result_path':str(result_path),'full_cli':full_cli,
+                                'timeout_seconds':timeout})
+                try:
+                    process=GameProcess([sys.executable,'-m','development.secret_hunter_mcgs.game_worker',str(request)],
+                                        ROOT,result_path.with_suffix('.worker.log'))
+                except Exception:
+                    interrupt(aid,task,'launch_failed')
+                    raise
+                active[aid]=(process,task,result_path,timeout);attempts+=1
             if not active:break
-            done,_=wait(active,timeout=5,return_when=FIRST_COMPLETED)
-            for f in done:
-                aid,task=active.pop(f)
-                try:row=f.result()
-                except Exception as exc:row={'harness_error':repr(exc),'score':0,'seed':task['seed'],'seat':task['seat'],'opponent':json.loads(task['opponent'])['name']}
+            time.sleep(.2);changed=False;now=time.monotonic()
+            for aid,(process,task,result_path,timeout) in list(active.items()):
+                reason=None
+                if stop_deadline is not None and now>=stop_deadline:reason='interrupted'
+                elif meta(db,'effective_seconds',0)+now-last>=limits['seconds']:reason='budget_expired'
+                elif now-process.started>=timeout:reason='timeout'
+                elif process.process.poll() is None:continue
+                process.close();del active[aid];changed=True
+                try:
+                    row=json.loads(result_path.read_text())
+                    assert row['seed']==task['seed'] and row['seat']==task['seat']
+                    assert row['opponent']==json.loads(task['opponent'])['name'] and 'score' in row
+                except (OSError,ValueError,KeyError,AssertionError):
+                    interrupt(aid,task,reason or 'worker_failed')
+                    # A failed execution remains charged, with no fabricated loss.
+                    # Retry once per invocation; a persistent failure leaves the
+                    # batch incomplete and prevents selection or final promotion.
+                    if not STOP and reason not in ('budget_expired','interrupted') and retries.get(task['key'],0)<1:
+                        retries[task['key']]=retries.get(task['key'],0)+1;tasks.append(task)
+                    continue
                 with db:
                     db.execute("UPDATE attempts SET status='done',finished=? WHERE id=?",(time.time(),aid))
                     db.execute("UPDATE tasks SET status='done',result=? WHERE key=?",(json.dumps(row),task['key']))
                 print(json.dumps({'batch':batch,'arm':arm,'attempt':aid,'score':row['score'],'error':row.get('harness_error'),'wall_s':row.get('wall_s')}),flush=True)
-            now=time.monotonic();setmeta(db,'effective_seconds',meta(db,'effective_seconds',0)+now-last);last=now
-            status(db,run)
+            now=time.monotonic()
+            if changed or now-last>=5:
+                setmeta(db,'effective_seconds',meta(db,'effective_seconds',0)+now-last);last=now
+                status(db,run)
+    finally:
+        for aid,(process,task,_,_) in active.items():
+            process.close();interrupt(aid,task,'interrupted')
+        setmeta(db,'effective_seconds',meta(db,'effective_seconds',0)+time.monotonic()-last)
+        status(db,run)
     assert fingerprint(src)==candidate['sha256']
 
 def analyze(db,run,batch):
@@ -233,8 +274,13 @@ def main():
     p.add_argument('--run',type=Path,required=True);p.add_argument('--hours',type=float,default=8)
     p.add_argument('--max-full-games',type=int,default=12000);p.add_argument('--max-continuations',type=int,default=60000)
     p.add_argument('--workers',type=int,default=4);p.add_argument('--pilot-seeds',type=int,default=2)
+    p.add_argument('--game-timeout-seconds',type=float,default=120)
+    p.add_argument('--cli-game-timeout-seconds',type=float,default=180)
+    p.add_argument('--stop-grace-seconds',type=float,default=5)
     p.add_argument('--max-batches',type=int,default=0,help='Optional bounded diagnostic invocation.')
     args=p.parse_args();run=(ROOT/args.run).resolve();run.mkdir(parents=True,exist_ok=True)
+    if args.workers<1 or min(args.game_timeout_seconds,args.cli_game_timeout_seconds,args.stop_grace_seconds)<=0:
+        p.error('Worker count and timeout values must be positive.')
     if args.command=='status':
         db=connect(run);print(json.dumps(status(db,run,False),indent=2));return
     with (run/'writer.lock').open('a') as lock:
@@ -248,6 +294,11 @@ def main():
         signal.signal(signal.SIGINT,lambda *_:globals().__setitem__('STOP',True))
         mode=meta(db,'mode','pilot') if args.command=='resume' else args.command
         setmeta(db,'mode',mode);setmeta(db,'pid',os.getpid())
+        setmeta(db,'execution',{'workers':args.workers,'game_timeout_seconds':args.game_timeout_seconds,
+                              'cli_game_timeout_seconds':args.cli_game_timeout_seconds,'stop_grace_seconds':args.stop_grace_seconds,
+                              'supervision':'isolated game process groups; one retry; failures are not game losses'})
+        if meta(db,'user_pause'):
+            pause=meta(db,'user_pause');pause['resumed_at']=time.time();setmeta(db,'last_user_pause',pause);setmeta(db,'user_pause',None)
         print(json.dumps({'started':mode,'pid':os.getpid(),'recovered':recovered}),flush=True)
         if mode=='pilot':
             from development.secret_hunter_mcgs.pilot_replay import run as pilot_replay
@@ -283,7 +334,7 @@ def main():
                 if STOP:break
                 run_arm(db,run,batch['id'],arm,args)
             analysis_start=time.monotonic()
-            done=analyze(db,run,batch['id'])
+            done=False if STOP else analyze(db,run,batch['id'])
             setmeta(db,'effective_seconds',meta(db,'effective_seconds',0)+time.monotonic()-analysis_start)
             status(db,run)
             if not done:break
