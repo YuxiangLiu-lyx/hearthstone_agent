@@ -126,3 +126,7 @@ nice -n 10 .venv/bin/python -m development.secret_hunter_mcgs.train resume --run
 ```
 
 Four fault-injection tests passed: timeout/retry accounting followed by successful recovery without duplicate completed work; bounded stop with a pending unscored task; budget expiry during an active game; and removal of a CLI descendant. The original checkpoint and pause evidence remain under `runs/krush-mcgs/pause-events/`.
+
+The first live resume reproduced the stuck source game: at turn 5, a choice offer and the submitted choice stayed unchanged across thousands of increasing sequence numbers. Attempt 4609 hit the 120-second deadline; its retry 4610 was interrupted by a verified SIGTERM and the trainer plus its keep-awake process exited. Both attempts remain charged, without win/loss labels. The public reproducer is `pause-events/repeated-choice-004609.json`. The root cause is not yet isolated between live-engine choice handling and research adapter state interaction.
+
+`pause-events/quarantine-gen-028.json` records the exclusion of the entire incomplete development batch from selection, preserving its 95 completed results and all pending tasks. Its status is `execution_failed`; normal resume does not silently retry it. Selection proceeds from the unchanged archive of completed batches, using the already reserved selection seed block. No candidate, opponent, engine, final seed or budget was changed to work around this failure.
