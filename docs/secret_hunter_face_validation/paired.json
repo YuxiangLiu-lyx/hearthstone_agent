@@ -1,0 +1,1514 @@
+{
+  "core": {
+    "baseline": "experiments/secret-hunter-face-validation-y1-core",
+    "candidate": "experiments/secret-hunter-face-validation-f2-core",
+    "all": {
+      "n_per_arm": 480,
+      "seed_clusters": 40,
+      "a_wins": 405,
+      "b_wins": 384,
+      "a_rate": 0.84375,
+      "b_rate": 0.8,
+      "gain": -0.043749999999999956,
+      "gain_seed_cluster_95": [
+        -0.06458333333333334,
+        -0.02291666666666667
+      ],
+      "a_only_wins": 31,
+      "b_only_wins": 10,
+      "weighting": "equal games",
+      "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+    },
+    "by_group": {
+      "astra": {
+        "n_per_arm": 240,
+        "seed_clusters": 40,
+        "a_wins": 188,
+        "b_wins": 169,
+        "a_rate": 0.7833333333333333,
+        "b_rate": 0.7041666666666667,
+        "gain": -0.07916666666666661,
+        "gain_seed_cluster_95": [
+          -0.11666666666666667,
+          -0.04583333333333332
+        ],
+        "a_only_wins": 22,
+        "b_only_wins": 3,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "bot1": {
+        "n_per_arm": 80,
+        "seed_clusters": 40,
+        "a_wins": 74,
+        "b_wins": 72,
+        "a_rate": 0.925,
+        "b_rate": 0.9,
+        "gain": -0.025000000000000022,
+        "gain_seed_cluster_95": [
+          -0.075,
+          0.025
+        ],
+        "a_only_wins": 3,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "bot2": {
+        "n_per_arm": 160,
+        "seed_clusters": 40,
+        "a_wins": 143,
+        "b_wins": 143,
+        "a_rate": 0.89375,
+        "b_rate": 0.89375,
+        "gain": 0.0,
+        "gain_seed_cluster_95": [
+          -0.0375,
+          0.0375
+        ],
+        "a_only_wins": 6,
+        "b_only_wins": 6,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      }
+    },
+    "hard_family_macro": {
+      "n_per_arm": 400,
+      "seed_clusters": 40,
+      "a_wins": 331,
+      "b_wins": 312,
+      "a_rate": 0.8385416666666667,
+      "b_rate": 0.7989583333333334,
+      "gain": -0.039583333333333304,
+      "gain_seed_cluster_95": [
+        -0.06354166666666665,
+        -0.015624999999999995
+      ],
+      "a_only_wins": 28,
+      "b_only_wins": 9,
+      "weighting": "equal family macro",
+      "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+    },
+    "teacher_family_macro": {
+      "n_per_arm": 480,
+      "seed_clusters": 40,
+      "a_wins": 405,
+      "b_wins": 384,
+      "a_rate": 0.8673611111111111,
+      "b_rate": 0.8326388888888889,
+      "gain": -0.03472222222222221,
+      "gain_seed_cluster_95": [
+        -0.056944444444444436,
+        -0.0125
+      ],
+      "a_only_wins": 31,
+      "b_only_wins": 10,
+      "weighting": "equal family macro",
+      "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+    },
+    "by_opponent": {
+      "astra-board-proxy": {
+        "n_per_arm": 80,
+        "seed_clusters": 40,
+        "a_wins": 59,
+        "b_wins": 53,
+        "a_rate": 0.7375,
+        "b_rate": 0.6625,
+        "gain": -0.07500000000000007,
+        "gain_seed_cluster_95": [
+          -0.1375,
+          -0.0125
+        ],
+        "a_only_wins": 7,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "astra-sticky-proxy": {
+        "n_per_arm": 80,
+        "seed_clusters": 40,
+        "a_wins": 58,
+        "b_wins": 50,
+        "a_rate": 0.725,
+        "b_rate": 0.625,
+        "gain": -0.09999999999999998,
+        "gain_seed_cluster_95": [
+          -0.175,
+          -0.0375
+        ],
+        "a_only_wins": 9,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "astra-tempo-proxy": {
+        "n_per_arm": 80,
+        "seed_clusters": 40,
+        "a_wins": 71,
+        "b_wins": 66,
+        "a_rate": 0.8875,
+        "b_rate": 0.825,
+        "gain": -0.0625,
+        "gain_seed_cluster_95": [
+          -0.125,
+          0.0
+        ],
+        "a_only_wins": 6,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "bot1-mage-proxy": {
+        "n_per_arm": 80,
+        "seed_clusters": 40,
+        "a_wins": 74,
+        "b_wins": 72,
+        "a_rate": 0.925,
+        "b_rate": 0.9,
+        "gain": -0.025000000000000022,
+        "gain_seed_cluster_95": [
+          -0.075,
+          0.025
+        ],
+        "a_only_wins": 3,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "bot2-face-proxy": {
+        "n_per_arm": 80,
+        "seed_clusters": 40,
+        "a_wins": 74,
+        "b_wins": 73,
+        "a_rate": 0.925,
+        "b_rate": 0.9125,
+        "gain": -0.012500000000000067,
+        "gain_seed_cluster_95": [
+          -0.0625,
+          0.025
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "bot2-trade-proxy": {
+        "n_per_arm": 80,
+        "seed_clusters": 40,
+        "a_wins": 69,
+        "b_wins": 70,
+        "a_rate": 0.8625,
+        "b_rate": 0.875,
+        "gain": 0.012499999999999956,
+        "gain_seed_cluster_95": [
+          -0.05,
+          0.075
+        ],
+        "a_only_wins": 4,
+        "b_only_wins": 5,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      }
+    },
+    "by_actual_first": {
+      "True": {
+        "n_per_arm": 240,
+        "seed_clusters": 40,
+        "a_wins": 208,
+        "b_wins": 198,
+        "a_rate": 0.8666666666666667,
+        "b_rate": 0.825,
+        "gain": -0.04166666666666674,
+        "gain_seed_cluster_95": [
+          -0.07083333333333335,
+          -0.012500000000000006
+        ],
+        "a_only_wins": 16,
+        "b_only_wins": 6,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "False": {
+        "n_per_arm": 240,
+        "seed_clusters": 40,
+        "a_wins": 197,
+        "b_wins": 186,
+        "a_rate": 0.8208333333333333,
+        "b_rate": 0.775,
+        "gain": -0.04583333333333328,
+        "gain_seed_cluster_95": [
+          -0.07916666666666666,
+          -0.0125
+        ],
+        "a_only_wins": 15,
+        "b_only_wins": 4,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      }
+    },
+    "reliability": {
+      "Y1": {
+        "games": 480,
+        "own_decisions": 13341,
+        "illegal_both_players": 0,
+        "timeouts_both_players": 0,
+        "policy_errors": 0,
+        "opponent_errors": 0,
+        "fallbacks": 0,
+        "over_2s": 0,
+        "public_input_violations": 0,
+        "policy_latency_s": {
+          "n": 13341,
+          "mean": 0.018923533532821404,
+          "max": 0.7032402909826487,
+          "p50": 0.0034129578853026032,
+          "p95": 0.08430049999151379,
+          "p99": 0.23473179200664163
+        }
+      },
+      "F2": {
+        "games": 480,
+        "own_decisions": 13326,
+        "illegal_both_players": 0,
+        "timeouts_both_players": 0,
+        "policy_errors": 0,
+        "opponent_errors": 0,
+        "fallbacks": 0,
+        "over_2s": 0,
+        "public_input_violations": 0,
+        "policy_latency_s": {
+          "n": 13326,
+          "mean": 0.018168272300072015,
+          "max": 0.6942878339905292,
+          "p50": 0.0036438340321183205,
+          "p95": 0.08083695906680077,
+          "p99": 0.19661995896603912
+        }
+      }
+    },
+    "outcome_changes": [
+      {
+        "opponent": "astra-board-proxy",
+        "seed": 985000,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "d3988b64967c4e2d",
+        "F2_game": "2fe65e999ed344e9"
+      },
+      {
+        "opponent": "astra-board-proxy",
+        "seed": 985003,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "e5afb6c032554113",
+        "F2_game": "d8940141a2ec4150"
+      },
+      {
+        "opponent": "astra-board-proxy",
+        "seed": 985004,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "3c2ab728f0d445dd",
+        "F2_game": "546050712dd3445e"
+      },
+      {
+        "opponent": "astra-board-proxy",
+        "seed": 985019,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "f7993dc4e1bb47a5",
+        "F2_game": "53daf6122da04e9e"
+      },
+      {
+        "opponent": "astra-board-proxy",
+        "seed": 985026,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "b69ce37766864b16",
+        "F2_game": "a00e49fd8a2d4c84"
+      },
+      {
+        "opponent": "astra-board-proxy",
+        "seed": 985030,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "19cbc632ace54a1b",
+        "F2_game": "707b00957436456c"
+      },
+      {
+        "opponent": "astra-board-proxy",
+        "seed": 985033,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "f544de738c2446cc",
+        "F2_game": "6a4984e76d8a490e"
+      },
+      {
+        "opponent": "astra-board-proxy",
+        "seed": 985038,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "c24b4dd225154183",
+        "F2_game": "6d871fa985da467f"
+      },
+      {
+        "opponent": "astra-sticky-proxy",
+        "seed": 985001,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "edc41eee25a54568",
+        "F2_game": "9422b7d4e4604d63"
+      },
+      {
+        "opponent": "astra-sticky-proxy",
+        "seed": 985002,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "c6a12e9d42884b03",
+        "F2_game": "bb32bc5b144341f6"
+      },
+      {
+        "opponent": "astra-sticky-proxy",
+        "seed": 985011,
+        "seat": 2,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "1214431f7d244492",
+        "F2_game": "dc452253d4f14ed1"
+      },
+      {
+        "opponent": "astra-sticky-proxy",
+        "seed": 985020,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "c721bc60c635426c",
+        "F2_game": "034f9515f1624214"
+      },
+      {
+        "opponent": "astra-sticky-proxy",
+        "seed": 985021,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "4558e80a93a44fec",
+        "F2_game": "0e0dafb5e1ba43fb"
+      },
+      {
+        "opponent": "astra-sticky-proxy",
+        "seed": 985022,
+        "seat": 2,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "21a1b386287e4fa9",
+        "F2_game": "4841a04475df4e1e"
+      },
+      {
+        "opponent": "astra-sticky-proxy",
+        "seed": 985030,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "4a362669530d4326",
+        "F2_game": "f9aa2c5489694407"
+      },
+      {
+        "opponent": "astra-sticky-proxy",
+        "seed": 985032,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "f77efdefbf8a4164",
+        "F2_game": "6b941c7930ac45ac"
+      },
+      {
+        "opponent": "astra-sticky-proxy",
+        "seed": 985033,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "037b15b0059e4bdc",
+        "F2_game": "a6bb999652884a05"
+      },
+      {
+        "opponent": "astra-sticky-proxy",
+        "seed": 985034,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "fae8695878144860",
+        "F2_game": "bafd5c343895477f"
+      },
+      {
+        "opponent": "astra-tempo-proxy",
+        "seed": 985001,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "dea617ea8caa4371",
+        "F2_game": "9fe1e9ae69f141d8"
+      },
+      {
+        "opponent": "astra-tempo-proxy",
+        "seed": 985006,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "35dead0243c74b38",
+        "F2_game": "af14b17bac624513"
+      },
+      {
+        "opponent": "astra-tempo-proxy",
+        "seed": 985009,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "8dc2f4d4b3944e85",
+        "F2_game": "c042edfe051449df"
+      },
+      {
+        "opponent": "astra-tempo-proxy",
+        "seed": 985010,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "4ff443fe9d6545fe",
+        "F2_game": "8d6f70e1d07b4456"
+      },
+      {
+        "opponent": "astra-tempo-proxy",
+        "seed": 985012,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "ee59ea769a054896",
+        "F2_game": "8edc174d3c274166"
+      },
+      {
+        "opponent": "astra-tempo-proxy",
+        "seed": 985033,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "8928e45e308145df",
+        "F2_game": "d97768acbd254f90"
+      },
+      {
+        "opponent": "astra-tempo-proxy",
+        "seed": 985038,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "ffa8cd56671e4a93",
+        "F2_game": "17c4c60a443a42e3"
+      },
+      {
+        "opponent": "bot1-mage-proxy",
+        "seed": 985002,
+        "seat": 2,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "1045f388d70b44f1",
+        "F2_game": "4c8de4309089498c"
+      },
+      {
+        "opponent": "bot1-mage-proxy",
+        "seed": 985008,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "968d8b2589384487",
+        "F2_game": "e01e665b7c994203"
+      },
+      {
+        "opponent": "bot1-mage-proxy",
+        "seed": 985030,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "10c623f5d06a450e",
+        "F2_game": "c655b38b166143f5"
+      },
+      {
+        "opponent": "bot1-mage-proxy",
+        "seed": 985037,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "07eb2955082049e1",
+        "F2_game": "af626580d6764e73"
+      },
+      {
+        "opponent": "bot2-face-proxy",
+        "seed": 985013,
+        "seat": 2,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "9cb94ff6c9d94b76",
+        "F2_game": "ce453d6e15dc4ee7"
+      },
+      {
+        "opponent": "bot2-face-proxy",
+        "seed": 985018,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "72012f24c6ce4180",
+        "F2_game": "0a7280e158c44bf3"
+      },
+      {
+        "opponent": "bot2-face-proxy",
+        "seed": 985038,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "d0b22ab8c2394dfb",
+        "F2_game": "efb38c42d30f415f"
+      },
+      {
+        "opponent": "bot2-trade-proxy",
+        "seed": 985004,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "73b8c1cafad5414c",
+        "F2_game": "a2e159a6d0554ac5"
+      },
+      {
+        "opponent": "bot2-trade-proxy",
+        "seed": 985005,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "a668b36bbe6f4721",
+        "F2_game": "b5814611a0964c97"
+      },
+      {
+        "opponent": "bot2-trade-proxy",
+        "seed": 985006,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "9864d4c09b214dce",
+        "F2_game": "1f1f1798f51046d7"
+      },
+      {
+        "opponent": "bot2-trade-proxy",
+        "seed": 985007,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "054d325ee12e4d38",
+        "F2_game": "67f8de2ad1e242c6"
+      },
+      {
+        "opponent": "bot2-trade-proxy",
+        "seed": 985009,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "cf29014e33174f2a",
+        "F2_game": "6069f6689d7e4e3b"
+      },
+      {
+        "opponent": "bot2-trade-proxy",
+        "seed": 985027,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "ebac5a911c434dbc",
+        "F2_game": "12fbc3d33806425c"
+      },
+      {
+        "opponent": "bot2-trade-proxy",
+        "seed": 985027,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "b96ce43932724bea",
+        "F2_game": "7075577a1cb148a5"
+      },
+      {
+        "opponent": "bot2-trade-proxy",
+        "seed": 985030,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "af86f581b994438d",
+        "F2_game": "bb8043c0a79749cb"
+      },
+      {
+        "opponent": "bot2-trade-proxy",
+        "seed": 985036,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "05459a3f98944753",
+        "F2_game": "002893dcdd4a4fc7"
+      }
+    ]
+  },
+  "guardrail": {
+    "baseline": "experiments/secret-hunter-face-validation-y1-guardrail",
+    "candidate": "experiments/secret-hunter-face-validation-f2-guardrail",
+    "all": {
+      "n_per_arm": 280,
+      "seed_clusters": 10,
+      "a_wins": 251,
+      "b_wins": 241,
+      "a_rate": 0.8964285714285715,
+      "b_rate": 0.8607142857142858,
+      "gain": -0.0357142857142857,
+      "gain_seed_cluster_95": [
+        -0.06785714285714282,
+        -0.0071428571428571175
+      ],
+      "a_only_wins": 16,
+      "b_only_wins": 6,
+      "weighting": "equal games",
+      "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+    },
+    "by_group": {
+      "adversarial-priest-v1": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 16,
+        "b_wins": 16,
+        "a_rate": 0.8,
+        "b_rate": 0.8,
+        "gain": 0.0,
+        "gain_seed_cluster_95": [
+          -0.2,
+          0.2
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 2,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "adversarial-zoo": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 18,
+        "b_wins": 15,
+        "a_rate": 0.9,
+        "b_rate": 0.75,
+        "gain": -0.15000000000000002,
+        "gain_seed_cluster_95": [
+          -0.3,
+          0.0
+        ],
+        "a_only_wins": 3,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "aggressive-hunter": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 19,
+        "b_wins": 17,
+        "a_rate": 0.95,
+        "b_rate": 0.85,
+        "gain": -0.09999999999999998,
+        "gain_seed_cluster_95": [
+          -0.25,
+          0
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "aggressive-paladin": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 19,
+        "b_wins": 18,
+        "a_rate": 0.95,
+        "b_rate": 0.9,
+        "gain": -0.04999999999999993,
+        "gain_seed_cluster_95": [
+          -0.15,
+          0
+        ],
+        "a_only_wins": 1,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "control-mage": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 17,
+        "b_wins": 18,
+        "a_rate": 0.85,
+        "b_rate": 0.9,
+        "gain": 0.050000000000000044,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.15
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "control-priest": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 19,
+        "b_wins": 19,
+        "a_rate": 0.95,
+        "b_rate": 0.95,
+        "gain": 0.0,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.0
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "historical-mage": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 17,
+        "b_wins": 15,
+        "a_rate": 0.85,
+        "b_rate": 0.75,
+        "gain": -0.09999999999999998,
+        "gain_seed_cluster_95": [
+          -0.25,
+          0.0
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "official-mage": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 16,
+        "b_wins": 16,
+        "a_rate": 0.8,
+        "b_rate": 0.8,
+        "gain": 0.0,
+        "gain_seed_cluster_95": [
+          -0.15,
+          0.15
+        ],
+        "a_only_wins": 1,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "search-paladin": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 17,
+        "b_wins": 16,
+        "a_rate": 0.85,
+        "b_rate": 0.8,
+        "gain": -0.04999999999999993,
+        "gain_seed_cluster_95": [
+          -0.15,
+          0.0
+        ],
+        "a_only_wins": 1,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "search-shaman": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 18,
+        "b_wins": 18,
+        "a_rate": 0.9,
+        "b_rate": 0.9,
+        "gain": 0.0,
+        "gain_seed_cluster_95": [
+          -0.15,
+          0.15
+        ],
+        "a_only_wins": 1,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "tempo-paladin": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 18,
+        "b_wins": 17,
+        "a_rate": 0.9,
+        "b_rate": 0.85,
+        "gain": -0.050000000000000044,
+        "gain_seed_cluster_95": [
+          -0.2,
+          0.1
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "tempo-warlock": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 19,
+        "b_wins": 18,
+        "a_rate": 0.95,
+        "b_rate": 0.9,
+        "gain": -0.04999999999999993,
+        "gain_seed_cluster_95": [
+          -0.15,
+          0
+        ],
+        "a_only_wins": 1,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "value-priest": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 18,
+        "b_wins": 18,
+        "a_rate": 0.9,
+        "b_rate": 0.9,
+        "gain": 0.0,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.0
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "value-warlock": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 20,
+        "b_wins": 20,
+        "a_rate": 1,
+        "b_rate": 1,
+        "gain": 0,
+        "gain_seed_cluster_95": [
+          0,
+          0
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      }
+    },
+    "by_opponent": {
+      "adversarial-priest-v1": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 16,
+        "b_wins": 16,
+        "a_rate": 0.8,
+        "b_rate": 0.8,
+        "gain": 0.0,
+        "gain_seed_cluster_95": [
+          -0.2,
+          0.2
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 2,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "adversarial-zoo": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 18,
+        "b_wins": 15,
+        "a_rate": 0.9,
+        "b_rate": 0.75,
+        "gain": -0.15000000000000002,
+        "gain_seed_cluster_95": [
+          -0.3,
+          0.0
+        ],
+        "a_only_wins": 3,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "aggressive-hunter": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 19,
+        "b_wins": 17,
+        "a_rate": 0.95,
+        "b_rate": 0.85,
+        "gain": -0.09999999999999998,
+        "gain_seed_cluster_95": [
+          -0.25,
+          0
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "aggressive-paladin": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 19,
+        "b_wins": 18,
+        "a_rate": 0.95,
+        "b_rate": 0.9,
+        "gain": -0.04999999999999993,
+        "gain_seed_cluster_95": [
+          -0.15,
+          0
+        ],
+        "a_only_wins": 1,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "control-mage": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 17,
+        "b_wins": 18,
+        "a_rate": 0.85,
+        "b_rate": 0.9,
+        "gain": 0.050000000000000044,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.15
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "control-priest": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 19,
+        "b_wins": 19,
+        "a_rate": 0.95,
+        "b_rate": 0.95,
+        "gain": 0.0,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.0
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "historical-mage": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 17,
+        "b_wins": 15,
+        "a_rate": 0.85,
+        "b_rate": 0.75,
+        "gain": -0.09999999999999998,
+        "gain_seed_cluster_95": [
+          -0.25,
+          0.0
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "official-mage": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 16,
+        "b_wins": 16,
+        "a_rate": 0.8,
+        "b_rate": 0.8,
+        "gain": 0.0,
+        "gain_seed_cluster_95": [
+          -0.15,
+          0.15
+        ],
+        "a_only_wins": 1,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "search-paladin": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 17,
+        "b_wins": 16,
+        "a_rate": 0.85,
+        "b_rate": 0.8,
+        "gain": -0.04999999999999993,
+        "gain_seed_cluster_95": [
+          -0.15,
+          0.0
+        ],
+        "a_only_wins": 1,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "search-shaman": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 18,
+        "b_wins": 18,
+        "a_rate": 0.9,
+        "b_rate": 0.9,
+        "gain": 0.0,
+        "gain_seed_cluster_95": [
+          -0.15,
+          0.15
+        ],
+        "a_only_wins": 1,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "tempo-paladin": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 18,
+        "b_wins": 17,
+        "a_rate": 0.9,
+        "b_rate": 0.85,
+        "gain": -0.050000000000000044,
+        "gain_seed_cluster_95": [
+          -0.2,
+          0.1
+        ],
+        "a_only_wins": 2,
+        "b_only_wins": 1,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "tempo-warlock": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 19,
+        "b_wins": 18,
+        "a_rate": 0.95,
+        "b_rate": 0.9,
+        "gain": -0.04999999999999993,
+        "gain_seed_cluster_95": [
+          -0.15,
+          0
+        ],
+        "a_only_wins": 1,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "value-priest": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 18,
+        "b_wins": 18,
+        "a_rate": 0.9,
+        "b_rate": 0.9,
+        "gain": 0.0,
+        "gain_seed_cluster_95": [
+          0.0,
+          0.0
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "value-warlock": {
+        "n_per_arm": 20,
+        "seed_clusters": 10,
+        "a_wins": 20,
+        "b_wins": 20,
+        "a_rate": 1,
+        "b_rate": 1,
+        "gain": 0,
+        "gain_seed_cluster_95": [
+          0,
+          0
+        ],
+        "a_only_wins": 0,
+        "b_only_wins": 0,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      }
+    },
+    "by_actual_first": {
+      "True": {
+        "n_per_arm": 140,
+        "seed_clusters": 10,
+        "a_wins": 126,
+        "b_wins": 121,
+        "a_rate": 0.9,
+        "b_rate": 0.8642857142857143,
+        "gain": -0.0357142857142857,
+        "gain_seed_cluster_95": [
+          -0.08571428571428573,
+          0.00714285714285714
+        ],
+        "a_only_wins": 7,
+        "b_only_wins": 2,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      },
+      "False": {
+        "n_per_arm": 140,
+        "seed_clusters": 10,
+        "a_wins": 125,
+        "b_wins": 120,
+        "a_rate": 0.8928571428571429,
+        "b_rate": 0.8571428571428571,
+        "gain": -0.03571428571428581,
+        "gain_seed_cluster_95": [
+          -0.07857142857142858,
+          0.0
+        ],
+        "a_only_wins": 9,
+        "b_only_wins": 4,
+        "weighting": "equal games",
+        "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+      }
+    },
+    "reliability": {
+      "Y1": {
+        "games": 280,
+        "own_decisions": 8347,
+        "illegal_both_players": 0,
+        "timeouts_both_players": 0,
+        "policy_errors": 0,
+        "opponent_errors": 0,
+        "fallbacks": 0,
+        "over_2s": 0,
+        "public_input_violations": 0,
+        "policy_latency_s": {
+          "n": 8347,
+          "mean": 0.014054446736857991,
+          "max": 0.7254106249893084,
+          "p50": 0.0018478339770808816,
+          "p95": 0.06738362507894635,
+          "p99": 0.19631854200270027
+        }
+      },
+      "F2": {
+        "games": 280,
+        "own_decisions": 8087,
+        "illegal_both_players": 0,
+        "timeouts_both_players": 0,
+        "policy_errors": 0,
+        "opponent_errors": 0,
+        "fallbacks": 0,
+        "over_2s": 0,
+        "public_input_violations": 0,
+        "policy_latency_s": {
+          "n": 8087,
+          "mean": 0.014928540881819096,
+          "max": 0.802758332923986,
+          "p50": 0.0021481660660356283,
+          "p95": 0.06850775005295873,
+          "p99": 0.19195941707585007
+        }
+      }
+    },
+    "outcome_changes": [
+      {
+        "opponent": "adversarial-priest-v1",
+        "seed": 986001,
+        "seat": 2,
+        "actual_first": true,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "f204ee7f7e134c3a",
+        "F2_game": "9ea03d2d52b74ef5"
+      },
+      {
+        "opponent": "adversarial-priest-v1",
+        "seed": 986004,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "f8ac863b7f56494e",
+        "F2_game": "c1dc3f15249b4f90"
+      },
+      {
+        "opponent": "adversarial-priest-v1",
+        "seed": 986005,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "d7c2ae6b5663462e",
+        "F2_game": "d32a64f2f2384884"
+      },
+      {
+        "opponent": "adversarial-priest-v1",
+        "seed": 986008,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "ef61d52a1c2f46be",
+        "F2_game": "9d65c4902c884f9e"
+      },
+      {
+        "opponent": "adversarial-zoo",
+        "seed": 986001,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "fe21708884aa4475",
+        "F2_game": "ffdb3092ddb24e67"
+      },
+      {
+        "opponent": "adversarial-zoo",
+        "seed": 986003,
+        "seat": 2,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "48e611bbbced4bbd",
+        "F2_game": "94e11b6b27b9456b"
+      },
+      {
+        "opponent": "adversarial-zoo",
+        "seed": 986009,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "d01a51f8e49a4f7c",
+        "F2_game": "fe3d3fa936a04a55"
+      },
+      {
+        "opponent": "aggressive-hunter",
+        "seed": 986000,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "65da74dad266465a",
+        "F2_game": "370615c781d0472c"
+      },
+      {
+        "opponent": "aggressive-hunter",
+        "seed": 986002,
+        "seat": 2,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "e45562663a00464a",
+        "F2_game": "8454098492234920"
+      },
+      {
+        "opponent": "aggressive-paladin",
+        "seed": 986002,
+        "seat": 2,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "5ff23f62904e4426",
+        "F2_game": "a75e53b354f2454f"
+      },
+      {
+        "opponent": "control-mage",
+        "seed": 986009,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "55351db0e4bb408c",
+        "F2_game": "7aae001348a74b55"
+      },
+      {
+        "opponent": "historical-mage",
+        "seed": 986000,
+        "seat": 1,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "d1fd05141869462b",
+        "F2_game": "229c877e33244852"
+      },
+      {
+        "opponent": "historical-mage",
+        "seed": 986001,
+        "seat": 2,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "7cb849e068c44688",
+        "F2_game": "750e3d4ba7a44a49"
+      },
+      {
+        "opponent": "official-mage",
+        "seed": 986007,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "07974f8dbb0444ed",
+        "F2_game": "a3e4748b57144a39"
+      },
+      {
+        "opponent": "official-mage",
+        "seed": 986008,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "77df201e39ee459e",
+        "F2_game": "fde83a59feef45f1"
+      },
+      {
+        "opponent": "search-paladin",
+        "seed": 986009,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "cbdb061875ec4f57",
+        "F2_game": "da7b616f90e44790"
+      },
+      {
+        "opponent": "search-shaman",
+        "seed": 986000,
+        "seat": 2,
+        "actual_first": false,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "7ec5ebcef6a54d1e",
+        "F2_game": "4d6d99404cfc4353"
+      },
+      {
+        "opponent": "search-shaman",
+        "seed": 986009,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "ec10173775c748e3",
+        "F2_game": "f3189e35709e4357"
+      },
+      {
+        "opponent": "tempo-paladin",
+        "seed": 986002,
+        "seat": 2,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "c6445db28d8d46f1",
+        "F2_game": "c8eb8ba66fc946e0"
+      },
+      {
+        "opponent": "tempo-paladin",
+        "seed": 986004,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 0,
+        "F2_score": 1,
+        "Y1_game": "e824b72a2f9048a5",
+        "F2_game": "c977213006ce4dfd"
+      },
+      {
+        "opponent": "tempo-paladin",
+        "seed": 986009,
+        "seat": 2,
+        "actual_first": true,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "30fad5a08c4f4598",
+        "F2_game": "559ced9f74e24180"
+      },
+      {
+        "opponent": "tempo-warlock",
+        "seed": 986009,
+        "seat": 1,
+        "actual_first": false,
+        "Y1_score": 1,
+        "F2_score": 0,
+        "Y1_game": "32db545c5baa4af9",
+        "F2_game": "6ae7b8b29238422f"
+      }
+    ]
+  },
+  "decision": {
+    "gates": {
+      "primary_gain": false,
+      "primary_positive_interval": false,
+      "family_regression": false,
+      "guardrail_overall": false,
+      "guardrail_opponents": false,
+      "normal_reliability": true
+    },
+    "performance_gates_pass": false,
+    "release_status": "Requires separate complete CLI and artifact integrity checks.",
+    "scope": "Frozen local proxy pools; no claim of real Astra performance or guaranteed improvement."
+  }
+}
