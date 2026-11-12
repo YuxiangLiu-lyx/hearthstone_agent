@@ -1,0 +1,108 @@
+{
+  "requested_zip": "Not found in workspace, sibling worktrees, attachments, Downloads or Desktop; no claim of reproducing its 389/480 or 44/57 statistics.",
+  "source": "experiments/secret-hunter-response-y1-response-data",
+  "config_sha256": "4c5b9129e67d4b376d40b984f7d4b7e9c1bb69e7e3d4ceff93e9186a42003495",
+  "responses_sha256": "f0caf01442444d21863a6165211788510d58f7e5ddbf4c3aaf813e458a2cf25d",
+  "historical_counterfactual": {
+    "counterfactual-pilot": {
+      "path": "docs/secret_hunter_dgm/counterfactual-pilot.jsonl",
+      "sha256": "d4aeea2aefce50da472116017fdd5208d8a9e26d8b6927ebeadfb8ef5d6361d1",
+      "cases": 60
+    },
+    "counterfactual-v2": {
+      "path": "docs/secret_hunter_dgm/counterfactual-v2.jsonl",
+      "sha256": "fba062c9958f8d8cb7f06784e6a22af756b531e7fa0320935e70d22c3c7717a1",
+      "cases": 60
+    },
+    "counterfactual-adaptive": {
+      "path": "docs/secret_hunter_dgm/counterfactual-adaptive.jsonl",
+      "sha256": "e0836735d4d560c6af125832fa93e07e2d8d216d1e8ede28d57687105980ff17",
+      "cases": 8
+    },
+    "counterfactual-strong": {
+      "path": "docs/secret_hunter_dgm/counterfactual-strong.jsonl",
+      "sha256": "03608f5df5e5423a58711df82aeeab0a7083aa572809d244b8303b1d761208b0",
+      "cases": 2
+    }
+  },
+  "stats": {
+    "games": 480,
+    "responses": 2962,
+    "seed_groups": 40,
+    "labels": {
+      "develop": 2615,
+      "buff": 842,
+      "taunt": 398,
+      "removal": 551,
+      "burn": 612,
+      "visible_trade": 1031
+    },
+    "by_split": {
+      "fit": 1804,
+      "test": 583,
+      "calibration": 575
+    },
+    "turn4": {
+      "astra-board-proxy": {
+        "True": {
+          "losses_reached_turn4": 6,
+          "losses_gap4": 5
+        },
+        "False": {
+          "losses_reached_turn4": 11,
+          "losses_gap4": 11
+        }
+      },
+      "astra-sticky-proxy": {
+        "True": {
+          "losses_reached_turn4": 6,
+          "losses_gap4": 4
+        },
+        "False": {
+          "losses_reached_turn4": 13,
+          "losses_gap4": 12
+        }
+      },
+      "astra-tempo-proxy": {
+        "True": {
+          "losses_reached_turn4": 4,
+          "losses_gap4": 4
+        },
+        "False": {
+          "losses_reached_turn4": 6,
+          "losses_gap4": 6
+        }
+      },
+      "bot1-mage-proxy": {
+        "True": {
+          "losses_reached_turn4": 5,
+          "losses_gap4": 0
+        },
+        "False": {
+          "losses_reached_turn4": 9,
+          "losses_gap4": 5
+        }
+      },
+      "bot2-face-proxy": {
+        "True": {
+          "losses_reached_turn4": 2,
+          "losses_gap4": 1
+        },
+        "False": {
+          "losses_reached_turn4": 9,
+          "losses_gap4": 2
+        }
+      },
+      "bot2-trade-proxy": {
+        "True": {
+          "losses_reached_turn4": 3,
+          "losses_gap4": 2
+        },
+        "False": {
+          "losses_reached_turn4": 9,
+          "losses_gap4": 2
+        }
+      }
+    }
+  }
+}

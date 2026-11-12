@@ -1,0 +1,70 @@
+{
+  "started": 1794451133.838921,
+  "seed_blocks": {
+    "response_data": [
+      960000,
+      40
+    ],
+    "development": [
+      960100,
+      800
+    ],
+    "final_core": [
+      961000,
+      80
+    ],
+    "final_guardrail": [
+      962000,
+      20
+    ],
+    "client": [
+      963000,
+      4
+    ],
+    "counterfactual": [
+      964000,
+      16000
+    ]
+  },
+  "final_core": {
+    "start": 961000,
+    "seeds": 80,
+    "arms": [
+      "Y1",
+      "K1",
+      "one_challenger"
+    ],
+    "games": 2880
+  },
+  "final_guardrail": {
+    "start": 962000,
+    "seeds": 20,
+    "arms": 3,
+    "games": 1680
+  },
+  "primary": "0.5 * Astra family mean + 0.5 * Bot2 family mean",
+  "promotion": {
+    "Y1_primary_gain": 0.01,
+    "paired_seed_95_lower_strictly_greater": 0,
+    "family_max_drop": 0.05,
+    "old_overall_max_drop": 0.03,
+    "old_opponent_max_drop": 0.1,
+    "runtime": "Complete cold CLI <=2 seconds in independent normal and injected fault checks; no unexplained illegal/stale actions; test extracted ZIP"
+  },
+  "statistics": "10000 paired bootstrap draws of whole seed groups; all opponents and both seats remain together. K1 superiority requires its paired interval.",
+  "response_validation": "Fixed seed-group split by seed modulo 5: 0 test, 1 calibration, 2/3/4 fit. No game identity, seed, proxy name, outcomes, hidden cards or future events in predictors. Multi-label actual public responses.",
+  "model_boundary": "Learned models and old Bigram counts are offline only; runtime uses independently implemented public feasibility rules and bounded scenario search, with no fitted weights.",
+  "stop": [
+    "16000 full attempts",
+    "80000 short attempts",
+    "21600 cumulative experiment seconds",
+    "5000 full/2700 seconds final reserve",
+    "Final opening freezes all strategy selection. A failed final is a negative result."
+  ],
+  "amendments": [
+    {
+      "stage": "before balanced counterfactual expansion",
+      "change": "Reserve 964000\u2013979999 for offline future RNG, disjoint from all final match seeds. First 24-case pilot selection exposed a lexicographic opponent imbalance; retain it, then run all 72 opponent/seat/outcome/own-turn strata in the expanded study."
+    }
+  ]
+}
