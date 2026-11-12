@@ -1,0 +1,789 @@
+{
+  "C1": [
+    {
+      "type": "play_card",
+      "card": 61,
+      "target": 32
+    },
+    {
+      "fallback": false,
+      "nodes": 348,
+      "search_used": true,
+      "reason": "turn_search",
+      "race": {
+        "own_ehp": 29,
+        "enemy_ehp": 28,
+        "visible_incoming_before_taunts": 3,
+        "next_turn_hand_damage_no_surviving_beast": 3,
+        "next_turn_hand_damage_if_beast_survives": 3,
+        "role": "develop_and_trade",
+        "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+      },
+      "lethal": {
+        "guaranteed": false,
+        "first_action": null,
+        "sequence": [],
+        "mana_required": null,
+        "damage": null,
+        "depends_on_random": false,
+        "nodes": 0,
+        "bounded_out": false,
+        "supported": true,
+        "pruned_by_upper_bound": true
+      },
+      "turn_search": {
+        "nodes": 85,
+        "action": {
+          "type": "play_card",
+          "card": 61,
+          "target": 32
+        },
+        "supported": true,
+        "bounded_out": false,
+        "depth": 3,
+        "excluded": 3,
+        "deduplicated": 16,
+        "beam_pruned": 11,
+        "stop_reason": null,
+        "reply": {
+          "nodes": 35,
+          "candidates": 6,
+          "comparable": true,
+          "scope": "visible attacks only; hidden cards excluded",
+          "visible_lethal_found": false
+        },
+        "sequence": [
+          {
+            "type": "play_card",
+            "card": 61,
+            "target": 32
+          },
+          {
+            "type": "attack",
+            "attacker": 54,
+            "target": 4
+          }
+        ],
+        "value": -16.200400000000002,
+        "elapsed_s": 0.007830374990589917
+      },
+      "chance": {
+        "active": true,
+        "nodes": 263,
+        "excluded": 0,
+        "exact_distributions": 4,
+        "sampled_distributions": 0,
+        "comparisons": [
+          {
+            "action": {
+              "type": "play_card",
+              "card": 61,
+              "target": 32
+            },
+            "value": -16.200400000000002,
+            "mean": -16.200400000000002,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "play_card",
+              "card": 50
+            },
+            "value": -20.9151,
+            "mean": -20.9151,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "play_card",
+              "card": 58
+            },
+            "value": -12.31277916666667,
+            "mean": -12.31277916666667,
+            "sd": 2.2272771439405874,
+            "outcomes": 8,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          }
+        ],
+        "guaranteed": false,
+        "reply_bounded": 1,
+        "complete": false,
+        "reason": "unsupported_visible_response",
+        "elapsed_s": 0.021091791102662683
+      },
+      "elapsed_s": 0.03296158299781382,
+      "over_budget": false
+    }
+  ],
+  "C2": [
+    {
+      "type": "play_card",
+      "card": 58
+    },
+    {
+      "fallback": false,
+      "nodes": 517,
+      "search_used": true,
+      "reason": "chance_endpoint",
+      "race": {
+        "own_ehp": 29,
+        "enemy_ehp": 28,
+        "visible_incoming_before_taunts": 3,
+        "next_turn_hand_damage_no_surviving_beast": 3,
+        "next_turn_hand_damage_if_beast_survives": 3,
+        "role": "develop_and_trade",
+        "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+      },
+      "lethal": {
+        "guaranteed": false,
+        "first_action": null,
+        "sequence": [],
+        "mana_required": null,
+        "damage": null,
+        "depends_on_random": false,
+        "nodes": 0,
+        "bounded_out": false,
+        "supported": true,
+        "pruned_by_upper_bound": true
+      },
+      "turn_search": {
+        "nodes": 85,
+        "action": {
+          "type": "play_card",
+          "card": 61,
+          "target": 32
+        },
+        "supported": true,
+        "bounded_out": false,
+        "depth": 3,
+        "excluded": 3,
+        "deduplicated": 16,
+        "beam_pruned": 11,
+        "stop_reason": null,
+        "reply": {
+          "nodes": 35,
+          "candidates": 6,
+          "comparable": true,
+          "scope": "visible attacks only; hidden cards excluded",
+          "visible_lethal_found": false
+        },
+        "sequence": [
+          {
+            "type": "play_card",
+            "card": 61,
+            "target": 32
+          },
+          {
+            "type": "attack",
+            "attacker": 54,
+            "target": 4
+          }
+        ],
+        "value": -16.200400000000002,
+        "elapsed_s": 0.00798554194625467
+      },
+      "chance": {
+        "active": true,
+        "nodes": 432,
+        "excluded": 0,
+        "exact_distributions": 9,
+        "sampled_distributions": 0,
+        "comparisons": [
+          {
+            "action": {
+              "type": "play_card",
+              "card": 61,
+              "target": 32
+            },
+            "value": -16.200400000000002,
+            "mean": -16.200400000000002,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "play_card",
+              "card": 50
+            },
+            "value": -20.9151,
+            "mean": -20.9151,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "play_card",
+              "card": 58
+            },
+            "value": -12.31277916666667,
+            "mean": -12.31277916666667,
+            "sd": 2.2272771439405874,
+            "outcomes": 8,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "attack",
+              "attacker": 54,
+              "target": 23
+            },
+            "value": -16.200900000000004,
+            "mean": -16.200900000000004,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "hero_power"
+            },
+            "value": -20.774600000000003,
+            "mean": -20.774600000000003,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "attack",
+              "attacker": 54,
+              "target": 4
+            },
+            "value": -11.69823055555556,
+            "mean": -11.69823055555556,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          }
+        ],
+        "guaranteed": false,
+        "reply_bounded": 2,
+        "excluded_response_roots": 1,
+        "complete": true,
+        "action": {
+          "type": "play_card",
+          "card": 58
+        },
+        "elapsed_s": 0.03806266689207405
+      },
+      "elapsed_s": 0.049993208958767354,
+      "over_budget": false
+    }
+  ],
+  "S1": [
+    {
+      "type": "play_card",
+      "card": 58
+    },
+    {
+      "fallback": false,
+      "nodes": 735,
+      "search_used": true,
+      "reason": "chance_endpoint",
+      "race": {
+        "own_ehp": 29,
+        "enemy_ehp": 28,
+        "visible_incoming_before_taunts": 3,
+        "next_turn_hand_damage_no_surviving_beast": 3,
+        "next_turn_hand_damage_if_beast_survives": 3,
+        "role": "develop_and_trade",
+        "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+      },
+      "lethal": {
+        "guaranteed": false,
+        "first_action": null,
+        "sequence": [],
+        "mana_required": null,
+        "damage": null,
+        "depends_on_random": false,
+        "nodes": 0,
+        "bounded_out": false,
+        "supported": true,
+        "pruned_by_upper_bound": true
+      },
+      "turn_search": {
+        "nodes": 85,
+        "action": {
+          "type": "play_card",
+          "card": 61,
+          "target": 32
+        },
+        "supported": true,
+        "bounded_out": false,
+        "depth": 3,
+        "excluded": 3,
+        "deduplicated": 16,
+        "beam_pruned": 11,
+        "stop_reason": null,
+        "reply": {
+          "nodes": 35,
+          "candidates": 6,
+          "comparable": true,
+          "scope": "visible attacks only; hidden cards excluded",
+          "visible_lethal_found": false
+        },
+        "sequence": [
+          {
+            "type": "play_card",
+            "card": 61,
+            "target": 32
+          },
+          {
+            "type": "attack",
+            "attacker": 54,
+            "target": 4
+          }
+        ],
+        "value": -16.200400000000002,
+        "elapsed_s": 0.007731250021606684
+      },
+      "chance": {
+        "active": true,
+        "nodes": 650,
+        "excluded": 0,
+        "exact_distributions": 9,
+        "sampled_distributions": 0,
+        "comparisons": [
+          {
+            "action": {
+              "type": "play_card",
+              "card": 61,
+              "target": 32
+            },
+            "value": -16.200400000000002,
+            "mean": -16.200400000000002,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "play_card",
+              "card": 50
+            },
+            "value": -20.9151,
+            "mean": -20.9151,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "play_card",
+              "card": 58
+            },
+            "value": -12.31277916666667,
+            "mean": -12.31277916666667,
+            "sd": 2.2272771439405874,
+            "outcomes": 8,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "attack",
+              "attacker": 54,
+              "target": 23
+            },
+            "value": -16.200900000000004,
+            "mean": -16.200900000000004,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "hero_power"
+            },
+            "value": -20.774600000000003,
+            "mean": -20.774600000000003,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "attack",
+              "attacker": 54,
+              "target": 4
+            },
+            "value": -11.69823055555556,
+            "mean": -11.69823055555556,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          }
+        ],
+        "guaranteed": false,
+        "reply_bounded": 5,
+        "excluded_response_roots": 1,
+        "complete": true,
+        "action": {
+          "type": "play_card",
+          "card": 58
+        },
+        "elapsed_s": 0.06894879101309925
+      },
+      "elapsed_s": 0.07942783297039568,
+      "over_budget": false
+    }
+  ],
+  "X1": [
+    {
+      "type": "play_card",
+      "card": 58
+    },
+    {
+      "fallback": false,
+      "nodes": 735,
+      "search_used": true,
+      "reason": "chance_endpoint",
+      "race": {
+        "own_ehp": 29,
+        "enemy_ehp": 28,
+        "visible_incoming_before_taunts": 3,
+        "next_turn_hand_damage_no_surviving_beast": 3,
+        "next_turn_hand_damage_if_beast_survives": 3,
+        "role": "develop_and_trade",
+        "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+      },
+      "lethal": {
+        "guaranteed": false,
+        "first_action": null,
+        "sequence": [],
+        "mana_required": null,
+        "damage": null,
+        "depends_on_random": false,
+        "nodes": 0,
+        "bounded_out": false,
+        "supported": true,
+        "pruned_by_upper_bound": true
+      },
+      "turn_search": {
+        "nodes": 85,
+        "action": {
+          "type": "play_card",
+          "card": 61,
+          "target": 32
+        },
+        "supported": true,
+        "bounded_out": false,
+        "depth": 3,
+        "excluded": 3,
+        "deduplicated": 16,
+        "beam_pruned": 11,
+        "stop_reason": null,
+        "reply": {
+          "nodes": 35,
+          "candidates": 6,
+          "comparable": true,
+          "scope": "visible attacks only; hidden cards excluded",
+          "visible_lethal_found": false
+        },
+        "sequence": [
+          {
+            "type": "play_card",
+            "card": 61,
+            "target": 32
+          },
+          {
+            "type": "attack",
+            "attacker": 54,
+            "target": 4
+          }
+        ],
+        "value": -16.200400000000002,
+        "elapsed_s": 0.00904199993237853
+      },
+      "chance": {
+        "active": true,
+        "nodes": 650,
+        "excluded": 0,
+        "exact_distributions": 9,
+        "sampled_distributions": 0,
+        "comparisons": [
+          {
+            "action": {
+              "type": "play_card",
+              "card": 61,
+              "target": 32
+            },
+            "value": -16.200400000000002,
+            "mean": -16.200400000000002,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "play_card",
+              "card": 50
+            },
+            "value": -20.9151,
+            "mean": -20.9151,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "play_card",
+              "card": 58
+            },
+            "value": -12.31277916666667,
+            "mean": -12.31277916666667,
+            "sd": 2.2272771439405874,
+            "outcomes": 8,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "attack",
+              "attacker": 54,
+              "target": 23
+            },
+            "value": -16.200900000000004,
+            "mean": -16.200900000000004,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "hero_power"
+            },
+            "value": -20.774600000000003,
+            "mean": -20.774600000000003,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "attack",
+              "attacker": 54,
+              "target": 4
+            },
+            "value": -11.69823055555556,
+            "mean": -11.69823055555556,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          }
+        ],
+        "guaranteed": false,
+        "reply_bounded": 5,
+        "excluded_response_roots": 1,
+        "complete": true,
+        "action": {
+          "type": "play_card",
+          "card": 58
+        },
+        "elapsed_s": 0.06991370802279562
+      },
+      "elapsed_s": 0.08578737499192357,
+      "over_budget": false
+    }
+  ],
+  "T1": [
+    {
+      "type": "play_card",
+      "card": 58
+    },
+    {
+      "fallback": false,
+      "nodes": 538,
+      "search_used": true,
+      "reason": "chance_endpoint",
+      "race": {
+        "own_ehp": 29,
+        "enemy_ehp": 28,
+        "visible_incoming_before_taunts": 3,
+        "next_turn_hand_damage_no_surviving_beast": 3,
+        "next_turn_hand_damage_if_beast_survives": 3,
+        "role": "develop_and_trade",
+        "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+      },
+      "lethal": {
+        "guaranteed": false,
+        "first_action": null,
+        "sequence": [],
+        "mana_required": null,
+        "damage": null,
+        "depends_on_random": false,
+        "nodes": 0,
+        "bounded_out": false,
+        "supported": true,
+        "pruned_by_upper_bound": true
+      },
+      "turn_search": {
+        "nodes": 85,
+        "action": {
+          "type": "play_card",
+          "card": 61,
+          "target": 32
+        },
+        "supported": true,
+        "bounded_out": false,
+        "depth": 3,
+        "excluded": 3,
+        "deduplicated": 16,
+        "beam_pruned": 11,
+        "stop_reason": null,
+        "reply": {
+          "nodes": 35,
+          "candidates": 6,
+          "comparable": true,
+          "scope": "visible attacks only; hidden cards excluded",
+          "visible_lethal_found": false
+        },
+        "sequence": [
+          {
+            "type": "play_card",
+            "card": 61,
+            "target": 32
+          },
+          {
+            "type": "attack",
+            "attacker": 54,
+            "target": 4
+          }
+        ],
+        "value": -16.200400000000002,
+        "elapsed_s": 0.008094208082184196
+      },
+      "chance": {
+        "active": true,
+        "nodes": 453,
+        "excluded": 0,
+        "exact_distributions": 9,
+        "sampled_distributions": 0,
+        "comparisons": [
+          {
+            "action": {
+              "type": "play_card",
+              "card": 61,
+              "target": 32
+            },
+            "value": -16.200400000000002,
+            "mean": -16.200400000000002,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "play_card",
+              "card": 50
+            },
+            "value": -20.9151,
+            "mean": -20.9151,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "play_card",
+              "card": 58
+            },
+            "value": -12.31277916666667,
+            "mean": -12.31277916666667,
+            "sd": 2.2272771439405874,
+            "outcomes": 8,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "play_card",
+              "card": 47
+            },
+            "value": -22.5596,
+            "mean": -22.5596,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "attack",
+              "attacker": 54,
+              "target": 23
+            },
+            "value": -16.200900000000004,
+            "mean": -16.200900000000004,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "hero_power"
+            },
+            "value": -20.774600000000003,
+            "mean": -20.774600000000003,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          },
+          {
+            "action": {
+              "type": "attack",
+              "attacker": 54,
+              "target": 4
+            },
+            "value": -11.69823055555556,
+            "mean": -11.69823055555556,
+            "sd": 0.0,
+            "outcomes": 1,
+            "exact_root": true,
+            "endpoint_lethal_mass": 0.0
+          }
+        ],
+        "guaranteed": false,
+        "reply_bounded": 2,
+        "misdirection_responses": 1,
+        "complete": true,
+        "action": {
+          "type": "play_card",
+          "card": 58
+        },
+        "elapsed_s": 0.041161792003549635
+      },
+      "elapsed_s": 0.05708333302754909,
+      "over_budget": false
+    }
+  ]
+}
