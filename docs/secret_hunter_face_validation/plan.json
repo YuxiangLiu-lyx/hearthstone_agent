@@ -1,0 +1,51 @@
+{
+  "authorization": "User explicitly requested validation after the preference-only F2 follow-up. This bounded ledger is separate from the exhausted original 16000-attempt ledger.",
+  "created_epoch": 1794460661.3908741,
+  "parent_commit": "dd25aa61002272c4312f5352949749fbadc2e10c",
+  "policy_changes_allowed": false,
+  "arms": {
+    "Y1": "development/secret_hunter_response/candidates/Y1",
+    "F2": "development/secret_hunter_face/release/secret-hunter-face-f2"
+  },
+  "schedules": {
+    "core": {
+      "start": 985000,
+      "seeds": 40,
+      "games_per_arm": 480
+    },
+    "guardrail": {
+      "start": 986000,
+      "seeds": 10,
+      "games_per_arm": 280
+    }
+  },
+  "client": {
+    "arm": "F2",
+    "start": 987000,
+    "games": 2,
+    "opponent": "greedy"
+  },
+  "planned_full_games": 1522,
+  "limits": {
+    "full_games": 1600,
+    "short_branches": 2000,
+    "experiment_seconds": 3600
+  },
+  "primary": "Equal Astra-family and Bot2-family mean win score; report all opponents, actual first/second, Mage, Greedy and total separately.",
+  "interval": "10000 paired bootstrap resamples of entire source-seed groups; retain both seats and all opponents in each group.",
+  "promotion_gates": {
+    "primary_gain_at_least": 0.01,
+    "primary_paired_95_lower_above": 0,
+    "minimum_family_gain": -0.05,
+    "minimum_guardrail_overall_gain": -0.03,
+    "minimum_guardrail_opponent_gain": -0.1,
+    "zero_illegal_timeout_policy_error_or_normal_fallback": true
+  },
+  "seed_audit": {
+    "parent_checkpoint": "docs/secret_hunter_winrate/checkpoint.json",
+    "parent_max_seed": 984001,
+    "overlap": [],
+    "existing_experiment_configs_scanned": true
+  },
+  "selection": "One frozen F2 candidate, no tuning or adaptive selection on validation seeds. Any subsequent tuning makes these seeds development data."
+}
