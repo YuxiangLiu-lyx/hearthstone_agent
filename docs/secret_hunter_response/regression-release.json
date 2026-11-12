@@ -1,0 +1,238 @@
+{
+  "tests": 14,
+  "failures": 0,
+  "errors": 0,
+  "fixtures": 131,
+  "evidence": [
+    {
+      "mechanism": "19 cards live data",
+      "actual": [
+        {
+          "id": "EX1_029",
+          "cost": 1,
+          "attack": 1,
+          "health": 1
+        },
+        {
+          "id": "EX1_080",
+          "cost": 1,
+          "attack": 1,
+          "health": 2
+        },
+        {
+          "id": "DS1_184",
+          "cost": 1,
+          "attack": null,
+          "health": null
+        },
+        {
+          "id": "EX1_162",
+          "cost": 2,
+          "attack": 2,
+          "health": 2
+        },
+        {
+          "id": "EX1_531",
+          "cost": 2,
+          "attack": 2,
+          "health": 2
+        },
+        {
+          "id": "EX1_533",
+          "cost": 2,
+          "attack": null,
+          "health": null
+        },
+        {
+          "id": "EX1_554",
+          "cost": 2,
+          "attack": null,
+          "health": null
+        },
+        {
+          "id": "EX1_066",
+          "cost": 2,
+          "attack": 3,
+          "health": 2
+        },
+        {
+          "id": "EX1_610",
+          "cost": 2,
+          "attack": null,
+          "health": null
+        },
+        {
+          "id": "EX1_611",
+          "cost": 2,
+          "attack": null,
+          "health": null
+        },
+        {
+          "id": "NEW1_019",
+          "cost": 2,
+          "attack": 2,
+          "health": 2
+        },
+        {
+          "id": "EX1_536",
+          "cost": 3,
+          "attack": 3,
+          "health": null
+        },
+        {
+          "id": "EX1_538",
+          "cost": 3,
+          "attack": null,
+          "health": null
+        },
+        {
+          "id": "EX1_539",
+          "cost": 3,
+          "attack": null,
+          "health": null
+        },
+        {
+          "id": "EX1_617",
+          "cost": 3,
+          "attack": null,
+          "health": null
+        },
+        {
+          "id": "NEW1_031",
+          "cost": 3,
+          "attack": null,
+          "health": null
+        },
+        {
+          "id": "DS1_070",
+          "cost": 4,
+          "attack": 4,
+          "health": 3
+        },
+        {
+          "id": "EX1_534",
+          "cost": 6,
+          "attack": 6,
+          "health": 5
+        },
+        {
+          "id": "EX1_543",
+          "cost": 9,
+          "attack": 8,
+          "health": 8
+        }
+      ]
+    },
+    {
+      "mechanism": "Explosive/Freezing order",
+      "order": [
+        "EX1_610",
+        "EX1_611"
+      ],
+      "own_hp": 30,
+      "enemy_hp": 28,
+      "durability": 4,
+      "secrets_remaining": [],
+      "attacker_zone": "HAND",
+      "attacker_cost": 4
+    },
+    {
+      "mechanism": "Explosive/Freezing order",
+      "order": [
+        "EX1_611",
+        "EX1_610"
+      ],
+      "own_hp": 30,
+      "enemy_hp": 30,
+      "durability": 3,
+      "secrets_remaining": [
+        "EX1_610"
+      ],
+      "attacker_zone": "HAND",
+      "attacker_cost": 4
+    },
+    {
+      "mechanism": "Freezing",
+      "minion_target_triggers": true,
+      "cost_increase": 2
+    },
+    {
+      "mechanism": "Misdirection",
+      "trials": 12,
+      "enemy_hero_health": [
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24
+      ],
+      "conditional_world": "one enemy minion and two heroes"
+    },
+    {
+      "mechanism": "snake Kill Command, Secretkeeper growth, Houndmaster lethal",
+      "real_engine_wins": 3
+    },
+    {
+      "mechanism": "new exact public effects",
+      "one_step_cases": 31
+    },
+    {
+      "mechanism": "Ooze/Houndmaster/Highmane",
+      "weapon_destroyed": true,
+      "buff": [
+        2,
+        2
+      ],
+      "death_tokens": 2
+    },
+    {
+      "mechanism": "supported lethal",
+      "families": 5,
+      "real_engine_wins": 5
+    },
+    {
+      "mechanism": "random effect distributions",
+      "samples_per_effect": 30,
+      "companion": {
+        "NEW1_032": 15,
+        "NEW1_034": 7,
+        "NEW1_033": 8
+      },
+      "deadly_shot": {
+        "CS2_200": 17,
+        "CS2_172": 13
+      },
+      "misdirection": {
+        "enemy_minion": 10,
+        "enemy_hero": 13,
+        "own_minion": 7
+      },
+      "snake_single_slot": true,
+      "scope": "Microfixtures; finite sample counts, not exact probability estimates or match outcomes."
+    },
+    {
+      "mechanism": "Secretkeeper",
+      "own_secret_buff": true,
+      "enemy_secret_buff": false,
+      "text_mismatch": true
+    },
+    {
+      "mechanism": "Snake/Juggler",
+      "snakes": 3,
+      "knife_damage": 3
+    },
+    {
+      "mechanism": "Tracking",
+      "offered": 3,
+      "deck_removed": 3,
+      "selected_in_hand": true
+    }
+  ]
+}

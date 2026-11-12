@@ -1,0 +1,1131 @@
+{
+  "B1": {
+    "stage": "pilot",
+    "telemetry": {
+      "baseline_outside_deterministic_coverage": 157,
+      "endpoint_searches": 854,
+      "incomplete_comparison": 74,
+      "complete_endpoint_comparison": 93,
+      "baseline_endpoint_missing": 7
+    },
+    "nodes": {
+      "n": 578,
+      "mean": 196.23875432525952,
+      "max": 640,
+      "p50": 173,
+      "p95": 430,
+      "p99": 611
+    },
+    "response_elapsed_s": {
+      "n": 578,
+      "mean": 0.020433071443841672,
+      "max": 0.12172662501689047,
+      "p50": 0.01613374997396022,
+      "p95": 0.0521049170056358,
+      "p99": 0.0814551250077784
+    },
+    "discordant_games": [
+      {
+        "pair": [
+          "astra-board-proxy",
+          960102,
+          2
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 7,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 56
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 59
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-board-proxy",
+          960102,
+          1
+        ],
+        "baseline_win": 0,
+        "candidate_win": 1,
+        "seq": 5,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 12,
+          "position": 0
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 6,
+          "position": 0
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-tempo-proxy",
+          960103,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 4,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 70
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 9,
+          "position": 0
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-tempo-proxy",
+          960104,
+          2
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 5,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 44,
+          "position": 0
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 39,
+          "position": 0
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-tempo-proxy",
+          960106,
+          2
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 3,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 50
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 46,
+          "position": 0
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "bot2-face-proxy",
+          960101,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 5,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 18
+        },
+        "candidate_action": {
+          "type": "attack",
+          "attacker": 11,
+          "target": 37
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "bot2-trade-proxy",
+          960101,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 5,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 18
+        },
+        "candidate_action": {
+          "type": "attack",
+          "attacker": 11,
+          "target": 37
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      }
+    ],
+    "baseline_only": 6,
+    "candidate_only": 1,
+    "classification_counts": {
+      "evaluation_or_continuation_unresolved": 6
+    }
+  },
+  "C1": {
+    "stage": "pilot",
+    "telemetry": {
+      "baseline_outside_deterministic_coverage": 159,
+      "endpoint_searches": 862,
+      "with_hypotheses": 592,
+      "incomplete_comparison": 74,
+      "complete_endpoint_comparison": 89,
+      "baseline_endpoint_missing": 7
+    },
+    "nodes": {
+      "n": 590,
+      "mean": 645.6796610169491,
+      "max": 1840,
+      "p50": 532,
+      "p95": 1487,
+      "p99": 1757
+    },
+    "response_elapsed_s": {
+      "n": 590,
+      "mean": 0.06303783085974628,
+      "max": 0.3001146250171587,
+      "p50": 0.04554237506818026,
+      "p95": 0.16976904100738466,
+      "p99": 0.23473466699942946
+    },
+    "discordant_games": [
+      {
+        "pair": [
+          "astra-board-proxy",
+          960102,
+          2
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 7,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 56
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 59
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-board-proxy",
+          960102,
+          1
+        ],
+        "baseline_win": 0,
+        "candidate_win": 1,
+        "seq": 5,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 12,
+          "position": 0
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 6,
+          "position": 0
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-tempo-proxy",
+          960103,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 4,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 70
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 9,
+          "position": 0
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-tempo-proxy",
+          960106,
+          2
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 3,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 50
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 46,
+          "position": 0
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-tempo-proxy",
+          960104,
+          2
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 5,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 44,
+          "position": 0
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 39,
+          "position": 0
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "bot2-face-proxy",
+          960101,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 5,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 18
+        },
+        "candidate_action": {
+          "type": "attack",
+          "attacker": 11,
+          "target": 37
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "bot2-trade-proxy",
+          960100,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 4,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 70
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 18
+        },
+        "baseline_coin_without_followup_in_comparison": true,
+        "candidate_root_was_generated": true,
+        "classification": "baseline_plan_generation_gap",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "bot2-trade-proxy",
+          960101,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 5,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 18
+        },
+        "candidate_action": {
+          "type": "attack",
+          "attacker": 11,
+          "target": 37
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      }
+    ],
+    "baseline_only": 7,
+    "candidate_only": 1,
+    "classification_counts": {
+      "evaluation_or_continuation_unresolved": 6,
+      "baseline_plan_generation_gap": 1
+    }
+  },
+  "B2": {
+    "stage": "pilot",
+    "telemetry": {
+      "baseline_outside_deterministic_coverage": 158,
+      "endpoint_searches": 854,
+      "incomplete_comparison": 78,
+      "baseline_endpoint_missing": 6,
+      "complete_endpoint_comparison": 16
+    },
+    "nodes": {
+      "n": 575,
+      "mean": 191.93565217391304,
+      "max": 640,
+      "p50": 164,
+      "p95": 428,
+      "p99": 611
+    },
+    "response_elapsed_s": {
+      "n": 575,
+      "mean": 0.017574704504450377,
+      "max": 0.090304542100057,
+      "p50": 0.013661000062711537,
+      "p95": 0.04903429199475795,
+      "p99": 0.07042616698890924
+    },
+    "discordant_games": [
+      {
+        "pair": [
+          "bot2-face-proxy",
+          960100,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 4,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 70
+        },
+        "candidate_action": {
+          "type": "hero_power"
+        },
+        "baseline_coin_without_followup_in_comparison": true,
+        "candidate_root_was_generated": true,
+        "classification": "baseline_plan_generation_gap",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "bot2-trade-proxy",
+          960100,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 4,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 70
+        },
+        "candidate_action": {
+          "type": "hero_power"
+        },
+        "baseline_coin_without_followup_in_comparison": true,
+        "candidate_root_was_generated": true,
+        "classification": "baseline_plan_generation_gap",
+        "causal_status": "First policy divergence, not a certified first important error."
+      }
+    ],
+    "baseline_only": 2,
+    "candidate_only": 0,
+    "classification_counts": {
+      "baseline_plan_generation_gap": 2
+    }
+  },
+  "C2": {
+    "stage": "pilot",
+    "telemetry": {
+      "baseline_outside_deterministic_coverage": 161,
+      "endpoint_searches": 855,
+      "with_hypotheses": 581,
+      "incomplete_comparison": 83,
+      "baseline_endpoint_missing": 6,
+      "complete_endpoint_comparison": 16
+    },
+    "nodes": {
+      "n": 574,
+      "mean": 642.4128919860627,
+      "max": 1840,
+      "p50": 521,
+      "p95": 1516,
+      "p99": 1808
+    },
+    "response_elapsed_s": {
+      "n": 574,
+      "mean": 0.06334283005791791,
+      "max": 0.28270899993367493,
+      "p50": 0.04484683298505843,
+      "p95": 0.18841904192231596,
+      "p99": 0.22397295793052763
+    },
+    "discordant_games": [
+      {
+        "pair": [
+          "bot2-trade-proxy",
+          960100,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 4,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 70
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 18
+        },
+        "baseline_coin_without_followup_in_comparison": true,
+        "candidate_root_was_generated": true,
+        "classification": "baseline_plan_generation_gap",
+        "causal_status": "First policy divergence, not a certified first important error."
+      }
+    ],
+    "baseline_only": 1,
+    "candidate_only": 0,
+    "classification_counts": {
+      "baseline_plan_generation_gap": 1
+    }
+  },
+  "B3": {
+    "stage": "retain",
+    "telemetry": {
+      "baseline_outside_deterministic_coverage": 519,
+      "endpoint_searches": 3676,
+      "complete_endpoint_comparison": 110,
+      "baseline_endpoint_missing": 42,
+      "incomplete_comparison": 237,
+      "coin_followup_outside_deterministic_coverage": 18
+    },
+    "nodes": {
+      "n": 2495,
+      "mean": 207.0753507014028,
+      "max": 640,
+      "p50": 183,
+      "p95": 474,
+      "p99": 626
+    },
+    "response_elapsed_s": {
+      "n": 2495,
+      "mean": 0.01967962130895799,
+      "max": 0.12575929192826152,
+      "p50": 0.015298874932341278,
+      "p95": 0.05541279097087681,
+      "p99": 0.08287129201926291
+    },
+    "discordant_games": [
+      {
+        "pair": [
+          "astra-board-proxy",
+          960202,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 8,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 26
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 32,
+          "position": 0
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-board-proxy",
+          960218,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 8,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 27,
+          "target": 64
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 27,
+          "target": 63
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-tempo-proxy",
+          960212,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 11,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "hero_power"
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 23
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-sticky-proxy",
+          960212,
+          2
+        ],
+        "baseline_win": 0,
+        "candidate_win": 1,
+        "seq": 7,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 57
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 61,
+          "target": 28
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-sticky-proxy",
+          960214,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 9,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 8,
+          "position": 0
+        },
+        "candidate_action": {
+          "type": "hero_power"
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-sticky-proxy",
+          960223,
+          2
+        ],
+        "baseline_win": 0,
+        "candidate_win": 1,
+        "seq": 5,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "attack",
+          "attacker": 55,
+          "target": 4
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 60,
+          "target": 29
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "bot2-face-proxy",
+          960213,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 17,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "attack",
+          "attacker": 21,
+          "target": 37
+        },
+        "candidate_action": {
+          "type": "attack",
+          "attacker": 16,
+          "target": 37
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "bot2-face-proxy",
+          960223,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 8,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 17
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 24
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      }
+    ],
+    "baseline_only": 6,
+    "candidate_only": 2,
+    "classification_counts": {
+      "evaluation_or_continuation_unresolved": 6
+    }
+  },
+  "C3": {
+    "stage": "retain",
+    "telemetry": {
+      "baseline_outside_deterministic_coverage": 518,
+      "endpoint_searches": 3679,
+      "with_hypotheses": 2603,
+      "complete_endpoint_comparison": 116,
+      "incomplete_comparison": 247,
+      "baseline_endpoint_missing": 41,
+      "coin_followup_outside_deterministic_coverage": 18
+    },
+    "nodes": {
+      "n": 2497,
+      "mean": 725.4505406487785,
+      "max": 1840,
+      "p50": 657,
+      "p95": 1606,
+      "p99": 1811
+    },
+    "response_elapsed_s": {
+      "n": 2497,
+      "mean": 0.07357017256117743,
+      "max": 0.3071120410459116,
+      "p50": 0.058356542023830116,
+      "p95": 0.2000527090858668,
+      "p99": 0.2696429170900956
+    },
+    "discordant_games": [
+      {
+        "pair": [
+          "astra-board-proxy",
+          960202,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 8,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 26
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 32,
+          "position": 0
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-board-proxy",
+          960218,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 8,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 27,
+          "target": 64
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 27,
+          "target": 63
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-tempo-proxy",
+          960201,
+          2
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 12,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 60,
+          "target": 35
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 65,
+          "position": 0
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-tempo-proxy",
+          960212,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 11,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "hero_power"
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 8,
+          "position": 0
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-sticky-proxy",
+          960212,
+          2
+        ],
+        "baseline_win": 0,
+        "candidate_win": 1,
+        "seq": 7,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 57
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 61,
+          "target": 28
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-sticky-proxy",
+          960214,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 9,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 8,
+          "position": 0
+        },
+        "candidate_action": {
+          "type": "hero_power"
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-sticky-proxy",
+          960223,
+          2
+        ],
+        "baseline_win": 0,
+        "candidate_win": 1,
+        "seq": 5,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "attack",
+          "attacker": 55,
+          "target": 4
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 60,
+          "target": 29
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "bot2-face-proxy",
+          960213,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 17,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "attack",
+          "attacker": 21,
+          "target": 37
+        },
+        "candidate_action": {
+          "type": "attack",
+          "attacker": 16,
+          "target": 37
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "bot2-face-proxy",
+          960223,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 8,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 17
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 24
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": true,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      }
+    ],
+    "baseline_only": 7,
+    "candidate_only": 2,
+    "classification_counts": {
+      "evaluation_or_continuation_unresolved": 7
+    }
+  },
+  "E1": {
+    "stage": "retain",
+    "telemetry": {},
+    "nodes": null,
+    "response_elapsed_s": null,
+    "discordant_games": [
+      {
+        "pair": [
+          "astra-board-proxy",
+          960230,
+          1
+        ],
+        "baseline_win": 0,
+        "candidate_win": 1,
+        "seq": 18,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "play_card",
+          "card": 27,
+          "target": 68
+        },
+        "candidate_action": {
+          "type": "play_card",
+          "card": 32,
+          "target": 77,
+          "position": 0
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": false,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-tempo-proxy",
+          960212,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 9,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "attack",
+          "attacker": 71,
+          "target": 37
+        },
+        "candidate_action": {
+          "type": "attack",
+          "attacker": 71,
+          "target": 65
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": false,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      },
+      {
+        "pair": [
+          "astra-sticky-proxy",
+          960205,
+          1
+        ],
+        "baseline_win": 1,
+        "candidate_win": 0,
+        "seq": 16,
+        "same_public_state": true,
+        "baseline_action": {
+          "type": "attack",
+          "attacker": 4,
+          "target": 66
+        },
+        "candidate_action": {
+          "type": "attack",
+          "attacker": 4,
+          "target": 72
+        },
+        "baseline_coin_without_followup_in_comparison": false,
+        "candidate_root_was_generated": false,
+        "classification": "evaluation_or_continuation_unresolved",
+        "causal_status": "First policy divergence, not a certified first important error."
+      }
+    ],
+    "baseline_only": 2,
+    "candidate_only": 1,
+    "classification_counts": {
+      "evaluation_or_continuation_unresolved": 2
+    }
+  }
+}

@@ -7,11 +7,14 @@
     "source_sha256": "47ea1ba9392507e7eaa28cd4384056cb2acee11c57d7253db95099f3ef924735",
     "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
     "runs": [
+      "experiments/secret-hunter-response-y1-final-core",
+      "experiments/secret-hunter-response-y1-final-guard",
       "experiments/secret-hunter-response-y1-pilot",
       "experiments/secret-hunter-response-y1-response-data",
       "experiments/secret-hunter-response-y1-retain",
       "experiments/secret-hunter-response-y1-screen"
-    ]
+    ],
+    "config_sha256": "3a64d0e2869308351119b1659ed763abbff0ba1ec4f4159683a48f19059fcb50"
   },
   "K1": {
     "parent_ids": [
@@ -21,8 +24,11 @@
     "source_sha256": "ccda3f42b94eb890a88494eba0c6f2a9c1fd82a412b5ef5b6938d3ebcf4828e7",
     "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
     "runs": [
+      "experiments/secret-hunter-response-k1-final-core",
+      "experiments/secret-hunter-response-k1-final-guard",
       "experiments/secret-hunter-response-k1-pilot"
-    ]
+    ],
+    "config_sha256": "896cb84d74b868f26267260bb797081e9d29e09de3cb3ba4b72167006e6af9e9"
   },
   "B1": {
     "parent_ids": [
@@ -35,7 +41,8 @@
     "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
     "runs": [
       "experiments/secret-hunter-response-b1-pilot"
-    ]
+    ],
+    "config_sha256": "371068fe6d588eed1de462b555592fe7c41d26a3e53252469896947eddad5587"
   },
   "C1": {
     "parent_ids": [
@@ -48,7 +55,8 @@
     "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
     "runs": [
       "experiments/secret-hunter-response-c1-pilot"
-    ]
+    ],
+    "config_sha256": "1e874a3d3579c2e35bc4353e4988af8d9e8e2a07201b18fb9070fe0de26bc46b"
   },
   "B2": {
     "parent_ids": [
@@ -63,7 +71,8 @@
       "experiments/secret-hunter-response-b2-pilot",
       "experiments/secret-hunter-response-b2-screen"
     ],
-    "limitation": "Mechanism/candidate coverage improved; no retained development win-rate gain."
+    "limitation": "Mechanism/candidate coverage improved; no retained development win-rate gain.",
+    "config_sha256": "6c944396bd7f1ee40c5dad6cd36336838bf482d7442d065185626a8a9eb58437"
   },
   "C2": {
     "parent_ids": [
@@ -78,7 +87,8 @@
       "experiments/secret-hunter-response-c2-pilot",
       "experiments/secret-hunter-response-c2-screen"
     ],
-    "limitation": "Mechanism/candidate coverage improved; no retained development win-rate gain."
+    "limitation": "Mechanism/candidate coverage improved; no retained development win-rate gain.",
+    "config_sha256": "2a939c1d574d8f973fd97b77f8a8fed7b56af759064194b8bed69ad2a45171d7"
   },
   "B3": {
     "parent_ids": [
@@ -90,11 +100,13 @@
     "source_sha256": "c9863a6c054798bda3e4303282dc94eb283775864a0dc2752578916eb5d3a22b",
     "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
     "runs": [
+      "experiments/secret-hunter-response-b3-final-core",
       "experiments/secret-hunter-response-b3-pilot",
       "experiments/secret-hunter-response-b3-retain",
       "experiments/secret-hunter-response-b3-screen"
     ],
-    "limitation": "Mechanism/candidate coverage improved; no retained development win-rate gain."
+    "limitation": "Mechanism/candidate coverage improved; no retained development win-rate gain.",
+    "config_sha256": "1882568806dd6c6993474c83337138ac62c9bc22adb1b8f9c169d88399467a10"
   },
   "C3": {
     "parent_ids": [
@@ -106,25 +118,30 @@
     "source_sha256": "610c3a8eeb73b609888b3b9b4b37fa74e21aa0c915939a3f2712ddee596b216b",
     "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
     "runs": [
+      "experiments/secret-hunter-response-c3-final-core",
       "experiments/secret-hunter-response-c3-pilot",
       "experiments/secret-hunter-response-c3-retain",
       "experiments/secret-hunter-response-c3-screen"
     ],
-    "limitation": "Mechanism/candidate coverage improved; no retained development win-rate gain."
+    "limitation": "Mechanism/candidate coverage improved; no retained development win-rate gain.",
+    "config_sha256": "7ec9156b58cb815114c40118a5fc3404f7b666d98b17a4133c2e443ee7307549"
   },
   "E1": {
     "parent_ids": [
       "Y1"
     ],
-    "status": "provisional",
+    "status": "stepping_stone",
     "hypothesis": "Only correct the missing opposing Imp Master end-turn value in Y1 visible response endpoints. Preserve Y1 candidate generator and scoring instead of broad recovery search.",
     "evidence": "B3 retention 317/384 vs Y1 321/384; expansion not reliably helpful. Exact end-turn mechanics passed differential checks and remain a separately testable parent.",
     "source_sha256": "9ea5a43260c928000531c2422a55353f7e876624b3013b89296703da976e7b8a",
     "deck_sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
     "runs": [
+      "experiments/secret-hunter-response-e1-final-core",
+      "experiments/secret-hunter-response-e1-final-guard",
       "experiments/secret-hunter-response-e1-pilot",
       "experiments/secret-hunter-response-e1-retain",
       "experiments/secret-hunter-response-e1-screen"
-    ]
+    ],
+    "config_sha256": "49dab4d716d058b930ecc8fa7a8250629c3ae4ed27626ae58fdfbbe61e5ef659"
   }
 }

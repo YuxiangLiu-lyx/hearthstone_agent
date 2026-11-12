@@ -1,0 +1,5895 @@
+{
+  "cases": 74,
+  "all_latency_s": {
+    "0.5": 0.14564233308192343,
+    "0.95": 0.36269500001799315,
+    "0.99": 1.8322277079569176,
+    "1": 1.8322277079569176
+  },
+  "cold_latency_s": {
+    "0.5": 0.14564233308192343,
+    "0.95": 0.2695509580662474,
+    "0.99": 0.36269500001799315,
+    "1": 0.36269500001799315
+  },
+  "over_2s": 0,
+  "illegal": 0,
+  "details": [
+    {
+      "tag": "cold_crowded",
+      "elapsed_s": 0.36269500001799315,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 79,
+        "target": 53
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 1997,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 13,
+          "enemy_ehp": 12,
+          "visible_incoming_before_taunts": 8,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 1359,
+          "bounded_out": true,
+          "supported": true,
+          "elapsed_s": 0.15055483288597316
+        },
+        "turn_search": {
+          "nodes": 638,
+          "action": {
+            "type": "attack",
+            "attacker": 79,
+            "target": 53
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 3,
+          "excluded": 1,
+          "deduplicated": 51,
+          "beam_pruned": 264,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 53
+            },
+            {
+              "type": "attack",
+              "attacker": 4,
+              "target": 64
+            }
+          ],
+          "value": -8.891599999999999,
+          "elapsed_s": 0.1323591669788584
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.28857937501743436,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_crowded",
+      "elapsed_s": 0.15729895897675306,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 89,
+        "target": 12
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 404,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 2,
+          "enemy_ehp": 14,
+          "visible_incoming_before_taunts": 12,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 49,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.0059093330055475235
+        },
+        "turn_search": {
+          "nodes": 355,
+          "action": {
+            "type": "attack",
+            "attacker": 89,
+            "target": 12
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 4,
+          "excluded": 0,
+          "deduplicated": 19,
+          "beam_pruned": 18,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 89,
+              "target": 12
+            },
+            {
+              "type": "attack",
+              "attacker": 65,
+              "target": 11
+            },
+            {
+              "type": "play_card",
+              "card": 41,
+              "position": 2
+            }
+          ],
+          "value": -20.721980000000002,
+          "elapsed_s": 0.0844966669101268
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.09182650002185255,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_crowded",
+      "elapsed_s": 0.19281929195858538,
+      "valid": true,
+      "action": {
+        "type": "play_card",
+        "card": 10
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 1344,
+        "search_used": false,
+        "reason": "baseline_rank",
+        "race": {
+          "own_ehp": 21,
+          "enemy_ehp": 19,
+          "visible_incoming_before_taunts": 7,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 1344,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.12479504104703665
+        },
+        "turn_search": {
+          "nodes": 0,
+          "action": null,
+          "supported": true,
+          "bounded_out": false,
+          "depth": 0,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reason": "top_action_outside_effect_coverage"
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.1261372920125723,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_crowded",
+      "elapsed_s": 0.2784945419989526,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 79,
+        "target": 47
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 1894,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 21,
+          "enemy_ehp": 19,
+          "visible_incoming_before_taunts": 7,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 1344,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.1278035839786753
+        },
+        "turn_search": {
+          "nodes": 550,
+          "action": {
+            "type": "attack",
+            "attacker": 79,
+            "target": 47
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 4,
+          "excluded": 0,
+          "deduplicated": 116,
+          "beam_pruned": 180,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 200,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 47
+            },
+            {
+              "type": "attack",
+              "attacker": 13,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 80,
+              "target": 61
+            },
+            {
+              "type": "attack",
+              "attacker": 81,
+              "target": 61
+            }
+          ],
+          "value": 27.2826,
+          "elapsed_s": 0.0825731250224635
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.2123882919549942,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_crowded",
+      "elapsed_s": 0.1903514590812847,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 32,
+        "target": 65
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 622,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 27,
+          "enemy_ehp": 22,
+          "visible_incoming_before_taunts": 6,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 622,
+          "action": {
+            "type": "attack",
+            "attacker": 32,
+            "target": 65
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 4,
+          "excluded": 0,
+          "deduplicated": 46,
+          "beam_pruned": 248,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 272,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 32,
+              "target": 65
+            },
+            {
+              "type": "play_card",
+              "card": 24
+            },
+            {
+              "type": "attack",
+              "attacker": 4,
+              "target": 64
+            }
+          ],
+          "value": -4.188150000000003,
+          "elapsed_s": 0.11705908400472254
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.11890808399766684,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_crowded",
+      "elapsed_s": 0.15631366695743054,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 71,
+        "target": 7
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 554,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 22,
+          "enemy_ehp": 25,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 3,
+          "next_turn_hand_damage_if_beast_survives": 5,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 554,
+          "action": {
+            "type": "attack",
+            "attacker": 71,
+            "target": 7
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 5,
+          "excluded": 0,
+          "deduplicated": 82,
+          "beam_pruned": 189,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 204,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 71,
+              "target": 7
+            },
+            {
+              "type": "attack",
+              "attacker": 49,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 54,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 72,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 73,
+              "target": 4
+            }
+          ],
+          "value": -3.0909250000000004,
+          "elapsed_s": 0.08757716591935605
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.08913245901931077,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_crowded",
+      "elapsed_s": 0.14564233308192343,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 82,
+        "target": 33
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 295,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 7,
+          "enemy_ehp": 14,
+          "visible_incoming_before_taunts": 9,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 295,
+          "action": {
+            "type": "attack",
+            "attacker": 82,
+            "target": 33
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 2,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 82,
+              "target": 33
+            }
+          ],
+          "value": -10.458310000000003,
+          "elapsed_s": 0.0802503329468891
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.08162516704760492,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_crowded",
+      "elapsed_s": 0.2537620000075549,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 37,
+        "target": 34
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 1900,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 11,
+          "enemy_ehp": 22,
+          "visible_incoming_before_taunts": 9,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 1402,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.12470616691280156
+        },
+        "turn_search": {
+          "nodes": 498,
+          "action": {
+            "type": "attack",
+            "attacker": 37,
+            "target": 34
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 5,
+          "excluded": 1,
+          "deduplicated": 98,
+          "beam_pruned": 209,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 148,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 37,
+              "target": 34
+            },
+            {
+              "type": "attack",
+              "attacker": 74,
+              "target": 9
+            },
+            {
+              "type": "attack",
+              "attacker": 75,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 76,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 77,
+              "target": 4
+            }
+          ],
+          "value": -21.67735,
+          "elapsed_s": 0.0621451250044629
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.18859833397436887,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_crowded",
+      "elapsed_s": 0.19527920801192522,
+      "valid": true,
+      "action": {
+        "type": "hero_power"
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 638,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 8,
+          "enemy_ehp": 22,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 638,
+          "action": {
+            "type": "hero_power"
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 4,
+          "excluded": 0,
+          "deduplicated": 101,
+          "beam_pruned": 177,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "hero_power"
+            },
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 80,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 81,
+              "target": 4
+            }
+          ],
+          "value": -19.10425,
+          "elapsed_s": 0.12380029109772295
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.12562741595320404,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_crowded",
+      "elapsed_s": 0.16438612493220717,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 79,
+        "target": 4
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 512,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 8,
+          "enemy_ehp": 20,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 512,
+          "action": {
+            "type": "attack",
+            "attacker": 79,
+            "target": 4
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 5,
+          "excluded": 0,
+          "deduplicated": 90,
+          "beam_pruned": 158,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 224,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 80,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 81,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 82,
+              "target": 4
+            }
+          ],
+          "value": -17.988250000000004,
+          "elapsed_s": 0.0935397909488529
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.09519141702912748,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1480566249229014,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 80,
+        "target": 4
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 370,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 8,
+          "enemy_ehp": 19,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 370,
+          "action": {
+            "type": "attack",
+            "attacker": 80,
+            "target": 4
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 4,
+          "excluded": 0,
+          "deduplicated": 62,
+          "beam_pruned": 54,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 224,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 80,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 81,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 82,
+              "target": 4
+            }
+          ],
+          "value": -17.988250000000004,
+          "elapsed_s": 0.07972558308392763
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.08153666707221419,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1442580409348011,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 81,
+        "target": 4
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 312,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 8,
+          "enemy_ehp": 18,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 312,
+          "action": {
+            "type": "attack",
+            "attacker": 81,
+            "target": 4
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 3,
+          "excluded": 0,
+          "deduplicated": 29,
+          "beam_pruned": 7,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 256,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 81,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 82,
+              "target": 4
+            }
+          ],
+          "value": -17.988250000000004,
+          "elapsed_s": 0.07598395796958357
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.0775695419870317,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.14788629196118563,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 82,
+        "target": 4
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 293,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 8,
+          "enemy_ehp": 17,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 293,
+          "action": {
+            "type": "attack",
+            "attacker": 82,
+            "target": 4
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 2,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 82,
+              "target": 4
+            }
+          ],
+          "value": -17.988250000000004,
+          "elapsed_s": 0.07777691702358425
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.07950304099358618,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.08874649996869266,
+      "valid": true,
+      "action": {
+        "type": "end_turn"
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 48,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 8,
+          "enemy_ehp": 16,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 48,
+          "action": {
+            "type": "end_turn"
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 1,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 48,
+            "candidates": 1,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "end_turn"
+            }
+          ],
+          "value": -17.988250000000004,
+          "elapsed_s": 0.014854041975922883
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.0164599169511348,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.0940816670190543,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 66,
+        "target": 19
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 261,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 9,
+          "enemy_ehp": 15,
+          "visible_incoming_before_taunts": 7,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 261,
+          "action": {
+            "type": "attack",
+            "attacker": 66,
+            "target": 19
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 7,
+          "excluded": 0,
+          "deduplicated": 102,
+          "beam_pruned": 97,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 3,
+            "candidates": 0,
+            "comparable": false,
+            "scope": "visible attacks only; hidden cards excluded"
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 66,
+              "target": 19
+            },
+            {
+              "type": "attack",
+              "attacker": 81,
+              "target": 6
+            },
+            {
+              "type": "attack",
+              "attacker": 82,
+              "target": 6
+            },
+            {
+              "type": "hero_power"
+            },
+            {
+              "type": "attack",
+              "attacker": 83,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 84,
+              "target": 4
+            }
+          ],
+          "value": 14.9393,
+          "elapsed_s": 0.026267874985933304
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.02798666595481336,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.18841379194054753,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 4,
+        "target": 63
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 638,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 20,
+          "enemy_ehp": 27,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 638,
+          "action": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 63
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 3,
+          "excluded": 0,
+          "deduplicated": 44,
+          "beam_pruned": 206,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 4,
+              "target": 63
+            },
+            {
+              "type": "play_card",
+              "card": 6,
+              "position": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 76,
+              "target": 37
+            }
+          ],
+          "value": -23.843050000000005,
+          "elapsed_s": 0.11742574989330024
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.11930154100991786,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.19821108400356025,
+      "valid": true,
+      "action": {
+        "type": "play_card",
+        "card": 11,
+        "position": 1
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 638,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 27,
+          "enemy_ehp": 22,
+          "visible_incoming_before_taunts": 6,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 638,
+          "action": {
+            "type": "play_card",
+            "card": 11,
+            "position": 1
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 3,
+          "excluded": 0,
+          "deduplicated": 47,
+          "beam_pruned": 188,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "play_card",
+              "card": 11,
+              "position": 1
+            },
+            {
+              "type": "attack",
+              "attacker": 32,
+              "target": 37
+            },
+            {
+              "type": "play_card",
+              "card": 24
+            }
+          ],
+          "value": -12.743875000000005,
+          "elapsed_s": 0.13108104094862938
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.13302458391990513,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1459818750154227,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 16,
+        "target": 37
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 358,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 22,
+          "enemy_ehp": 25,
+          "visible_incoming_before_taunts": 7,
+          "next_turn_hand_damage_no_surviving_beast": 3,
+          "next_turn_hand_damage_if_beast_survives": 5,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 358,
+          "action": {
+            "type": "attack",
+            "attacker": 16,
+            "target": 37
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 3,
+          "excluded": 0,
+          "deduplicated": 27,
+          "beam_pruned": 23,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 16,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 11,
+              "target": 37
+            }
+          ],
+          "value": -16.454375,
+          "elapsed_s": 0.08042070805095136
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.08193237497471273,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.14467141695786268,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 11,
+        "target": 37
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 294,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 22,
+          "enemy_ehp": 22,
+          "visible_incoming_before_taunts": 7,
+          "next_turn_hand_damage_no_surviving_beast": 3,
+          "next_turn_hand_damage_if_beast_survives": 5,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 294,
+          "action": {
+            "type": "attack",
+            "attacker": 11,
+            "target": 37
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 2,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 11,
+              "target": 37
+            }
+          ],
+          "value": -16.454375,
+          "elapsed_s": 0.07878441689535975
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.08020595798734576,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.08092095900792629,
+      "valid": true,
+      "action": {
+        "type": "end_turn"
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 48,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 22,
+          "enemy_ehp": 20,
+          "visible_incoming_before_taunts": 7,
+          "next_turn_hand_damage_no_surviving_beast": 3,
+          "next_turn_hand_damage_if_beast_survives": 5,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 48,
+          "action": {
+            "type": "end_turn"
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 1,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 48,
+            "candidates": 1,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "end_turn"
+            }
+          ],
+          "value": -16.454375,
+          "elapsed_s": 0.013606416061520576
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.015013832948170602,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.08135633310303092,
+      "valid": true,
+      "action": {
+        "type": "end_turn"
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 48,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 7,
+          "enemy_ehp": 14,
+          "visible_incoming_before_taunts": 7,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 48,
+          "action": {
+            "type": "end_turn"
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 1,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 48,
+            "candidates": 1,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "end_turn"
+            }
+          ],
+          "value": -11.572375000000003,
+          "elapsed_s": 0.013479207991622388
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.014766041073016822,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1781423749634996,
+      "valid": true,
+      "action": {
+        "type": "play_card",
+        "card": 63
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 707,
+        "search_used": false,
+        "reason": "baseline_rank",
+        "race": {
+          "own_ehp": 2,
+          "enemy_ehp": 14,
+          "visible_incoming_before_taunts": 12,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 356,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.039725666982121766
+        },
+        "turn_search": {
+          "nodes": 0,
+          "action": null,
+          "supported": true,
+          "bounded_out": false,
+          "depth": 0,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reason": "top_action_outside_effect_coverage"
+        },
+        "chance": {
+          "active": true,
+          "nodes": 351,
+          "excluded": 1,
+          "exact_distributions": 6,
+          "sampled_distributions": 0,
+          "comparisons": [
+            {
+              "action": {
+                "type": "play_card",
+                "card": 63
+              },
+              "value": -138.9388,
+              "mean": -138.9388,
+              "sd": 86.35357717477604,
+              "outcomes": 3,
+              "exact_root": true,
+              "endpoint_lethal_mass": 0.0
+            },
+            {
+              "action": {
+                "type": "attack",
+                "attacker": 65,
+                "target": 11
+              },
+              "value": -200.0,
+              "mean": -200.0,
+              "sd": 0.0,
+              "outcomes": 1,
+              "exact_root": true,
+              "endpoint_lethal_mass": 0.0
+            },
+            {
+              "action": {
+                "type": "play_card",
+                "card": 60,
+                "target": 12
+              },
+              "value": -200.0,
+              "mean": -200.0,
+              "sd": 0.0,
+              "outcomes": 1,
+              "exact_root": true,
+              "endpoint_lethal_mass": 0.0
+            },
+            {
+              "action": {
+                "type": "attack",
+                "attacker": 65,
+                "target": 7
+              },
+              "value": -200.0,
+              "mean": -200.0,
+              "sd": 0.0,
+              "outcomes": 1,
+              "exact_root": true,
+              "endpoint_lethal_mass": 0.0
+            },
+            {
+              "action": {
+                "type": "attack",
+                "attacker": 89,
+                "target": 7
+              },
+              "value": -200.0,
+              "mean": -200.0,
+              "sd": 0.0,
+              "outcomes": 1,
+              "exact_root": true,
+              "endpoint_lethal_mass": 0.0
+            },
+            {
+              "action": {
+                "type": "attack",
+                "attacker": 65,
+                "target": 12
+              },
+              "value": -200.0,
+              "mean": -200.0,
+              "sd": 0.0,
+              "outcomes": 1,
+              "exact_root": true,
+              "endpoint_lethal_mass": 0.0
+            }
+          ],
+          "guaranteed": false,
+          "reply_bounded": 8,
+          "complete": true,
+          "elapsed_s": 0.07158866699319333
+        },
+        "elapsed_s": 0.1126974580110982,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.16051895800046623,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 76,
+        "target": 37
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 496,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 18,
+          "enemy_ehp": 27,
+          "visible_incoming_before_taunts": 3,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 496,
+          "action": {
+            "type": "attack",
+            "attacker": 76,
+            "target": 37
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 5,
+          "excluded": 0,
+          "deduplicated": 81,
+          "beam_pruned": 109,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 266,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 76,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 77,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 78,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 37
+            }
+          ],
+          "value": -20.495050000000003,
+          "elapsed_s": 0.0940757499774918
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.09569787501823157,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1460653330432251,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 77,
+        "target": 37
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 364,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 18,
+          "enemy_ehp": 26,
+          "visible_incoming_before_taunts": 3,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 364,
+          "action": {
+            "type": "attack",
+            "attacker": 77,
+            "target": 37
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 4,
+          "excluded": 0,
+          "deduplicated": 55,
+          "beam_pruned": 35,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 244,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 77,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 78,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 37
+            }
+          ],
+          "value": -20.495050000000003,
+          "elapsed_s": 0.0780248329974711
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.07986912492197007,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.13436829193960875,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 78,
+        "target": 37
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 282,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 18,
+          "enemy_ehp": 25,
+          "visible_incoming_before_taunts": 3,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 282,
+          "action": {
+            "type": "attack",
+            "attacker": 78,
+            "target": 37
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 3,
+          "excluded": 0,
+          "deduplicated": 18,
+          "beam_pruned": 2,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 244,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 78,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 37
+            }
+          ],
+          "value": -20.495050000000003,
+          "elapsed_s": 0.06803375005256385
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.06975274998694658,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.12580045801587403,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 79,
+        "target": 37
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 222,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 18,
+          "enemy_ehp": 24,
+          "visible_incoming_before_taunts": 3,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 222,
+          "action": {
+            "type": "attack",
+            "attacker": 79,
+            "target": 37
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 2,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 218,
+            "candidates": 5,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 37
+            }
+          ],
+          "value": -20.495050000000003,
+          "elapsed_s": 0.05728879093658179
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.05875750002451241,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.09044379193801433,
+      "valid": true,
+      "action": {
+        "type": "end_turn"
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 48,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 18,
+          "enemy_ehp": 23,
+          "visible_incoming_before_taunts": 3,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 48,
+          "action": {
+            "type": "end_turn"
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 1,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 48,
+            "candidates": 1,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "end_turn"
+            }
+          ],
+          "value": -20.495050000000003,
+          "elapsed_s": 0.013907292042858899
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.015465458971448243,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.3454913329333067,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 4,
+        "target": 64
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 2178,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 13,
+          "enemy_ehp": 12,
+          "visible_incoming_before_taunts": 6,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 1540,
+          "bounded_out": true,
+          "supported": true,
+          "elapsed_s": 0.1503802090883255
+        },
+        "turn_search": {
+          "nodes": 638,
+          "action": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 64
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 3,
+          "excluded": 1,
+          "deduplicated": 48,
+          "beam_pruned": 196,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 4,
+              "target": 64
+            },
+            {
+              "type": "hero_power"
+            },
+            {
+              "type": "play_card",
+              "card": 8,
+              "position": 3
+            }
+          ],
+          "value": -4.8429,
+          "elapsed_s": 0.12846179108601063
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.28092870803084224,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.08977204107213765,
+      "valid": true,
+      "action": {
+        "type": "play_card",
+        "card": 10
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 267,
+        "search_used": false,
+        "reason": "baseline_rank",
+        "race": {
+          "own_ehp": 11,
+          "enemy_ehp": 10,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 267,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.024320874945260584
+        },
+        "turn_search": {
+          "nodes": 0,
+          "action": null,
+          "supported": true,
+          "bounded_out": false,
+          "depth": 0,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reason": "top_action_outside_effect_coverage"
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.02560037502553314,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.2092892499640584,
+      "valid": true,
+      "action": {
+        "type": "play_card",
+        "card": 18
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 983,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 11,
+          "enemy_ehp": 10,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 448,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.04153262497857213
+        },
+        "turn_search": {
+          "nodes": 535,
+          "action": {
+            "type": "play_card",
+            "card": 18
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 5,
+          "excluded": 0,
+          "deduplicated": 108,
+          "beam_pruned": 99,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "play_card",
+              "card": 18
+            },
+            {
+              "type": "attack",
+              "attacker": 84,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 85,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 86,
+              "target": 37
+            }
+          ],
+          "value": 7.414699999999999,
+          "elapsed_s": 0.10305416595656425
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.1461562910117209,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1363085419870913,
+      "valid": true,
+      "action": {
+        "type": "play_card",
+        "card": 24
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 448,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 27,
+          "enemy_ehp": 22,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 448,
+          "action": {
+            "type": "play_card",
+            "card": 24
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 6,
+          "excluded": 0,
+          "deduplicated": 65,
+          "beam_pruned": 176,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 157,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "play_card",
+              "card": 24
+            },
+            {
+              "type": "attack",
+              "attacker": 4,
+              "target": 64
+            },
+            {
+              "type": "attack",
+              "attacker": 72,
+              "target": 52
+            },
+            {
+              "type": "attack",
+              "attacker": 73,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 74,
+              "target": 37
+            }
+          ],
+          "value": 5.423000000000002,
+          "elapsed_s": 0.07051829097326845
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.07210020790807903,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.12877566693350673,
+      "valid": true,
+      "action": {
+        "type": "hero_power"
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 621,
+        "search_used": false,
+        "reason": "guaranteed_lethal",
+        "race": {
+          "own_ehp": 8,
+          "enemy_ehp": 8,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": true,
+          "first_action": {
+            "type": "hero_power"
+          },
+          "sequence": [
+            {
+              "type": "hero_power"
+            },
+            {
+              "type": "attack",
+              "attacker": 42,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 78,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 77,
+              "target": 4
+            }
+          ],
+          "mana_required": 2,
+          "damage": 8,
+          "depends_on_random": false,
+          "nodes": 621,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.06261345802340657
+        },
+        "elapsed_s": 0.06371695804409683,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.08939774997998029,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 42,
+        "target": 4
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 242,
+        "search_used": false,
+        "reason": "guaranteed_lethal",
+        "race": {
+          "own_ehp": 8,
+          "enemy_ehp": 6,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": true,
+          "first_action": {
+            "type": "attack",
+            "attacker": 42,
+            "target": 4
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 42,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 78,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 77,
+              "target": 4
+            }
+          ],
+          "mana_required": 0,
+          "damage": 6,
+          "depends_on_random": false,
+          "nodes": 242,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.024688375066034496
+        },
+        "elapsed_s": 0.02584725001361221,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.06596191704738885,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 78,
+        "target": 4
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 14,
+        "search_used": false,
+        "reason": "guaranteed_lethal",
+        "race": {
+          "own_ehp": 8,
+          "enemy_ehp": 4,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": true,
+          "first_action": {
+            "type": "attack",
+            "attacker": 78,
+            "target": 4
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 78,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 77,
+              "target": 4
+            }
+          ],
+          "mana_required": 0,
+          "damage": 4,
+          "depends_on_random": false,
+          "nodes": 14,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.0017559169791638851
+        },
+        "elapsed_s": 0.0027420000405982137,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.06402237492147833,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 77,
+        "target": 4
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 1,
+        "search_used": false,
+        "reason": "guaranteed_lethal",
+        "race": {
+          "own_ehp": 8,
+          "enemy_ehp": 2,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": true,
+          "first_action": {
+            "type": "attack",
+            "attacker": 77,
+            "target": 4
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 77,
+              "target": 4
+            }
+          ],
+          "mana_required": 0,
+          "damage": 2,
+          "depends_on_random": false,
+          "nodes": 1,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.00022891606204211712
+        },
+        "elapsed_s": 0.0012130840914323926,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.06612954195588827,
+      "valid": true,
+      "action": {
+        "type": "play_card",
+        "card": 43
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 0,
+        "search_used": false,
+        "reason": "baseline_rank",
+        "race": {
+          "own_ehp": 9,
+          "enemy_ehp": 22,
+          "visible_incoming_before_taunts": 7,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 0,
+          "action": null,
+          "supported": true,
+          "bounded_out": false,
+          "depth": 0,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reason": "top_action_outside_effect_coverage"
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.0012030419893562794,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1506006249692291,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 74,
+        "target": 28
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 878,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 9,
+          "enemy_ehp": 22,
+          "visible_incoming_before_taunts": 7,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 552,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.04547208303119987
+        },
+        "turn_search": {
+          "nodes": 326,
+          "action": {
+            "type": "attack",
+            "attacker": 74,
+            "target": 28
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 5,
+          "excluded": 0,
+          "deduplicated": 79,
+          "beam_pruned": 95,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 112,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 74,
+              "target": 28
+            },
+            {
+              "type": "attack",
+              "attacker": 75,
+              "target": 28
+            },
+            {
+              "type": "attack",
+              "attacker": 76,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 77,
+              "target": 4
+            }
+          ],
+          "value": -20.433475,
+          "elapsed_s": 0.04072050005197525
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.08767970802728087,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.06523116596508771,
+      "valid": true,
+      "action": {
+        "type": "play_card",
+        "card": 54,
+        "position": 0
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 0,
+        "search_used": false,
+        "reason": "baseline_rank",
+        "race": {
+          "own_ehp": 7,
+          "enemy_ehp": 14,
+          "visible_incoming_before_taunts": 9,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 0,
+          "action": null,
+          "supported": true,
+          "bounded_out": false,
+          "depth": 0,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reason": "top_action_outside_effect_coverage"
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.0011404999531805515,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.076816292013973,
+      "valid": true,
+      "action": {
+        "type": "end_turn"
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 48,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 2,
+          "enemy_ehp": 14,
+          "visible_incoming_before_taunts": 6,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 48,
+          "action": {
+            "type": "end_turn"
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 1,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 48,
+            "candidates": 1,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "end_turn"
+            }
+          ],
+          "value": -20.721980000000002,
+          "elapsed_s": 0.012521083001047373
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.01369749999139458,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.12268966704141349,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 41,
+        "target": 6
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 292,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 25,
+          "enemy_ehp": 13,
+          "visible_incoming_before_taunts": 12,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 292,
+          "action": {
+            "type": "attack",
+            "attacker": 41,
+            "target": 6
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 4,
+          "excluded": 0,
+          "deduplicated": 18,
+          "beam_pruned": 12,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 238,
+            "candidates": 5,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 41,
+              "target": 6
+            },
+            {
+              "type": "attack",
+              "attacker": 72,
+              "target": 4
+            },
+            {
+              "type": "hero_power"
+            }
+          ],
+          "value": 0.3274250000000001,
+          "elapsed_s": 0.05788095900788903
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.059093541000038385,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1646877909079194,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 84,
+        "target": 37
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 693,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 11,
+          "enemy_ehp": 10,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 267,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.02445683302357793
+        },
+        "turn_search": {
+          "nodes": 426,
+          "action": {
+            "type": "attack",
+            "attacker": 84,
+            "target": 37
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 4,
+          "excluded": 0,
+          "deduplicated": 65,
+          "beam_pruned": 49,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 282,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 84,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 85,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 86,
+              "target": 37
+            }
+          ],
+          "value": 7.414699999999999,
+          "elapsed_s": 0.07509554200805724
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.10096687497571111,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1350897919619456,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 85,
+        "target": 37
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 383,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 11,
+          "enemy_ehp": 9,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 52,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.005099541042000055
+        },
+        "turn_search": {
+          "nodes": 331,
+          "action": {
+            "type": "attack",
+            "attacker": 85,
+            "target": 37
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 3,
+          "excluded": 0,
+          "deduplicated": 27,
+          "beam_pruned": 5,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 279,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 85,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 86,
+              "target": 37
+            }
+          ],
+          "value": 7.414699999999999,
+          "elapsed_s": 0.06340220896527171
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.07003066607285291,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.12440575007349253,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 86,
+        "target": 37
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 286,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 11,
+          "enemy_ehp": 8,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 5,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.0007420829497277737
+        },
+        "turn_search": {
+          "nodes": 281,
+          "action": {
+            "type": "attack",
+            "attacker": 86,
+            "target": 37
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 2,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 276,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 86,
+              "target": 37
+            }
+          ],
+          "value": 7.414699999999999,
+          "elapsed_s": 0.05556833290029317
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.05765637499280274,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.07775270799174905,
+      "valid": true,
+      "action": {
+        "type": "end_turn"
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 48,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 11,
+          "enemy_ehp": 7,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.00012462504673749208
+        },
+        "turn_search": {
+          "nodes": 48,
+          "action": {
+            "type": "end_turn"
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 1,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 48,
+            "candidates": 1,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "end_turn"
+            }
+          ],
+          "value": 7.414699999999999,
+          "elapsed_s": 0.011729541001841426
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.012967708054929972,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1303312920499593,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 4,
+        "target": 64
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 377,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 27,
+          "enemy_ehp": 22,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 377,
+          "action": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 64
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 5,
+          "excluded": 0,
+          "deduplicated": 52,
+          "beam_pruned": 116,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 169,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 4,
+              "target": 64
+            },
+            {
+              "type": "attack",
+              "attacker": 72,
+              "target": 52
+            },
+            {
+              "type": "attack",
+              "attacker": 73,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 74,
+              "target": 37
+            }
+          ],
+          "value": 5.423000000000002,
+          "elapsed_s": 0.06485312501899898
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.06624541594646871,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1589270830154419,
+      "valid": true,
+      "action": {
+        "type": "play_card",
+        "card": 19
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 433,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 3,
+          "enemy_ehp": 9,
+          "visible_incoming_before_taunts": 12,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 78,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.008002666989341378
+        },
+        "turn_search": {
+          "nodes": 355,
+          "action": {
+            "type": "play_card",
+            "card": 19
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 4,
+          "excluded": 13,
+          "deduplicated": 26,
+          "beam_pruned": 3,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": true
+          },
+          "sequence": [
+            {
+              "type": "play_card",
+              "card": 19
+            },
+            {
+              "type": "attack",
+              "attacker": 34,
+              "target": 61
+            },
+            {
+              "type": "hero_power"
+            }
+          ],
+          "value": -950004.029615,
+          "elapsed_s": 0.0861398751148954
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.09560425009112805,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.15161849989090115,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 81,
+        "target": 55
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 421,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 27,
+          "enemy_ehp": 9,
+          "visible_incoming_before_taunts": 10,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 421,
+          "action": {
+            "type": "attack",
+            "attacker": 81,
+            "target": 55
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 4,
+          "excluded": 0,
+          "deduplicated": 52,
+          "beam_pruned": 72,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 267,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 81,
+              "target": 55
+            },
+            {
+              "type": "attack",
+              "attacker": 82,
+              "target": 55
+            },
+            {
+              "type": "attack",
+              "attacker": 9,
+              "target": 37
+            }
+          ],
+          "value": 2.4168149999999997,
+          "elapsed_s": 0.08661345799919218
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.08803729200735688,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1812429999699816,
+      "valid": true,
+      "action": {
+        "type": "play_card",
+        "card": 6,
+        "position": 0
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 638,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 18,
+          "enemy_ehp": 27,
+          "visible_incoming_before_taunts": 3,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 638,
+          "action": {
+            "type": "play_card",
+            "card": 6,
+            "position": 0
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 4,
+          "excluded": 0,
+          "deduplicated": 61,
+          "beam_pruned": 202,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "play_card",
+              "card": 6,
+              "position": 0
+            },
+            {
+              "type": "attack",
+              "attacker": 76,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 77,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 78,
+              "target": 37
+            }
+          ],
+          "value": -21.611050000000002,
+          "elapsed_s": 0.11471800005529076
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.11637583293486387,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1409149169921875,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 73,
+        "target": 55
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 849,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 26,
+          "enemy_ehp": 27,
+          "visible_incoming_before_taunts": 8,
+          "next_turn_hand_damage_no_surviving_beast": 3,
+          "next_turn_hand_damage_if_beast_survives": 5,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 579,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.04619429097510874
+        },
+        "turn_search": {
+          "nodes": 270,
+          "action": {
+            "type": "attack",
+            "attacker": 73,
+            "target": 55
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 5,
+          "excluded": 0,
+          "deduplicated": 58,
+          "beam_pruned": 117,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 55,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 73,
+              "target": 55
+            },
+            {
+              "type": "attack",
+              "attacker": 74,
+              "target": 55
+            },
+            {
+              "type": "attack",
+              "attacker": 75,
+              "target": 44
+            },
+            {
+              "type": "attack",
+              "attacker": 13,
+              "target": 37
+            }
+          ],
+          "value": -5.899799999999998,
+          "elapsed_s": 0.027732874965295196
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.07558237505145371,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.15658841701224446,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 80,
+        "target": 67
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 830,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 19,
+          "enemy_ehp": 19,
+          "visible_incoming_before_taunts": 6,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 539,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.053861542022787035
+        },
+        "turn_search": {
+          "nodes": 291,
+          "action": {
+            "type": "attack",
+            "attacker": 80,
+            "target": 67
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 5,
+          "excluded": 0,
+          "deduplicated": 75,
+          "beam_pruned": 104,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 72,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 80,
+              "target": 67
+            },
+            {
+              "type": "attack",
+              "attacker": 13,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 81,
+              "target": 67
+            },
+            {
+              "type": "attack",
+              "attacker": 82,
+              "target": 44
+            }
+          ],
+          "value": 37.7252,
+          "elapsed_s": 0.03613670798949897
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.09168662503361702,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.13542583398520947,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 34,
+        "target": 61
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 273,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 3,
+          "enemy_ehp": 9,
+          "visible_incoming_before_taunts": 12,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 16,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.0019294170197099447
+        },
+        "turn_search": {
+          "nodes": 257,
+          "action": {
+            "type": "attack",
+            "attacker": 34,
+            "target": 61
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 3,
+          "excluded": 5,
+          "deduplicated": 4,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 240,
+            "candidates": 5,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": true
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 34,
+              "target": 61
+            },
+            {
+              "type": "hero_power"
+            }
+          ],
+          "value": -950004.029615,
+          "elapsed_s": 0.05858554202131927
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.06209324998781085,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.06849116703961045,
+      "valid": true,
+      "action": {
+        "type": "play_card",
+        "card": 22,
+        "position": 1
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 0,
+        "search_used": false,
+        "reason": "baseline_rank",
+        "race": {
+          "own_ehp": 22,
+          "enemy_ehp": 25,
+          "visible_incoming_before_taunts": 7,
+          "next_turn_hand_damage_no_surviving_beast": 3,
+          "next_turn_hand_damage_if_beast_survives": 5,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 0,
+          "action": null,
+          "supported": true,
+          "bounded_out": false,
+          "depth": 0,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reason": "top_action_outside_effect_coverage"
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.0012430420611053705,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.10693266696762294,
+      "valid": true,
+      "action": {
+        "type": "end_turn"
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 146,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 17,
+          "enemy_ehp": 20,
+          "visible_incoming_before_taunts": 10,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 146,
+          "action": {
+            "type": "end_turn"
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 2,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 144,
+            "candidates": 3,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "end_turn"
+            }
+          ],
+          "value": -34.33097,
+          "elapsed_s": 0.038010917021892965
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.03938804101198912,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.1492962910560891,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 65,
+        "target": 11
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 301,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 2,
+          "enemy_ehp": 14,
+          "visible_incoming_before_taunts": 8,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "defend",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 301,
+          "action": {
+            "type": "attack",
+            "attacker": 65,
+            "target": 11
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 3,
+          "excluded": 0,
+          "deduplicated": 2,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 65,
+              "target": 11
+            },
+            {
+              "type": "play_card",
+              "card": 41,
+              "position": 2
+            }
+          ],
+          "value": -20.721980000000002,
+          "elapsed_s": 0.08089008403476328
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.08238537493161857,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.25346450007054955,
+      "valid": true,
+      "action": {
+        "type": "hero_power"
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 1383,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 11,
+          "enemy_ehp": 12,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 745,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.06623112503439188
+        },
+        "turn_search": {
+          "nodes": 638,
+          "action": {
+            "type": "hero_power"
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 4,
+          "excluded": 1,
+          "deduplicated": 62,
+          "beam_pruned": 196,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "hero_power"
+            },
+            {
+              "type": "play_card",
+              "card": 8,
+              "position": 3
+            },
+            {
+              "type": "attack",
+              "attacker": 84,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 85,
+              "target": 37
+            }
+          ],
+          "value": -1.158400000000001,
+          "elapsed_s": 0.11838195903692394
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.18646462494507432,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.2146889999276027,
+      "valid": true,
+      "action": {
+        "type": "play_card",
+        "card": 8,
+        "position": 0
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 1026,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 11,
+          "enemy_ehp": 10,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 448,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.03973020799458027
+        },
+        "turn_search": {
+          "nodes": 578,
+          "action": {
+            "type": "play_card",
+            "card": 8,
+            "position": 0
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 5,
+          "excluded": 1,
+          "deduplicated": 80,
+          "beam_pruned": 169,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "play_card",
+              "card": 8,
+              "position": 0
+            },
+            {
+              "type": "attack",
+              "attacker": 84,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 85,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 86,
+              "target": 37
+            }
+          ],
+          "value": 0.8100999999999978,
+          "elapsed_s": 0.10913125006482005
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.15068749990314245,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.16668966691941023,
+      "valid": true,
+      "action": {
+        "type": "play_card",
+        "card": 50
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 629,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 9,
+          "enemy_ehp": 18,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 629,
+          "action": {
+            "type": "play_card",
+            "card": 50
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 5,
+          "excluded": 0,
+          "deduplicated": 71,
+          "beam_pruned": 220,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 279,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "play_card",
+              "card": 50
+            },
+            {
+              "type": "attack",
+              "attacker": 42,
+              "target": 21
+            },
+            {
+              "type": "attack",
+              "attacker": 78,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 77,
+              "target": 4
+            },
+            {
+              "type": "hero_power"
+            }
+          ],
+          "value": -6.301290000000002,
+          "elapsed_s": 0.10169487504754215
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.10333541699219495,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.2695509580662474,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 16,
+        "target": 40
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 1630,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 18,
+          "enemy_ehp": 9,
+          "visible_incoming_before_taunts": 3,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 558,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.04614308301825076
+        },
+        "turn_search": {
+          "nodes": 316,
+          "action": {
+            "type": "attack",
+            "attacker": 16,
+            "target": 40
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 6,
+          "excluded": 53,
+          "deduplicated": 53,
+          "beam_pruned": 77,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 86,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 16,
+              "target": 40
+            },
+            {
+              "type": "attack",
+              "attacker": 32,
+              "target": 37
+            },
+            {
+              "type": "hero_power"
+            },
+            {
+              "type": "attack",
+              "attacker": 77,
+              "target": 37
+            },
+            {
+              "type": "attack",
+              "attacker": 78,
+              "target": 37
+            }
+          ],
+          "value": 46.47155000000001,
+          "elapsed_s": 0.04426987504120916
+        },
+        "chance": {
+          "active": true,
+          "nodes": 756,
+          "excluded": 0,
+          "exact_distributions": 17,
+          "sampled_distributions": 0,
+          "comparisons": [
+            {
+              "action": {
+                "type": "attack",
+                "attacker": 16,
+                "target": 40
+              },
+              "value": 125.93705,
+              "mean": 125.93705,
+              "sd": 0.0,
+              "outcomes": 1,
+              "exact_root": true,
+              "endpoint_lethal_mass": 0.0
+            },
+            {
+              "action": {
+                "type": "attack",
+                "attacker": 32,
+                "target": 40
+              },
+              "value": 48.988150000000005,
+              "mean": 48.988150000000005,
+              "sd": 0.0,
+              "outcomes": 1,
+              "exact_root": true,
+              "endpoint_lethal_mass": 0.0
+            },
+            {
+              "action": {
+                "type": "play_card",
+                "card": 9,
+                "position": 0
+              },
+              "value": 33.807533333333325,
+              "mean": 33.807533333333325,
+              "sd": 1.2885741579573726,
+              "outcomes": 3,
+              "exact_root": true,
+              "endpoint_lethal_mass": 0.0
+            },
+            {
+              "action": {
+                "type": "hero_power"
+              },
+              "value": 125.93705,
+              "mean": 125.93705,
+              "sd": 0.0,
+              "outcomes": 1,
+              "exact_root": true,
+              "endpoint_lethal_mass": 0.0
+            },
+            {
+              "action": {
+                "type": "play_card",
+                "card": 17
+              },
+              "value": 42.628675,
+              "mean": 42.628675,
+              "sd": 0.0,
+              "outcomes": 1,
+              "exact_root": true,
+              "endpoint_lethal_mass": 0.0
+            },
+            {
+              "action": {
+                "type": "play_card",
+                "card": 19
+              },
+              "value": 47.821250000000006,
+              "mean": 47.821250000000006,
+              "sd": 0.0,
+              "outcomes": 1,
+              "exact_root": true,
+              "endpoint_lethal_mass": 0.0
+            },
+            {
+              "action": {
+                "type": "end_turn"
+              },
+              "value": 6.923074999999999,
+              "mean": 6.923074999999999,
+              "sd": 0.0,
+              "outcomes": 1,
+              "exact_root": true,
+              "endpoint_lethal_mass": 0.0
+            }
+          ],
+          "guaranteed": false,
+          "reply_bounded": 1,
+          "complete": true,
+          "elapsed_s": 0.11315687501337379
+        },
+        "elapsed_s": 0.20519541599787772,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.11899945791810751,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 49,
+        "target": 4
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 375,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 22,
+          "enemy_ehp": 25,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 3,
+          "next_turn_hand_damage_if_beast_survives": 5,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 375,
+          "action": {
+            "type": "attack",
+            "attacker": 49,
+            "target": 4
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 6,
+          "excluded": 0,
+          "deduplicated": 83,
+          "beam_pruned": 128,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 114,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 49,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 54,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 72,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 73,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 74,
+              "target": 4
+            }
+          ],
+          "value": -1.9749250000000012,
+          "elapsed_s": 0.05331208393909037
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.05459437507670373,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cold_normal",
+      "elapsed_s": 0.10707020806148648,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 54,
+        "target": 15
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 272,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 22,
+          "enemy_ehp": 22,
+          "visible_incoming_before_taunts": 4,
+          "next_turn_hand_damage_no_surviving_beast": 3,
+          "next_turn_hand_damage_if_beast_survives": 5,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 272,
+          "action": {
+            "type": "attack",
+            "attacker": 54,
+            "target": 15
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 5,
+          "excluded": 0,
+          "deduplicated": 61,
+          "beam_pruned": 60,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 111,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 54,
+              "target": 15
+            },
+            {
+              "type": "attack",
+              "attacker": 72,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 73,
+              "target": 4
+            },
+            {
+              "type": "attack",
+              "attacker": 74,
+              "target": 4
+            }
+          ],
+          "value": -1.5104750000000005,
+          "elapsed_s": 0.04308041604235768
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.044354166951961815,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cache_initial",
+      "elapsed_s": 0.3428220839705318,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 79,
+        "target": 53
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 2045,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 13,
+          "enemy_ehp": 12,
+          "visible_incoming_before_taunts": 8,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 1407,
+          "bounded_out": true,
+          "supported": true,
+          "elapsed_s": 0.15046145801898092
+        },
+        "turn_search": {
+          "nodes": 638,
+          "action": {
+            "type": "attack",
+            "attacker": 79,
+            "target": 53
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 3,
+          "excluded": 1,
+          "deduplicated": 51,
+          "beam_pruned": 264,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 53
+            },
+            {
+              "type": "attack",
+              "attacker": 4,
+              "target": 64
+            }
+          ],
+          "value": -8.891599999999999,
+          "elapsed_s": 0.12662458303384483
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.2791085420176387,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "cache_repeat",
+      "elapsed_s": 0.026284624938853085,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 79,
+        "target": 53
+      },
+      "worker_error": null,
+      "cache_hit": true,
+      "info": {
+        "fallback": false,
+        "nodes": 2045,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 13,
+          "enemy_ehp": 12,
+          "visible_incoming_before_taunts": 8,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 1407,
+          "bounded_out": true,
+          "supported": true,
+          "elapsed_s": 0.15046145801898092
+        },
+        "turn_search": {
+          "nodes": 638,
+          "action": {
+            "type": "attack",
+            "attacker": 79,
+            "target": 53
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 3,
+          "excluded": 1,
+          "deduplicated": 51,
+          "beam_pruned": 264,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 53
+            },
+            {
+              "type": "attack",
+              "attacker": 4,
+              "target": 64
+            }
+          ],
+          "value": -8.891599999999999,
+          "elapsed_s": 0.12662458303384483
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.2791085420176387,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "new_seq",
+      "elapsed_s": 0.3443099589785561,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 79,
+        "target": 53
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 2037,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 13,
+          "enemy_ehp": 12,
+          "visible_incoming_before_taunts": 8,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 1399,
+          "bounded_out": true,
+          "supported": true,
+          "elapsed_s": 0.15046558307949454
+        },
+        "turn_search": {
+          "nodes": 638,
+          "action": {
+            "type": "attack",
+            "attacker": 79,
+            "target": 53
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 3,
+          "excluded": 1,
+          "deduplicated": 51,
+          "beam_pruned": 264,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 53
+            },
+            {
+              "type": "attack",
+              "attacker": 4,
+              "target": 64
+            }
+          ],
+          "value": -8.891599999999999,
+          "elapsed_s": 0.1275680420221761
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.28009487490635365,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "new_game",
+      "elapsed_s": 0.3495558329159394,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 79,
+        "target": 53
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 2049,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 13,
+          "enemy_ehp": 12,
+          "visible_incoming_before_taunts": 8,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 1411,
+          "bounded_out": true,
+          "supported": true,
+          "elapsed_s": 0.15072320797480643
+        },
+        "turn_search": {
+          "nodes": 638,
+          "action": {
+            "type": "attack",
+            "attacker": 79,
+            "target": 53
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 3,
+          "excluded": 1,
+          "deduplicated": 51,
+          "beam_pruned": 264,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 53
+            },
+            {
+              "type": "attack",
+              "attacker": 4,
+              "target": 64
+            }
+          ],
+          "value": -8.891599999999999,
+          "elapsed_s": 0.12942374998237938
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.28232949995435774,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "worker_hang",
+      "elapsed_s": 1.8311107080662623,
+      "valid": true,
+      "action": {
+        "type": "end_turn"
+      },
+      "worker_error": "worker_timeout",
+      "cache_hit": false,
+      "info": {
+        "fallback": true,
+        "reason": "prepared_fallback",
+        "nodes": 0
+      }
+    },
+    {
+      "tag": "worker_crash",
+      "elapsed_s": 0.07995979196857661,
+      "valid": true,
+      "action": {
+        "type": "end_turn"
+      },
+      "worker_error": "worker_exit_1: info=decide(state,cfg,publish,memory=memory)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/f4/3c2p11sd22b76640b44tvyv80000gn/T/tmp5nl2byra/skill/scripts/program_policy.py\", line 2, in decide\n    raise RuntimeError(\"injected crash\")\nRuntimeError: injected crash\n",
+      "cache_hit": false,
+      "info": {
+        "fallback": true,
+        "reason": "prepared_fallback",
+        "nodes": 0
+      }
+    },
+    {
+      "tag": "saved_best_on_timeout",
+      "elapsed_s": 1.8322277079569176,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 4,
+        "target": 64
+      },
+      "worker_error": "worker_timeout",
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "reason": "published_before_hang",
+        "nodes": 0
+      }
+    },
+    {
+      "tag": "tiny_budget",
+      "elapsed_s": 0.08065508399158716,
+      "valid": true,
+      "action": {
+        "type": "end_turn"
+      },
+      "worker_error": "worker_timeout",
+      "cache_hit": false,
+      "info": {
+        "fallback": true,
+        "nodes": 0,
+        "search_used": false,
+        "reason": "phase_fallback",
+        "elapsed_s": 0.0005265409126877785,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "emergency",
+      "elapsed_s": 0.017317207995802164,
+      "valid": true,
+      "action": {
+        "type": "end_turn"
+      },
+      "worker_error": null,
+      "cache_hit": null,
+      "info": null
+    },
+    {
+      "tag": "deck_submission",
+      "elapsed_s": 0.025784917059354484,
+      "valid": true,
+      "action": {
+        "type": "submit_deck",
+        "hero_class": "HUNTER",
+        "cards": [
+          "EX1_029",
+          "EX1_029",
+          "EX1_080",
+          "EX1_080",
+          "DS1_184",
+          "EX1_162",
+          "EX1_531",
+          "EX1_531",
+          "EX1_533",
+          "EX1_554",
+          "EX1_066",
+          "EX1_610",
+          "EX1_610",
+          "EX1_611",
+          "EX1_611",
+          "NEW1_019",
+          "NEW1_019",
+          "EX1_536",
+          "EX1_536",
+          "EX1_538",
+          "EX1_538",
+          "EX1_539",
+          "EX1_539",
+          "EX1_617",
+          "NEW1_031",
+          "NEW1_031",
+          "DS1_070",
+          "EX1_534",
+          "EX1_534",
+          "EX1_543"
+        ]
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": true,
+        "reason": "prepared_fallback",
+        "nodes": 0
+      }
+    },
+    {
+      "tag": "game_over",
+      "elapsed_s": 0.02559362491592765,
+      "valid": true,
+      "action": null,
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": true,
+        "reason": "prepared_fallback",
+        "nodes": 0
+      }
+    },
+    {
+      "tag": "long_history",
+      "elapsed_s": 0.3828349580289796,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 79,
+        "target": 53
+      },
+      "worker_error": null,
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 2002,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 13,
+          "enemy_ehp": 12,
+          "visible_incoming_before_taunts": 8,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 1364,
+          "bounded_out": true,
+          "supported": true,
+          "elapsed_s": 0.15062987490091473
+        },
+        "turn_search": {
+          "nodes": 638,
+          "action": {
+            "type": "attack",
+            "attacker": 79,
+            "target": 53
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 3,
+          "excluded": 1,
+          "deduplicated": 51,
+          "beam_pruned": 264,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 53
+            },
+            {
+              "type": "attack",
+              "attacker": 4,
+              "target": 64
+            }
+          ],
+          "value": -8.891599999999999,
+          "elapsed_s": 0.12820662499871105
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.2808177920524031,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "malformed_history",
+      "elapsed_s": 0.34821595798712224,
+      "valid": true,
+      "action": {
+        "type": "attack",
+        "attacker": 79,
+        "target": 53
+      },
+      "worker_error": "history_parse_error",
+      "cache_hit": false,
+      "info": {
+        "fallback": false,
+        "nodes": 2025,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 13,
+          "enemy_ehp": 12,
+          "visible_incoming_before_taunts": 8,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 1387,
+          "bounded_out": true,
+          "supported": true,
+          "elapsed_s": 0.15048987499903888
+        },
+        "turn_search": {
+          "nodes": 638,
+          "action": {
+            "type": "attack",
+            "attacker": 79,
+            "target": 53
+          },
+          "supported": true,
+          "bounded_out": true,
+          "depth": 3,
+          "excluded": 1,
+          "deduplicated": 51,
+          "beam_pruned": 264,
+          "stop_reason": "nodes",
+          "reply": {
+            "nodes": 288,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 79,
+              "target": 53
+            },
+            {
+              "type": "attack",
+              "attacker": 4,
+              "target": 64
+            }
+          ],
+          "value": -8.891599999999999,
+          "elapsed_s": 0.12815183296333998
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.28065149998292327,
+        "over_budget": false
+      }
+    },
+    {
+      "tag": "malformed_state_requests_refresh",
+      "elapsed_s": 0.02573937503620982,
+      "valid": true
+    }
+  ]
+}

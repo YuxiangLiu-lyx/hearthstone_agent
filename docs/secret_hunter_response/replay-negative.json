@@ -1,0 +1,101 @@
+{
+  "source": "counterfactual-extended.jsonl",
+  "case": 8,
+  "plan": "plan-3",
+  "sample": 0,
+  "expected": {
+    "split": "validation",
+    "sample": 0,
+    "future_rng_seed": 964871,
+    "win": 0,
+    "terminal": true,
+    "error": null,
+    "steps": 43,
+    "prefix_steps": 2,
+    "own_first_turn_plan": [
+      {
+        "type": "attack",
+        "attacker": 4,
+        "target": 63
+      },
+      {
+        "type": "end_turn"
+      }
+    ],
+    "end_of_own_turn": {
+      "own_hp": 18,
+      "enemy_hp": 27,
+      "own_attack": 0,
+      "enemy_attack": 3,
+      "own_board": [],
+      "enemy_board": [
+        "EX1_008",
+        "EX1_597",
+        "EX1_598"
+      ]
+    },
+    "start_of_next_own_turn": {
+      "own_hp": 13,
+      "enemy_hp": 27,
+      "own_attack": 0,
+      "enemy_attack": 8,
+      "own_board": [],
+      "enemy_board": [
+        "EX1_046",
+        "EX1_008",
+        "EX1_597",
+        "EX1_598",
+        "EX1_598"
+      ]
+    }
+  },
+  "actual": {
+    "split": "validation",
+    "sample": 0,
+    "future_rng_seed": 964871,
+    "win": 0,
+    "terminal": true,
+    "error": null,
+    "steps": 43,
+    "prefix_steps": 2,
+    "own_first_turn_plan": [
+      {
+        "type": "attack",
+        "attacker": 4,
+        "target": 63
+      },
+      {
+        "type": "end_turn"
+      }
+    ],
+    "end_of_own_turn": {
+      "own_hp": 18,
+      "enemy_hp": 27,
+      "own_attack": 0,
+      "enemy_attack": 3,
+      "own_board": [],
+      "enemy_board": [
+        "EX1_008",
+        "EX1_597",
+        "EX1_598"
+      ]
+    },
+    "start_of_next_own_turn": {
+      "own_hp": 13,
+      "enemy_hp": 27,
+      "own_attack": 0,
+      "enemy_attack": 8,
+      "own_board": [],
+      "enemy_board": [
+        "EX1_046",
+        "EX1_008",
+        "EX1_597",
+        "EX1_598",
+        "EX1_598"
+      ]
+    }
+  },
+  "same_win": true,
+  "same_first_turn_trace": true,
+  "same_next_turn": true
+}

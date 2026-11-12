@@ -1,0 +1,71 @@
+{
+  "challenger": "E1",
+  "gates": {
+    "primary_gain_at_least_one_point": false,
+    "paired_lower_positive": false,
+    "families_drop_no_more_than_five_points": true,
+    "old_overall_drop_no_more_than_three_points": true,
+    "old_per_opponent_drop_no_more_than_ten_points": true
+  },
+  "performance_pass": false,
+  "reliability": true,
+  "promotion": "not_promoted",
+  "recommendation": "Retain Y1 as research baseline; E1 is a reproducible research artifact, not a promoted release.",
+  "no_final_driven_strategy_change": true,
+  "diagnostic_arms_not_eligible_for_posthoc_promotion": [
+    "B3",
+    "C3"
+  ],
+  "primary_vs_Y1": {
+    "n_per_arm": 800,
+    "seed_clusters": 80,
+    "a_wins": 644,
+    "b_wins": 643,
+    "a_rate": 0.815625,
+    "b_rate": 0.8145833333333333,
+    "gain": -0.0010416666666667185,
+    "gain_seed_cluster_95": [
+      -0.007291666666666664,
+      0.005208333333333331
+    ],
+    "a_only_wins": 4,
+    "b_only_wins": 3,
+    "weighting": "equal family macro",
+    "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+  },
+  "primary_vs_K1": {
+    "n_per_arm": 800,
+    "seed_clusters": 80,
+    "a_wins": 636,
+    "b_wins": 643,
+    "a_rate": 0.80625,
+    "b_rate": 0.8145833333333333,
+    "gain": 0.008333333333333304,
+    "gain_seed_cluster_95": [
+      -0.00833333333333333,
+      0.02499999999999999
+    ],
+    "a_only_wins": 19,
+    "b_only_wins": 26,
+    "weighting": "equal family macro",
+    "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+  },
+  "response_vs_no_response": {
+    "n_per_arm": 800,
+    "seed_clusters": 80,
+    "a_wins": 641,
+    "b_wins": 642,
+    "a_rate": 0.8130208333333333,
+    "b_rate": 0.8135416666666666,
+    "gain": 0.0005208333333333037,
+    "gain_seed_cluster_95": [
+      -0.004687499999999999,
+      0.005208333333333341
+    ],
+    "a_only_wins": 2,
+    "b_only_wins": 3,
+    "weighting": "equal family macro",
+    "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+  },
+  "scope": "Frozen course proxy pool, not real Astra or official course evaluation."
+}
