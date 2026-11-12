@@ -1,0 +1,1008 @@
+{
+  "games": 2,
+  "decisions": 50,
+  "relay_deviations": 0,
+  "reports": [
+    {
+      "game": "experiments/secret-hunter-winrate-client/g_20261112_000001",
+      "result": {
+        "game_id": "g_20261112_000001",
+        "seed": 984000,
+        "winner": 1,
+        "reason": "hero_death",
+        "first_player": 1,
+        "turns": 11,
+        "illegal_counts": {
+          "1": 0,
+          "2": 0
+        },
+        "restarts": {
+          "1": 0,
+          "2": 0
+        },
+        "timeouts": {
+          "1": 0,
+          "2": 0
+        },
+        "duration_s": 5.275,
+        "decisions": {
+          "1": 24,
+          "2": 14
+        },
+        "players": [
+          {
+            "index": 1,
+            "name": "secret-hunter-winrate-w3",
+            "kind": "client"
+          },
+          {
+            "index": 2,
+            "name": "greedy",
+            "kind": "greedy"
+          }
+        ]
+      },
+      "model": null,
+      "effort": null,
+      "usage": {},
+      "decisions": 24,
+      "relay_deviations": 0,
+      "worker_errors": {},
+      "fallbacks": 0,
+      "program_latency_s": {
+        "n": 24,
+        "mean": 0.08066543767442151,
+        "max": 0.1644618340069428,
+        "p50": 0.06889033399056643,
+        "p95": 0.14352425001561642,
+        "p99": 0.1644618340069428
+      },
+      "publication_to_act_s": {
+        "n": 24,
+        "mean": 0.18216668566068014,
+        "max": 0.28100013732910156,
+        "p50": 0.17199993133544922,
+        "p95": 0.26200008392333984,
+        "p99": 0.28100013732910156
+      },
+      "details": [
+        {
+          "seq": 1,
+          "phase": "deck_submission",
+          "actual": {
+            "type": "submit_deck",
+            "hero_class": "HUNTER",
+            "cards": [
+              "EX1_029",
+              "EX1_029",
+              "EX1_080",
+              "EX1_080",
+              "DS1_184",
+              "EX1_162",
+              "EX1_531",
+              "EX1_531",
+              "EX1_533",
+              "EX1_554",
+              "EX1_066",
+              "EX1_610",
+              "EX1_610",
+              "EX1_611",
+              "EX1_611",
+              "NEW1_019",
+              "NEW1_019",
+              "EX1_536",
+              "EX1_536",
+              "EX1_538",
+              "EX1_538",
+              "EX1_539",
+              "EX1_539",
+              "EX1_617",
+              "NEW1_031",
+              "NEW1_031",
+              "DS1_070",
+              "EX1_534",
+              "EX1_534",
+              "EX1_543"
+            ]
+          },
+          "script": {
+            "type": "submit_deck",
+            "hero_class": "HUNTER",
+            "cards": [
+              "EX1_029",
+              "EX1_029",
+              "EX1_080",
+              "EX1_080",
+              "DS1_184",
+              "EX1_162",
+              "EX1_531",
+              "EX1_531",
+              "EX1_533",
+              "EX1_554",
+              "EX1_066",
+              "EX1_610",
+              "EX1_610",
+              "EX1_611",
+              "EX1_611",
+              "NEW1_019",
+              "NEW1_019",
+              "EX1_536",
+              "EX1_536",
+              "EX1_538",
+              "EX1_538",
+              "EX1_539",
+              "EX1_539",
+              "EX1_617",
+              "NEW1_031",
+              "NEW1_031",
+              "DS1_070",
+              "EX1_534",
+              "EX1_534",
+              "EX1_543"
+            ]
+          },
+          "exact": true,
+          "publication_to_act_s": 0.06800007820129395
+        },
+        {
+          "seq": 2,
+          "phase": "mulligan",
+          "actual": {
+            "type": "mulligan",
+            "replace": [
+              26,
+              29
+            ]
+          },
+          "script": {
+            "type": "mulligan",
+            "replace": [
+              26,
+              29
+            ]
+          },
+          "exact": true,
+          "publication_to_act_s": 0.1399998664855957
+        },
+        {
+          "seq": 3,
+          "phase": "main",
+          "actual": {
+            "type": "end_turn"
+          },
+          "script": {
+            "type": "end_turn"
+          },
+          "exact": true,
+          "publication_to_act_s": 0.15199995040893555
+        },
+        {
+          "seq": 4,
+          "phase": "main",
+          "actual": {
+            "type": "play_card",
+            "card": 22,
+            "position": 0
+          },
+          "script": {
+            "type": "play_card",
+            "card": 22,
+            "position": 0
+          },
+          "exact": true,
+          "publication_to_act_s": 0.16499996185302734
+        },
+        {
+          "seq": 5,
+          "phase": "main",
+          "actual": {
+            "type": "end_turn"
+          },
+          "script": {
+            "type": "end_turn"
+          },
+          "exact": true,
+          "publication_to_act_s": 0.19900012016296387
+        },
+        {
+          "seq": 6,
+          "phase": "main",
+          "actual": {
+            "type": "play_card",
+            "card": 21,
+            "position": 0
+          },
+          "script": {
+            "type": "play_card",
+            "card": 21,
+            "position": 0
+          },
+          "exact": true,
+          "publication_to_act_s": 0.20799994468688965
+        },
+        {
+          "seq": 7,
+          "phase": "main",
+          "actual": {
+            "type": "play_card",
+            "card": 6,
+            "position": 0
+          },
+          "script": {
+            "type": "play_card",
+            "card": 6,
+            "position": 0
+          },
+          "exact": true,
+          "publication_to_act_s": 0.18900012969970703
+        },
+        {
+          "seq": 8,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.1530001163482666
+        },
+        {
+          "seq": 9,
+          "phase": "main",
+          "actual": {
+            "type": "end_turn"
+          },
+          "script": {
+            "type": "end_turn"
+          },
+          "exact": true,
+          "publication_to_act_s": 0.16899991035461426
+        },
+        {
+          "seq": 10,
+          "phase": "main",
+          "actual": {
+            "type": "play_card",
+            "card": 16,
+            "position": 0
+          },
+          "script": {
+            "type": "play_card",
+            "card": 16,
+            "position": 0
+          },
+          "exact": true,
+          "publication_to_act_s": 0.26199984550476074
+        },
+        {
+          "seq": 11,
+          "phase": "main",
+          "actual": {
+            "type": "hero_power"
+          },
+          "script": {
+            "type": "hero_power"
+          },
+          "exact": true,
+          "publication_to_act_s": 0.17499995231628418
+        },
+        {
+          "seq": 12,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 21,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 21,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.14899992942810059
+        },
+        {
+          "seq": 13,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.17199993133544922
+        },
+        {
+          "seq": 14,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 6,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 6,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.19800019264221191
+        },
+        {
+          "seq": 15,
+          "phase": "main",
+          "actual": {
+            "type": "end_turn"
+          },
+          "script": {
+            "type": "end_turn"
+          },
+          "exact": true,
+          "publication_to_act_s": 0.16300010681152344
+        },
+        {
+          "seq": 16,
+          "phase": "main",
+          "actual": {
+            "type": "play_card",
+            "card": 24
+          },
+          "script": {
+            "type": "play_card",
+            "card": 24
+          },
+          "exact": true,
+          "publication_to_act_s": 0.28100013732910156
+        },
+        {
+          "seq": 17,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 16,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 16,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.26200008392333984
+        },
+        {
+          "seq": 18,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 21,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 21,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.20200014114379883
+        },
+        {
+          "seq": 19,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.18999981880187988
+        },
+        {
+          "seq": 20,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 22,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.16900014877319336
+        },
+        {
+          "seq": 21,
+          "phase": "main",
+          "actual": {
+            "type": "play_card",
+            "card": 19
+          },
+          "script": {
+            "type": "play_card",
+            "card": 19
+          },
+          "exact": true,
+          "publication_to_act_s": 0.20000004768371582
+        },
+        {
+          "seq": 22,
+          "phase": "main",
+          "actual": {
+            "type": "end_turn"
+          },
+          "script": {
+            "type": "end_turn"
+          },
+          "exact": true,
+          "publication_to_act_s": 0.16199994087219238
+        },
+        {
+          "seq": 23,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 4,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.16900014877319336
+        },
+        {
+          "seq": 24,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 16,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 16,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.17499995231628418
+        }
+      ]
+    },
+    {
+      "game": "experiments/secret-hunter-winrate-client/g_20261112_000002",
+      "result": {
+        "game_id": "g_20261112_000002",
+        "seed": 984001,
+        "winner": 1,
+        "reason": "hero_death",
+        "first_player": 1,
+        "turns": 11,
+        "illegal_counts": {
+          "1": 0,
+          "2": 0
+        },
+        "restarts": {
+          "1": 0,
+          "2": 0
+        },
+        "timeouts": {
+          "1": 0,
+          "2": 0
+        },
+        "duration_s": 5.293,
+        "decisions": {
+          "1": 26,
+          "2": 13
+        },
+        "players": [
+          {
+            "index": 1,
+            "name": "secret-hunter-winrate-w3",
+            "kind": "client"
+          },
+          {
+            "index": 2,
+            "name": "greedy",
+            "kind": "greedy"
+          }
+        ]
+      },
+      "model": null,
+      "effort": null,
+      "usage": {},
+      "decisions": 26,
+      "relay_deviations": 0,
+      "worker_errors": {},
+      "fallbacks": 0,
+      "program_latency_s": {
+        "n": 26,
+        "mean": 0.06855157199047077,
+        "max": 0.1086741250474006,
+        "p50": 0.06689979101065546,
+        "p95": 0.09928158298134804,
+        "p99": 0.1086741250474006
+      },
+      "publication_to_act_s": {
+        "n": 26,
+        "mean": 0.16765388158651498,
+        "max": 0.20399999618530273,
+        "p50": 0.16499996185302734,
+        "p95": 0.19700002670288086,
+        "p99": 0.20399999618530273
+      },
+      "details": [
+        {
+          "seq": 1,
+          "phase": "deck_submission",
+          "actual": {
+            "type": "submit_deck",
+            "hero_class": "HUNTER",
+            "cards": [
+              "EX1_029",
+              "EX1_029",
+              "EX1_080",
+              "EX1_080",
+              "DS1_184",
+              "EX1_162",
+              "EX1_531",
+              "EX1_531",
+              "EX1_533",
+              "EX1_554",
+              "EX1_066",
+              "EX1_610",
+              "EX1_610",
+              "EX1_611",
+              "EX1_611",
+              "NEW1_019",
+              "NEW1_019",
+              "EX1_536",
+              "EX1_536",
+              "EX1_538",
+              "EX1_538",
+              "EX1_539",
+              "EX1_539",
+              "EX1_617",
+              "NEW1_031",
+              "NEW1_031",
+              "DS1_070",
+              "EX1_534",
+              "EX1_534",
+              "EX1_543"
+            ]
+          },
+          "script": {
+            "type": "submit_deck",
+            "hero_class": "HUNTER",
+            "cards": [
+              "EX1_029",
+              "EX1_029",
+              "EX1_080",
+              "EX1_080",
+              "DS1_184",
+              "EX1_162",
+              "EX1_531",
+              "EX1_531",
+              "EX1_533",
+              "EX1_554",
+              "EX1_066",
+              "EX1_610",
+              "EX1_610",
+              "EX1_611",
+              "EX1_611",
+              "NEW1_019",
+              "NEW1_019",
+              "EX1_536",
+              "EX1_536",
+              "EX1_538",
+              "EX1_538",
+              "EX1_539",
+              "EX1_539",
+              "EX1_617",
+              "NEW1_031",
+              "NEW1_031",
+              "DS1_070",
+              "EX1_534",
+              "EX1_534",
+              "EX1_543"
+            ]
+          },
+          "exact": true,
+          "publication_to_act_s": 0.07200002670288086
+        },
+        {
+          "seq": 2,
+          "phase": "mulligan",
+          "actual": {
+            "type": "mulligan",
+            "replace": [
+              29
+            ]
+          },
+          "script": {
+            "type": "mulligan",
+            "replace": [
+              29
+            ]
+          },
+          "exact": true,
+          "publication_to_act_s": 0.1399998664855957
+        },
+        {
+          "seq": 3,
+          "phase": "main",
+          "actual": {
+            "type": "play_card",
+            "card": 9,
+            "position": 0
+          },
+          "script": {
+            "type": "play_card",
+            "card": 9,
+            "position": 0
+          },
+          "exact": true,
+          "publication_to_act_s": 0.15400004386901855
+        },
+        {
+          "seq": 4,
+          "phase": "main",
+          "actual": {
+            "type": "end_turn"
+          },
+          "script": {
+            "type": "end_turn"
+          },
+          "exact": true,
+          "publication_to_act_s": 0.1660001277923584
+        },
+        {
+          "seq": 5,
+          "phase": "main",
+          "actual": {
+            "type": "play_card",
+            "card": 13,
+            "position": 0
+          },
+          "script": {
+            "type": "play_card",
+            "card": 13,
+            "position": 0
+          },
+          "exact": true,
+          "publication_to_act_s": 0.19099998474121094
+        },
+        {
+          "seq": 6,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 9,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 9,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.16200017929077148
+        },
+        {
+          "seq": 7,
+          "phase": "main",
+          "actual": {
+            "type": "end_turn"
+          },
+          "script": {
+            "type": "end_turn"
+          },
+          "exact": true,
+          "publication_to_act_s": 0.17799997329711914
+        },
+        {
+          "seq": 8,
+          "phase": "main",
+          "actual": {
+            "type": "play_card",
+            "card": 8,
+            "position": 0
+          },
+          "script": {
+            "type": "play_card",
+            "card": 8,
+            "position": 0
+          },
+          "exact": true,
+          "publication_to_act_s": 0.20399999618530273
+        },
+        {
+          "seq": 9,
+          "phase": "main",
+          "actual": {
+            "type": "play_card",
+            "card": 14
+          },
+          "script": {
+            "type": "play_card",
+            "card": 14
+          },
+          "exact": true,
+          "publication_to_act_s": 0.1640000343322754
+        },
+        {
+          "seq": 10,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.18200016021728516
+        },
+        {
+          "seq": 11,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 9,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 9,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.15200018882751465
+        },
+        {
+          "seq": 12,
+          "phase": "main",
+          "actual": {
+            "type": "end_turn"
+          },
+          "script": {
+            "type": "end_turn"
+          },
+          "exact": true,
+          "publication_to_act_s": 0.16499996185302734
+        },
+        {
+          "seq": 13,
+          "phase": "main",
+          "actual": {
+            "type": "play_card",
+            "card": 16,
+            "position": 0
+          },
+          "script": {
+            "type": "play_card",
+            "card": 16,
+            "position": 0
+          },
+          "exact": true,
+          "publication_to_act_s": 0.14700007438659668
+        },
+        {
+          "seq": 14,
+          "phase": "main",
+          "actual": {
+            "type": "hero_power"
+          },
+          "script": {
+            "type": "hero_power"
+          },
+          "exact": true,
+          "publication_to_act_s": 0.1790001392364502
+        },
+        {
+          "seq": 15,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.15899991989135742
+        },
+        {
+          "seq": 16,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 9,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 9,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.18600010871887207
+        },
+        {
+          "seq": 17,
+          "phase": "main",
+          "actual": {
+            "type": "end_turn"
+          },
+          "script": {
+            "type": "end_turn"
+          },
+          "exact": true,
+          "publication_to_act_s": 0.14499998092651367
+        },
+        {
+          "seq": 18,
+          "phase": "main",
+          "actual": {
+            "type": "play_card",
+            "card": 31
+          },
+          "script": {
+            "type": "play_card",
+            "card": 31
+          },
+          "exact": true,
+          "publication_to_act_s": 0.1919999122619629
+        },
+        {
+          "seq": 19,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 73,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 73,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.19700002670288086
+        },
+        {
+          "seq": 20,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 16,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 16,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.19000005722045898
+        },
+        {
+          "seq": 21,
+          "phase": "main",
+          "actual": {
+            "type": "hero_power"
+          },
+          "script": {
+            "type": "hero_power"
+          },
+          "exact": true,
+          "publication_to_act_s": 0.16199994087219238
+        },
+        {
+          "seq": 22,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.19099998474121094
+        },
+        {
+          "seq": 23,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 9,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 9,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.15400004386901855
+        },
+        {
+          "seq": 24,
+          "phase": "main",
+          "actual": {
+            "type": "end_turn"
+          },
+          "script": {
+            "type": "end_turn"
+          },
+          "exact": true,
+          "publication_to_act_s": 0.18799996376037598
+        },
+        {
+          "seq": 25,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 13,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.1550002098083496
+        },
+        {
+          "seq": 26,
+          "phase": "main",
+          "actual": {
+            "type": "attack",
+            "attacker": 16,
+            "target": 37
+          },
+          "script": {
+            "type": "attack",
+            "attacker": 16,
+            "target": 37
+          },
+          "exact": true,
+          "publication_to_act_s": 0.18400001525878906
+        }
+      ]
+    }
+  ],
+  "scope": "No-model official local client against existing Greedy; not a host-model evaluation."
+}

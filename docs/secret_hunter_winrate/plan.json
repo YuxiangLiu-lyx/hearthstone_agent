@@ -1,0 +1,50 @@
+{
+  "parent_commit": "af7f231d50f6298800a14561e159e8481c77c1e8",
+  "budget": "docs/secret_hunter_response/budget.json",
+  "full_games_left_at_start": 1401,
+  "development": {
+    "start": 960100,
+    "seeds": 8,
+    "baseline_results": "experiments/secret-hunter-response-y1-pilot/results.jsonl",
+    "candidate_runs_max": 2
+  },
+  "final_core": {
+    "start": 981000,
+    "seeds": 40,
+    "arms": [
+      "Y1",
+      "selected_candidate"
+    ],
+    "games_per_arm": 480
+  },
+  "final_guardrail": {
+    "start": 982000,
+    "seeds": 2,
+    "games_per_arm": 56
+  },
+  "maximum_planned_new_match_games": 1264,
+  "selection": "Choose the highest primary score of W1/W2 on the 96-game paired development set; ties prefer the smaller change. Freeze before opening fresh final seeds. No post-final tuning. Negative final results do not justify promotion.",
+  "hypotheses": [
+    "W1: safely admit deterministic Knife Juggler deployment to existing public turn search, allowing Bow/removal alternatives to compete.",
+    "W2: if supported by diagnostic evidence, retain multiple distinct endpoints per root before visible-response evaluation; isolate from previous broad response search."
+  ],
+  "primary": ".5 * Astra family mean + .5 * Bot2 family mean",
+  "prior_final_data": "Previous final seeds remain historical evaluation, excluded from follow-up development.",
+  "sources": [
+    "counterfactual-balanced case 33: Juggler root excluded despite no random trigger, Bow plans won 5/5 vs baseline 3/5 on small existing conditional samples.",
+    "counterfactual-balanced case 57: buff-before-attack alternatives outperform baseline in small existing conditional samples."
+  ],
+  "baseline_hash": "47ea1ba9392507e7eaa28cd4384056cb2acee11c57d7253db95099f3ef924735",
+  "reserved_seed_disjoint_from_parent_checkpoint": true,
+  "parent_checkpoint_sha256": "9957b69eb8dbc19f27e6fa0528354bb4bad8cef5cc69d732d9c44fe0394415bb",
+  "amendments": [
+    {
+      "before_fresh_final_opened": true,
+      "reason": "W1 78/96 and W2 79/96 versus Y1 81/96. New deterministic coverage lets search compare incomplete random followups and also changes unrelated roots. Restrict admission to standalone Juggler versus an immediately affordable Bow on turns 2-4.",
+      "additional_candidate": "W3",
+      "additional_development_games": 96,
+      "maximum_new_match_games_after_amendment": 1360,
+      "selection": "Highest development primary among W1/W2/W3; ties prefer the candidate changing fewer roots. No tuning after final."
+    }
+  ]
+}

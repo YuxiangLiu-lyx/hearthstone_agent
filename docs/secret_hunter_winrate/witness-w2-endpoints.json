@@ -1,0 +1,654 @@
+{
+  "candidate": "development/secret_hunter_winrate/candidates/W2",
+  "case": 57,
+  "source": {
+    "seed": 960033,
+    "seat": 2,
+    "game": "2c2d88410a1b46a9",
+    "opponent": "bot1-mage-proxy",
+    "first_player": 2,
+    "score": 0
+  },
+  "initial_public_state": {
+    "protocol_version": "1",
+    "game_id": "2c2d88410a1b46a9",
+    "seq": 9,
+    "player": 2,
+    "turn": 7,
+    "phase": "main",
+    "timeout_s": 180.0,
+    "deadline_epoch_s": 1794451360.338,
+    "you": {
+      "hero": {
+        "entity_id": 37,
+        "card_id": "HERO_05",
+        "name": "Rexxar",
+        "hero_class": "HUNTER",
+        "health": 28,
+        "max_health": 30,
+        "armor": 0,
+        "attack": 0,
+        "can_attack": false,
+        "frozen": false,
+        "immune": false
+      },
+      "hero_power": {
+        "entity_id": 38,
+        "card_id": "HERO_05bp",
+        "name": "Steady Shot",
+        "cost": 2,
+        "usable": true,
+        "text": "Deal 2 damage to the enemy hero."
+      },
+      "weapon": null,
+      "mana": 4,
+      "max_mana": 4,
+      "overloaded": 0,
+      "overload_next_turn": 0,
+      "hand": [
+        {
+          "entity_id": 52,
+          "card_id": "EX1_611",
+          "name": "Freezing Trap",
+          "type": "SPELL",
+          "cost": 2,
+          "text": "Secret: When an enemy minion attacks, return it to its owner's hand. It costs (2) more.",
+          "playable": true
+        },
+        {
+          "entity_id": 65,
+          "card_id": "DS1_070",
+          "name": "Houndmaster",
+          "type": "MINION",
+          "cost": 4,
+          "attack": 4,
+          "health": 3,
+          "text": "Battlecry: Give a friendly Beast +2/+2 and Taunt.",
+          "playable": true
+        },
+        {
+          "entity_id": 61,
+          "card_id": "EX1_539",
+          "name": "Kill Command",
+          "type": "SPELL",
+          "cost": 3,
+          "text": "Deal 3 damage. If you control a Beast, deal 5 damage instead.",
+          "playable": true
+        }
+      ],
+      "board": [
+        {
+          "entity_id": 45,
+          "card_id": "EX1_531",
+          "name": "Scavenging Hyena",
+          "attack": 2,
+          "health": 2,
+          "max_health": 2,
+          "can_attack": true,
+          "taunt": false,
+          "divine_shield": false,
+          "frozen": false,
+          "stealth": false,
+          "windfury": false,
+          "charge": false,
+          "poisonous": false,
+          "deathrattle": false,
+          "spell_damage": 0,
+          "silenced": false,
+          "text": "Whenever a friendly Beast dies, gain +2/+1."
+        }
+      ],
+      "secrets": [],
+      "deck_remaining": 23,
+      "deck_remaining_counts": {
+        "DS1_184": 1,
+        "EX1_066": 1,
+        "EX1_080": 2,
+        "EX1_531": 1,
+        "EX1_533": 1,
+        "EX1_534": 2,
+        "EX1_536": 2,
+        "EX1_538": 2,
+        "EX1_539": 1,
+        "EX1_543": 1,
+        "EX1_554": 1,
+        "EX1_610": 2,
+        "EX1_611": 1,
+        "EX1_617": 1,
+        "NEW1_019": 2,
+        "NEW1_031": 2
+      },
+      "fatigue": 0,
+      "graveyard": [
+        {
+          "card_id": "EX1_029",
+          "name": "Leper Gnome"
+        },
+        {
+          "card_id": "EX1_162",
+          "name": "Dire Wolf Alpha"
+        },
+        {
+          "card_id": "EX1_029",
+          "name": "Leper Gnome"
+        }
+      ]
+    },
+    "opponent": {
+      "hero": {
+        "entity_id": 4,
+        "card_id": "HERO_08",
+        "name": "Jaina Proudmoore",
+        "hero_class": "MAGE",
+        "health": 26,
+        "max_health": 30,
+        "armor": 0,
+        "attack": 0,
+        "can_attack": false,
+        "frozen": false,
+        "immune": false
+      },
+      "hero_power": {
+        "entity_id": 5,
+        "card_id": "HERO_08bp",
+        "name": "Fireblast",
+        "cost": 2,
+        "usable": false,
+        "text": "Deal 1 damage."
+      },
+      "weapon": null,
+      "mana": 0,
+      "max_mana": 3,
+      "overloaded": 0,
+      "overload_next_turn": 0,
+      "hand_size": 3,
+      "board": [
+        {
+          "entity_id": 8,
+          "card_id": "EX1_608",
+          "name": "Sorcerer's Apprentice",
+          "attack": 3,
+          "health": 1,
+          "max_health": 2,
+          "can_attack": false,
+          "taunt": false,
+          "divine_shield": false,
+          "frozen": false,
+          "stealth": false,
+          "windfury": false,
+          "charge": false,
+          "poisonous": false,
+          "deathrattle": false,
+          "spell_damage": 0,
+          "silenced": false,
+          "text": "Your spells cost (1) less."
+        },
+        {
+          "entity_id": 17,
+          "card_id": "EX1_556",
+          "name": "Harvest Golem",
+          "attack": 2,
+          "health": 3,
+          "max_health": 3,
+          "can_attack": false,
+          "taunt": false,
+          "divine_shield": false,
+          "frozen": false,
+          "stealth": false,
+          "windfury": false,
+          "charge": false,
+          "poisonous": false,
+          "deathrattle": true,
+          "spell_damage": 0,
+          "silenced": false,
+          "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+        }
+      ],
+      "secrets_count": 0,
+      "deck_remaining": 23,
+      "fatigue": 0,
+      "graveyard": [
+        {
+          "card_id": "EX1_277",
+          "name": "Arcane Missiles"
+        },
+        {
+          "card_id": "GAME_005",
+          "name": "The Coin"
+        },
+        {
+          "card_id": "CS2_024",
+          "name": "Frostbolt"
+        }
+      ]
+    },
+    "choice": null,
+    "legal_actions": [
+      {
+        "type": "play_card",
+        "card": 52,
+        "targets": null,
+        "positions": null,
+        "choose": null
+      },
+      {
+        "type": "play_card",
+        "card": 65,
+        "targets": [
+          45
+        ],
+        "positions": [
+          0,
+          1
+        ],
+        "choose": null
+      },
+      {
+        "type": "play_card",
+        "card": 61,
+        "targets": [
+          4,
+          8,
+          17,
+          37,
+          45
+        ],
+        "positions": null,
+        "choose": null
+      },
+      {
+        "type": "attack",
+        "attacker": 45,
+        "targets": [
+          4,
+          8,
+          17
+        ]
+      },
+      {
+        "type": "hero_power",
+        "targets": null
+      },
+      {
+        "type": "end_turn"
+      },
+      {
+        "type": "concede"
+      }
+    ],
+    "events": [
+      {
+        "event": "end_turn",
+        "player": 2
+      },
+      {
+        "event": "turn_start",
+        "turn": 6,
+        "player": 1
+      },
+      {
+        "event": "draw",
+        "player": 1
+      },
+      {
+        "event": "play_card",
+        "player": 1,
+        "card_id": "EX1_556",
+        "name": "Harvest Golem",
+        "entity_id": 17,
+        "cost": 3,
+        "target": null,
+        "position": 1,
+        "choose": null
+      },
+      {
+        "event": "attack",
+        "player": 1,
+        "attacker": {
+          "entity_id": 8,
+          "card_id": "EX1_608",
+          "name": "Sorcerer's Apprentice"
+        },
+        "target": {
+          "entity_id": 40,
+          "card_id": "EX1_029",
+          "name": "Leper Gnome"
+        }
+      },
+      {
+        "event": "damage",
+        "player": 2,
+        "entity_id": 40,
+        "card_id": "EX1_029",
+        "name": "Leper Gnome",
+        "amount": 3,
+        "health_after": -2,
+        "source": {
+          "entity_id": 8,
+          "card_id": "EX1_608",
+          "name": "Sorcerer's Apprentice"
+        }
+      },
+      {
+        "event": "damage",
+        "player": 1,
+        "entity_id": 8,
+        "card_id": "EX1_608",
+        "name": "Sorcerer's Apprentice",
+        "amount": 1,
+        "health_after": 1,
+        "source": {
+          "entity_id": 40,
+          "card_id": "EX1_029",
+          "name": "Leper Gnome"
+        }
+      },
+      {
+        "event": "death",
+        "player": 2,
+        "entity_id": 40,
+        "card_id": "EX1_029",
+        "name": "Leper Gnome"
+      },
+      {
+        "event": "damage",
+        "player": 1,
+        "entity_id": 4,
+        "card_id": "HERO_08",
+        "name": "Jaina Proudmoore",
+        "amount": 2,
+        "health_after": 26,
+        "source": {
+          "entity_id": 40,
+          "card_id": "EX1_029",
+          "name": "Leper Gnome"
+        },
+        "armor_absorbed": 0,
+        "armor_after": 0
+      },
+      {
+        "event": "end_turn",
+        "player": 1
+      },
+      {
+        "event": "turn_start",
+        "turn": 7,
+        "player": 2
+      },
+      {
+        "event": "draw",
+        "player": 2,
+        "card_id": "EX1_539",
+        "entity_id": 61
+      }
+    ],
+    "last_action_result": null,
+    "result": null,
+    "public_opponent_evidence": {
+      "shown_cards": [
+        "EX1_277",
+        "EX1_608",
+        "GAME_005",
+        "CS2_024",
+        "EX1_556"
+      ],
+      "face_attacks": 0,
+      "other_attacks": 1,
+      "cheap_minions_played": 1,
+      "weapons_seen": [],
+      "tendency": "insufficient_or_mixed",
+      "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+    },
+    "hero_attack_available": true
+  },
+  "prefix_actions": 18,
+  "trace": [
+    {
+      "public_state_sha256": "56eb70981ba7fbf32a41bc9fa7c0f1e8a65f5ff9d9c6e800f6cc3e485e7ff5ed",
+      "action": {
+        "type": "play_card",
+        "card": 65,
+        "target": 45,
+        "position": 0
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 118,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 28,
+          "enemy_ehp": 26,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 54,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.003239374957047403
+        },
+        "turn_search": {
+          "nodes": 64,
+          "action": {
+            "type": "play_card",
+            "card": 65,
+            "target": 45,
+            "position": 0
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 3,
+          "excluded": 0,
+          "deduplicated": 9,
+          "beam_pruned": 19,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 16,
+            "candidates": 6,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "play_card",
+              "card": 65,
+              "target": 45,
+              "position": 0
+            },
+            {
+              "type": "attack",
+              "attacker": 45,
+              "target": 4
+            }
+          ],
+          "value": -14.599200000000007,
+          "elapsed_s": 0.00589866703376174
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.010767958010546863,
+        "over_budget": false
+      }
+    },
+    {
+      "public_state_sha256": "95f492548e64adf8a9ef4948ef0a51b1aa3defbb2e6d4d95ddb95d4d3d29a63e",
+      "action": {
+        "type": "attack",
+        "attacker": 45,
+        "target": 4
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 21,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 28,
+          "enemy_ehp": 26,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 3,
+          "bounded_out": false,
+          "supported": true,
+          "elapsed_s": 0.0002804170362651348
+        },
+        "turn_search": {
+          "nodes": 18,
+          "action": {
+            "type": "attack",
+            "attacker": 45,
+            "target": 4
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 2,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 15,
+            "candidates": 4,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "attack",
+              "attacker": 45,
+              "target": 4
+            }
+          ],
+          "value": -14.599200000000007,
+          "elapsed_s": 0.0024579170858487487
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.0028431660030037165,
+        "over_budget": false
+      }
+    },
+    {
+      "public_state_sha256": "ea65a338d99e459334ba8333c43ee03bd6c6599f308ec2ad10c5b07e9c4cfe8d",
+      "action": {
+        "type": "end_turn"
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 4,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 28,
+          "enemy_ehp": 22,
+          "visible_incoming_before_taunts": 5,
+          "next_turn_hand_damage_no_surviving_beast": 5,
+          "next_turn_hand_damage_if_beast_survives": 7,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 4,
+          "action": {
+            "type": "end_turn"
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 1,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 4,
+            "candidates": 1,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "end_turn"
+            }
+          ],
+          "value": -14.599200000000007,
+          "elapsed_s": 0.0006635410245507956
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.0007462089415639639,
+        "over_budget": false
+      }
+    }
+  ],
+  "after": {
+    "own_hp": 28,
+    "enemy_hp": 22,
+    "own_attack": 8,
+    "enemy_attack": 5,
+    "own_board": [
+      "DS1_070",
+      "EX1_531"
+    ],
+    "enemy_board": [
+      "EX1_608",
+      "EX1_556"
+    ]
+  }
+}

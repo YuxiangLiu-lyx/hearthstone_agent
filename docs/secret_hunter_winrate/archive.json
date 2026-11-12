@@ -1,0 +1,28 @@
+{
+  "W1": {
+    "parent": "Y1",
+    "status": "rejected",
+    "change": "Permit deterministic Juggler deployment; existing random summon rejection remains active.",
+    "source_hash": "3d85c6c3358dcb7e834a88b23df307f74d7a3f72f5625e39b4172921b3701f69",
+    "development": "experiments/secret-hunter-response-winrate-w1-dev"
+  },
+  "W2": {
+    "parent": "W1",
+    "status": "rejected",
+    "change": "Retain two distinct current-turn endpoints per root, with unchanged global six-endpoint reply cap and time/node budgets.",
+    "diagnostic": "Balanced case 57: the highest pre-reply Houndmaster endpoint trades into Apprentice; discarded buff-then-face would deal two more damage than the selected attack-then-buff.",
+    "source_hash": "5b40d3e0915e5bf641db102c1004f52ab8fc637db8a187a0c45ee47911784431",
+    "development": "experiments/secret-hunter-response-winrate-w2-dev"
+  },
+  "W3": {
+    "parent": "Y1",
+    "status": "stepping_stone_not_promoted",
+    "change": "Narrow deterministic Juggler-versus-Bow search admission on turns 2-4, excluding Coin and any immediately affordable random summon followup. Preserve other Y1 decision paths.",
+    "source_hash": "aae8e1ccfa7f797fcc4c063e143c49c4f19e092557df00fa6bbb61d5fd78a0e2",
+    "development": "experiments/secret-hunter-response-winrate-w3-dev",
+    "final": [
+      "experiments/secret-hunter-winrate-w3-final-core",
+      "experiments/secret-hunter-winrate-w3-final-guard"
+    ]
+  }
+}

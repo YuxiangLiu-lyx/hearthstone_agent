@@ -1,0 +1,95 @@
+{
+  "protected_inherited_files": 4480,
+  "installed_engine_files": 339,
+  "all_frozen_policies_and_decks_unchanged": true,
+  "new_seed_blocks_disjoint": true,
+  "normal": {
+    "games": 1360,
+    "own_decisions": 37725,
+    "illegal_both_players": 0,
+    "timeouts_both_players": 0,
+    "fallbacks": 0,
+    "over_2s": 0
+  },
+  "budget": {
+    "full_attempts_charged": 16000,
+    "short_charged": 42438,
+    "experiment_wall_s_sum": 2348.1026079654694
+  },
+  "artifact": {
+    "zip": "dist/secret-hunter-krush-winrate-w3.zip",
+    "zip_sha256": "3db718b39ec0901c9d7a019d7e7f2af6077cef5530f31619e26c58aa30edb997",
+    "source": "development/secret_hunter_winrate/candidates/W3",
+    "source_sha256": "aae8e1ccfa7f797fcc4c063e143c49c4f19e092557df00fa6bbb61d5fd78a0e2",
+    "extracted": "development/secret_hunter_winrate/release/secret-hunter-winrate-w3",
+    "bytes": 42474,
+    "unpacked_bytes": 111975,
+    "files": {
+      "SKILL.md": "3f7f12fc60f17ad0f63779db5e6bb504396b772816cd198227d9a2a88ea2dc8e",
+      "deck.json": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+      "config.json": "74ff4689b1d25c9eb8a66afe7e4e428e8cf49de2dba753b240254e6db99a9970",
+      "client.py": "808227a5287a30c6c2de12295c97620aedbac0f2f8dc5c162b097a82ad803e63",
+      "scripts/action_validator.py": "bbae26d867ce83a4523dc246745b9a985ccbe99b492f4ed75665dbf8bbd8708b",
+      "scripts/actions.py": "1dd1e0b42099f83ec4456ac189372d08c8e5e9298d3ace73e5752cc21d774111",
+      "scripts/base_policy.py": "64ea39be9842841e5db64fdca176eeb6a81cf51ae05e3f15af922d0566e4e12a",
+      "scripts/chance_model.py": "2654b333bf06bd0c98b0773e0bd05b91b0dc614fabce4a99a6418ba4c4c8d57f",
+      "scripts/chance_search.py": "6c94ba3cef9f6356862a50306027487d62334b4ffa14bc361eb1f7619917c4cf",
+      "scripts/decide.py": "5fc216a10f5c90b11b0b0d5feb1622822787e22d3b70874d805764b74e25976a",
+      "scripts/evaluator.py": "840e9e24b8526766402b1a3d94dba9763289d517cb4f00bc5653fef96af1eab1",
+      "scripts/fallback.py": "2a9a41376ed7e385480dc4cb1adf75397e7c9ac0d846ec4e70140bc607a0c4da",
+      "scripts/improvements.py": "71d859e307c4dad7666ce0143972ec9a01a8ac1ba4d3d597245e72cf55aaeb52",
+      "scripts/lethal_planner.py": "4706c814923d70a532f83c1ac5b49c5856f5548ec92803de5b5b0653969b3e91",
+      "scripts/next_turn.py": "247ba040875f8749dc4e9ed68037355ea990fa9aa5893fb5c3588c99f33a76c3",
+      "scripts/plan_cache.py": "d7d099e30bf5b1678f08f61738b0483a9b228d2180563c070a08a527b18e102d",
+      "scripts/program_policy.py": "d8a7a42da239638f32007aa146e8868f6d788b299b5ef6acdc406d0770774624",
+      "scripts/public_response.py": "48978313146d0eba1a92891e91a2676a20f64a261603eb6d3792df80252af736",
+      "scripts/race_plan.py": "0a84341cc20129e04f1b184c0cdf451e2b86e4b5c496dca6d6c80a4c97fe01b2",
+      "scripts/secret_policy.py": "3f4524f0e0da299625328a50561fad9a5f2640456996b248cf72d0e588c390d0",
+      "scripts/state_features.py": "65fefdacd01a7c2e282bedd68c87bfcbb0e04ae2cecb59fd5a495c5325f47dc9",
+      "scripts/tactical_model.py": "b1745a2c117adbc949e8f1bd0c2ea948a50503d20bda12cb9be4d25b37aa4f14",
+      "scripts/tactics_rank.py": "0fa43cfde7507c83ab3b9c8028343d85164056b7664f8415a7bc90ef0c3cbfc9",
+      "scripts/turn_search.py": "8316864b8773dbdb13f66daf0a870f7e102596819b299068c31491ccbaea40c7"
+    },
+    "course_assignment_sha256": "994756797ee569ea368cd7938a0d17cb73af86475a7846b8d5dab6cd0937a27a",
+    "scope": "Research artifact; no promotion without verified win-rate and reliability gains."
+  },
+  "client": {
+    "games": 2,
+    "decisions": 50,
+    "relay_deviations": 0,
+    "scope": "No-model official local client against existing Greedy; not a host-model evaluation."
+  },
+  "runtime_cases": 74,
+  "isolated_stale_cases": 8,
+  "reliability_pass": true,
+  "runs": {
+    "experiments/secret-hunter-response-winrate-w1-dev": {
+      "games": 96,
+      "results_sha256": "7fc8c071327e6c694d021ee41278c3f2ddc0fb31230de0be4aa4417e5f2110d0"
+    },
+    "experiments/secret-hunter-response-winrate-w2-dev": {
+      "games": 96,
+      "results_sha256": "2567634c956bed009db34055144c4590090724a499220b6c1ea4c20fe3156f60"
+    },
+    "experiments/secret-hunter-response-winrate-w3-dev": {
+      "games": 96,
+      "results_sha256": "8e76bdf120cc0984eb66510ada70254dbd0bd0a22b0618543c2d4471860504ac"
+    },
+    "experiments/secret-hunter-winrate-w3-final-core": {
+      "games": 480,
+      "results_sha256": "6183b36c934343f225ae567d8eb39a7d27b494afa19d9fce333a40fae3282e17"
+    },
+    "experiments/secret-hunter-winrate-w3-final-guard": {
+      "games": 56,
+      "results_sha256": "f827f64ee7a366a64e73fe48f32a6def1d0d5a1fe3f0b62d9a7b6e174aa01ce3"
+    },
+    "experiments/secret-hunter-winrate-y1-final-core": {
+      "games": 480,
+      "results_sha256": "63cafccae2f232dfe1b0d0d4036d9039817dec7c0a1b7e0149fea474df3e58da"
+    },
+    "experiments/secret-hunter-winrate-y1-final-guard": {
+      "games": 56,
+      "results_sha256": "1b2f812653bbe4086d3fc1cc8319396dac2b061eb4e2ab8a439fc029d6453ff8"
+    }
+  }
+}

@@ -1,0 +1,494 @@
+{
+  "candidate": "development/secret_hunter_response/candidates/Y1",
+  "case": 33,
+  "source": {
+    "seed": 960028,
+    "seat": 1,
+    "game": "ab8d58179c994e57",
+    "opponent": "bot1-mage-proxy",
+    "first_player": 1,
+    "score": 0
+  },
+  "initial_public_state": {
+    "protocol_version": "1",
+    "game_id": "ab8d58179c994e57",
+    "seq": 5,
+    "player": 1,
+    "turn": 5,
+    "phase": "main",
+    "timeout_s": 180.0,
+    "deadline_epoch_s": 1794451359.875,
+    "you": {
+      "hero": {
+        "entity_id": 4,
+        "card_id": "HERO_05",
+        "name": "Rexxar",
+        "hero_class": "HUNTER",
+        "health": 27,
+        "max_health": 30,
+        "armor": 0,
+        "attack": 0,
+        "can_attack": false,
+        "frozen": false,
+        "immune": false
+      },
+      "hero_power": {
+        "entity_id": 5,
+        "card_id": "HERO_05bp",
+        "name": "Steady Shot",
+        "cost": 2,
+        "usable": true,
+        "text": "Deal 2 damage to the enemy hero."
+      },
+      "weapon": null,
+      "mana": 3,
+      "max_mana": 3,
+      "overloaded": 0,
+      "overload_next_turn": 0,
+      "hand": [
+        {
+          "entity_id": 23,
+          "card_id": "EX1_536",
+          "name": "Eaglehorn Bow",
+          "type": "WEAPON",
+          "cost": 3,
+          "attack": 3,
+          "durability": 2,
+          "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+          "playable": true
+        },
+        {
+          "entity_id": 32,
+          "card_id": "DS1_070",
+          "name": "Houndmaster",
+          "type": "MINION",
+          "cost": 4,
+          "attack": 4,
+          "health": 3,
+          "text": "Battlecry: Give a friendly Beast +2/+2 and Taunt.",
+          "playable": false
+        },
+        {
+          "entity_id": 22,
+          "card_id": "NEW1_019",
+          "name": "Knife Juggler",
+          "type": "MINION",
+          "cost": 2,
+          "attack": 2,
+          "health": 2,
+          "text": "After you summon a minion, deal 1 damage to a random enemy.",
+          "playable": true
+        },
+        {
+          "entity_id": 15,
+          "card_id": "EX1_554",
+          "name": "Snake Trap",
+          "type": "SPELL",
+          "cost": 2,
+          "text": "Secret: When one of your minions is attacked, summon three 1/1 Snakes.",
+          "playable": true
+        },
+        {
+          "entity_id": 17,
+          "card_id": "EX1_610",
+          "name": "Explosive Trap",
+          "type": "SPELL",
+          "cost": 2,
+          "text": "Secret: When your hero is attacked, deal 2 damage to all enemies.",
+          "playable": true
+        }
+      ],
+      "board": [],
+      "secrets": [],
+      "deck_remaining": 24,
+      "deck_remaining_counts": {
+        "DS1_184": 1,
+        "EX1_029": 2,
+        "EX1_066": 1,
+        "EX1_080": 2,
+        "EX1_162": 1,
+        "EX1_531": 2,
+        "EX1_533": 1,
+        "EX1_534": 2,
+        "EX1_536": 1,
+        "EX1_538": 2,
+        "EX1_539": 2,
+        "EX1_543": 1,
+        "EX1_610": 1,
+        "EX1_611": 2,
+        "EX1_617": 1,
+        "NEW1_031": 2
+      },
+      "fatigue": 0,
+      "graveyard": [
+        {
+          "card_id": "NEW1_019",
+          "name": "Knife Juggler"
+        }
+      ]
+    },
+    "opponent": {
+      "hero": {
+        "entity_id": 37,
+        "card_id": "HERO_08",
+        "name": "Jaina Proudmoore",
+        "hero_class": "MAGE",
+        "health": 30,
+        "max_health": 30,
+        "armor": 0,
+        "attack": 0,
+        "can_attack": false,
+        "frozen": false,
+        "immune": false
+      },
+      "hero_power": {
+        "entity_id": 38,
+        "card_id": "HERO_08bp",
+        "name": "Fireblast",
+        "cost": 2,
+        "usable": false,
+        "text": "Deal 1 damage."
+      },
+      "weapon": null,
+      "mana": 0,
+      "max_mana": 2,
+      "overloaded": 0,
+      "overload_next_turn": 0,
+      "hand_size": 4,
+      "board": [
+        {
+          "entity_id": 42,
+          "card_id": "EX1_608",
+          "name": "Sorcerer's Apprentice",
+          "attack": 3,
+          "health": 2,
+          "max_health": 2,
+          "can_attack": false,
+          "taunt": false,
+          "divine_shield": false,
+          "frozen": false,
+          "stealth": false,
+          "windfury": false,
+          "charge": false,
+          "poisonous": false,
+          "deathrattle": false,
+          "spell_damage": 0,
+          "silenced": false,
+          "text": "Your spells cost (1) less."
+        }
+      ],
+      "secrets_count": 0,
+      "deck_remaining": 24,
+      "fatigue": 0,
+      "graveyard": [
+        {
+          "card_id": "GAME_005",
+          "name": "The Coin"
+        },
+        {
+          "card_id": "CS2_024",
+          "name": "Frostbolt"
+        }
+      ]
+    },
+    "choice": null,
+    "legal_actions": [
+      {
+        "type": "play_card",
+        "card": 23,
+        "targets": null,
+        "positions": null,
+        "choose": null
+      },
+      {
+        "type": "play_card",
+        "card": 22,
+        "targets": null,
+        "positions": [
+          0
+        ],
+        "choose": null
+      },
+      {
+        "type": "play_card",
+        "card": 15,
+        "targets": null,
+        "positions": null,
+        "choose": null
+      },
+      {
+        "type": "play_card",
+        "card": 17,
+        "targets": null,
+        "positions": null,
+        "choose": null
+      },
+      {
+        "type": "hero_power",
+        "targets": null
+      },
+      {
+        "type": "end_turn"
+      },
+      {
+        "type": "concede"
+      }
+    ],
+    "events": [
+      {
+        "event": "end_turn",
+        "player": 1
+      },
+      {
+        "event": "turn_start",
+        "turn": 4,
+        "player": 2
+      },
+      {
+        "event": "draw",
+        "player": 2
+      },
+      {
+        "event": "play_card",
+        "player": 2,
+        "card_id": "CS2_024",
+        "name": "Frostbolt",
+        "entity_id": 43,
+        "cost": 1,
+        "target": {
+          "entity_id": 21,
+          "card_id": "NEW1_019",
+          "name": "Knife Juggler"
+        },
+        "position": null,
+        "choose": null
+      },
+      {
+        "event": "damage",
+        "player": 1,
+        "entity_id": 21,
+        "card_id": "NEW1_019",
+        "name": "Knife Juggler",
+        "amount": 3,
+        "health_after": -1,
+        "source": {
+          "entity_id": 43,
+          "card_id": "CS2_024",
+          "name": "Frostbolt"
+        }
+      },
+      {
+        "event": "death",
+        "player": 1,
+        "entity_id": 21,
+        "card_id": "NEW1_019",
+        "name": "Knife Juggler"
+      },
+      {
+        "event": "attack",
+        "player": 2,
+        "attacker": {
+          "entity_id": 42,
+          "card_id": "EX1_608",
+          "name": "Sorcerer's Apprentice"
+        },
+        "target": {
+          "entity_id": 4,
+          "card_id": "HERO_05",
+          "name": "Rexxar"
+        }
+      },
+      {
+        "event": "damage",
+        "player": 1,
+        "entity_id": 4,
+        "card_id": "HERO_05",
+        "name": "Rexxar",
+        "amount": 3,
+        "health_after": 27,
+        "source": {
+          "entity_id": 42,
+          "card_id": "EX1_608",
+          "name": "Sorcerer's Apprentice"
+        },
+        "armor_absorbed": 0,
+        "armor_after": 0
+      },
+      {
+        "event": "end_turn",
+        "player": 2
+      },
+      {
+        "event": "turn_start",
+        "turn": 5,
+        "player": 1
+      },
+      {
+        "event": "draw",
+        "player": 1,
+        "card_id": "EX1_610",
+        "entity_id": 17
+      }
+    ],
+    "last_action_result": null,
+    "result": null,
+    "public_opponent_evidence": {
+      "shown_cards": [
+        "GAME_005",
+        "EX1_608",
+        "CS2_024"
+      ],
+      "face_attacks": 1,
+      "other_attacks": 0,
+      "cheap_minions_played": 1,
+      "weapons_seen": [],
+      "tendency": "insufficient_or_mixed",
+      "uncertainty": "Public evidence only; hidden hand and complete archetype remain unknown."
+    },
+    "hero_attack_available": true
+  },
+  "prefix_actions": 11,
+  "trace": [
+    {
+      "public_state_sha256": "ad9fcd1b8d43071c29daf08de0a73d242c1e29ab0dc7a7bc78947c365b0a792e",
+      "action": {
+        "type": "play_card",
+        "card": 22,
+        "position": 0
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 0,
+        "search_used": false,
+        "reason": "baseline_rank",
+        "race": {
+          "own_ehp": 27,
+          "enemy_ehp": 30,
+          "visible_incoming_before_taunts": 3,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 0,
+          "action": null,
+          "supported": true,
+          "bounded_out": false,
+          "depth": 0,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reason": "top_action_outside_effect_coverage"
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.001610125065781176,
+        "over_budget": false
+      }
+    },
+    {
+      "public_state_sha256": "1cba4327d26214d871f76a1abd55b9656e21e74d35b6017596d5d0ea2f5a8253",
+      "action": {
+        "type": "end_turn"
+      },
+      "info": {
+        "fallback": false,
+        "nodes": 2,
+        "search_used": true,
+        "reason": "turn_search",
+        "race": {
+          "own_ehp": 27,
+          "enemy_ehp": 30,
+          "visible_incoming_before_taunts": 3,
+          "next_turn_hand_damage_no_surviving_beast": 2,
+          "next_turn_hand_damage_if_beast_survives": 2,
+          "role": "develop_and_trade",
+          "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+        },
+        "lethal": {
+          "guaranteed": false,
+          "first_action": null,
+          "sequence": [],
+          "mana_required": null,
+          "damage": null,
+          "depends_on_random": false,
+          "nodes": 0,
+          "bounded_out": false,
+          "supported": true,
+          "pruned_by_upper_bound": true
+        },
+        "turn_search": {
+          "nodes": 2,
+          "action": {
+            "type": "end_turn"
+          },
+          "supported": true,
+          "bounded_out": false,
+          "depth": 1,
+          "excluded": 0,
+          "deduplicated": 0,
+          "beam_pruned": 0,
+          "stop_reason": null,
+          "reply": {
+            "nodes": 2,
+            "candidates": 1,
+            "comparable": true,
+            "scope": "visible attacks only; hidden cards excluded",
+            "visible_lethal_found": false
+          },
+          "sequence": [
+            {
+              "type": "end_turn"
+            }
+          ],
+          "value": -24.971500000000002,
+          "elapsed_s": 0.0006217909976840019
+        },
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        },
+        "elapsed_s": 0.0007363749900832772,
+        "over_budget": false
+      }
+    }
+  ],
+  "after": {
+    "own_hp": 27,
+    "enemy_hp": 30,
+    "own_attack": 2,
+    "enemy_attack": 3,
+    "own_board": [
+      "NEW1_019"
+    ],
+    "enemy_board": [
+      "EX1_608"
+    ]
+  }
+}
