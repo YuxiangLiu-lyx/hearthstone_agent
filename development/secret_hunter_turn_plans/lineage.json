@@ -1,0 +1,220 @@
+[
+  {
+    "name": "R0-trap-reference",
+    "parent": "Y1",
+    "path": "development/secret_hunter_turn_plans/candidates/R0-trap-reference",
+    "settings": {
+      "route_contexts": [
+        "trap"
+      ]
+    },
+    "sha256": "f7a850c6cf865dc00dc313c2731185fcf727362424fbf1c52cd8b574b9282b59",
+    "deck_audit": {
+      "sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+      "cards": 30,
+      "official_validation": true,
+      "actual_deck_submission_matches": true
+    }
+  },
+  {
+    "name": "R1-memory",
+    "parent": "R0-trap-reference",
+    "path": "development/secret_hunter_turn_plans/candidates/R1-memory",
+    "settings": {
+      "route_contexts": [
+        "trap"
+      ],
+      "continuation_memory": true
+    },
+    "sha256": "f66d0aff71d50da6ed6a06878281877d88be80bb66432a2640a39ceaffc86971",
+    "deck_audit": {
+      "sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+      "cards": 30,
+      "official_validation": true,
+      "actual_deck_submission_matches": true
+    }
+  },
+  {
+    "name": "R2-context",
+    "parent": "R1-memory",
+    "path": "development/secret_hunter_turn_plans/candidates/R2-context",
+    "settings": {
+      "route_contexts": [
+        "trap",
+        "knife_wolf",
+        "amani"
+      ],
+      "continuation_memory": true,
+      "route_weights": {
+        "knife": 1.5,
+        "amani": 8,
+        "reserve": 0
+      }
+    },
+    "sha256": "4a1beeaac54c0360b51057290b8146837bff226e986af272c227cd3aaccafe84",
+    "deck_audit": {
+      "sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+      "cards": 30,
+      "official_validation": true,
+      "actual_deck_submission_matches": true
+    }
+  },
+  {
+    "name": "R3-reserve",
+    "parent": "R1-memory",
+    "path": "development/secret_hunter_turn_plans/candidates/R3-reserve",
+    "settings": {
+      "route_contexts": [
+        "trap",
+        "knife_wolf",
+        "amani"
+      ],
+      "continuation_memory": true,
+      "route_weights": {
+        "knife": 0.7,
+        "amani": 5,
+        "reserve": 2
+      }
+    },
+    "sha256": "235f5d9664655e0e831a3c2feafbdec0a161b06d43b9139598b6816baa2b7bb2",
+    "deck_audit": {
+      "sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+      "cards": 30,
+      "official_validation": true,
+      "actual_deck_submission_matches": true
+    }
+  },
+  {
+    "name": "R4-canonical-cache",
+    "parent": "R1-memory",
+    "path": "development/secret_hunter_turn_plans/candidates/R4-canonical-cache",
+    "settings": {
+      "route_contexts": [
+        "trap"
+      ],
+      "continuation_memory": true
+    },
+    "sha256": "bbf2412883abe5ee423507cb727672c35199c0d2f21e55daa1a6e4c69c5f6eb4",
+    "deck_audit": {
+      "sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+      "cards": 30,
+      "official_validation": true,
+      "actual_deck_submission_matches": true
+    }
+  },
+  {
+    "name": "R5-curve-guard",
+    "parent": "R0-trap-reference",
+    "path": "development/secret_hunter_turn_plans/candidates/R5-curve-guard",
+    "settings": {
+      "route_contexts": [
+        "trap"
+      ],
+      "trap_min_max_mana": 3
+    },
+    "sha256": "ab159e09e507e0782111264f4b74266719ed72859c2365e1ec38dae567292174",
+    "deck_audit": {
+      "sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+      "cards": 30,
+      "official_validation": true,
+      "actual_deck_submission_matches": true
+    }
+  },
+  {
+    "name": "R6-finish-minions",
+    "parent": "R5-curve-guard",
+    "path": "development/secret_hunter_turn_plans/candidates/R6-finish-minions",
+    "settings": {
+      "route_contexts": [
+        "trap"
+      ],
+      "trap_min_max_mana": 3,
+      "continuation_memory": true,
+      "continuation_mode": "finish_minions"
+    },
+    "sha256": "f9be4555ce5c50028b6e72c01b5a34c3ff06977f0dffd6a8fa4b58d2e3193fb9",
+    "deck_audit": {
+      "sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+      "cards": 30,
+      "official_validation": true,
+      "actual_deck_submission_matches": true
+    }
+  },
+  {
+    "name": "engine-trap-v2",
+    "parent": "Y1",
+    "path": "development/secret_hunter_turn_plans/candidates/engine-trap-v2",
+    "settings": {
+      "historical_features": [
+        "engine",
+        "trap"
+      ]
+    },
+    "sha256": "ad6194e2024f0375805be8a32c5f78230af7f8d3af06a161dd6748bd89e3abc9",
+    "historical_commit": "0066a304931ae89415e6eff2a6735c2d6026b7d0"
+  },
+  {
+    "name": "engine-trap-commit-v3",
+    "parent": "Y1",
+    "path": "development/secret_hunter_turn_plans/candidates/engine-trap-commit-v3",
+    "settings": {
+      "historical_features": [
+        "engine",
+        "trap",
+        "trap-commit"
+      ]
+    },
+    "sha256": "e316a9707a5fafa683eb374243e6865a636752aeb912854fc22639097a445b9a",
+    "historical_commit": "0066a304931ae89415e6eff2a6735c2d6026b7d0"
+  },
+  {
+    "name": "E2-finish-minions",
+    "parent": "engine-trap-v2",
+    "path": "development/secret_hunter_turn_plans/candidates/E2-finish-minions",
+    "settings": {
+      "route_contexts": [],
+      "continuation_memory": true,
+      "continuation_mode": "finish_minions"
+    },
+    "sha256": "edb0f0962887efaeb0a2af7d3147a5aa88ca8903029dfa570380fb7ad7979086",
+    "deck_audit": {
+      "sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+      "cards": 30,
+      "official_validation": true,
+      "actual_deck_submission_matches": true
+    }
+  },
+  {
+    "name": "E3-verified-plans",
+    "parent": "engine-trap-v2",
+    "path": "development/secret_hunter_turn_plans/candidates/E3-verified-plans",
+    "settings": {
+      "route_contexts": [],
+      "continuation_memory": true
+    },
+    "sha256": "031dd6f17164d880554f5fb96185f7e39a6dc3a34ac34ff39a64a9bbc9142bc5",
+    "deck_audit": {
+      "sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+      "cards": 30,
+      "official_validation": true,
+      "actual_deck_submission_matches": true
+    }
+  },
+  {
+    "name": "E4-trap-continuation",
+    "parent": "engine-trap-commit-v3",
+    "path": "development/secret_hunter_turn_plans/candidates/E4-trap-continuation",
+    "settings": {
+      "route_contexts": [],
+      "continuation_memory": true,
+      "continuation_scope": "trap_setup"
+    },
+    "sha256": "9d936637879066143cfa78c7e52faf7e48647dad62fc686ee40d316b56e0686b",
+    "deck_audit": {
+      "sha256": "54c475d2f72ff3a36ec5d47d0e34bf33625eb1b20c75f213e171c73719cf61f4",
+      "cards": 30,
+      "official_validation": true,
+      "actual_deck_submission_matches": true
+    }
+  }
+]

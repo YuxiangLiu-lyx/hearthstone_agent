@@ -1,0 +1,43 @@
+{
+  "tests": [
+    "test_direwolf_rehydration_and_removal",
+    "test_mortal_coil_friendly_amani_lethal",
+    "test_krush_taunt_route",
+    "test_secret_order_bow_and_misdirection",
+    "test_juggler_hounds_and_independent_rng"
+  ],
+  "run": 5,
+  "failures": 0,
+  "errors": 0,
+  "evidence": [
+    {
+      "test": "friendly_coil_amani",
+      "visible_attack_before": 6,
+      "attack_after": 9,
+      "own_hp": 9,
+      "winner": 2
+    },
+    {
+      "test": "ordered_secrets_bow",
+      "outcomes": [
+        {
+          "order": [
+            "EX1_610",
+            "EX1_611"
+          ],
+          "durability": 4,
+          "hp": 30
+        },
+        {
+          "order": [
+            "EX1_611",
+            "EX1_610"
+          ],
+          "durability": 3,
+          "hp": 30
+        }
+      ],
+      "misdirection_trials": 12
+    }
+  ]
+}

@@ -1,0 +1,2925 @@
+{
+  "existing_trap_model_retested": [
+    {
+      "enemy": [
+        "EX1_556"
+      ],
+      "prediction": {
+        "hp": 30,
+        "enemy_hp": 28,
+        "board": [
+          [
+            "skele21",
+            2,
+            1
+          ]
+        ]
+      },
+      "engine": {
+        "hp": 30,
+        "enemy_hp": 28,
+        "board": [
+          [
+            "skele21",
+            2,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "enemy": [
+        "EX1_029"
+      ],
+      "prediction": {
+        "hp": 28,
+        "enemy_hp": 28,
+        "board": []
+      },
+      "engine": {
+        "hp": 28,
+        "enemy_hp": 28,
+        "board": []
+      }
+    },
+    {
+      "enemy": [
+        "EX1_393"
+      ],
+      "prediction": {
+        "hp": 28,
+        "enemy_hp": 28,
+        "board": [
+          [
+            "EX1_393",
+            5,
+            1
+          ]
+        ]
+      },
+      "engine": {
+        "hp": 28,
+        "enemy_hp": 28,
+        "board": [
+          [
+            "EX1_393",
+            5,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "enemy": [
+        "EX1_556",
+        "EX1_162",
+        "CS2_171"
+      ],
+      "prediction": {
+        "hp": 30,
+        "enemy_hp": 28,
+        "board": [
+          [
+            "skele21",
+            2,
+            1
+          ]
+        ]
+      },
+      "engine": {
+        "hp": 30,
+        "enemy_hp": 28,
+        "board": [
+          [
+            "skele21",
+            2,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "cache_regression": {
+    "legacy": "invalidated by per-invocation _deadline",
+    "corrected_action": {
+      "type": "play_card",
+      "card": 72,
+      "position": 1
+    },
+    "stale_state_rejected": true,
+    "legal": true
+  },
+  "reconstructed_public_replays": [
+    {
+      "source": "trap-008",
+      "arm": "Y1",
+      "sequence": [
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 37,
+            "target": 4
+          },
+          "elapsed_s": 0.10931899999559391,
+          "reason": "guaranteed_lethal",
+          "routes": null
+        },
+        {
+          "action": {
+            "type": "hero_power"
+          },
+          "elapsed_s": 0.08003695799561683,
+          "reason": "guaranteed_lethal",
+          "routes": null
+        }
+      ],
+      "final_public_state": {
+        "turn": 16,
+        "phase": "game_over",
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 10,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 6,
+          "max_mana": 8,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 43,
+              "card_id": "DS1_184",
+              "name": "Tracking",
+              "type": "SPELL",
+              "cost": 1,
+              "text": "Look at the top 3 cards of your deck. Draw one and discard the others.",
+              "playable": false
+            },
+            {
+              "entity_id": 57,
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow",
+              "type": "WEAPON",
+              "cost": 3,
+              "attack": 3,
+              "durability": 2,
+              "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+              "playable": false
+            },
+            {
+              "entity_id": 51,
+              "card_id": "EX1_610",
+              "name": "Explosive Trap",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When your hero is attacked, deal 2 damage to all enemies.",
+              "playable": false
+            },
+            {
+              "entity_id": 42,
+              "card_id": "EX1_080",
+              "name": "Secretkeeper",
+              "type": "MINION",
+              "cost": 1,
+              "attack": 1,
+              "health": 2,
+              "text": "Whenever a Secret is played, gain +1/+1.",
+              "playable": false
+            },
+            {
+              "entity_id": 46,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "Whenever a friendly Beast dies, gain +2/+1.",
+              "playable": false
+            }
+          ],
+          "board": [],
+          "secrets": [],
+          "deck_remaining": 18,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "EX1_029": 2,
+            "EX1_066": 1,
+            "EX1_080": 1,
+            "EX1_162": 1,
+            "EX1_531": 1,
+            "EX1_533": 1,
+            "EX1_534": 1,
+            "EX1_538": 1,
+            "EX1_539": 2,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_031": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_534t",
+              "name": "Hyena"
+            },
+            {
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            },
+            {
+              "card_id": "EX1_534t",
+              "name": "Hyena"
+            },
+            {
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane"
+            },
+            {
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "EX1_538",
+              "name": "Unleash the Hounds"
+            },
+            {
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            },
+            {
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            },
+            {
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            },
+            {
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            },
+            {
+              "card_id": "EX1_610",
+              "name": "Explosive Trap"
+            },
+            {
+              "card_id": "NEW1_031",
+              "name": "Animal Companion"
+            },
+            {
+              "card_id": "NEW1_032",
+              "name": "Misha"
+            },
+            {
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_07",
+            "name": "Gul'dan",
+            "hero_class": "WARLOCK",
+            "health": 0,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_07bp",
+            "name": "Life Tap",
+            "cost": 2,
+            "usable": false,
+            "text": "Draw a card and take 2 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 8,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 0,
+          "board": [
+            {
+              "entity_id": 31,
+              "card_id": "EX1_556",
+              "name": "Harvest Golem",
+              "attack": 2,
+              "health": 3,
+              "max_health": 3,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": true,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+            },
+            {
+              "entity_id": 15,
+              "card_id": "EX1_046",
+              "name": "Dark Iron Dwarf",
+              "attack": 4,
+              "health": 4,
+              "max_health": 4,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Battlecry: Give a minion +2 Attack this turn."
+            },
+            {
+              "entity_id": 9,
+              "card_id": "EX1_008",
+              "name": "Argent Squire",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Divine Shield"
+            },
+            {
+              "entity_id": 34,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "After you summon a minion, deal 1 damage to a random enemy."
+            },
+            {
+              "entity_id": 16,
+              "card_id": "EX1_067",
+              "name": "Argent Commander",
+              "attack": 4,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": true,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Charge Divine Shield"
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 17,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_008",
+              "name": "Argent Squire"
+            },
+            {
+              "card_id": "EX1_046",
+              "name": "Dark Iron Dwarf"
+            },
+            {
+              "card_id": "EX1_319",
+              "name": "Flame Imp"
+            },
+            {
+              "card_id": "EX1_597",
+              "name": "Imp Master"
+            },
+            {
+              "card_id": "EX1_598",
+              "name": "Imp"
+            },
+            {
+              "card_id": "EX1_598",
+              "name": "Imp"
+            },
+            {
+              "card_id": "EX1_393",
+              "name": "Amani Berserker"
+            },
+            {
+              "card_id": "CS2_065",
+              "name": "Voidwalker"
+            },
+            {
+              "card_id": "EX1_308",
+              "name": "Soulfire"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": []
+      },
+      "deck_submission_exact": true
+    },
+    {
+      "source": "trap-008",
+      "arm": "R0-trap-reference",
+      "sequence": [
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 37,
+            "target": 4
+          },
+          "elapsed_s": 0.09401029199943878,
+          "reason": "guaranteed_lethal",
+          "routes": null
+        },
+        {
+          "action": {
+            "type": "hero_power"
+          },
+          "elapsed_s": 0.0786208749996149,
+          "reason": "guaranteed_lethal",
+          "routes": null
+        }
+      ],
+      "final_public_state": {
+        "turn": 16,
+        "phase": "game_over",
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 10,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 6,
+          "max_mana": 8,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 43,
+              "card_id": "DS1_184",
+              "name": "Tracking",
+              "type": "SPELL",
+              "cost": 1,
+              "text": "Look at the top 3 cards of your deck. Draw one and discard the others.",
+              "playable": false
+            },
+            {
+              "entity_id": 57,
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow",
+              "type": "WEAPON",
+              "cost": 3,
+              "attack": 3,
+              "durability": 2,
+              "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+              "playable": false
+            },
+            {
+              "entity_id": 51,
+              "card_id": "EX1_610",
+              "name": "Explosive Trap",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When your hero is attacked, deal 2 damage to all enemies.",
+              "playable": false
+            },
+            {
+              "entity_id": 42,
+              "card_id": "EX1_080",
+              "name": "Secretkeeper",
+              "type": "MINION",
+              "cost": 1,
+              "attack": 1,
+              "health": 2,
+              "text": "Whenever a Secret is played, gain +1/+1.",
+              "playable": false
+            },
+            {
+              "entity_id": 46,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "Whenever a friendly Beast dies, gain +2/+1.",
+              "playable": false
+            }
+          ],
+          "board": [],
+          "secrets": [],
+          "deck_remaining": 18,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "EX1_029": 2,
+            "EX1_066": 1,
+            "EX1_080": 1,
+            "EX1_162": 1,
+            "EX1_531": 1,
+            "EX1_533": 1,
+            "EX1_534": 1,
+            "EX1_538": 1,
+            "EX1_539": 2,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_031": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_534t",
+              "name": "Hyena"
+            },
+            {
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            },
+            {
+              "card_id": "EX1_534t",
+              "name": "Hyena"
+            },
+            {
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane"
+            },
+            {
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "EX1_538",
+              "name": "Unleash the Hounds"
+            },
+            {
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            },
+            {
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            },
+            {
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            },
+            {
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            },
+            {
+              "card_id": "EX1_610",
+              "name": "Explosive Trap"
+            },
+            {
+              "card_id": "NEW1_031",
+              "name": "Animal Companion"
+            },
+            {
+              "card_id": "NEW1_032",
+              "name": "Misha"
+            },
+            {
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_07",
+            "name": "Gul'dan",
+            "hero_class": "WARLOCK",
+            "health": 0,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_07bp",
+            "name": "Life Tap",
+            "cost": 2,
+            "usable": false,
+            "text": "Draw a card and take 2 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 8,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 0,
+          "board": [
+            {
+              "entity_id": 31,
+              "card_id": "EX1_556",
+              "name": "Harvest Golem",
+              "attack": 2,
+              "health": 3,
+              "max_health": 3,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": true,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+            },
+            {
+              "entity_id": 15,
+              "card_id": "EX1_046",
+              "name": "Dark Iron Dwarf",
+              "attack": 4,
+              "health": 4,
+              "max_health": 4,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Battlecry: Give a minion +2 Attack this turn."
+            },
+            {
+              "entity_id": 9,
+              "card_id": "EX1_008",
+              "name": "Argent Squire",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Divine Shield"
+            },
+            {
+              "entity_id": 34,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "After you summon a minion, deal 1 damage to a random enemy."
+            },
+            {
+              "entity_id": 16,
+              "card_id": "EX1_067",
+              "name": "Argent Commander",
+              "attack": 4,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": true,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Charge Divine Shield"
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 17,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_008",
+              "name": "Argent Squire"
+            },
+            {
+              "card_id": "EX1_046",
+              "name": "Dark Iron Dwarf"
+            },
+            {
+              "card_id": "EX1_319",
+              "name": "Flame Imp"
+            },
+            {
+              "card_id": "EX1_597",
+              "name": "Imp Master"
+            },
+            {
+              "card_id": "EX1_598",
+              "name": "Imp"
+            },
+            {
+              "card_id": "EX1_598",
+              "name": "Imp"
+            },
+            {
+              "card_id": "EX1_393",
+              "name": "Amani Berserker"
+            },
+            {
+              "card_id": "CS2_065",
+              "name": "Voidwalker"
+            },
+            {
+              "card_id": "EX1_308",
+              "name": "Soulfire"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": []
+      },
+      "deck_submission_exact": true
+    },
+    {
+      "source": "trap-008",
+      "arm": "R4-canonical-cache",
+      "sequence": [
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 37,
+            "target": 4
+          },
+          "elapsed_s": 0.09199941699625924,
+          "reason": "guaranteed_lethal",
+          "routes": null
+        },
+        {
+          "action": {
+            "type": "hero_power"
+          },
+          "elapsed_s": 0.08326374999887776,
+          "reason": "guaranteed_lethal",
+          "routes": null
+        }
+      ],
+      "final_public_state": {
+        "turn": 16,
+        "phase": "game_over",
+        "you": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 10,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 6,
+          "max_mana": 8,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 43,
+              "card_id": "DS1_184",
+              "name": "Tracking",
+              "type": "SPELL",
+              "cost": 1,
+              "text": "Look at the top 3 cards of your deck. Draw one and discard the others.",
+              "playable": false
+            },
+            {
+              "entity_id": 57,
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow",
+              "type": "WEAPON",
+              "cost": 3,
+              "attack": 3,
+              "durability": 2,
+              "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+              "playable": false
+            },
+            {
+              "entity_id": 51,
+              "card_id": "EX1_610",
+              "name": "Explosive Trap",
+              "type": "SPELL",
+              "cost": 2,
+              "text": "Secret: When your hero is attacked, deal 2 damage to all enemies.",
+              "playable": false
+            },
+            {
+              "entity_id": 42,
+              "card_id": "EX1_080",
+              "name": "Secretkeeper",
+              "type": "MINION",
+              "cost": 1,
+              "attack": 1,
+              "health": 2,
+              "text": "Whenever a Secret is played, gain +1/+1.",
+              "playable": false
+            },
+            {
+              "entity_id": 46,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "Whenever a friendly Beast dies, gain +2/+1.",
+              "playable": false
+            }
+          ],
+          "board": [],
+          "secrets": [],
+          "deck_remaining": 18,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "EX1_029": 2,
+            "EX1_066": 1,
+            "EX1_080": 1,
+            "EX1_162": 1,
+            "EX1_531": 1,
+            "EX1_533": 1,
+            "EX1_534": 1,
+            "EX1_538": 1,
+            "EX1_539": 2,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_031": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_534t",
+              "name": "Hyena"
+            },
+            {
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            },
+            {
+              "card_id": "EX1_534t",
+              "name": "Hyena"
+            },
+            {
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane"
+            },
+            {
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "EX1_538",
+              "name": "Unleash the Hounds"
+            },
+            {
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            },
+            {
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            },
+            {
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            },
+            {
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            },
+            {
+              "card_id": "EX1_610",
+              "name": "Explosive Trap"
+            },
+            {
+              "card_id": "NEW1_031",
+              "name": "Animal Companion"
+            },
+            {
+              "card_id": "NEW1_032",
+              "name": "Misha"
+            },
+            {
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_07",
+            "name": "Gul'dan",
+            "hero_class": "WARLOCK",
+            "health": 0,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_07bp",
+            "name": "Life Tap",
+            "cost": 2,
+            "usable": false,
+            "text": "Draw a card and take 2 damage."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 8,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 0,
+          "board": [
+            {
+              "entity_id": 31,
+              "card_id": "EX1_556",
+              "name": "Harvest Golem",
+              "attack": 2,
+              "health": 3,
+              "max_health": 3,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": true,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Deathrattle: Summon a 2/1 Damaged Golem."
+            },
+            {
+              "entity_id": 15,
+              "card_id": "EX1_046",
+              "name": "Dark Iron Dwarf",
+              "attack": 4,
+              "health": 4,
+              "max_health": 4,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Battlecry: Give a minion +2 Attack this turn."
+            },
+            {
+              "entity_id": 9,
+              "card_id": "EX1_008",
+              "name": "Argent Squire",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Divine Shield"
+            },
+            {
+              "entity_id": 34,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "After you summon a minion, deal 1 damage to a random enemy."
+            },
+            {
+              "entity_id": 16,
+              "card_id": "EX1_067",
+              "name": "Argent Commander",
+              "attack": 4,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": true,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Charge Divine Shield"
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 17,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_008",
+              "name": "Argent Squire"
+            },
+            {
+              "card_id": "EX1_046",
+              "name": "Dark Iron Dwarf"
+            },
+            {
+              "card_id": "EX1_319",
+              "name": "Flame Imp"
+            },
+            {
+              "card_id": "EX1_597",
+              "name": "Imp Master"
+            },
+            {
+              "card_id": "EX1_598",
+              "name": "Imp"
+            },
+            {
+              "card_id": "EX1_598",
+              "name": "Imp"
+            },
+            {
+              "card_id": "EX1_393",
+              "name": "Amani Berserker"
+            },
+            {
+              "card_id": "CS2_065",
+              "name": "Voidwalker"
+            },
+            {
+              "card_id": "EX1_308",
+              "name": "Soulfire"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": []
+      },
+      "deck_submission_exact": true
+    },
+    {
+      "source": "knife_wolf-006",
+      "arm": "Y1",
+      "sequence": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": 27,
+            "target": 55
+          },
+          "elapsed_s": 0.11711795900191646,
+          "reason": "turn_search",
+          "routes": null
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": 6,
+            "position": 0
+          },
+          "elapsed_s": 0.08157891600421863,
+          "reason": "turn_search",
+          "routes": null
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "elapsed_s": 0.0800898329980555,
+          "reason": "turn_search",
+          "routes": null
+        }
+      ],
+      "final_public_state": {
+        "turn": 8,
+        "phase": "waiting",
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 27,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 4,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 32,
+              "card_id": "DS1_070",
+              "name": "Houndmaster",
+              "type": "MINION",
+              "cost": 4,
+              "attack": 4,
+              "health": 3,
+              "text": "Battlecry: Give a friendly Beast +2/+2 and Taunt.",
+              "playable": false
+            },
+            {
+              "entity_id": 13,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "Whenever a friendly Beast dies, gain +2/+1.",
+              "playable": false
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 6,
+              "card_id": "EX1_029",
+              "name": "Leper Gnome",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": true,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Deathrattle: Deal 2 damage to the enemy hero."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 23,
+          "deck_remaining_counts": {
+            "DS1_184": 1,
+            "EX1_080": 2,
+            "EX1_162": 1,
+            "EX1_531": 1,
+            "EX1_533": 1,
+            "EX1_534": 2,
+            "EX1_536": 2,
+            "EX1_538": 2,
+            "EX1_539": 1,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 2,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_019": 2,
+            "NEW1_031": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze"
+            },
+            {
+              "card_id": "EX1_029",
+              "name": "Leper Gnome"
+            },
+            {
+              "card_id": "NEW1_031",
+              "name": "Animal Companion"
+            },
+            {
+              "card_id": "NEW1_032",
+              "name": "Misha"
+            },
+            {
+              "card_id": "EX1_539",
+              "name": "Kill Command"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_07",
+            "name": "Gul'dan",
+            "hero_class": "WARLOCK",
+            "health": 21,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_07bp",
+            "name": "Life Tap",
+            "cost": 2,
+            "usable": false,
+            "text": "Draw a card and take 2 damage."
+          },
+          "weapon": null,
+          "mana": 4,
+          "max_mana": 4,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 4,
+          "board": [
+            {
+              "entity_id": 68,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "After you summon a minion, deal 1 damage to a random enemy."
+            },
+            {
+              "entity_id": 43,
+              "card_id": "EX1_008",
+              "name": "Argent Squire",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Divine Shield"
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 22,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_319",
+              "name": "Flame Imp"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": []
+      },
+      "deck_submission_exact": true
+    },
+    {
+      "source": "knife_wolf-006",
+      "arm": "R0-trap-reference",
+      "sequence": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": 27,
+            "target": 55
+          },
+          "elapsed_s": 0.12129516600543866,
+          "reason": "turn_search",
+          "routes": {
+            "context": [
+              "knife_wolf"
+            ],
+            "hit": true,
+            "legal_alternative": false,
+            "changed": false
+          }
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": 6,
+            "position": 0
+          },
+          "elapsed_s": 0.08296474999951897,
+          "reason": "turn_search",
+          "routes": {
+            "context": [
+              "knife_wolf"
+            ],
+            "hit": true,
+            "legal_alternative": false,
+            "changed": false
+          }
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "elapsed_s": 0.08387687500362517,
+          "reason": "turn_search",
+          "routes": {
+            "context": [
+              "knife_wolf"
+            ],
+            "hit": true,
+            "legal_alternative": false,
+            "changed": false
+          }
+        }
+      ],
+      "final_public_state": {
+        "turn": 8,
+        "phase": "waiting",
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 27,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 4,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 32,
+              "card_id": "DS1_070",
+              "name": "Houndmaster",
+              "type": "MINION",
+              "cost": 4,
+              "attack": 4,
+              "health": 3,
+              "text": "Battlecry: Give a friendly Beast +2/+2 and Taunt.",
+              "playable": false
+            },
+            {
+              "entity_id": 13,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "Whenever a friendly Beast dies, gain +2/+1.",
+              "playable": false
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 6,
+              "card_id": "EX1_029",
+              "name": "Leper Gnome",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": true,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Deathrattle: Deal 2 damage to the enemy hero."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 23,
+          "deck_remaining_counts": {
+            "DS1_184": 1,
+            "EX1_080": 2,
+            "EX1_162": 1,
+            "EX1_531": 1,
+            "EX1_533": 1,
+            "EX1_534": 2,
+            "EX1_536": 2,
+            "EX1_538": 2,
+            "EX1_539": 1,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 2,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_019": 2,
+            "NEW1_031": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze"
+            },
+            {
+              "card_id": "EX1_029",
+              "name": "Leper Gnome"
+            },
+            {
+              "card_id": "NEW1_031",
+              "name": "Animal Companion"
+            },
+            {
+              "card_id": "NEW1_032",
+              "name": "Misha"
+            },
+            {
+              "card_id": "EX1_539",
+              "name": "Kill Command"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_07",
+            "name": "Gul'dan",
+            "hero_class": "WARLOCK",
+            "health": 21,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_07bp",
+            "name": "Life Tap",
+            "cost": 2,
+            "usable": false,
+            "text": "Draw a card and take 2 damage."
+          },
+          "weapon": null,
+          "mana": 4,
+          "max_mana": 4,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 4,
+          "board": [
+            {
+              "entity_id": 68,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "After you summon a minion, deal 1 damage to a random enemy."
+            },
+            {
+              "entity_id": 43,
+              "card_id": "EX1_008",
+              "name": "Argent Squire",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Divine Shield"
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 22,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_319",
+              "name": "Flame Imp"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": []
+      },
+      "deck_submission_exact": true
+    },
+    {
+      "source": "knife_wolf-006",
+      "arm": "R4-canonical-cache",
+      "sequence": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": 27,
+            "target": 55
+          },
+          "elapsed_s": 0.11895962500420865,
+          "reason": "turn_search",
+          "routes": {
+            "context": [
+              "knife_wolf"
+            ],
+            "hit": true,
+            "legal_alternative": false,
+            "changed": false,
+            "cache": "empty",
+            "cached_steps": 1
+          }
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": 6,
+            "position": 0
+          },
+          "elapsed_s": 0.08146241700160317,
+          "reason": "verified_continuation",
+          "routes": {
+            "context": [
+              "knife_wolf"
+            ],
+            "hit": true,
+            "legal_alternative": false,
+            "changed": false,
+            "cache": "verified",
+            "cache_hit": true
+          }
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "elapsed_s": 0.08141254200018011,
+          "reason": "turn_search",
+          "routes": {
+            "context": [
+              "knife_wolf"
+            ],
+            "hit": true,
+            "legal_alternative": false,
+            "changed": false,
+            "cache": "empty",
+            "cached_steps": 0
+          }
+        }
+      ],
+      "final_public_state": {
+        "turn": 8,
+        "phase": "waiting",
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 27,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 4,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 32,
+              "card_id": "DS1_070",
+              "name": "Houndmaster",
+              "type": "MINION",
+              "cost": 4,
+              "attack": 4,
+              "health": 3,
+              "text": "Battlecry: Give a friendly Beast +2/+2 and Taunt.",
+              "playable": false
+            },
+            {
+              "entity_id": 13,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "type": "MINION",
+              "cost": 2,
+              "attack": 2,
+              "health": 2,
+              "text": "Whenever a friendly Beast dies, gain +2/+1.",
+              "playable": false
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 6,
+              "card_id": "EX1_029",
+              "name": "Leper Gnome",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": true,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Deathrattle: Deal 2 damage to the enemy hero."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 23,
+          "deck_remaining_counts": {
+            "DS1_184": 1,
+            "EX1_080": 2,
+            "EX1_162": 1,
+            "EX1_531": 1,
+            "EX1_533": 1,
+            "EX1_534": 2,
+            "EX1_536": 2,
+            "EX1_538": 2,
+            "EX1_539": 1,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 2,
+            "EX1_611": 2,
+            "EX1_617": 1,
+            "NEW1_019": 2,
+            "NEW1_031": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_066",
+              "name": "Acidic Swamp Ooze"
+            },
+            {
+              "card_id": "EX1_029",
+              "name": "Leper Gnome"
+            },
+            {
+              "card_id": "NEW1_031",
+              "name": "Animal Companion"
+            },
+            {
+              "card_id": "NEW1_032",
+              "name": "Misha"
+            },
+            {
+              "card_id": "EX1_539",
+              "name": "Kill Command"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_07",
+            "name": "Gul'dan",
+            "hero_class": "WARLOCK",
+            "health": 21,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_07bp",
+            "name": "Life Tap",
+            "cost": 2,
+            "usable": false,
+            "text": "Draw a card and take 2 damage."
+          },
+          "weapon": null,
+          "mana": 4,
+          "max_mana": 4,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 4,
+          "board": [
+            {
+              "entity_id": 68,
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler",
+              "attack": 2,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "After you summon a minion, deal 1 damage to a random enemy."
+            },
+            {
+              "entity_id": 43,
+              "card_id": "EX1_008",
+              "name": "Argent Squire",
+              "attack": 1,
+              "health": 1,
+              "max_health": 1,
+              "can_attack": true,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Divine Shield"
+            }
+          ],
+          "secrets_count": 0,
+          "deck_remaining": 22,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_319",
+              "name": "Flame Imp"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": []
+      },
+      "deck_submission_exact": true
+    },
+    {
+      "source": "amani-003",
+      "arm": "Y1",
+      "sequence": [
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 11,
+            "target": 43
+          },
+          "elapsed_s": 0.12074141699849861,
+          "reason": "turn_search",
+          "routes": null
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": 29
+          },
+          "elapsed_s": 0.0820025840002927,
+          "reason": "turn_search",
+          "routes": null
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": 12,
+            "position": 2
+          },
+          "elapsed_s": 0.08440370800235542,
+          "reason": "turn_search",
+          "routes": null
+        },
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 73,
+            "target": 37
+          },
+          "elapsed_s": 0.08299816699582152,
+          "reason": "turn_search",
+          "routes": null
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "elapsed_s": 0.07966320899868151,
+          "reason": "turn_search",
+          "routes": null
+        }
+      ],
+      "final_public_state": {
+        "turn": 10,
+        "phase": "waiting",
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 13,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 5,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 24,
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow",
+              "type": "WEAPON",
+              "cost": 3,
+              "attack": 3,
+              "durability": 2,
+              "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+              "playable": false
+            },
+            {
+              "entity_id": 33,
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane",
+              "type": "MINION",
+              "cost": 6,
+              "attack": 6,
+              "health": 5,
+              "text": "Deathrattle: Summon two 2/2 Hyenas.",
+              "playable": false
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 73,
+              "card_id": "NEW1_033",
+              "name": "Leokk",
+              "attack": 3,
+              "health": 3,
+              "max_health": 4,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Your other minions have +1 Attack."
+            },
+            {
+              "entity_id": 11,
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha",
+              "attack": 3,
+              "health": 1,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Adjacent minions have +1 Attack."
+            },
+            {
+              "entity_id": 12,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "attack": 4,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Whenever a friendly Beast dies, gain +2/+1."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 22,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 2,
+            "EX1_066": 1,
+            "EX1_080": 2,
+            "EX1_531": 1,
+            "EX1_533": 1,
+            "EX1_534": 1,
+            "EX1_536": 1,
+            "EX1_538": 2,
+            "EX1_539": 2,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 1,
+            "EX1_611": 2,
+            "NEW1_019": 1,
+            "NEW1_031": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            },
+            {
+              "card_id": "NEW1_031",
+              "name": "Animal Companion"
+            },
+            {
+              "card_id": "EX1_610",
+              "name": "Explosive Trap"
+            },
+            {
+              "card_id": "EX1_617",
+              "name": "Deadly Shot"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_07",
+            "name": "Gul'dan",
+            "hero_class": "WARLOCK",
+            "health": 16,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_07bp",
+            "name": "Life Tap",
+            "cost": 2,
+            "usable": false,
+            "text": "Draw a card and take 2 damage."
+          },
+          "weapon": null,
+          "mana": 5,
+          "max_mana": 5,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 2,
+          "board": [],
+          "secrets_count": 0,
+          "deck_remaining": 20,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_096",
+              "name": "Loot Hoarder"
+            },
+            {
+              "card_id": "CS2_188",
+              "name": "Abusive Sergeant"
+            },
+            {
+              "card_id": "EX1_319",
+              "name": "Flame Imp"
+            },
+            {
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha"
+            },
+            {
+              "card_id": "CS2_065",
+              "name": "Voidwalker"
+            },
+            {
+              "card_id": "EX1_319",
+              "name": "Flame Imp"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "EX1_008",
+              "name": "Argent Squire"
+            },
+            {
+              "card_id": "EX1_393",
+              "name": "Amani Berserker"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": []
+      },
+      "deck_submission_exact": true
+    },
+    {
+      "source": "amani-003",
+      "arm": "R0-trap-reference",
+      "sequence": [
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 11,
+            "target": 43
+          },
+          "elapsed_s": 0.11803362499631476,
+          "reason": "turn_search",
+          "routes": {
+            "context": [
+              "amani"
+            ],
+            "hit": true,
+            "legal_alternative": false,
+            "changed": false
+          }
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": 29
+          },
+          "elapsed_s": 0.08405420900089666,
+          "reason": "turn_search",
+          "routes": {
+            "context": [
+              "amani"
+            ],
+            "hit": true,
+            "legal_alternative": false,
+            "changed": false
+          }
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": 12,
+            "position": 2
+          },
+          "elapsed_s": 0.08217979199980618,
+          "reason": "turn_search",
+          "routes": {
+            "context": [],
+            "hit": false,
+            "legal_alternative": false,
+            "changed": false
+          }
+        },
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 73,
+            "target": 37
+          },
+          "elapsed_s": 0.0781847089965595,
+          "reason": "turn_search",
+          "routes": {
+            "context": [],
+            "hit": false,
+            "legal_alternative": false,
+            "changed": false
+          }
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "elapsed_s": 0.08241837500099791,
+          "reason": "turn_search",
+          "routes": {
+            "context": [],
+            "hit": false,
+            "legal_alternative": false,
+            "changed": false
+          }
+        }
+      ],
+      "final_public_state": {
+        "turn": 10,
+        "phase": "waiting",
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 13,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 5,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 24,
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow",
+              "type": "WEAPON",
+              "cost": 3,
+              "attack": 3,
+              "durability": 2,
+              "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+              "playable": false
+            },
+            {
+              "entity_id": 33,
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane",
+              "type": "MINION",
+              "cost": 6,
+              "attack": 6,
+              "health": 5,
+              "text": "Deathrattle: Summon two 2/2 Hyenas.",
+              "playable": false
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 73,
+              "card_id": "NEW1_033",
+              "name": "Leokk",
+              "attack": 3,
+              "health": 3,
+              "max_health": 4,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Your other minions have +1 Attack."
+            },
+            {
+              "entity_id": 11,
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha",
+              "attack": 3,
+              "health": 1,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Adjacent minions have +1 Attack."
+            },
+            {
+              "entity_id": 12,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "attack": 4,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Whenever a friendly Beast dies, gain +2/+1."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 22,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 2,
+            "EX1_066": 1,
+            "EX1_080": 2,
+            "EX1_531": 1,
+            "EX1_533": 1,
+            "EX1_534": 1,
+            "EX1_536": 1,
+            "EX1_538": 2,
+            "EX1_539": 2,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 1,
+            "EX1_611": 2,
+            "NEW1_019": 1,
+            "NEW1_031": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            },
+            {
+              "card_id": "NEW1_031",
+              "name": "Animal Companion"
+            },
+            {
+              "card_id": "EX1_610",
+              "name": "Explosive Trap"
+            },
+            {
+              "card_id": "EX1_617",
+              "name": "Deadly Shot"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_07",
+            "name": "Gul'dan",
+            "hero_class": "WARLOCK",
+            "health": 16,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_07bp",
+            "name": "Life Tap",
+            "cost": 2,
+            "usable": false,
+            "text": "Draw a card and take 2 damage."
+          },
+          "weapon": null,
+          "mana": 5,
+          "max_mana": 5,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 2,
+          "board": [],
+          "secrets_count": 0,
+          "deck_remaining": 20,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_096",
+              "name": "Loot Hoarder"
+            },
+            {
+              "card_id": "CS2_188",
+              "name": "Abusive Sergeant"
+            },
+            {
+              "card_id": "EX1_319",
+              "name": "Flame Imp"
+            },
+            {
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha"
+            },
+            {
+              "card_id": "CS2_065",
+              "name": "Voidwalker"
+            },
+            {
+              "card_id": "EX1_319",
+              "name": "Flame Imp"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "EX1_008",
+              "name": "Argent Squire"
+            },
+            {
+              "card_id": "EX1_393",
+              "name": "Amani Berserker"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": []
+      },
+      "deck_submission_exact": true
+    },
+    {
+      "source": "amani-003",
+      "arm": "R4-canonical-cache",
+      "sequence": [
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 11,
+            "target": 43
+          },
+          "elapsed_s": 0.13057312500313856,
+          "reason": "turn_search",
+          "routes": {
+            "context": [
+              "amani"
+            ],
+            "hit": true,
+            "legal_alternative": false,
+            "changed": false,
+            "cache": "empty",
+            "cached_steps": 3
+          }
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": 29
+          },
+          "elapsed_s": 0.08620908399461769,
+          "reason": "turn_search",
+          "routes": {
+            "context": [
+              "amani"
+            ],
+            "hit": true,
+            "legal_alternative": false,
+            "changed": false,
+            "cache": "public_state_changed",
+            "cached_steps": 2
+          }
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": 12,
+            "position": 2
+          },
+          "elapsed_s": 0.07967837500473252,
+          "reason": "verified_continuation",
+          "routes": {
+            "context": [],
+            "hit": false,
+            "legal_alternative": false,
+            "changed": false,
+            "cache": "verified",
+            "cache_hit": true
+          }
+        },
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 73,
+            "target": 37
+          },
+          "elapsed_s": 0.08268737500475254,
+          "reason": "verified_continuation",
+          "routes": {
+            "context": [],
+            "hit": false,
+            "legal_alternative": false,
+            "changed": false,
+            "cache": "verified",
+            "cache_hit": true
+          }
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "elapsed_s": 0.08911316599551355,
+          "reason": "turn_search",
+          "routes": {
+            "context": [],
+            "hit": false,
+            "legal_alternative": false,
+            "changed": false,
+            "cache": "empty",
+            "cached_steps": 0
+          }
+        }
+      ],
+      "final_public_state": {
+        "turn": 10,
+        "phase": "waiting",
+        "you": {
+          "hero": {
+            "entity_id": 4,
+            "card_id": "HERO_05",
+            "name": "Rexxar",
+            "hero_class": "HUNTER",
+            "health": 13,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 5,
+            "card_id": "HERO_05bp",
+            "name": "Steady Shot",
+            "cost": 2,
+            "usable": false,
+            "text": "Deal 2 damage to the enemy hero."
+          },
+          "weapon": null,
+          "mana": 0,
+          "max_mana": 5,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand": [
+            {
+              "entity_id": 24,
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow",
+              "type": "WEAPON",
+              "cost": 3,
+              "attack": 3,
+              "durability": 2,
+              "text": "Whenever a friendly Secret is revealed, gain +1 Durability.",
+              "playable": false
+            },
+            {
+              "entity_id": 33,
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane",
+              "type": "MINION",
+              "cost": 6,
+              "attack": 6,
+              "health": 5,
+              "text": "Deathrattle: Summon two 2/2 Hyenas.",
+              "playable": false
+            }
+          ],
+          "board": [
+            {
+              "entity_id": 73,
+              "card_id": "NEW1_033",
+              "name": "Leokk",
+              "attack": 3,
+              "health": 3,
+              "max_health": 4,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Your other minions have +1 Attack."
+            },
+            {
+              "entity_id": 11,
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha",
+              "attack": 3,
+              "health": 1,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Adjacent minions have +1 Attack."
+            },
+            {
+              "entity_id": 12,
+              "card_id": "EX1_531",
+              "name": "Scavenging Hyena",
+              "attack": 4,
+              "health": 2,
+              "max_health": 2,
+              "can_attack": false,
+              "taunt": false,
+              "divine_shield": false,
+              "frozen": false,
+              "stealth": false,
+              "windfury": false,
+              "charge": false,
+              "poisonous": false,
+              "deathrattle": false,
+              "spell_damage": 0,
+              "silenced": false,
+              "text": "Whenever a friendly Beast dies, gain +2/+1."
+            }
+          ],
+          "secrets": [],
+          "deck_remaining": 22,
+          "deck_remaining_counts": {
+            "DS1_070": 1,
+            "DS1_184": 1,
+            "EX1_029": 2,
+            "EX1_066": 1,
+            "EX1_080": 2,
+            "EX1_531": 1,
+            "EX1_533": 1,
+            "EX1_534": 1,
+            "EX1_536": 1,
+            "EX1_538": 2,
+            "EX1_539": 2,
+            "EX1_543": 1,
+            "EX1_554": 1,
+            "EX1_610": 1,
+            "EX1_611": 2,
+            "NEW1_019": 1,
+            "NEW1_031": 1
+          },
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "NEW1_019",
+              "name": "Knife Juggler"
+            },
+            {
+              "card_id": "NEW1_031",
+              "name": "Animal Companion"
+            },
+            {
+              "card_id": "EX1_610",
+              "name": "Explosive Trap"
+            },
+            {
+              "card_id": "EX1_617",
+              "name": "Deadly Shot"
+            }
+          ]
+        },
+        "opponent": {
+          "hero": {
+            "entity_id": 37,
+            "card_id": "HERO_07",
+            "name": "Gul'dan",
+            "hero_class": "WARLOCK",
+            "health": 16,
+            "max_health": 30,
+            "armor": 0,
+            "attack": 0,
+            "can_attack": false,
+            "frozen": false,
+            "immune": false
+          },
+          "hero_power": {
+            "entity_id": 38,
+            "card_id": "HERO_07bp",
+            "name": "Life Tap",
+            "cost": 2,
+            "usable": false,
+            "text": "Draw a card and take 2 damage."
+          },
+          "weapon": null,
+          "mana": 5,
+          "max_mana": 5,
+          "overloaded": 0,
+          "overload_next_turn": 0,
+          "hand_size": 2,
+          "board": [],
+          "secrets_count": 0,
+          "deck_remaining": 20,
+          "fatigue": 0,
+          "graveyard": [
+            {
+              "card_id": "EX1_096",
+              "name": "Loot Hoarder"
+            },
+            {
+              "card_id": "CS2_188",
+              "name": "Abusive Sergeant"
+            },
+            {
+              "card_id": "EX1_319",
+              "name": "Flame Imp"
+            },
+            {
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha"
+            },
+            {
+              "card_id": "CS2_065",
+              "name": "Voidwalker"
+            },
+            {
+              "card_id": "EX1_319",
+              "name": "Flame Imp"
+            },
+            {
+              "card_id": "GAME_005",
+              "name": "The Coin"
+            },
+            {
+              "card_id": "EX1_008",
+              "name": "Argent Squire"
+            },
+            {
+              "card_id": "EX1_393",
+              "name": "Amani Berserker"
+            }
+          ]
+        },
+        "choice": null,
+        "legal_actions": []
+      },
+      "deck_submission_exact": true
+    }
+  ],
+  "limitation": "The unavailable 0066a30 replay inputs cannot be reproduced. These are newly mined original-deck public cases, explicitly separate from prior claims."
+}

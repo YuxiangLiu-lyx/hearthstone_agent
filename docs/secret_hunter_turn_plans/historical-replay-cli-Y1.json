@@ -1,0 +1,581 @@
+{
+  "candidate": "development/secret_hunter_dgm/candidates/Y1",
+  "scope": "Translated public C2 development turns. Hidden cards and RNG are synthetic.",
+  "results": [
+    {
+      "case": "amani",
+      "seed": 500,
+      "actions": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": 33,
+            "position": 2
+          },
+          "cards": {
+            "card": "EX1_534"
+          },
+          "events": [
+            {
+              "event": "play_card",
+              "player": 1,
+              "card_id": "EX1_534",
+              "name": "Savannah Highmane",
+              "entity_id": 33,
+              "cost": 6,
+              "target": null,
+              "position": 2,
+              "choose": null
+            }
+          ],
+          "reason": "turn_search",
+          "elapsed_s": 0.27246425000339514,
+          "error": null,
+          "fallback": false,
+          "burst_plan": null
+        },
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 83,
+            "target": 37
+          },
+          "cards": {
+            "attacker": "EX1_538t",
+            "target": "HERO_07"
+          },
+          "events": [
+            {
+              "event": "attack",
+              "player": 1,
+              "attacker": {
+                "entity_id": 83,
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              "target": {
+                "entity_id": 37,
+                "card_id": "HERO_07",
+                "name": "Gul'dan"
+              }
+            },
+            {
+              "event": "damage",
+              "player": 2,
+              "entity_id": 37,
+              "card_id": "HERO_07",
+              "name": "Gul'dan",
+              "amount": 1,
+              "health_after": 12,
+              "source": {
+                "entity_id": 83,
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              "armor_absorbed": 0,
+              "armor_after": 0
+            }
+          ],
+          "reason": "turn_search",
+          "elapsed_s": 0.15545979099988472,
+          "error": null,
+          "fallback": false,
+          "burst_plan": null
+        },
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 84,
+            "target": 37
+          },
+          "cards": {
+            "attacker": "EX1_538t",
+            "target": "HERO_07"
+          },
+          "events": [
+            {
+              "event": "attack",
+              "player": 1,
+              "attacker": {
+                "entity_id": 84,
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              "target": {
+                "entity_id": 37,
+                "card_id": "HERO_07",
+                "name": "Gul'dan"
+              }
+            },
+            {
+              "event": "damage",
+              "player": 2,
+              "entity_id": 37,
+              "card_id": "HERO_07",
+              "name": "Gul'dan",
+              "amount": 1,
+              "health_after": 11,
+              "source": {
+                "entity_id": 84,
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              "armor_absorbed": 0,
+              "armor_after": 0
+            }
+          ],
+          "reason": "turn_search",
+          "elapsed_s": 0.14333766700292472,
+          "error": null,
+          "fallback": false,
+          "burst_plan": null
+        },
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 85,
+            "target": 37
+          },
+          "cards": {
+            "attacker": "EX1_538t",
+            "target": "HERO_07"
+          },
+          "events": [
+            {
+              "event": "attack",
+              "player": 1,
+              "attacker": {
+                "entity_id": 85,
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              "target": {
+                "entity_id": 37,
+                "card_id": "HERO_07",
+                "name": "Gul'dan"
+              }
+            },
+            {
+              "event": "damage",
+              "player": 2,
+              "entity_id": 37,
+              "card_id": "HERO_07",
+              "name": "Gul'dan",
+              "amount": 1,
+              "health_after": 10,
+              "source": {
+                "entity_id": 85,
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              "armor_absorbed": 0,
+              "armor_after": 0
+            }
+          ],
+          "reason": "turn_search",
+          "elapsed_s": 0.142724042001646,
+          "error": null,
+          "fallback": false,
+          "burst_plan": null
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "cards": {},
+          "events": [
+            {
+              "event": "end_turn",
+              "player": 1
+            },
+            {
+              "event": "turn_start",
+              "turn": 13,
+              "player": 2
+            },
+            {
+              "event": "draw",
+              "player": 2
+            }
+          ],
+          "reason": "turn_search",
+          "elapsed_s": 0.1103480000019772,
+          "error": null,
+          "fallback": false,
+          "burst_plan": null
+        }
+      ]
+    },
+    {
+      "case": "deathrattle",
+      "seed": 500,
+      "actions": [
+        {
+          "action": {
+            "type": "play_card",
+            "card": 60,
+            "target": 30
+          },
+          "cards": {
+            "card": "EX1_539",
+            "target": "EX1_046"
+          },
+          "events": [
+            {
+              "event": "play_card",
+              "player": 1,
+              "card_id": "EX1_539",
+              "name": "Kill Command",
+              "entity_id": 60,
+              "cost": 3,
+              "target": {
+                "entity_id": 30,
+                "card_id": "EX1_046",
+                "name": "Dark Iron Dwarf"
+              },
+              "position": null,
+              "choose": null
+            },
+            {
+              "event": "damage",
+              "player": 2,
+              "entity_id": 30,
+              "card_id": "EX1_046",
+              "name": "Dark Iron Dwarf",
+              "amount": 3,
+              "health_after": 0,
+              "source": {
+                "entity_id": 60,
+                "card_id": "EX1_539",
+                "name": "Kill Command"
+              }
+            },
+            {
+              "event": "death",
+              "player": 2,
+              "entity_id": 30,
+              "card_id": "EX1_046",
+              "name": "Dark Iron Dwarf"
+            }
+          ],
+          "reason": "turn_search",
+          "elapsed_s": 0.11236420799832558,
+          "error": null,
+          "fallback": false,
+          "burst_plan": null
+        },
+        {
+          "action": {
+            "type": "hero_power"
+          },
+          "cards": {},
+          "events": [
+            {
+              "event": "hero_power",
+              "player": 1,
+              "card_id": "HERO_05bp",
+              "name": "Steady Shot",
+              "target": null
+            },
+            {
+              "event": "damage",
+              "player": 2,
+              "entity_id": 4,
+              "card_id": "HERO_07",
+              "name": "Gul'dan",
+              "amount": 2,
+              "health_after": 21,
+              "source": {
+                "entity_id": 38,
+                "card_id": "HERO_05bp",
+                "name": "Steady Shot"
+              },
+              "armor_absorbed": 0,
+              "armor_after": 0
+            }
+          ],
+          "reason": "turn_search",
+          "elapsed_s": 0.08113720799883595,
+          "error": null,
+          "fallback": false,
+          "burst_plan": null
+        },
+        {
+          "action": {
+            "type": "play_card",
+            "card": 42,
+            "position": 0
+          },
+          "cards": {
+            "card": "EX1_080"
+          },
+          "events": [
+            {
+              "event": "play_card",
+              "player": 1,
+              "card_id": "EX1_080",
+              "name": "Secretkeeper",
+              "entity_id": 42,
+              "cost": 1,
+              "target": null,
+              "position": 0,
+              "choose": null
+            }
+          ],
+          "reason": "turn_search",
+          "elapsed_s": 0.08300866700301412,
+          "error": null,
+          "fallback": false,
+          "burst_plan": null
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "cards": {},
+          "events": [
+            {
+              "event": "end_turn",
+              "player": 1
+            },
+            {
+              "event": "turn_start",
+              "turn": 12,
+              "player": 2
+            },
+            {
+              "event": "draw",
+              "player": 2
+            }
+          ],
+          "reason": "turn_search",
+          "elapsed_s": 0.10688779199699638,
+          "error": null,
+          "fallback": false,
+          "burst_plan": null
+        }
+      ]
+    },
+    {
+      "case": "juggler",
+      "seed": 500,
+      "actions": [
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 73,
+            "target": 50
+          },
+          "cards": {
+            "attacker": "EX1_538t",
+            "target": "EX1_162"
+          },
+          "events": [
+            {
+              "event": "attack",
+              "player": 1,
+              "attacker": {
+                "entity_id": 73,
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              "target": {
+                "entity_id": 50,
+                "card_id": "EX1_162",
+                "name": "Dire Wolf Alpha"
+              }
+            },
+            {
+              "event": "damage",
+              "player": 2,
+              "entity_id": 50,
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha",
+              "amount": 1,
+              "health_after": 1,
+              "source": {
+                "entity_id": 73,
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              }
+            },
+            {
+              "event": "damage",
+              "player": 1,
+              "entity_id": 73,
+              "card_id": "EX1_538t",
+              "name": "Hound",
+              "amount": 2,
+              "health_after": -1,
+              "source": {
+                "entity_id": 50,
+                "card_id": "EX1_162",
+                "name": "Dire Wolf Alpha"
+              }
+            },
+            {
+              "event": "death",
+              "player": 1,
+              "entity_id": 73,
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            }
+          ],
+          "reason": "turn_search",
+          "elapsed_s": 0.13077058400085662,
+          "error": null,
+          "fallback": false,
+          "burst_plan": null
+        },
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 74,
+            "target": 50
+          },
+          "cards": {
+            "attacker": "EX1_538t",
+            "target": "EX1_162"
+          },
+          "events": [
+            {
+              "event": "attack",
+              "player": 1,
+              "attacker": {
+                "entity_id": 74,
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              "target": {
+                "entity_id": 50,
+                "card_id": "EX1_162",
+                "name": "Dire Wolf Alpha"
+              }
+            },
+            {
+              "event": "damage",
+              "player": 2,
+              "entity_id": 50,
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha",
+              "amount": 1,
+              "health_after": 0,
+              "source": {
+                "entity_id": 74,
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              }
+            },
+            {
+              "event": "damage",
+              "player": 1,
+              "entity_id": 74,
+              "card_id": "EX1_538t",
+              "name": "Hound",
+              "amount": 2,
+              "health_after": -1,
+              "source": {
+                "entity_id": 50,
+                "card_id": "EX1_162",
+                "name": "Dire Wolf Alpha"
+              }
+            },
+            {
+              "event": "death",
+              "player": 1,
+              "entity_id": 74,
+              "card_id": "EX1_538t",
+              "name": "Hound"
+            },
+            {
+              "event": "death",
+              "player": 2,
+              "entity_id": 50,
+              "card_id": "EX1_162",
+              "name": "Dire Wolf Alpha"
+            }
+          ],
+          "reason": "turn_search",
+          "elapsed_s": 0.10046733300259802,
+          "error": null,
+          "fallback": false,
+          "burst_plan": null
+        },
+        {
+          "action": {
+            "type": "attack",
+            "attacker": 75,
+            "target": 37
+          },
+          "cards": {
+            "attacker": "EX1_538t",
+            "target": "HERO_07"
+          },
+          "events": [
+            {
+              "event": "attack",
+              "player": 1,
+              "attacker": {
+                "entity_id": 75,
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              "target": {
+                "entity_id": 37,
+                "card_id": "HERO_07",
+                "name": "Gul'dan"
+              }
+            },
+            {
+              "event": "damage",
+              "player": 2,
+              "entity_id": 37,
+              "card_id": "HERO_07",
+              "name": "Gul'dan",
+              "amount": 1,
+              "health_after": 24,
+              "source": {
+                "entity_id": 75,
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              "armor_absorbed": 0,
+              "armor_after": 0
+            }
+          ],
+          "reason": "turn_search",
+          "elapsed_s": 0.0855206249980256,
+          "error": null,
+          "fallback": false,
+          "burst_plan": null
+        },
+        {
+          "action": {
+            "type": "end_turn"
+          },
+          "cards": {},
+          "events": [
+            {
+              "event": "end_turn",
+              "player": 1
+            },
+            {
+              "event": "turn_start",
+              "turn": 7,
+              "player": 2
+            },
+            {
+              "event": "draw",
+              "player": 2
+            }
+          ],
+          "reason": "turn_search",
+          "elapsed_s": 0.08641945799899986,
+          "error": null,
+          "fallback": false,
+          "burst_plan": null
+        }
+      ]
+    }
+  ]
+}

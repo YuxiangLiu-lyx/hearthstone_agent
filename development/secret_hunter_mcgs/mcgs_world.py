@@ -106,7 +106,10 @@ def build(state, seed=0, *, opponent_hand=None, opponent_deck=None):
         h.frozen = hv.get('frozen', False)
         if hv.get('immune'):
             raise Unsupported('temporary_hero_immunity')
-        h.num_attacks = 0 if hv.get('can_attack') else 1
+        # A zero-attack hero may still have a swing after equipping a weapon.
+        # The existing public-history feature distinguishes this from a spent swing.
+        ready = hv.get('can_attack') or (pl is p and state.get('hero_attack_available'))
+        h.num_attacks = 0 if ready else 1
         hp = v.get('hero_power')
         if hp:
             h.power.entity_id = hp['entity_id']; h.power.cost = hp['cost']

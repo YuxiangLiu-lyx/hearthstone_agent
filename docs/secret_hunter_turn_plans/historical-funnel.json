@@ -1,0 +1,116 @@
+{
+  "funnel": {
+    "engine-trap-v2": {
+      "decisions": {
+        "games_read": 96,
+        "main_decisions": 2626,
+        "active_trap": 197,
+        "trap_and_deathrattle": 61,
+        "trap_target_deathrattle": 2
+      },
+      "games": {
+        "active_trap": 59,
+        "trap_and_deathrattle": 19,
+        "trap_target_deathrattle": 2
+      },
+      "rejected_targeted_plans": [
+        {
+          "game": "80b45c1a9d094480",
+          "seed": 21100010,
+          "seat": 2,
+          "seq": 20,
+          "target": "EX1_096",
+          "plan": [
+            {
+              "type": "attack",
+              "attacker": 46,
+              "target": 20
+            }
+          ],
+          "supported": true,
+          "has_multiaction_plan": false,
+          "supported_death_tokens": [],
+          "tail_has_rejected_action": false
+        },
+        {
+          "game": "70b4f1a9d5594568",
+          "seed": 21100008,
+          "seat": 2,
+          "seq": 17,
+          "target": "EX1_556",
+          "plan": [
+            {
+              "type": "attack",
+              "attacker": 82,
+              "target": 31
+            },
+            {
+              "type": "attack",
+              "attacker": 88,
+              "target": 4
+            },
+            {
+              "type": "hero_power"
+            }
+          ],
+          "supported": true,
+          "has_multiaction_plan": true,
+          "supported_death_tokens": [
+            "skele21"
+          ],
+          "tail_has_rejected_action": true
+        }
+      ]
+    },
+    "Y1": {
+      "decisions": {
+        "games_read": 96,
+        "main_decisions": 2622,
+        "active_trap": 158,
+        "trap_and_deathrattle": 43,
+        "trap_target_deathrattle": 1
+      },
+      "games": {
+        "active_trap": 50,
+        "trap_and_deathrattle": 19,
+        "trap_target_deathrattle": 1
+      },
+      "rejected_targeted_plans": [
+        {
+          "game": "d6d9ee37bb514ffd",
+          "seed": 21100010,
+          "seat": 2,
+          "seq": 20,
+          "target": "EX1_096",
+          "plan": [
+            {
+              "type": "attack",
+              "attacker": 46,
+              "target": 20
+            }
+          ],
+          "supported": true,
+          "has_multiaction_plan": false,
+          "supported_death_tokens": [],
+          "tail_has_rejected_action": false
+        }
+      ]
+    }
+  },
+  "cases": 27,
+  "buckets": {
+    "('amani', 'train', 1)": 4,
+    "('trap', 'train', 1)": 4,
+    "('amani', 'validation', 1)": 4,
+    "('trap', 'validation', 1)": 4,
+    "('knife_wolf', 'train', 0)": 1,
+    "('amani', 'validation', 0)": 1,
+    "('knife_wolf', 'train', 1)": 4,
+    "('knife_wolf', 'validation', 1)": 1,
+    "('knife_wolf', 'validation', 0)": 1,
+    "('trap', 'train', 0)": 1,
+    "('amani', 'train', 0)": 2
+  },
+  "grouping": "SHA256(source seed) mod 5; all source arms, opponents and seats share a split. At most one case per kind/source seed.",
+  "scope": "Archived real engine-trap-v2 and Y1 local proxy trajectories from the recovered commit."
+}
