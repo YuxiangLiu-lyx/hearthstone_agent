@@ -1,0 +1,90 @@
+{
+  "control": "Y1 remains the cumulative-gain control",
+  "versions": [
+    {
+      "candidate": "R0-trap-reference",
+      "parent": "Y1",
+      "fingerprint": "f7a850c6cf865dc00dc313c2731185fcf727362424fbf1c52cd8b574b9282b59",
+      "status": "rejected",
+      "evidence": "Independent reconstruction; 42/48 vs Y1 43/48. Not the authentic historical parent."
+    },
+    {
+      "candidate": "R1-memory",
+      "parent": "R0-trap-reference",
+      "fingerprint": "f66d0aff71d50da6ed6a06878281877d88be80bb66432a2640a39ceaffc86971",
+      "status": "rejected",
+      "evidence": "Broad continuation: 41/48 vs Y1 43/48."
+    },
+    {
+      "candidate": "R2-context",
+      "parent": "R1-memory",
+      "fingerprint": "4a1beeaac54c0360b51057290b8146837bff226e986af272c227cd3aaccafe84",
+      "status": "built_not_screened",
+      "evidence": "Exploratory context weights; no completed paired whole-game estimate."
+    },
+    {
+      "candidate": "R3-reserve",
+      "parent": "R1-memory",
+      "fingerprint": "235f5d9664655e0e831a3c2feafbdec0a161b06d43b9139598b6816baa2b7bb2",
+      "status": "built_not_screened",
+      "evidence": "Exploratory reserve weights; no completed paired whole-game estimate."
+    },
+    {
+      "candidate": "R4-canonical-cache",
+      "parent": "R1-memory",
+      "fingerprint": "bbf2412883abe5ee423507cb727672c35199c0d2f21e55daa1a6e4c69c5f6eb4",
+      "status": "mechanism_only",
+      "evidence": "More valid cache hits but 41/48 vs Y1 43/48."
+    },
+    {
+      "candidate": "R5-curve-guard",
+      "parent": "R0-trap-reference",
+      "fingerprint": "ab159e09e507e0782111264f4b74266719ed72859c2365e1ec38dae567292174",
+      "status": "superseded",
+      "evidence": "Screen interrupted when authentic 0066a30 material arrived."
+    },
+    {
+      "candidate": "R6-finish-minions",
+      "parent": "R5-curve-guard",
+      "fingerprint": "f9be4555ce5c50028b6e72c01b5a34c3ff06977f0dffd6a8fa4b58d2e3193fb9",
+      "status": "superseded",
+      "evidence": "Reconstruction-based screen interrupted; design carried into authentic-parent E2."
+    },
+    {
+      "candidate": "engine-trap-v2",
+      "parent": "Y1",
+      "fingerprint": "ad6194e2024f0375805be8a32c5f78230af7f8d3af06a161dd6748bd89e3abc9",
+      "status": "retained_research_parent",
+      "evidence": "Fresh core 408/480 vs Y1 398/480; guard 190/224 vs Y1 192/224. Primary +2.81 pp, interval crosses zero. No new release claim."
+    },
+    {
+      "candidate": "engine-trap-commit-v3",
+      "parent": "Y1",
+      "fingerprint": "e316a9707a5fafa683eb374243e6865a636752aeb912854fc22639097a445b9a",
+      "status": "historical_mechanism_reference",
+      "evidence": "Original restored narrow trap prototype. Its 144-game outcome rows are present; per-decision traces for that exact screen are absent."
+    },
+    {
+      "candidate": "E2-finish-minions",
+      "parent": "engine-trap-v2",
+      "fingerprint": "edb0f0962887efaeb0a2af7d3147a5aa88ca8903029dfa570380fb7ad7979086",
+      "status": "not_promoted",
+      "evidence": "Final core 407/480 vs parent 408/480, zero flips and one regression; guard outcomes identical at 190/224. Only three core games changed actions."
+    },
+    {
+      "candidate": "E3-verified-plans",
+      "parent": "engine-trap-v2",
+      "fingerprint": "031dd6f17164d880554f5fb96185f7e39a6dc3a34ac34ff39a64a9bbc9142bc5",
+      "status": "rejected",
+      "evidence": "Development 87/96 vs parent 91/96, zero flips and four regressions."
+    },
+    {
+      "candidate": "E4-trap-continuation",
+      "parent": "engine-trap-commit-v3",
+      "fingerprint": "9d936637879066143cfa78c7e52faf7e48647dad62fc686ee40d316b56e0686b",
+      "status": "mechanism_only",
+      "evidence": "Expanded attack tail replays legally. 72-game screen tied parent 52/72, one cache-hit game and zero changed actions."
+    }
+  ],
+  "next_hypothesis": "Retain multiple resource-distinct endpoints per first action before opponent-response evaluation. Use new source groups and reserve new final seeds."
+}

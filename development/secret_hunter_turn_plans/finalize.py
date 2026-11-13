@@ -60,6 +60,11 @@ def main():
         'full_game_attempts':db.execute('select count(*) from attempts').fetchone()[0],
         'attempt_status':dict(db.execute('select status,count(*) from attempts group by status')),
         'completed_full_games':db.execute("select count(*) from tasks where status='done'").fetchone()[0]}
+    result['throughput']={}
+    for batch in ('final-core','final-guard'):
+        start,finish,n=db.execute('select min(a.started),max(a.finished),count(*) from attempts a '
+            'join tasks t on a.task=t.key where t.batch=? and a.status="done"',(batch,)).fetchone()
+        result['throughput'][batch]={'games':n,'elapsed_s':finish-start,'games_per_minute':n*60/(finish-start),'workers':3}
     result['combined_final_reliability']={name:{'games':aggregate(rows),
         'calls':sum(len(r['decision_times']) for r in rows),
         'latency_s':quantiles([t for r in rows for t in r['decision_times']])}

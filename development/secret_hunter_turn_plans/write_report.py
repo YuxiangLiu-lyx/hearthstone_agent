@@ -21,6 +21,7 @@ def main():
     runtime=json.loads((docs/'runtime-E2-finish-minions.json').read_text())
     isolated=json.loads((docs/'runtime-E2-finish-minions-isolated.json').read_text())
     random=json.loads((docs/'runtime-juggler-hounds.json').read_text())
+    data=json.loads((docs/'data-manifest.json').read_text())
     audits={b:json.loads((RUN/'batches'/b/'audit-engine-trap-v2.json').read_text()) for b in ('final-core','final-guard')}
     incremental=core['comparisons']['engine-trap-v2 -> E2-finish-minions']['primary']
     reliable=all(v['games'][k]==0 for v in final['combined_final_reliability'].values()
@@ -100,6 +101,7 @@ def main():
         'Preserve face pressure as the default. First test retaining a few resource-distinct full-turn endpoints per first action, rather than discarding all but the highest pre-response score; keep the total response budget comparable. The next tactical hypothesis is a cheap exchange that removes just enough opposing attack to survive a possible Amani self-ping while retaining Highmane or burn. Count the next draw even when the opponent currently has zero cards. Collect more independent original-deck source games before fitting that condition; forced stress success alone is insufficient. For Knife/Wolf, collect genuinely resource-limited held-out cases and examples where removing Wolf unlocks profitable attacks. Broader forced commitment should remain rejected.',
         '',
         'Code, twelve immutable candidate snapshots, final freeze, exact deck audit, development lineage, aggregate data, raw local evidence archive, replay commands, latency/fault tests, and ZIP fingerprints are provided. See [REPRODUCE.md](REPRODUCE.md), [data-manifest.json](data-manifest.json), [final-results.json](final-results.json), and `dist/secret-hunter-turn-plans/manifest.json`. The research branch began at `c2bc11f0a88f2e20dcd951a056042bcb40426041`; implementation checkpoint `110c406` preserves the tested candidates. No submission or remote publication was performed.','']
+    lines += [f"The study completes {final['budget']['completed_full_games']:,} full games across historical rechecks, development, partial superseded screens, and independent validation. There are {data['all_offline_attempt_count']:,} charged offline continuation attempts including rejected/superseded runs, under the recorded 6,000-attempt cap. Final core throughput is {final['throughput']['final-core']['games_per_minute']:.1f} games/minute and guard throughput {final['throughput']['final-guard']['games_per_minute']:.1f} games/minute at three workers. Final aggregation occurs {final['budget']['elapsed_wall_s']/3600:.2f} hours after the four-hour-budget study began. No training worker is intentionally left running after delivery.",'']
     (docs/'REPORT.md').write_text('\n'.join(lines))
     print(json.dumps({'report':str(docs/'REPORT.md'),'promoted':promoted,'recommendation':recommendation}))
 

@@ -8,11 +8,22 @@ All reported opponents are frozen local proxies. No real Astra service or extern
 - Starting repository commit: `c2bc11f0a88f2e20dcd951a056042bcb40426041`.
 - Recovered historical commit: `0066a304931ae89415e6eff2a6735c2d6026b7d0`.
 - Python 3.11.15; installed course package `hs-arena` 0.2.2 and its bundled dependencies.
+- Course requirements reviewed: [HW2 assignment](https://bu-agenticai-class-fall26.vercel.app/materials/assignments/hw2.md).
 - The course distribution is available locally as `hs-arena-0.2.2`; it is not included in a submission ZIP.
 - Exact engine tree, candidate fingerprints, ordered deck audit, and final seed reservation are recorded in the adjacent JSON files.
 - The only changed old research adapter is `development/secret_hunter_mcgs/mcgs_world.py`: restore an unused zero-attack hero's swing using the already-public `hero_attack_available` feature. The installed course engine is unchanged.
 
 Commands below run from the research worktree. Its `.venv` is a local convenience link, excluded from Git and all packages. Substitute another Python environment with the same course package when necessary.
+
+The delivered [self-contained Git bundle](../../runs/turn-plans-20261112/artifacts/research-code.bundle) preserves the research branch without requiring a remote push. The separate [complete data archive](../../runs/turn-plans-20261112/artifacts/research-evidence.tar.gz) restores the local run. Both checksums and the final code commit are in [delivery-manifest.json](../../runs/turn-plans-20261112/artifacts/delivery-manifest.json). These are research artifacts, not HW2 submission packages.
+
+```sh
+git clone -b research/secret-hunter-turn-plans-20261112 /path/to/research-code.bundle hearthstone-research
+cd hearthstone-research
+tar -xzf /path/to/research-evidence.tar.gz
+```
+
+Provide the course package/environment and `hs-arena-0.2.2` distribution path described above before running experiments in the restored checkout.
 
 ```sh
 cd /Users/liuyuxiang/.codex/worktrees/hearthstone-turn-plans-20261112
@@ -32,6 +43,10 @@ The research data archive restores `runs/turn-plans-20261112/` under the reposit
 .venv/bin/python -m development.secret_hunter_turn_plans.analyze_offline --input continuations-v4
 .venv/bin/python -m development.secret_hunter_turn_plans.analyze_offline --input strict-coil-v2
 .venv/bin/python -m development.secret_hunter_turn_plans.evidence
+.venv/bin/python -m development.secret_hunter_turn_plans.final_changes --batch final-core
+.venv/bin/python -m development.secret_hunter_turn_plans.final_changes --batch final-guard
+.venv/bin/python -m development.secret_hunter_turn_plans.archive
+.venv/bin/python -m development.secret_hunter_turn_plans.write_report
 ```
 
 `finalize` requires all three arms to have 480 core and 224 guard games. Its 95% intervals resample whole seed clusters 10,000 times, keeping both seats and all opponents together. The primary score is `(Astra family rate + Bot2 family rate) / 2`; Greedy is reported separately. These intervals describe the fixed local proxy pool, not generalization to an unknown competitive ladder.
