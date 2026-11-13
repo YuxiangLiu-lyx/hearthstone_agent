@@ -1,20 +1,28 @@
 """Strict completed-arm final estimates; no strategy selection or mutation."""
 import json
+import hashlib
+from pathlib import Path
 import sqlite3
 import time
 
 from development.benchmarks.run import fingerprint
-from development.secret_hunter_program.common import sha
+from development.secret_hunter_program.common import sha,quantiles
 from development.secret_hunter_turn_plans.build import HERE,Y1
 from development.secret_hunter_turn_plans.study import RUN,ROOT
 from development.teacher_eval.compare import paired
-from development.teacher_eval.run import summarize,snapshot
+from development.teacher_eval.run import summarize,snapshot,aggregate
 
 
 def main():
     db=sqlite3.connect(f'file:{RUN}/ledger.sqlite?mode=ro',uri=True)
     freeze=json.loads((RUN/'final-freeze.json').read_text())
     manifest=json.loads((RUN/'manifest.json').read_text())
+    import hs_arena
+    engine_root=Path(hs_arena.__file__).parent
+    engine=json.loads((ROOT/'docs/secret_hunter_turn_plans/course-engine-fingerprint.json').read_text())
+    actual={str(p.relative_to(engine_root)):hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in engine_root.rglob('*.py')}
+    assert actual==engine['files'],'Installed course engine changed'
     for name,digest in freeze['fingerprints'].items():
         assert fingerprint(Y1 if name=='Y1' else HERE/'candidates'/name)==digest,name
     for path,digest in manifest['protected'].items():assert sha(ROOT/path)==digest,path
@@ -22,6 +30,7 @@ def main():
         assert snapshot(json.loads((ROOT/path).read_text()))==versions,path
     result={'scope':'Frozen local proxy opponents; full Python CLI at every atomic decision.',
             'freeze':freeze,'created':time.time(),'batches':{}}
+    all_rows={name:[] for name in freeze['arms']}
     for batch,expected in [('final-core',480),('final-guard',224)]:
         assert not db.execute("select 1 from tasks where batch=? and status!='done' limit 1",(batch,)).fetchone(),batch
         arms={}
@@ -30,6 +39,7 @@ def main():
                 "select result from tasks where batch=? and candidate=? and status='done' order by seed,opponent,seat",(batch,arm))]
             assert len(arms[arm])==expected,(batch,arm,len(arms[arm]))
             assert all(r['execution']=='full_cli' and not r.get('harness_error') for r in arms[arm])
+            all_rows[arm].extend(arms[arm])
         comparisons={}
         for baseline,candidate in [('Y1','engine-trap-v2'),('Y1','E2-finish-minions'),('engine-trap-v2','E2-finish-minions')]:
             a,b=arms[baseline],arms[candidate]
@@ -50,6 +60,10 @@ def main():
         'full_game_attempts':db.execute('select count(*) from attempts').fetchone()[0],
         'attempt_status':dict(db.execute('select status,count(*) from attempts group by status')),
         'completed_full_games':db.execute("select count(*) from tasks where status='done'").fetchone()[0]}
+    result['combined_final_reliability']={name:{'games':aggregate(rows),
+        'calls':sum(len(r['decision_times']) for r in rows),
+        'latency_s':quantiles([t for r in rows for t in r['decision_times']])}
+        for name,rows in all_rows.items()}
     output=ROOT/'docs/secret_hunter_turn_plans/final-results.json'
     output.write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({batch:{name:[s['all']['wins'],s['all']['n']] for name,s in data['arms'].items()}

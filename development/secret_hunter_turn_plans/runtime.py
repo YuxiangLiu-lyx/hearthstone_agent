@@ -10,8 +10,27 @@ from development.secret_hunter_program.common import quantiles
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--candidate',default='R4-canonical-cache')
-    p.add_argument('--isolated-stale',action='store_true');args=p.parse_args()
+    p.add_argument('--isolated-stale',action='store_true')
+    p.add_argument('--random-only',action='store_true');args=p.parse_args()
     candidate=Y1 if args.candidate=='Y1' else HERE/'candidates'/args.candidate
+    if args.random_only:
+        records=[]
+        for case in ('amani-017','knife_wolf-h009'):
+            state=json.loads((RUN/'mined-v4'/(case+'.json')).read_text())['state']
+            assert any(m['card_id']=='NEW1_019' for m in state['you']['board'])
+            assert any(c['card_id']=='EX1_538' and c['cost']<=state['you']['mana'] for c in state['you']['hand'])
+            for skill in (Y1,HERE/'candidates/engine-trap-v2',candidate):
+                record=probe(skill,state,'juggler-hounds-'+case)
+                record['played_card']=next((c['card_id'] for c in state['you']['hand']
+                    if c['entity_id']==(record['action'] or {}).get('card')),None)
+                records.append(record)
+        result={'n':len(records),'invalid':sum(not r['valid'] for r in records),
+                'over_2s':sum(r['elapsed_s']>2 for r in records),
+                'fallbacks':sum(bool(r['fallback']) for r in records),
+                'latency_s':quantiles([r['elapsed_s'] for r in records]),'records':records}
+        (ROOT/'docs/secret_hunter_turn_plans/runtime-juggler-hounds.json').write_text(json.dumps(result,indent=2)+'\n')
+        assert result['invalid']==result['over_2s']==0
+        print(json.dumps(result,indent=2));return
     states=[json.loads(p.read_text())['state'] for p in (RUN/'mined').glob('*.json') if p.name!='manifest.json']
     states.sort(key=lambda s:len(s['you']['board'])*len(s['opponent']['board'])+len(s['you']['hand']),reverse=True)
     hang='import time\ndef decide(*args,**kwargs):\n time.sleep(20)\n'

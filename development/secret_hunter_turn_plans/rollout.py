@@ -104,7 +104,12 @@ def run(job):
                           'target':visible.get(action.get('target')),'reason':info.get('reason')})
         elif seat==1:action,_=frozen(s,base_cfg)
         else:
-            action=foe.fn(s)
+            response_view=s
+            if scenario=='no_coil' and job.get('strict_no_coil') and world.turn==start_turn+1:
+                coil_ids={c['entity_id'] for c in s['you']['hand'] if c['card_id']=='EX1_302'}
+                response_view={**s,'legal_actions':[a for a in s['legal_actions']
+                    if not (a['type']=='play_card' and a['card'] in coil_ids)]}
+            action=foe.fn(response_view)
             if scenario=='forced_coil' and world.turn==start_turn+1 and not forced_used:
                 coil=next((c for c in s['you']['hand'] if c['card_id']=='EX1_302'),None)
                 amani=next((m for m in s['you']['board'] if m['card_id']=='EX1_393' and not m.get('silenced')
@@ -123,11 +128,12 @@ def run(job):
     return {'case':source['case'],'kind':source['kind'],'split':source['split'],'source_seed':source['source_seed'],
             'source_game':source['source_game'],'route':job['route'],'sample':job['sample'],'scenario':scenario,
             'candidate':job.get('candidate','R1-memory'),'terminal':world.over,'winner':world.winner,'win':int(world.winner==1),'sequence':trace,
+            'strict_no_coil_response_control':bool(job.get('strict_no_coil') and scenario=='no_coil'),
             'end_tested_turn':end_turn_state,
             'after_response':response,'steps':steps,'seconds':time.monotonic()-start,'forced_coil_played':forced_used,
             'audit_hidden_hypothesis':{'own_deck':own_deck,'opponent_hand':hand,'opponent_deck':deck,'initial_rng_seed':seed+17},
             'public_features':source['public_features'],'full_trace':full,
-            'scope':'Offline conditional hidden-card sample; only the tested own turn differs. Frozen Y1 and original opponent policy thereafter, except the explicitly forced Coil response.'}
+            'scope':'Offline conditional hidden-card sample; only the tested own turn differs between paired routes. Frozen Y1 and original opponent policy thereafter, except the explicitly forced Coil response or strict no-Coil response control when flagged.'}
 
 
 def main():

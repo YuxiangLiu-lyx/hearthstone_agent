@@ -16,6 +16,7 @@ def main():
     p.add_argument('--candidate',default='R4-canonical-cache');p.add_argument('--sources',default='mined')
     p.add_argument('--only-scenario',choices=['natural','no_coil','forced_coil']);p.add_argument('--strict-coil',action='store_true')
     p.add_argument('--force-next-draw',action='store_true')
+    p.add_argument('--strict-no-coil',action='store_true',help='Offline response control: exclude Coil plays for the first enemy response')
     p.add_argument('--routes',nargs='+',help='Explicit diagnostic routes; never modifies candidate snapshots')
     args=p.parse_args()
     sources=sorted((RUN/args.sources).glob('*.json'));sources=[p for p in sources if p.name!='manifest.json']
@@ -34,7 +35,7 @@ def main():
                     name=f'{c["case"]}-{scenario}-{sample}-{route}'
                     result=out/(name+'.json')
                     if result.exists():continue
-                    job={'source':str(src),'candidate':args.candidate,'strict_coil':args.strict_coil,'force_next_draw':args.force_next_draw,'route':route,'scenario':scenario,'sample':sample+(100 if c['split']=='validation' else 0),
+                    job={'source':str(src),'candidate':args.candidate,'strict_coil':args.strict_coil,'strict_no_coil':args.strict_no_coil,'force_next_draw':args.force_next_draw,'route':route,'scenario':scenario,'sample':sample+(100 if c['split']=='validation' else 0),
                          'result':str(result),'trace':sample==0}
                     request=out/(name+'.request.json');atomic(request,job);jobs.append((request,result))
     atomic(out/'schedule.json',{'jobs_pending':len(jobs),'source_cases':len(sources),'sources':args.sources,'candidate':args.candidate,'samples':args.samples,'routes':routes})

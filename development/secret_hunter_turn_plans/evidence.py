@@ -36,6 +36,8 @@ def route_summary(rows):
                     (s['attacker'] or '').startswith('HERO_') and s['target']=='EX1_393' for s in seq),
                 'played_highmane':any(s['card']=='EX1_534' for s in seq),
                 'played_secretkeeper':any(s['card']=='EX1_080' for s in seq),
+                'played_companion':any(s['card']=='NEW1_031' for s in seq),
+                'ended_with_taunt':any(m.get('taunt') for m in row['end_tested_turn']['you']['board']),
                 'forced_coil_played':row['forced_coil_played'],
             }
             coverage.update({k:1 for k,v in flags.items() if v})
@@ -76,6 +78,16 @@ def main():
             result['unrescued'].append({'case':case,'source_seed':sources[case]['source_seed'],
                 'routes':sorted({r['route'] for r in group}),
                 'samples_per_route':len({r['sample'] for r in group})})
+    diagnostic=read_rows(RUN/'amani-explicit-diagnostic')
+    result['post_freeze_amani_diagnostic']={}
+    for scenario in ('no_coil','natural','forced_coil'):
+        subset=[r for r in diagnostic if r['scenario']==scenario]
+        result['post_freeze_amani_diagnostic'][scenario]={
+            'all':route_summary(subset),
+            'by_proxy_case':{case:route_summary([r for r in subset if r['case']==case])
+                             for case in sorted({r['case'] for r in subset})},
+            'baseline_next_draw_coil':sum(r['route']=='replan' and
+                r['audit_hidden_hypothesis']['opponent_deck'][-1]=='EX1_302' for r in subset)}
     # These examples were picked from development data before final evaluation.
     # Reproduce every public state and legal action, through the terminal winner.
     selected=[('recovered-golem-continuations','trap-replay-0-natural-0-replan'),
@@ -83,7 +95,9 @@ def main():
               ('continuations-v4','amani-h007-natural-0-replan'),
               ('continuations-v4','amani-h007-natural-0-bow_amani'),
               ('continuations-v4','amani-031-natural-0-replan'),
-              ('continuations-v4','amani-031-natural-0-bow_amani')]
+              ('continuations-v4','amani-031-natural-0-bow_amani'),
+              ('amani-explicit-diagnostic','amani-replay-1-forced_coil-0-replan'),
+              ('amani-explicit-diagnostic','amani-replay-1-forced_coil-0-diagnostic_cheap_trade_highmane')]
     for folder,name in selected:
         path=RUN/folder/(name+'.json')
         row=json.loads(path.read_text())

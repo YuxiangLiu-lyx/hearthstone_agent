@@ -85,6 +85,8 @@ For regenerated continuation jobs, copy the archived `mined-v4` source directory
 
 The stress sampler conditions on Coil in hand, or the next draw when the hand is empty, while preserving card counts. It excludes already-damaged source Amani and does not deliberately self-kill Amani with Coil after a defensive trade. Forced-Coil outcomes are diagnostic labels only. Natural samples alone fit the small rules; none of those new rules generalized well enough to enter the final candidate.
 
+The grouped `no_coil` scenario conditions the initial response hand and ordinary next draw, not later Life Tap/deathrattle draws. The explicit known Amani diagnostic also has a separate `amani-no-coil-control` batch using `--strict-no-coil`: it excludes Coil plays throughout the first opposing response, while preserving the original policy over all remaining legal choices. That batch is a controlled response ablation, not the ordinary frozen-opponent benchmark. Its per-row `strict_no_coil_response_control` flag identifies the intervention.
+
 ## Rebuild and validate submission artifacts
 
 The candidate directories are immutable source snapshots. Their internal modules preserve the implementation at each build, even when the later research helper changes. Rebuilding the authentic historical parent uses the recovered source:
@@ -93,9 +95,11 @@ The candidate directories are immutable source snapshots. Their internal modules
 .venv/bin/python -m development.secret_hunter_astra_plans.build \
   --out /tmp/krush-engine-trap-rebuild engine trap
 .venv/bin/python -m development.secret_hunter_turn_plans.package
+.venv/bin/python -m development.secret_hunter_turn_plans.deck_audit
 .venv/bin/hs-arena validate --no-game development/secret_hunter_turn_plans/candidates/engine-trap-v2
 .venv/bin/hs-arena validate --no-game development/secret_hunter_turn_plans/candidates/E2-finish-minions
 .venv/bin/python -m development.secret_hunter_turn_plans.runtime --candidate E2-finish-minions
+.venv/bin/python -m development.secret_hunter_turn_plans.runtime --candidate E2-finish-minions --random-only
 .venv/bin/python -m development.secret_hunter_turn_plans.runtime --candidate E2-finish-minions --isolated-stale
 ```
 
