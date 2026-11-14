@@ -25,12 +25,15 @@ def main():
         for arm in ['ML2','T']:
             subprocess.run([sys.executable,'-m','development.secret_hunter_final.endpoint_screen','--arm',arm],check=True)
     base={r['case']:r for r in json.loads((RUN/'endpoint-screen-ML2.json').read_text())}
-    changed=[];counts={'states':len(base),'same_first_alternates':0,'response_endpoints':0,'guard_rejections':{},'chance_after_guard':0}
+    changed=[];counts={'states':len(base),'same_first_alternates':0,'response_endpoints':0,'guard_rejections':{},'chance_after_guard':0,
+                       'model_states_deduplicated':0,'beam_pruned':0,'excluded_transitions':0}
     chance_counts=Counter();chance_examples=[]
     for r in json.loads((RUN/'endpoint-screen-T.json').read_text()):
         info=r['info'];ts=info.get('turn_search',{});f=ts.get('endpoint_funnel',{})
         counts['same_first_alternates']+=f.get('same_first_alternates',0)
         counts['response_endpoints']+=ts.get('reply',{}).get('candidates',0)
+        counts['model_states_deduplicated']+=ts.get('deduplicated',0)
+        counts['beam_pruned']+=ts.get('beam_pruned',0);counts['excluded_transitions']+=ts.get('excluded',0)
         if ts.get('reason'):
             reason=ts['reason'];counts['guard_rejections'][reason]=counts['guard_rejections'].get(reason,0)+1
             counts['chance_after_guard']+=bool(info.get('chance'))

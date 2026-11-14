@@ -34,11 +34,14 @@ def selected_report(db,run,batch,selection):
         path.write_text(''.join(json.dumps(r)+'\n' for r in rows[arm]))
     report={'batch':batch,'arms':{a:summarize(rs) for a,rs in rows.items()},'comparisons':{}}
     hit_path=selection.with_name(selection.stem+'-sampling.json')
-    hits={tuple(r['key']) for r in json.loads(hit_path.read_text())['records'] if r['hit']} if hit_path.exists() else None
+    sampling=json.loads(hit_path.read_text())['records'] if hit_path.exists() else []
+    hits={tuple(r['key']) for r in sampling if r['hit']}
     for arm in arms[1:]:
         report['comparisons'][arm]={'all_selected':weighted_pair(rows[arms[0]],rows[arm])}
         if hits:
             report['comparisons'][arm]['hit_only']=weighted_pair(rows[arms[0]],rows[arm],hits)
+            report['comparisons'][arm]['hit_by_actual_first']={str(first):weighted_pair(rows[arms[0]],rows[arm],keys)
+                for first in (True,False) if (keys:={tuple(r['key']) for r in sampling if r['hit'] and r['first']==first})}
         report['comparisons'][arm]['by_opponent']={name:weighted_pair(rows[arms[0]],rows[arm],
             [k for k in index(rows[arm]) if k[0]==name]) for name in sorted({r['opponent'] for r in rows[arm]})}
     train.atomic(run/'batches'/batch/'report.json',report)

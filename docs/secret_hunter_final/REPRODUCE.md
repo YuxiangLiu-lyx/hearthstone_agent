@@ -32,6 +32,16 @@ export KRUSH_FINAL_RUN="$PWD/runs/final-reproduction"
 .venv/bin/python -m development.secret_hunter_final.audit
 .venv/bin/python -m development.secret_hunter_final.study run --batch pilot1 --arms B M --start 41300000 --seeds 1 --workers 1
 .venv/bin/python -m development.secret_hunter_final.study run --batch pilot2 --arms B M L ML --start 41300001 --seeds 1 --workers 2
+.venv/bin/python - <<'PY'
+import json
+from development.secret_hunter_final.study import RUN
+for seed in [21110024, 21110037]:
+    keys = [[opponent, seed, seat] for opponent in ['bot2-face-proxy', 'bot2-trade-proxy'] for seat in [1, 2]]
+    (RUN / f'historical-{seed}.json').write_text(json.dumps(keys))
+PY
+.venv/bin/python -m development.secret_hunter_final.study run --batch historical24 --arms B L --start 21110024 --seeds 1 --workers 3 --selection "$KRUSH_FINAL_RUN/historical-21110024.json"
+.venv/bin/python -m development.secret_hunter_final.study run --batch historical37 --arms B L --start 21110037 --seeds 1 --workers 3 --selection "$KRUSH_FINAL_RUN/historical-21110037.json"
+.venv/bin/python -m development.secret_hunter_final.reproduce
 .venv/bin/python -m development.secret_hunter_final.study run --batch dev-core --arms B M L ML --start 41301000 --seeds 20 --workers 3 --warm
 .venv/bin/python -m development.secret_hunter_final.study run --batch dev-guard --arms B M L ML --start 41302000 --seeds 4 --pool guardrail --workers 3 --warm
 .venv/bin/python -m development.secret_hunter_final.select_mulligans
@@ -56,9 +66,10 @@ continue_batches 依次完成 dev2-core（41303000 起 12 组）、dev2-guard（
 最终必须在开发结束、唯一挑战者选定后按顺序运行。原研究选择见 `final-freeze.json`；下列 ML2 是原冻结挑战者，不是额外备选提交包。
 
 ```sh
+.venv/bin/python -m development.secret_hunter_final.final_plan --core-seeds 100
 .venv/bin/python -m development.secret_hunter_final.release prepare --challenger ML2
 .venv/bin/python -m development.secret_hunter_final.study freeze --arms B ML2
-.venv/bin/python -m development.secret_hunter_final.study run --batch final-core --arms B ML2 --start 41400000 --seeds 40 --workers 3 --final
+.venv/bin/python -m development.secret_hunter_final.study run --batch final-core --arms B ML2 --start 41400000 --seeds 100 --workers 3 --final
 .venv/bin/python -m development.secret_hunter_final.study run --batch final-guard --arms B ML2 --start 41500000 --seeds 8 --pool guardrail --workers 3 --final
 .venv/bin/python -m development.secret_hunter_final.release recommend
 ```

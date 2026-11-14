@@ -27,7 +27,7 @@ def audit(folder,seat):
         assert json.loads((p/f'decisions/{envelope["seq"]:05d}.action.json').read_text())==envelope
     finals=[json.loads(f.read_text()) for f in (p/'decisions').glob('*.state.json')]
     assert any(s['phase']=='game_over' for s in finals)
-    logs='\n'.join(f.read_text(errors='replace') for f in (p/'seat').glob('*.log'))
+    logs='\n'.join(f.read_text(errors='replace') for f in (p/'seat').glob('*.err'))
     assert 'GAME OVER' in logs
     assert not any(result['illegal_counts'].values()) and not any(result['timeouts'].values())
     assert 'forfeit' not in result['reason'] and not result.get('engine_error')

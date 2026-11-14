@@ -58,9 +58,9 @@ def main():
                             'root':resource(source['state']),
                             'baseline_endpoint':resource(base['endpoint']),'route_endpoint':resource(row['endpoint']),
                             'baseline_after_response':resource(base['after_response']),
-                            'route_after_response':resource(row['after_response']),
-                            'baseline_sequence':base['sequence'],'route_sequence':row['sequence']})
+                            'route_after_response':resource(row['after_response'])})
     out={'source_counts':dict(source_counts),'rows':[{'kind':k[0],'scenario':k[1],'route':k[2],**stats(v)} for k,v in sorted(groups.items())],
+         'change_metric':'At each actual observed state, compare route action with a fresh frozen-parent decision. Later changes are additional overrides after the root, not a line-by-line alignment of divergent trajectories.',
          'flips_and_regressions':examples,
          'limitations':'Only available routes compared; conditional source sampling is not a full-game population. Three futures per source are correlated. Natural late defense has two seed sources only. Forced Coil is mechanism stress, not natural improvement.'}
     train.atomic(ROOT/'docs/secret_hunter_final/label-audit.json',out)

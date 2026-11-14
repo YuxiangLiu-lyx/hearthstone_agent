@@ -49,7 +49,9 @@ def recommend():
     freeze=json.loads((RUN/'final-freeze.json').read_text());challenger=freeze['arms'][1]
     core=json.loads((RUN/'batches/final-core/report.json').read_text())
     guard=json.loads((RUN/'batches/final-guard/report.json').read_text())
-    assert all(core['arms'][a]['all']['n']==480 and guard['arms'][a]['all']['n']==224 for a in freeze['arms'])
+    core_n=(freeze['seeds']['final_core'][1]-freeze['seeds']['final_core'][0]+1)*12
+    guard_n=(freeze['seeds']['final_guard'][1]-freeze['seeds']['final_guard'][0]+1)*28
+    assert all(core['arms'][a]['all']['n']==core_n and guard['arms'][a]['all']['n']==guard_n for a in freeze['arms'])
     main=core['comparisons'][challenger]['primary'];guard_gain=guard['comparisons'][challenger]['all']['gain']
     families={g:core['comparisons'][challenger]['by_group'][g]['gain'] for g in ['astra','bot2','bot1']}
     reliability={}

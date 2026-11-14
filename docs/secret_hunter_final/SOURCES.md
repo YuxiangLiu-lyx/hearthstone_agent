@@ -13,3 +13,5 @@
 本轮另读了 `docs/secret_hunter_response/SOURCES.md`，并逐段对照候选的 `turn_search.py`、`chance_search.py`、`public_response.py`。在 T 的 36 个 `top_action_outside_effect_coverage` 状态中，20 个启动随机搜索，17 个实际比较了至少两个根动作并完成比较；1 个因 baseline 超出覆盖退出，2 个因回应不受支持退出，其余未激活随机搜索。不能把“调用了 chance_search”写成“比较了备选”。
 
 课程规则重新下载自 [HW2](https://bu-agenticai-class-fall26.vercel.app/materials/assignments/hw2.md)，并与本地课程包核对：每次决定硬限 180 秒；项目完整 Python CLI 工程目标为 2 秒；运行时只能看正常可见状态和本局公开历史；一份不超过 10 MB、单 Skill 文件夹、仅 Python 脚本的 ZIP。卡牌效果使用安装的 hs_arena 0.2.2 数据与 bundled Fireplace：杀戮命令 3/5 点，猎人奥秘按攻击或随从出场触发，死亡缠绕对友方阿曼尼造成 1 点可激怒，鹰角弓仅友方奥秘揭示增加耐久。对应引擎测试见 `face-lethal-checks.json` 和运行目录中的 `inherited-mechanisms.log`。
+
+状态去重具体沿用本仓库 `tactical_model.signature`，保留原有实体、场上次序、费用、攻击次数及奥秘等公开资源状态。T 的缓存审计记录 2,260 次重复状态淘汰、2,306 次 beam 截断和 112 次不支持的转移；这是已有去重机制在有限候选验证中的复用，没有声称实现完整 MCGS。

@@ -1,0 +1,48 @@
+{
+  "created": 1794622691.211217,
+  "chosen": "ML2",
+  "baseline": "B",
+  "final_results_opened": false,
+  "reason": "M: unfiltered development +7 flips/0 regressions; new conditioned core 60/81→74/81 and guard 41/48→47/48. L2: two exact missed-lethal corrections, 24 engine checks and no development outcome regression. Reject learned rule and T for insufficient evidence. Select the minimal combination for a single frozen test, not as a declared winner.",
+  "data_hashes": {
+    "runs/final-20261113/batches/dev-core/report.json": "ef75334c2cf1ef9effacbd22f5d32c28d97334ecc7601d2849703c7e53af96f6",
+    "runs/final-20261113/batches/dev-guard/report.json": "63446d011c76af3e9bd80a14db446a8877e0130268bc886f873282bec86896de",
+    "runs/final-20261113/batches/dev2-core/report.json": "a35e5d8025e1a9235495a5dd54e9e63ce3e10f594465c08589c5801be8d6f8eb",
+    "runs/final-20261113/batches/dev2-guard/report.json": "7ab805faebf48627247a36f149391237eaa30a57edbe44b9bd813b0a873b8cee",
+    "runs/final-20261113/batches/conditional-core/report.json": "ad6047974029710fd4a9383b4609d6d40a725244386c98d5c5cde37854053b46",
+    "runs/final-20261113/batches/conditional-guard/report.json": "3782b0a179ed201d33445162cbaea5ccadefb0b40cbfc1e45117436fc5d3937f"
+  },
+  "final_plan": {
+    "created": 1794622126.260233,
+    "original_final_core": [
+      41400000,
+      41400039
+    ],
+    "seeds": {
+      "final_core": [
+        41400000,
+        41400099
+      ],
+      "final_guard": [
+        41500000,
+        41500007
+      ]
+    },
+    "planned_full_attempts": 5878,
+    "planned_development_attempts": 3024,
+    "final_games_per_arm": 1424,
+    "auxiliary_full_games_reserved": 6,
+    "reason": "Before any final outcome: the second development block has zero mulligan exposure. Increase independent final seed groups to measure the rare rule; keep one challenger and all original promotion thresholds.",
+    "no_final_opened": true,
+    "promotion_unchanged": {
+      "primary": "equal Astra/Bot2 family win rate, seed-cluster paired",
+      "statistical_route": "positive primary gain, 95% cluster lower bound > 0",
+      "correction_route": "proved narrow lethal correction, no observed final regression in any family or guard; do not claim population gain",
+      "family_regression_limit_pp": 2.5,
+      "guard_regression_limit_pp": 2,
+      "reliability": "zero illegal, timeouts, unexpected fallback or execution errors; complete CLI <= 2s",
+      "default": "engine-trap-v2 if evidence insufficient"
+    }
+  },
+  "promotion": "Original predeclared thresholds remain unchanged; recommend B if ML2 does not pass."
+}

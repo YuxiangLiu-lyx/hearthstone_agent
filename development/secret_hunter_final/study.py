@@ -77,6 +77,8 @@ def main():
     with (RUN/'writer.lock').open('a') as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         db=train.connect(RUN);initialize(db);cs=register(db);m=train.meta(db,'manifest')
+        from development.secret_hunter_final.integrity import check
+        check()
         assert all(sha(ROOT/p)==s for p,s in m['protected'].items())
         assert all(sha(Path(p))==s for p,s in m['engine'].items())
         assert all(snapshot(json.loads((ROOT/p).read_text()))==v for p,v in m['opponents'].items())
@@ -84,8 +86,14 @@ def main():
         if a.command=='freeze':
             assert not train.meta(db,'final_opened',False)
             assert a.arms and len(a.arms)==2 and a.arms[0]=='B'
+            final_seeds={k:v for k,v in m['seed_blocks'].items() if k.startswith('final')}
+            amendment=RUN/'final-plan-amendment.json'
+            if amendment.exists():
+                updated=json.loads(amendment.read_text());assert updated['promotion_unchanged']==m['promotion']
+                final_seeds=updated['seeds']
             f={'created':time.time(),'arms':a.arms,'fingerprints':{x:cs[x]['sha256'] for x in a.arms},
                'promotion':m['promotion'],'seeds':{k:v for k,v in m['seed_blocks'].items() if k.startswith('final')}}
+            f['seeds']=final_seeds;f['preopening_plan_amendment_sha256']=sha(amendment) if amendment.exists() else None
             path=RUN/'final-freeze.json';assert not path.exists()
             train.atomic(path,f);return
         if a.command=='report':train.analyze(db,RUN,a.batch);return
@@ -93,7 +101,7 @@ def main():
         if a.final:
             f=json.loads((RUN/'final-freeze.json').read_text());assert a.arms==f['arms']
             assert all(cs[x]['sha256']==f['fingerprints'][x] for x in a.arms)
-            lo,hi=m['seed_blocks']['final_guard' if a.pool=='guardrail' else 'final_core']
+            lo,hi=f['seeds']['final_guard' if a.pool=='guardrail' else 'final_core']
             assert lo<=a.start and a.start+a.seeds-1<=hi
             assert not a.warm
             train.setmeta(db,'final_opened',True)

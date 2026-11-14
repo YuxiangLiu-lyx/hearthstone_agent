@@ -10,35 +10,41 @@
     "parent": "B",
     "sha256": "60794f33424ecb0608930958b8838233f4d42b51cb34101708ae79f403833f9c",
     "hypothesis": "Keep one Explosive Trap vs Warlock with no 1/2-cost minion; retain every prior branch",
-    "status": "unvalidated"
+    "status": "validated development capability: independent conditioned gains; component of selected challenger"
   },
   {
     "name": "L",
     "parent": "B",
     "sha256": "f3310e99c89703d8fc957a1278fbfd5d447587415068ad80b12a34e41a87b8b0",
     "hypothesis": "Narrow burn/Steady Shot proof after existing lethal proof",
-    "status": "unvalidated"
+    "status": "superseded by L2: missed Houndmaster board in known lethal; immutable snapshot retained"
   },
   {
     "name": "ML",
     "parent": "M",
     "sha256": "565b4b76bb2abbe1179c0d033293907cb30e34f3baa56310342c2847128f0831",
     "hypothesis": "Narrow burn/Steady Shot proof after existing lethal proof",
-    "status": "unvalidated"
+    "status": "superseded by ML2 after narrow lethal coverage correction"
   },
   {
     "name": "L2",
     "parent": "B",
     "sha256": "05654195c01e8168a94b735f47e629677f0c1e180a283b878924dde80e3b51d3",
     "hypothesis": "Narrow burn/Steady Shot proof after existing lethal proof; v2 covers Houndmaster spell-safe board",
-    "status": "unvalidated"
+    "status": "engine-verified correction, development regression checks passed; component of selected challenger",
+    "capability_predecessor": "L"
   },
   {
     "name": "ML2",
     "parent": "M",
     "sha256": "c9f83686902fad9d45c32f78ecb01c7a2f298bbf65a4ce5b43f5fa9cb04e5dd5",
     "hypothesis": "Narrow burn/Steady Shot proof after existing lethal proof; v2 covers Houndmaster spell-safe board",
-    "status": "unvalidated"
+    "status": "sole challenger frozen for independent final test; no winner declared yet",
+    "capability_predecessor": "ML",
+    "components": [
+      "M",
+      "L2"
+    ]
   },
   {
     "name": "T",
