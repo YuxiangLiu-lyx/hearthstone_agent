@@ -128,3 +128,5 @@ CF 执行器只处理已入队任务；生成新任务时必须使用归档的�
 停止全部本轮写入器、确认无running尝试并完成推荐后，运行 `development.secret_hunter_long.archive`。该入口检查固定引擎/对手及SQLite完整性，生成一致的 `ledger-backup.sqlite`、逐文件SHA清单、原始证据tar和当前git源码tar；哈希记录在 `docs/secret_hunter_long/archives.json`。Skill提交ZIP与研究tar彼此独立，只有前者受课程单文件夹和10MB要求约束。
 
 恢复证据时，将backup复制为ledger.sqlite；若换了工作目录，必须显式记录数据库与请求中的路径迁移。运行环境中的时间预算可能使不同硬件提前截断小范围搜索，因此可复验是指固定代码、输入、种子、引擎和预算协议，不保证任意负载下所有启发式搜索逐指令一致。
+
+长批次应确认宿主不会空闲休眠。本轮使用临时`caffeinate -i -s -t <原截止剩余秒数>`，记录PID于power-assertion.json，交付时结束；没有改变永久电源设置。首次选择B的24次尝试跨过宿主挂起，monotonic时延不含睡眠，详见host-sleep-audit.json。复验墙钟性能必须在不挂起的主机上进行。

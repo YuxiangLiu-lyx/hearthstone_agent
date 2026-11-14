@@ -1,5 +1,12 @@
 # 执行中检查点
 
+## 2026-11-14 12:57 UTC 更新
+
+选择核心已打开并持续运行，禁止新开发/调参。12:37–12:55宿主idle/maintenance sleep使24次B尝试跨过挂起；pmset日志与utc/monotonic差保存host-sleep-audit.json，已完成终局不重跑。单调时间排除了挂起，不能拿受影响段证明连续墙钟CLI延迟。12:56启动临时caffeinate PID83336，命令/pid在power-assertion.json，自动到原deadline结束；任务完成后必须核对PID命令并主动结束它。没有修改系统永久设置。最近吞吐已恢复56局/分钟，原20:44UTC截止不延长。
+
+主选择controller运行selection-execution-plan，main PID以SQLite为准。另有selection-analysis-plan（tool session4576）等待selection-guard完成，仅运行预定义配对、卡位统计与BL2动作审计。新card_tables支持BL2/DARCL2以及选择/最终；这只改变报告，不改冻结候选。最终按170核心+16护栏两版完整CLI，在防睡眠条件下重新验收时延。
+
+
 ## 2026-11-14 12:34 UTC 更新
 
 开发全部完成。M/L2八版每版360局：B305、BM303、BL2305、BML2303、DARC310、DARCM307、DARCL2310、DARCML2307。两条线M×L2终局交互均零；最终选拔代表BL2与DARCL2。所有父代配对、动作审计及因子报告已读完。72局六并发CLI负载零异常、max0.518秒、51.741局/分钟。
