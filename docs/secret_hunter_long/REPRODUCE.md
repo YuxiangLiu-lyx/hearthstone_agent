@@ -137,6 +137,26 @@ CF 执行器只处理已入队任务；生成新任务时必须使用归档的�
 
 该入口只测试推荐的精确冻结路径，逐场核对终局、当前seq、Python动作原样中转、零普通异常及模型收到GAME OVER；失败保留并停止，不自动重试。已完成记录可恢复读取，不新增重复对局。八局胜负只用于协议验收，不影响选版。结果与逐局时延保存在final-acceptance.json。
 
+完整最终比赛结束后，本轮使用以下顺序生成最终统计与推荐。所有命令都是读取终局或运行已锁验收，不追加战略样本：
+
+```sh
+.venv/bin/python -m development.secret_hunter_long.comparisons final-core B DARCL2
+.venv/bin/python -m development.secret_hunter_long.comparisons final-guard B DARCL2
+.venv/bin/python -m development.secret_hunter_long.analyze final-core
+.venv/bin/python -m development.secret_hunter_long.analyze final-guard
+.venv/bin/python -m development.secret_hunter_long.action_audit final-core B DARCL2
+.venv/bin/python -m development.secret_hunter_long.action_audit final-guard B DARCL2
+.venv/bin/python -m development.secret_hunter_long.release recommend
+.venv/bin/python -m development.secret_hunter_long.accept_frozen
+.venv/bin/python -m development.secret_hunter_long.final_evidence
+.venv/bin/python -m development.secret_hunter_long.report_tables
+.venv/bin/python -m development.secret_hunter_long.card_tables
+.venv/bin/python -m development.secret_hunter_long.lineage_report
+.venv/bin/python -m development.secret_hunter_long.delivery_audit
+```
+
+final_evidence从原始决策样本合并最终两池CLI时延与两类协议验收时延，不平均每局分位数。状态发布到act的计时来自原始同机状态文件mtime与MCP调用时间；归档保存这些原始时间。delivery_audit还要求八场验收证据齐全、与账本和推荐包指纹一致，历史辅助失败单独列出。上述输出应在独立复验worktree生成，以保护封存文件。
+
 所有正式课程提交和远端推送由用户决定；本轮只生成本地研究文件与推荐 ZIP。
 
 ## 封存与完整性
