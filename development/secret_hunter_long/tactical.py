@@ -117,7 +117,7 @@ def restore(src):
     raise ValueError('root not reached')
 
 def execute(job):
-    setup(job['arm'])
+    setup(job.get('policy_arm',job['arm']))
     from program_policy import decide
     from state_features import with_public_history
     from action_validator import legal
@@ -132,7 +132,7 @@ def execute(job):
     hidden={'deck1':[c.id for c in e.player(1).deck],'deck2':[c.id for c in e.player(2).deck],
         'hand1':[c.id for c in e.player(1).hand],'hand2':[c.id for c in e.player(2).hand],
         'rng_hash':hashlib.sha256(repr(e.game.random.getstate()).encode()).hexdigest()}
-    cfg=json.loads((HERE/'candidates'/job['arm']/'config.json').read_text());foe=opponent(src['opponent_spec'])
+    cfg=json.loads((HERE/'candidates'/job.get('policy_arm',job['arm'])/'config.json').read_text());foe=opponent(src['opponent_spec'])
     memory={};sequence=[];trace=[];endpoint=None;after_response=None;changes=0
     for step in range(700):
         if e.over:break
@@ -154,7 +154,7 @@ def execute(job):
             endpoint=visible(e.view(seat));sequence[-1]['next_visible']=endpoint
         if after_response is None and (e.over or e.turn>=root_turn+2):after_response=visible(e.view(seat))
     assert e.over,('nonterminal',job)
-    if job['sample']==0 and job['route']=='baseline':assert int(e.winner==seat)==src['source_score'],('baseline result mismatch',job)
+    if job['sample']==0 and job['route']=='baseline' and not job.get('policy_arm'):assert int(e.winner==seat)==src['source_score'],('baseline result mismatch',job)
     return {**job,'source_seed':src['seed'],'split':src['split'],'features':src['features'],
         'source_score':src['source_score'],'prefix_verified_steps':prefix,'root_digest':before,'audit_hidden':hidden,
         'win':int(e.winner==seat),'winner':e.winner,'terminal':True,'actions_changed':changes,

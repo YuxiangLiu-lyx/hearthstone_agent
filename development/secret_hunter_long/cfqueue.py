@@ -10,6 +10,7 @@ import traceback
 from development.secret_hunter_long.study import ROOT,RUN
 from development.secret_hunter_mcgs import train
 from development.secret_hunter_mcgs.supervision import GameProcess
+from development.secret_hunter_program.common import sha
 
 def connect():
     db=train.connect(RUN)
@@ -51,7 +52,8 @@ def run(kind,workers,limit):
                 used=db.execute('select count(*) from cf_attempts').fetchone()[0]
                 while ix<len(todo) and len(active)<workers and used<m['limits']['continuations'] and started<limit and time.time()<m['candidate_generation_deadline'] and not stop:
                     row=todo[ix];ix+=1;path=Path(row['result_path']);request=path.with_suffix('.request.json')
-                    train.atomic(request,{'kind':kind,'job':json.loads(row['job']),'output':str(path)})
+                    harness={name:sha(ROOT/'development/secret_hunter_long'/name) for name in ('cfqueue.py',kind+'.py')}
+                    train.atomic(request,{'kind':kind,'job':json.loads(row['job']),'output':str(path),'harness_sha256':harness})
                     with db:
                         aid=db.execute("insert into cf_attempts(key,status,started) values (?,'running',?)",(row['key'],time.time())).lastrowid
                         db.execute("update cf_jobs set status='running' where key=?",(row['key'],))

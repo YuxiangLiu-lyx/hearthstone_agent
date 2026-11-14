@@ -46,7 +46,7 @@ def options(s):
         change('keep_arcane','DS1_185',True);change('drop_arcane','DS1_185',False)
     return choices
 
-def mine(arm,start,seeds,mode,cap):
+def mine(arm,start,seeds,mode,cap,focus=None):
     setup(arm)
     from hs_arena.engine import Engine
     from hs_arena.deck import load_deck
@@ -61,6 +61,7 @@ def mine(arm,start,seeds,mode,cap):
                 hit=[k for k,v in opts.items() if k not in ('baseline','all_replace') and v!=opts['baseline']]
                 counts.update(hit)
                 if mode=='matched' and not hit:continue
+                if focus and focus not in hit:continue
                 cid=f'm-{arm}-{seed}-{spec["name"]}-s{seat}'
                 source={'case':cid,'arm':arm,'seed':seed,'seat':seat,'opponent_spec':spec,'state':s,
                     'features':f,'split':'validation' if seed%5 in (0,1) else 'train','opening_hand':[(c['entity_id'],c['card_id']) for c in s['you']['hand']],
@@ -89,7 +90,7 @@ def mine(arm,start,seeds,mode,cap):
     manifest={'arm':arm,'mode':mode,'start':start,'seeds':seeds,'openings_examined':tested,
         'public_trigger_counts':dict(counts),'eligible':len(sources),'selected':len(chosen),
         'selected_seed_groups':len({s['seed'] for s in chosen}),'cases':[s['case'] for s in chosen],
-        'jobs':len(jobs),'selection':'v2: public own opening, public enemy class, actual first/second only; seed round-robin cap and opponent/seat rotation',
+        'jobs':len(jobs),'focus':focus,'selection':'v2: public own opening, public enemy class, actual first/second only; seed round-robin cap and opponent/seat rotation',
         'outcome_scope':'conditional matched sample, not whole-pool win rate'}
     atomic(RUN/'mulligan-sources'/f'manifest-{arm}-{start}.json',manifest);reserve('mulligan',jobs)
     print(json.dumps(manifest))
@@ -140,4 +141,5 @@ def execute(job):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--arm',required=True);p.add_argument('--start',type=int,required=True)
     p.add_argument('--seeds',type=int,required=True);p.add_argument('--mode',choices=['exhaustive','matched'],default='matched');p.add_argument('--cap',type=int,default=160)
-    a=p.parse_args();mine(a.arm,a.start,a.seeds,a.mode,a.cap)
+    p.add_argument('--focus')
+    a=p.parse_args();mine(a.arm,a.start,a.seeds,a.mode,a.cap,a.focus)

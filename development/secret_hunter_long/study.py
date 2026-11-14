@@ -84,7 +84,9 @@ def register(db):
     for p in sorted((HERE/'candidates').iterdir()):
         if not p.is_dir():continue
         item={'name':p.name,'path':str(p.relative_to(ROOT)),'sha256':fingerprint(p),**deck_check(p)}
-        if p.name in cs:assert item==cs[p.name], ('immutable candidate changed',p.name)
+        if p.name in cs:
+            assert {k:v for k,v in item.items() if k!='path'}=={k:v for k,v in cs[p.name].items() if k!='path'}, ('immutable candidate changed',p.name)
+            assert fingerprint(ROOT/cs[p.name]['path'])==item['sha256']
         else:cs[p.name]=item
     assert cs['B']['sha256']==BASE_SHA and cs['B']['deck_sha256']==DECK_SHA
     train.setmeta(db,'candidates',cs);train.atomic(RUN/'candidates.json',cs)
