@@ -1,5 +1,21 @@
 # 执行中检查点
 
+## 2026-11-14 11:09 UTC 更新
+
+最新提交d139559，之后新增card_tables与附表待提交。完整草稿REPORT.md已写，首段明确选拔/最终未开封；最终须重写为实际交付结论并移除待完成段。STATISTICS.md由report_tables生成；CARD_STATISTICS.md由card_tables生成。archive.py、delivery_audit.py已写，只在最终完成/停止写入器后运行。
+
+recovery-fix完成：B207/240，TRPLY203、TRPLY2 203。各5翻胜9翻败，主指标−1.875pp CI[-5,1.25]pp；Astra−2.5、Bot2−1.25、Bot1零，按预注册transfer门槛两者归档，不做原定1920局回应/M迁移。实际动作分歧137/135局，修正版恢复18113次调用、18007次支持、256462节点；TRPLY与TRPLY2仅2局动作分歧、无终局差。TRPLY两批合计40组主指标+.729pp CI[-2.396,4.062]。四个翻胜/回归实际首分岔已检查，diagnostic存analysis/recovery-fix-flip-diagnostic.json。
+
+B第二轮4083战术标签完成：训练hold_coin且opponent_hunter<1，540未来净+6；留出360未来262→256（2翻胜8翻败），拒绝无BT2。教师world1/2选→world0验：120留出根83→86（5/2），CI[-2.5,6.667]pp，仍不确定。DARC4122标签当前CF队列在跑（PID以meta为准；exec session93410），日志coverage-DARC-labels.log；队列目标总CF尝试15580=7375原有+4083B+4122DARC。DARC全部完成后显式learn_tactical --batch coverage-core --arm DARC --candidate-name DARCT2；若通过，跑实际policy jobs并evaluate_policy，之后再决定20组M/T自然因子批次。
+
+CF执行器现在直接执行request归档的kind-module字节，记录harness_execution。此前请求只证明分发时hash，明确不是独立导入时hash。B队列末段曾加纯决策/回退计数，无基线路线逻辑更改；harness-dispatch-change.json记录限制。不要把早期结果追认成后加的字节固定执行器。
+
+主整局two-card在跑（B360已完，DWOLF将完，随后KO/WOOZE），之后旧控制器自动进入mulligan-combination8臂30组。新增two-card-analysis-plan与mulligan-analysis-plan会在各批全部完成后生成父代配对、动作审计、factorial交互及卡位表；只分析，不自动改候选。
+
+完整原定主线仍9896局；取消回应迁移后可给选拔更大样本，例如5臂60核心+8护栏=4720，另72负载试验与辅助约20仍在15000前最终上限内。若DARCT2实际有效并添加960局4臂M/T自然因子，选拔应相应缩为5臂40核心+8护栏=3520。候选和选拔规模必须等开发齐全再锁，不可提前看选拔结果。
+
+还需：所有开发跑齐/读结果；6并发实际CLI负载pilot（新的51400010起种子，B/DARC及重候选72局）决定最终并发；selection-plan、select_challenger；release prepare精确解包、study freeze、冻结前本地git提交；最终100核心+16护栏每版、两版runtime-NAME；recommend；推荐精确包真实Luna两座位与可选ClientSeat6；完整报告/案例/谱系决定/全预算；delivery_audit、SQLite备份与hash归档、最终本地commit、确认本轮进程全部退出。正式课程与远端不动。
+
 ## 2026-11-14 10:45 UTC 更新
 
 最新已提交 `d7751b0`。工作继续；选拔与最终种子尚未打开，所有候选仍不可变。以下进度优先于历史检查点。
