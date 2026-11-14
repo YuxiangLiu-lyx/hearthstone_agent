@@ -29,6 +29,10 @@ def main():
     for s in states[:8]:records.append(probe(source,s,'cold'))
     with ThreadPoolExecutor(max_workers=3) as pool:
         records.extend(pool.map(lambda i:probe(source,states[i],'concurrent'),range(3)))
+    for tag,options in [('lethal-hero-power',{'mana':2}),('lethal-arcane-shot',{'mana':1,'hand':['DS1_185']})]:
+        e=fixture(enemy_hp=2,**options);s=e.view(1);s.update(seq=70,player=1,game_id=tag)
+        r=probe(source,s,tag);assert e.step(1,r['action']).accepted and e.winner==1
+        r['engine_winner']=e.winner;records.append(r)
     found=set()
     for seed in range(10):
         e=Engine(load_deck(source/'deck.json'),load_deck(ROOT/'development/teacher_eval/decks/astra-doubled.json'),seed)

@@ -72,6 +72,7 @@ continue_batches 依次完成 dev2-core（41303000 起 12 组）、dev2-guard（
 .venv/bin/python -m development.secret_hunter_final.study run --batch final-core --arms B ML2 --start 41400000 --seeds 100 --workers 3 --final
 .venv/bin/python -m development.secret_hunter_final.study run --batch final-guard --arms B ML2 --start 41500000 --seeds 8 --pool guardrail --workers 3 --final
 .venv/bin/python -m development.secret_hunter_final.release recommend
+.venv/bin/python -m development.secret_hunter_final.final_changes
 ```
 
 最终不加 `--warm`。这两批实际使用 `frozen/<版本>/secret-hunter` 的精确 ZIP 解包目录。打开最终种子后，程序拒绝新的开发批次和候选调整。最终推荐根据预注册门槛可能回到 B，不强行晋级 ML2。
@@ -81,7 +82,9 @@ continue_batches 依次完成 dev2-core（41303000 起 12 组）、dev2-guard（
 ```sh
 .venv/bin/python -m development.secret_hunter_final.runtime --candidate <精确解包目录>
 .venv/bin/python -m development.secret_hunter_final.mcp_audit --candidate <精确解包目录>
+.venv/bin/python -m development.secret_hunter_final.delivery_audit
 .venv/bin/python -m development.secret_hunter_final.report
+.venv/bin/python -m development.secret_hunter_final.archive
 ```
 
 runtime 包括真实入口的先后手换牌、Tracking choice、常规随机出牌、结束回合、注入故障回退、过期 seq 与 GAME OVER。mcp_audit 启动官方 no-model client，对固定三个种子各跑双方座位，核对所有原样 seq/action。它不能复现缺失的真实 Luna 测试。

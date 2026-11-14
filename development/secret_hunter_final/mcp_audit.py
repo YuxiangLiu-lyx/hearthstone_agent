@@ -33,12 +33,22 @@ def audit(folder,seat):
     assert 'forfeit' not in result['reason'] and not result.get('engine_error')
     normal=[d for d in decisions if d['phase']!='deck_submission']
     assert not any(d['worker_error'] or d['info'].get('fallback') for d in normal)
+    normal_by_seq={d['seq']:d for d in normal};publication=[];outside_program=[]
+    for call in acts:
+        seq=call['arguments']['seq']
+        if seq not in normal_by_seq:continue
+        # Both timestamps use the same host wall clock. The course writes the
+        # retained state file immediately before publishing the MCP mailbox.
+        elapsed=call['time']-(p/f'decisions/{seq:05d}.state.json').stat().st_mtime
+        assert elapsed>=0
+        publication.append(elapsed);outside_program.append(elapsed-normal_by_seq[seq]['elapsed_s'])
     return {'game_path':str(game.relative_to(ROOT)),'seat':seat,'result':result,
             'decisions':len(decisions),'all_seq_action_envelopes_identical':True,
             'wait_first':True,'game_over_observed':True,
             'ordinary_fallbacks':0,'worker_errors':0,
             'internal_program_times_s':[d['elapsed_s'] for d in normal],
-            'timing_scope':'Internal decide.py elapsed excludes Python startup. Full subprocess latency is measured in final-core/final-guard; no per-action Luna relay measurement.'}
+            'publication_to_act_times_s':publication,'outside_internal_program_times_s':outside_program,
+            'timing_scope':'Internal decide.py elapsed excludes Python startup. State-file mtime to MCP act log (1ms resolution) includes polling, Python startup/program, client and transport, but excludes host action acceptance. The residual excludes only internal program time; it is not pure network latency or Luna latency. Full subprocess latency is measured in final-core/final-guard.'}
 
 
 def main():
@@ -81,6 +91,8 @@ def main():
              'actual_first_games':sum(r['result']['first_player']==r['seat'] for r in records),
              'decisions':sum(r['decisions'] for r in records),'envelope_mismatches':0,'illegal':0,'timeouts':0,'forfeits':0,
              'internal_program_latency_s':quantiles([t for r in records for t in r['internal_program_times_s']]),
+             'publication_to_act_latency_s':quantiles([t for r in records for t in r['publication_to_act_times_s']]),
+             'outside_internal_program_latency_s':quantiles([t for r in records for t in r['outside_internal_program_times_s']]),
              'scope':'Official wait → Python decide.py → act transport, no model. These six games are protocol checks, not the frozen proxy evaluation or Luna validation.',
              'records':records}
     train.atomic(ROOT/'docs/secret_hunter_final/mcp-audit.json',summary)

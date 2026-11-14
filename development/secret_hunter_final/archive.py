@@ -9,6 +9,7 @@ from development.secret_hunter_final.study import ROOT,RUN,HERE,register
 from development.secret_hunter_mcgs import train
 from development.secret_hunter_program.common import sha
 from development.teacher_eval.run import snapshot
+from development.benchmarks.run import fingerprint
 
 
 def main():
@@ -22,6 +23,11 @@ def main():
     assert all(sha(ROOT/p)==h for p,h in manifest['protected'].items())
     assert all(sha(Path(p))==h for p,h in manifest['engine'].items())
     assert all(snapshot(json.loads((ROOT/p).read_text()))==v for p,v in manifest['opponents'].items())
+    for release in json.loads((RUN/'release-candidates.json').read_text()):
+        assert sha(ROOT/release['path'])==release['zip_sha256']
+        assert fingerprint(ROOT/release['extracted'])==release['source_sha256']
+    recommendation=json.loads((ROOT/'docs/secret_hunter_final/recommendation.json').read_text())
+    train.setmeta(db,'recommended',recommendation['recommended'])
     train.setmeta(db,'study_complete',{'time':time.time(),'recommendation':'docs/secret_hunter_final/recommendation.json'})
     with sqlite3.connect(RUN/'ledger.snapshot.sqlite') as target:db.backup(target)
     integrity=db.execute('pragma integrity_check').fetchone()[0];assert integrity=='ok'
@@ -38,6 +44,7 @@ def main():
     record={'path':str(output.relative_to(ROOT)),'bytes':output.stat().st_size,'sha256':sha(output),
             'files':len(files),'ledger_sha256':sha(RUN/'ledger.snapshot.sqlite'),'sqlite_integrity':integrity,
             'protected_engine_and_opponents_unchanged':True,
+            'both_frozen_zips_and_extracted_sources_unchanged':True,
             'scope':'Research evidence only, never submit as the Skill ZIP. External source downloads and empty worker logs excluded; hashes and citations retained in docs.',
             'run':str(RUN.relative_to(ROOT))}
     train.atomic(ROOT/'docs/secret_hunter_final/data-manifest.json',record)
