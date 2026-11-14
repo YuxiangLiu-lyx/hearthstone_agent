@@ -1,5 +1,16 @@
 # 执行中检查点
 
+## 2026-11-14 13:58 UTC 更新
+
+selection-core五臂全720局完成：B620、BL2620、DARCL2631、KO624、DWOLF630；主指标分别84.5139%、84.5139%、86.4583%、85.2778%、86.3194%。DARCL2暂领先，但必须等selection-guard全1120局完成并核对可靠性，再运行select_challenger；不可提前最终冻结。护栏已自动开始，约每版224局。当前所有核心普通可靠性异常零，B初段host sleep另有审计。
+
+B/BL2选择核心配对已读：零终局变化；BL2有15窄证明局/17调用/12首次窄动作差，另11非窄首次动作差（10局B开始于caffeinate前），B33内部timecut vs BL2零；不把非窄差归给新修复。analysis/selection-B-BL2-timing-audit.json保存解释与动作元数据。selection-analysis-plan等护栏完成后仍会执行所有已定义配对、卡位与报告；**等其defined_plan_complete后再开final，避免旧run_plan的not-final断言中止剩余分析。**
+
+final-acceptance-plan已提前锁定：推荐精确包Luna seed51800010同一新种子两座位各1局；ClientSeat seeds51800020–22各双座位，共8辅助。不同于更早建议的10/11不同Luna种子，按该实际计划执行。错误不自动重试，原失败留账；最多20未来辅助的原额度不变。包仅由冻结晋级门槛决定，辅助输赢不参加选版。
+
+其余下一步：全部选择完成→select_challenger→release prepare→git commit→study freeze（核心170、护栏16）→runtime两版exact→reproduce_frozen实际verify-only及临时账本setup测试→最终→recommend→8辅助→报告、delivery_audit、archive及caffeinate清理。当前caffeinate仍PID83336，所有预算原截止20:44UTC。
+
+
 ## 2026-11-14 13:10 UTC 更新
 
 当前源码886b669。选择核心B720完成，BL2约325完成，剩余DARCL2/KO/DWOLF及护栏由selection-execution-plan继续，未改候选。禁止新开发、标签或重开旧留出。caffeinate PID83336持续有效，完整预算原截止20:44UTC不变。
