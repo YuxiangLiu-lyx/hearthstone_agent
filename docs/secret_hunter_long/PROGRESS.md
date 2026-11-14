@@ -1,5 +1,13 @@
 # 已完成运行的检查点与历史
 
+## 2026-11-14 16:06 UTC 全部交付完成
+
+运行、最终验证、模型验收、报告、交付审计和封存全部完成。唯一推荐DARCL2，ZIP SHA0130813f56655e7b802e2cbbe539526f6ab2a1a8f1acf4d27af6e5fdee5a9a0e。最终本地结果与限制见REPORT，复验命令见REPRODUCE。
+
+源码封存提交b46fe54529b7d8764853ce81cbeaf6a5cf3bd623。evidence.tar.gz 664,266,566字节，SHA5a8d16e23b7deb1497fd5d04517b8f2460bf09d840aa71f11e116a8f77ace27c；source.tar.gz 54,267,304字节，SHAdfe005bac1f5f6837b3fcdbed8f33e052ec330b8a4073cdace801dd01093d8f7。archives-verification确认206,956个证据文件、7,489,096,469解压字节逐文件哈希完全一致，源码6691文件流完整可读。
+
+所有实验与模型controller自然退出；核对完整命令后只终止自建caffeinate83336，没有改变永久电源设置。cleanup.json记录清理。封存后没有改RUN内容；后续提交仅记录归档哈希、核验与清理。原worktree保持原分支和原两个未跟踪ZIP。未远端推送或课程提交。下面均为历史检查点，不代表尚待运行的任务。
+
 ## 2026-11-14 16:02 UTC 最终运行完成
 
 推荐DARCL2，完整4,976场独立最终CLI及8场推荐包协议验收全部结束。accept_frozen session21497 exit0：Luna2局70动作、Client6局178动作，实际先后手均覆盖，所有seq/脚本中转/终态与普通可靠性检查通过。主指标+1.593137pp CI[0.563725,2.647059]；核心51翻胜28翻败；守卫−0.446429pp、0/2。推荐ZIP原冻结字节44,789、解压118,297，SHA0130813f56655e7b802e2cbbe539526f6ab2a1a8f1acf4d27af6e5fdee5a9a0e。

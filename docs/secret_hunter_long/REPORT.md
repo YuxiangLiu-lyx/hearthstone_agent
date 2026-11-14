@@ -205,6 +205,6 @@ ZIP SHA-256：`0130813f56655e7b802e2cbbe539526f6ab2a1a8f1acf4d27af6e5fdee5a9a0e`
 
 [delivery-audit.json](delivery-audit.json)确认SQLite完整、所有任务结束、引擎/对手/候选未变、最终与开发/选择来源种子分离、精确包身份与8场验收证据一致。[LINEAGE.md](LINEAGE.md)区分源码修改、仅换牌配置与未构建的学习提案；[STATISTICS.md](STATISTICS.md)、[CARD_STATISTICS.md](CARD_STATISTICS.md)、[CASE_STUDIES.md](CASE_STUDIES.md)及[OPENING_CASES.md](OPENING_CASES.md)保存分层统计与已核对的逐动作案例。
 
-源码和原始证据通过archive入口封存，文件路径、SHA-256、源码提交及SQLite备份哈希记录在[archives.json](archives.json)；原始证据逐文件哈希清单在证据包内。源码tar对应封存前提交，归档哈希与临时进程清理另作后续记账。复验入口已实际检查环境341个资源文件、临时新账本初始化和路径重登记；重跑同样最终种子属于复现，不能再称新留出。追加开发的B/DARC/DARCL2新种子入口列于REPRODUCE，当前没有运行该追加实验。
+源码和原始证据通过archive入口封存，文件路径、SHA-256、源码提交及SQLite备份哈希记录在[archives.json](archives.json)；原始证据逐文件哈希清单在证据包内。源码tar对应封存提交`b46fe54529b7d8764853ce81cbeaf6a5cf3bd623`，归档哈希与清理另作后续记账。封存后重新打开压缩包核对全部206,956个证据文件、7,489,096,469解压字节，大小与SHA-256均吻合；源码6691文件可完整读取，见[archives-verification.json](archives-verification.json)。所有实验控制器已退出，核对完整命令后终止本轮临时caffeinate进程，见[cleanup.json](cleanup.json)；封存RUN未再改动。复验入口已实际检查环境341个资源文件、临时新账本初始化和路径重登记；重跑同样最终种子属于复现，不能再称新留出。追加开发的B/DARC/DARCL2新种子入口列于REPRODUCE，当前没有运行该追加实验。
 
 研究结论限固定本地代理及已声明的引擎与预算。窄斩杀的独立净增胜尚未得到同牌表证据；条件留牌增益未在自然频率复现；两个冠军机制的复验未支持部署；反事实替代世界固定了隐藏手牌。原始数据、负结果与工程失败均保留。所有产物仅在本地交付，没有远端推送或课程提交。
