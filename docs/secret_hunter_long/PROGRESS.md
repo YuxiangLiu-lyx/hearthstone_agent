@@ -1,5 +1,11 @@
 # 执行中检查点
 
+## 2026-11-14 15:38 UTC 更新
+
+最终核心已完整结束：170组、两版各2040场，B1705胜，DARCL21728胜，51翻胜/28翻败。主指标82.990196%→84.583333%，差+1.593137pp，来源种子bootstrap95%区间[0.563725,2.647059]pp。家族Astra+1.274510pp、Bot2+1.911765pp、Bot1−0.882353pp。核心普通可靠性全部零，max0.876889s。core paired/card/action分析均已完成。DARCL2窄证明25局/29次，全部核心决策57117；B/DARCL2牌表不同导致初始公开状态不同，不能把2040个upstream差异当战术改动率。
+
+final-guard正由同一controller运行，两版各448场；完整guard结束才可release recommend，禁止根据core改变样本或候选。新增accept_frozen仅将开封前已锁的Luna2+Client6验收计划依次执行，要求先有推荐；任一异常停止并保留，不重试、不改Skill。后续交付流程和原截止不变。
+
 ## 2026-11-14 15:00 UTC 更新
 
 最终核心B2040场已完成，DARCL2已开始（约31/2040）。全部已完成最终普通可靠性计数0，CLI max0.876s，UTC-active max gap0.793s，无新挂起。首条DARCL2最终request016729已核对exact RUN/frozen/DARCL2/secret-hunter、full_cli=True、seed51600000/seat1。主controller仍execute_frozen工具session92387，主study PID58143（以SQLite为准），日志final-execution.log，自动core→guard。不要改候选或按中间结果延长样本。

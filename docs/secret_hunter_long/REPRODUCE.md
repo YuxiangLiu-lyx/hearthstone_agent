@@ -129,6 +129,14 @@ CF 执行器只处理已入队任务；生成新任务时必须使用归档的�
 
 该入口直接调用课程原 `SkillSeat` 和课程指定 `gpt-6-luna/medium`，核对每个 act 之前确有匹配的 Python 输出及终态工具回复。当前机器默认 Codex launcher 缺 ARM vendor；代码为测试进程指定 VS Code 内原生 CLI 的实际目录，使其能找到伴随的 `codex-code-mode-host`。不同机器应改研究 harness 中这个二进制位置并记录新哈希，不能改冻结 Skill。首次 launcher 失败保留为辅助失败；修复后完整真实对局验收与本地代理胜率分开统计。每次模型对局均计入整局预算。
 
+最终推荐生成后，按开封前锁定的final-acceptance-plan执行两场Luna和六场ClientSeat：
+
+```sh
+.venv/bin/python -m development.secret_hunter_long.accept_frozen
+```
+
+该入口只测试推荐的精确冻结路径，逐场核对终局、当前seq、Python动作原样中转、零普通异常及模型收到GAME OVER；失败保留并停止，不自动重试。已完成记录可恢复读取，不新增重复对局。八局胜负只用于协议验收，不影响选版。结果与逐局时延保存在final-acceptance.json。
+
 所有正式课程提交和远端推送由用户决定；本轮只生成本地研究文件与推荐 ZIP。
 
 ## 封存与完整性
