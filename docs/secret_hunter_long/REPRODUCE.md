@@ -111,6 +111,12 @@ CF 执行器只处理已入队任务；生成新任务时必须使用归档的�
 .venv/bin/python -m development.secret_hunter_long.runtime --candidate runs/long-20261114/frozen/NAME/secret-hunter --out docs/secret_hunter_long/runtime-NAME.json
 ```
 
+本轮完成冻结和两版入口验收后，用以下入口顺序运行已锁定核心、护栏范围；它从final-freeze与selection-plan生成不可变final-execution-plan，前一池未完整结束就停止，重复相同命令可恢复。它不读取中间成绩做决定：
+
+```sh
+.venv/bin/python -m development.secret_hunter_long.execute_frozen
+```
+
 `release recommend`只有在两版完整最终样本和各自精确解包路径验收齐全时才决策。它复制冻结ZIP，不重新打包或修改候选；若不达标，原字节B为推荐。
 
 `runtime.py` 验证冷启动、真实状态、choice、seq 刷新、故障回退和终态。真实课程中转入口：
