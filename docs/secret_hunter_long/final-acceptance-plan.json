@@ -1,0 +1,69 @@
+{
+  "created": 1794664330.8268852,
+  "before_final_opening": true,
+  "candidate": "Exact recommended frozen package selected only by the already-declared final promotion gate.",
+  "runtime": "26 actual CLI phase/fault/seq checks for both exact unpacked B and unique challenger before final matches.",
+  "luna": [
+    {
+      "seed": 51800010,
+      "seat": 1,
+      "opponent": "official greedy",
+      "mode": "luna"
+    },
+    {
+      "seed": 51800010,
+      "seat": 2,
+      "opponent": "official greedy",
+      "mode": "luna"
+    }
+  ],
+  "client": [
+    {
+      "seed": 51800020,
+      "seat": 1,
+      "opponent": "official greedy",
+      "mode": "client"
+    },
+    {
+      "seed": 51800020,
+      "seat": 2,
+      "opponent": "official greedy",
+      "mode": "client"
+    },
+    {
+      "seed": 51800021,
+      "seat": 1,
+      "opponent": "official greedy",
+      "mode": "client"
+    },
+    {
+      "seed": 51800021,
+      "seat": 2,
+      "opponent": "official greedy",
+      "mode": "client"
+    },
+    {
+      "seed": 51800022,
+      "seat": 1,
+      "opponent": "official greedy",
+      "mode": "client"
+    },
+    {
+      "seed": 51800022,
+      "seat": 2,
+      "opponent": "official greedy",
+      "mode": "client"
+    }
+  ],
+  "planned_full_auxiliary_attempts": 8,
+  "game_outcome": "Engineering protocol acceptance only; do not use wins/losses for strategy selection or promotion.",
+  "required": [
+    "source fingerprint unchanged",
+    "zero ordinary unexpected fallback, worker error, illegal action, timeout or exit",
+    "wait first and current seq accepted",
+    "each model act matches the immediately preceding Python output",
+    "GAME OVER published and observed by the seat"
+  ],
+  "timing": "Report full Python CLI separately from same-host state-publication-to-act latency; residual includes model, shell startup and transport, not pure network.",
+  "failure_handling": "Preserve and charge every failed attempt. No automatic retry and no frozen Skill edits. Codex must inspect any failure; an external launcher or service fault may be retested on an unused auxiliary seed within the existing maximum20futureaux allowance and original wall deadline."
+}
