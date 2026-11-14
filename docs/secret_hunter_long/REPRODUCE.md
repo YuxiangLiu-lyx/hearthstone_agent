@@ -19,7 +19,7 @@ SQLite 在 `runs/long-20261114/ledger.sqlite`，完整对局结果与观察在 `
 
 ## 已定义批次
 
-所有整局严格以 `(opponent, seed, seat)` 配对。下面的相同命令可恢复未完成任务，不重做已完成任务：
+所有整局严格以 `(opponent, seed, seat)` 配对。下面的相同命令可在尚未开启选拔时恢复未完成任务，不重做已完成任务。选拔已开启的账本会拒绝继续开发；最终封存账本只用于审计。需要从头重跑时，设置新的 `HUNTER_LONG_RUN` 绝对目录并初始化；必须显式重建对应来源清单，不能把旧绝对路径悄悄当成新数据：
 
 ```sh
 .venv/bin/python -m development.secret_hunter_long.study run --batch pilot-cli --arms B DARC DWOLF --start 51400000 --seeds 2 --workers 3
@@ -27,6 +27,9 @@ SQLite 在 `runs/long-20261114/ledger.sqlite`，完整对局结果与观察在 `
 .venv/bin/python -m development.secret_hunter_long.study run --batch mechanism-core --arms B KO TMILL TRPLY BL2 --start 51402000 --seeds 20 --workers 3 --warm
 .venv/bin/python -m development.secret_hunter_long.study run --batch lethal-guard --arms B BL2 --start 51403000 --seeds 4 --pool guardrail --workers 3 --warm
 .venv/bin/python -m development.secret_hunter_long.study run --batch coverage-core --arms B DARC --start 51404000 --seeds 50 --workers 3 --warm
+.venv/bin/python -m development.secret_hunter_long.study run --batch recovery-fix --arms B TRPLY TRPLY2 --start 51407000 --seeds 20 --workers 3 --warm
+.venv/bin/python -m development.secret_hunter_long.study run --batch two-card --arms B DWOLF KO WOOZE --start 51408000 --seeds 30 --workers 3 --warm
+.venv/bin/python -m development.secret_hunter_long.study run --batch mulligan-combination --arms B BM BL2 BML2 DARC DARCM DARCL2 DARCML2 --start 51409000 --seeds 30 --workers 3 --warm
 ```
 
 `--warm` 是开发用进程内决策；不加时逐次启动完整 Python CLI。最终与选型阶段禁止 warm。已定义的后台序列在 `defined-next-stages.json`、`coverage-plan.json`，只运行列出的候选和命令，不生成新代码。当前 PID 以 SQLite meta 的 `pid`、`cf_pid` 为准；用 SIGTERM 请求停止，等待活动子进程退出后再恢复相同命令。单写入器文件锁防止误启两个同类 supervisor。不能仅靠旧日志中的 PID 杀进程，应先核对完整命令。
@@ -48,6 +51,9 @@ SQLite 在 `runs/long-20261114/ledger.sqlite`，完整对局结果与观察在 `
 
 .venv/bin/python -m development.secret_hunter_long.tactical --batch coverage-core --arm B --cap 300 --samples 3 --balance-families
 .venv/bin/python -m development.secret_hunter_long.tactical --batch coverage-core --arm DARC --cap 300 --samples 3 --balance-families
+.venv/bin/python -m development.secret_hunter_long.cfqueue run --kind tactical --workers 3 --limit 24000
+.venv/bin/python -m development.secret_hunter_long.learn_tactical --batch coverage-core --arm B --candidate-name BT2
+.venv/bin/python -m development.secret_hunter_long.learn_tactical --batch coverage-core --arm DARC --candidate-name DARCT2
 ```
 
 CF 执行器只处理已入队任务；生成新任务时必须使用归档的源清单和原种子。学习入口在读取留出结果前先写训练规则锁；已有锁则原样重用。所有同源对手、座位和替代未来共享 `seed % 5` 分区，0/1 留出、2/3/4 训练。第一轮战术抽样 Astra 偏多，覆盖审计触发预先登记的第二批家族分层；不能把第一次标签留出改称未见样本。
@@ -55,6 +61,8 @@ CF 执行器只处理已入队任务；生成新任务时必须使用归档的�
 匹配起手的确认规则已在 `mulligan-confirmation-plan.json` 锁定，用全新 51421000–51421299 源种子；只能验证该规则，不能从这批结果再选另一个。条件样本增益不能当成全局胜率。实际小规则若通过固定路线标签门槛，还必须运行其真实无状态代码续局，再进入未筛选整局。
 
 战术 source0 精确恢复原始前缀和基线终局；world1/2 只重排剩余牌库和未来 RNG，保留原隐藏手牌。每对分支共享同一初始世界，但允许动作改变后续牌序消耗。每步由真实引擎执行且验证合法，继续到终局；固定路线和可部署短规则必须分开报告。
+
+学习器通过固定路线门槛才会创建候选并添加实际策略续局。此时再次运行CF队列，再执行 `evaluate_policy --batch coverage-core --arm NAME`（NAME是B或DARC父代）。未通过时不会创建BT2/DARCT2，也没有应补跑的策略任务。队列启动时固定todo清单；运行中新增的任务要在下一次调用处理。后期CF worker直接执行request所指 `harness-by-sha/<hash>.json` 的源码字节，结果中的 `harness_execution` 明确记载；早期请求仅证明分发时源码，不能追认为同等级执行固定。
 
 ## 统计与逐动作证据
 
@@ -75,6 +83,17 @@ CF 执行器只处理已入队任务；生成新任务时必须使用归档的�
 
 最终只允许 B 加一个选定挑战者。先 `release prepare --challenger NAME` 打包、解包和校验，再 `study freeze --arms B NAME`。以解包后的路径跑 51600000–51600099 核心与 51700000–51700015 护栏，分别 1,200、448 局/版；不得在开封后改候选或按结果追加最终样本。实际冻结命令、选型和最终结果由完成后的报告记录。
 
+在此之前必须先写 `selection-plan.json`，固定有序候选列表以及核心/护栏的batch/start/seeds。两池使用 `study run --selection-stage`，禁止warm。第一次调用会写selection-freeze并禁止继续开发。两池全部完成后执行 `select_challenger`；`release prepare`与`study freeze`都核对这个唯一选择及源码指纹。
+
+冻结后对B和挑战者分别运行以下入口；输出文件名必须与候选名一致，不能只留最后一份验收覆盖另一版：
+
+```sh
+.venv/bin/python -m development.secret_hunter_long.runtime --candidate runs/long-20261114/frozen/B/secret-hunter --out docs/secret_hunter_long/runtime-B.json
+.venv/bin/python -m development.secret_hunter_long.runtime --candidate runs/long-20261114/frozen/NAME/secret-hunter --out docs/secret_hunter_long/runtime-NAME.json
+```
+
+`release recommend`只有在两版完整最终样本和各自精确解包路径验收齐全时才决策。它复制冻结ZIP，不重新打包或修改候选；若不达标，原字节B为推荐。
+
 `runtime.py` 验证冷启动、真实状态、choice、seq 刷新、故障回退和终态。真实课程中转入口：
 
 ```sh
@@ -84,3 +103,9 @@ CF 执行器只处理已入队任务；生成新任务时必须使用归档的�
 该入口直接调用课程原 `SkillSeat` 和课程指定 `gpt-6-luna/medium`，核对每个 act 之前确有匹配的 Python 输出及终态工具回复。当前机器默认 Codex launcher 缺 ARM vendor；代码为测试进程指定 VS Code 内原生 CLI 的实际目录，使其能找到伴随的 `codex-code-mode-host`。不同机器应改研究 harness 中这个二进制位置并记录新哈希，不能改冻结 Skill。首次 launcher 失败保留为辅助失败；修复后完整真实对局验收与本地代理胜率分开统计。每次模型对局均计入整局预算。
 
 所有正式课程提交和远端推送由用户决定；本轮只生成本地研究文件与推荐 ZIP。
+
+## 封存与完整性
+
+停止全部本轮写入器、确认无running尝试并完成推荐后，运行 `development.secret_hunter_long.archive`。该入口检查固定引擎/对手及SQLite完整性，生成一致的 `ledger-backup.sqlite`、逐文件SHA清单、原始证据tar和当前git源码tar；哈希记录在 `docs/secret_hunter_long/archives.json`。Skill提交ZIP与研究tar彼此独立，只有前者受课程单文件夹和10MB要求约束。
+
+恢复证据时，将backup复制为ledger.sqlite；若换了工作目录，必须显式记录数据库与请求中的路径迁移。运行环境中的时间预算可能使不同硬件提前截断小范围搜索，因此可复验是指固定代码、输入、种子、引擎和预算协议，不保证任意负载下所有启发式搜索逐指令一致。
