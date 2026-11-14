@@ -1,12 +1,14 @@
 """Atomic counterfactual queue, charged attempts and process-group timeouts."""
 import argparse
 import fcntl
+import hashlib
 import json
 from pathlib import Path
 import signal
 import sys
 import time
 import traceback
+import types
 from development.secret_hunter_long.study import ROOT,RUN,HERE,check
 from development.secret_hunter_long.provenance import archive_code
 from development.benchmarks.run import fingerprint
@@ -102,11 +104,20 @@ def main():
     else:
         request=json.loads(a.request.read_text());job=request['job']
         try:
-            if request['kind']=='mulligan':
-                from development.secret_hunter_long.mulligan import execute
-            else:
-                from development.secret_hunter_long.tactical import execute
-            result=execute(job);result['job']=job
+            # Execute the dispatch-time archived source, so a later harness
+            # edit cannot race the worker's import and invalidate provenance.
+            relative='development/secret_hunter_long/'+request['kind']+'.py'
+            expected=request['harness_sha256'][relative]
+            archived=json.loads((RUN/'harness-by-sha'/(expected+'.json')).read_text())
+            code=archived['utf8_source']
+            assert hashlib.sha256(code.encode()).hexdigest()==expected
+            name='development.secret_hunter_long.'+request['kind']
+            module=types.ModuleType(name);module.__package__='development.secret_hunter_long'
+            module.__file__=str(ROOT/relative);sys.modules[name]=module
+            exec(compile(code,module.__file__,'exec'),module.__dict__)
+            result=module.execute(job);result['job']=job
+            result['harness_execution']={'kind_source_sha256':expected,'archived_source_executed':True,
+                                         'worker_sha256':sha(Path(__file__))}
         except Exception:result={'job':job,'error':traceback.format_exc()}
         train.atomic(Path(request['output']),result)
 
