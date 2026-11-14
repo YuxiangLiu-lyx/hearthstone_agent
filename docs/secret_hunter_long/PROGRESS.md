@@ -1,5 +1,12 @@
 # 执行中检查点
 
+## 2026-11-14 15:00 UTC 更新
+
+最终核心B2040场已完成，DARCL2已开始（约31/2040）。全部已完成最终普通可靠性计数0，CLI max0.876s，UTC-active max gap0.793s，无新挂起。首条DARCL2最终request016729已核对exact RUN/frozen/DARCL2/secret-hunter、full_cli=True、seed51600000/seat1。主controller仍execute_frozen工具session92387，主study PID58143（以SQLite为准），日志final-execution.log，自动core→guard。不要改候选或按中间结果延长样本。
+
+所有前置已完成，包括选择五臂全CLI4720、唯一DARCL2、freeze源码1ccaedb、精确两版runtime26项、repro独立临时账本setup。代码/设计完整；只剩最终DARCL2核心与两版各448护栏、最终分析与晋级、推荐包Luna2+Client6、静态/submit与报告/审计/归档。最终辅助计划Luna51800010同种子双座位，Client51800020–22双座位。预计整局19684、CF15580。caffeinate PID83336待交付完成清理，原deadline20:44UTC。
+
+
 ## 2026-11-14 14:31 UTC 更新
 
 最终已在14:21UTC开封并正常运行。execute_frozen工具session92387，当前study子进程PID58143（以后以SQLite meta为准），日志runs/long-20261114/final-execution.log；恢复命令`.venv/bin/python -m development.secret_hunter_long.execute_frozen`。最终核心B已约533/2040，DARCL2待2040；controller将完整core结束后接final-guard两版各448。当前普通可靠性异常0，CLI max0.769s，UTC-active最大差0.761s，无新宿主挂起。不得改候选或样本数。
