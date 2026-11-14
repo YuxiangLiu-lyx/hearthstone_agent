@@ -50,6 +50,26 @@ def main():
         assert fingerprint(source) == item['sha256']
         assert deck_check(source) == item['deck']
     recommendation = json.loads((ROOT / 'docs/secret_hunter_long/recommendation.json').read_text())
+    acceptance = json.loads((RUN / 'final-acceptance.json').read_text())
+    acceptance_plan = json.loads((RUN / 'final-acceptance-plan.json').read_text())
+    expected_auxiliary = {f"{g['mode']}-{g['seed']}-s{g['seat']}"
+                          for g in acceptance_plan['luna'] + acceptance_plan['client']}
+    assert acceptance['passed'] and acceptance['candidate'] == recommendation['recommended']
+    assert acceptance['source_sha256'] == recommendation['source_sha256']
+    assert acceptance['plan_sha256'] == sha(RUN / 'final-acceptance-plan.json')
+    assert acceptance['recommendation_sha256'] == sha(ROOT / 'docs/secret_hunter_long/recommendation.json')
+    assert acceptance['games'] == len(expected_auxiliary) == 8
+    assert {r['key'] for r in acceptance['records']} == expected_auxiliary
+    for record in acceptance['records']:
+        assert sha(RUN / 'relay' / (record['key'] + '.audit.json')) == record['audit_sha256']
+        saved = db.execute('select status,result from auxiliary_games where key=?', (record['key'],)).fetchone()
+        assert saved and saved['status'] == 'done'
+        assert json.loads(saved['result']) == {k: v for k, v in record.items() if k not in ('key', 'audit_sha256')}
+    auxiliary_forfeits = []
+    for key, raw in db.execute('select key,result from auxiliary_games'):
+        result = json.loads(raw)
+        if str(result.get('result', {}).get('reason', '')).startswith('forfeit'):
+            auxiliary_forfeits.append(key)
     package = Path(recommendation['zip'])
     assert sha(package) == recommendation['zip_sha256']
     if recommendation['recommended'] == 'B':
@@ -87,6 +107,8 @@ def main():
               'elapsed_hours_from_manifest': (time.time() - manifest['created']) / 3600,
               'final_source_seed_groups': {k: len(v) for k, v in phases.items() if k.startswith('final')},
               'recommended': recommendation['recommended'], 'zip_sha256': sha(package),
+              'final_protocol_acceptance_games': acceptance['games'],
+              'historical_auxiliary_forfeits_preserved': auxiliary_forfeits,
               'zip_bytes': package.stat().st_size, 'uncompressed_bytes': unpacked_bytes,
               'engine_opponents_candidates_unchanged': True, 'sqlite_integrity': 'ok'}
     train.atomic(ROOT / 'docs/secret_hunter_long/delivery-audit.json', result)
