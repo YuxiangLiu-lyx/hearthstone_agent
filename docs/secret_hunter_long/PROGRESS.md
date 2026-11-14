@@ -1,5 +1,18 @@
 # 执行中检查点
 
+## 2026-11-14 12:26 UTC 更新
+
+本节优先于下面的历史检查点。候选生成与反事实均已停止；不得额外探索。CF总15580次尝试=15492完成+88初期驱动错误。主批mulligan-combination尚在最后两版，之后cli-load-plan自动执行72局六并发完整CLI；mulligan-analysis-plan在主批结束后自动补齐配对、动作和因子分析。
+
+原牌表B/BL2均305胜，BM/BML2均303胜，原牌表按预先配方选BL2。DARC310、DARCM307（1翻胜4翻败，主指标−0.833pp），留牌总体收益未复现；DARCL2/DARCML2待完成。最终奥术射击线只按selection-design.json的既定顺序和主指标选择。KO、DWOLF为另两张纯牌表备选，共五臂选拔。
+
+12:13 UTC、选拔与最终均未打开时，锁定final_design容量规则：如果全部计划+20未来辅助+100场余量在20000场内，且按CLI实测吞吐预计选拔+最终+30分钟在12小时内，则最终核心170组/版；否则100组。护栏16组保持。170方案共4976最终整局，预计全部含8次最终辅助为19684次。不能在最终开封后按结果扩容。prepare_selection会保存原manifest、amendment和实际选择。
+
+下一步：读全批M/L2及CLI负载结果→prepare_selection→提交具体计划→按计划完整CLI selection-core/selection-guard共4720局→select_challenger→release prepare→提交并freeze→对两版精确解包路径runtime→完整最终核心+护栏→release recommend→推荐包Luna双座位及ClientSeat辅助→文档/审计/封存。所有最终样本数以actual final-freeze范围为准，不能机械沿用历史100组命令。
+
+新delivery_audit检查预算、最少5000最终预留、不可变候选、完整性和包；archive必须最后且无写入器时运行，先提交所有源码/报告，再生成一致SQLite备份、文件哈希和evidence/source tar，最后提交archive哈希记录。原B字节必须保留。无远端push、无课程提交。
+
+
 ## 2026-11-14 11:35 UTC 更新
 
 最新提交0f73a46。DARC第二轮4122CF全部完成；没有生成DARCT2：334训练提案只有原策略满足门槛，留出274/360不变。教师原世界120根86→88（4/2），CI[-3.333,5.833]pp。所有CF当前停止，meta cf_pid=None；15492完成+88初期失败=15580尝试，标签完整性通过（2516留牌、12976战术，10094实际覆盖改动续局、140254前缀核对步）。无需任何新的tactical full batch，也不再扩模型拟合已见留出。
