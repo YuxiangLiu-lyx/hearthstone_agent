@@ -1,32 +1,63 @@
 {
-  "candidate": "/Users/liuyuxiang/developer/hearthstone-long-20261114/development/secret_hunter_long/candidates/B",
+  "candidate": "/Users/liuyuxiang/developer/hearthstone-long-20261114/runs/long-20261114/frozen/DARCL2/secret-hunter",
+  "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4",
   "calls": 26,
   "invalid": 0,
   "over_2s": 0,
   "ordinary_fallbacks": 0,
   "ordinary_latency_s": {
     "n": 19,
-    "mean": 0.15581025205335064,
-    "max": 0.44235187499725726,
-    "p50": 0.10745600001246203,
-    "p95": 0.44235187499725726,
-    "p99": 0.44235187499725726
+    "mean": 0.1316519844733289,
+    "max": 0.3303187919955235,
+    "p50": 0.1235995000024559,
+    "p95": 0.3303187919955235,
+    "p99": 0.3303187919955235
   },
   "all_including_fault_latency_s": {
     "n": 26,
-    "mean": 0.5369523028090882,
-    "max": 1.8243622919981135,
-    "p50": 0.14635404098953586,
-    "p95": 1.824084000007133,
-    "p99": 1.8243622919981135
+    "mean": 0.5214532050382471,
+    "max": 1.8421823749959003,
+    "p50": 0.1506627920025494,
+    "p95": 1.8404912920086645,
+    "p99": 1.8421823749959003
   },
   "injected_fault_fallbacks": 2,
   "actual_host_stale_seq_rejected": true,
   "records": [
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "cold",
-      "elapsed_s": 0.35525341700122226,
+      "elapsed_s": 0.15108441600750666,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": null,
+      "action": {
+        "type": "attack",
+        "attacker": 74,
+        "target": 55
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "secret-hunter",
+      "tag": "cold",
+      "elapsed_s": 0.1506627920025494,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": null,
+      "action": {
+        "type": "attack",
+        "attacker": 74,
+        "target": 55
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "secret-hunter",
+      "tag": "cold",
+      "elapsed_s": 0.318950415996369,
       "valid": true,
       "worker_error": null,
       "fallback": false,
@@ -39,9 +70,9 @@
       "refresh_required": false
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "cold",
-      "elapsed_s": 0.10745600001246203,
+      "elapsed_s": 0.08822045801207423,
       "valid": true,
       "worker_error": null,
       "fallback": false,
@@ -53,9 +84,9 @@
       "refresh_required": false
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "cold",
-      "elapsed_s": 0.1748837079940131,
+      "elapsed_s": 0.15144950000103563,
       "valid": true,
       "worker_error": null,
       "fallback": false,
@@ -68,9 +99,9 @@
       "refresh_required": false
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "cold",
-      "elapsed_s": 0.09306945798743982,
+      "elapsed_s": 0.07303829198644962,
       "valid": true,
       "worker_error": null,
       "fallback": false,
@@ -82,68 +113,68 @@
       "refresh_required": false
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "cold",
-      "elapsed_s": 0.44235187499725726,
+      "elapsed_s": 0.1235995000024559,
       "valid": true,
       "worker_error": null,
       "fallback": false,
       "mcgs": null,
       "action": {
         "type": "play_card",
-        "card": 59
+        "card": 18
       },
       "refresh_required": false
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "cold",
-      "elapsed_s": 0.17345237500558142,
+      "elapsed_s": 0.19883337499049958,
       "valid": true,
       "worker_error": null,
       "fallback": false,
       "mcgs": null,
       "action": {
-        "type": "play_card",
-        "card": 32,
-        "target": 73,
-        "position": 0
+        "type": "attack",
+        "attacker": 49,
+        "target": 4
       },
       "refresh_required": false
     },
     {
-      "candidate": "B",
-      "tag": "cold",
-      "elapsed_s": 0.10702270800538827,
-      "valid": true,
-      "worker_error": null,
-      "fallback": false,
-      "mcgs": null,
-      "action": {
-        "type": "play_card",
-        "card": 12,
-        "position": 0
-      },
-      "refresh_required": false
-    },
-    {
-      "candidate": "B",
-      "tag": "cold",
-      "elapsed_s": 0.1720159170072293,
-      "valid": true,
-      "worker_error": null,
-      "fallback": false,
-      "mcgs": null,
-      "action": {
-        "type": "play_card",
-        "card": 31
-      },
-      "refresh_required": false
-    },
-    {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "concurrent",
-      "elapsed_s": 0.3467465410067234,
+      "elapsed_s": 0.1621549160045106,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": null,
+      "action": {
+        "type": "attack",
+        "attacker": 74,
+        "target": 55
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "secret-hunter",
+      "tag": "concurrent",
+      "elapsed_s": 0.1652418749872595,
+      "valid": true,
+      "worker_error": null,
+      "fallback": false,
+      "mcgs": null,
+      "action": {
+        "type": "attack",
+        "attacker": 74,
+        "target": 55
+      },
+      "refresh_required": false
+    },
+    {
+      "candidate": "secret-hunter",
+      "tag": "concurrent",
+      "elapsed_s": 0.3303187919955235,
       "valid": true,
       "worker_error": null,
       "fallback": false,
@@ -156,38 +187,9 @@
       "refresh_required": false
     },
     {
-      "candidate": "B",
-      "tag": "concurrent",
-      "elapsed_s": 0.11173954099649563,
-      "valid": true,
-      "worker_error": null,
-      "fallback": false,
-      "mcgs": null,
-      "action": {
-        "type": "play_card",
-        "card": 48
-      },
-      "refresh_required": false
-    },
-    {
-      "candidate": "B",
-      "tag": "concurrent",
-      "elapsed_s": 0.17666804100736044,
-      "valid": true,
-      "worker_error": null,
-      "fallback": false,
-      "mcgs": null,
-      "action": {
-        "type": "play_card",
-        "card": 60,
-        "target": 33
-      },
-      "refresh_required": false
-    },
-    {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "lethal-hero-power",
-      "elapsed_s": 0.08428224999806844,
+      "elapsed_s": 0.07019120900076814,
       "valid": true,
       "worker_error": null,
       "fallback": false,
@@ -199,9 +201,9 @@
       "engine_winner": 1
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "lethal-arcane-shot",
-      "elapsed_s": 0.08318387500185054,
+      "elapsed_s": 0.06956787500530481,
       "valid": true,
       "worker_error": null,
       "fallback": false,
@@ -215,9 +217,9 @@
       "engine_winner": 1
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "mulligan-second",
-      "elapsed_s": 0.08308262500213459,
+      "elapsed_s": 0.07001954100269359,
       "valid": true,
       "worker_error": null,
       "fallback": false,
@@ -232,9 +234,9 @@
       "refresh_required": false
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "mulligan-first",
-      "elapsed_s": 0.0875680829922203,
+      "elapsed_s": 0.06994145800126716,
       "valid": true,
       "worker_error": null,
       "fallback": false,
@@ -250,9 +252,9 @@
       "refresh_required": false
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "tracking-choice",
-      "elapsed_s": 0.09139924999908544,
+      "elapsed_s": 0.0682199160073651,
       "valid": true,
       "worker_error": null,
       "fallback": false,
@@ -266,9 +268,9 @@
       "refresh_required": false
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "only-end-turn",
-      "elapsed_s": 0.09041245900152717,
+      "elapsed_s": 0.07330212499073241,
       "valid": true,
       "worker_error": null,
       "fallback": false,
@@ -279,9 +281,9 @@
       "refresh_required": false
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "juggler-hounds",
-      "elapsed_s": 0.14635404098953586,
+      "elapsed_s": 0.1281415410048794,
       "valid": true,
       "worker_error": null,
       "fallback": false,
@@ -293,9 +295,9 @@
       "refresh_required": false
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "hang",
-      "elapsed_s": 1.8235594580037287,
+      "elapsed_s": 1.8218226669996511,
       "valid": true,
       "worker_error": "worker_timeout",
       "fallback": true,
@@ -306,11 +308,11 @@
       "refresh_required": false
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "crash",
-      "elapsed_s": 0.0617786250077188,
+      "elapsed_s": 0.05612749999272637,
       "valid": true,
-      "worker_error": "worker_exit_1: info=decide(state,cfg,publish,memory=memory)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/f4/3c2p11sd22b76640b44tvyv80000gn/T/tmpgop_8wyk/skill/scripts/program_policy.py\", line 2, in decide\n    raise RuntimeError(\"injected crash\")\nRuntimeError: injected crash\n",
+      "worker_error": "worker_exit_1: info=decide(state,cfg,publish,memory=memory)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/f4/3c2p11sd22b76640b44tvyv80000gn/T/tmpgu38qm4j/skill/scripts/program_policy.py\", line 2, in decide\n    raise RuntimeError(\"injected crash\")\nRuntimeError: injected crash\n",
       "fallback": true,
       "mcgs": null,
       "action": {
@@ -319,23 +321,24 @@
       "refresh_required": false
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "published_hang",
-      "elapsed_s": 1.8243622919981135,
+      "elapsed_s": 1.822677707998082,
       "valid": true,
       "worker_error": "worker_timeout",
       "fallback": false,
       "mcgs": null,
       "action": {
-        "type": "play_card",
-        "card": 26
+        "type": "attack",
+        "attacker": 74,
+        "target": 55
       },
       "refresh_required": false
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "stale-0",
-      "elapsed_s": 1.824084000007133,
+      "elapsed_s": 1.834072917001322,
       "valid": true,
       "worker_error": null,
       "fallback": null,
@@ -344,9 +347,9 @@
       "refresh_required": true
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "stale-1",
-      "elapsed_s": 1.822737499998766,
+      "elapsed_s": 1.8421823749959003,
       "valid": true,
       "worker_error": null,
       "fallback": null,
@@ -355,9 +358,9 @@
       "refresh_required": true
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "stale-2",
-      "elapsed_s": 1.8214250000019092,
+      "elapsed_s": 1.8404912920086645,
       "valid": true,
       "worker_error": null,
       "fallback": null,
@@ -366,9 +369,9 @@
       "refresh_required": true
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "stale-3",
-      "elapsed_s": 1.8224182090052636,
+      "elapsed_s": 1.8390211670048302,
       "valid": true,
       "worker_error": null,
       "fallback": null,
@@ -377,9 +380,9 @@
       "refresh_required": true
     },
     {
-      "candidate": "B",
+      "candidate": "secret-hunter",
       "tag": "game_over",
-      "elapsed_s": 0.033452625008067116,
+      "elapsed_s": 0.03844970799400471,
       "valid": true,
       "worker_error": null,
       "fallback": null,

@@ -18,7 +18,7 @@
 | TRPLY2 | TRPLY | 2 | 源码改动 | 0 | archive_after_independent_replication |
 | WOOZE | DWOLF | 4 | 仅牌表配置 | 2 | archive |
 | BML2 | BM | 5 | 源码改动 | 0 | archive_global_gain_unconfirmed |
-| DARCL2 | DARC | 5 | 源码改动 | 1 | selected_unique_final_challenger |
+| DARCL2 | DARC | 5 | 源码改动 | 1 | 最终推荐 |
 | DARCML2 | DARCM | 5 | 源码改动 | 1 | archive_global_gain_unconfirmed |
 
 
@@ -47,6 +47,8 @@ Exact requested ZIP, frozen reference
 | mulligan-combination | development | 51409000–51409029 | 30 | done |
 | selection-core | selection | 51500000–51500059 | 60 | done |
 | selection-guard | cli_development | 51501000–51501007 | 8 | done |
+| final-core | final_core | 51600000–51600169 | 170 | done |
+| final-guard | final_guard | 51700000–51700015 | 16 | done |
 
 
 ## DARC
@@ -269,6 +271,8 @@ Factorial isolation: confirmed public opening rule and/or narrow lethal coverage
 | mulligan-combination | development | 51409000–51409029 | 30 | done |
 | selection-core | selection | 51500000–51500059 | 60 | done |
 | selection-guard | cli_development | 51501000–51501007 | 8 | done |
+| final-core | final_core | 51600000–51600169 | 170 | done |
+| final-guard | final_guard | 51700000–51700015 | 16 | done |
 
 
 ## DARCML2

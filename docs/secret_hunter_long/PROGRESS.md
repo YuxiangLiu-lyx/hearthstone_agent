@@ -1,5 +1,13 @@
 # 执行中检查点
 
+## 2026-11-14 15:53 UTC 更新
+
+最终4,976场全部完成，execute_frozen session92387 exit0、主比赛/CF writer均已结束。核心B1705→DARCL21728/2040，51/28，主指标+1.593137pp CI[0.563725,2.647059]；守卫B409→DARCL2407/448，0/2，−0.446429pp CI[−1.116071,0]。所有普通可靠性计数0，final UTC-active最大差0.866270秒。release recommend按原门槛PROMOTE DARCL2，推荐dist/secret-hunter-long-20261114.zip SHA0130813f56655e7b802e2cbbe539526f6ab2a1a8f1acf4d27af6e5fdee5a9a0e，原冻结44,789字节；不要重打包或修改。
+
+两池paired/cards/actions分析均完整。guard DARCL2窄证明12局/14次，13381决策；core25局/29次，57117决策。report_tables/card_tables/lineage_report已重新生成，最终决定还需将阶段状态追加到decisions。
+
+按已锁计划启动accept_frozen工具session21497，日志runs/long-20261114/final-acceptance.log。它顺序跑推荐精确frozen/DARCL2/secret-hunter的Luna51800010座位1/2，再Client51800020–22各双座位，检查每个动作与Python及最新seq，终态发布并观察、零普通异常；任一失败停止保留，不自动重试。不能在此结束任务：剩八局验收、final_evidence合并原始延迟、REPORT最终完成版、decisions谱系、delivery_audit、提交→archive→哈希bookkeeping、停止本轮caffeinate83336（先核对命令）。预计最终全局19684整局尝试、15580CF；原截止20:44UTC。
+
 ## 2026-11-14 15:38 UTC 更新
 
 最终核心已完整结束：170组、两版各2040场，B1705胜，DARCL21728胜，51翻胜/28翻败。主指标82.990196%→84.583333%，差+1.593137pp，来源种子bootstrap95%区间[0.563725,2.647059]pp。家族Astra+1.274510pp、Bot2+1.911765pp、Bot1−0.882353pp。核心普通可靠性全部零，max0.876889s。core paired/card/action分析均已完成。DARCL2窄证明25局/29次，全部核心决策57117；B/DARCL2牌表不同导致初始公开状态不同，不能把2040个upstream差异当战术改动率。
