@@ -1,5 +1,6 @@
 """Select exactly one immutable challenger after both complete CLI pools."""
 import json
+from fractions import Fraction
 import time
 from development.secret_hunter_long.study import RUN
 from development.secret_hunter_mcgs import train
@@ -27,12 +28,23 @@ def main():
             assert all(r.get('execution')=='full_cli' for r in values)
             if pool=='core':rows[arm]=values
     primary={a:paired(rows['B'],rows[a],groups=['astra','bot2'],equal_groups=True) for a in rows if a!='B'}
+    # Rank exact terminal fractions: mathematically equal macro rates must use
+    # the preregistered arm order, not floating-point summation roundoff.
+    exact={}
+    for arm in primary:
+        rates=[]
+        for group in ('astra','bot2'):
+            values=[Fraction(r['score']) for r in rows[arm] if r['group']==group]
+            assert values
+            rates.append(sum(values)/len(values))
+        exact[arm]=sum(rates)/2
     ranking=sorted([a for a in plan['arms'] if a!='B' and reliability[a]],
-                   key=lambda a:(-primary[a]['b_rate'],plan['arms'].index(a)))
+                   key=lambda a:(-exact[a],plan['arms'].index(a)))
     selected=ranking[0] if ranking else 'B'
     result={'created':time.time(),'challenger':selected,'ranking':ranking,'reliability':reliability,
        'fingerprints':freeze['fingerprints'],'plan':plan,
        'primary_rates':{a:primary[a]['b_rate'] for a in ranking},'primary_comparisons':primary,
+       'exact_primary_fractions':{a:str(exact[a]) for a in ranking},
        'rule':'maximum equal-family Astra/Bot2 terminal rate among CLI-reliable challengers; ties use preregistered arms order; guardrail contributes reliability, final holdout independently enforces performance gates',
        'no_retuning':True}
     path=RUN/'selection-decision.json'
