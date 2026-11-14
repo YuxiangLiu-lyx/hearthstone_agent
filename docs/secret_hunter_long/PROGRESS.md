@@ -1,5 +1,19 @@
 # 执行中检查点
 
+## 2026-11-14 10:45 UTC 更新
+
+最新已提交 `d7751b0`。工作继续；选拔与最终种子尚未打开，所有候选仍不可变。以下进度优先于历史检查点。
+
+- coverage-core 完成：B503/600、DARC514/600，18翻胜7翻败。主指标+1.333pp，95% CI[-.25,3.25]pp。与首轮合计110组1320局/版，B1111、DARC1131，37/17，主指标+1.591pp、CI[.303,2.992]pp；这是自适应开发汇总，不是晋级检验。
+- mechanism-core 与 lethal-guard 已完成。BL2核心202/240和护栏105/112均与B同终局；分别4次窄证明，实际首次动作分歧4局/1局。TMILL仍归档。TRPLY复验及TRPLY2修正比较正在 recovery-fix 中进行；结束后two-card与mulligan-combination两个预定义控制器依次运行。
+- balanced 战术第二轮：B与DARC各300根、50组来源（两版共享50组，不能说100组），各180训练根/30组与120留出根/20组。每版家族150Astra/100Bot2/50Bot1。B4083个终局任务在跑；DARC4122任务已入队，当前队列启动时尚未加入，需下一次cfqueue调用。
+- B轮结束后显式运行 `learn_tactical --batch coverage-core --arm B --candidate-name BT2`；DARC完成后用 `--arm DARC --candidate-name DARCT2`。门槛通过才生成真实策略续局。新增 `evaluate_policy.py` 验证相同源根/暗牌世界/前缀，在真实无状态策略执行后重验net>=3、>=3正组、动作确实改变；通过后仍需新种子自然整局。
+- 两个新opening case已完成共4辅助整局，见OPENING_CASES.md：一翻胜一回归。精确核对初始手牌、动作、回合和赢家；旧标签未保存逐步状态哈希，不声称比较过旧逐步状态。辅助总次数12（2Luna、6换卡重放、4起手重放）。
+- 选择与最终冻结防线已加强：selection-plan固定臂顺序、核心/护栏批次，第一次选择比赛即阻止开发与新标签；两池完整后select_challenger唯一选版。release prepare与freeze必须匹配selection-decision。最终recommend必须有B及挑战者两个精确解包路径的runtime-NAME.json验收。
+- 执行harness源码内容寻址归档已加到CF请求与主批次启动。历史5个缺失harness版本全部从git/精确中间差分恢复并校验SHA，零未解析。新的请求会自动存源码。
+
+当前任务PID以SQLite meta为准，禁止仅凭旧PID杀进程。旧run_plan控制器在新增“主批次完成”断言之前已启动；如需中止主批次，必须先停止其父控制器，避免继续挖部分来源。正常无需中断。最终预算仍预留5000整局，已定义主线9896局，视回应迁移/学习结果决定少数新候选与选择池规模。
+
 ## 2026-11-14 10:00 UTC 更新（以下优先于后面的旧检查点）
 
 最近提交 `996af8e`（此前 `8073855`），之后有新候选/分析器未提交。工作仍继续，最终种子未打开。`REPORT.md` 尚待最后冻结结果生成，已写逐动作 `CASE_STUDIES.md`、`REPRODUCE.md`、`SOURCES.md`。
