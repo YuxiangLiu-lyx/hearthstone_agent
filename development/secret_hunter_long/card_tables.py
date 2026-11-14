@@ -8,6 +8,8 @@ CARDS = {'B': [('EX1_543', '暴龙王'), ('EX1_162', '恐狼'), ('EX1_066', '软
          'DARC': [('DS1_185', '奥术射击')], 'DWOLF': [('EX1_162', '两恐狼合计')],
          'KO': [('EX1_066', '两软泥怪合计'), ('EX1_543', '暴龙王')],
          'WOOZE': [('EX1_162', '两恐狼合计'), ('EX1_066', '两软泥怪合计')]}
+CARDS['BL2'] = CARDS['B']
+CARDS['DARCL2'] = CARDS['DARC']
 
 
 def row(arm, name, layer, summary, card):
@@ -24,7 +26,8 @@ def main():
              '场次按对局计，因此双卡实体次数可超过场次。伤害仅为该实体直接伤害，恐狼光环、奥秘及误导的间接贡献未归因。',
              '回合以己方自然最大法力标记，硬币可使牌提前使用。完整首次可打与延迟分布保存在每批analysis JSON。']
     headers = ['版本/卡', '层', '胜/局', '起手/换走', '入手/可打/打出', '出场局/其中胜局', '对英雄/随从直接伤害']
-    for batch in ('deck-screen', 'coverage-core', 'mechanism-core', 'two-card'):
+    for batch in ('deck-screen', 'coverage-core', 'mechanism-core', 'two-card',
+                  'selection-core', 'selection-guard', 'final-core', 'final-guard'):
         path = RUN / 'analysis' / (batch + '.json')
         if not path.exists():
             continue
