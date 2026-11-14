@@ -92,9 +92,9 @@ CF 执行器只处理已入队任务；生成新任务时必须使用归档的�
 
 ## 冻结、完整 CLI 与真实模型中转
 
-最终只允许 B 加一个选定挑战者。先 `release prepare --challenger NAME` 打包、解包和校验，再 `study freeze --arms B NAME`。以解包后的路径跑 51600000–51600099 核心与 51700000–51700015 护栏，分别 1,200、448 局/版；不得在开封后改候选或按结果追加最终样本。实际冻结命令、选型和最终结果由完成后的报告记录。
+最终只允许 B 加一个选定挑战者。先 `release prepare --challenger NAME` 打包、解包和校验，再 `study freeze --arms B NAME`。以解包后的路径跑final-freeze记录的完整范围：核心初定51600000–51600099，若按开封前容量规则扩为170组则至51600169；护栏51700000–51700015不变，核心为1,200或2,040局/版、护栏448局/版；不得在开封后改候选或按结果追加最终样本。实际冻结命令、选型和最终结果由完成后的报告记录。
 
-在此之前必须先写 `selection-plan.json`，固定有序候选列表以及核心/护栏的batch/start/seeds。两池使用 `study run --selection-stage`，禁止warm。第一次调用会写selection-freeze并禁止继续开发。两池全部完成后执行 `select_challenger`；`release prepare`与`study freeze`都核对这个唯一选择及源码指纹。
+在此之前必须先写 `selection-plan.json`，固定有序候选列表以及核心/护栏的batch/start/seeds。两池使用 `study run --selection-stage`，禁止warm。第一次调用会写selection-freeze并禁止继续开发。完成开发和负载测试、由Codex读完报告后执行 `prepare_selection`：它按预先选择配方生成具体计划，并按selection-design中的容量规则在任何选拔数据打开前锁定最终100或170核心组，扩容时保存原manifest和amendment。两池全部完成后执行 `select_challenger`；`release prepare`与`study freeze`都核对这个唯一选择及源码指纹。
 
 冻结后对B和挑战者分别运行以下入口；输出文件名必须与候选名一致，不能只留最后一份验收覆盖另一版：
 
