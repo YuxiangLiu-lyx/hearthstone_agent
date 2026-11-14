@@ -6,11 +6,33 @@ from development.secret_hunter_final.study import RUN,ROOT,HERE
 from development.secret_hunter_final.counterfactual import digest
 from development.secret_hunter_mcgs import train
 
+def mine_coverage(db):
+    from development.secret_hunter_final.early_routes import propose,features
+    counts={'amani_states':0,'amani_risk':0,'cheap_defense_available':0};cases=[]
+    for row in db.execute('select result from tasks where batch="dev-core" and candidate="B" and status="done" order by seed,opponent,seat'):
+        r=json.loads(row[0]);folder=RUN/'batches/dev-core/B/games'/r['game']
+        for z in map(json.loads,(folder/f'p{r["seat"]}/observations.jsonl').read_text().splitlines()):
+            s=z['state']
+            if s['phase']!='main':continue
+            f=features(s)
+            if not f['amani']:continue
+            counts['amani_states']+=1
+            if f['incoming']+3<f['health']:continue
+            counts['amani_risk']+=1;a=propose(s,'cheap_defense',{},z['action'])
+            if a is None:continue
+            counts['cheap_defense_available']+=1
+            cases.append({'seed':r['seed'],'seat':r['seat'],'opponent':r['opponent'],'seq':s['seq'],
+                          'mana':f['mana'],'action':a,'baseline':z['action'],'score':r['score']})
+    return {'counts':counts,'cases':cases}
+
 def main():
     sys.path.insert(0,str(HERE/'candidates/B/scripts'))
     from development.secret_hunter_final.early_routes import propose,features
-    coverage=json.loads((RUN/'natural-amani-coverage.json').read_text())
-    db=train.connect(RUN);selected={};pop={o['name']:o for o in json.loads((ROOT/'development/teacher_eval/core.json').read_text())}
+    db=train.connect(RUN);coverage=mine_coverage(db)
+    path=RUN/'natural-amani-coverage.json'
+    if path.exists():assert coverage==json.loads(path.read_text()),'source coverage changed'
+    else:train.atomic(path,coverage)
+    selected={};pop={o['name']:o for o in json.loads((ROOT/'development/teacher_eval/core.json').read_text())}
     for c in coverage['cases']:
         key=(c['opponent'],c['seed'],c['seat'])
         if key in selected or c['action'].get('target')==c['baseline'].get('target'):continue

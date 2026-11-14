@@ -187,15 +187,18 @@ def run_jobs(samples=3,workers=2,limit=2400,scenario='natural'):
     # A file result is committed before marking a job done. Interrupted work is
     # charged; reruns skip durable results and record a new attempt otherwise.
     with db:
-        for r in db.execute("select * from cf_jobs where status='running'").fetchall():
-            db.execute('update cf_jobs set status=? where key=?',('done' if Path(r['result_path']).exists() else 'pending',r['key']))
+        for r in db.execute("select * from cf_jobs where status in ('running','pending')").fetchall():
+            path=Path(r['result_path']);saved=json.loads(path.read_text()) if path.exists() else {}
+            expected=json.loads(r['job'])
+            durable=saved.get('terminal') and all(saved.get(k)==expected[k] for k in ('case','route','sample')) and not saved.get('error')
+            db.execute('update cf_jobs set status=? where key=?',('done' if durable else 'pending',r['key']))
         db.execute("update cf_attempts set status='interrupted',finished=? where status='running'",(time.time(),))
     todo=db.execute("select * from cf_jobs where status='pending' order by key").fetchall();active={};ix=0
     end=train.meta(db,'manifest')['candidate_generation_deadline']
     try:
         while active or ix<len(todo):
             used=db.execute('select count(*) from cf_attempts').fetchone()[0]
-            while ix<len(todo) and len(active)<workers and used<min(limit,6000) and time.time()<end:
+            while ix<len(todo) and len(active)<workers and used<min(limit,6000-train.meta(db,'extra_continuations',0)) and time.time()<end:
                 row=todo[ix];ix+=1;path=Path(row['result_path']);request=path.with_suffix('.request.json')
                 train.atomic(request,json.loads(row['job']))
                 with db:

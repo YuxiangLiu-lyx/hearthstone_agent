@@ -31,6 +31,10 @@ def main():
         if (dest/name).exists():continue
         shutil.copytree(dest/parent,dest/name,ignore=shutil.ignore_patterns('__pycache__'))
         shutil.copy2(HERE/'face_lethal.py',dest/name/'scripts/face_lethal.py')
+        if name in ('L','ML'):
+            # Preserve the first-generation capability gap in a clean rebuild.
+            module=dest/name/'scripts/face_lethal.py'
+            module.write_text(module.read_text().replace(",\x27DS1_070\x27",''))
         policy=dest/name/'scripts/program_policy.py';s=policy.read_text()
         old="            info.update(lethal=lethal,nodes=lethal['nodes'])"
         new="""            # Preserve the inherited proof's priority; only fill its coverage gap.
@@ -46,6 +50,8 @@ def main():
                         'hypothesis':'Narrow burn/Steady Shot proof after existing lethal proof; v2 covers Houndmaster spell-safe board',
                         'status':'unvalidated'})
     p.write_text(json.dumps(lineage,indent=2)+'\n')
+    for item in lineage:
+        assert fingerprint(dest/item['name'])==item['sha256'],item['name']
     print(json.dumps(lineage))
 
 if __name__=='__main__':main()
