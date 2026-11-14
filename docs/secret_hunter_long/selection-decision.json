@@ -1,0 +1,188 @@
+{
+  "created": 1794665885.977558,
+  "challenger": "DARCL2",
+  "ranking": [
+    "DARCL2",
+    "DWOLF",
+    "KO",
+    "BL2"
+  ],
+  "reliability": {
+    "B": true,
+    "BL2": true,
+    "DARCL2": true,
+    "KO": true,
+    "DWOLF": true
+  },
+  "fingerprints": {
+    "B": "ad6194e2024f0375805be8a32c5f78230af7f8d3af06a161dd6748bd89e3abc9",
+    "BL2": "74021ae82a78867b9eac465511a4a9907322e9e1b43a01aaf5d158174aedc2b9",
+    "DARCL2": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4",
+    "KO": "19a9129510b911a949956f16eb0e952b52bec559c61e59d4592e4c7c8200d0ee",
+    "DWOLF": "df95bb9b9eb927b396c97b832da3beb0a494d8cfc87e89ec47ea04775d2b5ff4"
+  },
+  "plan": {
+    "created": 1794659643.6900108,
+    "arms": [
+      "B",
+      "BL2",
+      "DARCL2",
+      "KO",
+      "DWOLF"
+    ],
+    "core": {
+      "batch": "selection-core",
+      "start": 51500000,
+      "seeds": 60
+    },
+    "guardrail": {
+      "batch": "selection-guard",
+      "start": 51501000,
+      "seeds": 8
+    },
+    "workers": 6,
+    "design_sha256": "95aed62117a6c54685fa3b7c41bb34441bbff3adae0c92de5f08aec174474399",
+    "line_choices": {
+      "original_deck_line": {
+        "chosen": "BL2",
+        "development_primary_rates": {
+          "BL2": 0.8347222222222221,
+          "BML2": 0.8291666666666666,
+          "BM": 0.8291666666666666
+        },
+        "tie_order": [
+          "BL2",
+          "BML2",
+          "BM"
+        ]
+      },
+      "arcane_line": {
+        "chosen": "DARCL2",
+        "development_primary_rates": {
+          "DARCL2": 0.8513888888888889,
+          "DARCML2": 0.8430555555555556,
+          "DARCM": 0.8430555555555556,
+          "DARC": 0.8513888888888889
+        },
+        "tie_order": [
+          "DARCL2",
+          "DARCML2",
+          "DARCM",
+          "DARC"
+        ]
+      }
+    },
+    "candidate_fingerprints": {
+      "B": "ad6194e2024f0375805be8a32c5f78230af7f8d3af06a161dd6748bd89e3abc9",
+      "BL2": "74021ae82a78867b9eac465511a4a9907322e9e1b43a01aaf5d158174aedc2b9",
+      "DARCL2": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4",
+      "KO": "19a9129510b911a949956f16eb0e952b52bec559c61e59d4592e4c7c8200d0ee",
+      "DWOLF": "df95bb9b9eb927b396c97b832da3beb0a494d8cfc87e89ec47ea04775d2b5ff4"
+    },
+    "load": {
+      "n": 72,
+      "elapsed_s": 83.49318814277649,
+      "games_per_minute": 51.74074791122646,
+      "reliable": true
+    },
+    "final_target": {
+      "per_arm_core": 2040,
+      "per_arm_guard": 448,
+      "seeds_core": 170,
+      "seeds_guard": 16
+    },
+    "budget": {
+      "used_full_including_auxiliary": 9980,
+      "selection_full": 4720,
+      "capacity_after_selection": 5300,
+      "selection_seconds_estimate": 5473.442333804236,
+      "final_seconds_estimate": 5770.30700275633
+    },
+    "selection_rule": "One challenger: largest equal-family Astra/Bot2 terminal rate among fullCLI-reliable arms; exact tied rates use fixed arm order. Both core and guard must complete before choosing. Final independent gates unchanged.",
+    "no_retuning_after_selection": true
+  },
+  "primary_rates": {
+    "DARCL2": 0.8645833333333333,
+    "DWOLF": 0.8631944444444444,
+    "KO": 0.8527777777777777,
+    "BL2": 0.8451388888888889
+  },
+  "primary_comparisons": {
+    "BL2": {
+      "n_per_arm": 600,
+      "seed_clusters": 60,
+      "a_wins": 504,
+      "b_wins": 504,
+      "a_rate": 0.8451388888888889,
+      "b_rate": 0.8451388888888889,
+      "gain": 0.0,
+      "gain_seed_cluster_95": [
+        0.0,
+        0.0
+      ],
+      "a_only_wins": 0,
+      "b_only_wins": 0,
+      "weighting": "equal family macro",
+      "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+    },
+    "DARCL2": {
+      "n_per_arm": 600,
+      "seed_clusters": 60,
+      "a_wins": 504,
+      "b_wins": 516,
+      "a_rate": 0.8451388888888889,
+      "b_rate": 0.8645833333333333,
+      "gain": 0.019444444444444375,
+      "gain_seed_cluster_95": [
+        0.005555555555555552,
+        0.0361111111111111
+      ],
+      "a_only_wins": 3,
+      "b_only_wins": 15,
+      "weighting": "equal family macro",
+      "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+    },
+    "KO": {
+      "n_per_arm": 600,
+      "seed_clusters": 60,
+      "a_wins": 504,
+      "b_wins": 508,
+      "a_rate": 0.8451388888888889,
+      "b_rate": 0.8527777777777777,
+      "gain": 0.007638888888888862,
+      "gain_seed_cluster_95": [
+        -0.009722222222222236,
+        0.027083333333333338
+      ],
+      "a_only_wins": 11,
+      "b_only_wins": 15,
+      "weighting": "equal family macro",
+      "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+    },
+    "DWOLF": {
+      "n_per_arm": 600,
+      "seed_clusters": 60,
+      "a_wins": 504,
+      "b_wins": 515,
+      "a_rate": 0.8451388888888889,
+      "b_rate": 0.8631944444444444,
+      "gain": 0.01805555555555549,
+      "gain_seed_cluster_95": [
+        -0.004861111111111112,
+        0.04236111111111112
+      ],
+      "a_only_wins": 10,
+      "b_only_wins": 21,
+      "weighting": "equal family macro",
+      "limitation": "Fixed local proxies, not real Astra; few seed clusters and adaptive development selection limit inference."
+    }
+  },
+  "exact_primary_fractions": {
+    "DARCL2": "83/96",
+    "DWOLF": "1243/1440",
+    "KO": "307/360",
+    "BL2": "1217/1440"
+  },
+  "rule": "maximum equal-family Astra/Bot2 terminal rate among CLI-reliable challengers; ties use preregistered arms order; guardrail contributes reliability, final holdout independently enforces performance gates",
+  "no_retuning": true
+}

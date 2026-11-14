@@ -6,19 +6,19 @@
 
 | 候选 | 父代 | 创建代 | 改动类型 | 相对B换卡数 | 最新状态 |
 | --- | --- | --- | --- | --- | --- |
-| B | — | 0 | 原始基线 | 0 | baseline |
+| B | — | 0 | 原始基线 | 0 | frozen_reference |
 | DARC | B | 0 | 仅牌表配置 | 1 | parent_control_not_additional_selection_arm |
-| DWOLF | B | 0 | 仅牌表配置 | 1 | retain_selection_option |
+| DWOLF | B | 0 | 仅牌表配置 | 1 | selection_not_chosen |
 | TMILL | B | 1 | 源码改动 | 0 | archive |
 | TRPLY | B | 1 | 源码改动 | 0 | archive_after_independent_replication |
-| BL2 | B | 1 | 源码改动 | 0 | original_deck_selection_representative |
-| KO | B | 2 | 仅牌表配置 | 1 | retain_selection_option |
+| BL2 | B | 1 | 源码改动 | 0 | selection_not_chosen |
+| KO | B | 2 | 仅牌表配置 | 1 | selection_not_chosen |
 | BM | B | 3 | 源码改动 | 0 | archive_global_gain_unconfirmed |
 | DARCM | DARC | 3 | 源码改动 | 1 | archive_global_gain_unconfirmed |
 | TRPLY2 | TRPLY | 2 | 源码改动 | 0 | archive_after_independent_replication |
 | WOOZE | DWOLF | 4 | 仅牌表配置 | 2 | archive |
 | BML2 | BM | 5 | 源码改动 | 0 | archive_global_gain_unconfirmed |
-| DARCL2 | DARC | 5 | 源码改动 | 1 | arcane_line_selection_representative |
+| DARCL2 | DARC | 5 | 源码改动 | 1 | selected_unique_final_challenger |
 | DARCML2 | DARCM | 5 | 源码改动 | 1 | archive_global_gain_unconfirmed |
 
 
@@ -30,10 +30,14 @@ Exact requested ZIP, frozen reference
 
 源码SHA-256：`ad6194e2024f0375805be8a32c5f78230af7f8d3af06a161dd6748bd89e3abc9`。
 
+决定：Exact specified B retained as independent final reference.
+
+证据：`selection-decision.json`。
+
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
 | pilot-cli | cli_development | 51400000–51400001 | 2 | done |
-| cli-load | cli_development | 51400010–51400011 | 2 | pending |
+| cli-load | cli_development | 51400010–51400011 | 2 | done |
 | deck-screen | development | 51401000–51401059 | 60 | done |
 | mechanism-core | development | 51402000–51402019 | 20 | done |
 | lethal-guard | development | 51403000–51403003 | 4 | done |
@@ -41,6 +45,8 @@ Exact requested ZIP, frozen reference
 | recovery-fix | development | 51407000–51407019 | 20 | done |
 | two-card | development | 51408000–51408029 | 30 | done |
 | mulligan-combination | development | 51409000–51409029 | 30 | done |
+| selection-core | selection | 51500000–51500059 | 60 | done |
+| selection-guard | cli_development | 51501000–51501007 | 8 | done |
 
 
 ## DARC
@@ -71,15 +77,17 @@ Replace Krush slot with second Dire Wolf; unchanged mulligan and tactics
 
 源码SHA-256：`df95bb9b9eb927b396c97b832da3beb0a494d8cfc87e89ec47ea04775d2b5ff4`。
 
-决定：Two independent cohorts90groups: primary+1.528pp CI[-0.556,3.704]; fresh30groups Bot2 -3.333pp flags instability. Keep as a pure-card option, no module transfer before independent selection.
+决定：Both fullCLI selection pools complete and reliable; primary rate below DARCL2 under fixed ranking. Preserve snapshot; no tuning or extra selection games.
 
-证据：`analysis/combined-B-DWOLF.json`。
+证据：`selection-decision.json`。
 
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
 | pilot-cli | cli_development | 51400000–51400001 | 2 | done |
 | deck-screen | development | 51401000–51401059 | 60 | done |
 | two-card | development | 51408000–51408029 | 30 | done |
+| selection-core | selection | 51500000–51500059 | 60 | done |
+| selection-guard | cli_development | 51501000–51501007 | 8 | done |
 
 
 ## TMILL
@@ -125,15 +133,17 @@ Standalone inherited narrow burn/power lethal coverage repair; original deck and
 
 源码SHA-256：`74021ae82a78867b9eac465511a4a9907322e9e1b43a01aaf5d158174aedc2b9`。
 
-决定：Original-deck2x2 complete: B/BL2 305wins, BM/BML2 303; no BL2 terminal changes. Preregistered line choice picks BL2, pending complete batch and CLI load checks. Narrow-proof correctness route remains separate from statistical gain.
+决定：Both fullCLI selection pools complete and reliable; primary rate below DARCL2 under fixed ranking. Preserve snapshot; no tuning or extra selection games.
 
-证据：`analysis/mulligan-combination-B-BL2-paired.json`。
+证据：`selection-decision.json`。
 
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
 | mechanism-core | development | 51402000–51402019 | 20 | done |
 | lethal-guard | development | 51403000–51403003 | 4 | done |
 | mulligan-combination | development | 51409000–51409029 | 30 | done |
+| selection-core | selection | 51500000–51500059 | 60 | done |
+| selection-guard | cli_development | 51501000–51501007 | 8 | done |
 
 
 ## KO
@@ -144,14 +154,16 @@ Keep Krush, replace Misdirection with second Ooze: new B sample has 13 losses wi
 
 源码SHA-256：`19a9129510b911a949956f16eb0e952b52bec559c61e59d4592e4c7c8200d0ee`。
 
-决定：Fresh30groups primary+0.972pp with no observed family regression; combined50groups primary+1.167pp CI[-1.583,4.0]. Retains Krush; original strategy stays isolated.
+决定：Both fullCLI selection pools complete and reliable; primary rate below DARCL2 under fixed ranking. Preserve snapshot; no tuning or extra selection games.
 
-证据：`analysis/combined-B-KO.json`。
+证据：`selection-decision.json`。
 
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
 | mechanism-core | development | 51402000–51402019 | 20 | done |
 | two-card | development | 51408000–51408029 | 30 | done |
+| selection-core | selection | 51500000–51500059 | 60 | done |
+| selection-guard | cli_development | 51501000–51501007 | 8 | done |
 
 
 ## BM
@@ -219,7 +231,7 @@ Both single-card screens positive: Wolf improves early board and Ooze replaces u
 
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
-| cli-load | cli_development | 51400010–51400011 | 2 | pending |
+| cli-load | cli_development | 51400010–51400011 | 2 | done |
 | two-card | development | 51408000–51408029 | 30 | done |
 
 
@@ -248,13 +260,15 @@ Factorial isolation: confirmed public opening rule and/or narrow lethal coverage
 
 源码SHA-256：`e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4`。
 
-决定：Completed30group factorial: DARC/DARCL2 310wins, DARCM/DARCML2 307. Preregistered tie order picks DARCL2;3narrow-proof games/4calls,1first action change,zero terminal flips versus DARC. No correction exception for this deck-changing combination.
+决定：All selection core+guard CLI reliability checks pass; exact primary83/96 is highest. Guard211/224 versus B212/224 is recorded, not used to override the predeclared primary ranking. Final validation remains unopened.
 
-证据：`analysis/mulligan-combination-DARC-DARCL2-paired.json`。
+证据：`selection-decision.json`。
 
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
 | mulligan-combination | development | 51409000–51409029 | 30 | done |
+| selection-core | selection | 51500000–51500059 | 60 | done |
+| selection-guard | cli_development | 51501000–51501007 | 8 | done |
 
 
 ## DARCML2
@@ -271,7 +285,7 @@ Factorial isolation: confirmed public opening rule and/or narrow lethal coverage
 
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
-| cli-load | cli_development | 51400010–51400011 | 2 | pending |
+| cli-load | cli_development | 51400010–51400011 | 2 | done |
 | mulligan-combination | development | 51409000–51409029 | 30 | done |
 
 
