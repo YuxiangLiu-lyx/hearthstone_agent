@@ -1,4 +1,12 @@
-# 执行中检查点
+# 已完成运行的检查点与历史
+
+## 2026-11-14 16:02 UTC 最终运行完成
+
+推荐DARCL2，完整4,976场独立最终CLI及8场推荐包协议验收全部结束。accept_frozen session21497 exit0：Luna2局70动作、Client6局178动作，实际先后手均覆盖，所有seq/脚本中转/终态与普通可靠性检查通过。主指标+1.593137pp CI[0.563725,2.647059]；核心51翻胜28翻败；守卫−0.446429pp、0/2。推荐ZIP原冻结字节44,789、解压118,297，SHA0130813f56655e7b802e2cbbe539526f6ab2a1a8f1acf4d27af6e5fdee5a9a0e。
+
+final_evidence与delivery_audit通过：完整4976条request均为exact frozen path/full_cli，最终140,852次决策最大0.876889秒；UTC-active最大差0.866270秒，无新休眠。总尝试19684整局（19664主+20辅，其中首次Luna失败保留）、15580CF（15492终局+88失败）。所有main/CF/aux均无running，meta pid/cf_pid均null。精确manifest创建08:40:44、原截止20:40:44 UTC；历史部分检查点把截止近似记为20:44，未用于延长实际账本预算。
+
+REPORT/STATISTICS/CARD_STATISTICS/LINEAGE/CASE_STUDIES/OPENING_CASES/REPRODUCE及最终json齐备；decisions已追加final_promoted与B reference。仅剩封存记账：先提交全部最终报告，再运行archive（输出不要重定向到正在封存的RUN）；archives.json记录源码/evidence哈希。之后核对并结束自建caffeinate PID83336、把cleanup与最终档案记录提交。不要新增比赛或修改冻结候选。source/evidence tar在dist，用户仅提交skill ZIP；本轮从未远端推送或课程提交。
 
 ## 2026-11-14 15:53 UTC 更新
 

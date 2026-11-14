@@ -6,7 +6,7 @@
 
 | 候选 | 父代 | 创建代 | 改动类型 | 相对B换卡数 | 最新状态 |
 | --- | --- | --- | --- | --- | --- |
-| B | — | 0 | 原始基线 | 0 | frozen_reference |
+| B | — | 0 | 原始基线 | 0 | frozen_reference_retained |
 | DARC | B | 0 | 仅牌表配置 | 1 | parent_control_not_additional_selection_arm |
 | DWOLF | B | 0 | 仅牌表配置 | 1 | selection_not_chosen |
 | TMILL | B | 1 | 源码改动 | 0 | archive |
@@ -30,9 +30,9 @@ Exact requested ZIP, frozen reference
 
 源码SHA-256：`ad6194e2024f0375805be8a32c5f78230af7f8d3af06a161dd6748bd89e3abc9`。
 
-决定：Exact specified B retained as independent final reference.
+决定：Exact original ZIP, source and ordered deck preserved. Reliable frozen reference; challenger passed the preregistered statistical promotion gate.
 
-证据：`selection-decision.json`。
+证据：`final-recommendation.json`。
 
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
@@ -262,9 +262,9 @@ Factorial isolation: confirmed public opening rule and/or narrow lethal coverage
 
 源码SHA-256：`e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4`。
 
-决定：All selection core+guard CLI reliability checks pass; exact primary83/96 is highest. Guard211/224 versus B212/224 is recorded, not used to override the predeclared primary ranking. Final validation remains unopened.
+决定：Predeclared independent final primary CI lower bound positive, family and guard regressions within limits, exact frozen CLI reliable, and all eight final protocol acceptance games passed. Recommend unchanged frozen ZIP.
 
-证据：`selection-decision.json`。
+证据：`final-recommendation.json`。
 
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |

@@ -1,0 +1,709 @@
+{
+  "passed": true,
+  "candidate": "DARCL2",
+  "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4",
+  "plan_sha256": "6c265c5caefd580e05e62216bc97fef05e687e7739f5a38f9b4ed1f37b93090f",
+  "recommendation_sha256": "691324133a721af17aca819daaf69ac373f3361a30ef55f3cf6b391b6feb125f",
+  "games": 8,
+  "records": [
+    {
+      "key": "luna-51800010-s1",
+      "audit_sha256": "aa3d90996d5a33ed8d9501e2b022d8e6aa5a98b65d728b42fc19d0f94f801009",
+      "mode": "luna",
+      "game_path": "/Users/liuyuxiang/developer/hearthstone-long-20261114/runs/long-20261114/relay/luna-51800010-s1/g_20261114_000001",
+      "seat": 1,
+      "result": {
+        "game_id": "g_20261114_000001",
+        "seed": 51800010,
+        "winner": 1,
+        "reason": "hero_death",
+        "first_player": 2,
+        "turns": 20,
+        "illegal_counts": {
+          "1": 0,
+          "2": 0
+        },
+        "restarts": {
+          "1": 0,
+          "2": 0
+        },
+        "timeouts": {
+          "1": 0,
+          "2": 0
+        },
+        "duration_s": 216.384,
+        "decisions": {
+          "1": 42,
+          "2": 38
+        },
+        "players": [
+          {
+            "index": 1,
+            "name": "secret-hunter-program",
+            "kind": "skill"
+          },
+          {
+            "index": 2,
+            "name": "greedy",
+            "kind": "greedy"
+          }
+        ]
+      },
+      "decisions": 42,
+      "act_calls": 42,
+      "wait_first": true,
+      "envelope_mismatches": 0,
+      "game_over_published": true,
+      "game_over_observed": true,
+      "model_chain": {
+        "script_before_every_act": true,
+        "actions_without_matching_script": 0,
+        "terminal_tool_reply_seen": true,
+        "model_act_calls": 42
+      },
+      "ordinary_fallbacks": 0,
+      "worker_errors": 0,
+      "internal_program_latency_s": {
+        "n": 41,
+        "mean": 0.06837624292636131,
+        "max": 0.1134644580015447,
+        "p50": 0.06420562500716187,
+        "p95": 0.08804958300606813,
+        "p99": 0.1134644580015447
+      },
+      "publication_to_act_latency_s": {
+        "n": 41,
+        "mean": 4.792520098569916,
+        "max": 6.478913068771362,
+        "p50": 4.649602174758911,
+        "p95": 6.180334806442261,
+        "p99": 6.478913068771362
+      },
+      "outside_internal_program_latency_s": {
+        "n": 41,
+        "mean": 4.724143855643555,
+        "max": 6.413320818770444,
+        "p50": 4.585451967184781,
+        "p95": 6.1199130144377705,
+        "p99": 6.413320818770444
+      },
+      "course_stop": 0,
+      "model_id": "gpt-6-luna",
+      "timing_scope": "same-host state publication to MCP act; residual includes model/shell/Python startup/transport; not pure network timing",
+      "command_returncode": 0,
+      "wall_s": 219.52166220800427,
+      "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4"
+    },
+    {
+      "key": "luna-51800010-s2",
+      "audit_sha256": "c50603b3534d4773047119b98099c6309fc151c2ba23235bfb0b1381f2495f59",
+      "mode": "luna",
+      "game_path": "/Users/liuyuxiang/developer/hearthstone-long-20261114/runs/long-20261114/relay/luna-51800010-s2/g_20261114_000001",
+      "seat": 2,
+      "result": {
+        "game_id": "g_20261114_000001",
+        "seed": 51800010,
+        "winner": 2,
+        "reason": "hero_death",
+        "first_player": 2,
+        "turns": 13,
+        "illegal_counts": {
+          "1": 0,
+          "2": 0
+        },
+        "restarts": {
+          "1": 0,
+          "2": 0
+        },
+        "timeouts": {
+          "1": 0,
+          "2": 0
+        },
+        "duration_s": 116.659,
+        "decisions": {
+          "1": 14,
+          "2": 28
+        },
+        "players": [
+          {
+            "index": 1,
+            "name": "greedy",
+            "kind": "greedy"
+          },
+          {
+            "index": 2,
+            "name": "secret-hunter-program",
+            "kind": "skill"
+          }
+        ]
+      },
+      "decisions": 28,
+      "act_calls": 28,
+      "wait_first": true,
+      "envelope_mismatches": 0,
+      "game_over_published": true,
+      "game_over_observed": true,
+      "model_chain": {
+        "script_before_every_act": true,
+        "actions_without_matching_script": 0,
+        "terminal_tool_reply_seen": true,
+        "model_act_calls": 28
+      },
+      "ordinary_fallbacks": 0,
+      "worker_errors": 0,
+      "internal_program_latency_s": {
+        "n": 27,
+        "mean": 0.06780541029487115,
+        "max": 0.12626416599960066,
+        "p50": 0.06225970800733194,
+        "p95": 0.10096249998605344,
+        "p99": 0.12626416599960066
+      },
+      "publication_to_act_latency_s": {
+        "n": 27,
+        "mean": 3.7541143276073314,
+        "max": 6.040537118911743,
+        "p50": 3.635533332824707,
+        "p95": 4.419556140899658,
+        "p99": 6.040537118911743
+      },
+      "outside_internal_program_latency_s": {
+        "n": 27,
+        "mean": 3.68630891731246,
+        "max": 5.976522452911013,
+        "p50": 3.5092691668251064,
+        "p95": 4.353295390901621,
+        "p99": 5.976522452911013
+      },
+      "course_stop": 0,
+      "model_id": "gpt-6-luna",
+      "timing_scope": "same-host state publication to MCP act; residual includes model/shell/Python startup/transport; not pure network timing",
+      "command_returncode": 0,
+      "wall_s": 119.59883412499039,
+      "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4"
+    },
+    {
+      "key": "client-51800020-s1",
+      "audit_sha256": "7b61cb4be51b6212351878f51f3470e21ce30a68482764081517459f26384d09",
+      "mode": "client",
+      "game_path": "/Users/liuyuxiang/developer/hearthstone-long-20261114/runs/long-20261114/relay/client-51800020-s1/g_20261114_000001",
+      "seat": 1,
+      "result": {
+        "game_id": "g_20261114_000001",
+        "seed": 51800020,
+        "winner": 1,
+        "reason": "hero_death",
+        "first_player": 1,
+        "turns": 13,
+        "illegal_counts": {
+          "1": 0,
+          "2": 0
+        },
+        "restarts": {
+          "1": 0,
+          "2": 0
+        },
+        "timeouts": {
+          "1": 0,
+          "2": 0
+        },
+        "duration_s": 5.844,
+        "decisions": {
+          "1": 29,
+          "2": 17
+        },
+        "players": [
+          {
+            "index": 1,
+            "name": "secret-hunter",
+            "kind": "client"
+          },
+          {
+            "index": 2,
+            "name": "greedy",
+            "kind": "greedy"
+          }
+        ]
+      },
+      "decisions": 29,
+      "act_calls": 29,
+      "wait_first": true,
+      "envelope_mismatches": 0,
+      "game_over_published": true,
+      "game_over_observed": true,
+      "model_chain": {
+        "script_before_every_act": null,
+        "actions_without_matching_script": null,
+        "terminal_tool_reply_seen": true
+      },
+      "ordinary_fallbacks": 0,
+      "worker_errors": 0,
+      "internal_program_latency_s": {
+        "n": 28,
+        "mean": 0.07036431850065128,
+        "max": 0.11502829100936651,
+        "p50": 0.06546874999185093,
+        "p95": 0.10350108399870805,
+        "p99": 0.11502829100936651
+      },
+      "publication_to_act_latency_s": {
+        "n": 28,
+        "mean": 0.16615691355296544,
+        "max": 0.22447514533996582,
+        "p50": 0.16002845764160156,
+        "p95": 0.2186732292175293,
+        "p99": 0.22447514533996582
+      },
+      "outside_internal_program_latency_s": {
+        "n": 28,
+        "mean": 0.09579259505231416,
+        "max": 0.12881085973640438,
+        "p50": 0.09666613230365328,
+        "p95": 0.12809209137049038,
+        "p99": 0.12881085973640438
+      },
+      "course_stop": 0,
+      "model_id": null,
+      "timing_scope": "same-host state publication to MCP act; residual includes model/shell/Python startup/transport; not pure network timing",
+      "command_returncode": 0,
+      "wall_s": 8.737445582999499,
+      "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4"
+    },
+    {
+      "key": "client-51800020-s2",
+      "audit_sha256": "5b9ccb64fc782573226b522eac7c4d97b60c1d2477e97255fcb832633aae2142",
+      "mode": "client",
+      "game_path": "/Users/liuyuxiang/developer/hearthstone-long-20261114/runs/long-20261114/relay/client-51800020-s2/g_20261114_000001",
+      "seat": 2,
+      "result": {
+        "game_id": "g_20261114_000001",
+        "seed": 51800020,
+        "winner": 2,
+        "reason": "hero_death",
+        "first_player": 1,
+        "turns": 18,
+        "illegal_counts": {
+          "1": 0,
+          "2": 0
+        },
+        "restarts": {
+          "1": 0,
+          "2": 0
+        },
+        "timeouts": {
+          "1": 0,
+          "2": 0
+        },
+        "duration_s": 6.503,
+        "decisions": {
+          "1": 29,
+          "2": 33
+        },
+        "players": [
+          {
+            "index": 1,
+            "name": "greedy",
+            "kind": "greedy"
+          },
+          {
+            "index": 2,
+            "name": "secret-hunter",
+            "kind": "client"
+          }
+        ]
+      },
+      "decisions": 33,
+      "act_calls": 33,
+      "wait_first": true,
+      "envelope_mismatches": 0,
+      "game_over_published": true,
+      "game_over_observed": true,
+      "model_chain": {
+        "script_before_every_act": null,
+        "actions_without_matching_script": null,
+        "terminal_tool_reply_seen": true
+      },
+      "ordinary_fallbacks": 0,
+      "worker_errors": 0,
+      "internal_program_latency_s": {
+        "n": 32,
+        "mean": 0.06412161584466958,
+        "max": 0.07158441700448748,
+        "p50": 0.06445066700689495,
+        "p95": 0.0705520829942543,
+        "p99": 0.07158441700448748
+      },
+      "publication_to_act_latency_s": {
+        "n": 32,
+        "mean": 0.1602214351296425,
+        "max": 0.19723820686340332,
+        "p50": 0.15808725357055664,
+        "p95": 0.192612886428833,
+        "p99": 0.19723820686340332
+      },
+      "outside_internal_program_latency_s": {
+        "n": 32,
+        "mean": 0.09609981928497291,
+        "max": 0.12670350760163274,
+        "p50": 0.09402225357189309,
+        "p95": 0.12565378985891584,
+        "p99": 0.12670350760163274
+      },
+      "course_stop": 0,
+      "model_id": null,
+      "timing_scope": "same-host state publication to MCP act; residual includes model/shell/Python startup/transport; not pure network timing",
+      "command_returncode": 0,
+      "wall_s": 9.469694833009271,
+      "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4"
+    },
+    {
+      "key": "client-51800021-s1",
+      "audit_sha256": "d40d3b80ac1af3da992ec92961d9922d302a6982164e27d237351f1fcb9b3944",
+      "mode": "client",
+      "game_path": "/Users/liuyuxiang/developer/hearthstone-long-20261114/runs/long-20261114/relay/client-51800021-s1/g_20261114_000001",
+      "seat": 1,
+      "result": {
+        "game_id": "g_20261114_000001",
+        "seed": 51800021,
+        "winner": 1,
+        "reason": "hero_death",
+        "first_player": 2,
+        "turns": 14,
+        "illegal_counts": {
+          "1": 0,
+          "2": 0
+        },
+        "restarts": {
+          "1": 0,
+          "2": 0
+        },
+        "timeouts": {
+          "1": 0,
+          "2": 0
+        },
+        "duration_s": 6.066,
+        "decisions": {
+          "1": 30,
+          "2": 17
+        },
+        "players": [
+          {
+            "index": 1,
+            "name": "secret-hunter",
+            "kind": "client"
+          },
+          {
+            "index": 2,
+            "name": "greedy",
+            "kind": "greedy"
+          }
+        ]
+      },
+      "decisions": 30,
+      "act_calls": 30,
+      "wait_first": true,
+      "envelope_mismatches": 0,
+      "game_over_published": true,
+      "game_over_observed": true,
+      "model_chain": {
+        "script_before_every_act": null,
+        "actions_without_matching_script": null,
+        "terminal_tool_reply_seen": true
+      },
+      "ordinary_fallbacks": 0,
+      "worker_errors": 0,
+      "internal_program_latency_s": {
+        "n": 29,
+        "mean": 0.07098470399846676,
+        "max": 0.14370074999169447,
+        "p50": 0.06399070800398476,
+        "p95": 0.10042350000003353,
+        "p99": 0.14370074999169447
+      },
+      "publication_to_act_latency_s": {
+        "n": 29,
+        "mean": 0.16631886876862625,
+        "max": 0.23909997940063477,
+        "p50": 0.16626596450805664,
+        "p95": 0.2141404151916504,
+        "p99": 0.23909997940063477
+      },
+      "outside_internal_program_latency_s": {
+        "n": 29,
+        "mean": 0.09533416477015949,
+        "max": 0.12939278958947398,
+        "p50": 0.0953992294089403,
+        "p95": 0.1281067902018549,
+        "p99": 0.12939278958947398
+      },
+      "course_stop": 0,
+      "model_id": null,
+      "timing_scope": "same-host state publication to MCP act; residual includes model/shell/Python startup/transport; not pure network timing",
+      "command_returncode": 0,
+      "wall_s": 9.002325916007976,
+      "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4"
+    },
+    {
+      "key": "client-51800021-s2",
+      "audit_sha256": "3a72f2746dee0108db2e702c473daa3882f1213b58d1f8916e7f5f9f8a0d110c",
+      "mode": "client",
+      "game_path": "/Users/liuyuxiang/developer/hearthstone-long-20261114/runs/long-20261114/relay/client-51800021-s2/g_20261114_000001",
+      "seat": 2,
+      "result": {
+        "game_id": "g_20261114_000001",
+        "seed": 51800021,
+        "winner": 2,
+        "reason": "hero_death",
+        "first_player": 2,
+        "turns": 19,
+        "illegal_counts": {
+          "1": 0,
+          "2": 0
+        },
+        "restarts": {
+          "1": 0,
+          "2": 0
+        },
+        "timeouts": {
+          "1": 0,
+          "2": 0
+        },
+        "duration_s": 7.448,
+        "decisions": {
+          "1": 30,
+          "2": 36
+        },
+        "players": [
+          {
+            "index": 1,
+            "name": "greedy",
+            "kind": "greedy"
+          },
+          {
+            "index": 2,
+            "name": "secret-hunter",
+            "kind": "client"
+          }
+        ]
+      },
+      "decisions": 36,
+      "act_calls": 36,
+      "wait_first": true,
+      "envelope_mismatches": 0,
+      "game_over_published": true,
+      "game_over_observed": true,
+      "model_chain": {
+        "script_before_every_act": null,
+        "actions_without_matching_script": null,
+        "terminal_tool_reply_seen": true
+      },
+      "ordinary_fallbacks": 0,
+      "worker_errors": 0,
+      "internal_program_latency_s": {
+        "n": 35,
+        "mean": 0.07470906897048865,
+        "max": 0.19899587499094196,
+        "p50": 0.06523708300665021,
+        "p95": 0.13492112500534859,
+        "p99": 0.19899587499094196
+      },
+      "publication_to_act_latency_s": {
+        "n": 35,
+        "mean": 0.17035682541983468,
+        "max": 0.2888813018798828,
+        "p50": 0.17095565795898438,
+        "p95": 0.2606348991394043,
+        "p99": 0.2888813018798828
+      },
+      "outside_internal_program_latency_s": {
+        "n": 35,
+        "mean": 0.09564775644934603,
+        "max": 0.12601478782016784,
+        "p50": 0.09624227377935313,
+        "p95": 0.1257137741340557,
+        "p99": 0.12601478782016784
+      },
+      "course_stop": 0,
+      "model_id": null,
+      "timing_scope": "same-host state publication to MCP act; residual includes model/shell/Python startup/transport; not pure network timing",
+      "command_returncode": 0,
+      "wall_s": 10.356941167003242,
+      "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4"
+    },
+    {
+      "key": "client-51800022-s1",
+      "audit_sha256": "44e7bd3438ebf15cfbe5c0329a8aaea71a65f017e4115aa7a99b459637348600",
+      "mode": "client",
+      "game_path": "/Users/liuyuxiang/developer/hearthstone-long-20261114/runs/long-20261114/relay/client-51800022-s1/g_20261114_000001",
+      "seat": 1,
+      "result": {
+        "game_id": "g_20261114_000001",
+        "seed": 51800022,
+        "winner": 1,
+        "reason": "hero_death",
+        "first_player": 2,
+        "turns": 10,
+        "illegal_counts": {
+          "1": 0,
+          "2": 0
+        },
+        "restarts": {
+          "1": 0,
+          "2": 0
+        },
+        "timeouts": {
+          "1": 0,
+          "2": 0
+        },
+        "duration_s": 4.726,
+        "decisions": {
+          "1": 24,
+          "2": 11
+        },
+        "players": [
+          {
+            "index": 1,
+            "name": "secret-hunter",
+            "kind": "client"
+          },
+          {
+            "index": 2,
+            "name": "greedy",
+            "kind": "greedy"
+          }
+        ]
+      },
+      "decisions": 24,
+      "act_calls": 24,
+      "wait_first": true,
+      "envelope_mismatches": 0,
+      "game_over_published": true,
+      "game_over_observed": true,
+      "model_chain": {
+        "script_before_every_act": null,
+        "actions_without_matching_script": null,
+        "terminal_tool_reply_seen": true
+      },
+      "ordinary_fallbacks": 0,
+      "worker_errors": 0,
+      "internal_program_latency_s": {
+        "n": 23,
+        "mean": 0.06491151091556632,
+        "max": 0.10341049999988172,
+        "p50": 0.06437108298996463,
+        "p95": 0.0843192500033183,
+        "p99": 0.10341049999988172
+      },
+      "publication_to_act_latency_s": {
+        "n": 23,
+        "mean": 0.1629073308861774,
+        "max": 0.21370840072631836,
+        "p50": 0.16016840934753418,
+        "p95": 0.19495892524719238,
+        "p99": 0.21370840072631836
+      },
+      "outside_internal_program_latency_s": {
+        "n": 23,
+        "mean": 0.09799581997061108,
+        "max": 0.13047740515321493,
+        "p50": 0.09579732635756955,
+        "p95": 0.12919359224906657,
+        "p99": 0.13047740515321493
+      },
+      "course_stop": 0,
+      "model_id": null,
+      "timing_scope": "same-host state publication to MCP act; residual includes model/shell/Python startup/transport; not pure network timing",
+      "command_returncode": 0,
+      "wall_s": 7.677201124999556,
+      "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4"
+    },
+    {
+      "key": "client-51800022-s2",
+      "audit_sha256": "7de05748141afd3ee68088d15eb6bc143c8209d0d73f6dd1a9cba7a634d70be2",
+      "mode": "client",
+      "game_path": "/Users/liuyuxiang/developer/hearthstone-long-20261114/runs/long-20261114/relay/client-51800022-s2/g_20261114_000001",
+      "seat": 2,
+      "result": {
+        "game_id": "g_20261114_000001",
+        "seed": 51800022,
+        "winner": 2,
+        "reason": "hero_death",
+        "first_player": 2,
+        "turns": 13,
+        "illegal_counts": {
+          "1": 0,
+          "2": 0
+        },
+        "restarts": {
+          "1": 0,
+          "2": 0
+        },
+        "timeouts": {
+          "1": 0,
+          "2": 0
+        },
+        "duration_s": 5.307,
+        "decisions": {
+          "1": 17,
+          "2": 26
+        },
+        "players": [
+          {
+            "index": 1,
+            "name": "greedy",
+            "kind": "greedy"
+          },
+          {
+            "index": 2,
+            "name": "secret-hunter",
+            "kind": "client"
+          }
+        ]
+      },
+      "decisions": 26,
+      "act_calls": 26,
+      "wait_first": true,
+      "envelope_mismatches": 0,
+      "game_over_published": true,
+      "game_over_observed": true,
+      "model_chain": {
+        "script_before_every_act": null,
+        "actions_without_matching_script": null,
+        "terminal_tool_reply_seen": true
+      },
+      "ordinary_fallbacks": 0,
+      "worker_errors": 0,
+      "internal_program_latency_s": {
+        "n": 25,
+        "mean": 0.07030945823935326,
+        "max": 0.15962216700427234,
+        "p50": 0.06436324999958742,
+        "p95": 0.1081407500023488,
+        "p99": 0.15962216700427234
+      },
+      "publication_to_act_latency_s": {
+        "n": 25,
+        "mean": 0.16635604858398437,
+        "max": 0.2695441246032715,
+        "p50": 0.16205978393554688,
+        "p95": 0.21895980834960938,
+        "p99": 0.2695441246032715
+      },
+      "outside_internal_program_latency_s": {
+        "n": 25,
+        "mean": 0.09604659034463112,
+        "max": 0.12780122814001516,
+        "p50": 0.09769653393595945,
+        "p95": 0.12615029064181726,
+        "p99": 0.12780122814001516
+      },
+      "course_stop": 0,
+      "model_id": null,
+      "timing_scope": "same-host state publication to MCP act; residual includes model/shell/Python startup/transport; not pure network timing",
+      "command_returncode": 0,
+      "wall_s": 8.24373045800894,
+      "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4"
+    }
+  ],
+  "scope": "Protocol acceptance only; these outcomes never enter strategy selection or promotion."
+}

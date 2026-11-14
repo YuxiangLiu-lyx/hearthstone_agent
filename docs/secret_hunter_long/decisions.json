@@ -1,0 +1,238 @@
+[
+  {
+    "created": 1794649982.2211452,
+    "name": "DARC",
+    "status": "advance_for_replication",
+    "reason": "Single-card 60 groups primary +1.81pp, CI crosses zero; no final promotion",
+    "evidence": "analysis/deck-screen-B-DARC-paired.json",
+    "evidence_sha256": "3ddca459d84e1530963352c42fba620aa37a3437a1ffe170a1474eeb95b367ed"
+  },
+  {
+    "created": 1794649982.2217112,
+    "name": "DWOLF",
+    "status": "advance_for_replication",
+    "reason": "Single-card 60 groups primary +2.15pp, CI crosses zero; no final promotion",
+    "evidence": "analysis/deck-screen-B-DWOLF-paired.json",
+    "evidence_sha256": "bba591ae2552bbbc2571e1dba54dbc7d0252fbd1f5f3acc38be4ac33f8fa8572"
+  },
+  {
+    "created": 1794649982.221998,
+    "name": "KO",
+    "status": "advance_for_replication",
+    "reason": "20 groups primary +1.46pp, sparse positive point estimate; compare new seeds and double-card interaction",
+    "evidence": "analysis/mechanism-core-B-KO-paired.json",
+    "evidence_sha256": "2e99234f7dda200e061f9f4f63efd22492a046fe482d7e6991178fd43b4ff89f"
+  },
+  {
+    "created": 1794649982.222038,
+    "name": "TMILL",
+    "status": "archive",
+    "reason": "Five actual game action divergences, zero terminal changes across240 paired games; no demonstrated terminal value",
+    "evidence": "analysis/mechanism-core-B-TMILL-paired.json",
+    "evidence_sha256": "d42b8a1bc8c6a386a281b39ec93d49d255f71fb4047032d2fcf784170cbf6d73"
+  },
+  {
+    "created": 1794649982.222065,
+    "name": "BT1_proposal",
+    "status": "reject_without_build",
+    "reason": "Training-only develop at mana<3 rule net+7, heldout net-9; fixed-route label gate fails",
+    "evidence": "tactical-learning-deck-screen-B.json",
+    "evidence_sha256": "ea83a10b2631a3cdb69f5ca4dfa70ac70e238da36c4bfebcfb233e54aeb678d1"
+  },
+  {
+    "created": 1794650402.5338712,
+    "name": "BM",
+    "status": "advance_natural_frequency",
+    "reason": "Locked public opening rule: fresh144 openings48groups,36rescues8regressions;144/144 actualCLI match",
+    "evidence": "mulligan-confirmation-B.json",
+    "evidence_sha256": "16561155198929fe9b49b18a1d622801aa0f271d0eec4fd5a371693860c56d30"
+  },
+  {
+    "created": 1794650402.533932,
+    "name": "DARCM",
+    "status": "advance_natural_frequency",
+    "reason": "Separate transfer check: fresh144 openings48groups,37rescues7regressions;144/144 actualCLI match",
+    "evidence": "mulligan-confirmation-DARC.json",
+    "evidence_sha256": "0b6f6d09bcd44d9cf7c19f686552f1c5b1aec6858cd2058dcc01c5493c6630cc"
+  },
+  {
+    "created": 1794650402.5339708,
+    "name": "TRPLY",
+    "status": "advance_independent_replication",
+    "reason": "128/240 actual action divergences,18rescues6regressions; primaryCI crosses zero; wait new20group parent/fix comparison",
+    "evidence": "analysis/mechanism-core-B-TRPLY-paired.json",
+    "evidence_sha256": "eb16c13a8c782a69e238b5d582cc73ab76bea3801f682623a40dd7916aa1348f"
+  },
+  {
+    "created": 1794653585.57313,
+    "name": "TRPLY",
+    "status": "archive_after_independent_replication",
+    "reason": "Preregistered transfer gate fails: fresh20groups main gain -1.875pp,5rescues9regressions; no transfer or M/response combinations. Boundary fix creates legal extra recovery branches but no terminal improvement.",
+    "evidence": "analysis/recovery-fix-B-TRPLY-paired.json",
+    "evidence_sha256": "6d65ce44087dece89e2dc049c40bf58ca33600bb7b370eb25029e73cf362b095"
+  },
+  {
+    "created": 1794653585.573324,
+    "name": "TRPLY2",
+    "status": "archive_after_independent_replication",
+    "reason": "Preregistered transfer gate fails: fresh20groups main gain -1.875pp,5rescues9regressions; no transfer or M/response combinations. Boundary fix creates legal extra recovery branches but no terminal improvement.",
+    "evidence": "analysis/recovery-fix-B-TRPLY2-paired.json",
+    "evidence_sha256": "2487336b4fe70f3860ca78eceef78833fbc2b288e031b4867cd0a6bf45c33066"
+  },
+  {
+    "created": 1794653750.2642078,
+    "name": "BT2_proposal",
+    "status": "reject_without_build",
+    "reason": "Balanced50source-group replication: training hold_coin unless public opponent class Hunter net+6, heldout360futures net-6 (2rescues8regressions). Teacher original-world net+3 on120roots, clusterCI crosses zero. Do not retune on this holdout.",
+    "evidence": "tactical-learning-coverage-core-B.json",
+    "evidence_sha256": "0fa19464bdc871caa2ccb112922afe152e9ec70c5060012d823aea9cd14a26aa"
+  },
+  {
+    "created": 1794655670.0970082,
+    "name": "WOOZE",
+    "status": "archive",
+    "reason": "Fresh30groups: total+8 wins but primary+0.833pp below KO parent; Bot2 -3.333pp exceeds stability preference. No module transfer or extra double-card combinations.",
+    "evidence": "analysis/two-card-B-WOOZE-paired.json",
+    "evidence_sha256": "cca91aa842027fc70f5589459b4f1474461a20b1fa230b65f1c5babd51121b7f"
+  },
+  {
+    "created": 1794655670.0970712,
+    "name": "DWOLF",
+    "status": "retain_selection_option",
+    "reason": "Two independent cohorts90groups: primary+1.528pp CI[-0.556,3.704]; fresh30groups Bot2 -3.333pp flags instability. Keep as a pure-card option, no module transfer before independent selection.",
+    "evidence": "analysis/combined-B-DWOLF.json",
+    "evidence_sha256": "695273892cd6d946bd5ce8af4a4c14a9b15950a640425ebc001c2ce15dc7cab1"
+  },
+  {
+    "created": 1794655670.0971048,
+    "name": "KO",
+    "status": "retain_selection_option",
+    "reason": "Fresh30groups primary+0.972pp with no observed family regression; combined50groups primary+1.167pp CI[-1.583,4.0]. Retains Krush; original strategy stays isolated.",
+    "evidence": "analysis/combined-B-KO.json",
+    "evidence_sha256": "43edd2f99baf5141fc9b2f673929313421f5c29f37db0a85abcf19e2c379b8ef"
+  },
+  {
+    "created": 1794655975.683341,
+    "name": "DARCT2_proposal",
+    "status": "reject_without_build",
+    "reason": "Training-only search334options: only unchanged parent passes training support/gain screen. Heldout unchanged274/360; teacher original-world86\u219288 net+2 CI[-3.333,5.833]pp. No deployed new tactical policy or extra natural-factorial games.",
+    "evidence": "tactical-learning-coverage-core-DARC.json",
+    "evidence_sha256": "a94b260662120e5064e4572f6666ff226b5c485b8b82d093b16329b6d11f3e31"
+  },
+  {
+    "created": 1794657682.742651,
+    "name": "BM",
+    "status": "archive_global_gain_unconfirmed",
+    "reason": "Natural30groups360games:305\u2192303,1rescue3regressions; opening changes15games from4source groups. Conditional confirmation does not replace global evidence. BML2 adds no terminal change versus BM; original-deck selection recipe favors BL2.",
+    "evidence": "analysis/mulligan-combination-B-BM-paired.json",
+    "evidence_sha256": "aa74d89b5c70a9b793425d506f9c1dd6818261a224d8ecdb540bf0cdad6fb2c6"
+  },
+  {
+    "created": 1794657682.74307,
+    "name": "BML2",
+    "status": "archive_global_gain_unconfirmed",
+    "reason": "Natural30groups360games:305\u2192303,1rescue3regressions; opening changes15games from4source groups. Conditional confirmation does not replace global evidence. BML2 adds no terminal change versus BM; original-deck selection recipe favors BL2.",
+    "evidence": "analysis/mulligan-combination-B-BML2-paired.json",
+    "evidence_sha256": "dcc77bf6eda71cddd8f4b4417f9998cf3c1407b1b69d500cdac0c9d31df9405e"
+  },
+  {
+    "created": 1794657682.743105,
+    "name": "BL2",
+    "status": "original_deck_selection_representative",
+    "reason": "Original-deck2x2 complete: B/BL2 305wins, BM/BML2 303; no BL2 terminal changes. Preregistered line choice picks BL2, pending complete batch and CLI load checks. Narrow-proof correctness route remains separate from statistical gain.",
+    "evidence": "analysis/mulligan-combination-B-BL2-paired.json",
+    "evidence_sha256": "2390a1b8d58f855eec78b47c5c7a54c857ee872d0e5a540e50600b57c4589884"
+  },
+  {
+    "created": 1794659563.281016,
+    "name": "DARCM",
+    "status": "archive_global_gain_unconfirmed",
+    "reason": "Natural30groups360games:310\u2192307,1rescue4regressions;15opening changes. Conditional confirmation did not replicate as global gain. Do not promote the opening module.",
+    "evidence": "analysis/mulligan-combination-DARC-DARCM-paired.json",
+    "evidence_sha256": "7414ae10b660e1fb43769aa870a0aa06312031a3d95e249b7718c41733f3b39d"
+  },
+  {
+    "created": 1794659563.281087,
+    "name": "DARCML2",
+    "status": "archive_global_gain_unconfirmed",
+    "reason": "Natural30groups360games:310\u2192307 vs DARC; identical terminal outcomes to DARCM. L2 adds no terminal gain and factorial interaction is zero.",
+    "evidence": "analysis/mulligan-combination-DARC-DARCML2-paired.json",
+    "evidence_sha256": "fe2f0e11340edb93a412630bfc74c56b7db68f5ebf9cb5abd930bae39b1ebb10"
+  },
+  {
+    "created": 1794659563.281121,
+    "name": "DARCL2",
+    "status": "arcane_line_selection_representative",
+    "reason": "Completed30group factorial: DARC/DARCL2 310wins, DARCM/DARCML2 307. Preregistered tie order picks DARCL2;3narrow-proof games/4calls,1first action change,zero terminal flips versus DARC. No correction exception for this deck-changing combination.",
+    "evidence": "analysis/mulligan-combination-DARC-DARCL2-paired.json",
+    "evidence_sha256": "da926ed1854786a8bea09dc8b0204759744cbfdfda2647540296db1d90f5bdc9"
+  },
+  {
+    "created": 1794659563.2811499,
+    "name": "DARC",
+    "status": "parent_control_not_additional_selection_arm",
+    "reason": "Three independent development cohorts favor the single Arcane substitution; completed factorial ties DARCL2. Frozen recipe represents the line with DARCL2, avoiding another correlated selection arm.",
+    "evidence": "analysis/mulligan-combination-B-DARC-paired.json",
+    "evidence_sha256": "602a627e3f7d6efe5b8ade64a006c1cac1d0f773478a43d82c93a344e210390f"
+  },
+  {
+    "created": 1794665931.740514,
+    "name": "B",
+    "status": "frozen_reference",
+    "reason": "Exact specified B retained as independent final reference.",
+    "evidence": "selection-decision.json",
+    "evidence_sha256": "bd6acf502491a1e1105deca33f7ba23e910b34d1f68e74d9df40abe3525795d5"
+  },
+  {
+    "created": 1794665931.7405162,
+    "name": "BL2",
+    "status": "selection_not_chosen",
+    "reason": "Both fullCLI selection pools complete and reliable; primary rate below DARCL2 under fixed ranking. Preserve snapshot; no tuning or extra selection games.",
+    "evidence": "selection-decision.json",
+    "evidence_sha256": "bd6acf502491a1e1105deca33f7ba23e910b34d1f68e74d9df40abe3525795d5"
+  },
+  {
+    "created": 1794665931.7405171,
+    "name": "DARCL2",
+    "status": "selected_unique_final_challenger",
+    "reason": "All selection core+guard CLI reliability checks pass; exact primary83/96 is highest. Guard211/224 versus B212/224 is recorded, not used to override the predeclared primary ranking. Final validation remains unopened.",
+    "evidence": "selection-decision.json",
+    "evidence_sha256": "bd6acf502491a1e1105deca33f7ba23e910b34d1f68e74d9df40abe3525795d5"
+  },
+  {
+    "created": 1794665931.7405188,
+    "name": "KO",
+    "status": "selection_not_chosen",
+    "reason": "Both fullCLI selection pools complete and reliable; primary rate below DARCL2 under fixed ranking. Preserve snapshot; no tuning or extra selection games.",
+    "evidence": "selection-decision.json",
+    "evidence_sha256": "bd6acf502491a1e1105deca33f7ba23e910b34d1f68e74d9df40abe3525795d5"
+  },
+  {
+    "created": 1794665931.740522,
+    "name": "DWOLF",
+    "status": "selection_not_chosen",
+    "reason": "Both fullCLI selection pools complete and reliable; primary rate below DARCL2 under fixed ranking. Preserve snapshot; no tuning or extra selection games.",
+    "evidence": "selection-decision.json",
+    "evidence_sha256": "bd6acf502491a1e1105deca33f7ba23e910b34d1f68e74d9df40abe3525795d5"
+  },
+  {
+    "created": 1794672096.3741922,
+    "name": "DARCL2",
+    "status": "final_promoted",
+    "reason": "Predeclared independent final primary CI lower bound positive, family and guard regressions within limits, exact frozen CLI reliable, and all eight final protocol acceptance games passed. Recommend unchanged frozen ZIP.",
+    "evidence": "final-recommendation.json",
+    "evidence_sha256": "691324133a721af17aca819daaf69ac373f3361a30ef55f3cf6b391b6feb125f",
+    "acceptance_evidence": "final-acceptance.json",
+    "acceptance_sha256": "9090d3be3a1f5e6d749f3e2ee1c7abe4c9cc0c286386aa4fb17a2144602616c2"
+  },
+  {
+    "created": 1794672096.374253,
+    "name": "B",
+    "status": "frozen_reference_retained",
+    "reason": "Exact original ZIP, source and ordered deck preserved. Reliable frozen reference; challenger passed the preregistered statistical promotion gate.",
+    "evidence": "final-recommendation.json",
+    "evidence_sha256": "691324133a721af17aca819daaf69ac373f3361a30ef55f3cf6b391b6feb125f",
+    "acceptance_evidence": "final-acceptance.json",
+    "acceptance_sha256": "9090d3be3a1f5e6d749f3e2ee1c7abe4c9cc0c286386aa4fb17a2144602616c2"
+  }
+]
