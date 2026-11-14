@@ -26,6 +26,8 @@ def summarize(pairs):
         'root_turn_changed_roots': len({s['case'] for s, _, c in pairs if c['actions_changed']}),
         'root_turn_changed_futures': sum(bool(c['actions_changed']) for _, _, c in pairs),
         'root_turn_changed_actions': sum(c['actions_changed'] for _, _, c in pairs),
+        'all_own_decisions': sum(c['own_decisions'] for _, _, c in pairs),
+        'whole_continuation_policy_changed_actions': sum(c['policy_changed_actions'] for _, _, c in pairs),
         'terminal_gain': (rescued - regressed) / len(pairs),
         'gain_seed_cluster_95': confidence(groups),
     }
@@ -51,6 +53,7 @@ def run(batch, arm):
                 assert result['terminal'] and result['winner'] in (1, 2) and not result.get('error')
                 outcomes.append(result)
             baseline, actual = outcomes
+            assert actual['fallbacks'] == 0
             assert baseline['root_digest'] == actual['root_digest']
             assert baseline['audit_hidden'] == actual['audit_hidden']
             assert baseline['prefix_verified_steps'] == actual['prefix_verified_steps']

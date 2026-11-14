@@ -156,6 +156,7 @@ def execute(job):
         'rng_hash':hashlib.sha256(repr(e.game.random.getstate()).encode()).hexdigest()}
     cfg=json.loads((HERE/'candidates'/job.get('policy_arm',job['arm'])/'config.json').read_text());foe=opponent(src['opponent_spec'])
     memory={};sequence=[];trace=[];endpoint=None;after_response=None;changes=0
+    own_decisions=0;policy_changes=0;fallbacks=0
     for step in range(700):
         if e.over:break
         active,_=e.pending();s=e.view(active);history=[v for ev in e.events if (v:=ev.view(active)) is not None]
@@ -163,6 +164,8 @@ def execute(job):
         intervention=active==seat and e.turn==root_turn
         if active==seat:
             a,info=decide(s,cfg);assert not info.get('error'),info.get('error');base=dict(info.get('learned_parent_action',a))
+            own_decisions+=1;policy_changes+=int(a!=base);fallbacks+=bool(info.get('fallback'))
+            if job.get('policy_arm'):assert not info.get('fallback'),('actual learned policy fallback',job,info)
             if intervention and job['route']!='baseline' and info.get('reason')!='guaranteed_lethal':
                 alternative=propose(s,job['route'],memory,base)
                 if alternative is not None:a=alternative
@@ -180,6 +183,7 @@ def execute(job):
     return {**job,'source_seed':src['seed'],'split':src['split'],'features':src['features'],
         'source_score':src['source_score'],'prefix_verified_steps':prefix,'root_digest':before,'audit_hidden':hidden,
         'win':int(e.winner==seat),'winner':e.winner,'terminal':True,'actions_changed':changes,
+        'own_decisions':own_decisions,'policy_changed_actions':policy_changes,'fallbacks':fallbacks,
         'first_changed':bool(sequence and sequence[0]['action']!=sequence[0]['baseline_action']),
         'later_changed':any(x['action']!=x['baseline_action'] for x in sequence[1:]),
         'sequence':sequence,'endpoint':endpoint,'after_response':after_response,'trace':trace}
