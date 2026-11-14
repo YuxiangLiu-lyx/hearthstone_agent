@@ -131,7 +131,11 @@ def main():
             assert time.time()<m['candidate_generation_deadline']
             allowed=['selection','selection_guard'] if a.selection_stage else ['pilot','development','conditional']
             assert any(m['seed_blocks'][k][0]<=a.start and a.start+a.seeds-1<=m['seed_blocks'][k][1] for k in allowed)
-        phase=('final_guard' if a.pool=='guardrail' else 'final_core') if a.final else ('selection' if a.selection_stage else ('development' if a.warm else 'cli_development'))
+        if a.selection_stage:assert not a.warm,'Selection is complete CLI'
+        # The inherited selection analyzer assumes Astra/Bot2 core families.
+        # Guardrail has different families; retain CLI execution and select only
+        # after both independently reserved selection reports are complete.
+        phase=('final_guard' if a.pool=='guardrail' else 'final_core') if a.final else ('selection' if a.selection_stage and a.pool=='core' else ('development' if a.warm else 'cli_development'))
         existing=db.execute('select * from batches where id=?',(a.batch,)).fetchone()
         if existing:
             assert json.loads(existing['arms'])==a.arms and existing['start']==a.start and existing['seeds']==a.seeds and existing['phase']==phase
@@ -160,7 +164,9 @@ def main():
             for arm in a.arms:
                 if train.STOP:break
                 train.run_arm(db,RUN,a.batch,arm,a)
-            if not a.selection:train.analyze(db,RUN,a.batch)
+            if not a.selection:
+                train.analyze(db,RUN,a.batch)
+                train.setmeta(db,'archive',[x for x in train.meta(db,'archive',[]) if x in cs])
             else:
                 from development.secret_hunter_final.statistics import selected_report
                 selected_report(db,RUN,a.batch,a.selection)

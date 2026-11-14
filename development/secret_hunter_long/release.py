@@ -43,8 +43,10 @@ def recommend():
     if challenger!='B':
         main=core['comparisons'][challenger]['primary'];guard_gain=guard['comparisons'][challenger]['all']['gain']
         family={g:core['comparisons'][challenger]['by_group'][g]['gain'] for g in ('astra','bot2','bot1')}
-        statistical=main['gain_seed_cluster_95'][0]>0 and min(family.values())>=-.025 and guard_gain>=-.02
-        correction=challenger=='BL2' and min(family.values())>=0 and guard_gain>=0
+        # Numerical tolerance enforces the mathematical inclusive regression
+        # limits and prevents floating-point roundoff around zero promotion.
+        statistical=main['gain_seed_cluster_95'][0]>1e-12 and min(family.values())>=-.025-1e-12 and guard_gain>=-.02-1e-12
+        correction=challenger=='BL2' and min(family.values())>=-1e-12 and guard_gain>=-1e-12
     promoted=challenger!='B' and reliability[challenger] and (statistical or correction)
     recommended=challenger if promoted else 'B';assert reliability[recommended]
     record=next(r for r in json.loads((RUN/'release-candidates.json').read_text()) if r['name']==recommended)

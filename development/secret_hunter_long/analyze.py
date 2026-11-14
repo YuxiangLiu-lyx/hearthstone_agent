@@ -58,6 +58,8 @@ def summarize(games):
         result['cards'][cid]={'initial_copies':sum(c['initial'] for c in cs),'replaced_copies':sum(c['replaced'] for c in cs),
             'received_copies':sum(c['received_after_mulligan'] for c in cs),'ever_playable_copies':sum(c['first_playable'] is not None for c in cs),
             'played_copies':sum(bool(c['plays']) for c in cs),'play_mana_turns':dict(Counter(p['mana_turn'] for c in cs for p in c['plays'])),
+            'first_playable_mana_turns':dict(Counter(c['first_playable']['mana_turn'] for c in cs if c['first_playable'] is not None)),
+            'first_play_delay_mana_turns':dict(Counter(c['plays'][0]['mana_turn']-c['first_playable']['mana_turn'] for c in cs if c['plays'] and c['first_playable'] is not None)),
             'games_received':sum(any(c['card_id']==cid and c['received_after_mulligan'] for c in g['cards']) for g in games),
             'games_played':sum(any(c['card_id']==cid and c['plays'] for c in g['cards']) for g in games),
             'wins_when_played':sum(g['win'] for g in games if any(c['card_id']==cid and c['plays'] for c in g['cards'])),

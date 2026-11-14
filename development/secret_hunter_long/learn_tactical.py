@@ -66,7 +66,7 @@ def teacher(data):
     return {'n':len(choices),'baseline_wins':a,'teacher_wins':b,'flips':flips,'regressions':reg,'net':flips-reg,'choices':choices,
         'scope':'Offline teacher selects from alternate deck-order/RNG worlds1+, then evaluated on untouched original-world outcome0. Original simulated hidden hands remain fixed; not an executable public-only online oracle.'}
 
-def run(batch,arm):
+def run(batch,arm,candidate_name=None):
     manifest=json.loads((RUN/'tactical-sources'/f'manifest-{batch}-{arm}.json').read_text());lock=RUN/f'tactical-rule-freeze-{batch}-{arm}.json'
     training=dataset(manifest,'train')
     if not lock.exists():
@@ -92,7 +92,7 @@ def run(batch,arm):
     result={**frozen,'validation':valid,'teacher':teacher(validation),'passed_fixed_route_label_gate':passed,
        'route_diagnostics_not_selection':{r:{split:evaluate(ps,{'route':r,'feature':None}) for split,ps in [('train',training),('validation',validation)]} for r in sorted({r for p in training+validation for r in p['outcomes']}-{'baseline'})}}
     if passed:
-        name=arm+'T1'
+        name=candidate_name or arm+'T1'
         def edit(dest):
             # Pure visible route helpers only. No audit labels, source keys, seed,
             # opponent config, or hidden world sampler enters the submission.
@@ -103,13 +103,14 @@ def run(batch,arm):
             (dest/'scripts/route_primitives.py').write_text(code)
             code=inspect.getsource(tactical.propose).replace('from development.secret_hunter_final.early_routes import propose as old','from route_primitives import propose as old')
             code='from route_primitives import features\n\n'+code+'\n'+inspect.getsource(match)+'\nRULE='+repr(frozen['rule'])+'\n'
-            code+='\ndef choose(state,baseline):\n    if state.get("phase")!="main" or not match(features(state),RULE):return None\n    return propose(state,RULE["route"],{},baseline)\n'
+            code+='\ndef choose(state,baseline):\n    if state.get("phase")!="main" or not 1<=state["you"]["max_mana"]<=5 or not match(features(state),RULE):return None\n    return propose(state,RULE["route"],{},baseline)\n'
             (dest/'scripts/learned_tactics.py').write_text(code)
             p=dest/'scripts/program_policy.py';s=p.read_text();old="    info['elapsed_s']=time.monotonic()-start"
             new="""    if state.get('phase')=='main' and info.get('reason')!='guaranteed_lethal':
         from learned_tactics import choose
         alternative=choose(state,best)
         if alternative is not None and alternative!=best and legal(state,alternative):
+            info['learned_parent_action']=best
             info['learned_rule_changed']=True
             save(alternative,'learned_public_rule')
     info['elapsed_s']=time.monotonic()-start"""
@@ -128,4 +129,5 @@ def run(batch,arm):
     print(json.dumps({k:v for k,v in result.items() if k not in ('route_diagnostics_not_selection','audit','teacher')}))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--batch',required=True);p.add_argument('--arm',default='B');a=p.parse_args();run(a.batch,a.arm)
+    p=argparse.ArgumentParser();p.add_argument('--batch',required=True);p.add_argument('--arm',default='B');p.add_argument('--candidate-name')
+    a=p.parse_args();run(a.batch,a.arm,a.candidate_name)

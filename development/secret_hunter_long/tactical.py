@@ -39,7 +39,7 @@ def propose(s,route,memory,baseline):
         return next((a for a in actions if a['type']=='play_card' and hand[a['card']]['card_id']=='EX1_536'),None)
     return None
 
-def mine(batch,arm,cap,samples):
+def mine(batch,arm,cap,samples,balance_families=False):
     setup(arm)
     from development.secret_hunter_final.early_routes import features
     from action_validator import legal
@@ -78,11 +78,32 @@ def mine(batch,arm,cap,samples):
     # Each seed contributes roots before any seed contributes its next root.
     # Rotate opponent order, and interleave known wins and losses within seed.
     for seed,cs in grouped.items():
-        lost=[c for c in cs if not c['source_score']];won=[c for c in cs if c['source_score']]
         mixed=[]
-        for i in range(max(len(lost),len(won))):
-            if i<len(lost):mixed.append(lost[i])
-            if i<len(won):mixed.append(won[i])
+        if balance_families:
+            # At six roots per seed this yields 3 Astra, 2 Bot2, 1 Bot1.
+            # Within each family alternate wins/losses and rotate opponents and
+            # seats. Source outcomes affect offline sampling only, never policy.
+            queues={}
+            for family in ('astra','bot2','bot1'):
+                items=[c for c in cs if c['opponent_spec']['group']==family]
+                groups=[]
+                for score in (0,1):
+                    xs=[c for c in items if c['source_score']==score]
+                    offset=seed%len(xs) if xs else 0;groups.append(xs[offset:]+xs[:offset])
+                queue=[]
+                for j in range(max(map(len,groups),default=0)):
+                    for xs in groups:
+                        if j<len(xs):queue.append(xs[j])
+                queues[family]=queue
+            schedule=('astra','bot2','bot1','astra','bot2','astra')
+            while any(queues.values()):
+                for family in schedule:
+                    if queues[family]:mixed.append(queues[family].pop(0))
+        else:
+            lost=[c for c in cs if not c['source_score']];won=[c for c in cs if c['source_score']]
+            for i in range(max(len(lost),len(won))):
+                if i<len(lost):mixed.append(lost[i])
+                if i<len(won):mixed.append(won[i])
         grouped[seed]=mixed
     chosen=[]
     for i in range(max((len(cs) for cs in grouped.values()),default=0)):
@@ -96,7 +117,7 @@ def mine(batch,arm,cap,samples):
                 jobs.append((f'{c["case"]}-w{sample}-{route}',{'case':c['case'],'sample':sample,'route':route,'arm':arm}))
     manifest={'batch':batch,'arm':arm,'cases':[c['case'] for c in chosen],'coverage':dict(coverage),'roots':len(chosen),
         'seed_groups':len({c['seed'] for c in chosen}),'by_split':{s:{'roots':sum(c['split']==s for c in chosen),'groups':len({c['seed'] for c in chosen if c['split']==s})} for s in ('train','validation')},
-        'samples':samples,'jobs':len(jobs),'selection':'earliest eligible T1-5 branch, per-source-seed round-robin, wins and losses included',
+        'samples':samples,'jobs':len(jobs),'family_balanced':balance_families,'selection':'earliest eligible T1-5 branch, per-source-seed round-robin, wins and losses included',
         'worlds':'sample0 exact original; alternate samples shuffle remaining deck orders and future RNG only, original hidden hands fixed'}
     train.atomic(RUN/'tactical-sources'/f'manifest-{batch}-{arm}.json',manifest);reserve('tactical',jobs);print(json.dumps(manifest))
 
@@ -140,7 +161,7 @@ def execute(job):
         s.update(player=active,seq=step+1,game_id='offline-public-turn',timeout_s=2,events=[]);s=with_public_history(s,history)
         intervention=active==seat and e.turn==root_turn
         if active==seat:
-            a,info=decide(s,cfg);assert not info.get('error'),info.get('error');base=dict(a)
+            a,info=decide(s,cfg);assert not info.get('error'),info.get('error');base=dict(info.get('learned_parent_action',a))
             if intervention and job['route']!='baseline' and info.get('reason')!='guaranteed_lethal':
                 alternative=propose(s,job['route'],memory,base)
                 if alternative is not None:a=alternative
@@ -165,4 +186,5 @@ def execute(job):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--batch',required=True);p.add_argument('--arm',default='B')
     p.add_argument('--cap',type=int,default=360);p.add_argument('--samples',type=int,default=3)
-    a=p.parse_args();mine(a.batch,a.arm,a.cap,a.samples)
+    p.add_argument('--balance-families',action='store_true')
+    a=p.parse_args();mine(a.batch,a.arm,a.cap,a.samples,a.balance_families)
