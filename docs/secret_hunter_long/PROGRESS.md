@@ -1,5 +1,16 @@
 # 执行中检查点
 
+## 2026-11-14 13:10 UTC 更新
+
+当前源码886b669。选择核心B720完成，BL2约325完成，剩余DARCL2/KO/DWOLF及护栏由selection-execution-plan继续，未改候选。禁止新开发、标签或重开旧留出。caffeinate PID83336持续有效，完整预算原截止20:44UTC不变。
+
+新增reproduce_frozen.py，支持从真实final-freeze/release-candidates/ZIP建立全新隔离账本，校验版本、保护文件、按相对路径迁移引擎资源哈希、静态/真实submit_deck、原范围与精确解包指纹；只复现已见最终种子，不称新留出。已语法/帮助检查；**等待最终打包冻结后必须运行--verify-only，并在一个自建临时新RUN实际bootstrap，检查两候选路径/指纹和零比赛任务，然后清理该临时目录，保存setup-audit。不要为这个测试额外运行完整比赛或提前读取最终种子。**
+
+delivery_audit新增检查最终尝试UTC间隔减活跃game wall差最大<=10秒，用于检测宿主再次长挂起，并要求原wall deadline未过。最终所有对局仍必须通过原CLI<=2秒可靠性门槛。card_tables扩展选择和最终的BL2/DARCL2统计；selection-analysis-plan会自动生成选择两池配对/卡位与BL2动作证据。
+
+下一阶段仍是两选择池完成→读报告/动作→select_challenger→release prepare→本地提交→study freeze→两版exact runtime→新repro入口集成检查→最终170核心组+16护栏→推荐→推荐包Luna2+Client6→报告/预算/谱系/审计/归档。最后停止本轮caffeinate，不动用户其他进程。
+
+
 ## 2026-11-14 12:57 UTC 更新
 
 选择核心已打开并持续运行，禁止新开发/调参。12:37–12:55宿主idle/maintenance sleep使24次B尝试跨过挂起；pmset日志与utc/monotonic差保存host-sleep-audit.json，已完成终局不重跑。单调时间排除了挂起，不能拿受影响段证明连续墙钟CLI延迟。12:56启动临时caffeinate PID83336，命令/pid在power-assertion.json，自动到原deadline结束；任务完成后必须核对PID命令并主动结束它。没有修改系统永久设置。最近吞吐已恢复56局/分钟，原20:44UTC截止不延长。
