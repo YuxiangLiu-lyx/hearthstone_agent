@@ -23,6 +23,7 @@ def main():
         destination = args.run.resolve()
         assert not destination.exists(), 'Never overwrite or reopen an existing ledger'
         assert destination != source
+        assert not destination.is_relative_to(source), 'Keep the sealed evidence tree read-only'
         os.environ['HUNTER_LONG_RUN'] = str(destination)
 
     import hs_arena
@@ -87,6 +88,7 @@ def main():
                                         seeds_core=core_groups, seeds_guard=guard_groups)
         manifest['reproduction'] = {'source_run': str(source), 'original_freeze_sha256': sha(source / 'final-freeze.json'),
                                     'original_manifest_sha256': sha(source / 'manifest.json'),
+                                    'original_selection_plan_sha256': sha(source / 'selection-plan.json'),
                                     'engine_path_relocated_by_verified_relative_hashes': True}
         check(manifest)
         train.atomic(RUN / 'manifest.json', manifest)
@@ -107,6 +109,7 @@ def main():
         train.setmeta(db, 'selected_challenger', freeze['arms'][-1])
         train.atomic(RUN / 'release-candidates.json', new_records)
         train.atomic(RUN / 'final-freeze.json', freeze)
+        shutil.copy2(source / 'selection-plan.json', RUN / 'selection-plan.json')
         # These are already-seen public states for phase/latency checks only.
         shutil.copytree(source / 'tactical-sources', RUN / 'tactical-sources')
         commands = []
