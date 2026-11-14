@@ -15,6 +15,8 @@
 
 `build` 对已有快照只校验，不覆盖。每个候选在 `development/secret_hunter_long/candidates/`；`lineage.json` 保存父代、变动文件、完整有序 30 张牌和源码指纹。原始 B 来自指定 ZIP，原字节哈希必须为 `6b20fe6572857413fcc87b9134d94eb06340fa4be6f62578ac8354a58a9a067b`。新的 deck guard 同时检查课程牌表合法性、多重集替换数不超过 2、原位置与受保护组合数量；每版调用真实 `scripts/decide.py` 检查 `submit_deck`。
 
+如果从source/evidence归档重建完整开发流程，原始ZIP在证据目录的`frozen/B.zip`；先核对上述SHA，再将它复制到新源码目录的`dist/secret-hunter-final-20261113.zip`，然后执行build。下文的`reproduce_frozen`直接读取证据中的冻结ZIP，不需要这一步，也不会重新训练。
+
 SQLite 在 `runs/long-20261114/ledger.sqlite`，完整对局结果与观察在 `batches/<batch>/<arm>/games/`；反事实源局面与终局标签在 `mulligan-sources/`、`mulligan-labels/`、`tactical-sources/`、`tactical-labels/`。每个 CF request 另记执行时 harness 文件哈希。真实暗牌只出现在离线审计标签。
 
 ## 已定义批次
