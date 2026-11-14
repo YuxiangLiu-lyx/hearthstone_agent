@@ -19,7 +19,7 @@ SQLite 在 `runs/long-20261114/ledger.sqlite`，完整对局结果与观察在 `
 
 ## 已定义批次
 
-所有整局严格以 `(opponent, seed, seat)` 配对。下面的相同命令可在尚未开启选拔时恢复未完成任务，不重做已完成任务。选拔已开启的账本会拒绝继续开发；最终封存账本只用于审计。需要从头重跑时，设置新的 `HUNTER_LONG_RUN` 绝对目录并初始化；必须显式重建对应来源清单，不能把旧绝对路径悄悄当成新数据：
+所有整局严格以 `(opponent, seed, seat)` 配对。下面的相同命令可在尚未开启选拔时恢复未完成任务，不重做已完成任务。选拔已开启的账本会拒绝继续开发；最终封存账本只用于审计。从头重跑应把源码归档解到独立工作目录，重建课程环境；若在同一个源码树中使用新 `HUNTER_LONG_RUN`，其绝对路径必须位于该源码树下，且分析文档和dist输出仍会使用固定文件名，不应覆盖本轮证据。必须显式重建对应来源清单，不能把旧绝对路径悄悄当成新数据：
 
 ```sh
 .venv/bin/python -m development.secret_hunter_long.study run --batch pilot-cli --arms B DARC DWOLF --start 51400000 --seeds 2 --workers 3
@@ -38,7 +38,14 @@ SQLite 在 `runs/long-20261114/ledger.sqlite`，完整对局结果与观察在 `
 
 ## 留牌与战术终局标签
 
+在新的开发账本中，原始留牌来源用以下命令生成。确认规则计划须先从归档复制到新RUN并检查其规则、臂与种子仍相同；不能根据确认结果更换规则。cap144复现了该确认批次全部144个命中，不依赖另加筛选。
+
 ```sh
+.venv/bin/python -m development.secret_hunter_long.mulligan --arm B --start 51420000 --seeds 8 --mode exhaustive --cap 16
+.venv/bin/python -m development.secret_hunter_long.mulligan --arm B --start 51420100 --seeds 120 --mode matched --cap 300
+.venv/bin/python -m development.secret_hunter_long.mulligan --arm DARC --start 51420300 --seeds 120 --mode matched --cap 300
+.venv/bin/python -m development.secret_hunter_long.mulligan --arm B --start 51421000 --seeds 300 --mode matched --focus trap_no_low --cap 144
+.venv/bin/python -m development.secret_hunter_long.mulligan --arm DARC --start 51421000 --seeds 300 --mode matched --focus trap_no_low --cap 144
 .venv/bin/python -m development.secret_hunter_long.cfqueue run --kind mulligan --workers 3 --limit 24000
 .venv/bin/python -m development.secret_hunter_long.learn_mulligan --arm B --start 51420100
 .venv/bin/python -m development.secret_hunter_long.learn_mulligan --arm DARC --start 51420300
@@ -73,6 +80,8 @@ CF 执行器只处理已入队任务；生成新任务时必须使用归档的�
 .venv/bin/python -m development.secret_hunter_long.action_audit mechanism-core B TMILL
 .venv/bin/python -m development.secret_hunter_long.action_audit mechanism-core B TRPLY
 .venv/bin/python -m development.secret_hunter_long.write_cases
+.venv/bin/python -m development.secret_hunter_long.report_tables
+.venv/bin/python -m development.secret_hunter_long.card_tables
 ```
 
 主要指标为 Astra/Bot2 家族等权。10,000 次 bootstrap 重采整个来源种子；对实际先后手等不等长子层使用配对差总和/局数的比率估计。`analysis/*-paired.json` 保存每个对手、实际先后手和全部翻胜/翻败键。卡位报告含起手、换走、入手、首次可打、使用回合与直接伤害；恐狼光环、误导或奥秘的间接贡献不能从直接伤害归因当作零贡献。
