@@ -29,6 +29,16 @@ def main():
     before = db.execute('select count(*) from attempts where started<?', (opening,)).fetchone()[0]
     before += db.execute('select count(*) from auxiliary_games where started<?', (opening,)).fetchone()[0]
     assert before <= manifest['limits']['full_games'] - manifest['reserved_final_games']
+    # Darwin monotonic timings exclude host suspension. Preserve elapsed UTC
+    # alongside active game duration to detect another sleep during final runs.
+    final_gaps = []
+    for started, finished, raw in db.execute(
+            "select a.started,a.finished,t.result from attempts a join tasks t on t.key=a.task "
+            "where t.phase in ('final_core','final_guard') and a.status='done'"):
+        result = json.loads(raw)
+        final_gaps.append(finished - started - result['wall_s'])
+    assert final_gaps and max(final_gaps) <= 10, 'Final run crossed a possible host suspension; inspect timing before delivery'
+    assert time.time() < manifest['deadline'], 'Original wall-clock budget expired'
     phases = {}
     for phase in ('development', 'cli_development', 'selection', 'final_core', 'final_guard'):
         phases[phase] = {r[0] for r in db.execute('select distinct seed from tasks where phase=?', (phase,))}
@@ -60,6 +70,8 @@ def main():
               'full_attempts_including_auxiliary': full, 'counterfactual_attempts': cf,
               'full_attempts_before_final': before,
               'reserved_capacity_at_final_opening': manifest['limits']['full_games'] - before,
+              'final_attempt_utc_minus_active_max_s': max(final_gaps),
+              'final_host_suspend_gap_over_10s': sum(x > 10 for x in final_gaps),
               'elapsed_hours_from_manifest': (time.time() - manifest['created']) / 3600,
               'final_source_seed_groups': {k: len(v) for k, v in phases.items() if k.startswith('final')},
               'recommended': recommendation['recommended'], 'zip_sha256': sha(package),
