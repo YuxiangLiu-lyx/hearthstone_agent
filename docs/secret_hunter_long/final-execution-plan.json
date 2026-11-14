@@ -1,0 +1,42 @@
+{
+  "created": 1794666092.801151,
+  "freeze_sha256": "66cddf0688a57fcf2580351d25f696ecc31c7d0afda5835066fba83dce15a508",
+  "commands": [
+    [
+      "development.secret_hunter_long.study",
+      "run",
+      "--batch",
+      "final-core",
+      "--arms",
+      "B",
+      "DARCL2",
+      "--start",
+      "51600000",
+      "--seeds",
+      "170",
+      "--pool",
+      "core",
+      "--workers",
+      "6",
+      "--final"
+    ],
+    [
+      "development.secret_hunter_long.study",
+      "run",
+      "--batch",
+      "final-guard",
+      "--arms",
+      "B",
+      "DARCL2",
+      "--start",
+      "51700000",
+      "--seeds",
+      "16",
+      "--pool",
+      "guardrail",
+      "--workers",
+      "6",
+      "--final"
+    ]
+  ]
+}

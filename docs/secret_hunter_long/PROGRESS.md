@@ -1,5 +1,20 @@
 # 执行中检查点
 
+## 2026-11-14 14:21 UTC 更新
+
+选择全部完成且分析controller已defined_plan_complete。五臂核心B620/BL2620/DARCL2631/KO624/DWOLF630（各720），护栏212/212/211/210/215（各224）；全部普通可靠性计数零，早期B宿主休眠另列。select_challenger选择DARCL2，精确主指标83/96；排名DARCL2、DWOLF、KO、BL2，严格遵循既定核心主指标，不根据护栏改变排名。所有选择配对/实际先后手/卡位报告齐全，decision复制至docs。
+
+已release prepare并study freeze，冻结源码提交1ccaedb92a42a4663b1753931f024013954501f4，B ZIP原6b20...；DARCL2 ZIP0130813f56655e7b802e2cbbe539526f6ab2a1a8f1acf4d27af6e5fdee5a9a0e，源码e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4。注册表已切到RUN/frozen/{B,DARCL2}/secret-hunter，禁止改任何候选。最终核心51600000–51600169（170组/版2040场），护栏51700000–51700015（16组/版448场），共4976场；六并发完整CLI。
+
+runtime两版各26项均通过：正常最大B0.323/DARCL20.330秒，含故障最大1.841/1.842；两版精确路径与指纹均记录runtime-B.json、runtime-DARCL2.json。初始旧schema runtime.json（没有source_sha256字段）已原字节另存runtime-initial-B.json，不追填旧指纹。
+
+reproduce_frozen已实际verify-only并创建临时隔离账本，再study init验证路径重登记、341引擎资源、精确两ZIP/static/submit、0tasks/0attempts；临时目录已删，reproduction-setup-audit保留。没有提前跑最终种子。
+
+新execute_frozen.py从已冻结范围和六并发生成/核对final-execution-plan，顺序运行final-core→final-guard，每池不完整就停止；可同命令恢复。即将以该入口运行，日志final-execution.log，PID以SQLite为准。不能用旧run_plan跑final，因为其not-final断言会阻断第二池。开封前整局14688+辅助12=14700，剩5300；4976最终+8计划辅助后19684总尝试。CF15580保持不变。
+
+完成两最终池后：comparisons两池、analyze两池、实际规则覆盖/时延→release recommend（新增明确要求B也可靠）→按final-acceptance-plan推荐精确包Luna seed51800010双座位、Client seeds51800020–22双座位，共8辅助→最终报告/谱系/精确包静态与submit/预算→delivery_audit（含每条最终request精确解包路径/fullCLI和UTC挂起gap检查）→提交源码报告→archive一致SQLite/文件哈希/evidence/source tar→最后hash bookkeeping commit与caffeinate清理。caffeinate PID83336，原预算截止20:44UTC仍有效。
+
+
 ## 2026-11-14 13:58 UTC 更新
 
 selection-core五臂全720局完成：B620、BL2620、DARCL2631、KO624、DWOLF630；主指标分别84.5139%、84.5139%、86.4583%、85.2778%、86.3194%。DARCL2暂领先，但必须等selection-guard全1120局完成并核对可靠性，再运行select_challenger；不可提前最终冻结。护栏已自动开始，约每版224局。当前所有核心普通可靠性异常零，B初段host sleep另有审计。
