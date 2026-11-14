@@ -63,15 +63,27 @@ def main():
         unpacked_bytes = sum(m.file_size for m in members)
         assert unpacked_bytes <= 10_000_000 and package.stat().st_size <= 10_000_000
     freeze = json.loads((RUN / 'final-freeze.json').read_text())
-    for record in json.loads((RUN / 'release-candidates.json').read_text()):
+    frozen_records = json.loads((RUN / 'release-candidates.json').read_text())
+    for record in frozen_records:
         assert fingerprint(ROOT / record['extracted']) == freeze['fingerprints'][record['name']]
         assert sha(ROOT / record['path']) == record['zip_sha256']
+    exact_paths = {r['name']: (ROOT / r['extracted']).resolve() for r in frozen_records}
+    verified_final_requests = 0
+    for attempt, candidate, raw in db.execute(
+            "select a.id,t.candidate,t.result from attempts a join tasks t on t.key=a.task "
+            "where t.phase in ('final_core','final_guard')"):
+        request = json.loads((RUN / 'attempts' / f'{attempt:06d}.request.json').read_text())
+        assert request['full_cli'] is True
+        assert Path(request['task'][0]).resolve() == exact_paths[candidate]
+        assert json.loads(raw)['execution'] == 'full_cli'
+        verified_final_requests += 1
     result = {'created': time.time(), 'passed': True, 'attempts_by_status': attempts,
               'full_attempts_including_auxiliary': full, 'counterfactual_attempts': cf,
               'full_attempts_before_final': before,
               'reserved_capacity_at_final_opening': manifest['limits']['full_games'] - before,
               'final_attempt_utc_minus_active_max_s': max(final_gaps),
               'final_host_suspend_gap_over_10s': sum(x > 10 for x in final_gaps),
+              'final_attempts_from_exact_frozen_paths': verified_final_requests,
               'elapsed_hours_from_manifest': (time.time() - manifest['created']) / 3600,
               'final_source_seed_groups': {k: len(v) for k, v in phases.items() if k.startswith('final')},
               'recommended': recommendation['recommended'], 'zip_sha256': sha(package),
