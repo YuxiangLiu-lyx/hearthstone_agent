@@ -1,0 +1,70 @@
+{
+  "created": 1794655975.683625,
+  "before_results": "mulligan-combination candidate arms and cli-load not yet complete",
+  "core": {
+    "batch": "selection-core",
+    "start": 51500000,
+    "seeds": 60
+  },
+  "guardrail": {
+    "batch": "selection-guard",
+    "start": 51501000,
+    "seeds": 8
+  },
+  "max_arms": 5,
+  "candidate_recipe": {
+    "baseline": "B",
+    "original_deck_line": [
+      "BL2",
+      "BML2",
+      "BM"
+    ],
+    "arcane_line": [
+      "DARCL2",
+      "DARCML2",
+      "DARCM",
+      "DARC"
+    ],
+    "other_pure_card_lines": [
+      "KO",
+      "DWOLF"
+    ]
+  },
+  "development_line_choice": "Highest Astra/Bot2 equal-family point rate on the completed mulligan-combination batch; require zero execution errors. Rates tied within1e-12 use the listed order, preferring the proved narrow-lethal path and avoiding an extra opening module without observed additional gain. No new source/parameters.",
+  "selection_arm_order": [
+    "B",
+    "chosen original-deck line",
+    "chosen Arcane line",
+    "KO",
+    "DWOLF"
+  ],
+  "selection_rule": "One challenger: largest equal-family Astra/Bot2 terminal rate among fullCLI-reliable arms; exact tied rates use fixed arm order. Both core and guard must complete before choosing. Final independent gates unchanged.",
+  "concurrency": "6 only if cli-load all72 complete, all ordinary reliability counters zero, every CLI<=2s, and throughput exceeds initial29.6games/min; otherwise3.",
+  "budget": {
+    "planned_preselection_main": 9968,
+    "selection_full_games": 4720,
+    "planned_main_before_final": 14688,
+    "current_auxiliary": 12,
+    "capacity_remaining_at_final_including_current_aux": 5300,
+    "final_full_games": 3296
+  },
+  "future": "Create concrete selection-plan.json only after Codex reads completed development and load reports; no selection data opened yet.",
+  "final_design": {
+    "declared": 1794658434.685261,
+    "preferred_core_groups": 170,
+    "fallback_core_groups": 100,
+    "guard_groups": 16,
+    "max_future_auxiliary": 20,
+    "minimum_unspent_full_margin": 100,
+    "wall_margin_seconds": 1800,
+    "rule": "Before any selection or final data opening, choose170 only if observed CLI load throughput predicts selection+final+30min within total deadline, and all planned attempts+20 auxiliary+100 margin fit20000. Otherwise100. No outcome-dependent final sample change.",
+    "preferred_core_seed_range": [
+      51600000,
+      51600169
+    ],
+    "fallback_core_seed_range": [
+      51600000,
+      51600099
+    ]
+  }
+}

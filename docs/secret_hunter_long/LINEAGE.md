@@ -7,19 +7,19 @@
 | 候选 | 父代 | 创建代 | 改动类型 | 相对B换卡数 | 最新状态 |
 | --- | --- | --- | --- | --- | --- |
 | B | — | 0 | 原始基线 | 0 | baseline |
-| DARC | B | 0 | 仅牌表配置 | 1 | advance_for_replication |
+| DARC | B | 0 | 仅牌表配置 | 1 | parent_control_not_additional_selection_arm |
 | DWOLF | B | 0 | 仅牌表配置 | 1 | retain_selection_option |
 | TMILL | B | 1 | 源码改动 | 0 | archive |
 | TRPLY | B | 1 | 源码改动 | 0 | archive_after_independent_replication |
-| BL2 | B | 1 | 源码改动 | 0 | 已建快照，按批次验证 |
+| BL2 | B | 1 | 源码改动 | 0 | original_deck_selection_representative |
 | KO | B | 2 | 仅牌表配置 | 1 | retain_selection_option |
-| BM | B | 3 | 源码改动 | 0 | advance_natural_frequency |
-| DARCM | DARC | 3 | 源码改动 | 1 | advance_natural_frequency |
+| BM | B | 3 | 源码改动 | 0 | archive_global_gain_unconfirmed |
+| DARCM | DARC | 3 | 源码改动 | 1 | archive_global_gain_unconfirmed |
 | TRPLY2 | TRPLY | 2 | 源码改动 | 0 | archive_after_independent_replication |
 | WOOZE | DWOLF | 4 | 仅牌表配置 | 2 | archive |
-| BML2 | BM | 5 | 源码改动 | 0 | 已建快照，按批次验证 |
-| DARCL2 | DARC | 5 | 源码改动 | 1 | 已建快照，按批次验证 |
-| DARCML2 | DARCM | 5 | 源码改动 | 1 | 已建快照，按批次验证 |
+| BML2 | BM | 5 | 源码改动 | 0 | archive_global_gain_unconfirmed |
+| DARCL2 | DARC | 5 | 源码改动 | 1 | arcane_line_selection_representative |
+| DARCML2 | DARCM | 5 | 源码改动 | 1 | archive_global_gain_unconfirmed |
 
 
 ## B
@@ -33,13 +33,14 @@ Exact requested ZIP, frozen reference
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
 | pilot-cli | cli_development | 51400000–51400001 | 2 | done |
+| cli-load | cli_development | 51400010–51400011 | 2 | pending |
 | deck-screen | development | 51401000–51401059 | 60 | done |
 | mechanism-core | development | 51402000–51402019 | 20 | done |
 | lethal-guard | development | 51403000–51403003 | 4 | done |
 | coverage-core | development | 51404000–51404049 | 50 | done |
 | recovery-fix | development | 51407000–51407019 | 20 | done |
 | two-card | development | 51408000–51408029 | 30 | done |
-| mulligan-combination | development | 51409000–51409029 | 30 | pending |
+| mulligan-combination | development | 51409000–51409029 | 30 | done |
 
 
 ## DARC
@@ -50,16 +51,16 @@ Replace Krush slot with one Arcane Shot; unchanged mulligan and tactics
 
 源码SHA-256：`b1228c5d81a97f94a50a7f33e3692512da3f77c2726bd40d6881c4b333f5d04c`。
 
-决定：Single-card 60 groups primary +1.81pp, CI crosses zero; no final promotion
+决定：Three independent development cohorts favor the single Arcane substitution; completed factorial ties DARCL2. Frozen recipe represents the line with DARCL2, avoiding another correlated selection arm.
 
-证据：`analysis/deck-screen-B-DARC-paired.json`。
+证据：`analysis/mulligan-combination-B-DARC-paired.json`。
 
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
 | pilot-cli | cli_development | 51400000–51400001 | 2 | done |
 | deck-screen | development | 51401000–51401059 | 60 | done |
 | coverage-core | development | 51404000–51404049 | 50 | done |
-| mulligan-combination | development | 51409000–51409029 | 30 | pending |
+| mulligan-combination | development | 51409000–51409029 | 30 | done |
 
 
 ## DWOLF
@@ -124,11 +125,15 @@ Standalone inherited narrow burn/power lethal coverage repair; original deck and
 
 源码SHA-256：`74021ae82a78867b9eac465511a4a9907322e9e1b43a01aaf5d158174aedc2b9`。
 
+决定：Original-deck2x2 complete: B/BL2 305wins, BM/BML2 303; no BL2 terminal changes. Preregistered line choice picks BL2, pending complete batch and CLI load checks. Narrow-proof correctness route remains separate from statistical gain.
+
+证据：`analysis/mulligan-combination-B-BL2-paired.json`。
+
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
 | mechanism-core | development | 51402000–51402019 | 20 | done |
 | lethal-guard | development | 51403000–51403003 | 4 | done |
-| mulligan-combination | development | 51409000–51409029 | 30 | pending |
+| mulligan-combination | development | 51409000–51409029 | 30 | done |
 
 
 ## KO
@@ -157,13 +162,13 @@ Frozen trap-no-low opening rule replicated on wholly new matched source seeds af
 
 源码SHA-256：`60794f33424ecb0608930958b8838233f4d42b51cb34101708ae79f403833f9c`。
 
-决定：Locked public opening rule: fresh144 openings48groups,36rescues8regressions;144/144 actualCLI match
+决定：Natural30groups360games:305→303,1rescue3regressions; opening changes15games from4source groups. Conditional confirmation does not replace global evidence. BML2 adds no terminal change versus BM; original-deck selection recipe favors BL2.
 
-证据：`mulligan-confirmation-B.json`。
+证据：`analysis/mulligan-combination-B-BM-paired.json`。
 
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
-| mulligan-combination | development | 51409000–51409029 | 30 | pending |
+| mulligan-combination | development | 51409000–51409029 | 30 | done |
 
 
 ## DARCM
@@ -174,13 +179,13 @@ Frozen trap-no-low opening rule replicated on wholly new matched source seeds af
 
 源码SHA-256：`06abd0846214232dcbf237774cc592dfbf77f749e56ce0e6326c80f474fbbc97`。
 
-决定：Separate transfer check: fresh144 openings48groups,37rescues7regressions;144/144 actualCLI match
+决定：Natural30groups360games:310→307,1rescue4regressions;15opening changes. Conditional confirmation did not replicate as global gain. Do not promote the opening module.
 
-证据：`mulligan-confirmation-DARC.json`。
+证据：`analysis/mulligan-combination-DARC-DARCM-paired.json`。
 
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
-| mulligan-combination | development | 51409000–51409029 | 30 | pending |
+| mulligan-combination | development | 51409000–51409029 | 30 | done |
 
 
 ## TRPLY2
@@ -214,6 +219,7 @@ Both single-card screens positive: Wolf improves early board and Ooze replaces u
 
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
+| cli-load | cli_development | 51400010–51400011 | 2 | pending |
 | two-card | development | 51408000–51408029 | 30 | done |
 
 
@@ -225,9 +231,13 @@ Factorial isolation: confirmed public opening rule and/or narrow lethal coverage
 
 源码SHA-256：`daecd49ef40816722970e87313320abee5bb5c788423cf8297c30ab8f15cb18e`。
 
+决定：Natural30groups360games:305→303,1rescue3regressions; opening changes15games from4source groups. Conditional confirmation does not replace global evidence. BML2 adds no terminal change versus BM; original-deck selection recipe favors BL2.
+
+证据：`analysis/mulligan-combination-B-BML2-paired.json`。
+
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
-| mulligan-combination | development | 51409000–51409029 | 30 | pending |
+| mulligan-combination | development | 51409000–51409029 | 30 | done |
 
 
 ## DARCL2
@@ -238,9 +248,13 @@ Factorial isolation: confirmed public opening rule and/or narrow lethal coverage
 
 源码SHA-256：`e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4`。
 
+决定：Completed30group factorial: DARC/DARCL2 310wins, DARCM/DARCML2 307. Preregistered tie order picks DARCL2;3narrow-proof games/4calls,1first action change,zero terminal flips versus DARC. No correction exception for this deck-changing combination.
+
+证据：`analysis/mulligan-combination-DARC-DARCL2-paired.json`。
+
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
-| mulligan-combination | development | 51409000–51409029 | 30 | pending |
+| mulligan-combination | development | 51409000–51409029 | 30 | done |
 
 
 ## DARCML2
@@ -251,9 +265,14 @@ Factorial isolation: confirmed public opening rule and/or narrow lethal coverage
 
 源码SHA-256：`5c8e85d78e15f85efcac9c0296d3a60ce96c7a3d1eb2ea6ac2c78338c57b85d3`。
 
+决定：Natural30groups360games:310→307 vs DARC; identical terminal outcomes to DARCM. L2 adds no terminal gain and factorial interaction is zero.
+
+证据：`analysis/mulligan-combination-DARC-DARCML2-paired.json`。
+
 | 实际登记批次 | 阶段 | 来源种子 | 组数 | 状态 |
 | --- | --- | --- | --- | --- |
-| mulligan-combination | development | 51409000–51409029 | 30 | pending |
+| cli-load | cli_development | 51400010–51400011 | 2 | pending |
+| mulligan-combination | development | 51409000–51409029 | 30 | done |
 
 
 ## 未构建的学习提案

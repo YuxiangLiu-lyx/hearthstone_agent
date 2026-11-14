@@ -1,0 +1,49 @@
+{
+  "created": 1794659684.5112472,
+  "wait_for": "cli-load",
+  "purpose": "Run the two already-reviewed immutable full-CLI selection pools; no candidate generation.",
+  "commands": [
+    [
+      "development.secret_hunter_long.study",
+      "run",
+      "--batch",
+      "selection-core",
+      "--arms",
+      "B",
+      "BL2",
+      "DARCL2",
+      "KO",
+      "DWOLF",
+      "--start",
+      "51500000",
+      "--seeds",
+      "60",
+      "--workers",
+      "6",
+      "--pool",
+      "core",
+      "--selection-stage"
+    ],
+    [
+      "development.secret_hunter_long.study",
+      "run",
+      "--batch",
+      "selection-guard",
+      "--arms",
+      "B",
+      "BL2",
+      "DARCL2",
+      "KO",
+      "DWOLF",
+      "--start",
+      "51501000",
+      "--seeds",
+      "8",
+      "--workers",
+      "6",
+      "--pool",
+      "guardrail",
+      "--selection-stage"
+    ]
+  ]
+}

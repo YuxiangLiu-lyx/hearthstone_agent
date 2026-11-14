@@ -96,6 +96,14 @@ CF 执行器只处理已入队任务；生成新任务时必须使用归档的�
 
 在此之前必须先写 `selection-plan.json`，固定有序候选列表以及核心/护栏的batch/start/seeds。两池使用 `study run --selection-stage`，禁止warm。第一次调用会写selection-freeze并禁止继续开发。完成开发和负载测试、由Codex读完报告后执行 `prepare_selection`：它按预先选择配方生成具体计划，并按selection-design中的容量规则在任何选拔数据打开前锁定最终100或170核心组，扩容时保存原manifest和amendment。两池全部完成后执行 `select_challenger`；`release prepare`与`study freeze`都核对这个唯一选择及源码指纹。
 
+本轮实际选择计划已在2026-11-14 12:34 UTC开封前锁定，最终核心采用170组。完整选择命令为：
+
+```sh
+.venv/bin/python -m development.secret_hunter_long.study run --batch selection-core --arms B BL2 DARCL2 KO DWOLF --start 51500000 --seeds 60 --workers 6 --selection-stage
+.venv/bin/python -m development.secret_hunter_long.study run --batch selection-guard --arms B BL2 DARCL2 KO DWOLF --start 51501000 --seeds 8 --workers 6 --pool guardrail --selection-stage
+.venv/bin/python -m development.secret_hunter_long.select_challenger
+```
+
 冻结后对B和挑战者分别运行以下入口；输出文件名必须与候选名一致，不能只留最后一份验收覆盖另一版：
 
 ```sh

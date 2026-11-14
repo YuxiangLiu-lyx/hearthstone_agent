@@ -1,5 +1,14 @@
 # 执行中检查点
 
+## 2026-11-14 12:34 UTC 更新
+
+开发全部完成。M/L2八版每版360局：B305、BM303、BL2305、BML2303、DARC310、DARCM307、DARCL2310、DARCML2307。两条线M×L2终局交互均零；最终选拔代表BL2与DARCL2。所有父代配对、动作审计及因子报告已读完。72局六并发CLI负载零异常、max0.518秒、51.741局/分钟。
+
+prepare_selection已执行，具体五臂B/BL2/DARCL2/KO/DWOLF；60核心组51500000起、8护栏组51501000起，共4720场，六并发完整CLI。选择与容量计划复制至docs并将在首次选择比赛前提交。最终170核心组51600000–51600169与16护栏组51700000–51700015已锁，原manifest另存。当前整局9968+辅助12=9980；选择后14700，剩5300；最终4976与未来辅助8后总19684。
+
+selection-execution-plan只跑两条已定选择命令。选择一旦打开禁止新开发/CF。须等两池全部完成再select_challenger，按既定最大主指标和精确分数平手顺序挑唯一可靠挑战者，不调参。其后release prepare→git commit→study freeze→runtime两版精确解包路径→最终170+16→recommend→Luna2/Client6辅助→报告、delivery_audit与archive。所有旧检查点的100组均为历史初案。
+
+
 ## 2026-11-14 12:24 UTC 更新
 
 本节优先于下面的历史检查点。候选生成与反事实均已停止；不得额外探索。CF总15580次尝试=15492完成+88初期驱动错误。主批mulligan-combination尚在最后两版，之后cli-load-plan自动执行72局六并发完整CLI；mulligan-analysis-plan在主批结束后自动补齐配对、动作和因子分析。
