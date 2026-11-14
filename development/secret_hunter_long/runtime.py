@@ -9,10 +9,12 @@ from development.secret_hunter_long.study import HERE,RUN,ROOT
 from development.secret_hunter_mcgs.runtime import probe
 from development.secret_hunter_program.common import quantiles
 from development.secret_hunter_mcgs import train
+from development.benchmarks.run import fingerprint
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--candidate',required=True);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--candidate',required=True);p.add_argument('--out',default='docs/secret_hunter_long/runtime.json');a=p.parse_args()
     source=Path(a.candidate).resolve()
+    original=fingerprint(source)
     sys.path.insert(0,str(source/'scripts'))
     from development.secret_hunter_mcgs.mcgs_init import initialize
     initialize()
@@ -63,7 +65,7 @@ def main():
         stale_host='nothing submitted' in reply and not (box/'action.json').exists()
         assert stale_host
     ordinary=[r for r in records if r['tag'] not in ('hang','crash','published_hang') and not r['tag'].startswith('stale')]
-    data={'candidate':str(source),'calls':len(records),'invalid':sum(not r['valid'] for r in records),
+    data={'candidate':str(source),'source_sha256':original,'calls':len(records),'invalid':sum(not r['valid'] for r in records),
           'over_2s':sum(r['elapsed_s']>2 for r in records),'ordinary_fallbacks':sum(bool(r['fallback']) for r in ordinary),
           'ordinary_latency_s':quantiles([r['elapsed_s'] for r in ordinary]),
           'all_including_fault_latency_s':quantiles([r['elapsed_s'] for r in records]),
@@ -71,7 +73,8 @@ def main():
           'actual_host_stale_seq_rejected':stale_host,'records':records,
           'course_hard_limit_s':180,'engineering_full_python_cli_target_s':2,
           'luna_relay':'separate model transport audit; not included in these Python CLI measurements'}
-    train.atomic(ROOT/'docs/secret_hunter_long/runtime.json',data)
+    assert fingerprint(source)==original
+    train.atomic(ROOT/a.out,data)
     print(json.dumps({k:v for k,v in data.items() if k!='records'}))
     assert data['invalid']==data['over_2s']==data['ordinary_fallbacks']==0
 

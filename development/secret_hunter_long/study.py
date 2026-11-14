@@ -114,6 +114,9 @@ def main():
         if a.command=='freeze':
             assert not train.meta(db,'final_opened',False)
             assert a.arms and a.arms[0]=='B' and 1<=len(a.arms)<=2
+            selection=json.loads((RUN/'selection-decision.json').read_text())
+            assert a.arms==(['B',selection['challenger']] if selection['challenger']!='B' else ['B'])
+            assert all(cs[x]['sha256']==selection['fingerprints'][x] for x in a.arms)
             f={'created':time.time(),'arms':a.arms,'fingerprints':{x:cs[x]['sha256'] for x in a.arms},
                'promotion':m['promotion'],'seeds':{k:v for k,v in m['seed_blocks'].items() if k.startswith('final')},
                'git_sha':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()}
@@ -128,14 +131,25 @@ def main():
             train.setmeta(db,'final_opened',True)
         else:
             assert not train.meta(db,'final_opened',False),'No changes or new development after final opening'
+            assert a.selection_stage or not train.meta(db,'selection_opened',False),'Selection opened: no further development or retuning'
             assert time.time()<m['candidate_generation_deadline']
             allowed=['selection','selection_guard'] if a.selection_stage else ['pilot','development','conditional']
             assert any(m['seed_blocks'][k][0]<=a.start and a.start+a.seeds-1<=m['seed_blocks'][k][1] for k in allowed)
         if a.selection_stage:assert not a.warm,'Selection is complete CLI'
+        if a.selection_stage:
+            plan=json.loads((RUN/'selection-plan.json').read_text())
+            block=plan['guardrail' if a.pool=='guardrail' else 'core']
+            assert a.arms==plan['arms'] and a.batch==block['batch'] and a.start==block['start'] and a.seeds==block['seeds']
+            assert not train.meta(db,'cf_pid'),'Finish or explicitly stop active label workers before selection'
+            selection_freeze={'arms':a.arms,'fingerprints':{x:cs[x]['sha256'] for x in a.arms},'plan':plan}
+            path=RUN/'selection-freeze.json'
+            if path.exists():assert json.loads(path.read_text())==selection_freeze
+            else:train.atomic(path,selection_freeze)
+            train.setmeta(db,'selection_opened',True)
         # The inherited selection analyzer assumes Astra/Bot2 core families.
         # Guardrail has different families; retain CLI execution and select only
         # after both independently reserved selection reports are complete.
-        phase=('final_guard' if a.pool=='guardrail' else 'final_core') if a.final else ('selection' if a.selection_stage and a.pool=='core' else ('development' if a.warm else 'cli_development'))
+        phase=('final_guard' if a.pool=='guardrail' else 'final_core') if a.final else ('selection' if a.selection_stage and a.pool=='core' and len(a.arms)>1 else ('development' if a.warm else 'cli_development'))
         existing=db.execute('select * from batches where id=?',(a.batch,)).fetchone()
         if existing:
             assert json.loads(existing['arms'])==a.arms and existing['start']==a.start and existing['seeds']==a.seeds and existing['phase']==phase
@@ -156,6 +170,11 @@ def main():
                 train.setmeta(db,key,selected)
         else:train.reserve(db,a.batch,phase,a.arms,a.start,a.seeds,a.pool)
         train.reconcile(db)
+        from development.secret_hunter_long.provenance import archive_code
+        control=archive_code(RUN,['development/secret_hunter_long/study.py','development/secret_hunter_mcgs/train.py',
+            'development/secret_hunter_mcgs/cli_match.py','development/teacher_eval/run.py','development/secret_hunter_tactics/run.py'])
+        train.atomic(RUN/'batches'/a.batch/'control-starts'/f'{time.time_ns()}.json',
+            {'created':time.time(),'harness_sha256':control,'arms':a.arms,'workers':a.workers,'warm':a.warm,'phase':phase})
         train.setmeta(db,'effective_seconds',time.time()-m['created']);train.setmeta(db,'pid',os.getpid())
         a.game_timeout_seconds=90;a.cli_game_timeout_seconds=150;a.stop_grace_seconds=5
         signal.signal(signal.SIGTERM,lambda *_:setattr(train,'STOP',True))

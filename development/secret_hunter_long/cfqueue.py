@@ -7,7 +7,9 @@ import signal
 import sys
 import time
 import traceback
-from development.secret_hunter_long.study import ROOT,RUN
+from development.secret_hunter_long.study import ROOT,RUN,HERE,check
+from development.secret_hunter_long.provenance import archive_code
+from development.benchmarks.run import fingerprint
 from development.secret_hunter_mcgs import train
 from development.secret_hunter_mcgs.supervision import GameProcess
 from development.secret_hunter_program.common import sha
@@ -21,6 +23,7 @@ def connect():
 def reserve(kind,jobs):
     db=connect()
     assert not train.meta(db,'final_opened',False)
+    assert not train.meta(db,'selection_opened',False),'No new labels after selection opening'
     for key,job in jobs:
         path=RUN/(kind+'-labels')/(key+'.json')
         existing=db.execute('select * from cf_jobs where key=?',(key,)).fetchone()
@@ -31,6 +34,8 @@ def reserve(kind,jobs):
 def run(kind,workers,limit):
     db=connect();m=train.meta(db,'manifest')
     assert not train.meta(db,'final_opened',False)
+    assert not train.meta(db,'selection_opened',False),'No training after selection opening'
+    check(m)
     with (RUN/'cf-writer.lock').open('a') as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         with db:
@@ -41,6 +46,10 @@ def run(kind,workers,limit):
                 db.execute('update cf_jobs set status=? where key=?',('done' if durable else 'pending',r['key']))
             db.execute("update cf_attempts set status='interrupted',finished=? where status='running'",(time.time(),))
         todo=db.execute("select * from cf_jobs where kind=? and status='pending' order by key",(kind,)).fetchall()
+        lineage={r['name']:r['sha256'] for r in json.loads((HERE/'lineage.json').read_text())}
+        needed={a for row in todo for k,a in json.loads(row['job']).items() if k in ('arm','policy_arm')}
+        candidates={a:fingerprint(HERE/'candidates'/a) for a in needed}
+        assert all(candidates[a]==lineage[a] for a in needed),'immutable counterfactual candidate changed'
         active={};ix=0;started=0;stop=False;consecutive_errors=0
         def signal_stop(*_):
             nonlocal stop
@@ -52,8 +61,8 @@ def run(kind,workers,limit):
                 used=db.execute('select count(*) from cf_attempts').fetchone()[0]
                 while ix<len(todo) and len(active)<workers and used<m['limits']['continuations'] and started<limit and time.time()<m['candidate_generation_deadline'] and not stop:
                     row=todo[ix];ix+=1;path=Path(row['result_path']);request=path.with_suffix('.request.json')
-                    harness={name:sha(ROOT/'development/secret_hunter_long'/name) for name in ('cfqueue.py',kind+'.py')}
-                    train.atomic(request,{'kind':kind,'job':json.loads(row['job']),'output':str(path),'harness_sha256':harness})
+                    harness=archive_code(RUN,['development/secret_hunter_long/'+name for name in ('cfqueue.py',kind+'.py')])
+                    train.atomic(request,{'kind':kind,'job':json.loads(row['job']),'output':str(path),'harness_sha256':harness,'candidate_fingerprints':candidates})
                     with db:
                         aid=db.execute("insert into cf_attempts(key,status,started) values (?,'running',?)",(row['key'],time.time())).lastrowid
                         db.execute("update cf_jobs set status='running' where key=?",(row['key'],))

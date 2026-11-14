@@ -27,6 +27,10 @@ def main():
         assert time.time()<manifest['candidate_generation_deadline']
         print(json.dumps({'defined_plan':str(a.plan),'sha256':digest,'command':args}),flush=True)
         subprocess.run([sys.executable,'-m']+args,cwd=ROOT,check=True)
+        if args[0]=='development.secret_hunter_long.study' and 'run' in args:
+            batch=args[args.index('--batch')+1]
+            row=db.execute('select status from batches where id=?',(batch,)).fetchone()
+            assert row and row['status']=='done',('incomplete study; downstream commands withheld',batch)
     print(json.dumps({'defined_plan_complete':str(a.plan)}),flush=True)
 
 if __name__=='__main__':main()
