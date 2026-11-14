@@ -149,3 +149,13 @@ CF 执行器只处理已入队任务；生成新任务时必须使用归档的�
 恢复证据时，将backup复制为ledger.sqlite；若换了工作目录，必须显式记录数据库与请求中的路径迁移。运行环境中的时间预算可能使不同硬件提前截断小范围搜索，因此可复验是指固定代码、输入、种子、引擎和预算协议，不保证任意负载下所有启发式搜索逐指令一致。
 
 长批次应确认宿主不会空闲休眠。本轮使用临时`caffeinate -i -s -t <原截止剩余秒数>`，记录PID于power-assertion.json，交付时结束；没有改变永久电源设置。首次选择B的24次尝试跨过宿主挂起，monotonic时延不含睡眠，详见host-sleep-audit.json。复验墙钟性能必须在不挂起的主机上进行。
+
+## 追加开发入口（本轮未执行）
+
+另建隔离worktree和新账本，可在本轮未使用的51410000–51410049做B/DARC/DARCL2开发对照，继续区分换卡与窄斩杀模块：
+
+```sh
+HUNTER_LONG_RUN="$PWD/runs/followup-local" .venv/bin/python -m development.secret_hunter_long.study run --batch followup-core --arms B DARC DARCL2 --start 51410000 --seeds 50 --workers 3 --warm
+```
+
+这只是追加开发。后续若修改策略，必须建新候选名、保存新指纹；新的选择与最终区间需另行预注册并更新新实验清单，不能将本轮已见的515/516/517区间再次称为独立留出。原封存账本保持只读。

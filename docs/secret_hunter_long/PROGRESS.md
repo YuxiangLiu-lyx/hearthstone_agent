@@ -1,5 +1,16 @@
 # 执行中检查点
 
+## 2026-11-14 14:31 UTC 更新
+
+最终已在14:21UTC开封并正常运行。execute_frozen工具session92387，当前study子进程PID58143（以后以SQLite meta为准），日志runs/long-20261114/final-execution.log；恢复命令`.venv/bin/python -m development.secret_hunter_long.execute_frozen`。最终核心B已约533/2040，DARCL2待2040；controller将完整core结束后接final-guard两版各448。当前普通可靠性异常0，CLI max0.769s，UTC-active最大差0.761s，无新宿主挂起。不得改候选或样本数。
+
+核心范围51600000–51600169、护栏51700000–51700015，六并发，完整4976场目标不变。首条最终request已核对指向RUN/frozen/B/secret-hunter/full_cli=True。冻结源码SHA1ccaedb92a42a4663b1753931f024013954501f4，冻结及runtime等文档提交33c5d90。
+
+新只读精确包差异证明：DARCL2相对B仅deck.json、第30位EX1_543→DS1_185，新增scripts/face_lethal.py，program_policy.py在原proof未guaranteed时调用窄prove；没有换牌改动。frozen-candidate-differences.json保留文件哈希。此前reproduce_frozen verify-only与临时新账本集成验收均已成功、零新增比赛，勿重复浪费工时。
+
+最终结束后仍需全部后续交付，不能仅报告后台状态：final两池paired/actual-first/card/trigger/latency→release recommend→按final-acceptance-plan推荐精确包Luna51800010双座位+Client51800020–22双座位8辅助→精确交付ZIP静态/submit→报告、谱系、budget与delivery_audit→git提交→archive→哈希bookkeeping与caffeinate PID83336清理。整局预计19684，CF15580；原截止20:44UTC。所有源代码和候选已完成，后续只做已定冻结验证、验收与交付。
+
+
 ## 2026-11-14 14:21 UTC 更新
 
 选择全部完成且分析controller已defined_plan_complete。五臂核心B620/BL2620/DARCL2631/KO624/DWOLF630（各720），护栏212/212/211/210/215（各224）；全部普通可靠性计数零，早期B宿主休眠另列。select_challenger选择DARCL2，精确主指标83/96；排名DARCL2、DWOLF、KO、BL2，严格遵循既定核心主指标，不根据护栏改变排名。所有选择配对/实际先后手/卡位报告齐全，decision复制至docs。
