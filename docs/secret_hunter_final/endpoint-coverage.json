@@ -1,0 +1,127 @@
+{
+  "states": 144,
+  "same_first_alternates": 510,
+  "response_endpoints": 562,
+  "guard_rejections": {
+    "top_action_outside_effect_coverage": 36,
+    "coin_followup_outside_effect_coverage": 1
+  },
+  "chance_after_guard": 37,
+  "changed_actions": 3,
+  "changed_seed_groups": 2,
+  "changes": [
+    {
+      "case": "41301003-astra-board-proxy-s1-q11",
+      "seed": 41301003,
+      "baseline": {
+        "type": "play_card",
+        "card": 27,
+        "target": 65
+      },
+      "candidate": {
+        "type": "play_card",
+        "card": 32,
+        "position": 0
+      },
+      "funnel": {
+        "first_actions": 17,
+        "retained": 27,
+        "same_first_alternates": 10,
+        "response_candidates": 6,
+        "max_total_response_candidates": 6
+      }
+    },
+    {
+      "case": "41301003-bot2-face-proxy-s2-q11",
+      "seed": 41301003,
+      "baseline": {
+        "type": "attack",
+        "attacker": 65,
+        "target": 32
+      },
+      "candidate": {
+        "type": "play_card",
+        "card": 56
+      },
+      "funnel": {
+        "first_actions": 19,
+        "retained": 29,
+        "same_first_alternates": 10,
+        "response_candidates": 6,
+        "max_total_response_candidates": 6
+      }
+    },
+    {
+      "case": "41301008-astra-tempo-proxy-s1-q10",
+      "seed": 41301008,
+      "baseline": {
+        "type": "play_card",
+        "card": 17
+      },
+      "candidate": {
+        "type": "attack",
+        "attacker": 12,
+        "target": 37
+      },
+      "funnel": {
+        "first_actions": 8,
+        "retained": 14,
+        "same_first_alternates": 6,
+        "response_candidates": 6,
+        "max_total_response_candidates": 6
+      }
+    }
+  ],
+  "gate": "Full-game pilot only if >= 5 changed public roots across >= 3 seed groups; no promotion from action changes alone.",
+  "guard_chance_audit": {
+    "counts": {
+      "total": 36,
+      "active": 20,
+      "at_least_two_roots": 17,
+      "completed": 17,
+      "baseline_outside_coverage": 1,
+      "no_reason": 33,
+      "unsupported_visible_response": 2
+    },
+    "examples": [
+      {
+        "case": "41301002-astra-sticky-proxy-s1-q7",
+        "chance": {
+          "active": true,
+          "nodes": 1,
+          "excluded": 1,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false,
+          "reason": "baseline_outside_coverage"
+        }
+      },
+      {
+        "case": "41301003-astra-tempo-proxy-s1-q4",
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        }
+      },
+      {
+        "case": "41301004-bot1-mage-proxy-s1-q4",
+        "chance": {
+          "active": false,
+          "nodes": 0,
+          "excluded": 0,
+          "exact_distributions": 0,
+          "sampled_distributions": 0,
+          "comparisons": [],
+          "guaranteed": false
+        }
+      }
+    ]
+  },
+  "decision": "Rejected at preregistered coverage gate: only three changed roots in two seed groups."
+}

@@ -1,0 +1,1797 @@
+[
+  {
+    "source": {
+      "case": "historical-21110024-2-31",
+      "seed": 21110024,
+      "seat": 2,
+      "seq": 31,
+      "game_path": "runs/final-20261113/batches/historical24/B/games/770469a4f6cb400c",
+      "state_digest": "01d6cf2cbcb83b4e473f113a8d980563a679fa306b12fd15713ec417b5f01a22",
+      "opponent_spec": {
+        "name": "bot2-face-proxy",
+        "group": "bot2",
+        "mode": "aggressive",
+        "deck": "development/teacher_eval/decks/bot2-face.json"
+      }
+    },
+    "prefix_verified_steps": 67,
+    "baseline_action": {
+      "type": "attack",
+      "attacker": 65,
+      "target": 12
+    },
+    "baseline_terminal_score": 0,
+    "candidate": "L2",
+    "candidate_score": 1,
+    "sequence": [
+      {
+        "state": {
+          "turn": 16,
+          "phase": "main",
+          "you": {
+            "hero": {
+              "entity_id": 37,
+              "card_id": "HERO_05",
+              "name": "Rexxar",
+              "hero_class": "HUNTER",
+              "health": 4,
+              "max_health": 30,
+              "armor": 0,
+              "attack": 0,
+              "can_attack": false,
+              "frozen": false,
+              "immune": false
+            },
+            "hero_power": {
+              "entity_id": 38,
+              "card_id": "HERO_05bp",
+              "name": "Steady Shot",
+              "cost": 2,
+              "usable": true,
+              "text": "Deal 2 damage to the enemy hero."
+            },
+            "weapon": null,
+            "mana": 8,
+            "max_mana": 8,
+            "overloaded": 0,
+            "overload_next_turn": 0,
+            "hand": [
+              {
+                "entity_id": 62,
+                "card_id": "EX1_617",
+                "name": "Deadly Shot",
+                "type": "SPELL",
+                "cost": 3,
+                "text": "Destroy a random enemy minion.",
+                "playable": true
+              },
+              {
+                "entity_id": 61,
+                "card_id": "EX1_539",
+                "name": "Kill Command",
+                "type": "SPELL",
+                "cost": 3,
+                "text": "Deal 3 damage. If you control a Beast, deal 5 damage instead.",
+                "playable": true
+              },
+              {
+                "entity_id": 60,
+                "card_id": "EX1_539",
+                "name": "Kill Command",
+                "type": "SPELL",
+                "cost": 3,
+                "text": "Deal 3 damage. If you control a Beast, deal 5 damage instead.",
+                "playable": true
+              }
+            ],
+            "board": [
+              {
+                "entity_id": 65,
+                "card_id": "DS1_070",
+                "name": "Houndmaster",
+                "attack": 4,
+                "health": 3,
+                "max_health": 3,
+                "can_attack": true,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Battlecry: Give a friendly Beast +2/+2 and Taunt."
+              },
+              {
+                "entity_id": 41,
+                "card_id": "EX1_080",
+                "name": "Secretkeeper",
+                "attack": 1,
+                "health": 1,
+                "max_health": 2,
+                "can_attack": true,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Whenever a Secret is played, gain +1/+1."
+              }
+            ],
+            "secrets": [
+              {
+                "entity_id": 48,
+                "card_id": "EX1_554",
+                "name": "Snake Trap"
+              }
+            ],
+            "deck_remaining": 18,
+            "deck_remaining_counts": {
+              "DS1_184": 1,
+              "EX1_029": 1,
+              "EX1_066": 1,
+              "EX1_162": 1,
+              "EX1_531": 2,
+              "EX1_533": 1,
+              "EX1_534": 2,
+              "EX1_536": 2,
+              "EX1_538": 1,
+              "EX1_543": 1,
+              "EX1_610": 2,
+              "EX1_611": 2,
+              "NEW1_019": 1
+            },
+            "fatigue": 0,
+            "graveyard": [
+              {
+                "card_id": "NEW1_019",
+                "name": "Knife Juggler"
+              },
+              {
+                "card_id": "EX1_080",
+                "name": "Secretkeeper"
+              },
+              {
+                "card_id": "EX1_029",
+                "name": "Leper Gnome"
+              },
+              {
+                "card_id": "GAME_005",
+                "name": "The Coin"
+              },
+              {
+                "card_id": "NEW1_031",
+                "name": "Animal Companion"
+              },
+              {
+                "card_id": "NEW1_034",
+                "name": "Huffer"
+              },
+              {
+                "card_id": "NEW1_031",
+                "name": "Animal Companion"
+              },
+              {
+                "card_id": "EX1_538",
+                "name": "Unleash the Hounds"
+              },
+              {
+                "card_id": "NEW1_034",
+                "name": "Huffer"
+              },
+              {
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              {
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              }
+            ]
+          },
+          "opponent": {
+            "hero": {
+              "entity_id": 4,
+              "card_id": "HERO_05",
+              "name": "Rexxar",
+              "hero_class": "HUNTER",
+              "health": 7,
+              "max_health": 30,
+              "armor": 0,
+              "attack": 0,
+              "can_attack": false,
+              "frozen": false,
+              "immune": false
+            },
+            "hero_power": {
+              "entity_id": 5,
+              "card_id": "HERO_05bp",
+              "name": "Steady Shot",
+              "cost": 2,
+              "usable": false,
+              "text": "Deal 2 damage to the enemy hero."
+            },
+            "weapon": null,
+            "mana": 0,
+            "max_mana": 8,
+            "overloaded": 0,
+            "overload_next_turn": 0,
+            "hand_size": 0,
+            "board": [
+              {
+                "entity_id": 18,
+                "card_id": "EX1_008",
+                "name": "Argent Squire",
+                "attack": 1,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": true,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Divine Shield"
+              },
+              {
+                "entity_id": 12,
+                "card_id": "CS2_203",
+                "name": "Ironbeak Owl",
+                "attack": 2,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Battlecry: Silence a minion."
+              },
+              {
+                "entity_id": 19,
+                "card_id": "EX1_008",
+                "name": "Argent Squire",
+                "attack": 1,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": true,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Divine Shield"
+              },
+              {
+                "entity_id": 76,
+                "card_id": "EX1_538t",
+                "name": "Hound",
+                "attack": 1,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": true,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Charge"
+              },
+              {
+                "entity_id": 77,
+                "card_id": "EX1_538t",
+                "name": "Hound",
+                "attack": 1,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": true,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Charge"
+              }
+            ],
+            "secrets_count": 1,
+            "deck_remaining": 19,
+            "fatigue": 0,
+            "graveyard": [
+              {
+                "card_id": "DS1_175",
+                "name": "Timber Wolf"
+              },
+              {
+                "card_id": "CS2_203",
+                "name": "Ironbeak Owl"
+              },
+              {
+                "card_id": "CS2_188",
+                "name": "Abusive Sergeant"
+              },
+              {
+                "card_id": "CS2_173",
+                "name": "Bluegill Warrior"
+              },
+              {
+                "card_id": "DS1_185",
+                "name": "Arcane Shot"
+              },
+              {
+                "card_id": "EX1_610",
+                "name": "Explosive Trap"
+              },
+              {
+                "card_id": "EX1_538",
+                "name": "Unleash the Hounds"
+              }
+            ]
+          },
+          "choice": null,
+          "legal_actions": [
+            {
+              "type": "play_card",
+              "card": 62,
+              "targets": null,
+              "positions": null,
+              "choose": null
+            },
+            {
+              "type": "play_card",
+              "card": 61,
+              "targets": [
+                4,
+                12,
+                18,
+                19,
+                37,
+                41,
+                65,
+                76,
+                77
+              ],
+              "positions": null,
+              "choose": null
+            },
+            {
+              "type": "play_card",
+              "card": 60,
+              "targets": [
+                4,
+                12,
+                18,
+                19,
+                37,
+                41,
+                65,
+                76,
+                77
+              ],
+              "positions": null,
+              "choose": null
+            },
+            {
+              "type": "attack",
+              "attacker": 65,
+              "targets": [
+                4,
+                12,
+                18,
+                19,
+                76,
+                77
+              ]
+            },
+            {
+              "type": "attack",
+              "attacker": 41,
+              "targets": [
+                4,
+                12,
+                18,
+                19,
+                76,
+                77
+              ]
+            },
+            {
+              "type": "hero_power",
+              "targets": null
+            },
+            {
+              "type": "end_turn"
+            },
+            {
+              "type": "concede"
+            }
+          ],
+          "player": 2,
+          "seq": 31,
+          "game_id": "historical-21110024-2-31",
+          "events": []
+        },
+        "envelope": {
+          "seq": 31,
+          "action": {
+            "type": "hero_power"
+          }
+        },
+        "elapsed_s": 0.08953979199577589,
+        "info": {
+          "fallback": false,
+          "nodes": 1,
+          "search_used": false,
+          "reason": "guaranteed_lethal",
+          "race": {
+            "own_ehp": 4,
+            "enemy_ehp": 7,
+            "visible_incoming_before_taunts": 6,
+            "next_turn_hand_damage_no_surviving_beast": 8,
+            "next_turn_hand_damage_if_beast_survives": 8,
+            "role": "defend",
+            "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+          },
+          "lethal": {
+            "guaranteed": true,
+            "first_action": {
+              "type": "hero_power"
+            },
+            "sequence": [
+              {
+                "type": "hero_power"
+              },
+              {
+                "type": "play_card",
+                "card": 61,
+                "target": 4
+              },
+              {
+                "type": "play_card",
+                "card": 60,
+                "target": 4
+              }
+            ],
+            "damage": 8,
+            "mana_required": 8,
+            "proof": "visible_burn_and_steady_shot_only",
+            "nodes": 1,
+            "inherited_nodes": 0
+          },
+          "elapsed_s": 0.003113915998255834,
+          "over_budget": false
+        }
+      },
+      {
+        "state": {
+          "turn": 16,
+          "phase": "main",
+          "you": {
+            "hero": {
+              "entity_id": 37,
+              "card_id": "HERO_05",
+              "name": "Rexxar",
+              "hero_class": "HUNTER",
+              "health": 4,
+              "max_health": 30,
+              "armor": 0,
+              "attack": 0,
+              "can_attack": false,
+              "frozen": false,
+              "immune": false
+            },
+            "hero_power": {
+              "entity_id": 38,
+              "card_id": "HERO_05bp",
+              "name": "Steady Shot",
+              "cost": 2,
+              "usable": false,
+              "text": "Deal 2 damage to the enemy hero."
+            },
+            "weapon": null,
+            "mana": 6,
+            "max_mana": 8,
+            "overloaded": 0,
+            "overload_next_turn": 0,
+            "hand": [
+              {
+                "entity_id": 62,
+                "card_id": "EX1_617",
+                "name": "Deadly Shot",
+                "type": "SPELL",
+                "cost": 3,
+                "text": "Destroy a random enemy minion.",
+                "playable": true
+              },
+              {
+                "entity_id": 61,
+                "card_id": "EX1_539",
+                "name": "Kill Command",
+                "type": "SPELL",
+                "cost": 3,
+                "text": "Deal 3 damage. If you control a Beast, deal 5 damage instead.",
+                "playable": true
+              },
+              {
+                "entity_id": 60,
+                "card_id": "EX1_539",
+                "name": "Kill Command",
+                "type": "SPELL",
+                "cost": 3,
+                "text": "Deal 3 damage. If you control a Beast, deal 5 damage instead.",
+                "playable": true
+              }
+            ],
+            "board": [
+              {
+                "entity_id": 65,
+                "card_id": "DS1_070",
+                "name": "Houndmaster",
+                "attack": 4,
+                "health": 3,
+                "max_health": 3,
+                "can_attack": true,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Battlecry: Give a friendly Beast +2/+2 and Taunt."
+              },
+              {
+                "entity_id": 41,
+                "card_id": "EX1_080",
+                "name": "Secretkeeper",
+                "attack": 1,
+                "health": 1,
+                "max_health": 2,
+                "can_attack": true,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Whenever a Secret is played, gain +1/+1."
+              }
+            ],
+            "secrets": [
+              {
+                "entity_id": 48,
+                "card_id": "EX1_554",
+                "name": "Snake Trap"
+              }
+            ],
+            "deck_remaining": 18,
+            "deck_remaining_counts": {
+              "DS1_184": 1,
+              "EX1_029": 1,
+              "EX1_066": 1,
+              "EX1_162": 1,
+              "EX1_531": 2,
+              "EX1_533": 1,
+              "EX1_534": 2,
+              "EX1_536": 2,
+              "EX1_538": 1,
+              "EX1_543": 1,
+              "EX1_610": 2,
+              "EX1_611": 2,
+              "NEW1_019": 1
+            },
+            "fatigue": 0,
+            "graveyard": [
+              {
+                "card_id": "NEW1_019",
+                "name": "Knife Juggler"
+              },
+              {
+                "card_id": "EX1_080",
+                "name": "Secretkeeper"
+              },
+              {
+                "card_id": "EX1_029",
+                "name": "Leper Gnome"
+              },
+              {
+                "card_id": "GAME_005",
+                "name": "The Coin"
+              },
+              {
+                "card_id": "NEW1_031",
+                "name": "Animal Companion"
+              },
+              {
+                "card_id": "NEW1_034",
+                "name": "Huffer"
+              },
+              {
+                "card_id": "NEW1_031",
+                "name": "Animal Companion"
+              },
+              {
+                "card_id": "EX1_538",
+                "name": "Unleash the Hounds"
+              },
+              {
+                "card_id": "NEW1_034",
+                "name": "Huffer"
+              },
+              {
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              {
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              }
+            ]
+          },
+          "opponent": {
+            "hero": {
+              "entity_id": 4,
+              "card_id": "HERO_05",
+              "name": "Rexxar",
+              "hero_class": "HUNTER",
+              "health": 5,
+              "max_health": 30,
+              "armor": 0,
+              "attack": 0,
+              "can_attack": false,
+              "frozen": false,
+              "immune": false
+            },
+            "hero_power": {
+              "entity_id": 5,
+              "card_id": "HERO_05bp",
+              "name": "Steady Shot",
+              "cost": 2,
+              "usable": false,
+              "text": "Deal 2 damage to the enemy hero."
+            },
+            "weapon": null,
+            "mana": 0,
+            "max_mana": 8,
+            "overloaded": 0,
+            "overload_next_turn": 0,
+            "hand_size": 0,
+            "board": [
+              {
+                "entity_id": 18,
+                "card_id": "EX1_008",
+                "name": "Argent Squire",
+                "attack": 1,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": true,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Divine Shield"
+              },
+              {
+                "entity_id": 12,
+                "card_id": "CS2_203",
+                "name": "Ironbeak Owl",
+                "attack": 2,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Battlecry: Silence a minion."
+              },
+              {
+                "entity_id": 19,
+                "card_id": "EX1_008",
+                "name": "Argent Squire",
+                "attack": 1,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": true,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Divine Shield"
+              },
+              {
+                "entity_id": 76,
+                "card_id": "EX1_538t",
+                "name": "Hound",
+                "attack": 1,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": true,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Charge"
+              },
+              {
+                "entity_id": 77,
+                "card_id": "EX1_538t",
+                "name": "Hound",
+                "attack": 1,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": true,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Charge"
+              }
+            ],
+            "secrets_count": 1,
+            "deck_remaining": 19,
+            "fatigue": 0,
+            "graveyard": [
+              {
+                "card_id": "DS1_175",
+                "name": "Timber Wolf"
+              },
+              {
+                "card_id": "CS2_203",
+                "name": "Ironbeak Owl"
+              },
+              {
+                "card_id": "CS2_188",
+                "name": "Abusive Sergeant"
+              },
+              {
+                "card_id": "CS2_173",
+                "name": "Bluegill Warrior"
+              },
+              {
+                "card_id": "DS1_185",
+                "name": "Arcane Shot"
+              },
+              {
+                "card_id": "EX1_610",
+                "name": "Explosive Trap"
+              },
+              {
+                "card_id": "EX1_538",
+                "name": "Unleash the Hounds"
+              }
+            ]
+          },
+          "choice": null,
+          "legal_actions": [
+            {
+              "type": "play_card",
+              "card": 62,
+              "targets": null,
+              "positions": null,
+              "choose": null
+            },
+            {
+              "type": "play_card",
+              "card": 61,
+              "targets": [
+                4,
+                12,
+                18,
+                19,
+                37,
+                41,
+                65,
+                76,
+                77
+              ],
+              "positions": null,
+              "choose": null
+            },
+            {
+              "type": "play_card",
+              "card": 60,
+              "targets": [
+                4,
+                12,
+                18,
+                19,
+                37,
+                41,
+                65,
+                76,
+                77
+              ],
+              "positions": null,
+              "choose": null
+            },
+            {
+              "type": "attack",
+              "attacker": 65,
+              "targets": [
+                4,
+                12,
+                18,
+                19,
+                76,
+                77
+              ]
+            },
+            {
+              "type": "attack",
+              "attacker": 41,
+              "targets": [
+                4,
+                12,
+                18,
+                19,
+                76,
+                77
+              ]
+            },
+            {
+              "type": "end_turn"
+            },
+            {
+              "type": "concede"
+            }
+          ],
+          "player": 2,
+          "seq": 32,
+          "game_id": "historical-21110024-2-31",
+          "events": []
+        },
+        "envelope": {
+          "seq": 32,
+          "action": {
+            "type": "play_card",
+            "card": 61,
+            "target": 4
+          }
+        },
+        "elapsed_s": 0.07401924999430776,
+        "info": {
+          "fallback": false,
+          "nodes": 1,
+          "search_used": false,
+          "reason": "guaranteed_lethal",
+          "race": {
+            "own_ehp": 4,
+            "enemy_ehp": 5,
+            "visible_incoming_before_taunts": 6,
+            "next_turn_hand_damage_no_surviving_beast": 8,
+            "next_turn_hand_damage_if_beast_survives": 8,
+            "role": "defend",
+            "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+          },
+          "lethal": {
+            "guaranteed": true,
+            "first_action": {
+              "type": "play_card",
+              "card": 61,
+              "target": 4
+            },
+            "sequence": [
+              {
+                "type": "play_card",
+                "card": 61,
+                "target": 4
+              },
+              {
+                "type": "play_card",
+                "card": 60,
+                "target": 4
+              }
+            ],
+            "damage": 6,
+            "mana_required": 6,
+            "proof": "visible_burn_and_steady_shot_only",
+            "nodes": 1,
+            "inherited_nodes": 0
+          },
+          "elapsed_s": 0.0011559999984456226,
+          "over_budget": false
+        }
+      },
+      {
+        "state": {
+          "turn": 16,
+          "phase": "main",
+          "you": {
+            "hero": {
+              "entity_id": 37,
+              "card_id": "HERO_05",
+              "name": "Rexxar",
+              "hero_class": "HUNTER",
+              "health": 4,
+              "max_health": 30,
+              "armor": 0,
+              "attack": 0,
+              "can_attack": false,
+              "frozen": false,
+              "immune": false
+            },
+            "hero_power": {
+              "entity_id": 38,
+              "card_id": "HERO_05bp",
+              "name": "Steady Shot",
+              "cost": 2,
+              "usable": false,
+              "text": "Deal 2 damage to the enemy hero."
+            },
+            "weapon": null,
+            "mana": 3,
+            "max_mana": 8,
+            "overloaded": 0,
+            "overload_next_turn": 0,
+            "hand": [
+              {
+                "entity_id": 62,
+                "card_id": "EX1_617",
+                "name": "Deadly Shot",
+                "type": "SPELL",
+                "cost": 3,
+                "text": "Destroy a random enemy minion.",
+                "playable": true
+              },
+              {
+                "entity_id": 60,
+                "card_id": "EX1_539",
+                "name": "Kill Command",
+                "type": "SPELL",
+                "cost": 3,
+                "text": "Deal 3 damage. If you control a Beast, deal 5 damage instead.",
+                "playable": true
+              }
+            ],
+            "board": [
+              {
+                "entity_id": 65,
+                "card_id": "DS1_070",
+                "name": "Houndmaster",
+                "attack": 4,
+                "health": 3,
+                "max_health": 3,
+                "can_attack": true,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Battlecry: Give a friendly Beast +2/+2 and Taunt."
+              },
+              {
+                "entity_id": 41,
+                "card_id": "EX1_080",
+                "name": "Secretkeeper",
+                "attack": 1,
+                "health": 1,
+                "max_health": 2,
+                "can_attack": true,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Whenever a Secret is played, gain +1/+1."
+              }
+            ],
+            "secrets": [
+              {
+                "entity_id": 48,
+                "card_id": "EX1_554",
+                "name": "Snake Trap"
+              }
+            ],
+            "deck_remaining": 18,
+            "deck_remaining_counts": {
+              "DS1_184": 1,
+              "EX1_029": 1,
+              "EX1_066": 1,
+              "EX1_162": 1,
+              "EX1_531": 2,
+              "EX1_533": 1,
+              "EX1_534": 2,
+              "EX1_536": 2,
+              "EX1_538": 1,
+              "EX1_543": 1,
+              "EX1_610": 2,
+              "EX1_611": 2,
+              "NEW1_019": 1
+            },
+            "fatigue": 0,
+            "graveyard": [
+              {
+                "card_id": "NEW1_019",
+                "name": "Knife Juggler"
+              },
+              {
+                "card_id": "EX1_080",
+                "name": "Secretkeeper"
+              },
+              {
+                "card_id": "EX1_029",
+                "name": "Leper Gnome"
+              },
+              {
+                "card_id": "GAME_005",
+                "name": "The Coin"
+              },
+              {
+                "card_id": "NEW1_031",
+                "name": "Animal Companion"
+              },
+              {
+                "card_id": "NEW1_034",
+                "name": "Huffer"
+              },
+              {
+                "card_id": "NEW1_031",
+                "name": "Animal Companion"
+              },
+              {
+                "card_id": "EX1_538",
+                "name": "Unleash the Hounds"
+              },
+              {
+                "card_id": "NEW1_034",
+                "name": "Huffer"
+              },
+              {
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              {
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              {
+                "card_id": "EX1_539",
+                "name": "Kill Command"
+              }
+            ]
+          },
+          "opponent": {
+            "hero": {
+              "entity_id": 4,
+              "card_id": "HERO_05",
+              "name": "Rexxar",
+              "hero_class": "HUNTER",
+              "health": 2,
+              "max_health": 30,
+              "armor": 0,
+              "attack": 0,
+              "can_attack": false,
+              "frozen": false,
+              "immune": false
+            },
+            "hero_power": {
+              "entity_id": 5,
+              "card_id": "HERO_05bp",
+              "name": "Steady Shot",
+              "cost": 2,
+              "usable": false,
+              "text": "Deal 2 damage to the enemy hero."
+            },
+            "weapon": null,
+            "mana": 0,
+            "max_mana": 8,
+            "overloaded": 0,
+            "overload_next_turn": 0,
+            "hand_size": 0,
+            "board": [
+              {
+                "entity_id": 18,
+                "card_id": "EX1_008",
+                "name": "Argent Squire",
+                "attack": 1,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": true,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Divine Shield"
+              },
+              {
+                "entity_id": 12,
+                "card_id": "CS2_203",
+                "name": "Ironbeak Owl",
+                "attack": 2,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Battlecry: Silence a minion."
+              },
+              {
+                "entity_id": 19,
+                "card_id": "EX1_008",
+                "name": "Argent Squire",
+                "attack": 1,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": true,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Divine Shield"
+              },
+              {
+                "entity_id": 76,
+                "card_id": "EX1_538t",
+                "name": "Hound",
+                "attack": 1,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": true,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Charge"
+              },
+              {
+                "entity_id": 77,
+                "card_id": "EX1_538t",
+                "name": "Hound",
+                "attack": 1,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": true,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Charge"
+              }
+            ],
+            "secrets_count": 1,
+            "deck_remaining": 19,
+            "fatigue": 0,
+            "graveyard": [
+              {
+                "card_id": "DS1_175",
+                "name": "Timber Wolf"
+              },
+              {
+                "card_id": "CS2_203",
+                "name": "Ironbeak Owl"
+              },
+              {
+                "card_id": "CS2_188",
+                "name": "Abusive Sergeant"
+              },
+              {
+                "card_id": "CS2_173",
+                "name": "Bluegill Warrior"
+              },
+              {
+                "card_id": "DS1_185",
+                "name": "Arcane Shot"
+              },
+              {
+                "card_id": "EX1_610",
+                "name": "Explosive Trap"
+              },
+              {
+                "card_id": "EX1_538",
+                "name": "Unleash the Hounds"
+              }
+            ]
+          },
+          "choice": null,
+          "legal_actions": [
+            {
+              "type": "play_card",
+              "card": 62,
+              "targets": null,
+              "positions": null,
+              "choose": null
+            },
+            {
+              "type": "play_card",
+              "card": 60,
+              "targets": [
+                4,
+                12,
+                18,
+                19,
+                37,
+                41,
+                65,
+                76,
+                77
+              ],
+              "positions": null,
+              "choose": null
+            },
+            {
+              "type": "attack",
+              "attacker": 65,
+              "targets": [
+                4,
+                12,
+                18,
+                19,
+                76,
+                77
+              ]
+            },
+            {
+              "type": "attack",
+              "attacker": 41,
+              "targets": [
+                4,
+                12,
+                18,
+                19,
+                76,
+                77
+              ]
+            },
+            {
+              "type": "end_turn"
+            },
+            {
+              "type": "concede"
+            }
+          ],
+          "player": 2,
+          "seq": 33,
+          "game_id": "historical-21110024-2-31",
+          "events": []
+        },
+        "envelope": {
+          "seq": 33,
+          "action": {
+            "type": "play_card",
+            "card": 60,
+            "target": 4
+          }
+        },
+        "elapsed_s": 0.07472483300080057,
+        "info": {
+          "fallback": false,
+          "nodes": 1,
+          "search_used": false,
+          "reason": "guaranteed_lethal",
+          "race": {
+            "own_ehp": 4,
+            "enemy_ehp": 2,
+            "visible_incoming_before_taunts": 6,
+            "next_turn_hand_damage_no_surviving_beast": 5,
+            "next_turn_hand_damage_if_beast_survives": 5,
+            "role": "defend",
+            "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+          },
+          "lethal": {
+            "guaranteed": true,
+            "first_action": {
+              "type": "play_card",
+              "card": 60,
+              "target": 4
+            },
+            "sequence": [
+              {
+                "type": "play_card",
+                "card": 60,
+                "target": 4
+              }
+            ],
+            "damage": 3,
+            "mana_required": 3,
+            "proof": "visible_burn_and_steady_shot_only",
+            "nodes": 1,
+            "inherited_nodes": 0
+          },
+          "elapsed_s": 0.0011803329980466515,
+          "over_budget": false
+        }
+      }
+    ],
+    "terminal": true,
+    "scope": "Known-seed diagnostic, excluded from independent gain"
+  },
+  {
+    "source": {
+      "case": "historical-21110037-1-34",
+      "seed": 21110037,
+      "seat": 1,
+      "seq": 34,
+      "game_path": "runs/final-20261113/batches/historical37/B/games/1f3134f8fa3c4d74",
+      "state_digest": "78f9881066e99ce7b634c70c6b318af830317288b9bf54b8b7863f03d2a3422c",
+      "opponent_spec": {
+        "name": "bot2-face-proxy",
+        "group": "bot2",
+        "mode": "aggressive",
+        "deck": "development/teacher_eval/decks/bot2-face.json"
+      }
+    },
+    "prefix_verified_steps": 67,
+    "baseline_action": {
+      "type": "attack",
+      "attacker": 4,
+      "target": 37
+    },
+    "baseline_terminal_score": 0,
+    "candidate": "L2",
+    "candidate_score": 1,
+    "sequence": [
+      {
+        "state": {
+          "turn": 15,
+          "phase": "main",
+          "you": {
+            "hero": {
+              "entity_id": 4,
+              "card_id": "HERO_05",
+              "name": "Rexxar",
+              "hero_class": "HUNTER",
+              "health": 2,
+              "max_health": 30,
+              "armor": 0,
+              "attack": 3,
+              "can_attack": true,
+              "frozen": false,
+              "immune": false
+            },
+            "hero_power": {
+              "entity_id": 5,
+              "card_id": "HERO_05bp",
+              "name": "Steady Shot",
+              "cost": 2,
+              "usable": true,
+              "text": "Deal 2 damage to the enemy hero."
+            },
+            "weapon": {
+              "entity_id": 23,
+              "card_id": "EX1_536",
+              "name": "Eaglehorn Bow",
+              "attack": 3,
+              "durability": 1
+            },
+            "mana": 8,
+            "max_mana": 8,
+            "overloaded": 0,
+            "overload_next_turn": 0,
+            "hand": [
+              {
+                "entity_id": 35,
+                "card_id": "EX1_543",
+                "name": "King Krush",
+                "type": "MINION",
+                "cost": 9,
+                "attack": 8,
+                "health": 8,
+                "text": "Charge",
+                "playable": false
+              },
+              {
+                "entity_id": 29,
+                "card_id": "EX1_617",
+                "name": "Deadly Shot",
+                "type": "SPELL",
+                "cost": 3,
+                "text": "Destroy a random enemy minion.",
+                "playable": true
+              },
+              {
+                "entity_id": 6,
+                "card_id": "EX1_029",
+                "name": "Leper Gnome",
+                "type": "MINION",
+                "cost": 1,
+                "attack": 1,
+                "health": 1,
+                "text": "Deathrattle: Deal 2 damage to the enemy hero.",
+                "playable": true
+              }
+            ],
+            "board": [
+              {
+                "entity_id": 9,
+                "card_id": "EX1_080",
+                "name": "Secretkeeper",
+                "attack": 3,
+                "health": 3,
+                "max_health": 4,
+                "can_attack": true,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "Whenever a Secret is played, gain +1/+1."
+              }
+            ],
+            "secrets": [
+              {
+                "entity_id": 15,
+                "card_id": "EX1_554",
+                "name": "Snake Trap"
+              }
+            ],
+            "deck_remaining": 19,
+            "deck_remaining_counts": {
+              "DS1_070": 1,
+              "DS1_184": 1,
+              "EX1_029": 1,
+              "EX1_066": 1,
+              "EX1_162": 1,
+              "EX1_531": 2,
+              "EX1_534": 2,
+              "EX1_538": 1,
+              "EX1_539": 1,
+              "EX1_610": 2,
+              "EX1_611": 2,
+              "NEW1_019": 2,
+              "NEW1_031": 2
+            },
+            "fatigue": 0,
+            "graveyard": [
+              {
+                "card_id": "EX1_080",
+                "name": "Secretkeeper"
+              },
+              {
+                "card_id": "EX1_539",
+                "name": "Kill Command"
+              },
+              {
+                "card_id": "EX1_536",
+                "name": "Eaglehorn Bow"
+              },
+              {
+                "card_id": "EX1_538",
+                "name": "Unleash the Hounds"
+              },
+              {
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              {
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              },
+              {
+                "card_id": "EX1_533",
+                "name": "Misdirection"
+              },
+              {
+                "card_id": "EX1_538t",
+                "name": "Hound"
+              }
+            ]
+          },
+          "opponent": {
+            "hero": {
+              "entity_id": 37,
+              "card_id": "HERO_05",
+              "name": "Rexxar",
+              "hero_class": "HUNTER",
+              "health": 2,
+              "max_health": 30,
+              "armor": 0,
+              "attack": 0,
+              "can_attack": false,
+              "frozen": false,
+              "immune": false
+            },
+            "hero_power": {
+              "entity_id": 38,
+              "card_id": "HERO_05bp",
+              "name": "Steady Shot",
+              "cost": 2,
+              "usable": false,
+              "text": "Deal 2 damage to the enemy hero."
+            },
+            "weapon": null,
+            "mana": 0,
+            "max_mana": 7,
+            "overloaded": 0,
+            "overload_next_turn": 0,
+            "hand_size": 0,
+            "board": [
+              {
+                "entity_id": 65,
+                "card_id": "NEW1_019",
+                "name": "Knife Juggler",
+                "attack": 2,
+                "health": 2,
+                "max_health": 2,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": false,
+                "text": "After you summon a minion, deal 1 damage to a random enemy."
+              },
+              {
+                "entity_id": 48,
+                "card_id": "DS1_175",
+                "name": "Timber Wolf",
+                "attack": 1,
+                "health": 1,
+                "max_health": 1,
+                "can_attack": false,
+                "taunt": false,
+                "divine_shield": false,
+                "frozen": false,
+                "stealth": false,
+                "windfury": false,
+                "charge": false,
+                "poisonous": false,
+                "deathrattle": false,
+                "spell_damage": 0,
+                "silenced": true,
+                "text": "Your other Beasts have +1 Attack."
+              }
+            ],
+            "secrets_count": 1,
+            "deck_remaining": 19,
+            "fatigue": 0,
+            "graveyard": [
+              {
+                "card_id": "EX1_010",
+                "name": "Worgen Infiltrator"
+              },
+              {
+                "card_id": "CS2_203",
+                "name": "Ironbeak Owl"
+              },
+              {
+                "card_id": "CS2_173",
+                "name": "Bluegill Warrior"
+              },
+              {
+                "card_id": "EX1_029",
+                "name": "Leper Gnome"
+              },
+              {
+                "card_id": "CS2_124",
+                "name": "Wolfrider"
+              },
+              {
+                "card_id": "EX1_029",
+                "name": "Leper Gnome"
+              },
+              {
+                "card_id": "GAME_005",
+                "name": "The Coin"
+              },
+              {
+                "card_id": "DS1_185",
+                "name": "Arcane Shot"
+              },
+              {
+                "card_id": "EX1_539",
+                "name": "Kill Command"
+              }
+            ]
+          },
+          "choice": null,
+          "legal_actions": [
+            {
+              "type": "play_card",
+              "card": 29,
+              "targets": null,
+              "positions": null,
+              "choose": null
+            },
+            {
+              "type": "play_card",
+              "card": 6,
+              "targets": null,
+              "positions": [
+                0,
+                1
+              ],
+              "choose": null
+            },
+            {
+              "type": "attack",
+              "attacker": 4,
+              "targets": [
+                37,
+                48,
+                65
+              ]
+            },
+            {
+              "type": "attack",
+              "attacker": 9,
+              "targets": [
+                37,
+                48,
+                65
+              ]
+            },
+            {
+              "type": "hero_power",
+              "targets": null
+            },
+            {
+              "type": "end_turn"
+            },
+            {
+              "type": "concede"
+            }
+          ],
+          "player": 1,
+          "seq": 34,
+          "game_id": "historical-21110037-1-34",
+          "events": []
+        },
+        "envelope": {
+          "seq": 34,
+          "action": {
+            "type": "hero_power"
+          }
+        },
+        "elapsed_s": 0.08735912499832921,
+        "info": {
+          "fallback": false,
+          "nodes": 1,
+          "search_used": false,
+          "reason": "guaranteed_lethal",
+          "race": {
+            "own_ehp": 2,
+            "enemy_ehp": 2,
+            "visible_incoming_before_taunts": 3,
+            "next_turn_hand_damage_no_surviving_beast": 8,
+            "next_turn_hand_damage_if_beast_survives": 8,
+            "role": "defend",
+            "uncertainty": "No future draw or hidden heal/removal is known. Hand clock is a conditional setup estimate, not a forced next-turn lethal."
+          },
+          "lethal": {
+            "guaranteed": true,
+            "first_action": {
+              "type": "hero_power"
+            },
+            "sequence": [
+              {
+                "type": "hero_power"
+              }
+            ],
+            "damage": 2,
+            "mana_required": 2,
+            "proof": "visible_burn_and_steady_shot_only",
+            "nodes": 1,
+            "inherited_nodes": 0
+          },
+          "elapsed_s": 0.002937416997156106,
+          "over_budget": false
+        }
+      }
+    ],
+    "terminal": true,
+    "scope": "Known-seed diagnostic, excluded from independent gain"
+  }
+]

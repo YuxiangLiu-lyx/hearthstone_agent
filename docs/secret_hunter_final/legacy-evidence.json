@@ -1,0 +1,87 @@
+{
+  "historical_amani_raw_reaggregation": {
+    "natural": {
+      "n": 96,
+      "baseline": 90,
+      "cheap_trade": 91,
+      "flips": 2,
+      "regressions": 1
+    },
+    "forced_coil": {
+      "n": 24,
+      "baseline": 12,
+      "cheap_trade": 24,
+      "flips": 12,
+      "regressions": 0
+    }
+  },
+  "exact_replays": [
+    {
+      "result": "runs/final-20261113/legacy/amani-replay-1-forced_coil-0-replan.json",
+      "replay": {
+        "case": "amani-replay-1",
+        "sample": 0,
+        "route": "replan",
+        "actions": 10,
+        "winner": 2,
+        "exact_public_trace_match": true
+      }
+    },
+    {
+      "result": "runs/final-20261113/legacy/amani-replay-1-forced_coil-0-diagnostic_cheap_trade_highmane.json",
+      "replay": {
+        "case": "amani-replay-1",
+        "sample": 0,
+        "route": "diagnostic_cheap_trade_highmane",
+        "actions": 22,
+        "winner": 1,
+        "exact_public_trace_match": true
+      }
+    },
+    {
+      "result": "runs/final-20261113/legacy/trap-replay-0-natural-0-replan.json",
+      "replay": {
+        "case": "trap-replay-0",
+        "sample": 0,
+        "route": "replan",
+        "actions": 40,
+        "winner": 2,
+        "exact_public_trace_match": true
+      }
+    },
+    {
+      "result": "runs/final-20261113/legacy/trap-replay-0-natural-0-committed.json",
+      "replay": {
+        "case": "trap-replay-0",
+        "sample": 0,
+        "route": "committed",
+        "actions": 42,
+        "winner": 1,
+        "exact_public_trace_match": true
+      }
+    },
+    {
+      "result": "runs/final-20261113/legacy/amani-031-natural-0-replan.json",
+      "replay": {
+        "case": "amani-031",
+        "sample": 100,
+        "route": "replan",
+        "actions": 45,
+        "winner": 1,
+        "exact_public_trace_match": true
+      }
+    },
+    {
+      "result": "runs/final-20261113/legacy/amani-031-natural-0-bow_amani.json",
+      "replay": {
+        "case": "amani-031",
+        "sample": 100,
+        "route": "bow_amani",
+        "actions": 33,
+        "winner": 2,
+        "exact_public_trace_match": true
+      }
+    }
+  ],
+  "provenance": "Known C2-translated public replay and old original-deck natural samples; reused diagnosis only. These are not new seed groups."
+}
