@@ -47,6 +47,7 @@ def recommend():
         assert runtime[arm]['source_sha256']==freeze['fingerprints'][arm]
         assert str((ROOT/next(r['extracted'] for r in json.loads((RUN/'release-candidates.json').read_text()) if r['name']==arm)).resolve())==runtime[arm]['candidate']
         reliability[arm]&=all(runtime[arm][k]==0 for k in ('invalid','over_2s','ordinary_fallbacks')) and runtime[arm]['actual_host_stale_seq_rejected']
+    assert reliability['B'], 'Reference reliability failed; do not interpret a paired gain against invalid baseline execution'
     main=None;family={};guard_gain=0;statistical=False;correction=False
     if challenger!='B' and challenger in core['comparisons'] and challenger in guard['comparisons']:
         main=core['comparisons'][challenger]['primary'];guard_gain=guard['comparisons'][challenger]['all']['gain']
