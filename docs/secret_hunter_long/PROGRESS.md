@@ -1,5 +1,19 @@
 # 执行中检查点
 
+## 2026-11-14 11:35 UTC 更新
+
+最新提交0f73a46。DARC第二轮4122CF全部完成；没有生成DARCT2：334训练提案只有原策略满足门槛，留出274/360不变。教师原世界120根86→88（4/2），CI[-3.333,5.833]pp。所有CF当前停止，meta cf_pid=None；15492完成+88初期失败=15580尝试，标签完整性通过（2516留牌、12976战术，10094实际覆盖改动续局、140254前缀核对步）。无需任何新的tactical full batch，也不再扩模型拟合已见留出。
+
+Two-card全部完成：B313、DWOLF317、KO317、WOOZE321/360。DWOLF16/12翻转，主指标+.278pp；KO9/5，+.972pp；WOOZE22/14，+.833pp。DWOLF与WOOZE新批Bot2都−3.333pp。WOOZE比DWOLF多4胜但主指标只+.556pp，比KO多4总胜却主指标−.139pp，故归档，不做M/其他模块迁移。KO与DWOLF留作独立选拔备选；合并开发：KO50组主指标+1.167pp CI[-1.583,4]；DWOLF90组+1.528pp CI[-.556,3.704]。已更新decisions与REPORT，two-card全部分析已完成，卡位附表已刷新。
+
+现在主进程mulligan-combination8臂30组，B即将完成，后续BM、BL2、BML2、DARC、DARCM、DARCL2、DARCML2。对应mulligan-analysis-plan在等待，完成后自动做所有模块父代配对、动作审计、factorial交互。cli-load-plan（session53887）随后自动用B/DARCML2/WOOZE，51400010–11，6并发72完整CLI；只决定并发，不用于选策略。若6并发全可靠、<=2s且吞吐>29.6games/min，选拔最终用6，否则3。
+
+已在结果前记录selection-design.json：最终具体selection-plan等Codex读完自然因子与负载报告再建。5臂顺序[B,原牌表最佳模块线,DARC最佳模块线,KO,DWOLF]，核心60组51500000–59，护栏8组51501000–07。原牌表候选按mulligan-combination主指标选BL2/BML2/BM，1e-12内平手用此列顺序；DARC线候选DARCL2/DARCML2/DARCM/DARC同理。偏好已证明窄斩杀且不额外添加无观察收益的M。要求开发执行无错误。全5版选拔齐后，仍按原manifest最大主指标+可靠性唯一选版，最终门槛不变。预选择主次数9968，选择4720，合14688+当前辅助12=14700，保留5300到最终；最终3296。不要超预算额外探索。
+
+新增lineage_report.py生成LINEAGE.md（区别源码改动/仅牌表配置/未构建提案），card_tables.py生成CARD_STATISTICS.md，report_tables.py生成STATISTICS.md。最终都须重跑。REPORT已是详细执行中草稿，但首段/末段待完成和M结果/冻结结果必须最终重写。源组positive_seed_groups旧字段是至少一次翻胜组，不一定净正；核对BM20净正/6负/22零，DARCM20/7/21，mulligan-group-definition-audit.json，门槛未事后改。
+
+所有剩余交付步骤与11:09条目相同：读M结果、load、建具体选择plan→完整CLI核心/护栏→select_challenger→精确pack/extract→本地commit+freeze→两版runtime-NAME→100core/16guard最终CLI→recommend→精确推荐包Luna两座位（可选ClientSeat6）→统计/报告/谱系/预算/静态验牌→delivery_audit→停止本轮所有workers、SQLite备份/evidence+source archives→最终本地commit与ZIP/hash链接。仍不推远端、不提交课程。说明文档独立fresh worktree复验，避免sealed ledger继续开发或覆盖研究输出。
+
 ## 2026-11-14 11:09 UTC 更新
 
 最新提交d139559，之后新增card_tables与附表待提交。完整草稿REPORT.md已写，首段明确选拔/最终未开封；最终须重写为实际交付结论并移除待完成段。STATISTICS.md由report_tables生成；CARD_STATISTICS.md由card_tables生成。archive.py、delivery_audit.py已写，只在最终完成/停止写入器后运行。
