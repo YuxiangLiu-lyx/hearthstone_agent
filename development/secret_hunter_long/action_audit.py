@@ -22,6 +22,7 @@ def run(batch,left,right):
                 c['planned_action_available']+=bool(search.get('action'));c['plan_nodes']+=search.get('nodes',0)
                 c['time_cutoffs']+=search.get('stop_reason')=='time';c['node_cutoffs']+=search.get('stop_reason')=='nodes'
                 c['reply_calls']+=bool(reply);c['reply_comparable']+=bool(reply.get('comparable'));c['reply_endpoints']+=reply.get('candidates',0)
+                c['recovery_calls']+=reply.get('recovery_calls',0);c['recovery_supported']+=reply.get('recovery_supported',0);c['recovery_nodes']+=reply.get('recovery_nodes',0)
                 c['adaptive_depth_calls']+=bool(search.get('adaptive_depth'));c['lethal_proofs']+=bool(info.get('lethal',{}).get('guaranteed'))
                 c['learned_rule_changes']+=bool(info.get('learned_rule_changed'))
         divergence=None

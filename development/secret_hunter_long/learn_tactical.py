@@ -4,6 +4,7 @@ from collections import defaultdict
 import inspect
 import json
 from pathlib import Path
+import random
 import statistics
 from development.secret_hunter_long.study import HERE,RUN
 from development.secret_hunter_long.build import clone,audit
@@ -13,6 +14,12 @@ from development.secret_hunter_mcgs import train
 THRESHOLDS={'mana':[2,3,4],'current_mana':[2,3,4],'incoming':[3,5,7],'own_empty':[1],
     'coin':[1],'enemy_hand':[2,4],'juggler':[1],'wolf':[1],'health':[12,20],'opponent_hunter':[1]}
 DEPLOYABLE={'bow_clear','kill_juggler','kill_wolf','develop','hold_coin','trap','preserve_burn','face','power'}
+
+def confidence(groups):
+    pairs=[(sum(v),len(v)) for v in groups.values()];rng=random.Random(20261114);samples=[]
+    for _ in range(10000):
+        chosen=rng.choices(pairs,k=len(pairs));samples.append(sum(x[0] for x in chosen)/sum(x[1] for x in chosen))
+    samples.sort();return [samples[250],samples[9749]]
 
 def match(f,rule):
     if not rule.get('feature'):return True
@@ -33,7 +40,7 @@ def dataset(manifest,split):
             data.append({'source':src,'sample':sample,'outcomes':outcomes})
     return data
 
-def evaluate(data,rule):
+def evaluate(data,rule,with_interval=False):
     byseed=defaultdict(list);flips=reg=first=later=0;basewins=wins=0;support=set();positive=set();negative=set()
     for p in data:
         src=p['source'];b=p['outcomes']['baseline'];chosen=b
@@ -44,10 +51,12 @@ def evaluate(data,rule):
         if delta<0:negative.add(src['seed'])
         if chosen is not b and chosen['actions_changed']:
             support.add(src['case']);first+=chosen['first_changed'];later+=chosen['later_changed']
-    return {'n':len(data),'seed_groups':len(byseed),'baseline_wins':basewins,'chosen_wins':wins,'flips':flips,'regressions':reg,
+    result={'n':len(data),'seed_groups':len(byseed),'baseline_wins':basewins,'chosen_wins':wins,'flips':flips,'regressions':reg,
        'net':flips-reg,'changed_roots':len(support),'first_changed_futures':first,'later_changed_futures':later,
        'positive_seed_groups':len(positive),'negative_seed_groups':len(negative),
        'seed_equal_gain':statistics.mean(statistics.mean(v) for v in byseed.values()) if byseed else 0}
+    if with_interval:result['gain_seed_cluster_95']=confidence(byseed)
+    return result
 
 def teacher(data):
     sources=defaultdict(dict)
@@ -63,7 +72,10 @@ def teacher(data):
         a+=base['win'];b+=chosen['win'];flips+=chosen['win']>base['win'];reg+=chosen['win']<base['win']
         choices.append({'case':cid,'source_seed':src['seed'],'route':best,'selection_worlds':[s for s in worlds if s!=0],
             'heldout_world':0,'baseline_win':base['win'],'teacher_win':chosen['win']})
+    grouped=defaultdict(list)
+    for c in choices:grouped[c['source_seed']].append(c['teacher_win']-c['baseline_win'])
     return {'n':len(choices),'baseline_wins':a,'teacher_wins':b,'flips':flips,'regressions':reg,'net':flips-reg,'choices':choices,
+        'source_seed_groups':len(grouped),'gain_seed_cluster_95':confidence(grouped),
         'scope':'Offline teacher selects from alternate deck-order/RNG worlds1+, then evaluated on untouched original-world outcome0. Original simulated hidden hands remain fixed; not an executable public-only online oracle.'}
 
 def run(batch,arm,candidate_name=None):
@@ -87,7 +99,7 @@ def run(batch,arm,candidate_name=None):
         train.atomic(lock,{'rule':rule,'training':r,'penalized_score':score,'tried':len(options),'eligible':len(scored),
           'validation_gate':'net >=3 and >=3 positive source seed groups, then actual stateless policy source replays before independent full games'})
         train.atomic(RUN/f'tactical-training-search-{batch}-{arm}.json',search)
-    frozen=json.loads(lock.read_text());validation=dataset(manifest,'validation');valid=evaluate(validation,frozen['rule'])
+    frozen=json.loads(lock.read_text());validation=dataset(manifest,'validation');valid=evaluate(validation,frozen['rule'],True)
     passed=bool(frozen['rule']['route'] and valid['net']>=3 and valid['positive_seed_groups']>=3)
     result={**frozen,'validation':valid,'teacher':teacher(validation),'passed_fixed_route_label_gate':passed,
        'route_diagnostics_not_selection':{r:{split:evaluate(ps,{'route':r,'feature':None}) for split,ps in [('train',training),('validation',validation)]} for r in sorted({r for p in training+validation for r in p['outcomes']}-{'baseline'})}}

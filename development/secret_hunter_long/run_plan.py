@@ -14,8 +14,13 @@ def main():
     plan=json.loads(a.plan.read_text());digest=sha(a.plan);db=train.connect(RUN);manifest=train.meta(db,'manifest')
     while True:
         assert time.time()<manifest['candidate_generation_deadline']
-        row=db.execute('select status from batches where id=?',(plan['wait_for'],)).fetchone()
-        if row and row['status']=='done':break
+        if plan.get('wait_for'):
+            row=db.execute('select status from batches where id=?',(plan['wait_for'],)).fetchone()
+            ready=bool(row and row['status']=='done')
+        else:
+            rows=db.execute('select status from cf_jobs where kind=?',(plan['wait_cf'],)).fetchall()
+            ready=bool(rows and all(r['status']=='done' for r in rows) and not train.meta(db,'cf_pid'))
+        if ready:break
         time.sleep(5)
     for args in plan['commands']:
         assert sha(a.plan)==digest and not train.meta(db,'final_opened',False)
