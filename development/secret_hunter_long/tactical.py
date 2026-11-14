@@ -69,6 +69,7 @@ def mine(batch,arm,cap,samples,balance_families=False):
         # Earliest legitimate fork, not the visually worst late state.
         z,available=eligible[0];s=z['state'];cid=f't-{arm}-{r["seed"]}-{r["opponent"]}-s{r["seat"]}-q{s["seq"]}'
         candidates.append({'case':cid,'arm':arm,'seed':r['seed'],'seat':r['seat'],'seq':s['seq'],
+            'actual_first':r['first_player']==r['seat'],
             'source_score':r['score'],'state':s,'state_digest':digest(s),'opponent_spec':pop[r['opponent']],
             'game_path':str(folder.relative_to(ROOT)),'features':features(s),
             'split':'validation' if r['seed']%5 in (0,1) else 'train','routes':['baseline']+available[:5],

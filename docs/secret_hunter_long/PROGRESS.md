@@ -1,5 +1,37 @@
 # 执行中检查点
 
+## 2026-11-14 10:00 UTC 更新（以下优先于后面的旧检查点）
+
+最近提交 `996af8e`（此前 `8073855`），之后有新候选/分析器未提交。工作仍继续，最终种子未打开。`REPORT.md` 尚待最后冻结结果生成，已写逐动作 `CASE_STUDIES.md`、`REPRODUCE.md`、`SOURCES.md`。
+
+首批完整：B608/720、DARC617/720（19翻胜10翻败，主指标+1.8056pp，CI−.1389到3.9583）、DWOLF621/720（27/14，主指标+2.1528pp，CI−.5556到5.0694）。都只是开发信号。逐卡完整分层在 `analysis/deck-screen.json`，六个案例引擎逐状态重放全部吻合。DWOLF 的恐狼统计为两张总计，不能把所有489次使用归给替换卡。
+
+mechanism-core 仍进行：B202/240；KO208/240，14翻胜8翻败，主指标+1.4583pp，区间宽；TMILL202/240，五局真正同状态动作分歧，零终局改变，归档不进入下一轮；TRPLY214/240，18翻胜6翻败，128局真实动作分歧，主指标+3.3333pp、CI−1.875到9.1667，需要独立复验；BL2 尚在跑。TRPLY真实节点数657005 vs B460391，最大节点/时间限额相同但实际工作量更多，不能说平均成本相同；两者我方阶段时间截断均0。TRPLY没有恢复专用计数，action_audit中的 recovery_metrics_calls=0 表示未记录，不是没有执行恢复。
+
+第一轮战术4771标签（含10烟雾）完成，无新增错误、全部终局胜者1/2。学习入口已运行：训练规则 develop、mana<3，648未来/36训练组净+7；432留出未来/24组净−9（17翻胜26翻败），拒绝，不生成BT1。多世界教师在144留出根的原世界108→110（3/1），CI跨零。下一轮不扩模型，先补家族覆盖；首轮339/360根Astra、15Bot2、6Bot1。新增 `--balance-families` 采样，下一批每组六根目标3Astra/2Bot2/1Bot1，仍最早T1–5分岔、胜负都含。
+
+固定留陷阱确认全部完成：B144起手/48组107→135（36/8），DARC106→136（37/7）；全3600起手各命中144=4%。条件增益19.44/20.83pp不能称全局收益。两个规则通过事先net>=3、>=3正组门槛，BM/DARCM各144次实际CLI输出都与锁定标签动作相同，最大约.10s。`opening_runtime.py` 最初误把待玩家一换牌时的玩家二可见开局直接当CLI决策状态，返回空动作；已改成真实引擎先执行待处理对手换牌再probe，记录 `opening-runtime-probe-fix.json`。此隔离探测错误不影响已完成终局标签，候选未改。
+
+新不可变候选：TRPLY2修复下一回合英雄攻击资格，实际引擎验证旧投影漏掉“上一回合已攻击→下一回合装备弓后攻击”，新版生成的攻击被引擎接受；同32回应+16恢复预算，额外记录覆盖计数。`recovery-refresh-check.json`。WOOZE=DWOLF父代再误导换第二软泥怪，相对B恰好两张，实际submit_deck通过。BML2、DARCL2、DARCML2分离已确认M与L2组合，均真实验牌。24项BL2边界测试全部通过，新文件 `check_face_lethal.py` 和 docs/face-lethal-checks.json。
+
+已定义的主线后台顺序（只能跑这些明确命令，不自动提代码）：
+
+1. 当前 continue_defined：mechanism-core → lethal-guard（B/BL2，4护栏组51403000起）。
+2. run_plan coverage-plan：等lethal-guard完成，coverage-core B/DARC新50组51404000起，各600局；随后两版各300根、3未来、家族分层入CF队列。学习必须显式分别 `learn_tactical --batch coverage-core --arm B --candidate-name BT2` 与 DARC/DARCT2，避免复用BT1名字。
+3. run_plan recovery-fix-plan：等coverage-core完成，B/TRPLY/TRPLY2新20组51407000起。先于结果写了 `response-transfer-gate.json`：正主指标、各家族回归<=2.5pp、无错误、至少10局实际动作分歧；两版符合时最高主指标，平手选修正TRPLY2。过门后必须Codex实际读结果，再构造M/回应与跨DARC的新20组因子对照，不能自动提代码。
+4. run_plan two-card-plan：等recovery-fix完成，B/DWOLF/KO/WOOZE新30组51408000起，两个单卡父代都重测。
+5. run_plan mulligan-combination-plan：等two-card完成，B/BM/BL2/BML2/DARC/DARCM/DARCL2/DARCML2新30组51409000起，共2880自然频率整局，分离卡组、M、L2和组合。含M或换卡的组合不适用独立BL2例外。
+
+CF当前空闲；confirmation-queue已完成全部591新留牌标签，总mulligan2516。总CF尝试7375=7287完成+88早期harness错误。等coverage-core挖好新根后再运行 tactical 队列；第一轮末次结果和规则锁都保留。若BT2/DARCT2通过固定路线门槛，学习器会入队真实无状态候选续局，必须跑完并比较实际终局后再自然整局。
+
+仍需：监控完成批次，逐个 comparisons/action_audit；在现有两牌表因子对照后决定少数候选。总已定义完整局数9896（不含辅助），至少5000预留最终，选型样本须控制在总非最终15000以内。若加入回应/M迁移20组8臂=1920，则选择池可用30–40核心组+8护栏、约4–5臂，事先锁计划，不能超过预算；最终每版100核心+16护栏仍保持。最终候选唯一后release prepare、study freeze、本地提交，再打开完整CLI最终。建议先用新pilot seed51400010–11做6并发CLI吞吐/2秒检查，通过后才考虑选择/最终6并发，否则保持3。完整最终3并发约1.85h，仍有充分12h预算。
+
+`study.py` 已修复selection guard阶段：护栏用cli_development执行避免旧分析器假定有Astra/Bot2；最终唯一选择须在核心+护栏都齐后按预注册最大主指标和可靠性手动/新入口确认，不能让护栏覆盖选型结论。archive去掉继承的不存在Y1。`learn_tactical` 生成规则限T1–5并记录parent_action；实际policy CF能统计动作差。候选都不可变，任何改代码另取名字。
+
+最终还要精确ZIP冷启动/故障/seq入口检查、真实Luna两座位链路（已完成开发B一次47动作）、所有来源/配对CI/动作分母/失败/预算和谱系状态、tar哈希与SQLite完整性、唯一推荐ZIP。旧Luna47动作成功记录仍在，首launcher失败保留。No push，无课程提交。
+
+---
+
 原任务全文：`runs/long-20261114/request.txt`。原仓库位于 `/Users/liuyuxiang/developer/hearthstone`；本轮所有工作在 `/Users/liuyuxiang/developer/hearthstone-long-20261114`，Python `.venv/bin/python`。不推远端、不提交课程。
 
 固定预算与种子：`runs/long-20261114/manifest.json` 和 `PLAN.md`。预算从 manifest created 起 12 小时（约 2026-11-14 08:44 UTC），开发截止 8.5 小时，留出 3.5 小时。20,000 整局、24,000 CF、至少预留 5,000 整局。独立最终每版 100 核心组+16 护栏组，共 1,648 场。最终尚未开封。
