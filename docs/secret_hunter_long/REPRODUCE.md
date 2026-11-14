@@ -125,6 +125,19 @@ CF 执行器只处理已入队任务；生成新任务时必须使用归档的�
 
 ## 封存与完整性
 
+### 仅复跑最终两版
+
+在独立源码worktree中使用封存的同一版本与课程环境。推荐从`archives.json`的源码SHA建立detached worktree；只使用source tar时，解包后先`git init`、`git add -A`、`git commit`建立本地快照，供运行清单记录。证据tar解包后得到`long-20261114/`，其中包含原始冻结ZIP，不需要重新打包候选，也不需要重新训练。
+
+```sh
+.venv/bin/python -m development.secret_hunter_long.reproduce_frozen --source-run /ABSOLUTE/EVIDENCE/long-20261114 --verify-only
+.venv/bin/python -m development.secret_hunter_long.reproduce_frozen --source-run /ABSOLUTE/EVIDENCE/long-20261114 --run "$PWD/runs/frozen-replication"
+```
+
+入口先核对所有引擎资源的相对路径哈希、依赖版本、冻结对手/驱动、ZIP和候选指纹，运行静态校验及真实submit_deck。它拒绝覆盖任何既有账本，建立新的12小时预算和仅用于本次复跑的账本，将引擎绝对路径迁移明确记录在reproduction.json。随后打印两条带`HUNTER_LONG_RUN`的完整核心/护栏CLI命令，按顺序执行即可；相同命令可断点续跑。原冻结范围及晋级门槛不变。这是对已见种子的复现，不是新增独立留出。
+
+在该独立worktree中用相同`HUNTER_LONG_RUN`环境变量运行两版runtime（候选路径指向新RUN/frozen/NAME/secret-hunter）、comparisons和release recommend，可重算工程验收与冻结结论。文档与dist输出仍为固定文件名，所以必须使用独立worktree，避免覆盖本轮交付。原始证据账本及绝对路径不做隐式修改。
+
 停止全部本轮写入器、确认无running尝试并完成推荐后，运行 `development.secret_hunter_long.archive`。该入口检查固定引擎/对手及SQLite完整性，生成一致的 `ledger-backup.sqlite`、逐文件SHA清单、原始证据tar和当前git源码tar；哈希记录在 `docs/secret_hunter_long/archives.json`。Skill提交ZIP与研究tar彼此独立，只有前者受课程单文件夹和10MB要求约束。
 
 恢复证据时，将backup复制为ledger.sqlite；若换了工作目录，必须显式记录数据库与请求中的路径迁移。运行环境中的时间预算可能使不同硬件提前截断小范围搜索，因此可复验是指固定代码、输入、种子、引擎和预算协议，不保证任意负载下所有启发式搜索逐指令一致。
