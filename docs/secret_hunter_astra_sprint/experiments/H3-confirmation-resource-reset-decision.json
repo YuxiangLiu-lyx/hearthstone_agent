@@ -1,0 +1,224 @@
+{
+  "created": 1794726403.3456461,
+  "decision": "advance_to_selection",
+  "candidate": "DA2",
+  "parent": "DARCL2",
+  "batch": "confirmation-arcane-resource-reset",
+  "report_sha256": "41df1c03b0db2992e79b4a9dc75e3a7c3d5ef76528f20ee6f435de70b95a3774",
+  "confirmation_plan_sha256": "4ffbfde78059e194d2e0acacdb23ec2c1786b236a3098e42747325285a5856d8",
+  "resource_reset_sha256": "e5d87b587e363c6294b3bc7160791008ade743a4b2c3d22ecc8330fd0831c506",
+  "primary": {
+    "n_per_arm": 480,
+    "seed_clusters": 80,
+    "a_wins": 376,
+    "b_wins": 388,
+    "a_rate": 0.7833333333333333,
+    "b_rate": 0.8083333333333333,
+    "gain": 0.025,
+    "gain_seed_cluster_95": [
+      0.00625,
+      0.04375
+    ],
+    "gain_one_sided_90_lower": 0.0125,
+    "a_only_wins": 5,
+    "b_only_wins": 17,
+    "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+    "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+    "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+  },
+  "by_group": {
+    "astra": {
+      "n_per_arm": 480,
+      "seed_clusters": 80,
+      "a_wins": 376,
+      "b_wins": 388,
+      "a_rate": 0.7833333333333333,
+      "b_rate": 0.8083333333333333,
+      "gain": 0.025,
+      "gain_seed_cluster_95": [
+        0.00625,
+        0.04375
+      ],
+      "gain_one_sided_90_lower": 0.0125,
+      "a_only_wins": 5,
+      "b_only_wins": 17,
+      "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+      "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+      "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+    },
+    "bot1": {
+      "n_per_arm": 160,
+      "seed_clusters": 80,
+      "a_wins": 148,
+      "b_wins": 147,
+      "a_rate": 0.925,
+      "b_rate": 0.91875,
+      "gain": -0.00625,
+      "gain_seed_cluster_95": [
+        -0.025,
+        0.0125
+      ],
+      "gain_one_sided_90_lower": -0.01875,
+      "a_only_wins": 2,
+      "b_only_wins": 1,
+      "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+      "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+      "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+    },
+    "bot2": {
+      "n_per_arm": 320,
+      "seed_clusters": 80,
+      "a_wins": 292,
+      "b_wins": 293,
+      "a_rate": 0.9125,
+      "b_rate": 0.915625,
+      "gain": 0.003125,
+      "gain_seed_cluster_95": [
+        -0.015625,
+        0.021875
+      ],
+      "gain_one_sided_90_lower": -0.009375,
+      "a_only_wins": 4,
+      "b_only_wins": 5,
+      "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+      "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+      "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+    }
+  },
+  "by_opponent": {
+    "astra-board-proxy": {
+      "n_per_arm": 160,
+      "seed_clusters": 80,
+      "a_wins": 113,
+      "b_wins": 121,
+      "a_rate": 0.70625,
+      "b_rate": 0.75625,
+      "gain": 0.05,
+      "gain_seed_cluster_95": [
+        0.0125,
+        0.09375
+      ],
+      "gain_one_sided_90_lower": 0.025,
+      "a_only_wins": 2,
+      "b_only_wins": 10,
+      "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+      "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+      "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+    },
+    "astra-sticky-proxy": {
+      "n_per_arm": 160,
+      "seed_clusters": 80,
+      "a_wins": 122,
+      "b_wins": 122,
+      "a_rate": 0.7625,
+      "b_rate": 0.7625,
+      "gain": 0.0,
+      "gain_seed_cluster_95": [
+        -0.03125,
+        0.03125
+      ],
+      "gain_one_sided_90_lower": -0.01875,
+      "a_only_wins": 3,
+      "b_only_wins": 3,
+      "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+      "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+      "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+    },
+    "astra-tempo-proxy": {
+      "n_per_arm": 160,
+      "seed_clusters": 80,
+      "a_wins": 141,
+      "b_wins": 145,
+      "a_rate": 0.88125,
+      "b_rate": 0.90625,
+      "gain": 0.025,
+      "gain_seed_cluster_95": [
+        0.00625,
+        0.05
+      ],
+      "gain_one_sided_90_lower": 0.0125,
+      "a_only_wins": 0,
+      "b_only_wins": 4,
+      "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+      "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+      "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+    },
+    "bot1-mage-proxy": {
+      "n_per_arm": 160,
+      "seed_clusters": 80,
+      "a_wins": 148,
+      "b_wins": 147,
+      "a_rate": 0.925,
+      "b_rate": 0.91875,
+      "gain": -0.00625,
+      "gain_seed_cluster_95": [
+        -0.025,
+        0.0125
+      ],
+      "gain_one_sided_90_lower": -0.01875,
+      "a_only_wins": 2,
+      "b_only_wins": 1,
+      "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+      "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+      "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+    },
+    "bot2-face-proxy": {
+      "n_per_arm": 160,
+      "seed_clusters": 80,
+      "a_wins": 148,
+      "b_wins": 148,
+      "a_rate": 0.925,
+      "b_rate": 0.925,
+      "gain": 0.0,
+      "gain_seed_cluster_95": [
+        -0.01875,
+        0.01875
+      ],
+      "gain_one_sided_90_lower": -0.0125,
+      "a_only_wins": 1,
+      "b_only_wins": 1,
+      "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+      "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+      "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+    },
+    "bot2-trade-proxy": {
+      "n_per_arm": 160,
+      "seed_clusters": 80,
+      "a_wins": 144,
+      "b_wins": 145,
+      "a_rate": 0.9,
+      "b_rate": 0.90625,
+      "gain": 0.00625,
+      "gain_seed_cluster_95": [
+        -0.025,
+        0.0375
+      ],
+      "gain_one_sided_90_lower": -0.0125,
+      "a_only_wins": 3,
+      "b_only_wins": 4,
+      "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+      "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+      "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+    }
+  },
+  "reliability": {
+    "DARCL2": true,
+    "DA2": true
+  },
+  "flip_inspection_sha256": "36891891603eb2ccac282756070d56752b298b4127e755780a1027c8a857a436",
+  "action_audit_sha256": "d69e1b489e6b0ac91d6db4f602458dfaaece6116fbea2ee50226f60b16cdd7f0",
+  "review": {
+    "all_regressions_reviewed": 11,
+    "astra_regressions_reviewed": 5,
+    "astra_rescues": 17,
+    "action_path_differences": 255,
+    "mulligan_differences": 0,
+    "observations": [
+      "Board gains include cheap removal of Dire Wolf Alpha while conserving Kill Command or Hound; sticky T2 Arcane Shot on Knife Juggler preserves Hyena.",
+      "Regressions include clearing a 1-health Voidwalker instead of developing Secretkeeper, spending Coin earlier, delaying Bow for Flame Imp removal, and losing Deadly Shot against healthy large minions.",
+      "Public states differ from opening because the known deck changes; these are deck action paths, not same-state tactical evidence."
+    ]
+  },
+  "reason": "The complete preregistered fresh confirmation has positive Astra equal-proxy gain with reliable CLI execution. Advance the unchanged sole DA2 challenger to independent selection; final promotion remains entirely conditional on the frozen holdout gates.",
+  "no_retuning": true
+}

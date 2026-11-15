@@ -1,0 +1,61 @@
+{
+  "created": 1794726403.5089312,
+  "arms": [
+    "DARCL2",
+    "DA2"
+  ],
+  "workers": 6,
+  "capacity": {
+    "created": 1794726403.5088582,
+    "before_selection": true,
+    "groups": 170,
+    "guard_groups": 16,
+    "conservative_games_per_minute": 45.567010396389634,
+    "measured_rates": [
+      53.60824752516427,
+      54.48814053381305
+    ],
+    "workers": 6,
+    "used_full_attempts": 7937,
+    "selection_games": 2368,
+    "final_games": 4976,
+    "protocol_pack_margin_s": 2700,
+    "reserved_auxiliary_attempts": 16,
+    "recovered_resource_capacity_sha256": "71a5f9d72cc6fdefbe3cace42491d0d665aaf0897fb9d09462428eb927f901b1",
+    "earlier_capacity_evidence_retained": [
+      {
+        "batch": "round3-arcane",
+        "games_per_minute": 53.8968447606114,
+        "reason": "Earlier resource epoch or a capacity pilot; recovered pilot is included separately."
+      },
+      {
+        "batch": "interleaved-scheduler-pilot",
+        "games_per_minute": 6.670060029767399,
+        "reason": "Earlier resource epoch or a capacity pilot; recovered pilot is included separately."
+      },
+      {
+        "batch": "recovery-pilot-1",
+        "games_per_minute": 53.60824752516427,
+        "reason": "Earlier resource epoch or a capacity pilot; recovered pilot is included separately."
+      }
+    ]
+  },
+  "interleave_arms": true,
+  "core": {
+    "batch": "selection-core",
+    "start": 62250000,
+    "seeds": 80
+  },
+  "guardrail": {
+    "batch": "selection-guard",
+    "start": 62251000,
+    "seeds": 8
+  },
+  "fingerprints": {
+    "DARCL2": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4",
+    "DA2": "959f04608a56f0c1a48ac89f8d32bf50d4f12638a9aace6ff8e6475a79f7e3ef"
+  },
+  "development_decision_sha256": "04f8c0398ba8fd23a8df650a47ca53e7d84f8c46a0f98529ea3c74465537c793",
+  "simulation_plan_sha256": "30471a99e34c2a82a8ad9753d7312ddb55deaee345a664c4cd691cf673f00d62",
+  "selection_rule": "Among reliable challengers: Astra macro, within 0.5pp common-draw positive score above 10, fewer changed source lines, stable name. No tuning after opening."
+}
