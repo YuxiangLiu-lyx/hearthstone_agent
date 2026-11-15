@@ -1,13 +1,16 @@
 {
-  "archive_sha256": "0574262e650c51eacc9ed7771de51b280396309a15f7e8cf7ba0caa8a774509e",
-  "archive_members": 16751,
+  "created": 1794735470.8758981,
+  "passed": true,
+  "archive_sha256": "90df3d10f0a67b941f4af5f551305969a4af673ef0af35bf4883ca1049f11a2f",
+  "archive_bytes": 67063125,
+  "actually_extracted_to_temporary_directory": true,
   "checks": {
     "verify_evidence": {
       "verified": true,
-      "indexed_files": 16749,
+      "indexed_files": 16838,
       "charged_attempts": {
-        "attempts": 5961,
-        "auxiliary_games": 8,
+        "attempts": 15273,
+        "auxiliary_games": 20,
         "cf_attempts": 7559
       },
       "development_contrasts_recomputed": {
@@ -64,16 +67,119 @@
       },
       "scope": "Integrity and recomputation of completed development evidence only. Partial confirmation and resource-pilot outcomes are not inspected; no missing final sample is manufactured."
     },
-    "verify_delivery": {
+    "reproduce_frozen": {
       "verified": true,
-      "zip_sha256": "0130813f56655e7b802e2cbbe539526f6ab2a1a8f1acf4d27af6e5fdee5a9a0e",
-      "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4",
+      "arms": [
+        "DARCL2",
+        "DA2"
+      ],
       "engine_resources": 341,
-      "static_and_submit_deck_valid": true,
-      "submit_deck_cli_s": 0.09669583299546503,
-      "extracted": null,
-      "scope": "Original fallback identity and environment only. This command does not manufacture or rerun a final paired comparison."
+      "seeds": {
+        "final_core": [
+          62350000,
+          62350169
+        ],
+        "final_guard": [
+          62450000,
+          62450015
+        ]
+      },
+      "ledger_created": false
+    },
+    "verify_final": {
+      "verified": true,
+      "arms": [
+        "DARCL2",
+        "DA2"
+      ],
+      "pools": {
+        "final-core": {
+          "groups": 170,
+          "games_per_arm": 2040,
+          "wins": {
+            "DARCL2": 1737,
+            "DA2": 1767
+          },
+          "comparisons_recomputed": {
+            "DA2": {
+              "primary": {
+                "n_per_arm": 1020,
+                "seed_clusters": 170,
+                "a_wins": 805,
+                "b_wins": 826,
+                "a_rate": 0.7892156862745098,
+                "b_rate": 0.8098039215686275,
+                "gain": 0.020588235294117647,
+                "gain_seed_cluster_95": [
+                  0.00784313725490196,
+                  0.03431372549019608
+                ],
+                "gain_one_sided_90_lower": 0.011764705882352941,
+                "a_only_wins": 15,
+                "b_only_wins": 36,
+                "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+                "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+                "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+              },
+              "all": {
+                "n_per_arm": 2040,
+                "seed_clusters": 170,
+                "a_wins": 1737,
+                "b_wins": 1767,
+                "a_rate": 0.8514705882352941,
+                "b_rate": 0.8661764705882353,
+                "gain": 0.014705882352941176,
+                "gain_seed_cluster_95": [
+                  0.006372549019607843,
+                  0.023529411764705882
+                ],
+                "gain_one_sided_90_lower": 0.009313725490196078,
+                "a_only_wins": 24,
+                "b_only_wins": 54,
+                "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+                "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+                "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+              }
+            }
+          }
+        },
+        "final-guard": {
+          "groups": 16,
+          "games_per_arm": 448,
+          "wins": {
+            "DARCL2": 416,
+            "DA2": 411
+          },
+          "comparisons_recomputed": {
+            "DA2": {
+              "primary": null,
+              "all": {
+                "n_per_arm": 448,
+                "seed_clusters": 16,
+                "a_wins": 416,
+                "b_wins": 411,
+                "a_rate": 0.9285714285714286,
+                "b_rate": 0.9174107142857143,
+                "gain": -0.011160714285714286,
+                "gain_seed_cluster_95": [
+                  -0.03794642857142857,
+                  0.015625
+                ],
+                "gain_one_sided_90_lower": -0.029017857142857144,
+                "a_only_wins": 12,
+                "b_only_wins": 7,
+                "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+                "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+                "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+              }
+            }
+          }
+        }
+      },
+      "recommended": "DA2",
+      "promoted": true,
+      "scope": "Both final pools fully recomputed from the exported task ledger, including all opponent/seat strata and paired source-seed intervals when two arms exist. This is replication of seen evidence, not a new holdout."
     }
   },
-  "scope": "Actual extraction into a new temporary directory; full archive integrity, ledger/statistics/paired hidden-world audit, engine identity, original ZIP and real submit_deck entry verified. No new game attempts."
+  "scope": "All checks ran against the extracted portable archive. Temporary directory removed afterward; no new game attempts."
 }

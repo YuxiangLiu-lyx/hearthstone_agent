@@ -1,34 +1,65 @@
 {
-  "created": 1794720796.778157,
-  "recommended": "DARCL2",
+  "created": 1794734711.2273438,
+  "recommended": "DA2",
   "challenger": "DA2",
-  "promoted": false,
-  "reason": "The user explicitly chose to keep the current host load and prioritize original DARCL2 acceptance, ending the optional recovery wait. DA2 independent confirmation remains incomplete; no selection or final comparison outcomes were opened. Use the user-authorized exact original DARCL2 fallback. This is insufficient promotion evidence, not a measured negative DA2 result.",
-  "paired_final_validation_complete": false,
-  "selection_skipped": true,
+  "promoted": true,
+  "final_pools_complete": true,
+  "paired_final_validation_complete": true,
+  "source_anchor_commit": "8c158c07280788d7b7872476dd728ba43e3e71ca",
+  "frozen_research_commit": "28685df4c0a8c666b1caac54dab49137209d8307",
   "gates": {
-    "independent_confirmation_complete": false,
-    "independent_selection_complete": false,
-    "final_paired_samples_complete": false,
-    "exact_fallback_sha_verified": true,
-    "fallback_protocol_passed": true,
-    "fallback_phase_and_2s_checks_passed": true,
-    "loaded_concurrency6_action_stability": false
+    "has_challenger": true,
+    "astra_gain_at_least_2pp": true,
+    "one_sided_90_lower_positive": true,
+    "two_proxies_nonnegative": true,
+    "bot1_within_2pp": true,
+    "bot2_within_3pp": true,
+    "guard_within_2pp": true,
+    "baseline_reliable": true,
+    "challenger_reliable": true
   },
-  "primary": null,
-  "family_gains": null,
-  "astra_proxy_gains": null,
-  "guard_gain": null,
-  "zip": "/Users/liuyuxiang/developer/hearthstone-astra-sprint-20261114/dist/secret-hunter-long-20261114.zip",
-  "zip_sha256": "0130813f56655e7b802e2cbbe539526f6ab2a1a8f1acf4d27af6e5fdee5a9a0e",
-  "bytes": 44789,
-  "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4",
-  "source_commit": "8c158c07280788d7b7872476dd728ba43e3e71ca",
-  "research_source_commit": "fc295ed42c0efe252e9295343bc304fdf3cbe5ff",
-  "final_exact_unpacked_path": "runs/astra-sprint-20261114/frozen/DARCL2/secret-hunter",
+  "reliability": {
+    "DARCL2": true,
+    "DA2": true
+  },
+  "primary": {
+    "n_per_arm": 1020,
+    "seed_clusters": 170,
+    "a_wins": 805,
+    "b_wins": 826,
+    "a_rate": 0.7892156862745098,
+    "b_rate": 0.8098039215686275,
+    "gain": 0.020588235294117647,
+    "gain_seed_cluster_95": [
+      0.00784313725490196,
+      0.03431372549019608
+    ],
+    "gain_one_sided_90_lower": 0.011764705882352941,
+    "a_only_wins": 15,
+    "b_only_wins": 36,
+    "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+    "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+    "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+  },
+  "family_gains": {
+    "astra": 0.020588235294117647,
+    "bot1": 0.0,
+    "bot2": 0.013235294117647059
+  },
+  "astra_proxy_gains": {
+    "astra-board-proxy": 0.020588235294117647,
+    "astra-sticky-proxy": 0.023529411764705882,
+    "astra-tempo-proxy": 0.01764705882352941
+  },
+  "guard_gain": -0.011160714285714286,
+  "zip": "/Users/liuyuxiang/developer/hearthstone-astra-sprint-20261114/dist/secret-hunter-astra-sprint.zip",
+  "zip_sha256": "a8737cf51fdce8e6248f058745c42d2f417469cf705ddadab52e674089f591ed",
+  "bytes": 44788,
+  "source_sha256": "959f04608a56f0c1a48ac89f8d32bf50d4f12638a9aace6ff8e6475a79f7e3ef",
+  "final_exact_unpacked_path": "runs/astra-sprint-20261114/frozen/DA2/secret-hunter",
   "deck": {
     "candidate": "secret-hunter",
-    "fingerprint": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4",
+    "fingerprint": "959f04608a56f0c1a48ac89f8d32bf50d4f12638a9aace6ff8e6475a79f7e3ef",
     "ordered_cards": [
       "EX1_029",
       "EX1_029",
@@ -53,7 +84,7 @@
       "EX1_538",
       "EX1_539",
       "EX1_539",
-      "EX1_617",
+      "DS1_185",
       "NEW1_031",
       "NEW1_031",
       "DS1_070",
@@ -62,12 +93,18 @@
       "DS1_185"
     ],
     "hero_class": "HUNTER",
-    "deck_sha256": "af78480d96fd2fc11b77f0ca8f17c5703a6bda5934c2041622f762ca0128b7d1",
-    "changes": [],
-    "replacements": 0,
-    "retained": 30,
+    "deck_sha256": "6ad374011a6a142dc182b23cdfdc4fc367024f1ceef9181d43df46cc2aa7d498",
+    "changes": [
+      {
+        "slot": 23,
+        "removed": "EX1_617",
+        "added": "DS1_185"
+      }
+    ],
+    "replacements": 1,
+    "retained": 29,
     "krush_line": false,
-    "static_validation": "Validating skill /Users/liuyuxiang/developer/hearthstone-astra-sprint-20261114/runs/astra-sprint-20261114/frozen/DARCL2/secret-hunter\n  SKILL.md: OK (name 'secret-hunter-program', model luna = GPT-6-Luna (Codex), effort medium)\n  deck: chosen by the agent via MCP submit_deck at the start of each game (deck.json is optional)\n  scripts/: 22 file(s)\nOK (smoke game skipped)\n",
+    "static_validation": "Validating skill /Users/liuyuxiang/developer/hearthstone-astra-sprint-20261114/runs/astra-sprint-20261114/frozen/DA2/secret-hunter\n  SKILL.md: OK (name 'secret-hunter-program', model luna = GPT-6-Luna (Codex), effort medium)\n  deck: chosen by the agent via MCP submit_deck at the start of each game (deck.json is optional)\n  scripts/: 22 file(s)\nOK (smoke game skipped)\n",
     "actual_submit_deck": {
       "seq": 701,
       "action": {
@@ -97,7 +134,7 @@
           "EX1_538",
           "EX1_539",
           "EX1_539",
-          "EX1_617",
+          "DS1_185",
           "NEW1_031",
           "NEW1_031",
           "DS1_070",
@@ -107,8 +144,8 @@
         ]
       }
     },
-    "elapsed_s": 0.14940366600058042,
+    "elapsed_s": 0.028889125009300187,
     "valid": true
   },
-  "scope": "Original unchanged fallback only. No new formal score and no demonstrated Astra improvement. User makes the Slack submission."
+  "scope": "Local fixed proxies only. Historical formal score 10 is unchanged. User submits to Slack."
 }

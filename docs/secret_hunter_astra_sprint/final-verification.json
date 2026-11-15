@@ -1,0 +1,94 @@
+{
+  "verified": true,
+  "arms": [
+    "DARCL2",
+    "DA2"
+  ],
+  "pools": {
+    "final-core": {
+      "groups": 170,
+      "games_per_arm": 2040,
+      "wins": {
+        "DARCL2": 1737,
+        "DA2": 1767
+      },
+      "comparisons_recomputed": {
+        "DA2": {
+          "primary": {
+            "n_per_arm": 1020,
+            "seed_clusters": 170,
+            "a_wins": 805,
+            "b_wins": 826,
+            "a_rate": 0.7892156862745098,
+            "b_rate": 0.8098039215686275,
+            "gain": 0.020588235294117647,
+            "gain_seed_cluster_95": [
+              0.00784313725490196,
+              0.03431372549019608
+            ],
+            "gain_one_sided_90_lower": 0.011764705882352941,
+            "a_only_wins": 15,
+            "b_only_wins": 36,
+            "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+            "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+            "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+          },
+          "all": {
+            "n_per_arm": 2040,
+            "seed_clusters": 170,
+            "a_wins": 1737,
+            "b_wins": 1767,
+            "a_rate": 0.8514705882352941,
+            "b_rate": 0.8661764705882353,
+            "gain": 0.014705882352941176,
+            "gain_seed_cluster_95": [
+              0.006372549019607843,
+              0.023529411764705882
+            ],
+            "gain_one_sided_90_lower": 0.009313725490196078,
+            "a_only_wins": 24,
+            "b_only_wins": 54,
+            "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+            "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+            "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+          }
+        }
+      }
+    },
+    "final-guard": {
+      "groups": 16,
+      "games_per_arm": 448,
+      "wins": {
+        "DARCL2": 416,
+        "DA2": 411
+      },
+      "comparisons_recomputed": {
+        "DA2": {
+          "primary": null,
+          "all": {
+            "n_per_arm": 448,
+            "seed_clusters": 16,
+            "a_wins": 416,
+            "b_wins": 411,
+            "a_rate": 0.9285714285714286,
+            "b_rate": 0.9174107142857143,
+            "gain": -0.011160714285714286,
+            "gain_seed_cluster_95": [
+              -0.03794642857142857,
+              0.015625
+            ],
+            "gain_one_sided_90_lower": -0.029017857142857144,
+            "a_only_wins": 12,
+            "b_only_wins": 7,
+            "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+            "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+            "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+          }
+        }
+      }
+    }
+  },
+  "recommended": "DA2",
+  "promoted": true,
+  "scope": "Both final pools fully recomputed from the exported task ledger, including all opponent/seat strata and paired source-seed intervals when two arms exist. This is replication of seen evidence, not a new holdout."
+}

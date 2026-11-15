@@ -2,26 +2,28 @@
 
 ## Latest HW2 Astra sprint (2026-11-15)
 
-**Resumed at 01:26 ET at the user's request.** Fixed-state resource checks have
-recovered; see the [continuation plan](docs/secret_hunter_astra_sprint/RESUME.md).
-The original budget and deadline remain in force, and DARCL2 stays recommended
-until a challenger passes every independent final gate. The report below is
-the completed first delivery and will be updated when this continuation closes.
+The sole final recommendation is **DA2**:
+[secret-hunter-astra-sprint.zip](dist/secret-hunter-astra-sprint.zip), SHA-256
+`a8737cf51fdce8e6248f058745c42d2f417469cf705ddadab52e674089f591ed` (44,788 bytes).
+It replaces one Deadly Shot with a second Arcane Shot; every other package
+member, including tactical code and mulligan rules, is byte-identical to DARCL2.
 
-For the last HW2 submission, the sole recommendation is the unchanged
-**DARCL2** [original ZIP](dist/secret-hunter-long-20261114.zip), SHA-256
-`0130813f56655e7b802e2cbbe539526f6ab2a1a8f1acf4d27af6e5fdee5a9a0e`.
-Four fresh paired development experiments did not establish a promotable
-challenger. DA2 confirmation remained incomplete after a host-load change;
-the user chose to retain that load and prioritize original-package acceptance.
-The exact package passed two real Luna and six ClientSeat games. Loaded-host
-six-worker action stability failed on two stress inputs and is disclosed.
-See the [sprint report](docs/secret_hunter_astra_sprint/REPORT.md),
-[paired development tables](docs/secret_hunter_astra_sprint/COMPARISONS.md),
-and [reproduction/evidence guide](docs/secret_hunter_astra_sprint/REPRODUCE.md).
-No new official score or completed final paired validation is claimed.
-The user handles the Slack submission. Earlier general-purpose releases below
-remain historical records with their original champion pointers.
+All 4,976 frozen final CLI games completed before outcomes were opened.
+Equal-weight Astra proxies improved **805/1,020 → 826/1,020 (+2.059 pp)**;
+the paired source-seed 95% interval is **[+0.784,+3.431] pp**, and the one-sided
+90% lower bound is **+1.176 pp**. All three Astra proxies improved. Bot 1 was
+unchanged, Bot 2 gained 1.324 pp, and guardrail loss was 1.116 pp: every
+preregistered promotion gate passed. Two real Luna and six ClientSeat games
+passed against the exact recommended package.
+
+See the [final report](docs/secret_hunter_astra_sprint/REPORT.md),
+[all opponent/seat comparisons](docs/secret_hunter_astra_sprint/STATISTICS.md),
+[key flips](docs/secret_hunter_astra_sprint/CASE_STUDIES.md), and
+[reproduction and evidence](docs/secret_hunter_astra_sprint/REPRODUCE.md).
+The original DARCL2 ZIP remains preserved as a fallback; the first delivery and
+host-load incident are retained in commit f10b363. No new formal course score
+is claimed. The user handles Slack submission. Earlier releases below remain
+historical records with their original champion pointers.
 
 ## Secret Hunter and teacher evaluation (2026-11-11)
 
