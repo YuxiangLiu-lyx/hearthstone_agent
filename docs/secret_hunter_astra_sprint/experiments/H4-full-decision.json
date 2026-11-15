@@ -1,0 +1,226 @@
+{
+  "created": 1794716227.4214349,
+  "candidate": "EHC",
+  "decision": "do_not_advance",
+  "reason": "Fresh 40-source full games show Astra gain zero (194/240 both, 2 rescues/2 regressions), board declines, and Bot1 declines one game. All four full-game regressions read before rejection. Counterfactual gain did not transfer to natural-frequency games. No combination with DA2.",
+  "primary": {
+    "n_per_arm": 240,
+    "seed_clusters": 40,
+    "a_wins": 194,
+    "b_wins": 194,
+    "a_rate": 0.8083333333333333,
+    "b_rate": 0.8083333333333333,
+    "gain": 0.0,
+    "gain_seed_cluster_95": [
+      -0.016666666666666666,
+      0.016666666666666666
+    ],
+    "gain_one_sided_90_lower": -0.008333333333333333,
+    "a_only_wins": 2,
+    "b_only_wins": 2,
+    "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+    "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+    "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+  },
+  "by_group": {
+    "astra": {
+      "n_per_arm": 240,
+      "seed_clusters": 40,
+      "a_wins": 194,
+      "b_wins": 194,
+      "a_rate": 0.8083333333333333,
+      "b_rate": 0.8083333333333333,
+      "gain": 0.0,
+      "gain_seed_cluster_95": [
+        -0.016666666666666666,
+        0.016666666666666666
+      ],
+      "gain_one_sided_90_lower": -0.008333333333333333,
+      "a_only_wins": 2,
+      "b_only_wins": 2,
+      "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+      "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+      "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+    },
+    "bot1": {
+      "n_per_arm": 80,
+      "seed_clusters": 40,
+      "a_wins": 73,
+      "b_wins": 72,
+      "a_rate": 0.9125,
+      "b_rate": 0.9,
+      "gain": -0.0125,
+      "gain_seed_cluster_95": [
+        -0.0375,
+        0.0
+      ],
+      "gain_one_sided_90_lower": -0.025,
+      "a_only_wins": 1,
+      "b_only_wins": 0,
+      "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+      "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+      "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+    },
+    "bot2": {
+      "n_per_arm": 160,
+      "seed_clusters": 40,
+      "a_wins": 145,
+      "b_wins": 145,
+      "a_rate": 0.90625,
+      "b_rate": 0.90625,
+      "gain": 0.0,
+      "gain_seed_cluster_95": [
+        -0.01875,
+        0.01875
+      ],
+      "gain_one_sided_90_lower": -0.0125,
+      "a_only_wins": 1,
+      "b_only_wins": 1,
+      "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+      "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+      "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+    }
+  },
+  "all_regressions_read": [
+    {
+      "opponent": "astra-sticky-proxy",
+      "seed": 62150419,
+      "seat": 2,
+      "a_win": 1,
+      "b_win": 0,
+      "a_game": "ff6de8eb42114508",
+      "b_game": "b9bea5ad560947dd",
+      "first_public_state_difference_index": 10,
+      "first_action_difference_index": 9,
+      "same_public_state": true,
+      "baseline_description": {
+        "type": "end_turn"
+      },
+      "candidate_description": {
+        "type": "attack",
+        "attacker": "Dire Wolf Alpha",
+        "target": "Voidwalker"
+      }
+    },
+    {
+      "opponent": "bot1-mage-proxy",
+      "seed": 62150419,
+      "seat": 1,
+      "a_win": 1,
+      "b_win": 0,
+      "a_game": "8e31f97df26c41de",
+      "b_game": "78320c93623f43e3",
+      "first_public_state_difference_index": 21,
+      "first_action_difference_index": 20,
+      "same_public_state": true,
+      "baseline_description": {
+        "type": "attack",
+        "attacker": "Hound",
+        "target": "Chillwind Yeti"
+      },
+      "candidate_description": {
+        "type": "attack",
+        "attacker": "Hound",
+        "target": "Water Elemental"
+      }
+    },
+    {
+      "opponent": "bot2-face-proxy",
+      "seed": 62150421,
+      "seat": 2,
+      "a_win": 1,
+      "b_win": 0,
+      "a_game": "5a6ffab5240a4a2c",
+      "b_game": "13bf356d7b154e0b",
+      "first_public_state_difference_index": 12,
+      "first_action_difference_index": 11,
+      "same_public_state": true,
+      "baseline_description": {
+        "type": "play_card",
+        "card": "Secretkeeper",
+        "position": 0
+      },
+      "candidate_description": {
+        "type": "play_card",
+        "card": "Kill Command",
+        "target": "Rexxar"
+      }
+    },
+    {
+      "opponent": "astra-board-proxy",
+      "seed": 62150427,
+      "seat": 1,
+      "a_win": 1,
+      "b_win": 0,
+      "a_game": "a696b5c541344e64",
+      "b_game": "09ba16d80dbd4b08",
+      "first_public_state_difference_index": 10,
+      "first_action_difference_index": 9,
+      "same_public_state": true,
+      "baseline_description": {
+        "type": "play_card",
+        "card": "Freezing Trap"
+      },
+      "candidate_description": {
+        "type": "play_card",
+        "card": "Animal Companion"
+      }
+    }
+  ],
+  "negative_control": "62150427 board seat1 T4 changes Freezing Trap to Animal Companion and loses, consistent with the preregistered risk of penalizing the public hand increase from a useful bounce. This does not establish a corrected replacement rule.",
+  "action_audit": {
+    "batch": "round4-hand-resource",
+    "left": "DARCL2",
+    "right": "EHC",
+    "denominators": {
+      "DARCL2": {
+        "games": 480,
+        "decisions": 13436,
+        "narrow_proof_games": 7,
+        "turn_search_calls": 11925,
+        "supported_roots": 11778,
+        "planned_action_available": 10355,
+        "plan_nodes": 961331,
+        "time_cutoffs": 0,
+        "node_cutoffs": 290,
+        "reply_calls": 10567,
+        "reply_comparable": 9352,
+        "reply_endpoints": 35884,
+        "recovery_calls": 0,
+        "recovery_supported": 0,
+        "recovery_nodes": 0,
+        "recovery_metrics_calls": 0,
+        "adaptive_depth_calls": 0,
+        "lethal_proofs": 901,
+        "narrow_proof_calls": 7,
+        "learned_rule_changes": 0
+      },
+      "EHC": {
+        "games": 480,
+        "decisions": 13399,
+        "narrow_proof_games": 8,
+        "turn_search_calls": 11902,
+        "supported_roots": 11759,
+        "planned_action_available": 10350,
+        "plan_nodes": 965454,
+        "time_cutoffs": 0,
+        "node_cutoffs": 294,
+        "reply_calls": 10562,
+        "reply_comparable": 9347,
+        "reply_endpoints": 35915,
+        "recovery_calls": 0,
+        "recovery_supported": 0,
+        "recovery_nodes": 0,
+        "recovery_metrics_calls": 0,
+        "adaptive_depth_calls": 0,
+        "lethal_proofs": 888,
+        "narrow_proof_calls": 8,
+        "learned_rule_changes": 0
+      }
+    },
+    "first_divergences": {
+      "same_state_tactical": 53
+    },
+    "scope": "same-deck comparisons isolate first action divergence; deck substitutions change public remaining-card counts at the initial state; TRPLY has no recovery counters, so zero recovery_metrics_calls means unavailable, not zero recovery work"
+  }
+}

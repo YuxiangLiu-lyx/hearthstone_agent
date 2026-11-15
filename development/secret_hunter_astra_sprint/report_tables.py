@@ -16,12 +16,25 @@ def main():
  db=ledger.connect(RUN);rec=json.loads((ROOT/'docs/secret_hunter_astra_sprint/recommendation.json').read_text());arm=rec['challenger'];freeze=json.loads((RUN/'final-freeze.json').read_text());reports={}
  for b in ('final-core','final-guard'):
   assert db.execute('select status from batches where id=?',(b,)).fetchone()[0]=='done';reports[b]=json.loads((RUN/'batches'/b/'report.json').read_text())
- lines=['# 冻结最终统计','',f'基线固定 DARCL2，唯一挑战者 {arm}。全部种子、两座位、对手和 ZIP 在最终开封前冻结；两池补齐后才读取胜负。',
- '置信区间重采完整来源种子 10,000 次（RNG 20261115），同种子的两个座位和所有对手共同抽取。三类 Astra 样本数相同，合并均值等于三代理等权胜率。百分点门槛用未四舍五入的数值判断。']
+ opening=(f'基线固定 DARCL2，唯一挑战者 {arm}。' if arm!='DARCL2' else '所有挑战者均在开发对照中淘汰；此次最终池仅验收原字节 DARCL2，不声称挑战者晋级或新的策略增益。')
+ method=('置信区间重采完整来源种子 10,000 次（RNG 20261115），同种子的两个座位和所有对手共同抽取。三类 Astra 样本数相同，合并均值等于三代理等权胜率。百分点门槛用未四舍五入的数值判断。' if arm!='DARCL2' else '原版单臂验收只报告观察胜率与分层计数，没有可估计的候选配对增益区间。三类 Astra 样本数相同，合并均值等于三代理等权胜率。开发候选的配对区间见 DEVELOPMENT.md。')
+ lines=['# 冻结最终统计','',opening+'全部种子、两座位、对手和 ZIP 在最终开封前冻结；两池补齐后才读取胜负。',method]
  headers=['家族/对手','DARCL2 胜/局',arm+' 胜/局','差值 pp','双侧95%区间 pp','单侧90%下界 pp','翻胜/翻败']
  for b,title in [('final-core','核心'),('final-guard','护栏')]:
   lines+=['','## '+title,''];c=reports[b]['comparisons'].get(arm)
-  if not c:continue
+  if not c:
+   summary=reports[b]['arms']['DARCL2']
+   table(lines,['家族/对手','DARCL2 胜/局','胜率'],[[name,f"{r['wins']}/{r['n']}",f"{100*r['win_rate']:.3f}%"] for collection in ('by_group','by_opponent') for name,r in summary[collection].items()])
+   baseline_rows=[json.loads(r[0]) for r in db.execute('select result from tasks where batch=? and candidate=?',(b,'DARCL2'))]
+   focus=[r for r in baseline_rows if r['group']=='astra'] if b=='final-core' else baseline_rows
+   strata=[]
+   for seat in (1,2):
+    selected=[r for r in focus if r['seat']==seat];strata.append(['座位 '+str(seat),sum(r['score'] for r in selected),len(selected)])
+   for first in (True,False):
+    selected=[r for r in focus if (r['first_player']==r['seat'])==first];strata.append(['实际先手' if first else '实际后手',sum(r['score'] for r in selected),len(selected)])
+   lines+=['仅列 Astra 分层。' if b=='final-core' else '护栏分层。']
+   table(lines,['分层','胜','局'],strata)
+   continue
   table(lines,headers,[row(name,r) for name,r in c['by_group'].items()])
   table(lines,headers,[row(name,r) for name,r in c['by_opponent'].items()])
   if c['primary']:

@@ -25,6 +25,24 @@
   --batch round2-ranker --arms DARCL2 PRR --start 62150200 --seeds 40 --workers 6
 ```
 
+后续单卡、公开手牌资源及独立确认的固定命令：
+
+```sh
+.venv/bin/python -m development.secret_hunter_astra_sprint.study run \
+  --batch round3-arcane --arms DARCL2 DA2 --start 62150300 --seeds 40 --workers 6
+.venv/bin/python -m development.secret_hunter_astra_sprint.study run \
+  --batch round4-hand-resource --arms DARCL2 EHC --start 62150400 --seeds 40 --workers 6
+.venv/bin/python -m development.secret_hunter_astra_sprint.study run \
+  --batch confirmation-arcane --arms DARCL2 DA2 --start 62150500 --seeds 80 --workers 6
+```
+
+已完成批次的全部翻转局可直接复读，先列原赢变输：
+
+```sh
+.venv/bin/python -m development.secret_hunter_astra_sprint.inspect_full_flips round4-hand-resource EHC
+.venv/bin/python -m development.secret_hunter_astra_sprint.inspect_policy_flips --arm EHC
+```
+
 H2 模型训练数据只包括最初早期根及较晚训练根的世界 0/1，按来源种子五折划分；模型源码和冻结系数在 `candidates/PRR/`。已冻结的拟合结果见 `experiments/H2-fitted-ranker.json`。不要重拟合并覆盖同名候选，也不要把已开封标签重新称作留出。
 
 选拔完成后，最终只冻结 DARCL2 和一名挑战者。两池全部完成前不读结果；恢复只补原计划任务，不添加种子或候选。精确包验证和独立复跑入口：
