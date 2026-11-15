@@ -1,0 +1,157 @@
+{
+  "created": 1794714668.06777,
+  "candidate": "EHC",
+  "counts": {
+    "roots": 264,
+    "reference_matched": 264,
+    "same_turn_nodes": 262,
+    "turn_action_changes": 1,
+    "planned_sequence_changes": 3,
+    "old_nodes": 14850,
+    "new_nodes": 14852,
+    "old_time_cutoffs": 0,
+    "new_time_cutoffs": 0
+  },
+  "changes": [
+    {
+      "case": "late1-DARCL2-62150043-astra-board-proxy-s1-q9",
+      "old_action": {
+        "type": "play_card",
+        "card": 26
+      },
+      "new_action": {
+        "type": "play_card",
+        "card": 26
+      },
+      "old_sequence": [
+        {
+          "type": "play_card",
+          "card": 26
+        },
+        {
+          "type": "attack",
+          "attacker": 7,
+          "target": 54
+        },
+        {
+          "type": "attack",
+          "attacker": -1,
+          "target": 62
+        },
+        {
+          "type": "attack",
+          "attacker": -2,
+          "target": 37
+        }
+      ],
+      "new_sequence": [
+        {
+          "type": "play_card",
+          "card": 26
+        },
+        {
+          "type": "attack",
+          "attacker": 7,
+          "target": 62
+        },
+        {
+          "type": "attack",
+          "attacker": -1,
+          "target": 54
+        },
+        {
+          "type": "attack",
+          "attacker": -2,
+          "target": 37
+        }
+      ],
+      "old_nodes": 138,
+      "new_nodes": 157
+    },
+    {
+      "case": "late1-DARCL2-62150005-astra-sticky-proxy-s2-q5",
+      "old_action": {
+        "type": "play_card",
+        "card": 56
+      },
+      "new_action": {
+        "type": "play_card",
+        "card": 56
+      },
+      "old_sequence": [
+        {
+          "type": "play_card",
+          "card": 56
+        },
+        {
+          "type": "attack",
+          "attacker": 37,
+          "target": 20
+        },
+        {
+          "type": "attack",
+          "attacker": 54,
+          "target": 4
+        }
+      ],
+      "new_sequence": [
+        {
+          "type": "play_card",
+          "card": 56
+        },
+        {
+          "type": "attack",
+          "attacker": 37,
+          "target": 27
+        },
+        {
+          "type": "attack",
+          "attacker": 54,
+          "target": 4
+        }
+      ],
+      "old_nodes": 159,
+      "new_nodes": 159
+    },
+    {
+      "case": "late1-DARCL2-62150049-astra-tempo-proxy-s1-q7",
+      "old_action": {
+        "type": "play_card",
+        "card": 28,
+        "target": 54
+      },
+      "new_action": {
+        "type": "play_card",
+        "card": 12,
+        "position": 0
+      },
+      "old_sequence": [
+        {
+          "type": "play_card",
+          "card": 28,
+          "target": 54
+        },
+        {
+          "type": "attack",
+          "attacker": 11,
+          "target": 37
+        }
+      ],
+      "new_sequence": [
+        {
+          "type": "play_card",
+          "card": 12,
+          "position": 0
+        },
+        {
+          "type": "attack",
+          "attacker": 11,
+          "target": 37
+        }
+      ],
+      "old_nodes": 49,
+      "new_nodes": 49
+    }
+  ],
+  "scope": "Seen public training roots, unchanged node/time caps; actual branch counts may change because resource value affects beam/endpoint ordering. Whole-game actions and wins are separately tested."
+}

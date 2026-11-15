@@ -1,0 +1,28 @@
+{
+  "created": 1794714451.8784618,
+  "candidate": "EHC",
+  "parent": "DARCL2",
+  "hypothesis": "H4: The public effect model transfers a killed Loot Hoarder into one extra opponent hand card, but race evaluation drops that future resource while rewarding removal of its deathrattle value. Price opponent public hand_size symmetrically with our hand using the existing turn_hand coefficient 0.973, without predicting card identities. This should reduce overvalued draw-deathrattle clears and visible bounce lines while preserving high-attack clear alternatives. Parent DARCL2, one scoring expression only, identical deck/mulligan/search caps. Refute if actual policy continuations do not produce repeatable net rescues, or fresh full games fail to show Astra gain. Unlike PRR this does not learn/reweight board, race, secret or own-hand features; unlike TRPLY it adds no reply or recovery nodes.",
+  "evidence": {
+    "consideration_sha256": "d6a0c99ce7aa7e178c19d312b91e268b5df43c2b6d024ea4659f80aed88a2d3f",
+    "flame_clear_sha256": "7570e00689840a8c49d9d00c28a6066aa337a75584d75a022eeb4fe6efed5002",
+    "PRR_flip_inspection_sha256": "65e2bd506321ef333195b5e48c4a1f26d1a0a028f66aece5b3aa44d74e62586c"
+  },
+  "fixed_coefficient": "Reuse cfg turn_hand=0.973; no grid search or fitted new coefficient.",
+  "continuation_screen": {
+    "sources": "All initial/late1 TRAIN roots only, 264 roots and 792 paired worlds; all already seen. No independent label holdout claim.",
+    "advance_if": "worlds 0/1 total paired actual-policy net > 0 and at least two net-positive source seeds; report world2 but it is also seen."
+  },
+  "fresh_full_test": {
+    "batch": "round4-hand-resource",
+    "start": 62150400,
+    "seeds": 40,
+    "arms": [
+      "DARCL2",
+      "EHC"
+    ],
+    "workers": 6
+  },
+  "negative_controls": "Visible Freezing Trap bounce increases opponent public hand count too; check resulting original-win regressions and non-Astra families.",
+  "causal_limit": "The motivating teacher routes also change development or target sequence, so missing resource value is a hypothesis, not a proven explanation of those wins."
+}

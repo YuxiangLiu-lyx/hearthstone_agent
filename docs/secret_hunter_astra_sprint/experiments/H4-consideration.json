@@ -1,0 +1,11 @@
+{
+  "created": 1794714122.242908,
+  "status": "consideration_only_no_candidate_or_test_reserved",
+  "possible_next_hypothesis": "Price public enemy hand count in the race evaluator using the existing own-hand coefficient, addressing the resource transfer when Loot Hoarder dies.",
+  "evidence": [
+    "late1-DARCL2-62150043-astra-board-proxy-s1-q9: world1 baseline kills Loot and ends enemy hand4, alternative develops and leaves hand3, loss to win",
+    "late1-DARCL2-62150005-astra-sticky-proxy-s2-q5: world0 baseline Bow kills Loot and ends enemy hand4; clear-Flame alternative leaves hand3, loss to win; PRR independently changed Bow target to Flame and rescued original world"
+  ],
+  "code_observation": "tactical_model.cleanup already increments public opponent hand_size after Loot death; race_plan.value prices own hand but lacks a general opponent-hand term. The old generic board_evaluation prices both. No hidden-card identity is needed.",
+  "caution": "These two routes differ in other effects too; omitted hand value is a falsifiable mechanism hypothesis, not established cause. Decide after H3 full review; if tested use parent DARCL2 and fresh full-game seeds, and do not claim reused root worlds are independent holdout."
+}
