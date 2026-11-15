@@ -1,0 +1,40 @@
+{
+  "plan": {
+    "created": 1794707144.91009,
+    "replicates": 50000,
+    "rng_seed": 20261115,
+    "paired_common_draws": true,
+    "source_sampling": "Draw three source-seed groups with replacement per tournament, same groups for all candidates and families.",
+    "bot1": "Both seats at all three seeds: six games.",
+    "bot2": "Choose one of the two existing proxies uniformly for the entire tournament; both seats at first two seeds: four games.",
+    "astra": "Choose one of the three existing proxies uniformly for the entire tournament; both seats at first two seeds: four games.",
+    "score": "5 completion points assuming no forfeits; Bot1 wins>=5:+3,>=3:+2,>=1:+1; Bot2 wins>=3:+2,>=1:+1; Astra +1/win.",
+    "reported": [
+      "frequency_score_above_10",
+      "mean_max_score_minus_10_zero",
+      "mean_score",
+      "bot1_cap_frequency",
+      "bot2_cap_frequency"
+    ],
+    "selection_tie": "Among reliable challengers within 0.5pp of highest Astra macro; highest paired mean positive score improvement, then fewest changed source lines relative to DARCL2, then stable name. DARCL2 is the fixed control. No proxy simulation is a course receipt."
+  },
+  "results": {
+    "DARCL2": {
+      "frequency_score_above_10": 0.99118,
+      "mean_max_score_minus_10_zero": 2.98234,
+      "mean_score": 12.98176,
+      "bot1_cap_frequency": 0.92108,
+      "bot2_cap_frequency": 0.90736,
+      "paired_positive_score_delta": 0.0
+    },
+    "DA2": {
+      "frequency_score_above_10": 0.99386,
+      "mean_max_score_minus_10_zero": 3.06872,
+      "mean_score": 13.06846,
+      "bot1_cap_frequency": 0.94258,
+      "bot2_cap_frequency": 0.9346,
+      "paired_positive_score_delta": 0.08638
+    }
+  },
+  "scope": "Paired local proxy interpretation; not calibrated to formal course scores."
+}
