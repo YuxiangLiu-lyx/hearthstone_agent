@@ -59,10 +59,11 @@ def audit(folder,seat,mode):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--candidate',required=True);p.add_argument('--mode',choices=['luna','client'],required=True)
-    p.add_argument('--seed',type=int,required=True);p.add_argument('--seat',type=int,default=1);a=p.parse_args()
+    p.add_argument('--seed',type=int,required=True);p.add_argument('--seat',type=int,default=1);p.add_argument('--key-prefix',default='');a=p.parse_args()
+    assert not a.key_prefix or (len(a.key_prefix)<=40 and all(c.isalnum() or c in '-_' for c in a.key_prefix))
     source=Path(a.candidate).resolve();original=fingerprint(source);db=train.connect(RUN)
     db.execute('CREATE TABLE IF NOT EXISTS auxiliary_games (key TEXT PRIMARY KEY,status TEXT,started REAL,finished REAL,result TEXT)');db.commit()
-    key=f'{a.mode}-{a.seed}-s{a.seat}';old=db.execute('select * from auxiliary_games where key=?',(key,)).fetchone()
+    key=(a.key_prefix+'-' if a.key_prefix else '')+f'{a.mode}-{a.seed}-s{a.seat}';old=db.execute('select * from auxiliary_games where key=?',(key,)).fetchone()
     if old:
         assert old['status']=='done','inspect incomplete auxiliary attempt, do not silently retry';print(old['result']);return
     count=db.execute('select count(*) from attempts').fetchone()[0]+db.execute('select count(*) from auxiliary_games').fetchone()[0]

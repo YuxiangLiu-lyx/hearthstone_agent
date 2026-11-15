@@ -40,8 +40,8 @@ def main():
     for workers in (3,6):
         with ThreadPoolExecutor(max_workers=workers) as pool:
             sample=list(pool.map(lambda i:probe(source,states[i],f'concurrent-{workers}-{i}'),range(len(states))))
-        assert all(r['action']==cold[i] for i,r in enumerate(sample)), 'Concurrent action instability'
-        records.extend(sample);concurrency.append({'workers':workers,'calls':len(sample),'actions_identical':True})
+        stable=all(r['action']==cold[i] for i,r in enumerate(sample))
+        records.extend(sample);concurrency.append({'workers':workers,'calls':len(sample),'actions_identical':stable})
     for tag,options in [('lethal-hero-power',{'mana':2}),('lethal-arcane-shot',{'mana':1,'hand':['DS1_185']})]:
         e=fixture(enemy_hp=2,**options);s=e.view(1);s.update(seq=70,player=1,game_id=tag)
         r=probe(source,s,tag);assert e.step(1,r['action']).accepted and e.winner==1
@@ -89,5 +89,6 @@ def main():
     train.atomic(ROOT/a.out,data)
     print(json.dumps({k:v for k,v in data.items() if k!='records'}))
     assert data['invalid']==data['over_2s']==data['ordinary_fallbacks']==0
+    assert all(r['actions_identical'] for r in concurrency), 'Concurrent action instability; complete evidence saved'
 
 if __name__=='__main__':main()
