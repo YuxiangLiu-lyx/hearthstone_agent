@@ -10,6 +10,7 @@ from development.secret_hunter_mcgs.runtime import probe
 from development.secret_hunter_program.common import quantiles
 from development.secret_hunter_astra_sprint import ledger as train
 from development.benchmarks.run import fingerprint
+from development.secret_hunter_program.common import sha
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--candidate',required=True);p.add_argument('--out',default='docs/secret_hunter_astra_sprint/runtime.json');a=p.parse_args()
@@ -24,16 +25,21 @@ def main():
     from hs_arena.skill.mcp_server import act
     from action_validator import legal
     records=[];states=[]
+    stress_path=RUN/'runtime-stress-cases.json';stress=json.loads(stress_path.read_text())
+    assert stress['source_partition']=='development'
+    frozen=RUN/'final-freeze.json'
+    if frozen.exists():assert sha(stress_path)==json.loads(frozen.read_text())['runtime_stress_sha256']
     for path in sorted((RUN/'tactical-sources').glob('*.json')):
         record=json.loads(path.read_text())
         if record.get('split')=='train' and 'state' in record:states.append(record['state'])
     states.sort(key=lambda s:len(s['you']['board'])*len(s['opponent']['board'])+len(s['you']['hand']),reverse=True)
-    for i,s in enumerate(states[:8]):records.append(probe(source,s,'cold-'+str(i)))
+    states=[r['state'] for r in stress['cases']]+states[:8]
+    for i,s in enumerate(states):records.append(probe(source,s,'cold-'+str(i)))
     cold={i:r['action'] for i,r in enumerate(records)}
     concurrency=[]
     for workers in (3,6):
         with ThreadPoolExecutor(max_workers=workers) as pool:
-            sample=list(pool.map(lambda i:probe(source,states[i],f'concurrent-{workers}-{i}'),range(min(8,len(states)))))
+            sample=list(pool.map(lambda i:probe(source,states[i],f'concurrent-{workers}-{i}'),range(len(states))))
         assert all(r['action']==cold[i] for i,r in enumerate(sample)), 'Concurrent action instability'
         records.extend(sample);concurrency.append({'workers':workers,'calls':len(sample),'actions_identical':True})
     for tag,options in [('lethal-hero-power',{'mana':2}),('lethal-arcane-shot',{'mana':1,'hand':['DS1_185']})]:
@@ -71,7 +77,7 @@ def main():
         stale_host='nothing submitted' in reply and not (box/'action.json').exists()
         assert stale_host
     ordinary=[r for r in records if r['tag'] not in ('hang','crash','published_hang') and not r['tag'].startswith('stale')]
-    data={'candidate':str(source),'source_sha256':original,'concurrency_action_stability':concurrency,'calls':len(records),'invalid':sum(not r['valid'] for r in records),
+    data={'candidate':str(source),'source_sha256':original,'stress_cases_sha256':sha(stress_path),'concurrency_action_stability':concurrency,'calls':len(records),'invalid':sum(not r['valid'] for r in records),
           'over_2s':sum(r['elapsed_s']>2 for r in records),'ordinary_fallbacks':sum(bool(r['fallback']) for r in ordinary),
           'ordinary_latency_s':quantiles([r['elapsed_s'] for r in ordinary]),
           'all_including_fault_latency_s':quantiles([r['elapsed_s'] for r in records]),

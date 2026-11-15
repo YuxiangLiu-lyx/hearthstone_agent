@@ -128,7 +128,8 @@ def main():
                      manifest_sha256=sha(RUN/'manifest.json'),engine_versions=m['versions'],
                      engine_source_files=m['engine'],opponents=m['opponents'],
                      final_target=m['final_target'],outcome_access='Read neither pool until BOTH final pools finish')
-            f['analysis_sources']={str((HERE/name).relative_to(ROOT)):sha(HERE/name) for name in ('statistics.py','release.py','selection.py')}
+            f['analysis_sources']={str((HERE/name).relative_to(ROOT)):sha(HERE/name) for name in ('statistics.py','release.py','selection.py','runtime.py')}
+            f['runtime_stress_sha256']=sha(RUN/'runtime-stress-cases.json')
             assert not (RUN/'final-freeze.json').exists();train.atomic(RUN/'final-freeze.json',f);return
         if a.command=='report':
             from development.secret_hunter_astra_sprint.statistics import analyze

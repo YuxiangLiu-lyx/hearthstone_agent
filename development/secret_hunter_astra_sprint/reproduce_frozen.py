@@ -59,7 +59,7 @@ def main():
   ledger.atomic(RUN/'original-final-freeze.json',freeze)
   relocated={**freeze,'manifest_sha256':sha(RUN/'manifest.json'),'release_records':new_records,'release_records_sha256':sha(RUN/'release-candidates.json'),'reproduction':manifest['reproduction']}
   ledger.atomic(RUN/'final-freeze.json',relocated)
-  for name in ('selection-plan.json','final-acceptance-plan.json'):
+  for name in ('selection-plan.json','final-acceptance-plan.json','runtime-stress-cases.json'):
    if (source/name).exists():shutil.copy2(source/name,RUN/name)
   shutil.copytree(source/'tactical-sources',RUN/'tactical-sources')
   commands=[]
