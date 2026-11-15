@@ -2,6 +2,12 @@
 
 ## Latest HW2 Astra sprint (2026-11-15)
 
+**Resumed at 01:26 ET at the user's request.** Fixed-state resource checks have
+recovered; see the [continuation plan](docs/secret_hunter_astra_sprint/RESUME.md).
+The original budget and deadline remain in force, and DARCL2 stays recommended
+until a challenger passes every independent final gate. The report below is
+the completed first delivery and will be updated when this continuation closes.
+
 For the last HW2 submission, the sole recommendation is the unchanged
 **DARCL2** [original ZIP](dist/secret-hunter-long-20261114.zip), SHA-256
 `0130813f56655e7b802e2cbbe539526f6ab2a1a8f1acf4d27af6e5fdee5a9a0e`.
