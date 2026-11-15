@@ -16,6 +16,11 @@ ROUTES = {
     'power': ('power',),
 }
 
+def action_key(action):
+    # A placement-only change is not a new tactical category in this deck.
+    # Keep the original position in the actual engine action and replay.
+    return json.dumps({k:v for k,v in action.items() if k!='position'},sort_keys=True)
+
 def mine(batch, split):
     setup('DARCL2')
     from development.secret_hunter_final.early_routes import features
@@ -49,9 +54,9 @@ def mine(batch, split):
             for category,routes in ROUTES.items():
                 for route in routes:
                     action=propose(s,route,{},z['action'])
-                    if action is None or action==z['action'] or not legal(s,action):continue
+                    if action is None or action_key(action)==action_key(z['action']) or not legal(s,action):continue
                     ever.add(route)
-                    key=json.dumps(action,sort_keys=True)
+                    key=action_key(action)
                     if key not in actions:
                         choices.append((category,route,action));actions.add(key)
                         break

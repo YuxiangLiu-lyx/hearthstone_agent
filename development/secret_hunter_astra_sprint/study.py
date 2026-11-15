@@ -121,6 +121,13 @@ def main():
             f={'created':time.time(),'arms':a.arms,'fingerprints':{x:cs[x]['sha256'] for x in a.arms},
                'promotion':m['promotion'],'seeds':{k:v for k,v in m['seed_blocks'].items() if k.startswith('final')},
                'git_sha':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()}
+            releases=json.loads((RUN/'release-candidates.json').read_text())
+            assert [r['name'] for r in releases]==a.arms
+            assert all(sha(ROOT/r['path'])==r['zip_sha256'] and fingerprint(ROOT/r['extracted'])==f['fingerprints'][r['name']] for r in releases)
+            f.update(release_records=releases,release_records_sha256=sha(RUN/'release-candidates.json'),
+                     manifest_sha256=sha(RUN/'manifest.json'),engine_versions=m['versions'],
+                     engine_source_files=m['engine'],opponents=m['opponents'],
+                     final_target=m['final_target'],outcome_access='Read neither pool until BOTH final pools finish')
             assert not (RUN/'final-freeze.json').exists();train.atomic(RUN/'final-freeze.json',f);return
         if a.command=='report':
             from development.secret_hunter_astra_sprint.statistics import analyze
@@ -129,6 +136,9 @@ def main():
         if a.final:
             f=json.loads((RUN/'final-freeze.json').read_text());assert a.arms==f['arms']
             assert all(cs[x]['sha256']==f['fingerprints'][x] for x in a.arms)
+            assert sha(RUN/'release-candidates.json')==f['release_records_sha256']
+            assert sha(RUN/'manifest.json')==f['manifest_sha256']
+            assert all(sha(ROOT/r['path'])==r['zip_sha256'] and cs[r['name']]['path']==r['extracted'] for r in f['release_records'])
             lo,hi=f['seeds']['final_guard' if a.pool=='guardrail' else 'final_core']
             assert lo<=a.start and a.start+a.seeds-1<=hi and not a.warm
             train.setmeta(db,'final_opened',True)
