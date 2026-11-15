@@ -13,6 +13,8 @@ def read(split='train', worlds=(0,1), lock=None):
         record=json.loads(Path(lock).read_text())
         assert record['hypothesis'] and record['source_sha256'] and record['created']<=time.time()
     db=ledger.connect(RUN);data=defaultdict(dict);sources={}
+    extra_path=RUN/'tactical-extra-routes.json'
+    extra=json.loads(extra_path.read_text())['routes_by_case'] if extra_path.exists() else {}
     for r in db.execute("select job,status,result_path from cf_jobs where kind='tactical'"):
         job=json.loads(r['job'])
         if job['sample'] not in worlds or job.get('policy_arm'):continue
@@ -31,7 +33,7 @@ def read(split='train', worlds=(0,1), lock=None):
             baseline=labels[world,'baseline']
             assert baseline['root_digest']==src['state_digest']
             if world==0:assert baseline['win']==src['source_score']
-            for route in src['routes'][1:]:
+            for route in src['routes'][1:]+extra.get(case,[]):
                 other=labels[world,route]
                 assert other['audit_hidden']==baseline['audit_hidden'], ('unpaired hidden world',case,world,route)
                 assert other['root_digest']==baseline['root_digest']

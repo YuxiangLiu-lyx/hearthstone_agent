@@ -41,7 +41,9 @@ def audit(case,arm='DARCL2'):
     original=src['original_info'].get('turn_search',{})
     comparable=all(result.get(k)==original.get(k) for k in ('nodes','action','sequence','bounded_out','stop_reason','excluded','beam_pruned','depth'))
     trace=result.get('audit',{});by_route={}
-    for route in src['routes']:
+    extra_path=RUN/'tactical-extra-routes.json'
+    extra=json.loads(extra_path.read_text())['routes_by_case'] if extra_path.exists() else {}
+    for route in src['routes']+extra.get(case,[]):
         p=RUN/'tactical-labels'/f'{case}-w0-{route}.json'
         if not p.exists():continue
         label=json.loads(p.read_text())

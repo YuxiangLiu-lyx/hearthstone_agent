@@ -20,9 +20,20 @@ def digest(s):return hashlib.sha256(json.dumps(visible(s),sort_keys=True,separat
 def propose(s,route,memory,baseline):
     from development.secret_hunter_final.early_routes import propose as old
     from action_validator import expand
-    if route not in ('bow_clear','develop_then_trap','burn_face','clear_key'):return old(s,route,memory,baseline)
+    if route not in ('bow_clear','develop_then_trap','burn_face','clear_key','coin_companion'):return old(s,route,memory,baseline)
     if s.get('phase')!='main':return None
     y,o=s['you'],s['opponent'];hand={c['entity_id']:c for c in y['hand']};actions=expand(s,positions=True)
+    if route=='coin_companion':
+        if memory.get('done'):return None
+        if memory.get('target'):
+            a=next((a for a in actions if a['type']=='play_card' and a['card']==memory['target']),None)
+            if a:memory['done']=True
+            return a
+        target=next((c for c in y['hand'] if c['card_id']=='NEW1_031' and c['cost']==y['mana']+1),None)
+        coin=next((a for a in actions if a['type']=='play_card' and hand[a['card']]['card_id']=='GAME_005'),None)
+        if target and coin and len(y['board'])<7:
+            memory['target']=target['entity_id'];return coin
+        return None
     if route=='burn_face':
         plays=[a for a in actions if a['type']=='play_card' and a.get('target')==o['hero']['entity_id']
                and hand[a['card']]['card_id'] in ('DS1_185','EX1_539')]
@@ -188,6 +199,9 @@ def execute(job):
         active,_=e.pending();s=e.view(active);history=[v for ev in e.events if (v:=ev.view(active)) is not None]
         s.update(player=active,seq=step+1,game_id='offline-public-turn',timeout_s=2,events=[]);s=with_public_history(s,history)
         intervention=active==seat and e.turn==root_turn
+        if step==0:
+            for key in ('hero_attack_available','public_opponent_evidence'):
+                assert s.get(key)==src['state'].get(key),('derived public prefix mismatch',src['case'],key)
         if active==seat:
             a,info=decide(s,cfg);assert not info.get('error'),info.get('error');base=dict(info.get('learned_parent_action',a))
             own_decisions+=1;policy_changes+=int(a!=base);fallbacks+=bool(info.get('fallback'))
@@ -198,7 +212,7 @@ def execute(job):
             changes+=int(intervention and a!=base)
         else:a=foe.fn(s);base=None
         assert legal(s,a),('route illegal',job,a)
-        if intervention:sequence.append({'action':a,'baseline_action':base,'state':visible(s),'state_digest':digest(s)})
+        if intervention:sequence.append({'action':a,'baseline_action':base,'state':visible(s),'state_digest':digest(s),'info':info})
         trace.append({'seat':active,'turn':s['turn'],'action':a,'state_digest':digest(s)})
         assert e.step(active,a).accepted
         if intervention:

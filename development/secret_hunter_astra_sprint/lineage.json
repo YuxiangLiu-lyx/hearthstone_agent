@@ -48,5 +48,57 @@
       "krush_line": false
     },
     "status": "baseline"
+  },
+  {
+    "name": "RJC",
+    "parent": "DARCL2",
+    "sha256": "ce20c44344961032e979c7dd499e774d212b4e94a8675ca8a0509772f6bc3de4",
+    "created": 1794708434.2546308,
+    "generation": 1,
+    "hypothesis": "H1: T2-T5 standalone Knife Juggler is a deterministic play when no friendly unsilenced Juggler is already present. The response-mode exclusion currently skips the entire turn search when this card is ranked first, so alternate development and key clears are never compared. Allow this one play class in response projection, retaining all existing random-trigger exclusions, the original Juggler route, 350 own nodes, width 10, depth 9, 6x48 reply nodes and original time limits. Predict greater route recall and positive fresh Astra paired full-game gain; refute if recall does not reach rescued routes, or changed actions fail to produce net full-game wins. Deck and mulligan fixed.",
+    "changed_files": [
+      "scripts/tactical_model.py"
+    ],
+    "deck": {
+      "ordered_cards": [
+        "EX1_029",
+        "EX1_029",
+        "EX1_080",
+        "EX1_080",
+        "DS1_184",
+        "EX1_162",
+        "EX1_531",
+        "EX1_531",
+        "EX1_533",
+        "EX1_554",
+        "EX1_066",
+        "EX1_610",
+        "EX1_610",
+        "EX1_611",
+        "EX1_611",
+        "NEW1_019",
+        "NEW1_019",
+        "EX1_536",
+        "EX1_536",
+        "EX1_538",
+        "EX1_538",
+        "EX1_539",
+        "EX1_539",
+        "EX1_617",
+        "NEW1_031",
+        "NEW1_031",
+        "DS1_070",
+        "EX1_534",
+        "EX1_534",
+        "DS1_185"
+      ],
+      "hero_class": "HUNTER",
+      "deck_sha256": "af78480d96fd2fc11b77f0ca8f17c5703a6bda5934c2041622f762ca0128b7d1",
+      "changes": [],
+      "replacements": 0,
+      "retained": 30,
+      "krush_line": false
+    },
+    "status": "unvalidated"
   }
 ]
