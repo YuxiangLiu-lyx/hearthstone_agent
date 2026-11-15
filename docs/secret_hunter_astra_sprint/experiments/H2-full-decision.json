@@ -1,0 +1,51 @@
+{
+  "created": 1794713293.532908,
+  "candidate": "PRR",
+  "decision": "do_not_advance",
+  "reason": "Fresh paired complete CLI Astra 198/240 to 197/240: 3 rescues, 4 regressions, -0.4167pp, despite 81 same-public-state tactical divergences. Conditional validation gain did not reproduce at natural frequency. Keep immutable negative evidence; do not combine PRR with the card-slot experiment.",
+  "primary": {
+    "n_per_arm": 240,
+    "seed_clusters": 40,
+    "a_wins": 198,
+    "b_wins": 197,
+    "a_rate": 0.825,
+    "b_rate": 0.8208333333333333,
+    "gain": -0.004166666666666667,
+    "gain_seed_cluster_95": [
+      -0.029166666666666667,
+      0.020833333333333332
+    ],
+    "gain_one_sided_90_lower": -0.020833333333333332,
+    "a_only_wins": 4,
+    "b_only_wins": 3,
+    "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+    "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+    "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+  },
+  "report_sha256": "69f716728eb3eb3cb63174f30d2f35fdec67753f90a63a49d9c25a2d857211a6",
+  "action_audit_sha256": "1cf1193936d6e1f98bc3809e0cbecc5478efb58dd2c61efb0189c523b423c5c0",
+  "regressions_read": [
+    [
+      "astra-sticky-proxy",
+      62150201,
+      2
+    ],
+    [
+      "astra-sticky-proxy",
+      62150205,
+      2
+    ],
+    [
+      "astra-tempo-proxy",
+      62150205,
+      1
+    ],
+    [
+      "astra-tempo-proxy",
+      62150226,
+      1
+    ]
+  ],
+  "interpretation": "Small development comparison, not proof of harm; insufficient support for this sprint challenger.",
+  "next": "Return to common parent DARCL2 and test only Deadly Shot -> second Arcane Shot on preregistered fresh groups. No tactical or mulligan change."
+}
