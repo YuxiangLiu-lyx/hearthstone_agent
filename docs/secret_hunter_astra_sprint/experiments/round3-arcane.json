@@ -1,0 +1,1041 @@
+{
+  "batch": "round3-arcane",
+  "phase": "cli_development",
+  "start": 62150300,
+  "seed_groups": 40,
+  "baseline": "DARCL2",
+  "arms": {
+    "DARCL2": {
+      "all": {
+        "n": 480,
+        "wins": 403,
+        "losses": 77,
+        "draws_or_voids": 0,
+        "win_rate": 0.8395833333333333,
+        "wilson95_descriptive": [
+          0.8040751429059796,
+          0.8696990840311007
+        ],
+        "harness_errors": 0,
+        "illegal": 0,
+        "timeouts": 0,
+        "forfeits": 0,
+        "opponent_errors": 0,
+        "policy_errors": 0,
+        "fallbacks": 0,
+        "over_2s": 0,
+        "public_input_violations": 0
+      },
+      "by_group": {
+        "astra": {
+          "n": 240,
+          "wins": 191,
+          "losses": 49,
+          "draws_or_voids": 0,
+          "win_rate": 0.7958333333333333,
+          "wilson95_descriptive": [
+            0.7403636423953006,
+            0.8419816178064039
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot1": {
+          "n": 80,
+          "wins": 69,
+          "losses": 11,
+          "draws_or_voids": 0,
+          "win_rate": 0.8625,
+          "wilson95_descriptive": [
+            0.7703270280036946,
+            0.9214536632044886
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2": {
+          "n": 160,
+          "wins": 143,
+          "losses": 17,
+          "draws_or_voids": 0,
+          "win_rate": 0.89375,
+          "wilson95_descriptive": [
+            0.8364366789581195,
+            0.9325987796799797
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      },
+      "by_opponent": {
+        "astra-board-proxy": {
+          "n": 80,
+          "wins": 65,
+          "losses": 15,
+          "draws_or_voids": 0,
+          "win_rate": 0.8125,
+          "wilson95_descriptive": [
+            0.7134147429619243,
+            0.8829479218727162
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "astra-sticky-proxy": {
+          "n": 80,
+          "wins": 59,
+          "losses": 21,
+          "draws_or_voids": 0,
+          "win_rate": 0.7375,
+          "wilson95_descriptive": [
+            0.6318083375343555,
+            0.8214272877399715
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "astra-tempo-proxy": {
+          "n": 80,
+          "wins": 67,
+          "losses": 13,
+          "draws_or_voids": 0,
+          "win_rate": 0.8375,
+          "wilson95_descriptive": [
+            0.7415689513651669,
+            0.9025027266562451
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot1-mage-proxy": {
+          "n": 80,
+          "wins": 69,
+          "losses": 11,
+          "draws_or_voids": 0,
+          "win_rate": 0.8625,
+          "wilson95_descriptive": [
+            0.7703270280036946,
+            0.9214536632044886
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2-face-proxy": {
+          "n": 80,
+          "wins": 73,
+          "losses": 7,
+          "draws_or_voids": 0,
+          "win_rate": 0.9125,
+          "wilson95_descriptive": [
+            0.8302301722291654,
+            0.95696854535256
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2-trade-proxy": {
+          "n": 80,
+          "wins": 70,
+          "losses": 10,
+          "draws_or_voids": 0,
+          "win_rate": 0.875,
+          "wilson95_descriptive": [
+            0.7849700281693438,
+            0.9306651696322249
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      },
+      "latency_s": {
+        "n": 13630,
+        "mean": 0.09725222605056075,
+        "max": 0.8608900840044953,
+        "p50": 0.08473020797828212,
+        "p95": 0.15440116700483486,
+        "p99": 0.2968008750176523
+      },
+      "teacher_family_macro": 0.8506944444444444,
+      "by_actual_first": {
+        "True": {
+          "n": 240,
+          "wins": 211,
+          "losses": 29,
+          "draws_or_voids": 0,
+          "win_rate": 0.8791666666666667,
+          "wilson95_descriptive": [
+            0.8318491096433814,
+            0.9145370689250006
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "False": {
+          "n": 240,
+          "wins": 192,
+          "losses": 48,
+          "draws_or_voids": 0,
+          "win_rate": 0.8,
+          "wilson95_descriptive": [
+            0.7448449239129669,
+            0.8457023822070717
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      }
+    },
+    "DA2": {
+      "all": {
+        "n": 480,
+        "wins": 408,
+        "losses": 72,
+        "draws_or_voids": 0,
+        "win_rate": 0.85,
+        "wilson95_descriptive": [
+          0.8152829232916574,
+          0.8791592247171123
+        ],
+        "harness_errors": 0,
+        "illegal": 0,
+        "timeouts": 0,
+        "forfeits": 0,
+        "opponent_errors": 0,
+        "policy_errors": 0,
+        "fallbacks": 0,
+        "over_2s": 0,
+        "public_input_violations": 0
+      },
+      "by_group": {
+        "astra": {
+          "n": 240,
+          "wins": 193,
+          "losses": 47,
+          "draws_or_voids": 0,
+          "win_rate": 0.8041666666666667,
+          "wilson95_descriptive": [
+            0.7493344741570085,
+            0.8494148778813639
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot1": {
+          "n": 80,
+          "wins": 69,
+          "losses": 11,
+          "draws_or_voids": 0,
+          "win_rate": 0.8625,
+          "wilson95_descriptive": [
+            0.7703270280036946,
+            0.9214536632044886
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2": {
+          "n": 160,
+          "wins": 146,
+          "losses": 14,
+          "draws_or_voids": 0,
+          "win_rate": 0.9125,
+          "wilson95_descriptive": [
+            0.8584925018317755,
+            0.9471636929319474
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      },
+      "by_opponent": {
+        "astra-board-proxy": {
+          "n": 80,
+          "wins": 65,
+          "losses": 15,
+          "draws_or_voids": 0,
+          "win_rate": 0.8125,
+          "wilson95_descriptive": [
+            0.7134147429619243,
+            0.8829479218727162
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "astra-sticky-proxy": {
+          "n": 80,
+          "wins": 61,
+          "losses": 19,
+          "draws_or_voids": 0,
+          "win_rate": 0.7625,
+          "wilson95_descriptive": [
+            0.6585901502919855,
+            0.8423544881691125
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "astra-tempo-proxy": {
+          "n": 80,
+          "wins": 67,
+          "losses": 13,
+          "draws_or_voids": 0,
+          "win_rate": 0.8375,
+          "wilson95_descriptive": [
+            0.7415689513651669,
+            0.9025027266562451
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot1-mage-proxy": {
+          "n": 80,
+          "wins": 69,
+          "losses": 11,
+          "draws_or_voids": 0,
+          "win_rate": 0.8625,
+          "wilson95_descriptive": [
+            0.7703270280036946,
+            0.9214536632044886
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2-face-proxy": {
+          "n": 80,
+          "wins": 74,
+          "losses": 6,
+          "draws_or_voids": 0,
+          "win_rate": 0.925,
+          "wilson95_descriptive": [
+            0.8458779990261992,
+            0.9651752251489122
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "bot2-trade-proxy": {
+          "n": 80,
+          "wins": 72,
+          "losses": 8,
+          "draws_or_voids": 0,
+          "win_rate": 0.9,
+          "wilson95_descriptive": [
+            0.8148912101660255,
+            0.9484530008223144
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      },
+      "latency_s": {
+        "n": 13610,
+        "mean": 0.09763862161129132,
+        "max": 0.8610022919892799,
+        "p50": 0.08498095898539759,
+        "p95": 0.1560852920229081,
+        "p99": 0.30097516599926166
+      },
+      "teacher_family_macro": 0.8597222222222223,
+      "by_actual_first": {
+        "True": {
+          "n": 240,
+          "wins": 212,
+          "losses": 28,
+          "draws_or_voids": 0,
+          "win_rate": 0.8833333333333333,
+          "wilson95_descriptive": [
+            0.8365502797014834,
+            0.9180379447852325
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        },
+        "False": {
+          "n": 240,
+          "wins": 196,
+          "losses": 44,
+          "draws_or_voids": 0,
+          "win_rate": 0.8166666666666667,
+          "wilson95_descriptive": [
+            0.7628547322566349,
+            0.860500757536739
+          ],
+          "harness_errors": 0,
+          "illegal": 0,
+          "timeouts": 0,
+          "forfeits": 0,
+          "opponent_errors": 0,
+          "policy_errors": 0,
+          "fallbacks": 0,
+          "over_2s": 0,
+          "public_input_violations": 0
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "DA2": {
+      "all": {
+        "n_per_arm": 480,
+        "seed_clusters": 40,
+        "a_wins": 403,
+        "b_wins": 408,
+        "a_rate": 0.8395833333333333,
+        "b_rate": 0.85,
+        "gain": 0.010416666666666666,
+        "gain_seed_cluster_95": [
+          -0.00625,
+          0.03333333333333333
+        ],
+        "gain_one_sided_90_lower": -0.0020833333333333333,
+        "a_only_wins": 5,
+        "b_only_wins": 10,
+        "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+        "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+        "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+      },
+      "by_group": {
+        "astra": {
+          "n_per_arm": 240,
+          "seed_clusters": 40,
+          "a_wins": 191,
+          "b_wins": 193,
+          "a_rate": 0.7958333333333333,
+          "b_rate": 0.8041666666666667,
+          "gain": 0.008333333333333333,
+          "gain_seed_cluster_95": [
+            -0.0125,
+            0.03333333333333333
+          ],
+          "gain_one_sided_90_lower": -0.004166666666666667,
+          "a_only_wins": 3,
+          "b_only_wins": 5,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        },
+        "bot1": {
+          "n_per_arm": 80,
+          "seed_clusters": 40,
+          "a_wins": 69,
+          "b_wins": 69,
+          "a_rate": 0.8625,
+          "b_rate": 0.8625,
+          "gain": 0.0,
+          "gain_seed_cluster_95": [
+            -0.05,
+            0.05
+          ],
+          "gain_one_sided_90_lower": -0.0375,
+          "a_only_wins": 2,
+          "b_only_wins": 2,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        },
+        "bot2": {
+          "n_per_arm": 160,
+          "seed_clusters": 40,
+          "a_wins": 143,
+          "b_wins": 146,
+          "a_rate": 0.89375,
+          "b_rate": 0.9125,
+          "gain": 0.01875,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.05
+          ],
+          "gain_one_sided_90_lower": 0.0,
+          "a_only_wins": 0,
+          "b_only_wins": 3,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        }
+      },
+      "by_opponent": {
+        "astra-board-proxy": {
+          "n_per_arm": 80,
+          "seed_clusters": 40,
+          "a_wins": 65,
+          "b_wins": 65,
+          "a_rate": 0.8125,
+          "b_rate": 0.8125,
+          "gain": 0.0,
+          "gain_seed_cluster_95": [
+            -0.05,
+            0.05
+          ],
+          "gain_one_sided_90_lower": -0.025,
+          "a_only_wins": 2,
+          "b_only_wins": 2,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        },
+        "astra-sticky-proxy": {
+          "n_per_arm": 80,
+          "seed_clusters": 40,
+          "a_wins": 59,
+          "b_wins": 61,
+          "a_rate": 0.7375,
+          "b_rate": 0.7625,
+          "gain": 0.025,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0625
+          ],
+          "gain_one_sided_90_lower": 0.0,
+          "a_only_wins": 0,
+          "b_only_wins": 2,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        },
+        "astra-tempo-proxy": {
+          "n_per_arm": 80,
+          "seed_clusters": 40,
+          "a_wins": 67,
+          "b_wins": 67,
+          "a_rate": 0.8375,
+          "b_rate": 0.8375,
+          "gain": 0.0,
+          "gain_seed_cluster_95": [
+            -0.0375,
+            0.0375
+          ],
+          "gain_one_sided_90_lower": -0.025,
+          "a_only_wins": 1,
+          "b_only_wins": 1,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        },
+        "bot1-mage-proxy": {
+          "n_per_arm": 80,
+          "seed_clusters": 40,
+          "a_wins": 69,
+          "b_wins": 69,
+          "a_rate": 0.8625,
+          "b_rate": 0.8625,
+          "gain": 0.0,
+          "gain_seed_cluster_95": [
+            -0.05,
+            0.05
+          ],
+          "gain_one_sided_90_lower": -0.0375,
+          "a_only_wins": 2,
+          "b_only_wins": 2,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        },
+        "bot2-face-proxy": {
+          "n_per_arm": 80,
+          "seed_clusters": 40,
+          "a_wins": 73,
+          "b_wins": 74,
+          "a_rate": 0.9125,
+          "b_rate": 0.925,
+          "gain": 0.0125,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0375
+          ],
+          "gain_one_sided_90_lower": 0.0,
+          "a_only_wins": 0,
+          "b_only_wins": 1,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        },
+        "bot2-trade-proxy": {
+          "n_per_arm": 80,
+          "seed_clusters": 40,
+          "a_wins": 70,
+          "b_wins": 72,
+          "a_rate": 0.875,
+          "b_rate": 0.9,
+          "gain": 0.025,
+          "gain_seed_cluster_95": [
+            0.0,
+            0.0625
+          ],
+          "gain_one_sided_90_lower": 0.0,
+          "a_only_wins": 0,
+          "b_only_wins": 2,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        }
+      },
+      "by_actual_first": {
+        "True": {
+          "n_per_arm": 240,
+          "seed_clusters": 40,
+          "a_wins": 211,
+          "b_wins": 212,
+          "a_rate": 0.8791666666666667,
+          "b_rate": 0.8833333333333333,
+          "gain": 0.004166666666666667,
+          "gain_seed_cluster_95": [
+            -0.0125,
+            0.020833333333333332
+          ],
+          "gain_one_sided_90_lower": -0.008333333333333333,
+          "a_only_wins": 2,
+          "b_only_wins": 3,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        },
+        "False": {
+          "n_per_arm": 240,
+          "seed_clusters": 40,
+          "a_wins": 192,
+          "b_wins": 196,
+          "a_rate": 0.8,
+          "b_rate": 0.8166666666666667,
+          "gain": 0.016666666666666666,
+          "gain_seed_cluster_95": [
+            -0.0125,
+            0.058333333333333334
+          ],
+          "gain_one_sided_90_lower": -0.004166666666666667,
+          "a_only_wins": 3,
+          "b_only_wins": 7,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        }
+      },
+      "by_seat": {
+        "1": {
+          "n_per_arm": 240,
+          "seed_clusters": 40,
+          "a_wins": 200,
+          "b_wins": 203,
+          "a_rate": 0.8333333333333334,
+          "b_rate": 0.8458333333333333,
+          "gain": 0.0125,
+          "gain_seed_cluster_95": [
+            -0.016666666666666666,
+            0.05416666666666667
+          ],
+          "gain_one_sided_90_lower": -0.008333333333333333,
+          "a_only_wins": 3,
+          "b_only_wins": 6,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        },
+        "2": {
+          "n_per_arm": 240,
+          "seed_clusters": 40,
+          "a_wins": 203,
+          "b_wins": 205,
+          "a_rate": 0.8458333333333333,
+          "b_rate": 0.8541666666666666,
+          "gain": 0.008333333333333333,
+          "gain_seed_cluster_95": [
+            -0.0125,
+            0.029166666666666667
+          ],
+          "gain_one_sided_90_lower": -0.004166666666666667,
+          "a_only_wins": 2,
+          "b_only_wins": 4,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        }
+      },
+      "primary": {
+        "n_per_arm": 240,
+        "seed_clusters": 40,
+        "a_wins": 191,
+        "b_wins": 193,
+        "a_rate": 0.7958333333333333,
+        "b_rate": 0.8041666666666667,
+        "gain": 0.008333333333333333,
+        "gain_seed_cluster_95": [
+          -0.0125,
+          0.03333333333333333
+        ],
+        "gain_one_sided_90_lower": -0.004166666666666667,
+        "a_only_wins": 3,
+        "b_only_wins": 5,
+        "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+        "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+        "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+      },
+      "primary_by_seat": {
+        "1": {
+          "n_per_arm": 120,
+          "seed_clusters": 40,
+          "a_wins": 88,
+          "b_wins": 89,
+          "a_rate": 0.7333333333333333,
+          "b_rate": 0.7416666666666667,
+          "gain": 0.008333333333333333,
+          "gain_seed_cluster_95": [
+            -0.025,
+            0.05
+          ],
+          "gain_one_sided_90_lower": -0.016666666666666666,
+          "a_only_wins": 2,
+          "b_only_wins": 3,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        },
+        "2": {
+          "n_per_arm": 120,
+          "seed_clusters": 40,
+          "a_wins": 103,
+          "b_wins": 104,
+          "a_rate": 0.8583333333333333,
+          "b_rate": 0.8666666666666667,
+          "gain": 0.008333333333333333,
+          "gain_seed_cluster_95": [
+            -0.016666666666666666,
+            0.041666666666666664
+          ],
+          "gain_one_sided_90_lower": -0.008333333333333333,
+          "a_only_wins": 1,
+          "b_only_wins": 2,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        }
+      },
+      "primary_by_actual_first": {
+        "True": {
+          "n_per_arm": 120,
+          "seed_clusters": 40,
+          "a_wins": 103,
+          "b_wins": 103,
+          "a_rate": 0.8583333333333333,
+          "b_rate": 0.8583333333333333,
+          "gain": 0.0,
+          "gain_seed_cluster_95": [
+            -0.025,
+            0.025
+          ],
+          "gain_one_sided_90_lower": -0.016666666666666666,
+          "a_only_wins": 1,
+          "b_only_wins": 1,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        },
+        "False": {
+          "n_per_arm": 120,
+          "seed_clusters": 40,
+          "a_wins": 88,
+          "b_wins": 90,
+          "a_rate": 0.7333333333333333,
+          "b_rate": 0.75,
+          "gain": 0.016666666666666666,
+          "gain_seed_cluster_95": [
+            -0.016666666666666666,
+            0.058333333333333334
+          ],
+          "gain_one_sided_90_lower": -0.008333333333333333,
+          "a_only_wins": 2,
+          "b_only_wins": 4,
+          "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+          "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+          "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+        }
+      },
+      "flips": [
+        {
+          "opponent": "astra-board-proxy",
+          "seed": 62150304,
+          "seat": 1,
+          "a_win": 1,
+          "b_win": 0,
+          "a_game": "00ad6014abc3435e",
+          "b_game": "507bb9d26e104807"
+        },
+        {
+          "opponent": "astra-board-proxy",
+          "seed": 62150307,
+          "seat": 2,
+          "a_win": 1,
+          "b_win": 0,
+          "a_game": "30c7f4bcfcc54e98",
+          "b_game": "3d42f64571404772"
+        },
+        {
+          "opponent": "astra-board-proxy",
+          "seed": 62150314,
+          "seat": 1,
+          "a_win": 0,
+          "b_win": 1,
+          "a_game": "6894783b2f5446ea",
+          "b_game": "8c4858cd5d1948de"
+        },
+        {
+          "opponent": "astra-board-proxy",
+          "seed": 62150335,
+          "seat": 1,
+          "a_win": 0,
+          "b_win": 1,
+          "a_game": "a7d7e47f87494331",
+          "b_game": "517b658ef86747b1"
+        },
+        {
+          "opponent": "astra-sticky-proxy",
+          "seed": 62150330,
+          "seat": 2,
+          "a_win": 0,
+          "b_win": 1,
+          "a_game": "d3919433d25540ff",
+          "b_game": "80398cb7bddc4d96"
+        },
+        {
+          "opponent": "astra-sticky-proxy",
+          "seed": 62150331,
+          "seat": 2,
+          "a_win": 0,
+          "b_win": 1,
+          "a_game": "5e67b040c21d4ee6",
+          "b_game": "6ab2ac2e95d04171"
+        },
+        {
+          "opponent": "astra-tempo-proxy",
+          "seed": 62150314,
+          "seat": 1,
+          "a_win": 1,
+          "b_win": 0,
+          "a_game": "a3a560607c6947e9",
+          "b_game": "3ef85e28ff424bb2"
+        },
+        {
+          "opponent": "astra-tempo-proxy",
+          "seed": 62150335,
+          "seat": 1,
+          "a_win": 0,
+          "b_win": 1,
+          "a_game": "ed35cf1680164a52",
+          "b_game": "570228696e214aa4"
+        },
+        {
+          "opponent": "bot1-mage-proxy",
+          "seed": 62150306,
+          "seat": 2,
+          "a_win": 1,
+          "b_win": 0,
+          "a_game": "d2ba6ec0c92b4e97",
+          "b_game": "37b0d7f515eb478c"
+        },
+        {
+          "opponent": "bot1-mage-proxy",
+          "seed": 62150315,
+          "seat": 1,
+          "a_win": 1,
+          "b_win": 0,
+          "a_game": "ed81ead02936486e",
+          "b_game": "c327708a37b04a7c"
+        },
+        {
+          "opponent": "bot1-mage-proxy",
+          "seed": 62150326,
+          "seat": 2,
+          "a_win": 0,
+          "b_win": 1,
+          "a_game": "f98e6e17af8e4eca",
+          "b_game": "4b524f6210414f97"
+        },
+        {
+          "opponent": "bot1-mage-proxy",
+          "seed": 62150339,
+          "seat": 1,
+          "a_win": 0,
+          "b_win": 1,
+          "a_game": "31196ffbac2a414a",
+          "b_game": "3aba5cef284249ce"
+        },
+        {
+          "opponent": "bot2-face-proxy",
+          "seed": 62150335,
+          "seat": 1,
+          "a_win": 0,
+          "b_win": 1,
+          "a_game": "041fb8a0c18e4708",
+          "b_game": "b22da605422c4358"
+        },
+        {
+          "opponent": "bot2-trade-proxy",
+          "seed": 62150316,
+          "seat": 2,
+          "a_win": 0,
+          "b_win": 1,
+          "a_game": "6f2cd5e682844a9e",
+          "b_game": "4e979091b5524cfc"
+        },
+        {
+          "opponent": "bot2-trade-proxy",
+          "seed": 62150335,
+          "seat": 1,
+          "a_win": 0,
+          "b_win": 1,
+          "a_game": "60f75d7666e14994",
+          "b_game": "4b855cf6d1fc47cf"
+        }
+      ]
+    }
+  },
+  "primary": "three Astra proxies equally weighted",
+  "analysis_source_archive": {
+    "development/secret_hunter_astra_sprint/statistics.py": "2b22c939196b4d81b975940b3b165122277d598e7ce2fe763df507185746d2c9"
+  }
+}

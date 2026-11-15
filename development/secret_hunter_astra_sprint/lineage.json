@@ -211,5 +211,57 @@
       "krush_line": false
     },
     "status": "unvalidated"
+  },
+  {
+    "name": "EHC",
+    "parent": "DARCL2",
+    "sha256": "9c2a4ed136eb855c0446c8442757cb50362527f0deaefe0dd20ea8b8cfc8f082",
+    "created": 1794714451.887223,
+    "generation": 1,
+    "hypothesis": "H4: The public effect model transfers a killed Loot Hoarder into one extra opponent hand card, but race evaluation drops that future resource while rewarding removal of its deathrattle value. Price opponent public hand_size symmetrically with our hand using the existing turn_hand coefficient 0.973, without predicting card identities. This should reduce overvalued draw-deathrattle clears and visible bounce lines while preserving high-attack clear alternatives. Parent DARCL2, one scoring expression only, identical deck/mulligan/search caps. Refute if actual policy continuations do not produce repeatable net rescues, or fresh full games fail to show Astra gain. Unlike PRR this does not learn/reweight board, race, secret or own-hand features; unlike TRPLY it adds no reply or recovery nodes.",
+    "changed_files": [
+      "scripts/race_plan.py"
+    ],
+    "deck": {
+      "ordered_cards": [
+        "EX1_029",
+        "EX1_029",
+        "EX1_080",
+        "EX1_080",
+        "DS1_184",
+        "EX1_162",
+        "EX1_531",
+        "EX1_531",
+        "EX1_533",
+        "EX1_554",
+        "EX1_066",
+        "EX1_610",
+        "EX1_610",
+        "EX1_611",
+        "EX1_611",
+        "NEW1_019",
+        "NEW1_019",
+        "EX1_536",
+        "EX1_536",
+        "EX1_538",
+        "EX1_538",
+        "EX1_539",
+        "EX1_539",
+        "EX1_617",
+        "NEW1_031",
+        "NEW1_031",
+        "DS1_070",
+        "EX1_534",
+        "EX1_534",
+        "DS1_185"
+      ],
+      "hero_class": "HUNTER",
+      "deck_sha256": "af78480d96fd2fc11b77f0ca8f17c5703a6bda5934c2041622f762ca0128b7d1",
+      "changes": [],
+      "replacements": 0,
+      "retained": 30,
+      "krush_line": false
+    },
+    "status": "unvalidated"
   }
 ]

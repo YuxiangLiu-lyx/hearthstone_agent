@@ -1,0 +1,29 @@
+{
+  "created": 1794713293.591533,
+  "candidate": "DA2",
+  "parent": "DARCL2",
+  "hypothesis": "H3: In early Warlock board fights, the single three-mana random Deadly Shot often cannot precisely remove a two-health key attacker while also developing a minion. Replace only that card at slot 23 with a second one-mana Arcane Shot; keep the other 29 slots, all tactics, mulligan and search budgets identical to DARCL2. Predict positive fresh Astra macro gain from more precise clear-plus-development opportunities. Refute with nonpositive natural full-game gain, failed independent confirmation, or excessive loss of large-target removal in the frozen guardrail. This is the only new card substitution tested this sprint, not an assertion that card exposure implies causal value.",
+  "evidence": {
+    "single-slot-diagnosis.json": "c11399c44c2769adc76b8263b8ec5ed73a7678ec4ced7f81a04bdc8d6d6e7340",
+    "opening-resource-diagnosis.json": "7815b53990a90b4d66d752911427b811a2d8158945d34ee3d10b2c6b3603ece2",
+    "flame-clear-diagnosis.json": "7570e00689840a8c49d9d00c28a6066aa337a75584d75a022eeb4fe6efed5002"
+  },
+  "evidence_summary": "Unscreened 600 seen Astra games: precise key-clear opportunity with Deadly Shot in hand 132 games, including 45 original losses; paired Flame Imp clear subgroup 6 rescues / 0 regressions across 5 positive source seeds, development-only.",
+  "fresh_full_test": {
+    "batch": "round3-arcane",
+    "start": 62150300,
+    "seeds": 40,
+    "arms": [
+      "DARCL2",
+      "DA2"
+    ],
+    "workers": 6
+  },
+  "fixed_deck_change": {
+    "slot_zero_based": 23,
+    "removed": "EX1_617",
+    "added": "DS1_185"
+  },
+  "negative_control": "Healthy taunts, Amani and larger bodies exceed Arcane Shot damage; compare original wins that become losses before further work.",
+  "mulligan_unchanged": "Opening diagnostics did not establish a general opening failure; no repeat of the failed trap-keep rule."
+}

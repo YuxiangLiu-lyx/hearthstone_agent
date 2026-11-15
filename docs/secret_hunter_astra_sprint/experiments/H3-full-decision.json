@@ -1,0 +1,65 @@
+{
+  "created": 1794714451.820948,
+  "candidate": "DA2",
+  "decision": "retain_provisionally_not_promoted",
+  "reason": "Fresh Astra 191/240 to 193/240 (+0.8333pp, 5 rescues/3 regressions); 95% source CI crosses zero and gain below final 2pp target. Bot1 equal, Bot2 +3/160. Retain exact one-card candidate for independent confirmation/selection; no additional card swaps.",
+  "primary": {
+    "n_per_arm": 240,
+    "seed_clusters": 40,
+    "a_wins": 191,
+    "b_wins": 193,
+    "a_rate": 0.7958333333333333,
+    "b_rate": 0.8041666666666667,
+    "gain": 0.008333333333333333,
+    "gain_seed_cluster_95": [
+      -0.0125,
+      0.03333333333333333
+    ],
+    "gain_one_sided_90_lower": -0.004166666666666667,
+    "a_only_wins": 3,
+    "b_only_wins": 5,
+    "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+    "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+    "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+  },
+  "counts": {
+    "paired_games": 480,
+    "mulligan_actions_differ": 0,
+    "executed_action_path_differences": 127,
+    "same_public_state_at_first_action_difference": 0,
+    "regressions": 5,
+    "rescues": 10
+  },
+  "mulligan_actions_identical_all_480": true,
+  "report_sha256": "a21f0bf44a731d47b3eb5f7a6bbb371825e40271a408dcae1f3cc75919a869d0",
+  "action_paths_sha256": "65ddc25842f5b0a89304b223cd556a9e467f7f3ed437c9e0e51619ac61560647",
+  "regressions_read": [
+    [
+      "astra-board-proxy",
+      62150304,
+      1
+    ],
+    [
+      "astra-board-proxy",
+      62150307,
+      2
+    ],
+    [
+      "astra-tempo-proxy",
+      62150314,
+      1
+    ],
+    [
+      "bot1-mage-proxy",
+      62150306,
+      2
+    ],
+    [
+      "bot1-mage-proxy",
+      62150315,
+      1
+    ]
+  ],
+  "specific_tradeoff": "Lost direct hard removal of a healthy Water Elemental in Bot1 seed62150306; cheap early clear rescued Juggler/Flame Imp positions in Astra. These examples illustrate trajectories, not standalone causal effect sizes.",
+  "next": "One independent public-resource scoring check EHC on parent DARCL2. Its coefficient is inherited, not fitted. Only if it passes paired continuation screening and fresh whole games may a common-parent combination ablation be considered."
+}

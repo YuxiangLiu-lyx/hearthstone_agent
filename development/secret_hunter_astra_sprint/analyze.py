@@ -5,7 +5,7 @@ import json
 from development.secret_hunter_astra_sprint.study import RUN,HERE
 from development.secret_hunter_mcgs.train import atomic,connect
 
-TESTED=('EX1_543','DS1_185','EX1_162','EX1_066','EX1_533','EX1_008','EX1_010')
+TESTED=('EX1_617','DS1_185')
 def inspect_game(row,batch,arm):
     folder=RUN/'batches'/batch/arm/'games'/row['game']
     logs=[json.loads(l) for l in (folder/f"p{row['seat']}"/'observations.jsonl').read_text().splitlines()]
@@ -73,6 +73,9 @@ def summarize(games):
 
 def run(batch):
     db=connect(RUN);b=db.execute('select * from batches where id=?',(batch,)).fetchone();out={}
+    assert b and b['status']=='done'
+    if b['phase'].startswith('final'):
+        assert all(db.execute('select status from batches where id=?',(p,)).fetchone()[0]=='done' for p in ('final-core','final-guard'))
     for arm in json.loads(b['arms']):
         rows=[json.loads(r[0]) for r in db.execute("select result from tasks where batch=? and candidate=? and status='done'",(batch,arm))]
         games=[inspect_game(r,batch,arm) for r in rows if not r.get('harness_error')]
