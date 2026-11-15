@@ -53,6 +53,10 @@ def compare(left, right):
     if result['primary']:
         counts = {o: sum(r['opponent'] == o for r in left) for o in opponents if o.startswith('astra-')}
         assert len(counts) == 3 and len(set(counts.values())) == 1
+        al=[r for r in left if r['group']=='astra'];bl=[r for r in right if r['group']=='astra']
+        result['primary_by_seat']={str(v):paired([r for r in al if r['seat']==v],[r for r in bl if r['seat']==v]) for v in (1,2)}
+        result['primary_by_actual_first']={str(v):paired([r for r in al if (r['first_player']==r['seat'])==v],
+            [r for r in bl if (r['first_player']==r['seat'])==v]) for v in (True,False)}
     aa, bb = index(left), index(right)
     result['flips'] = [{'opponent': k[0], 'seed': k[1], 'seat': k[2],
                         'a_win': aa[k]['score'], 'b_win': bb[k]['score'],
@@ -62,11 +66,16 @@ def compare(left, right):
 
 
 def analyze(db, run, batch):
+    from development.secret_hunter_astra_sprint.provenance import archive_code
+    from development.secret_hunter_astra_sprint.study import ROOT
+    from development.secret_hunter_program.common import sha
     item = db.execute('select * from batches where id=?', (batch,)).fetchone()
     assert item
     if db.execute("select count(*) from tasks where batch=? and status!='done'", (batch,)).fetchone()[0]:
         return False
     if item['phase'].startswith('final'):
+        freeze=json.loads((run/'final-freeze.json').read_text())
+        assert all(sha(ROOT/path)==digest for path,digest in freeze['analysis_sources'].items())
         for pool in ('final-core', 'final-guard'):
             record = db.execute('select status from batches where id=?', (pool,)).fetchone()
             assert record and record['status'] == 'done', 'Do not open outcomes until both final pools finish'
@@ -75,6 +84,7 @@ def analyze(db, run, batch):
             for a in arms}
     report = {'batch': batch, 'phase': item['phase'], 'start': item['start'], 'seed_groups': item['seeds'],
               'baseline': arms[0], 'arms': {}, 'comparisons': {}, 'primary': 'three Astra proxies equally weighted'}
+    report['analysis_source_archive']=archive_code(run,['development/secret_hunter_astra_sprint/statistics.py'])
     assert arms[0] == 'DARCL2'
     for arm, games in rows.items():
         report['arms'][arm] = train.summarize(games)

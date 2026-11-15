@@ -35,10 +35,16 @@ def audit(case,arm='DARCL2'):
     src=json.loads((RUN/'tactical-sources'/(case+'.json')).read_text())
     assert src['split']=='train','Held-out search inspection requires a separate, locked validation workflow'
     state=src['state'];cfg=json.loads((HERE/'candidates'/arm/'config.json').read_text())
+    reference_info=src['original_info']
+    reference_scope='recorded source CLI'
+    if arm!=src['arm']:
+        from program_policy import decide
+        _,reference_info=decide(state,cfg)
+        reference_scope='fresh same-public-state candidate policy call'
     ranked=rank(state,cfg,time.monotonic()+1.5)
     module,digest=instrument(arm)
     result=module.plan(state,ranked,cfg,time.monotonic()+1.5)
-    original=src['original_info'].get('turn_search',{})
+    original=reference_info.get('turn_search',{})
     comparable=all(result.get(k)==original.get(k) for k in ('nodes','action','sequence','bounded_out','stop_reason','excluded','beam_pruned','depth'))
     trace=result.get('audit',{});by_route={}
     extra_path=RUN/'tactical-extra-routes.json'
@@ -62,16 +68,17 @@ def audit(case,arm='DARCL2'):
             'root_survived_beam':any(starts(lines) for lines in trace.get('frontiers',[])),
             'root_retained_endpoint':starts([x['line'] for x in trace.get('endpoints',[])]),
             'root_received_response_ranking':starts(trace.get('reply_candidates',[])),
-            'root_in_chance_comparison':any(action_key(v['action'])==root for v in src['original_info'].get('chance',{}).get('comparisons',[])),
+            'root_in_chance_comparison':any(action_key(v['action'])==root for v in reference_info.get('chance',{}).get('comparisons',[])),
             'changed_actions':label['actions_changed'],'first_changed':label['first_changed']}
     return {'case':case,'arm':arm,'source_seed':src['seed'],'proxy':src['opponent_spec']['name'],
         'split':src['split'],'source_code_sha256':digest,'original_info':src['original_info'],
-        'instrumented_matches_original_search':comparable,'instrumented_report':result,'route_coverage':by_route,
+        'reference_info':reference_info,'reference_scope':reference_scope,
+        'instrumented_matches_reference_search':comparable,'instrumented_report':result,'route_coverage':by_route,
         'scope':'Public-state offline search instrumentation. Timed traces are evidence only when original search action/count/stop/prune metadata match.'}
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--case',required=True);p.add_argument('--arm',default='DARCL2');a=p.parse_args()
     result=audit(a.case,a.arm)
     assert result['split']=='train','Do not inspect held-out roots during hypothesis generation'
-    ledger.atomic(RUN/'search-audits'/(a.case+'.json'),result)
-    print(json.dumps({k:v for k,v in result.items() if k not in ('original_info','instrumented_report')},indent=2))
+    ledger.atomic(RUN/'search-audits'/a.arm/(a.case+'.json'),result)
+    print(json.dumps({k:v for k,v in result.items() if k not in ('original_info','reference_info','instrumented_report')},indent=2))

@@ -21,7 +21,7 @@ def action_key(action):
     # Keep the original position in the actual engine action and replay.
     return json.dumps({k:v for k,v in action.items() if k!='position'},sort_keys=True)
 
-def mine(batch, split):
+def mine(batch, split, stage='initial'):
     setup('DARCL2')
     from development.secret_hunter_final.early_routes import features
     from action_validator import legal
@@ -38,20 +38,35 @@ def mine(batch, split):
     specs = {o['name']:o for o in json.loads((ROOT/'development/teacher_eval/core.json').read_text())}
     quota = {'astra-board-proxy':60, 'astra-sticky-proxy':60, 'astra-tempo-proxy':24}
     if split == 'validation': quota = {k:int(v*2/3) for k,v in quota.items()}
+    minimum_mana=2;route_groups=ROUTES;old_roots={};rescued=set()
+    if stage=='late1':
+        minimum_mana=3;route_groups=dict(ROUTES)
+        route_groups['clear']=('clear_key','bow_amani',*ROUTES['clear'][1:])
+        if split=='train':
+            quota={'astra-board-proxy':50,'astra-sticky-proxy':50,'astra-tempo-proxy':20}
+            labels=json.loads((RUN/'labels-train-worlds-01.json').read_text())
+            rescued={r['case'] for r in labels['pairs'] if r['world']==0 and r['delta']>0}
+            for p in (RUN/'tactical-sources').glob('sprint-*.json'):
+                old=json.loads(p.read_text())
+                if old['split']=='train':old_roots[old['opponent_spec']['name'],old['seed'],old['seat']]=old
     candidates=[]; coverage=defaultdict(Counter); catalogue=[]
     for r in rows:
         name=r['opponent']; count=coverage[name]
         count['all_games']+=1; count['wins' if r['score'] else 'losses']+=1
         assert not r.get('harness_error') and not r.get('course_failure')
+        previous=old_roots.get((name,r['seed'],r['seat']))
+        if previous and not r['score'] and previous['case'] in rescued:
+            count['excluded_already_rescued_original_loss']+=1;continue
+        earliest_mana=max(minimum_mana,previous['features']['mana']+1 if previous else minimum_mana)
         folder=RUN/'batches'/batch/'DARCL2'/'games'/r['game']
         logs=[json.loads(line) for line in (folder/f"p{r['seat']}/observations.jsonl").read_text().splitlines()]
         earliest=None; ever=set()
         for z in logs:
             s=z['state']
-            if s['phase']!='main' or not 2<=s['you']['max_mana']<=5:continue
+            if s['phase']!='main' or not earliest_mana<=s['you']['max_mana']<=5:continue
             if z['info'].get('reason')=='guaranteed_lethal':continue
             choices=[]; actions=set()
-            for category,routes in ROUTES.items():
+            for category,routes in route_groups.items():
                 for route in routes:
                     action=propose(s,route,{},z['action'])
                     if action is None or action_key(action)==action_key(z['action']) or not legal(s,action):continue
@@ -74,7 +89,8 @@ def mine(batch, split):
         count['eligible_games']+=1
         if name not in quota:continue
         z,choices=earliest;s=z['state']
-        case=f"sprint-DARCL2-{r['seed']}-{name}-s{r['seat']}-q{s['seq']}"
+        prefix='sprint' if stage=='initial' else stage
+        case=f"{prefix}-DARCL2-{r['seed']}-{name}-s{r['seat']}-q{s['seq']}"
         opening=[{'seq':v['state']['seq'],'phase':v['state']['phase'],
                   'action':v['action'],'hand':[c['card_id'] for c in v['state'].get('you',{}).get('hand',[])]}
                  for v in logs if v['state']['seq']<s['seq'] and v['state']['phase'] in ('mulligan','main')]
@@ -114,7 +130,11 @@ def mine(batch, split):
         'strata':dict(Counter(f"{c['opponent_spec']['name']}:{c['source_score']}:{c['actual_first']}" for c in chosen)),
         'label_access':'train worlds 0/1 only before hypothesis lock; world 2 and validation source labels held out',
         'worlds':'0 original; 1/2 shuffle both remaining decks and future RNG, hidden hands fixed'}
-    target=RUN/'tactical-sources'/f'manifest-{batch}-DARCL2.json'
+    if stage!='initial':manifest.update(stage=stage,minimum_mana=minimum_mana,source_batch=batch,
+        earlier_rescued_losses_excluded=split=='train',
+        source_status='Seen development seeds; do not claim a new source holdout' if split=='train' else 'Independent registered label-holdout source block')
+    suffix='' if stage=='initial' else '-'+stage
+    target=RUN/'tactical-sources'/f'manifest-{batch}{suffix}-DARCL2.json'
     if target.exists():assert json.loads(target.read_text())==manifest
     else:ledger.atomic(target,manifest)
     reserve('tactical',jobs)
@@ -123,4 +143,5 @@ def mine(batch, split):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--batch',required=True)
     p.add_argument('--split',choices=['train','validation'],required=True)
-    a=p.parse_args();mine(a.batch,a.split)
+    p.add_argument('--stage',choices=['initial','late1'],default='initial')
+    a=p.parse_args();mine(a.batch,a.split,a.stage)

@@ -8,10 +8,10 @@ from development.secret_hunter_astra_sprint import ledger
 from development.benchmarks.run import fingerprint
 from development.secret_hunter_program.common import sha
 
-def main(arm,lock):
+def main(arm,lock,source_prefix='sprint'):
     record=json.loads(lock.read_text());assert record['candidate']==arm
     assert record['source_sha256']==fingerprint(HERE/'candidates'/arm)
-    sources=[json.loads(p.read_text()) for p in sorted((RUN/'tactical-sources').glob('sprint-*.json'))]
+    sources=[json.loads(p.read_text()) for p in sorted((RUN/'tactical-sources').glob(source_prefix+'-*.json'))]
     jobs=[]
     for src in sources:
         for world in range(3):
@@ -29,4 +29,5 @@ def main(arm,lock):
 if __name__=='__main__':
     from pathlib import Path
     p=argparse.ArgumentParser();p.add_argument('--arm',required=True);p.add_argument('--lock',type=Path,required=True)
-    a=p.parse_args();main(a.arm,a.lock)
+    p.add_argument('--source-prefix',default='sprint')
+    a=p.parse_args();main(a.arm,a.lock,a.source_prefix)

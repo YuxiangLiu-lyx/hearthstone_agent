@@ -7,7 +7,7 @@ import time
 from development.secret_hunter_astra_sprint.study import RUN
 from development.secret_hunter_astra_sprint import ledger
 
-def read(split='train', worlds=(0,1), lock=None):
+def read(split='train', worlds=(0,1), lock=None, case_ids=None):
     if split!='train' or 2 in worlds:
         assert lock and Path(lock).exists(), 'Lock a concrete hypothesis before opening held-out labels'
         record=json.loads(Path(lock).read_text())
@@ -19,6 +19,7 @@ def read(split='train', worlds=(0,1), lock=None):
         job=json.loads(r['job'])
         if job['sample'] not in worlds or job.get('policy_arm'):continue
         case=job['case']
+        if case_ids is not None and case not in case_ids:continue
         if case not in sources:sources[case]=json.loads((RUN/'tactical-sources'/(case+'.json')).read_text())
         if sources[case]['split']!=split:continue
         assert r['status']=='done', ('incomplete label',job,r['status'])
@@ -59,8 +60,9 @@ def summarize(pairs):
             'first_action_changed':sum(r['first_changed'] for r in pairs),
             'later_action_changed':sum(r['later_changed'] for r in pairs)}
 
-def report(split='train', worlds=(0,1), lock=None):
-    pairs,sources=read(split,worlds,lock)
+def report(split='train', worlds=(0,1), lock=None, manifest=None):
+    case_ids=set(json.loads(manifest.read_text())['cases']) if manifest else None
+    pairs,sources=read(split,worlds,lock,case_ids)
     routes=sorted({r['route'] for r in pairs})
     result={'created':time.time(),'split':split,'worlds':list(worlds),'hypothesis_lock':str(lock) if lock else None,
         'total':summarize(pairs),
@@ -71,12 +73,18 @@ def report(split='train', worlds=(0,1), lock=None):
             for m in sorted({r['features']['mana'] for r in pairs if r['route']==route})} for route in routes},
         'pairs':pairs,
         'warning':'Outcome-stratified conditional sample, not a natural-frequency full-game gain. Routes share roots/worlds; do not treat pairs as independent observations.'}
-    path=RUN/f"labels-{split}-worlds-{''.join(map(str,worlds))}.json"
-    ledger.atomic(path,result)
+    prefix='labels-' if manifest is None else 'labels-'+manifest.stem+'-'
+    path=RUN/f"{prefix}{split}-worlds-{''.join(map(str,worlds))}.json"
+    if path.exists():
+        saved=json.loads(path.read_text())
+        assert {k:v for k,v in saved.items() if k!='created'}=={k:v for k,v in result.items() if k!='created'}, 'Immutable label report changed; use an explicit source manifest'
+        result=saved
+    else:ledger.atomic(path,result)
     print(json.dumps({k:v for k,v in result.items() if k not in ('pairs','by_route_proxy','by_route_mana')},indent=2))
     return result
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--split',choices=['train','validation'],default='train')
     p.add_argument('--worlds',type=int,nargs='+',default=[0,1]);p.add_argument('--lock',type=Path)
-    a=p.parse_args();report(a.split,tuple(a.worlds),a.lock)
+    p.add_argument('--manifest',type=Path)
+    a=p.parse_args();report(a.split,tuple(a.worlds),a.lock,a.manifest)
