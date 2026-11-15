@@ -1,0 +1,17 @@
+{
+  "created": 1794718983.942914,
+  "hypothesis": "Resource changes confound serial whole-arm batches. Dispatch adjacent opponent/seed/seat tasks across immutable arms, rotating which arm starts first by source seed and seat, to reduce paired start-time separation without changing policy, seeds, worker isolation, or node/time caps. Refute the engineering change if candidate paths/fingerprints cross, task identities duplicate, execution defects appear, or paired start separation is not reduced.",
+  "batch": "interleaved-scheduler-pilot",
+  "arms": [
+    "DARCL2",
+    "DA2"
+  ],
+  "start": 62140040,
+  "seeds": 1,
+  "workers": 3,
+  "full_attempts_planned": 24,
+  "interleave_arms": true,
+  "outcomes_used_for_strategy": false,
+  "resource_reason": "Exact-package 16-state cold/3/6 test was stable at 3, unstable at 6 under current load; all calls legal and <=2s. Preserve failure, use 3 for the scheduling pilot.",
+  "runtime_evidence_sha256": "5dc80d5e407a0e9423fbe6aaaf7b5194dd55b0cf04a41b89964269dfbb74070e"
+}

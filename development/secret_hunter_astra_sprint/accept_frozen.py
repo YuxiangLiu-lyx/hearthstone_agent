@@ -83,7 +83,7 @@ def main():
     assert fingerprint(candidate) == expected
     summary = {'passed': True, 'candidate': recommendation['recommended'], 'source_sha256': expected,
                'plan_sha256': plan_sha, 'recommendation_sha256': recommendation_sha,
-               'validated_before_selection': args.fallback_first,
+               'validated_before_selection': args.fallback_first or (recommendation['recommended']=='DARCL2' and (RUN/'fallback-acceptance.json').exists()),
                'games': len(records), 'records': records,
                'scope': 'Protocol acceptance only; these outcomes never enter strategy selection or promotion.'}
     name = 'fallback-acceptance.json' if args.fallback_first else 'final-acceptance.json'

@@ -65,7 +65,8 @@ def main():
   commands=[]
   for pool,key,batch in [('core','final_core','final-core'),('guardrail','final_guard','final-guard')]:
    lo,hi=freeze['seeds'][key]
-   commands.append(['env','HUNTER_SPRINT_RUN='+str(RUN),'.venv/bin/python','-m','development.secret_hunter_astra_sprint.study','run','--batch',batch,'--arms',*freeze['arms'],'--start',str(lo),'--seeds',str(hi-lo+1),'--pool',pool,'--workers','6','--final'])
+   commands.append(['env','HUNTER_SPRINT_RUN='+str(RUN),'.venv/bin/python','-m','development.secret_hunter_astra_sprint.study','run','--batch',batch,'--arms',*freeze['arms'],'--start',str(lo),'--seeds',str(hi-lo+1),'--pool',pool,'--workers',str(freeze['workers']),'--final'])
+   if freeze.get('interleave_arms'):commands[-1].append('--interleave-arms')
   record={'created':time.time(),'new_run':str(RUN),**manifest['reproduction'],'arms':freeze['arms'],'commands':commands,'scope':'Original frozen comparison reproduced; all source groups are already seen. Finish both pools before report.'}
   ledger.atomic(RUN/'reproduction.json',record);db.close();print(json.dumps(record,indent=2));print('\n'.join(shlex.join(c) for c in commands))
 if __name__=='__main__':main()

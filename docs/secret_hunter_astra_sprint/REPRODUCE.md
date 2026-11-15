@@ -14,7 +14,7 @@
 .venv/bin/python -m development.secret_hunter_astra_sprint.cfqueue run --kind tactical --workers 3
 ```
 
-只在没有另一个控制器持有 writer lock 时恢复。不要并行启动完整 CLI 评测和续局负载；本轮完整 CLI 的计时以六并发为标准。
+只在没有另一个控制器持有 writer lock 时恢复。不要并行启动完整 CLI 评测和续局负载；开发初期采用六并发，资源变化后的实际配置和失败稳定性检查见 [RESOURCE-INCIDENT.md](RESOURCE-INCIDENT.md)。
 
 开发批次可用原命令断点续跑，例如：
 
@@ -32,9 +32,17 @@
   --batch round3-arcane --arms DARCL2 DA2 --start 62150300 --seeds 40 --workers 6
 .venv/bin/python -m development.secret_hunter_astra_sprint.study run \
   --batch round4-hand-resource --arms DARCL2 EHC --start 62150400 --seeds 40 --workers 6
-.venv/bin/python -m development.secret_hunter_astra_sprint.study run \
-  --batch confirmation-arcane --arms DARCL2 DA2 --start 62150500 --seeds 80 --workers 6
 ```
+
+原 `confirmation-arcane` 批次因资源变化保留 273 个基线任务，不能把它当成已完成结果，也不要手工重新打开已关闭任务。恢复时仅按 `resource-recovery-plan.json`：固定 16 状态三并发检查通过后，运行登记的新完整 CLI pilot，随后复测 1/3/6 并发。`recovery_capacity --batch recovery-pilot-1 --health <复测 JSON 文件名> --close-original-confirmation` 只读计时、错误和动作稳定性，确认时间/额度够用才关闭原半批并记录摘要。新确认固定为：
+
+```sh
+.venv/bin/python -m development.secret_hunter_astra_sprint.study run \
+  --batch confirmation-arcane-resource-reset --arms DARCL2 DA2 \
+  --start 62150600 --seeds 80 --workers 6 --interleave-arms
+```
+
+两版在同对手、种子、座位上相邻派发，并轮换谁先启动；各局仍使用独立 worker 和自己的指纹路径。选择及最终阶段的并发、交错模式也必须匹配冻结计划。资源未恢复时不执行上述命令。
 
 已完成批次的全部翻转局可直接复读，先列原赢变输：
 
@@ -45,7 +53,7 @@
 
 H2 模型训练数据只包括最初早期根及较晚训练根的世界 0/1，按来源种子五折划分；模型源码和冻结系数在 `candidates/PRR/`。已冻结的拟合结果见 `experiments/H2-fitted-ranker.json`。不要重拟合并覆盖同名候选，也不要把已开封标签重新称作留出。
 
-选拔完成后，最终只冻结 DARCL2 和一名挑战者。两池全部完成前不读结果；恢复只补原计划任务，不添加种子或候选。精确包验证和独立复跑入口：
+只有实际完成选拔并产生 `final-freeze.json` 时，才使用以下双版本最终复跑入口。两池全部完成前不读结果；恢复只补原计划任务，不添加种子或候选：
 
 ```sh
 .venv/bin/python -m development.secret_hunter_astra_sprint.reproduce_frozen \
@@ -55,5 +63,20 @@ H2 模型训练数据只包括最初早期根及较晚训练根的世界 0/1，�
 ```
 
 第二条命令创建全新账本并输出两池的完整复跑命令，绝不重开原账本。它校验原 ZIP、相对路径匹配的引擎资源、依赖、对手及冻结统计代码；复制原字节并登记新的精确解包路径。复跑同样种子是复现，不是新的独立验证。
+
+若本轮按明确回退条款交付原 DARCL2，则只有 `delivery-freeze.json`，没有最终双版本样本；不要执行上述 `reproduce_frozen`，也不要据此补造最终区间。原字节验证和新目录解包使用：
+
+```sh
+.venv/bin/python -m development.secret_hunter_astra_sprint.verify_delivery \
+  --source-run runs/astra-sprint-20261114 --extract runs/astra-fallback-exact-copy
+.venv/bin/python -m development.secret_hunter_astra_sprint.verify_evidence \
+  --source-run runs/astra-sprint-20261114
+.venv/bin/python -m development.secret_hunter_astra_sprint.development_tables \
+  --source-run runs/astra-sprint-20261114
+```
+
+`verify_delivery` 核对 ZIP、依赖、对手、341 个引擎资源、源码指纹和真实提交牌表入口；使用 `hs-arena validate --no-game` 避免默认随机对手超出允许名单。`verify_evidence` 重算已完成四轮的主指标区间，核对来源分区、全部 7,509 次战术续局的起始世界与归档执行源码，以及 50 次投影检查计费。它不运行新对局，也不读取未完成确认的胜负。
+
+最终 `evidence.tar.gz` 解包后，以 `astra-sprint-evidence` 作为 `--source-run` 运行相同两项校验；此时还会逐文件检查证据索引和 SQLite 快照的 SHA-256。归档不包含完整模型会话或认证文件，Luna 中转证据为允许的脚本/MCP 调用、已发布状态、时间样本及原会话哈希。文件系统路径已在校验器中按归档相对位置解析。
 
 完整 CLI、注入故障、MCP 协议与真实 Luna 的计时分开。最终真实模型/ClientSeat 复跑使用 `final-acceptance-plan.json` 的预定种子，并继续记入辅助整局额度；策略选拔不使用这些胜负。正式 Slack 提交由用户完成。

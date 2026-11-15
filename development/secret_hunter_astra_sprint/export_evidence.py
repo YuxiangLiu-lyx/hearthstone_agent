@@ -7,8 +7,13 @@ from development.secret_hunter_program.common import sha
 
 def main():
  db=ledger.connect(RUN);assert not ledger.meta(db,'pid') and not ledger.meta(db,'cf_pid')
- assert all(db.execute('select status from batches where id=?',(b,)).fetchone()[0]=='done' for b in ('final-core','final-guard'))
  recommendation=ROOT/'docs/secret_hunter_astra_sprint/recommendation.json';assert recommendation.exists()
+ rec=json.loads(recommendation.read_text())
+ if rec.get('paired_final_validation_complete',True):
+  assert all(db.execute('select status from batches where id=?',(b,)).fetchone()[0]=='done' for b in ('final-core','final-guard'))
+ else:
+  assert rec['recommended']=='DARCL2' and not rec['promoted'] and rec['reason']
+  assert not ledger.meta(db,'final_opened',False) and (RUN/'delivery-freeze.json').exists()
  acceptance=RUN/'final-acceptance.json';assert acceptance.exists(),'Record actual protocol acceptance or explicit environment gap first'
  counts={'full_match_attempts':db.execute('select count(*) from attempts').fetchone()[0],
          'auxiliary_attempts':db.execute('select count(*) from auxiliary_games').fetchone()[0],
@@ -21,9 +26,16 @@ def main():
  assert counts['total_full_attempts']<=18000 and counts['continuation_attempts']<=16000 and time.time()<=m['deadline']
  ledger.atomic(RUN/'final-budget-audit.json',counts);ledger.atomic(ROOT/'docs/secret_hunter_astra_sprint/final-budget-audit.json',counts)
  snapshot=RUN/'ledger.final.sqlite';target=sqlite3.connect(snapshot);db.backup(target);target.close()
- files={p for p in RUN.glob('*.json') if p.is_file()}
- for sub,pattern in [('frozen','*.zip'),('hypotheses','*.json'),('tactical-sources','*.json'),('tactical-labels','*.json'),('analysis','*.json'),('harness-by-sha','*.json'),('case-replays','*.json')]:
+ files={p for p in RUN.glob('*.json') if p.is_file() and p.name!='evidence-index.json'}
+ for sub,pattern in [('frozen','*.zip'),('hypotheses','*.json'),('tactical-sources','*.json'),('tactical-labels','*.json'),('analysis','*.json'),('harness-by-sha','*.json'),('case-replays','*.json'),('relay-proof','*.json')]:
   files.update((RUN/sub).glob(pattern))
+ # Include every charged kind, including the 50 conservative projection
+ # checks, and the exact dispatch requests when present.
+ for row in db.execute('select result_path from cf_jobs'):
+  label=Path(row[0]);assert label.is_relative_to(RUN) and label.exists()
+  files.add(label)
+  request=label.with_suffix('.request.json')
+  if request.exists():files.add(request)
  # Preserve both players' recorded prefixes for every counterfactual source.
  # Hidden worlds remain offline evidence and never enter the submission ZIP.
  source_games=set()
@@ -37,6 +49,11 @@ def main():
   report=RUN/'batches'/batch[0]/'report.json'
   if report.exists():files.add(report)
  for p in (RUN/'relay').glob('*.audit.json'):files.add(p)
+ for record in json.loads(acceptance.read_text()).get('records',[]):
+  game=Path(record['game_path']);player=game/f"p{record['seat']}"
+  files.add(game/'result.json')
+  files.update((player/'decisions').glob('*.state.json'))
+  files.add(player/'seat/mcp_calls.jsonl');files.add(player/'seat/scratch/decisions.jsonl')
  # Selected final examples retain complete recorded logs. Other final games
  # can be regenerated with the frozen full-CLI comparison commands.
  case_audit=RUN/'final-case-replay-audit.json'
@@ -45,7 +62,7 @@ def main():
    replay=json.loads(Path(record['path']).read_text());folder=Path(replay['source_game'])
    files.update(p for p in folder.rglob('*') if p.is_file() and p.suffix in ('.json','.jsonl'))
  manifest={'created':time.time(),'budget':counts,'files':{str(p.relative_to(RUN)):sha(p) for p in sorted(files)},
-           'ledger_sqlite_sha256':sha(snapshot),'scope':'Exact frozen ZIPs, immutable analysis/reproduction metadata, full task ledger, all tactical labels and dispatch requests, their source-game observation logs, and selected verified final-game logs. Alternative hidden worlds are offline evidence only. Other raw training logs remain in the original local run. No authentication files or model session transcripts.'}
+           'ledger_sqlite_sha256':sha(snapshot),'scope':'Exact delivery ZIPs, analysis/reproduction metadata, full task ledger, all charged continuation/projection labels and available dispatch requests, their source-game observations, protocol states/script/MCP records and minimal Luna tool-chain proof, plus selected final logs if a final comparison was completed. Missing final comparisons are explicitly marked in recommendation and delivery-freeze. Alternative hidden worlds remain offline. Other raw training logs stay in the original local run. No authentication files or full model session transcripts.'}
  ledger.atomic(RUN/'evidence-index.json',manifest);files.add(RUN/'evidence-index.json')
  out=ROOT/'docs/secret_hunter_astra_sprint/evidence.tar.gz'
  with tarfile.open(out,'w:gz',compresslevel=6) as tar:

@@ -105,6 +105,7 @@ def main():
     p.add_argument('--pool',default='core',choices=['core','guardrail']);p.add_argument('--workers',type=int,default=3)
     p.add_argument('--final',action='store_true');p.add_argument('--selection-stage',action='store_true');p.add_argument('--warm',action='store_true')
     p.add_argument('--selection',type=Path)
+    p.add_argument('--interleave-arms',action='store_true')
     a=p.parse_args();RUN.mkdir(parents=True,exist_ok=True)
     if a.command=='status':
         db=train.connect(RUN);print(json.dumps(train.status(db,RUN,False),indent=2));return
@@ -128,8 +129,11 @@ def main():
                      manifest_sha256=sha(RUN/'manifest.json'),engine_versions=m['versions'],
                      engine_source_files=m['engine'],opponents=m['opponents'],
                      final_target=m['final_target'],outcome_access='Read neither pool until BOTH final pools finish')
-            f['analysis_sources']={str((HERE/name).relative_to(ROOT)):sha(HERE/name) for name in ('statistics.py','release.py','selection.py','runtime.py')}
+            f['analysis_sources']={str((HERE/name).relative_to(ROOT)):sha(HERE/name) for name in ('statistics.py','release.py','selection.py','runtime.py','study.py','ledger.py','execute_frozen.py','reproduce_frozen.py')}
             f['runtime_stress_sha256']=sha(RUN/'runtime-stress-cases.json')
+            execution_plan=json.loads((RUN/'selection-plan.json').read_text())
+            f['interleave_arms']=execution_plan.get('interleave_arms',False)
+            f['workers']=execution_plan['workers'];f['selection_plan_sha256']=sha(RUN/'selection-plan.json')
             assert not (RUN/'final-freeze.json').exists();train.atomic(RUN/'final-freeze.json',f);return
         if a.command=='report':
             from development.secret_hunter_astra_sprint.statistics import analyze
@@ -137,6 +141,8 @@ def main():
         assert time.time()<m['deadline']
         if a.final:
             f=json.loads((RUN/'final-freeze.json').read_text());assert a.arms==f['arms']
+            assert a.interleave_arms==f.get('interleave_arms',False)
+            assert a.workers==f['workers'] and sha(RUN/'selection-plan.json')==f['selection_plan_sha256']
             assert all(cs[x]['sha256']==f['fingerprints'][x] for x in a.arms)
             assert sha(RUN/'release-candidates.json')==f['release_records_sha256']
             assert sha(RUN/'manifest.json')==f['manifest_sha256']
@@ -154,6 +160,8 @@ def main():
         if a.selection_stage:assert not a.warm,'Selection is complete CLI'
         if a.selection_stage:
             plan=json.loads((RUN/'selection-plan.json').read_text())
+            assert a.interleave_arms==plan.get('interleave_arms',False)
+            assert a.workers==plan['workers']
             block=plan['guardrail' if a.pool=='guardrail' else 'core']
             assert a.arms==plan['arms'] and a.batch==block['batch'] and a.start==block['start'] and a.seeds==block['seeds']
             assert not train.meta(db,'cf_pid'),'Finish or explicitly stop active label workers before selection'
@@ -190,13 +198,13 @@ def main():
         control=archive_code(RUN,['development/secret_hunter_astra_sprint/study.py','development/secret_hunter_astra_sprint/ledger.py',
             'development/secret_hunter_mcgs/cli_match.py','development/teacher_eval/run.py','development/secret_hunter_tactics/run.py'])
         train.atomic(RUN/'batches'/a.batch/'control-starts'/f'{time.time_ns()}.json',
-            {'created':time.time(),'harness_sha256':control,'arms':a.arms,'workers':a.workers,'warm':a.warm,'phase':phase})
+            {'created':time.time(),'harness_sha256':control,'arms':a.arms,'workers':a.workers,'warm':a.warm,'phase':phase,'interleave_arms':a.interleave_arms})
         train.setmeta(db,'effective_seconds',time.time()-m['created']);train.setmeta(db,'pid',os.getpid())
         a.game_timeout_seconds=90;a.cli_game_timeout_seconds=150;a.stop_grace_seconds=5
         signal.signal(signal.SIGTERM,lambda *_:setattr(train,'STOP',True))
         signal.signal(signal.SIGINT,lambda *_:setattr(train,'STOP',True))
         try:
-            for arm in a.arms:
+            for arm in ([None] if a.interleave_arms else a.arms):
                 if train.STOP:break
                 train.run_arm(db,RUN,a.batch,arm,a)
             if a.final:

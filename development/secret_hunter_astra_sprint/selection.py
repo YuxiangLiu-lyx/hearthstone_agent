@@ -19,11 +19,25 @@ def prepare(candidates):
     assert evidence['candidates']==candidates and evidence['reason']
     arms=['DARCL2',*candidates];load=json.loads((RUN/'throughput.json').read_text())
     workers=load['selected_concurrency'];rates=[load[f'pilot-c{workers}']['games_per_minute']]
+    epoch_path=RUN/'resource-recovery-capacity.json';epoch=None;excluded=[]
+    if epoch_path.exists():
+        epoch=json.loads(epoch_path.read_text())
+        assert epoch['fits_remaining_plan'] and epoch['health_passed'] and epoch['full_cli_reliable']
+        assert (RUN/'confirmation-resource-reset.json').exists()
+        reset=json.loads((RUN/'confirmation-resource-reset.json').read_text())
+        assert reset['capacity_sha256']==sha(epoch_path)
+        recovered_batch=reset['new_plan']['batch']
+        assert db.execute('select status from batches where id=?',(recovered_batch,)).fetchone()[0]=='done'
+        workers=epoch['workers'];rates=[epoch['measured_games_per_minute']]
     # Include completed full-CLI development of the proposed candidates; use a
     # 15% conservative throughput allowance, chosen before selection outcomes.
     for b in db.execute("select * from batches where phase='cli_development' and status='done'"):
         if not set(json.loads(b['arms'])).intersection(candidates):continue
         n,elapsed=db.execute('select count(*),max(a.finished)-min(a.started) from attempts a join tasks t on t.key=a.task where t.batch=?',(b['id'],)).fetchone()
+        if epoch and b['id']!=recovered_batch:
+            excluded.append({'batch':b['id'],'games_per_minute':n/elapsed*60 if n and elapsed else None,
+                             'reason':'Earlier resource epoch or a capacity pilot; recovered pilot is included separately.'})
+            continue
         if n and elapsed:rates.append(n/elapsed*60)
     rate=.85*min(rates)
     used=db.execute('select count(*) from attempts').fetchone()[0]+db.execute('select count(*) from auxiliary_games').fetchone()[0]
@@ -38,13 +52,15 @@ def prepare(candidates):
     capacity={'created':time.time(),'before_selection':True,'groups':groups,'guard_groups':16,
         'conservative_games_per_minute':rate,'measured_rates':rates,'workers':workers,
         'used_full_attempts':used,'selection_games':selection_count,'final_games':2*(groups*12+448),
-        'protocol_pack_margin_s':2700,'reserved_auxiliary_attempts':16}
+        'protocol_pack_margin_s':2700,'reserved_auxiliary_attempts':16,
+        'recovered_resource_capacity_sha256':sha(epoch_path) if epoch else None,
+        'earlier_capacity_evidence_retained':excluded}
     if groups!=m['final_target']['seeds_core']:
         ledger.atomic(RUN/'manifest-before-capacity.json',m)
         m['seed_blocks']['final_core'][1]=m['seed_blocks']['final_core'][0]+groups-1
         m['final_target'].update(seeds_core=groups,per_arm_core=groups*12)
         ledger.atomic(RUN/'manifest.json',m);ledger.setmeta(db,'manifest',m)
-    plan={'created':time.time(),'arms':arms,'workers':workers,'capacity':capacity,
+    plan={'created':time.time(),'arms':arms,'workers':workers,'capacity':capacity,'interleave_arms':True,
         'core':{'batch':'selection-core','start':62250000,'seeds':80},
         'guardrail':{'batch':'selection-guard','start':62251000,'seeds':8},
         'fingerprints':{a:cs[a]['sha256'] for a in arms},

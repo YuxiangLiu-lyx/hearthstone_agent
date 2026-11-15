@@ -13,12 +13,15 @@ def main():
     freeze_path = RUN / 'final-freeze.json'
     freeze = json.loads(freeze_path.read_text())
     selection = json.loads((RUN / 'selection-plan.json').read_text())
+    assert sha(RUN / 'selection-plan.json') == freeze['selection_plan_sha256']
+    assert selection['workers'] == freeze['workers']
     commands = []
     for pool, key, batch in [('core', 'final_core', 'final-core'), ('guardrail', 'final_guard', 'final-guard')]:
         lo, hi = freeze['seeds'][key]
         commands.append(['development.secret_hunter_astra_sprint.study', 'run', '--batch', batch,
                          '--arms', *freeze['arms'], '--start', str(lo), '--seeds', str(hi - lo + 1),
                          '--pool', pool, '--workers', str(selection['workers']), '--final'])
+        if freeze.get('interleave_arms'):commands[-1].append('--interleave-arms')
     path = RUN / 'final-execution-plan.json'
     plan = {'freeze_sha256': sha(freeze_path), 'commands': commands}
     if path.exists():

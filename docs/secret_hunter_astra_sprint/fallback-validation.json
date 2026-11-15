@@ -1,0 +1,222 @@
+{
+  "created": 1794719594.3721962,
+  "artifact_role": "Original fallback acceptance before strategy selection",
+  "zip_sha256": "0130813f56655e7b802e2cbbe539526f6ab2a1a8f1acf4d27af6e5fdee5a9a0e",
+  "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4",
+  "source_anchor_commit": "8c158c07280788d7b7872476dd728ba43e3e71ca",
+  "exact_path": "/Users/liuyuxiang/developer/hearthstone-astra-sprint-20261114/runs/astra-sprint-20261114/frozen/DARCL2/secret-hunter",
+  "deck_audit": {
+    "candidate": "secret-hunter",
+    "fingerprint": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4",
+    "ordered_cards": [
+      "EX1_029",
+      "EX1_029",
+      "EX1_080",
+      "EX1_080",
+      "DS1_184",
+      "EX1_162",
+      "EX1_531",
+      "EX1_531",
+      "EX1_533",
+      "EX1_554",
+      "EX1_066",
+      "EX1_610",
+      "EX1_610",
+      "EX1_611",
+      "EX1_611",
+      "NEW1_019",
+      "NEW1_019",
+      "EX1_536",
+      "EX1_536",
+      "EX1_538",
+      "EX1_538",
+      "EX1_539",
+      "EX1_539",
+      "EX1_617",
+      "NEW1_031",
+      "NEW1_031",
+      "DS1_070",
+      "EX1_534",
+      "EX1_534",
+      "DS1_185"
+    ],
+    "hero_class": "HUNTER",
+    "deck_sha256": "af78480d96fd2fc11b77f0ca8f17c5703a6bda5934c2041622f762ca0128b7d1",
+    "changes": [],
+    "replacements": 0,
+    "retained": 30,
+    "krush_line": false,
+    "static_validation": "Validating skill /Users/liuyuxiang/developer/hearthstone-astra-sprint-20261114/runs/astra-sprint-20261114/frozen/DARCL2/secret-hunter\n  SKILL.md: OK (name 'secret-hunter-program', model luna = GPT-6-Luna (Codex), effort medium)\n  deck: chosen by the agent via MCP submit_deck at the start of each game (deck.json is optional)\n  scripts/: 22 file(s)\nOK (smoke game skipped)\n",
+    "actual_submit_deck": {
+      "seq": 701,
+      "action": {
+        "type": "submit_deck",
+        "hero_class": "HUNTER",
+        "cards": [
+          "EX1_029",
+          "EX1_029",
+          "EX1_080",
+          "EX1_080",
+          "DS1_184",
+          "EX1_162",
+          "EX1_531",
+          "EX1_531",
+          "EX1_533",
+          "EX1_554",
+          "EX1_066",
+          "EX1_610",
+          "EX1_610",
+          "EX1_611",
+          "EX1_611",
+          "NEW1_019",
+          "NEW1_019",
+          "EX1_536",
+          "EX1_536",
+          "EX1_538",
+          "EX1_538",
+          "EX1_539",
+          "EX1_539",
+          "EX1_617",
+          "NEW1_031",
+          "NEW1_031",
+          "DS1_070",
+          "EX1_534",
+          "EX1_534",
+          "DS1_185"
+        ]
+      }
+    },
+    "elapsed_s": 0.14940366600058042,
+    "valid": true
+  },
+  "protocol_passed": true,
+  "relay": {
+    "luna": {
+      "games": 2,
+      "act_calls": 67,
+      "actual_first_games": 1,
+      "envelope_mismatches": 0,
+      "ordinary_fallbacks": 0,
+      "internal_program_latency_s": {
+        "n": 65,
+        "mean": 0.28930065890532347,
+        "max": 0.5768950409837998,
+        "p50": 0.2690489999949932,
+        "p95": 0.4080953749944456,
+        "p99": 0.5768950409837998
+      },
+      "publication_to_act_latency_s": {
+        "n": 65,
+        "mean": 4.297465148338905,
+        "max": 6.504448652267456,
+        "p50": 4.558153867721558,
+        "p95": 5.393503189086914,
+        "p99": 6.504448652267456
+      },
+      "outside_internal_program_latency_s": {
+        "n": 65,
+        "mean": 4.0081644894335815,
+        "max": 6.285519777273294,
+        "p50": 4.243474473711103,
+        "p95": 5.129242689086823,
+        "p99": 6.285519777273294
+      }
+    },
+    "client": {
+      "games": 6,
+      "act_calls": 201,
+      "actual_first_games": 3,
+      "envelope_mismatches": 0,
+      "ordinary_fallbacks": 0,
+      "internal_program_latency_s": {
+        "n": 195,
+        "mean": 0.2865561961691874,
+        "max": 0.7009087080077734,
+        "p50": 0.2575641250004992,
+        "p95": 0.45653625001432374,
+        "p99": 0.6340277080016676
+      },
+      "publication_to_act_latency_s": {
+        "n": 195,
+        "mean": 0.4628203832186185,
+        "max": 0.9377775192260742,
+        "p50": 0.44179582595825195,
+        "p95": 0.6614630222320557,
+        "p99": 0.8044133186340332
+      },
+      "outside_internal_program_latency_s": {
+        "n": 195,
+        "mean": 0.17626418704943111,
+        "max": 0.3026296532189008,
+        "p50": 0.17895719737862237,
+        "p95": 0.24788255157181993,
+        "p99": 0.26374987643794157
+      }
+    }
+  },
+  "runtime_sha256": "5dc80d5e407a0e9423fbe6aaaf7b5194dd55b0cf04a41b89964269dfbb74070e",
+  "runtime": {
+    "candidate": "/Users/liuyuxiang/developer/hearthstone-astra-sprint-20261114/runs/astra-sprint-20261114/frozen/DARCL2/secret-hunter",
+    "source_sha256": "e0cf461721004b82ab70cd128fbdd99ab2d59bb8e6c561d11449f8ea06d3b6c4",
+    "stress_cases_sha256": "5418d3c553f1c97b892c73470d5e0f76e75f30e990061a763e4a690ed06740c2",
+    "concurrency_action_stability": [
+      {
+        "workers": 3,
+        "calls": 16,
+        "actions_identical": true
+      },
+      {
+        "workers": 6,
+        "calls": 16,
+        "actions_identical": false
+      }
+    ],
+    "calls": 63,
+    "invalid": 0,
+    "over_2s": 0,
+    "ordinary_fallbacks": 0,
+    "ordinary_latency_s": {
+      "n": 56,
+      "mean": 0.9184999694438635,
+      "max": 1.6021068329864647,
+      "p50": 0.9885007080156356,
+      "p95": 1.5774825419939589,
+      "p99": 1.6021068329864647
+    },
+    "all_including_fault_latency_s": {
+      "n": 63,
+      "mean": 0.9979476243149422,
+      "max": 1.8832900839915965,
+      "p50": 1.0451830420061015,
+      "p95": 1.8697256250015926,
+      "p99": 1.8832900839915965
+    },
+    "injected_fault_fallbacks": 2,
+    "actual_host_stale_seq_rejected": true,
+    "course_hard_limit_s": 180,
+    "engineering_full_python_cli_target_s": 2,
+    "luna_relay": "separate model transport audit; not included in these Python CLI measurements"
+  },
+  "full_cli_execution": {
+    "completed_full_cli_games": 4029,
+    "latency_s": {
+      "n": 112932,
+      "mean": 0.10982069913671155,
+      "max": 1.612303250003606,
+      "p50": 0.08415483401040547,
+      "p95": 0.18686599997454323,
+      "p99": 0.7545496659877244
+    },
+    "over_2s": 0,
+    "ordinary_fallbacks": 0,
+    "policy_errors": 0,
+    "scope": "Execution checks only across completed development and pilot games, including the retained partial confirmation. No aggregate win-rate claim and no inspection of confirmation outcomes."
+  },
+  "paired_final_validation_complete": false,
+  "limitations": [
+    "DA2 confirmation is checkpointed and incomplete; selection and final seeds remain unopened.",
+    "Loaded-host concurrency-3 actions match cold actions on all 16 inputs, but concurrency-6 differs on two. Preserve this failed stability check.",
+    "No new formal course result or Astra gain is claimed."
+  ],
+  "timing_scope": "Full CLI includes Python process startup. Relay internal timer excludes interpreter startup. State publication to MCP act includes model, shell, Python, and transport; it is not pure network latency. Quantiles are pooled from raw samples."
+}

@@ -1,0 +1,47 @@
+{
+  "created": 1794719356.6208599,
+  "purpose": "Resource recovery only; no candidate tuning or outcome-based stopping. Preserve the exact verified fallback while retaining unopened final seeds.",
+  "health_inputs": "The eight previously fixed CLI stress states plus the same eight complex TRAIN roots used by runtime.py; original public inputs and actions, baseline plan_cache=false.",
+  "stress_sha256": "5418d3c553f1c97b892c73470d5e0f76e75f30e990061a763e4a690ed06740c2",
+  "health_interval_seconds": 300,
+  "watch_until_utc": "2026-11-15T06:35:00+00:00",
+  "health_recovery_gate": "At workers=3, all 16 original actions reproduced, zero invalid/fallback/over-2s. Then test workers 1/3/6 on all 16 and a fresh interleaved full CLI capacity pilot before restarting a candidate experiment.",
+  "capacity_pilot_options": [
+    {
+      "batch": "recovery-pilot-1",
+      "start": 62140050,
+      "seeds": 2
+    },
+    {
+      "batch": "recovery-pilot-2",
+      "start": 62140060,
+      "seeds": 2
+    },
+    {
+      "batch": "recovery-pilot-3",
+      "start": 62140070,
+      "seeds": 2
+    }
+  ],
+  "capacity_pilot_arms": [
+    "DARCL2",
+    "DA2"
+  ],
+  "capacity_pilot_workers": 6,
+  "capacity_pilot_interleave_arms": true,
+  "capacity_pilot_games_each": 48,
+  "confirmation_after_recovery": {
+    "batch": "confirmation-arcane-resource-reset",
+    "arms": [
+      "DARCL2",
+      "DA2"
+    ],
+    "start": 62150600,
+    "seeds": 80,
+    "interleave_arms": true,
+    "original_partial_batch": "retain all 273 completed tasks and charges, close without outcome inspection; never merge mixed-resource partial data into the fresh comparison"
+  },
+  "confirmation_gate": "Same as original H3 confirmation: positive Astra macro and reliable full CLI to advance, otherwise original DARCL2. No additional candidates.",
+  "time_gate": "Using 0.85 times the measured recovered full-CLI throughput, confirmation plus selection must finish before 08:25:10 UTC, and the frozen final comparison plus 45 minutes protocol/packaging must fit 11:25:10 UTC. Do not start if this fails.",
+  "no_recovery": "Complete the explicitly allowed original-DARCL2 fallback delivery, with missing confirmation/final comparison and loaded-host concurrency limitation disclosed. Do not invent final samples or claim a negative DA2 comparison."
+}

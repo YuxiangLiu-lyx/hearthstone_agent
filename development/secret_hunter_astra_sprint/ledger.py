@@ -78,16 +78,22 @@ def status(db,run,persist=True):
     return data
 
 def run_arm(db,run,batch,arm,args):
-    candidate=meta(db,'candidates')[arm];src=ROOT/candidate['path']
-    assert fingerprint(src)==candidate['sha256'],('candidate changed',arm)
-    tasks=db.execute("SELECT * FROM tasks WHERE batch=? AND candidate=? AND status='pending' ORDER BY seed,opponent,seat",(batch,arm)).fetchall()
+    candidates=meta(db,'candidates')
+    names=[arm] if arm is not None else json.loads(db.execute('select arms from batches where id=?',(batch,)).fetchone()[0])
+    for name in names:assert fingerprint(ROOT/candidates[name]['path'])==candidates[name]['sha256'],('candidate changed',name)
+    if arm is None:
+        tasks=db.execute("SELECT * FROM tasks WHERE batch=? AND status='pending'",(batch,)).fetchall()
+        # Adjacent opponent/seed/seat pairs, rotating which arm starts first.
+        # Every task still gets its own fresh worker and exact candidate path.
+        tasks.sort(key=lambda t:(t['seed'],t['opponent'],t['seat'],(names.index(t['candidate'])+t['seed']+t['seat'])%len(names)))
+    else:tasks=db.execute("SELECT * FROM tasks WHERE batch=? AND candidate=? AND status='pending' ORDER BY seed,opponent,seat",(batch,arm)).fetchall()
     # Fresh processes also prevent same-named modules crossing candidates.
     active={};index=0;last=time.monotonic();stop_deadline=None;retries={}
     def interrupt(aid,task,reason):
         with db:
             db.execute('UPDATE attempts SET status=?,finished=? WHERE id=?',(reason,time.time(),aid))
             db.execute("UPDATE tasks SET status='pending' WHERE key=?",(task['key'],))
-        print(json.dumps({'batch':batch,'arm':arm,'attempt':aid,'execution_failure':reason,
+        print(json.dumps({'batch':batch,'arm':task['candidate'],'attempt':aid,'execution_failure':reason,
                           'strategy_score':None}),flush=True)
     try:
         while active or (index<len(tasks) and not STOP):
@@ -104,7 +110,8 @@ def run_arm(db,run,batch,arm,args):
                     aid=cursor.lastrowid;result_path=run/'attempts'/f'{aid:06d}.json'
                     db.execute('UPDATE attempts SET result_path=? WHERE id=?',(str(result_path.resolve()),aid))
                     db.execute("UPDATE tasks SET status='running' WHERE key=?",(task['key'],))
-                job=(str(src),json.loads(task['opponent']),task['seed'],task['seat'],str(run/'batches'/batch/arm),'python')
+                task_arm=task['candidate'];src=ROOT/candidates[task_arm]['path']
+                job=(str(src),json.loads(task['opponent']),task['seed'],task['seat'],str(run/'batches'/batch/task_arm),'python')
                 full_cli=task['phase'] in ('cli_development','selection','final_core','final_guard')
                 timeout=args.cli_game_timeout_seconds if full_cli else args.game_timeout_seconds
                 request=result_path.with_suffix('.request.json')
@@ -141,7 +148,7 @@ def run_arm(db,run,batch,arm,args):
                 with db:
                     db.execute("UPDATE attempts SET status='done',finished=? WHERE id=?",(time.time(),aid))
                     db.execute("UPDATE tasks SET status='done',result=? WHERE key=?",(json.dumps(row),task['key']))
-                print(json.dumps({'batch':batch,'arm':arm,'attempt':aid,'score':row['score'],'error':row.get('harness_error'),'wall_s':row.get('wall_s')}),flush=True)
+                print(json.dumps({'batch':batch,'arm':task['candidate'],'attempt':aid,'score':row['score'],'error':row.get('harness_error'),'wall_s':row.get('wall_s')}),flush=True)
             now=time.monotonic()
             if changed or now-last>=5:
                 setmeta(db,'effective_seconds',meta(db,'effective_seconds',0)+now-last);last=now
@@ -151,4 +158,4 @@ def run_arm(db,run,batch,arm,args):
             process.close();interrupt(aid,task,'interrupted')
         setmeta(db,'effective_seconds',meta(db,'effective_seconds',0)+time.monotonic()-last)
         status(db,run)
-    assert fingerprint(src)==candidate['sha256']
+    for name in names:assert fingerprint(ROOT/candidates[name]['path'])==candidates[name]['sha256']

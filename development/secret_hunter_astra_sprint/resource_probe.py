@@ -8,7 +8,7 @@ import subprocess
 import sys
 import tempfile
 import time
-from development.secret_hunter_astra_sprint.study import RUN, HERE
+from development.secret_hunter_astra_sprint.study import RUN, HERE, ROOT
 from development.secret_hunter_astra_sprint import ledger
 from development.secret_hunter_astra_sprint.tactical import digest
 from development.benchmarks.run import fingerprint
@@ -19,6 +19,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--label', required=True)
     parser.add_argument('--workers', type=int, nargs='+', default=[1, 3, 6])
+    parser.add_argument('--include-complex', action='store_true')
     args = parser.parse_args()
     output = RUN / f'resource-probe-{args.label}.json'
     assert not output.exists()
@@ -26,6 +27,13 @@ def main():
     source_hash = fingerprint(source)
     stress_path = RUN / 'runtime-stress-cases.json'
     cases = json.loads(stress_path.read_text())['cases']
+    if args.include_complex:
+        roots = [json.loads(p.read_text()) for p in sorted((RUN/'tactical-sources').glob('*.json'))]
+        roots = [r for r in roots if r.get('split')=='train' and 'state' in r]
+        roots.sort(key=lambda r:len(r['state']['you']['board'])*len(r['state']['opponent']['board'])+len(r['state']['you']['hand']),reverse=True)
+        for root in roots[:8]:
+            cases.append({'state':root['state'],'digest':root['state_digest'],
+                          'log_path':str(ROOT/root['game_path']/f"p{root['seat']}/observations.jsonl")})
     originals = []
     for case in cases:
         rows = [json.loads(line) for line in Path(case['log_path']).read_text().splitlines()]
@@ -72,7 +80,8 @@ def main():
         records.extend({'workers': workers, **r} for r in rows)
         print(json.dumps(summary), flush=True)
         ledger.atomic(output, {'created': time.time(), 'source_sha256': source_hash,
-                              'stress_sha256': sha(stress_path), 'summaries': summaries, 'records': records,
+                              'stress_sha256': sha(stress_path), 'include_complex':args.include_complex,
+                              'summaries': summaries, 'records': records,
                               'scope': 'Previously fixed public states only, no new games or outcome-based choices. Cold contexts; baseline plan_cache is disabled. Full search metadata retained to distinguish timing cutoffs from policy changes.'})
     assert fingerprint(source) == source_hash
 
