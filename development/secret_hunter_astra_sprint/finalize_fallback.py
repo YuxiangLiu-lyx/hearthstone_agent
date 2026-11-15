@@ -17,7 +17,13 @@ def main():
     check(manifest)
     plan = json.loads((RUN / 'resource-recovery-plan.json').read_text())
     cutoff = datetime.datetime.fromisoformat(plan['watch_until_utc']).timestamp()
-    assert cutoff <= time.time() < manifest['deadline']
+    user_path = RUN / 'user-resource-decision.json'
+    user = json.loads(user_path.read_text()) if user_path.exists() else None
+    if user:
+        assert user['source'] == 'explicit_user_reply' and user['decision'] == 'keep_load_deliver_original_fallback'
+        assert user['reply'] == '保持当前负载，优先完成原版 DARCL2 的验收'
+        assert manifest['created'] < user['created'] <= time.time()
+    assert (user or cutoff <= time.time()) and time.time() < manifest['deadline']
     assert not ledger.meta(db, 'pid') and not ledger.meta(db, 'cf_pid')
     assert not ledger.meta(db, 'selection_opened', False) and not ledger.meta(db, 'final_opened', False)
     assert not (ROOT / 'docs/secret_hunter_astra_sprint/recommendation.json').exists()
@@ -26,7 +32,7 @@ def main():
     health = json.loads(latest.read_text())
     healthy = any(s['calls'] == 16 and s['matches_original_action'] == 16
                   and not any(s[k] for k in ('invalid', 'fallbacks', 'over_2s')) for s in health['summaries'])
-    if healthy:
+    if healthy and not user:
         capacity = json.loads((RUN / 'resource-recovery-capacity.json').read_text())
         assert not capacity['fits_remaining_plan'], 'Resources recovered: continue the authorized comparison'
     acceptance = json.loads((RUN / 'fallback-acceptance.json').read_text())
@@ -40,11 +46,13 @@ def main():
     assert runtime['actual_host_stale_seq_rejected']
     completed = [list(r) for r in db.execute("select key,result from tasks where batch='confirmation-arcane' and status='done' order by key")]
     digest = hashlib.sha256(json.dumps(completed).encode()).hexdigest()
-    reason = 'Host-resource recovery did not provide a verified feasible path within the registered window. DA2 independent confirmation remains incomplete; no selection or final comparison outcomes were opened. Use the user-authorized exact original DARCL2 fallback. This is insufficient promotion evidence, not a measured negative DA2 result.'
+    reason = ('The user explicitly chose to keep the current host load and prioritize original DARCL2 acceptance, ending the optional recovery wait. ' if user else 'Host-resource recovery did not provide a verified feasible path within the registered window. ')
+    reason += 'DA2 independent confirmation remains incomplete; no selection or final comparison outcomes were opened. Use the user-authorized exact original DARCL2 fallback. This is insufficient promotion evidence, not a measured negative DA2 result.'
     decision = {'created': time.time(), 'candidate': 'DA2', 'decision': 'not_completed_resource_capacity',
                 'reason': reason, 'completed_baseline_confirmation_games': len(completed),
                 'completed_result_digest': digest, 'outcomes_used_for_resource_decision': False,
-                'latest_health_sha256': sha(latest), 'recovery_plan_sha256': sha(RUN / 'resource-recovery-plan.json')}
+                'latest_health_sha256': sha(latest), 'recovery_plan_sha256': sha(RUN / 'resource-recovery-plan.json'),
+                'explicit_user_resource_decision': user, 'user_resource_decision_sha256': sha(user_path) if user else None}
     ledger.atomic(RUN / 'hypotheses/H3-confirmation-decision.json', decision)
     with db:
         db.execute("update tasks set status='not_run_resource_capacity' where batch='confirmation-arcane' and status='pending'")
@@ -58,7 +66,7 @@ def main():
               'opponents': manifest['opponents'], 'manifest_sha256': sha(RUN / 'manifest.json'),
               'final_seeds_opened': False, 'paired_final_validation_complete': False,
               'analysis_sources': {str((HERE / n).relative_to(ROOT)): sha(HERE / n)
-                                   for n in ('finalize_fallback.py', 'fallback_evidence.py', 'verify_delivery.py')}}
+                                   for n in ('finalize_fallback.py', 'fallback_evidence.py', 'verify_delivery.py', 'verify_evidence.py')}}
     ledger.atomic(RUN / 'delivery-freeze.json', freeze)
     rec = {'created': time.time(), 'recommended': 'DARCL2', 'challenger': 'DA2', 'promoted': False,
            'reason': reason, 'paired_final_validation_complete': False, 'selection_skipped': True,
