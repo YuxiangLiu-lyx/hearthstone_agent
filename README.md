@@ -1,5 +1,22 @@
 # Hearthstone Agent Arena
 
+## Latest HW2 Astra sprint (2026-11-15)
+
+For the last HW2 submission, the sole recommendation is the unchanged
+**DARCL2** [original ZIP](dist/secret-hunter-long-20261114.zip), SHA-256
+`0130813f56655e7b802e2cbbe539526f6ab2a1a8f1acf4d27af6e5fdee5a9a0e`.
+Four fresh paired development experiments did not establish a promotable
+challenger. DA2 confirmation remained incomplete after a host-load change;
+the user chose to retain that load and prioritize original-package acceptance.
+The exact package passed two real Luna and six ClientSeat games. Loaded-host
+six-worker action stability failed on two stress inputs and is disclosed.
+See the [sprint report](docs/secret_hunter_astra_sprint/REPORT.md),
+[paired development tables](docs/secret_hunter_astra_sprint/COMPARISONS.md),
+and [reproduction/evidence guide](docs/secret_hunter_astra_sprint/REPRODUCE.md).
+No new official score or completed final paired validation is claimed.
+The user handles the Slack submission. Earlier general-purpose releases below
+remain historical records with their original champion pointers.
+
 ## Secret Hunter and teacher evaluation (2026-11-11)
 
 The canonical general-purpose Secret Hunter release is **H7**, selected by

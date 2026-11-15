@@ -2,6 +2,8 @@
 
 运行目录：`runs/astra-sprint-20261114`，独立源码分支 `research/secret-hunter-astra-sprint-20261114`。Python 3.11，课程 `hs-arena==0.2.2`；对手与引擎资源指纹以 manifest 为准。不要覆盖上一轮账本或从旧 B 生成候选。
 
+本轮已按用户的资源选择交付原版 DARCL2；实际文件为 `delivery-freeze.json`，没有 `final-freeze.json`。下文保留的资源恢复、选择和最终双版本命令是已登记但未执行的流程，不应在已关闭的原账本上重新启动。复核本轮结果使用后面的 `verify_delivery`、`verify_evidence` 和 `development_tables`。
+
 ```sh
 .venv/bin/python -m development.secret_hunter_astra_sprint.study status
 ```
@@ -78,5 +80,26 @@ H2 模型训练数据只包括最初早期根及较晚训练根的世界 0/1，�
 `verify_delivery` 核对 ZIP、依赖、对手、341 个引擎资源、源码指纹和真实提交牌表入口；使用 `hs-arena validate --no-game` 避免默认随机对手超出允许名单。`verify_evidence` 重算已完成四轮的主指标区间，核对来源分区、全部 7,509 次战术续局的起始世界与归档执行源码，以及 50 次投影检查计费。它不运行新对局，也不读取未完成确认的胜负。
 
 最终 `evidence.tar.gz` 解包后，以 `astra-sprint-evidence` 作为 `--source-run` 运行相同两项校验；此时还会逐文件检查证据索引和 SQLite 快照的 SHA-256。归档不包含完整模型会话或认证文件，Luna 中转证据为允许的脚本/MCP 调用、已发布状态、时间样本及原会话哈希。文件系统路径已在校验器中按归档相对位置解析。
+
+需要重新实际跑协议时，使用新的输出目录，不重开已结束的研究账本。完成上面的原包解包后，下列命令复用已见验收种子；这是复现，不是新的独立验证。两条 Client 命令共六局，两条 Skill 命令共两个真实 Luna 座位：
+
+```sh
+.venv/bin/hs-arena play --p1 client:runs/astra-fallback-exact-copy/secret-hunter \
+  --p2 greedy --games 3 --parallel 1 --seed 62550010 \
+  --out runs/astra-replica-client-s1 --keep-decisions --max-turns 180 --timeout 180
+.venv/bin/hs-arena play --p1 greedy \
+  --p2 client:runs/astra-fallback-exact-copy/secret-hunter \
+  --games 3 --parallel 1 --seed 62550010 \
+  --out runs/astra-replica-client-s2 --keep-decisions --max-turns 180 --timeout 180
+.venv/bin/hs-arena play --p1 skill:runs/astra-fallback-exact-copy/secret-hunter \
+  --p2 greedy --games 1 --parallel 1 --seed 62550000 \
+  --out runs/astra-replica-luna-s1 --keep-decisions --max-turns 180 --timeout 180
+.venv/bin/hs-arena play --p1 greedy \
+  --p2 skill:runs/astra-fallback-exact-copy/secret-hunter \
+  --games 1 --parallel 1 --seed 62550001 \
+  --out runs/astra-replica-luna-s2 --keep-decisions --max-turns 180 --timeout 180
+```
+
+真实 SkillSeat 需要本机课程 CLI 登录及可运行的原生模型客户端。本轮实际原生程序位置、哈希及命令记录在 `relay/*.request.json` 的本地日志中，最小可发布中转链在证据包的 `relay-proof/`；课程模型为 `gpt-6-luna`。ClientSeat 复现不需要模型登录。新复现对局不属于本轮已冻结的 5,969 次整局统计。
 
 完整 CLI、注入故障、MCP 协议与真实 Luna 的计时分开。最终真实模型/ClientSeat 复跑使用 `final-acceptance-plan.json` 的预定种子，并继续记入辅助整局额度；策略选拔不使用这些胜负。正式 Slack 提交由用户完成。
