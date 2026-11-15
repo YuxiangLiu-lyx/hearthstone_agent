@@ -2,11 +2,15 @@
 
 运行目录：`runs/astra-sprint-20261114`，独立源码分支 `research/secret-hunter-astra-sprint-20261114`。Python 3.11，课程 `hs-arena==0.2.2`；对手与引擎资源指纹以 manifest 为准。不要覆盖上一轮账本或从旧 B 生成候选。
 
-本轮已按用户的资源选择交付原版 DARCL2；实际文件为 `delivery-freeze.json`，没有 `final-freeze.json`。下文保留的资源恢复、选择和最终双版本命令是已登记但未执行的流程，不应在已关闭的原账本上重新启动。复核本轮结果使用后面的 `verify_delivery`、`verify_evidence` 和 `development_tables`。
+第一次交付按用户的资源选择保留原版 DARCL2，生成 `delivery-freeze.json`。随后用户要求续跑，最新阶段见 [RESUME.md](RESUME.md)；原半批仍保持关闭，新确认使用独立来源段。第一次交付的不可变源码及证据见提交 `f10b363`。只有实际产生 `final-freeze.json` 后才使用最终复跑入口。
 
 ```sh
 .venv/bin/python -m development.secret_hunter_astra_sprint.study status
+.venv/bin/python -m development.secret_hunter_astra_sprint.progress \
+  --batch confirmation-arcane-resource-reset
 ```
+
+`progress` 只读进度、计费和执行字段，整批确认或最终两池未完成时也不输出胜负。
 
 账本中的整局任务由 `(candidate, phase, opponent, seed, seat)` 唯一确定；已完成结果不会重新计费或重新运行。失败与中断保留在 attempts 中；重试也占额度。实际 SIGKILL 恢复演练保存了 479 个已完成结果，6 个在途任务的持久结果被收回，无额外重试。详情见 `resume-check.json`。
 
@@ -65,6 +69,15 @@ H2 模型训练数据只包括最初早期根及较晚训练根的世界 0/1，�
 ```
 
 第二条命令创建全新账本并输出两池的完整复跑命令，绝不重开原账本。它校验原 ZIP、相对路径匹配的引擎资源、依赖、对手及冻结统计代码；复制原字节并登记新的精确解包路径。复跑同样种子是复现，不是新的独立验证。
+
+最终两池完成并生成 `final-validation.json` 后，可以从原账本或证据归档重算所有最终对手、座位和来源配对区间：
+
+```sh
+.venv/bin/python -m development.secret_hunter_astra_sprint.verify_final \
+  --source-run runs/astra-sprint-20261114
+```
+
+该入口先确认两池全部完成，再读取结果；单版最终验收只重算观察率，不伪造挑战者差值。真实运行输出会随最终交付保存。
 
 若本轮按明确回退条款交付原 DARCL2，则只有 `delivery-freeze.json`，没有最终双版本样本；不要执行上述 `reproduce_frozen`，也不要据此补造最终区间。原字节验证和新目录解包使用：
 

@@ -5,7 +5,7 @@ import json
 import shutil
 import time
 from zipfile import ZipFile
-from development.secret_hunter_astra_sprint.study import ROOT,RUN,HERE,register,ZIP_SHA
+from development.secret_hunter_astra_sprint.study import ROOT,RUN,HERE,register,ZIP_SHA,ANCHOR
 from development.secret_hunter_astra_sprint.build import audit
 from development.secret_hunter_astra_sprint import ledger
 from development.secret_hunter_final.release import pack
@@ -98,11 +98,15 @@ def recommend():
     if promoted:shutil.copy2(source,output)
     else:assert sha(output)==ZIP_SHA==record['zip_sha256']
     result={'created':time.time(),'recommended':recommended,'challenger':challenger,'promoted':promoted,
+        'final_pools_complete':True,'paired_final_validation_complete':challenger!='DARCL2',
+        'source_anchor_commit':ANCHOR,'frozen_research_commit':freeze['git_sha'],
         'gates':gates,'reliability':reliability,'primary':main,'family_gains':families,
         'astra_proxy_gains':proxies,'guard_gain':guard_gain,'zip':str(output),
         'zip_sha256':record['zip_sha256'],'bytes':record['bytes'],'source_sha256':record['source_sha256'],
         'final_exact_unpacked_path':record['extracted'],'deck':record['deck_audit'],
         'scope':'Local fixed proxies only. Historical formal score 10 is unchanged. User submits to Slack.'}
+    if challenger=='DARCL2':
+        result['reason']='All challengers failed their registered full-game checks. Complete frozen single-arm DARCL2 core/guard validation provides execution and observed-rate evidence, but no candidate paired gain.'
     ledger.atomic(ROOT/'docs/secret_hunter_astra_sprint/recommendation.json',result)
     ledger.atomic(ROOT/'docs/secret_hunter_astra_sprint/runtime.json',runtime[recommended])
     ledger.setmeta(db,'recommendation',recommended)

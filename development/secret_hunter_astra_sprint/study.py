@@ -129,7 +129,7 @@ def main():
                      manifest_sha256=sha(RUN/'manifest.json'),engine_versions=m['versions'],
                      engine_source_files=m['engine'],opponents=m['opponents'],
                      final_target=m['final_target'],outcome_access='Read neither pool until BOTH final pools finish')
-            f['analysis_sources']={str((HERE/name).relative_to(ROOT)):sha(HERE/name) for name in ('statistics.py','release.py','selection.py','runtime.py','study.py','ledger.py','execute_frozen.py','reproduce_frozen.py')}
+            f['analysis_sources']={str((HERE/name).relative_to(ROOT)):sha(HERE/name) for name in ('statistics.py','release.py','selection.py','runtime.py','study.py','ledger.py','execute_frozen.py','reproduce_frozen.py','final_evidence.py','report_tables.py','verify_final.py')}
             f['runtime_stress_sha256']=sha(RUN/'runtime-stress-cases.json')
             execution_plan=json.loads((RUN/'selection-plan.json').read_text())
             f['interleave_arms']=execution_plan.get('interleave_arms',False)

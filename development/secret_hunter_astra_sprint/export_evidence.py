@@ -9,7 +9,7 @@ def main():
  db=ledger.connect(RUN);assert not ledger.meta(db,'pid') and not ledger.meta(db,'cf_pid')
  recommendation=ROOT/'docs/secret_hunter_astra_sprint/recommendation.json';assert recommendation.exists()
  rec=json.loads(recommendation.read_text())
- if rec.get('paired_final_validation_complete',True):
+ if rec.get('final_pools_complete',rec.get('paired_final_validation_complete',True)):
   assert all(db.execute('select status from batches where id=?',(b,)).fetchone()[0]=='done' for b in ('final-core','final-guard'))
  else:
   assert rec['recommended']=='DARCL2' and not rec['promoted'] and rec['reason']

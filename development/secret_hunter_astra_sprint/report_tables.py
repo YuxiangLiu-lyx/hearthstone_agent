@@ -47,7 +47,7 @@ def main():
  rows={a:[json.loads(r[0]) for r in db.execute("select result from tasks where batch='final-core' and candidate=?",(a,))] for a in freeze['arms']}
  simulation=simulate(rows);ledger.atomic(RUN/'final-score-simulation.json',simulation);ledger.atomic(ROOT/'docs/secret_hunter_astra_sprint/final-score-simulation.json',simulation)
  lines+=['## 6/4/4 胜场档位解释','',
- '沿用选拔前固定的双座位平衡抽样：每次抽三个共同来源组，Bot 1 用六局；Bot 2、Astra 分别均匀抽一个家族代理，用前两个来源组的双座位四局。两版用同一配置，重复 50,000 次。假定零弃权，完成分为 5；Bot 1 的 5/6 胜和 Bot 2 的 3/4 胜进入最高胜场档位。',
+ '沿用选拔前固定的双座位平衡抽样：每次抽三个来源组，Bot 1 用六局；Bot 2、Astra 分别均匀抽一个家族代理，用前两个来源组的双座位四局。重复 50,000 次；若有两版，两版共用同一抽样配置，单版则只描述原版。假定零弃权，完成分为 5；Bot 1 的 5/6 胜和 Bot 2 的 3/4 胜进入最高胜场档位。',
  '这里只解释固定代理上的取舍，不校准或预测正式 Astra/课程成绩，不参与最终晋级门槛。历史 10 分实际回执的 Bot 2 为 2/4，尚未达到其最高档。']
  table(lines,['版本','模拟总分>10 频率','均值 max(总分−10,0)','Bot 1 达最高档频率','Bot 2 达最高档频率'],[[a,f"{100*r['frequency_score_above_10']:.3f}%",f"{r['mean_max_score_minus_10_zero']:.5f}",f"{100*r['bot1_cap_frequency']:.3f}%",f"{100*r['bot2_cap_frequency']:.3f}%"] for a,r in simulation['results'].items()])
  out=ROOT/'docs/secret_hunter_astra_sprint/STATISTICS.md';out.write_text('\n'.join(lines)+'\n');print(out)

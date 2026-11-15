@@ -17,10 +17,15 @@ def main():
  from development.secret_hunter_astra_sprint import ledger
  from development.secret_hunter_program.common import sha
  from development.benchmarks.run import fingerprint
+ from development.teacher_eval.run import snapshot
  old=json.loads((source/'manifest.json').read_text());freeze=json.loads((source/'final-freeze.json').read_text());records=json.loads((source/'release-candidates.json').read_text())
+ assert sha(source/'manifest.json')==freeze['manifest_sha256']
+ assert sha(source/'release-candidates.json')==freeze['release_records_sha256']
+ assert sha(source/'selection-plan.json')==freeze['selection_plan_sha256']
  assert [r['name'] for r in records]==freeze['arms']
  assert all(importlib.metadata.version(k)==v for k,v in old['versions'].items())
  assert all(sha(ROOT/path)==h for path,h in old['protected'].items())
+ assert all(snapshot(json.loads((ROOT/path).read_text()))==value for path,value in old['opponents'].items()),'Opponent policy or deck content differs'
  engine_root=Path(hs_arena.__file__).parent;expected={}
  for path,h in old['engine'].items():
   parts=Path(path).parts;expected[str(Path(*parts[parts.index('hs_arena')+1:]))]=h
