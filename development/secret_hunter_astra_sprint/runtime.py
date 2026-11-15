@@ -24,8 +24,9 @@ def main():
     from hs_arena.skill.mcp_server import act
     from action_validator import legal
     records=[];states=[]
-    for path in sorted((RUN/'tactical-sources').glob('sprint-*.json')):
-        states.append(json.loads(path.read_text())['state'])
+    for path in sorted((RUN/'tactical-sources').glob('*.json')):
+        record=json.loads(path.read_text())
+        if record.get('split')=='train' and 'state' in record:states.append(record['state'])
     states.sort(key=lambda s:len(s['you']['board'])*len(s['opponent']['board'])+len(s['you']['hand']),reverse=True)
     for i,s in enumerate(states[:8]):records.append(probe(source,s,'cold-'+str(i)))
     cold={i:r['action'] for i,r in enumerate(records)}

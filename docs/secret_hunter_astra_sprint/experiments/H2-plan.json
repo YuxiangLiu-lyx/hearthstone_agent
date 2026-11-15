@@ -1,0 +1,36 @@
+{
+  "created": 1794711156.72267,
+  "hypothesis": "H2: Existing T2-T5 public-response candidates miss longer-term hand/board tradeoffs. A small source-grouped paired residual ranker applied only after the unchanged six bounded visible replies can rank rescued routes higher without increasing search nodes. Parent DARCL2, deck/mulligan fixed; Warlock public class only, T2-T5 only. Refute by nonpositive independent source continuation or fresh full-game net gain.",
+  "features_sha256": "0fa50dc946b82491d60352836d79abc2ee7c89458e76b5fee83819cb46260c16",
+  "trainer_sha256": "085ad6f503368bbcad4f3f8e93ced2d78ef85c3a5603a8b7d343dbc0f75f0ad0",
+  "data": [
+    "labels-train-worlds-01.json",
+    "labels-manifest-diagnostic-dev-late1-DARCL2-train-worlds-01.json"
+  ],
+  "worlds": [
+    0,
+    1
+  ],
+  "holdout": "late1 world2 and independent diagnostic-holdout2 source labels unopened",
+  "model": "24 fixed public features; ridge residual target 10*(paired terminal win delta) - old visible-reply value delta; per-source weight one; correction clipped +/-4 per endpoint",
+  "cv": "Five folds by (source_seed-62150000)%5, all roots/seats/opponents/worlds grouped; alpha chosen by out-of-fold rescued-minus-regressed roots/worlds, then MSE, then stronger regularization",
+  "alphas": [
+    0.1,
+    0.3,
+    1,
+    3,
+    10,
+    30
+  ],
+  "deployment": "Only add correction to final complete visible-reply endpoint score; generation/beam/reply search/chance search unchanged. Exact lethal penalty preserved. No opponent IDs or hidden values.",
+  "fresh_full_test": {
+    "batch": "round2-ranker",
+    "start": 62150200,
+    "seeds": 40,
+    "arms": [
+      "DARCL2",
+      "PRR"
+    ],
+    "workers": 6
+  }
+}
