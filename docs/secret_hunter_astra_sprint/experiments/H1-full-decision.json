@@ -1,0 +1,35 @@
+{
+  "created": 1794710031.33988,
+  "hypothesis": "H1",
+  "candidate": "RJC",
+  "decision": "Do not advance from first full-game test; retain immutable diagnostic control",
+  "basis": {
+    "astra": {
+      "n_per_arm": 240,
+      "seed_clusters": 40,
+      "a_wins": 192,
+      "b_wins": 191,
+      "a_rate": 0.8,
+      "b_rate": 0.7958333333333333,
+      "gain": -0.004166666666666667,
+      "gain_seed_cluster_95": [
+        -0.016666666666666666,
+        0.008333333333333333
+      ],
+      "gain_one_sided_90_lower": -0.0125,
+      "a_only_wins": 2,
+      "b_only_wins": 1,
+      "weighting": "equal games; balanced three-Astra design equals equal proxy macro",
+      "bootstrap": "10000 resamples of complete source seeds; ratio for unequal strata; fixed RNG 20261115",
+      "scope": "Local fixed proxies only; intervals from adaptive development are descriptive."
+    },
+    "groups": {
+      "astra": -0.004166666666666667,
+      "bot1": 0.0,
+      "bot2": 0.0
+    },
+    "all_runtime_checks_zero": true
+  },
+  "interpretation": "Recall and conditional rollouts improved, but natural complete-game gain did not replicate. Inspect both original-win regressions before choosing a new mechanism. This development interval is descriptive.",
+  "next": "Run the already registered late1 T3-T5 diagnostic queue; do not retune or replace RJC in its completed paired batch."
+}

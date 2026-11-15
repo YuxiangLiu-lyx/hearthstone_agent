@@ -1,0 +1,25 @@
+{
+  "created": 1794708434.2469609,
+  "candidate": "RJC",
+  "parent": "DARCL2",
+  "hypothesis": "H1: T2-T5 standalone Knife Juggler is a deterministic play when no friendly unsilenced Juggler is already present. The response-mode exclusion currently skips the entire turn search when this card is ranked first, so alternate development and key clears are never compared. Allow this one play class in response projection, retaining all existing random-trigger exclusions, the original Juggler route, 350 own nodes, width 10, depth 9, 6x48 reply nodes and original time limits. Predict greater route recall and positive fresh Astra paired full-game gain; refute if recall does not reach rescued routes, or changed actions fail to produce net full-game wins. Deck and mulligan fixed.",
+  "evidence": {
+    "juggler-coverage-train-labels.json": "55f88ad33b810a5c9330fe0464c181358ec4092213a272adb4bee1dc9b028a96",
+    "natural-juggler-coverage.json": "fa5f88c9e313cd2ea7f8ebe8a9a83122ff64091313686ecb0603ab765b67fbe5",
+    "labels-train-worlds-01.json": "9c91d1be21968e9de5569e533d9da55c2210691008c28af29ae0c2ef1b9e0097"
+  },
+  "training_evidence": "Alternative development: 17 roots / 9 seeds / 34 paired route-worlds, 6 rescues and 1 regression, positive net at 5 seeds and negative at 1.",
+  "fresh_full_test": {
+    "batch": "round1-recall",
+    "start": 62150100,
+    "seeds": 40,
+    "arms": [
+      "DARCL2",
+      "RJC"
+    ],
+    "pool": "core",
+    "workers": 6
+  },
+  "heldout_not_opened": true,
+  "mechanism_only": "Two response-mode coverage predicates; no scoring, deck, mulligan, chance model or budget modification."
+}
